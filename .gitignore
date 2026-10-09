@@ -1,0 +1,9 @@
+.agents/
+.claude/
+.idea/
+.venv/
+.vscode/
+build/
+node_modules/
+tmp/
+format*

@@ -15,9 +15,9 @@ An infinite series of the form
 \begin{equation} \label{eq:7.1.1}
 \sum_{n=0}^\infty a_n(x-x_0)^n,
 \end{equation}
-where $x_0$ and $a_0$, $a_1,$ \dots, $a_n,$ \dots are constants$,$ is
+where $x_0$ and $a_0$, $a_1$, \dots, $a_n$, \dots are constants, is
 called a
-{\color{blue}\it power series in\/} $x-x_0.$ We say that the power series
+{\color{blue}\it power series in\/} $x-x_0$. We say that the power series
 \eqref{eq:7.1.1} {\color{blue}\it converges\/} for a given $x$ if the limit
 $$
 \lim_{N\to\infty}
@@ -25,7 +25,7 @@ $$
 $$
 exists; otherwise, we say that the power series {\color{blue}\it
 diverges\/}  for
-the given $x.$
+the given $x$.
 \end{definition}
 
 A power series in $x-x_0$ must converge if $x=x_0$, since the positive
@@ -41,15 +41,15 @@ For any power series
 $$
 \sum_{n=0}^\infty a_n(x-x_0)^n,
 $$
-exactly one of the these statements is true$:$
+exactly one of the these statements is true:
 \begin{rmlist}
 \item % (i)
-The power series converges  only for $x=x_0.$
+The power series converges  only for $x=x_0$.
 \item % (ii)
-The power series converges for all values of $x.$
+The power series converges for all values of $x$.
 \item % (iii)
 There's a positive number $R$ such that  the power series
-converges if $|x-x_0|<R$ and diverges if  $|x-x_0|>R.$
+converges if $|x-x_0|<R$ and diverges if  $|x-x_0|>R$.
 \end{rmlist}
 \end{theorem}
 
@@ -92,9 +92,9 @@ $n\ge N$ and
 $$
 \lim_{n\to\infty}\left|a_{n+1}\over a_n\right|=L,
 $$
-where $0\le L\le\infty.$ Then the radius of convergence of
-$\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L,$ which should be interpreted
-to mean that $R=0$ if $L=\infty,$ or $R=\infty$ if $L=0.$
+where $0\le L\le\infty$. Then the radius of convergence of
+$\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L$, which should be interpreted
+to mean that $R=0$ if $L=\infty$, or $R=\infty$ if $L=0$.
 \end{theorem}
 
 \begin{example} \label{example:7.1.1} \rm
@@ -184,8 +184,8 @@ $$
 f(x)=\sum_{n=0}^\infty a_n(x-x_0)^n
 $$
 with positive radius of convergence $R$ has derivatives of all orders
-in its open interval of convergence$,$ and successive  derivatives
-can be obtained by repeatedly differentiating term by term$;$ that is,
+in its open interval of convergence, and successive  derivatives
+can be obtained by repeatedly differentiating term by term; that is,
 \begin{eqnarray}
 f'(x)&=&\dst{\sum_{n=1}^\infty
 na_n(x-x_0)^{n-1}}\label{eq:7.1.6},\\[10pt]
@@ -195,7 +195,7 @@ n(n-1)a_n(x-x_0)^{n-2}},\label{eq:7.1.7}\\
 f^{(k)}(x)&=&\dst{\sum_{n=k}^\infty
 n(n-1)\cdots(n-k+1)a_n(x-x_0)^{n-k}}\label{eq:7.1.8}.
 \end{eqnarray}
-Moreover$,$ all of these series have the same radius of convergence $R.$
+Moreover, all of these series have the same radius of convergence $R$.
 \end{theorem}
 
 \begin{example}\label{example:7.1.2} \rm
@@ -253,7 +253,7 @@ If
 $$
 \sum_{n=0}^\infty a_n(x-x_0)^n=\sum_{n=0}^\infty b_n(x-x_0)^n
 $$
-for all $x$  in an open interval that contains $x_0,$ then
+for all $x$  in an open interval that contains $x_0$, then
 $a_n=b_n$ for $n=0$, $1$, $2$, \dots.
 \item % (b)
 If
@@ -261,7 +261,7 @@ $$
 \sum_{n=0}^\infty a_n(x-x_0)^n=0
 $$
  for all $x$ in
-an open interval that contains $x_0,$ then $a_n=0$ for
+an open interval that contains $x_0$, then $a_n=0$ for
 $n=0$, $1$, $2$, \dots.
 \end{alist}
 \end{theorem}
@@ -290,7 +290,7 @@ This definition and Theorem~\ref{thmtype:7.1.5} imply  that if
 $$
 f(x)=\sum_{n=0}^\infty a_n(x-x_0)^n,
 $$
-where the power series has a positive radius of convergence$,$
+where the power series has a positive radius of convergence,
 then the Taylor polynomials of $f$ about $x_0$ are given by
 $$
 T_N(x)=\sum_{n=0}^N a_n(x-x_0)^n.

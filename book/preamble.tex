@@ -1,0 +1,39 @@
+\documentclass[dvips]{book}
+\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\renewcommand{\rmdefault}{ptm}
+\usepackage[scaled=0.92]{helvet}
+\usepackage[psamsfonts]{amsfonts}
+\usepackage{amsmath, amsbsy, wtrench}
+\usepackage[dvips,
+ bookmarks = true,
+ colorlinks=true,
+plainpages = false,
+  citecolor = blue,
+urlcolor = blue,
+filecolor = blue,
+ pageanchor = true]
+{hyperref}
+
+\setcounter{secnumdepth}{2}
+\usepackage[justification=centering, labelsep=space, skip=-10 pt]{caption}
+\usepackage[a4paper]{geometry}
+\usepackage{float}
+\usepackage{upref}
+
+\numberwithin{example}{section}
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+\input{macros}
+\setlength{\oddsidemargin}{15.5pt}
+\setlength{\evensidemargin}{15.5pt}
+
+\usepackage{graphicx}
+\graphicspath{%
+    {converted_graphics/}% inserted by PCTeX
+    {figures/}% inserted by PCTeX
+}

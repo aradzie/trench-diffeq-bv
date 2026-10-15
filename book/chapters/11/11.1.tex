@@ -1,0 +1,528 @@
+\newsection{1} {Boundary Value Problems and Fourier Expansions}
+{Eigenvalue Problems for $y''+\lambda y=0$}
+\subpdfbookmark{Section 11.1 Eigenvalue Problems}{section:11.1}
+
+\renewcommand{\thissection}{\sectiontitle
+{\,\quad EIGENVALUE PROBLEMS FOR $y''+\lambda y=0$}}
+\thissection
+
+\noindent
+In Chapter~12 we'll study partial differential equations
+that arise in problems of heat conduction, wave propagation, and
+potential theory. The purpose of this chapter is to develop tools
+required to solve these equations. In this section we consider the
+following problems, where $\lambda$ is a real number and $L>0$:
+
+ Problem 1: \hskip5em  $y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0$
+\medskip
+
+  Problem 2:  \hskip5em $y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0$
+\medskip
+
+ Problem 3: \hskip5em $y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0$
+\medskip
+
+  Problem 4: \hskip5em $y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0$
+\medskip
+
+ Problem 5: \hskip5em $y''+\lambda y=0,\quad y(-L)=y(L),
+\quad y'(-L)=y'(L)$
+\medskip
+
+In each problem the conditions following the differential equation
+are called {\color{blue}\it boundary conditions\/}.
+Note that the boundary conditions in Problem~5, unlike those in
+Problems~1-4, don't require that $y$ or $y'$ be zero at the boundary
+points, but only that $y$ have the same value at $x=\pm L$ , and that
+$y'$ have the same value at $x=\pm L$. We say that the boundary
+conditions in Problem~5 are {\color{blue}\it periodic\/}.
+
+Obviously, $y\equiv0$ (the trivial solution) is a solution of
+Problems~1-5 for any value of $\lambda$. For most values of $\lambda$,
+there are no other solutions. The interesting question is this:
+
+{\color{blue}\it For what values of $\lambda$ does the problem have
+nontrivial solutions, and what are they?}
+
+A value of $\lambda$ for which the problem has
+a nontrivial solution is an {\color{blue}\it eigenvalue\/} of the problem, and the
+nontrivial solutions are $\lambda$-{\color{blue}\it eigenfunctions\/}, or {\color{blue}\it
+eigenfunctions associated with $\lambda$\/}. Note that a nonzero
+constant multiple of a $\lambda$-eigenfunction is again a
+$\lambda$-eigenfunction.
+
+Problems~1-5 are called {\color{blue}\it eigenvalue problems\/}. {\color{blue}\it Solving\/}
+an eigenvalue problem means finding all its eigenvalues and associated
+eigenfunctions. We'll take it as given here that all the eigenvalues
+of Problems~1-5 are real numbers. This is proved in a more general
+setting in Section~13.2.
+
+\begin{theorem}\color{blue} \label{thmtype:11.1.1}
+Problems $1$--$5$ have no negative eigenvalues. Moreover$,$ $\lambda=0$
+is an eigenvalue of Problems $2$ and $5,$ with associated
+eigenfunction $y_0=1,$ but $\lambda=0$ isn't  an eigenvalue of
+Problems~$1,$ $3,$ or $4$.
+\end{theorem}
+
+\proof
+We  consider Problems 1-4, and leave Problem 5 to you
+(Exercise~\ref{exer:11.1.1}). If
+$y''+\lambda y=0$, then
+$y(y''+\lambda y)=0$, so
+$$
+\int_0^L y(x)(y''(x)+\lambda y(x))\,dx=0;
+$$
+   therefore,
+\begin{equation} \label{eq:11.1.1}
+\lambda\int_0^L y^2(x)\,dx=-\int_0^L y(x)y''(x)\, dx.
+\end{equation}
+Integration by parts yields
+\begin{equation} \label{eq:11.1.2}
+\begin{array}{rcl}
+\dst\int_0^L y(x)y''(x)\, dx&=&\dst y(x)y'(x)\lims 0L-\int_0^L
+(y'(x))^2\,dx\\
+&=&\dst y(L)y'(L)-y(0)y'(0)-\int_0^L (y'(x))^2\,dx.
+\end{array}
+\end{equation}
+However, if $y$ satisfies any of the boundary conditions of Problems
+1-4, then
+$$
+y(L)y'(L)-y(0)y'(0)=0;
+$$
+hence, \eqref{eq:11.1.1} and \eqref{eq:11.1.2} imply that
+$$
+\lambda\int_0^L y^2(x)\,dx=\int_0^L (y'(x))^2\, dx.
+$$
+If $y\not\equiv0$, then
+$\int_0^L y^2(x)\,dx>0$. Therefore
+ $\lambda\ge0$ and,  if  $\lambda=0$, then $y'(x)=0$ for all $x$
+in
+$(0,L)$ (why?), and  $y$ is constant on $(0,L)$.
+Any constant function satisfies the boundary conditions of Problem~2,
+so $\lambda=0$ is an eigenvalue of Problem~2 and any nonzero constant
+function is an associated eigenfunction. However, the only constant
+function that satisfies the boundary conditions of Problems $1$, $3$, or
+$4$ is $y\equiv0$. Therefore $\lambda=0$ isn't  an eigenvalue of any of
+these problems.
+
+\begin{example}[Problem 1] \label{example:11.1.1} \rm
+Solve the  eigenvalue problem
+\begin{equation} \label{eq:11.1.3}
+y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0.
+\end{equation}
+
+\solution
+From Theorem~\ref{thmtype:11.1.1}, any eigenvalues of \eqref{eq:11.1.3} must be
+positive. If $y$ satisfies \eqref{eq:11.1.3} with $\lambda>0$, then
+$$
+y=c_1\cos\sqrt\lambda\, x+c_2\sin\sqrt\lambda\, x,
+$$
+where $c_1$ and $c_2$ are constants. The boundary condition $y(0)=0$
+implies that $c_1=0$. Therefore $y=c_2\sin\sqrt\lambda\, x$. Now the
+boundary condition $y(L)=0$ implies that $c_2\sin\sqrt\lambda\, L=0$.
+To make $c_2\sin\sqrt\lambda\, L=0$ with $c_2\ne0$, we must choose
+$\sqrt\lambda=n\pi/L$, where $n$ is a positive integer. Therefore
+$\lambda_n=n^2\pi^2/L^2$ is an eigenvalue and
+$$
+y_n=\sin{n\pi x\over L}
+$$
+is an associated eigenfunction.
+\bbox\end{example}
+
+For future reference, we state the result of Example~\ref{example:11.1.1}
+as a theorem.
+
+\begin{theorem}\color{blue}\label{thmtype:11.1.2}
+The eigenvalue problem
+$$
+y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0
+$$
+has infinitely many positive eigenvalues
+$\lambda_n=n^2\pi^2/L^2$,
+with associated eigenfunctions
+$$
+y_n=\sin {n\pi x\over L},\quad
+n=1,2,3,\dots.
+$$
+There are no other eigenvalues.
+\end{theorem}
+
+We leave it to you to prove the next theorem about Problem~2 by
+an argument like that of Example~\ref{example:11.1.1}
+(Exercise~\ref{exer:11.1.17}).
+
+\begin{theorem}\color{blue}\label{thmtype:11.1.3}
+The eigenvalue problem
+$$
+y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
+$$
+has the eigenvalue $\lambda_0=0$, with associated eigenfunction
+$y_0=1$, and infinitely many positive eigenvalues
+$\lambda_n=n^2\pi^2/L^2$, with associated eigenfunctions
+$$
+y_n=\cos {n\pi x\over L}, n=1,2,3\dots.
+$$
+There are no other eigenvalues.
+\end{theorem}
+
+\begin{example}[Problem 3] \label{example:11.1.2} \rm Solve the
+eigenvalue problem
+\begin{equation} \label{eq:11.1.4}
+y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0.
+\end{equation}
+
+\solution
+From Theorem~\ref{thmtype:11.1.1},
+ any eigenvalues of \eqref{eq:11.1.4} must be  positive.
+If $y$ satisfies \eqref{eq:11.1.4} with  $\lambda>0$, then
+$$
+y=c_1\cos\sqrt\lambda\, x+c_2\sin\sqrt\lambda\, x,
+$$
+where $c_1$ and $c_2$ are constants. The boundary condition $y(0)=0$
+implies that $c_1=0$. Therefore $y=c_2\sin\sqrt\lambda\, x$. Hence,
+$y'=c_2\sqrt\lambda\cos\sqrt\lambda\,x$ and the boundary condition
+$y'(L)=0$ implies that $c_2\cos\sqrt\lambda\,L=0$. To make
+$c_2\cos\sqrt\lambda\,L=0$ with $c_2\ne0$ we must choose
+$$
+\sqrt\lambda={(2n-1)\pi\over2L},
+$$
+where $n$ is a positive integer. Then $\lambda_n=(2n-1)^2\pi^2/4L^2$
+is an eigenvalue and
+$$
+y_n=\sin{(2n-1)\pi x\over2L}
+$$
+is an associated eigenfunction.
+\bbox\end{example}
+
+For future reference, we state the result of Example~\ref{example:11.1.2}
+as a theorem.
+
+\begin{theorem}\color{blue}\label{thmtype:11.1.4}
+The eigenvalue problem
+$$
+y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0
+$$
+has infinitely many positive eigenvalues
+$\lambda_n=(2n-1)^2\pi^2/4L^2,$ with associated eigenfunctions
+$$
+y_n=\sin{(2n-1)\pi x\over2L},\quad n=1,2,3,\dots.
+$$
+There are no other eigenvalues.
+\end{theorem}
+
+We leave it to you to prove the next theorem about Problem~4 by
+an argument like that of Example~\ref{example:11.1.2}
+(Exercise~\ref{exer:11.1.18}).
+
+\begin{theorem}\color{blue}\label{thmtype:11.1.5}
+The eigenvalue problem
+$$
+y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0
+$$
+has infinitely many positive eigenvalues
+$\lambda_n=(2n-1)^2\pi^2/4L^2,$ with associated eigenfunctions
+$$
+y_n=\cos{(2n-1)\pi
+x\over2L},\quad n=1,2,3,\dots.
+$$
+There are no other eigenvalues.
+\end{theorem}
+
+\begin{example}[Problem 5] \label{example:11.1.3} \rm
+Solve the eigenvalue  problem
+\begin{equation} \label{eq:11.1.5}
+y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L).
+\end{equation}
+
+\solution
+From Theorem~\ref{thmtype:11.1.1}, $\lambda=0$ is an eigenvalue of
+\eqref{eq:11.1.5} with associated eigenfunction $y_0=1$, and any other
+eigenvalues must be positive. If $y$ satisfies \eqref{eq:11.1.5} with
+$\lambda>0$, then
+\begin{equation} \label{eq:11.1.6}
+y=c_1\cos\sqrt\lambda\, x+c_2\sin\sqrt\lambda\, x,
+\end{equation}
+where $c_1$ and $c_2$ are constants.
+The boundary condition $y(-L)=y(L)$ implies that
+\begin{equation} \label{eq:11.1.7}
+c_1\cos(-\sqrt\lambda\,L)+c_2\sin(-\sqrt\lambda\,L)=c_1\cos \sqrt\lambda\,L+c_2\sin \sqrt\lambda\,L.
+\end{equation}
+Since
+\begin{equation} \label{eq:11.1.8}
+\cos(-\sqrt\lambda\,L)=\cos \sqrt\lambda\,L\mbox
+{\quad and \quad}\sin(-\sqrt\lambda\,L)=-\sin \sqrt\lambda\,L,
+\end{equation}
+\eqref{eq:11.1.7} implies that
+\begin{equation} \label{eq:11.1.9}
+c_2\sin \sqrt\lambda\,L=0.
+\end{equation}
+Differentiating \eqref{eq:11.1.6} yields
+$$
+y'=\sqrt\lambda\left(-c_1\sin\sqrt\lambda x+c_2\cos\sqrt\lambda
+x\right).
+$$
+The boundary condition $y'(-L)=y'(L)$  implies that
+$$
+-c_1\sin(-\sqrt\lambda\,L)+c_2\cos(-\sqrt\lambda\,L)=-c_1\sin \sqrt\lambda\,L+c_2\cos \sqrt\lambda\,L,
+$$
+and  \eqref{eq:11.1.8} implies that
+\begin{equation} \label{eq:11.1.10}
+c_1\sin \sqrt\lambda\,L=0.
+\end{equation}
+
+Eqns.~\eqref{eq:11.1.9} and \eqref{eq:11.1.10} imply that $c_1=c_2=0$ unless
+$\sqrt\lambda =n\pi /L$, where $n$ is a positive integer. In this  case
+\eqref{eq:11.1.9} and \eqref{eq:11.1.10} both hold for arbitrary $c_1$ and
+$c_2$. The eigenvalue determined in this way is
+$\lambda_n=n^2\pi^2/L^2$, and each such eigenvalue has the linearly
+independent associated eigenfunctions
+$$
+\cos {n\pi x\over L}
+\mbox{\quad and \quad}
+  \sin{ n\pi x\over L}.
+\eqno{\bbox}
+$$
+\end{example}
+
+For future reference we state the result of Example~\ref{example:11.1.3} as
+a theorem.
+
+\begin{theorem}\color{blue}\label{thmtype:11.1.6}
+The eigenvalue problem
+$$
+y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L),
+$$
+has the eigenvalue $\lambda_0=0$, with associated eigenfunction $y_0=1$
+and  infinitely many positive eigenvalues
+$\lambda_n=n^2\pi^2/L^2,$
+with associated eigenfunctions
+$$
+y_{1n}=\cos {n\pi x\over L}
+\mbox{\quad and \quad}
+y_{2n}=\sin {n\pi x\over L},\quad n=1,2,3,\dots.
+$$
+There are no other eigenvalues.
+\end{theorem}
+
+\boxit{Orthogonality}
+
+\noindent
+We say that two integrable functions $f$ and $g$ are {\color{blue}\it
+orthogonal\/} on an interval $[a,b]$ if
+$$
+\int_a^bf(x)g(x)\,dx=0.
+$$
+More generally, we say that the functions $\phi_1$, $\phi_2$, \dots,
+$\phi_n$, \dots (finitely or infinitely many) are orthogonal
+on $[a,b]$  if
+$$
+\int_a^b\phi_i(x)\phi_j(x)\,dx=0\mbox{\quad whenever \quad}
+i\ne j.
+$$
+The  importance of orthogonality will become clear when we study
+Fourier
+ series in the next two sections.
+
+\begin{example}\label{example:11.1.4} \rm
+Show that the eigenfunctions
+\begin{equation} \label{eq:11.1.11}
+1,\, \cos{\pi x\over L},\, \sin{\pi x\over L},
+\, \cos{2\pi x\over L}, \, \sin{2\pi x\over L},\dots,
+\cos{n\pi x\over L}, \, \sin{n\pi x\over L},\dots
+\end{equation}
+of Problem 5
+are orthogonal on $[-L,L]$.
+\end{example}
+
+\solution We must show that
+\begin{equation} \label{eq:11.1.12}
+\int_{-L}^L f(x)g(x)\,dx=0
+\end{equation}
+whenever $f$ and $g$ are distinct functions from \eqref{eq:11.1.11}.
+If $r$ is any nonzero integer, then
+\begin{equation} \label{eq:11.1.13}
+\int_{-L}^L\cos{r\pi x\over L}\,dx
+={L\over r\pi}\sin{r\pi x\over L}\bigg|_{-L}^L=0.
+\end{equation}
+and
+$$
+\int_{-L}^L\sin{r\pi x\over L}\,dx
+=-{L\over r\pi}\cos{r\pi x\over L}\bigg|_{-L}^L=0.
+$$
+Therefore \eqref{eq:11.1.12} holds  if $f\equiv1$
+and $g$ is any other function in \eqref{eq:11.1.11}.
+
+If $f(x)=\cos m\pi x/L$ and $g(x)=\cos n\pi x/L$ where $m$
+and $n$ are distinct positive integers, then
+\begin{equation} \label{eq:11.1.14}
+\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\cos{m\pi x\over L}
+\cos{n\pi x\over L}\,dx.
+\end{equation}
+To evaluate this integral, we use the identity
+$$
+\cos A\cos B={1\over2}[\cos(A-B)+\cos(A+B)]
+$$
+with $A=m\pi x/L$ and $B=n\pi x/L$.  Then \eqref{eq:11.1.14} becomes
+$$
+\int_{-L}^L
+f(x)g(x)\,dx={1\over2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
++\int_{-L}^L\cos{(m+n)\pi x\over L}\,dx\right].
+$$
+Since $m-n$ and $m+n$ are both nonzero integers, \eqref{eq:11.1.13}
+implies that the  integrals on the right are both zero. Therefore
+ \eqref{eq:11.1.12} is true  in this case.
+
+If $f(x)=\sin m\pi x/L$ and $g(x)=\sin n\pi x/L$ where $m$
+and $n$ are distinct positive integers, then
+\begin{equation} \label{eq:11.1.15}
+\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin{m\pi x\over L}
+\sin{n\pi x\over L}\,dx.
+\end{equation}
+To evaluate this integral, we use the  identity
+$$
+\sin A\sin B={1\over2}[\cos(A-B)-\cos(A+B)]
+$$
+with $A=m\pi x/L$ and $B=n\pi x/L$.  Then \eqref{eq:11.1.15} becomes
+$$
+\int_{-L}^L
+f(x)g(x)\,dx={1\over2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
+-\int_{-L}^L\cos{(m+n)\pi x\over L}\,dx\right]=0.
+$$
+
+If $f(x)=\sin m\pi x/L$ and $g(x)=\cos n\pi x/L$ where $m$
+and $n$ are   positive integers (not necessarily distinct),
+then
+$$
+\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin{m\pi x\over L}
+\cos{n\pi x\over L}\,dx=0
+$$
+because the integrand is an odd function and the limits are symmetric
+about $x=0$.
+\bbox
+
+Exercises~\ref{exer:11.1.19}-\ref{exer:11.1.22} ask you to verify
+ that the eigenfunctions of Problems~1-4  are orthogonal
+on $[0,L]$. However, this also follows from a general theorem that we'll
+ prove in Chapter~13.
+
+%\end{comment}
+
+\exercises
+
+\begin{exerciselist}
+\item\label{exer:11.1.1}
+Prove that $\lambda=0$ is an eigenvalue of Problem~5 with associated
+eigenfunction $y_0=1$, and that any other eigenvalues  must be
+positive.
+\hint{See the proof of Theorem~\ref{thmtype:11.1.1}.}
+
+\exercisetext{In Exercises 2-16 solve the eigenvalue problem.}
+
+\item\label{exer:11.1.2}
+$y''+\lambda y=0,\quad y(0)=0,\quad y(\pi)=0$
+
+\item\label{exer:11.1.3}
+$y''+\lambda y=0,\quad y'(0)=0,\quad y'(\pi)=0$
+
+\item\label{exer:11.1.4}
+$y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(\pi)=0$
+
+\item\label{exer:11.1.5}
+$y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(\pi)=0$
+
+\item\label{exer:11.1.6}
+$y''+\lambda y=0,\quad y(-\pi)= y(\pi), \quad y'(-\pi)=y'(\pi)$
+
+\item\label{exer:11.1.7}
+$y''+\lambda y=0,\quad y'(0)=0,\quad y'(1)=0$
+
+\item\label{exer:11.1.8}
+$y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(1)=0$
+
+\item\label{exer:11.1.9}
+$y''+\lambda y=0,\quad y(0)=0,\quad y(1)=0$
+
+\item\label{exer:11.1.10}
+$y''+\lambda y=0,\quad y(-1)= y(1), \quad y'(-1)=y'(1)$
+
+\item\label{exer:11.1.11}
+$y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(1)=0$
+
+\item\label{exer:11.1.12}
+$y''+\lambda y=0,\quad y(-2)= y(2), \quad y'(-2)=y'(2)$
+
+\item\label{exer:11.1.13}
+$y''+\lambda y=0,\quad y(0)=0,\quad y(2)=0$
+
+\item\label{exer:11.1.14}
+$y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(3)=0$
+
+\item\label{exer:11.1.15}
+$y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(1/2)=0$
+
+\item\label{exer:11.1.16}
+$y''+\lambda y=0,\quad y'(0)=0,\quad y'(5)=0$
+
+\item\label{exer:11.1.17}
+Prove Theorem~\ref{thmtype:11.1.3}.
+
+\item\label{exer:11.1.18}
+Prove Theorem~\ref{thmtype:11.1.5}.
+
+\item\label{exer:11.1.19}
+Verify  that the eigenfunctions
+$$
+\sin{\pi x\over L},
+\, \sin{2\pi x\over L},\dots,
+ \, \sin{n\pi x\over L},\dots
+$$
+ of Problem~1
+are orthogonal on $[0,L]$.
+
+\item\label{exer:11.1.20}
+Verify  that the eigenfunctions
+$$
+1,\, \cos{\pi x\over L},
+\, \cos{2\pi x\over L},\dots,
+ \, \cos{n\pi x\over L},\dots
+$$
+of Problem~2
+are orthogonal on $[0,L]$.
+
+\item\label{exer:11.1.21}
+Verify that  the eigenfunctions
+$$
+\sin{\pi x\over 2L},
+\, \sin{3\pi x\over 2L},\dots,
+ \, \sin{(2n-1)\pi x\over 2L},\dots
+$$
+of Problem~3
+are orthogonal on $[0,L]$.
+
+\item\label{exer:11.1.22}
+Verify  that the eigenfunctions
+$$
+\cos{\pi x\over 2L},
+\, \cos{3\pi x\over 2L},\dots,
+ \, \cos{(2n-1)\pi x\over 2L},\dots
+$$
+of Problem~4
+are orthogonal on $[0,L]$.
+
+\exercisetext{In Exercises~\ref{exer:11.1.23}-\ref{exer:11.1.26}
+ solve the
+eigenvalue problem.}
+
+\item\label{exer:11.1.23}
+$y''+\lambda y=0,\quad y(0)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+
+\item\label{exer:11.1.24}
+$y''+\lambda y=0,\quad y'(0)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+
+\item\label{exer:11.1.25}
+$y''+\lambda y=0,\quad y(L)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+
+\item\label{exer:11.1.26}
+$y''+\lambda y=0,\quad y'(L)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+
+\end{exerciselist}

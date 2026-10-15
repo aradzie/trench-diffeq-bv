@@ -1,0 +1,794 @@
+\newsection{5}{Linear Second Order Equations} {The Method of Undetermined Coefficients II}
+\currentpdfbookmark{Section 5.5 The Method of Undetermined Coefficients II}{section:5.5}
+\vskip14pt
+\renewcommand{\thissection}{\sectiontitle{\,
+THE METHOD OF UNDETERMINED COEFFICIENTS II}}
+\thissection
+
+\noindent
+In this section we consider the constant coefficient equation
+\begin{equation} \label{eq:5.5.1}
+ay''+by'+cy=e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)
+\end{equation}
+where $\lambda$ and $\omega$ are real numbers, $\omega\ne0$, and $P$
+and $Q$ are polynomials. We want to find a particular solution of
+\eqref{eq:5.5.1}. As in Section~5.4, the procedure that we
+will use is called {\color{blue}\it the method of undetermined coefficients\/}.
+
+\boxit{Forcing Functions Without Exponential Factors}
+
+\noindent
+We begin with the case where $\lambda=0$ in \eqref{eq:5.5.1};   thus, we
+we
+want to find a particular solution of
+\begin{equation} \label{eq:5.5.2}
+ay''+by'+cy=P(x)\cos\omega x+Q(x)\sin\omega x,
+\end{equation}
+where $P$ and $Q$ are polynomials.
+
+Differentiating  $x^r\cos\omega x$ and $x^r\sin\omega x$ yields
+\begin{eqnarray*}
+\dst{d\over dx}x^r\cos\omega x&=&-\omega x^r\sin\omega x+
+rx^{r-1}\cos\omega x \\[2\jot]  \arraytext{and}
+\dst{d\over dx}x^r\sin\omega x&=&\phantom{-}\omega x^r\cos\omega x+
+rx^{r-1}\sin\omega x.
+\end{eqnarray*}
+This implies  that if
+$$
+y_p=A(x)\cos\omega x+B(x)\sin\omega x
+$$
+where $A$ and $B$ are polynomials, then
+$$
+ay_p''+by_p'+cy_p=F(x)\cos\omega x+G(x)\sin\omega x,
+$$
+where $F$ and $G$ are polynomials with coefficients that can be
+expressed in terms of the coefficients of $A$ and $B$. This suggests
+that we try to choose $A$ and $B$ so that $F=P$ and $G=Q$,
+respectively. Then $y_p$ will be a particular solution of
+\eqref{eq:5.5.2}. The next theorem tells us how to choose the proper
+form for $y_p$. For the proof see Exercise~\ref{exer:5.5.37}.
+
+\begin{theorem}\color{blue} \label{thmtype:5.5.1}
+Suppose $\omega$ is a positive number and $P$ and $Q$ are
+polynomials$.$ Let $k$ be the larger of the degrees of $P$ and $Q.$ Then
+the equation
+$$
+ay''+by'+cy=P(x)\cos \omega x+Q(x)\sin \omega x
+$$
+has a particular solution
+\begin{equation} \label{eq:5.5.3}
+y_p=A(x)\cos\omega x+B(x)\sin\omega x,
+\end{equation}
+where
+$$
+A(x)=A_0+A_1x+\cdots+A_kx^k \mbox{\quad and \quad}
+B(x)=B_0+B_1x+\cdots+B_kx^k,
+$$
+provided that $\cos\omega x$ and $\sin\omega x$ are
+not solutions of  the complementary equation$.$ The solutions of
+$$
+a(y''+\omega^2y)=P(x)\cos \omega x+Q(x)\sin \omega x
+$$
+$($for which $\cos\omega x$ and $\sin\omega x$ are solutions of the
+complementary equation$)$ are of the form $\eqref{eq:5.5.3},$
+where
+$$
+A(x)=A_0x+A_1x^2+\cdots+A_kx^{k+1} \mbox{\quad and \quad}
+B(x)=B_0x+B_1x^2+\cdots+B_kx^{k+1}.
+$$
+\end{theorem}
+
+For an analog of this theorem that's applicable to \eqref{eq:5.5.1},
+see Exercise~\ref{exer:5.5.38}.
+
+\begin{example}\label{example:5.5.1} \rm
+Find a particular solution of
+\begin{equation} \label{eq:5.5.4}
+y''-2y'+y=5\cos2x+10\sin2x.
+\end{equation}
+\end{example}
+
+\solution
+In \eqref{eq:5.5.4} the coefficients of $\cos2x$ and $\sin2x$ are both zero
+degree polynomials (constants). Therefore Theorem~\ref{thmtype:5.5.1}
+implies that \eqref{eq:5.5.4} has a particular solution
+$$
+y_p=A\cos2x+B\sin2x.
+$$
+Since
+$$
+y_p'=-2A\sin2x+2B\cos2x\mbox{\quad and \quad}
+y_p''=-4(A\cos2x+B\sin2x),
+$$
+replacing $y$ by $y_p$ in  \eqref{eq:5.5.4} yields
+\begin{eqnarray*}
+y_p''-2y_p'+y_p&=&-4(A\cos2x+B\sin2x)-4(-A\sin2x+B\cos2x)
+\\ &&+(A\cos2x+B\sin2x)\\ &=&
+(-3A-4B)\cos2x+(4A-3B)\sin2x.
+\end{eqnarray*}
+Equating the coefficients of $\cos2x$ and $\sin2x$ here with the
+corresponding coefficients on the right side of \eqref{eq:5.5.4}
+shows that $y_p$ is a solution of \eqref{eq:5.5.4}  if
+\begin{eqnarray*}
+-3A-4B&=&\phantom{1}5\phantom{.}\\
+\phantom{-}4A-3B&=&10.
+\end{eqnarray*}
+Solving these equations yields $A=1$, $B=-2$.  Therefore
+$$
+y_p=\cos2x-2\sin2x
+$$
+is a particular solution of \eqref{eq:5.5.4}.
+
+\begin{example}\label{example:5.5.2} \rm
+Find a particular solution of
+\begin{equation} \label{eq:5.5.5}
+y''+4y=8\cos2x+12\sin2x.
+\end{equation}
+\end{example}
+
+\solution
+The procedure used in  Example~\ref{example:5.5.1} doesn't work here;
+substituting $y_p=A\cos2x+B\sin2x$ for $y$ in \eqref{eq:5.5.5} yields
+$$
+y_p''+4y_p=-4(A\cos2x+B\sin2x) +4(A\cos2x+B\sin2x)=0
+$$
+for any choice of $A$ and $B$, since $\cos2x$ and $\sin2x$ are both
+solutions of the complementary equation for \eqref{eq:5.5.5}. We're
+dealing with the second case mentioned in Theorem~\ref{thmtype:5.5.1}, and
+should therefore try a particular solution of the form
+\begin{equation} \label{eq:5.5.6}
+y_p=x(A\cos2x+B\sin2x).
+\end{equation}
+Then
+\begin{eqnarray*}
+y_p'&=&A\cos2x+B\sin2x+2x(-A\sin2x+B\cos2x)
+\\ \arraytext{and}
+y_p''&=&-4A\sin2x+4B\cos2x-4x(A\cos2x+B\sin2x)\\
+&=&-4A\sin2x+4B\cos2x-4y_p \mbox{ (see \eqref{eq:5.5.6})},
+\end{eqnarray*}
+so
+$$
+y_p''+4y_p=-4A\sin2x+4B\cos2x.
+$$
+Therefore $y_p$ is a solution of \eqref{eq:5.5.5} if
+$$
+-4A\sin2x+4B\cos2x=8\cos2x+12\sin2x,
+$$
+which holds if $A=-3$ and $B=2$.  Therefore
+$$
+y_p=-x(3\cos2x-2\sin2x)
+$$
+is a particular solution of \eqref{eq:5.5.5}.
+
+\begin{example}\label{example:5.5.3} \rm
+Find a particular solution of
+\begin{equation} \label{eq:5.5.7}
+y''+3y'+2y=(16+20x)\cos x+10\sin x.
+\end{equation}
+\end{example}
+
+\solution
+The coefficients of $\cos x$ and $\sin x$ in \eqref{eq:5.5.7} are
+polynomials of degree one and zero, respectively. Therefore
+Theorem~\ref{thmtype:5.5.1} tells us to look for a particular solution of
+\eqref{eq:5.5.7} of the form
+\begin{equation} \label{eq:5.5.8}
+y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x.
+\end{equation}
+Then
+\begin{equation} \label{eq:5.5.9}
+y_p'=(A_1+B_0+B_1x)\cos x+(B_1-A_0-A_1x)\sin x
+\end{equation}
+and
+\begin{equation} \label{eq:5.5.10}
+ y_p''=(2B_1-A_0-A_1x)\cos x-(2A_1+B_0+B_1x)\sin x,
+\end{equation}
+so
+\begin{equation} \label{eq:5.5.11}
+\begin{array}{rcl}
+y_p''+3y_p'+2y_p&=&\left[A_0+3 A_1+3 B_0+2 B_1+(A_1+3 B_1)x\right]\cos
+x\\ &&+ \left[B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right]\sin x.
+\end{array}
+\end{equation}
+Comparing the coefficients of $x\cos x$, $x\sin x$, $\cos x$, and
+$\sin x$ here with the corresponding coefficients in \eqref{eq:5.5.7}
+shows that $y_p$ is a solution of \eqref{eq:5.5.7} if
+$$
+\begin{array}{rcr}
+\phantom{-3}A_1+3B_1&=&20\phantom{.}\\
+-3A_1+\phantom{3}B_1&=&0\phantom{.}\\
+\phantom{-3}A_0+3B_0+3A_1+2B_1&=&16\phantom{.}\\
+-3A_0+\phantom{3}B_0-2A_1+3B_1&=&10.
+\end{array}
+$$
+Solving the first two equations yields $A_1=2$, $B_1=6$.
+Substituting these into the last two equations  yields
+\begin{eqnarray*}
+\phantom{-3}A_0+3B_0&=&16-3A_1-2B_1=-2\phantom{.}\\
+-3A_0+\phantom{3}B_0&=&10+2A_1-3B_1=-4.
+ \end{eqnarray*}
+Solving these equations yields $A_0=1$, $B_0=-1$.
+Substituting $A_0=1$, $A_1=2$, $B_0=-1$, $B_1=6$ into
+\eqref{eq:5.5.8} shows that
+$$
+y_p=(1+2x)\cos x-(1-6x)\sin x
+$$
+is a particular solution of  \eqref{eq:5.5.7}.
+
+\boxit{A Useful Observation}
+
+\noindent
+In \eqref{eq:5.5.9}, \eqref{eq:5.5.10}, and \eqref{eq:5.5.11} the polynomials
+multiplying $\sin x$ can be obtained by replacing $A_0,A_1,B_0$,
+and $B_1$ by $B_0$, $B_1$, $-A_0$, and $-A_1$, respectively, in the
+polynomials mutiplying $\cos x$. An analogous result applies in
+general, as follows (Exercise~\ref{exer:5.5.36}).
+
+\begin{theorem}\color{blue}\label{thmtype:5.5.2}
+If
+$$
+y_p=A(x)\cos\omega x+B(x)\sin\omega x,
+$$
+where $A(x)$ and $B(x)$ are polynomials with coefficients
+$A_0$ \dots, $A_k$ and $B_0$, \dots, $B_k,$ then the polynomials
+multiplying $\sin\omega x$ in
+$$
+y_p',\quad y_p'',\quad  ay_p''+by_p'+cy_p
+\mbox{\quad and \quad} y_p''+\omega^2 y_p
+$$
+can be obtained by replacing $A_0$, \dots$,$ $A_k$ by $B_0,$ \dots$,$ $B_k$
+and $B_0,$ \dots$,$  $B_k$ by $-A_0,$ \dots$,$ $-A_k$ in the corresponding
+polynomials multiplying $\cos\omega x$.
+\end{theorem}
+
+We won't use this theorem in our examples, but we recommend that
+you use it to check your manipulations when you work the  exercises.
+
+\begin{example}\label{example:5.5.4} \rm
+Find a particular solution of
+\begin{equation} \label{eq:5.5.12}
+y''+y=(8-4x)\cos x-(8+8x)\sin x.
+\end{equation}
+\end{example}
+
+\solution
+According to  Theorem~\ref{thmtype:5.5.1}, we should look for a
+particular solution of the form
+\begin{equation} \label{eq:5.5.13}
+y_p=(A_0x+A_1x^2)\cos x+(B_0x+B_1x^2)\sin x,
+\end{equation}
+since $\cos x$ and $\sin x$ are solutions of the complementary
+equation. However, let's  try
+\begin{equation} \label{eq:5.5.14}
+y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x
+\end{equation}
+first, so you can see why it doesn't work. From \eqref{eq:5.5.10},
+$$
+ y_p''=(2B_1-A_0-A_1x)\cos x-(2A_1+B_0+B_1x)\sin x,
+$$
+which together with \eqref{eq:5.5.14} implies that
+$$
+y_p''+y_p=2B_1\cos x-2A_1\sin x.
+$$
+Since the right side of this equation does not contain $x\cos x$
+or $x\sin x$,  \eqref{eq:5.5.14} can't satisfy
+\eqref{eq:5.5.12} no matter how we choose $A_0$, $A_1$, $B_0$, and $B_1$.
+
+Now let $y_p$ be as in \eqref{eq:5.5.13}. Then
+\begin{eqnarray*}
+y_p'&=&\left[A_0+(2A_1+B_0)x+B_1x^2\right]\cos x\\ &&
++\left[B_0+(2B_1-A_0)x-A_1x^2\right]\sin x\\  \arraytext{and}
+y_p''&=&
+\left[2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right]\cos x\\ &&+
+\left[2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right]\sin x,
+\end{eqnarray*}
+so
+$$
+y_p''+y_p=(2A_1+2B_0+4B_1x)\cos x+(2B_1-2A_0-4A_1x)\sin x.
+$$
+Comparing the  coefficients of $\cos x$ and
+$\sin x$ here  with the corresponding coefficients  in \eqref{eq:5.5.12}
+shows that
+$y_p$ is a solution of \eqref{eq:5.5.12} if
+$$
+\begin{array}{rcr}
+\phantom{-}4B_1&=&-4\phantom{.}\\
+-4A_1&=&-8\phantom{.}\\
+\phantom{-}2B_0+2A_1&=&8\phantom{.}\\
+-2A_0+2B_1&=&-8.
+\end{array}
+$$
+The solution of this system is  $A_1=2$, $B_1=-1$, $A_0=3$, $B_0=2$.
+  Therefore
+$$
+y_p=x\left[(3+2x)\cos x+(2-x)\sin x\right]
+$$
+is a particular solution of \eqref{eq:5.5.12}.
+
+\boxit{Forcing Functions with Exponential Factors}
+
+\noindent
+To find a particular solution of
+\begin{equation} \label{eq:5.5.15}
+ay''+by'+cy=e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)
+\end{equation}
+when $\lambda\ne0$, we recall from Section~5.4 that
+substituting $y=ue^{\lambda x}$ into \eqref{eq:5.5.15} will produce a
+constant coefficient equation for $u$  with  the forcing
+function  $P(x)\cos \omega x+Q(x)\sin \omega x$. We can find a
+particular solution $u_p$ of this equation by the procedure that we
+used in Examples~\ref{example:5.5.1}--\ref{example:5.5.4}. Then
+$y_p=u_pe^{\lambda x}$ is a particular solution of \eqref{eq:5.5.15}.
+
+\begin{example}\label{example:5.5.5} \rm
+Find a particular solution of
+\begin{equation} \label{eq:5.5.16}
+y''-3y'+2y=e^{-2x}\left[2\cos 3x-(34-150x)\sin 3x\right].
+\end{equation}
+\end{example}
+
+\solution
+Let $y=ue^{-2x}$. Then
+\begin{eqnarray*}
+y''-3y'+2y&=&e^{-2x}\left[(u''-4u'+4u)-3(u'-2u)+2u\right]\\
+&=&e^{-2x}(u''-7u'+12u)\\ &=&
+e^{-2x}\left[2\cos 3x-(34-150x)\sin 3x\right]
+\end{eqnarray*}
+if
+ \begin{equation} \label{eq:5.5.17}
+u''-7u'+12u=2\cos 3x-(34-150x)\sin 3x.
+\end{equation}
+Since $\cos3x$ and $\sin3x$ aren't solutions of
+the complementary equation
+$$
+u''-7u'+12u=0,
+$$
+ Theorem~\ref{thmtype:5.5.1} tells us to look for a particular solution
+of \eqref{eq:5.5.17} of the form
+\begin{equation} \label{eq:5.5.18}
+u_p=(A_0+A_1x)\cos 3x +(B_0+B_1x)\sin 3x.
+\end{equation}
+Then
+\begin{eqnarray*}
+u_p'&=&(A_1+3B_0+3B_1x)\cos 3x+(B_1-3A_0-3A_1x)\sin 3x\\
+\arraytext{and}
+u_p''&=&(-9A_0+6B_1-9A_1x)\cos 3x-(9B_0+6A_1+9B_1x)\sin 3x,
+\end{eqnarray*}
+so
+\begin{eqnarray*}
+u_p''-7u_p'+12u_p&=&\left[3A_0-21B_0-7A_1+6B_1+(3A_1-21B_1)x\right]\cos
+3x\\ &&+\left[21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right]\sin 3x.
+\end{eqnarray*}
+Comparing the coefficients of $x\cos 3x$, $x\sin 3x$, $\cos 3x$, and
+$\sin 3x$ here with the corresponding coefficients on the right side
+of \eqref{eq:5.5.17} shows that $u_p$ is a solution of \eqref{eq:5.5.17} if
+\begin{equation} \label{eq:5.5.19}
+\begin{array}{rcr}
+3A_1-21B_1&=&0\phantom{.}\\
+21A_1+\phantom{2}3B_1&=&150\phantom{.}\\
+3A_0-21B_0-7A_1+\phantom{2}6B_1&=&\phantom{-3}2\phantom{.}\\
+21A_0+\phantom{2}3B_0-6A_1-\phantom{5}7B_1&=&-34.
+\end{array}
+\end{equation}
+Solving the first two equations yields $A_1=7$, $B_1=1$.
+Substituting these values into the last two equations of \eqref{eq:5.5.19}
+yields
+\begin{eqnarray*}
+\phantom{2}3A_0-21B_0&=&\phantom{-3}2+7A_1-6B_1=45\phantom{.}\\
+21A_0+\phantom{2}3B_0&=&-34+6A_1+7B_1=15.
+\end{eqnarray*}
+Solving this system  yields  $A_0=1$, $B_0=-2$.
+Substituting $A_0=1$, $A_1=7$, $B_0=-2$, and $B_1=1$ into
+\eqref{eq:5.5.18} shows that
+$$
+u_p=(1+7x)\cos 3x-(2-x)\sin 3x
+$$
+is a particular solution of  \eqref{eq:5.5.17}. Therefore
+$$
+y_p=e^{-2x}\left[(1+7x)\cos 3x-(2-x)\sin 3x\right]
+$$
+is a particular solution of   \eqref{eq:5.5.16}.
+
+\begin{example}\label{example:5.5.6} \rm
+Find a particular solution of
+\begin{equation} \label{eq:5.5.20}
+y''+2y'+5y=e^{-x}\left[(6-16x)\cos2x-(8+8x)\sin2x\right].
+\end{equation}
+\end{example}
+
+\solution
+Let $y=ue^{-x}$. Then
+\begin{eqnarray*}
+y''+2y'+5y&=&e^{-x}\left[(u''-2u'+u)+2(u'-u)+5u\right]\\
+&=&e^{-x}(u''+4u)\\ &=&
+e^{-x}\left[(6-16x)\cos2x-(8+8x)\sin2x\right]
+\end{eqnarray*}
+if
+\begin{equation} \label{eq:5.5.21}
+u''+4u=(6-16x)\cos2x-(8+8x)\sin2x.
+\end{equation}
+Since $\cos2x$  and $\sin2x$ are solutions of
+the complementary equation
+$$
+u''+4u=0,
+$$
+ Theorem~\ref{thmtype:5.5.1} tells us to look for a particular solution
+of \eqref{eq:5.5.21} of the form
+$$
+u_p=(A_0x+A_1x^2)\cos2x+(B_0x+B_1x^2)\sin2x.
+$$
+Then
+\begin{eqnarray*}
+u_p'&=&\left[A_0+(2A_1+2B_0)x+2B_1x^2\right]\cos2x \\ &&
++\left[B_0+(2B_1-2A_0)x-2A_1x^2\right]\sin2x\\ \arraytext{and}
+u_p''&=&\left[2A_1+4B_0-(4A_0-8B_1)x-4A_1x^2\right]\cos2x\\ &&
++\left[2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right]\sin2x,
+\end{eqnarray*}
+so
+$$
+u_p''+4u_p=(2A_1+4B_0+8B_1x)\cos2x+(2B_1-4A_0-8A_1x)\sin2x.
+$$
+Equating the  coefficients of $x\cos2x$,
+$x\sin2x$, $\cos2x$, and $\sin2x$  here with the
+corresponding
+coefficients on the right side of \eqref{eq:5.5.21} shows that $u_p$
+is a solution of \eqref{eq:5.5.21} if
+\begin{equation} \label{eq:5.5.22}
+\begin{array}{rcr}
+8B_1&=&-16\phantom{.}\\
+-8A_1&=&-\phantom{1}8\phantom{.}\\
+\phantom{-}4B_0+2A_1&=&6\phantom{.}\\
+-4A_0+2B_1&=&-8.
+\end{array}
+\end{equation}
+The solution of this system is  $A_1=1$, $B_1=-2$, $B_0=1$, $A_0=1$.
+Therefore
+$$
+u_p=x[(1+x)\cos2x+(1-2x)\sin2x]
+$$
+is a particular solution of  \eqref{eq:5.5.21}, and
+$$
+y_p=xe^{-x}\left[(1+x)\cos2x+(1-2x)\sin2x\right]
+$$
+is a particular solution of  \eqref{eq:5.5.20}.  \bbox
+
+You can also find a particular solution of \eqref{eq:5.5.20}
+by substituting
+$$
+y_p=xe^{-x}\left[(A_0+A_1x)\cos 2x +(B_0+B_1x)\sin 2x\right]
+$$
+for $y$  in \eqref{eq:5.5.20}
+and equating the  coefficients of $xe^{-x}\cos2x$,
+$xe^{-x}\sin2x$, $e^{-x}\cos2x$, and $e^{-x}\sin2x$  in the
+resulting expression for
+$$
+y_p''+2y_p'+5y_p
+$$
+with the corresponding coefficients on the right side of
+\eqref{eq:5.5.20}. (See Exercise~\ref{exer:5.5.38}). This leads to the
+same system \eqref{eq:5.5.22} of equations for $A_0$, $A_1$, $B_0$, and
+$B_1$ that we obtained in Example~\ref{example:5.5.6}. However, if you try
+this approach you'll see that deriving \eqref{eq:5.5.22} this way is
+much more tedious than the way we did it in Example~\ref{example:5.5.6}.
+
+\exercises
+In Exercises \ref{exer:5.5.1}--\ref{exer:5.5.17} find a particular solution.
+
+\begin{exerciselist}
+
+\item\label{exer:5.5.1} $y''+3y'+2y=7\cos x-\sin x$
+\item\label{exer:5.5.2} $y''+3y'+y=(2-6x)\cos x-9\sin x$
+
+\item\label{exer:5.5.3} $y''+2y'+y=e^x(6\cos x+17\sin x)$
+
+\item\label{exer:5.5.4} $y''+3y'-2y=-e^{2x}(5\cos2x+9\sin2x)$
+
+\item\label{exer:5.5.5} $y''-y'+y=e^x(2+x)\sin x$
+
+\item\label{exer:5.5.6} $y''+3y'-2y=e^{-2x}\left[(4+20x)\cos 3x+(26-32x)\sin
+3x\right]$
+
+\item\label{exer:5.5.7} $y''+4y=-12\cos2x-4\sin2x$
+
+\item\label{exer:5.5.8} $y''+y=(-4+8x)\cos x+(8-4x)\sin x$
+
+\item\label{exer:5.5.9} $4y''+y=-4\cos x/2-8x\sin x/2$
+
+\item\label{exer:5.5.10} $y''+2y'+2y=e^{-x}(8\cos x-6\sin x)$
+
+\item\label{exer:5.5.11} $y''-2y'+5y=e^x\left[(6+8x)\cos
+2x+(6-8x)\sin2x\right]$
+
+\item\label{exer:5.5.12} $y''+2y'+y=8x^2\cos x-4x\sin x$
+
+\item\label{exer:5.5.13}   $y''+3y'+2y=(12+20x+10x^2)\cos x+8x\sin x$
+
+\item\label{exer:5.5.14} $y''+3y'+2y=(1-x-4x^2)\cos2x-(1+7x+2x^2)\sin2x$
+
+\item\label{exer:5.5.15}
+$y''-5y'+6y=-e^x\left[(4+6x-x^2)\cos x-(2-4x+3x^2)\sin x\right]$
+
+\item\label{exer:5.5.16}
+$y''-2y'+y=-e^x\left[(3+4x-x^2)\cos x+(3-4x-x^2)\sin x\right]$
+
+\item\label{exer:5.5.17}
+$y''-2y'+2y=e^x\left[(2-2x-6x^2)\cos x+(2-10x+6x^2)\sin x\right]$
+
+\exercisetext{
+In Exercises \ref{exer:5.5.1}--\ref{exer:5.5.17} find a particular solution and graph
+it.}
+
+\item\label{exer:5.5.18} \CGex $y''+2y'+y=e^{-x}\left[(5-2x)\cos
+x-(3+3x)\sin x\right]$
+
+\item\label{exer:5.5.19} \CGex $y''+9y=-6\cos 3x-12\sin 3x$
+
+\item\label{exer:5.5.20} \CGex $y''+3y'+2y=(1-x-4x^2)\cos2x-(1+7x+2x^2)\sin2x$
+
+\item\label{exer:5.5.21} \CGex
+$y''+4y'+3y=e^{-x}\left[(2+x+x^2)\cos x+(5+4x+2x^2)\sin x\right]$
+
+\exercisetext{In Exercises \ref{exer:5.5.22}--\ref{exer:5.5.26} solve the
+initial value problem.}
+
+\item\label{exer:5.5.22}
+ $y''-7y'+6y=-e^x(17\cos x-7\sin x), \quad   y(0)=4,\;  y'(0)=2$
+
+\item\label{exer:5.5.23}
+$y''-2y'+2y=-e^x(6\cos x+4\sin x), \quad   y(0)=1,\;  y'(0)=4$
+
+\item\label{exer:5.5.24} $y''+6y'+10y=-40e^x\sin x, \quad  y(0)=2,\quad y'(0)=-3$
+
+\item\label{exer:5.5.25} $y''-6y'+10y=-e^{3x}(6\cos x+4\sin
+x), \quad  y(0)=2,\quad y'(0)=7$
+
+\item\label{exer:5.5.26}
+$y''-3y'+2y=e^{3x}\left[21\cos x-(11+10x)\sin x\right],
+\;  y(0)=0, \quad   y'(0)=6$
+
+\exercisetext{In Exercises \ref{exer:5.5.27}--\ref{exer:5.5.32} use the
+principle
+of superposition to find a particular solution. Where indicated,
+solve the initial value problem.}
+
+\item\label{exer:5.5.27} $y''-2y'-3y=4e^{3x}+e^x(\cos x-2\sin x)$
+\item\label{exer:5.5.28} $y''+y=4\cos x-2\sin x+xe^x+e^{-x}$
+\item\label{exer:5.5.29} $y''-3y'+2y=xe^x+2e^{2x}+\sin x$
+\item\label{exer:5.5.30} $y''-2y'+2y=4xe^x\cos x+xe^{-x}+1+x^2$
+\item\label{exer:5.5.31} $y''-4y'+4y=e^{2x}(1+x)+e^{2x}(\cos x-\sin
+x)+3e^{3x}+1+x$
+
+\item\label{exer:5.5.32}
+$y''-4y'+4y=6e^{2x}+25\sin x , \quad   y(0)=5,\;  y'(0)=3$
+
+\exercisetext{In Exercises \ref{exer:5.5.33}--\ref{exer:5.5.35}
+solve the initial value problem and graph the solution.}
+
+\item\label{exer:5.5.33} \CGex
+$y''+4y=-e^{-2x}\left[(4-7x)\cos x+(2-4x)\sin x\right],
+\;  y(0)=3, \quad   y'(0)=1$
+
+\item\label{exer:5.5.34} \CGex
+$y''+4y'+4y=2\cos2x+3\sin2x+e^{-x} , \quad   y(0)=-1,\;  y'(0)=2$
+
+\item\label{exer:5.5.35} \CGex
+$y''+4y=e^x(11+15x)+8\cos2x-12\sin2x , \quad   y(0)=3,\;  y'(0)=5$
+
+\item\label{exer:5.5.36}
+\begin{alist}
+\item % (a)
+Verify that if
+$$
+y_p=A(x)\cos\omega x+B(x)\sin\omega x
+$$
+where $A$ and $B$ are twice differentiable, then
+\begin{eqnarray*}
+ y_p'&=&(A'+\omega B)\cos\omega x+(B'-\omega A)
+\sin\omega x\mbox{ and}\\
+ y_p''&=&(A''+2\omega B'-\omega^2A)\cos\omega x
++(B''-2\omega A'-\omega^2B)\sin\omega x.
+\end{eqnarray*}
+\item % (b)
+Use the results of \part{a}  to verify that
+\begin{eqnarray*}
+ay_p''+by_p'+cy_p&=&\left[(c-a\omega^2)A+b\omega B+2a\omega
+B'+bA'+aA''\right] \cos\omega x+\\[2\jot] &&
+\left[-b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''\right]\sin\omega
+x.
+\end{eqnarray*}
+\item % (c)
+Use the results of \part{a}  to verify that
+$$
+y_p''+\omega^2 y_p=(A''+2\omega B')\cos\omega x+
+(B''-2\omega A')\sin\omega x.
+$$
+\item % (d)
+Prove Theorem~\ref{thmtype:5.5.2}.
+\end{alist}
+
+\item\label{exer:5.5.37}
+Let $a$, $b$, $c$, and $\omega$ be constants, with $a\ne0$ and
+$\omega>0$, and let
+$$
+P(x)=p_0+p_1x+\cdots+p_kx^k \mbox{\quad and \quad}
+Q(x)=q_0+q_1x+\cdots+q_kx^k,
+$$
+where at least one of the coefficients $p_k$, $q_k$ is nonzero, so
+ $k$  is the larger of the degrees of $P$ and~$Q$.
+\begin{alist}
+\item % (a)
+Show that if $\cos\omega x$ and $\sin\omega x$
+are not solutions of the complementary equation
+$$
+ay''+by'+cy=0,
+$$
+then  there are polynomials
+$$
+A(x)=A_0+A_1x+\cdots+A_kx^k \mbox{\quad and \quad}
+B(x)=B_0+B_1x+\cdots+B_kx^k
+\eqno{\rm (A)}
+$$
+such that
+$$
+\begin{array}{lcl}
+\quad (c-a\omega^2)A+b\omega B+2a\omega
+B'+bA'+aA''&=&P\phantom{.}\\[2\jot]
+-b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''&=&Q,
+\end{array}
+$$
+where $(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots,$(A_0,B_0)$ can be computed
+successively by solving the systems
+$$
+\begin{array}{lcl}
+\phantom{-}(c-a\omega^2)A_k+b\omega B_k&=&p_k\phantom{.}\\[2\jot]
+-b\omega A_k+(c-a\omega^2)B_k&=&q_k,
+\end{array}
+$$
+and, if $1\le r\le k$,
+$$
+\begin{array}{lcl}
+\phantom{-}(c-a\omega^2)A_{k-r}+b\omega
+B_{k-r}&=&p_{k-r}+\cdots\phantom{.}\\[2\jot]
+-b\omega A_{k-r}+(c-a\omega^2)B_{k-r}&=&q_{k-r}+\cdots,
+\end{array}
+$$
+where the terms indicated by ``$\cdots$'' depend upon the previously
+computed coefficients with subscripts greater than $k-r$.
+Conclude from this and Exercise~\ref{exer:5.5.36}\part{b} that
+$$
+y_p=A(x)\cos\omega x+B(x)\sin\omega x
+\eqno{\rm (B)}
+$$
+ is a particular solution of
+$$
+ay''+by'+cy=P(x)\cos\omega x+Q(x)\sin\omega x.
+$$
+\item % (b)
+Conclude from Exercise~\ref{exer:5.5.36}\part{c}
+ that the equation
+$$
+a(y''+\omega^2 y)=P(x)\cos\omega x+Q(x)\sin\omega x
+\eqno{\rm (C)}
+$$
+does not have a solution of the form (B) with  $A$
+and $B$ as in (A). Then show that there are
+polynomials
+$$
+A(x)=A_0x+A_1x^2+\cdots+A_kx^{k+1}\mbox{\quad and \quad}
+ B(x)=B_0x+B_1x^2+\cdots+B_kx^{k+1}
+$$
+such that
+$$
+\begin{array}{rcl}
+a(A''+2\omega B')&=&P\\[2\jot]
+a(B''-2\omega A')&=&Q,
+\end{array}
+$$
+where the pairs $(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots, $(A_0,B_0)$ can be
+computed successively as follows:
+\begin{eqnarray*}
+A_k&=&-{q_k\over2a\omega(k+1)}\\[2\jot]
+B_k&=&\phantom{-}{p_k\over2a\omega(k+1)},
+\end{eqnarray*}
+and, if $k\ge 1$,
+\begin{eqnarray*}
+A_{k-j}&=&-{1\over2\omega}
+\left[{q_{k-j}\over a(k-j+1)}-(k-j+2)B_{k-j+1}\right]\\[2\jot]
+B_{k-j}&=&\phantom{-}{1\over2\omega}
+\left[{p_{k-j}\over a(k-j+1)}-(k-j+2)A_{k-j+1}\right]
+\end{eqnarray*}
+for $1\le j\le k$.
+Conclude that (B) with this choice of the
+polynomials $A$ and $B$ is a particular solution of
+(C).
+\end{alist}
+
+\item\label{exer:5.5.38}
+Show that  Theorem~\ref{thmtype:5.5.1} implies the next theorem:
+{\color{blue}\it Suppose  $\omega$ is a positive  number and $P$ and $Q$
+are polynomials. Let $k$ be the larger of the degrees of $P$ and $Q$.
+Then the equation
+$$
+ay''+by'+cy=e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega
+x\right)
+$$
+has a particular solution
+$$
+y_p=e^{\lambda x}\left(A(x)\cos\omega x+B(x)\sin\omega x\right),
+\eqno{\rm (A)}
+$$
+where
+$$
+A(x)=A_0+A_1x+\cdots+A_kx^k \mbox{\quad and \quad}
+B(x)=B_0+B_1x+\cdots+B_kx^k,
+$$
+provided that $e^{\lambda x}\cos\omega x$ and $e^{\lambda x}\sin\omega
+x$ are not solutions of  the complementary equation. The equation
+$$
+a\left[y''-2\lambda
+y'+(\lambda^2+\omega^2)y\right]=
+e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)
+$$
+$($for which $e^{\lambda x}\cos\omega x$ and $e^{\lambda x}\sin\omega
+x$ are
+solutions of the complementary equation$)$ has a particular solution
+of the form {\rm(A)}, where
+$$
+A(x)=A_0x+A_1x^2+\cdots+A_kx^{k+1} \mbox{\quad and \quad}
+B(x)=B_0x+B_1x^2+\cdots+B_kx^{k+1}.
+$$}
+
+\item\label{exer:5.5.39}
+This exercise presents a method for evaluating the integral
+$$
+y=\int e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)\,dx
+$$
+where $\omega\ne0$ and
+$$
+P(x)=p_0+p_1x+\cdots+p_kx^k,\quad Q(x)=q_0+q_1x+\cdots+q_kx^k.
+$$
+\begin{alist}
+\item % (a)
+Show that $y=e^{\lambda x}u$, where
+$$
+u'+\lambda u=P(x)\cos \omega x+Q(x)\sin \omega x.
+\eqno{\rm (A)}
+$$
+\item % (b)
+Show that  (A) has a particular solution of the form
+$$
+u_p=A(x)\cos \omega x+B(x)\sin \omega x,
+$$
+where
+$$
+A(x)=A_0+A_1x+\cdots+A_kx^k,\quad B(x)=B_0+B_1x+\cdots+B_kx^k,
+$$
+and  the pairs of coefficients
+$(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots,$(A_0,B_0)$
+can be computed successively as the solutions of pairs of equations
+obtained  by equating the coefficients
+of $x^r\cos\omega x$ and $x^r\sin\omega x$ for $r=k$, $k-1$, \dots, $0$.
+\item % (c)
+Conclude that
+$$
+\int e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)\,dx
+= e^{\lambda x}\left(A(x)\cos \omega x+B(x)\sin \omega x\right) +c,
+$$
+where $c$ is a constant of integration.
+\end{alist}
+
+\item\label{exer:5.5.40}
+Use the method of Exercise~\ref{exer:5.5.39} to evaluate the integral.
+
+\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+\part{a} $\int x^2\cos x\,dx$ &
+ \part{b} $\int x^2e^x\cos x\,dx$ \\[2\jot]
+  \part{c} $\int xe^{-x}\sin2x\,dx$ &
+ \part{d} $\int x^2e^{-x}\sin x\,dx$ \\[2\jot]
+  \part{e} $\int x^3e^x\sin x\,dx$ &
+ \part{f} $\int e^x\left[x\cos x-(1+3x)\sin x\right]\,dx$ \\[2\jot]
+\end{tabular}
+
+ \part{g} $\int e^{-x}\left[(1+x^2)\cos x+(1-x^2)\sin x\right]\,dx$
+
+\end{exerciselist}

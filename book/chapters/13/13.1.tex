@@ -1,0 +1,929 @@
+\newsection{1}
+{Boundary Value Problems for Second Order Ordinary
+Differential Equations}
+{Two-Point Boundary Value Problems}
+\subpdfbookmark{Section 13.1 Two-Point Boundary Value Problems} {section:13.1}
+\vskip14pt
+
+\renewcommand{\thissection}
+{\sectiontitle{TWO-POINT BOUNDARY VALUE PROBLEMS}}
+\thissection
+
+\noindent
+In Section~5.3 we considered initial value problems for the
+linear second order equation
+\begin{equation} \label{eq:13.1.1}
+P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=F(x).
+\end{equation}
+Suppose $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are continuous and $P_{0}$
+has no zeros
+on an
+open interval $(a,b)$. From Theorem~\ref{thmtype:5.3.1}, if $x_{0}$ is in
+$(a,b)$ and  $k_{1}$ and $k_{2}$ are arbitrary real numbers then
+\eqref{eq:13.1.1} has a unique solution on $(a,b)$ such that $y(x_{0})=k_{1}$
+and $y'(x_{0})=k_{2}$. Now we consider a different problem for
+\eqref{eq:13.1.1}.
+
+{\bf PROBLEM}\quad
+Suppose $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are  continous and  $P_{0}$
+has no zeros on a closed interval $[a,b]$. Let $\alpha$, $\beta$,
+$\rho$, and $\delta$ be real numbers such that
+\begin{equation} \label{eq:13.1.2}
+\alpha^{2}+\beta^{2}\ne 0\text{\;    and\; \;  } \rho^{2}+\delta^{2}\ne 0,
+\end{equation}
+and let $k_{1}$ and $k_{2}$ be arbitrary real numbers. Find a solution of
+\begin{equation} \label{eq:13.1.3}
+P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=F(x)
+\end{equation}
+on the closed interval $[a,b]$ such that
+\begin{equation} \label{eq:13.1.4}
+\alpha y(a)+\beta y'(a)=k_{1}
+\end{equation}
+and
+\begin{equation} \label{eq:13.1.5}
+\rho y(b)+\delta y'(b)=k_{2}.
+\end{equation}
+
+\medskip
+The assumptions  stated in this problem apply throughout this section and
+won't be repeated. Note that we imposed conditions on $P_{0}$,
+$P_{1}$, $P_{2}$, and $F$  on the \emph{closed} interval $[a,b]$, and we
+are interested in solutions of \eqref{eq:13.1.3} on the closed interval.
+This is different from the situation considered in Chapter~5,
+where we imposed conditions on $P_{0}$, $P_{1}$, $P_{2}$, and $F$  on the
+\emph{open} interval $(a,b)$ and we were interested in solutions on the
+open interval. There
+is really no problem here;   we can always extend  $P_{0}$, $P_{1}$,
+$P_{2}$,
+and $F$ to an open interval $(c,d)$ (for example, by defining them to be
+constant on $(c,d]$ and $[b,d)$) so that they are continuous and $P_{0}$
+has no zeros on $[c,d]$. Then we can apply the theorems from
+Chapter~5 to the equation
+$$
+y''+\frac{P_{1}(x)}{P_{0}(x)}y'+
+\frac{P_{2}(x)}{P_{0}(x)}y=\frac{F(x)}{P_{0}(x)}
+$$
+on $(c,d)$ to draw conclusions about solutions of \eqref{eq:13.1.3} on $[a,b]$.
+
+We call $a$ and $b$ \emph{boundary points.}  The conditions \eqref{eq:13.1.4}
+and \eqref{eq:13.1.5}  are \emph{boundary conditions}, and the problem is a
+\emph{two-point boundary value problem} or, for simplicity, a
+\emph{boundary value problem}. (We used  similar terminology in
+Chapter~12 with a different meaning; both meanings are in common usage.)
+  We require \eqref{eq:13.1.2} to insure that we're imposing a sensible
+condition at each boundary point. For example, if $\alpha^{2}+\beta^{2}=0$
+then $\alpha=\beta=0$, so $\alpha y(a)+\beta y'(a)=0$ for all choices of
+$y(a)$ and $y'(a)$. Therefore  \eqref{eq:13.1.4} is an impossible condition if
+$k_{1}\ne0$, or no condition at all if $k_{1}=0$.
+
+We abbreviate \eqref{eq:13.1.1} as $Ly=F$, where
+$$
+Ly=P_{0}(x)y''+P_{1}(x)y'+P_{0}(x)y,
+$$
+and we denote
+$$
+B_{1}(y)=\alpha y(a)+\beta y'(a)
+\text{\;    and\; \;  }
+B_{2}(y)=\rho y(b)+\delta y'(b).
+$$
+We combine \eqref{eq:13.1.3}, \eqref{eq:13.1.4}, and \eqref{eq:13.1.5} as
+\begin{equation} \label{eq:13.1.6}
+Ly=F,\quad \quad B_{1}(y)=k_{1},\quad \quad B_{2}(y)=k_{2}.
+\end{equation}
+This boundary value problem is \emph{homogeneous} if $F=0$
+and $k_{1}=k_{2}=0$;   otherwise it's \emph{nonhomogeneous}.
+
+We leave it to you (Exercise~\ref{exer:13.1.1}) to verify that $B_{1}$
+and $B_{2}$ are linear operators; that is, if $c_{1}$  and $c_{2}$
+are constants then
+\begin{equation} \label{eq:13.1.7}
+B_{i}(c_{1}y_{1}+c_{2}y_{2})=c_{1}B_{i}(y_{1})+c_{2}B_{i}(y_{2}),\quad
+i=1,2.
+\end{equation}
+The next three examples show that the question of existence and uniqueness
+for solutions of boundary value problems is more complicated than
+ for initial value problems.
+
+\begin{example}\label{example:13.1.1}    \rm
+Consider the boundary value problem
+$$
+y''+y=1,\quad y(0)=0, \quad y(\pi/2)=0.
+$$
+The general solution of $y''+y=1$ is
+$$
+y=1+c_{1}\sin x+c_{2} \cos x,
+$$
+so $y(0)=0$ if  and only if $c_{2}=-1$ and $y(\pi/2)=0$
+if and only if $c_{1}=-1$. Therefore
+$$
+ y =1-\sin x -\cos x
+$$
+is the unique solution of the boundary value problem.
+\end{example}
+
+\begin{example}\label{example:13.1.2}    \rm
+Consider the boundary value problem
+$$
+y''+y=1,\quad y(0)=0, \quad y(\pi)=0.
+$$
+Again, the general solution of $y''+y=1$ is
+$$
+y=1+c_{1}\sin x+c_{2} \cos x,
+$$
+so $y(0)=0$ if  and only if $c_{2}=-1$, but $y(\pi)=0$ if and only if
+$c_{2}=1$. Therefore the boundary value problem has no solution.
+\end{example}
+
+\begin{example}\label{example:13.1.3}    \rm
+Consider the boundary value problem
+$$
+y''+y=\sin 2x,\quad y(0)=0, \quad y(\pi)=0.
+$$
+You can use the method of undetermined coefficients
+(Section~5.5) to find that the general solution of
+$y''+y=\sin 2x$  is
+$$
+y=-\frac{\sin2x}{3}+c_{1}\sin x+c_{2}\cos x.
+$$
+The boundary conditions $y(0)=0$ and $y(\pi)=0$ both require that
+$c_{2}=0$, but they don't restrict $c_{1}$. Therefore the boundary value
+problem has infinitely many solutions
+$$
+y=-\frac{\sin2x}{3}+c_{1}\sin x,
+$$
+where $c_{1}$  is arbitrary.
+\end{example}
+
+\begin{theorem}\color{blue} \label{thmtype:13.1.1}
+If $z_{1}$ and $z_{2}$ are solutions of $Ly=0$  such that either
+$B_{1}(z_{1})=B_{1}(z_{2})=0$ or
+$B_{2}(z_{1})=B_{2}(z_{2})=0,$  then $\{z_{1},z_{2}\}$  is linearly
+dependent. Equivalently$,$ if\,  $\{z_{1},z_{2}\}$ is linearly
+independent, then
+$$
+B_{1}^{2}(z_{1})+B_{1}^{2}(z_{2})\ne 0 \text{\;    and\; \;  }
+B_{2}^{2}(z_{1})+B_{2}^{2}(z_{2})\ne 0.
+$$
+\end{theorem}
+
+\medskip
+\proof
+Recall that $B_{1}(z)=\alpha z(a)+\beta z'(a)$ and
+$\alpha^{2}+\beta^{2}\ne0$.
+Therefore, if $B_{1}(z_{1})=B_{1}(z_{2})=0$ then $(\alpha,\beta)$
+is a nontrivial solution of  the system
+\begin{eqnarray*}
+\alpha z_{1}(a)+\beta z_{1}'(a)&=& 0\\
+\alpha z_{2}(a)+\beta z_{}'(a)&=& 0.
+\end{eqnarray*}
+This  implies that
+$$
+z_{1}(a)z_{2}'(a)-z_{1}'(a)z_{2}(a)=0,
+$$
+so $\{z_{1},z_{2}\}$ is linearly dependent, by
+Theorem~\ref{thmtype:5.1.6}. We leave it to you to show
+that $\{z_{1},z_{2}\}$ is linearly dependent   if
+$B_{2}(z_{1})=B_{2}(z_{2})=0$.
+
+\begin{theorem}\color{blue} \label{thmtype:13.1.2}
+The following statements are equivalent$;$ that is$,$ they are either
+all true or all false$.$
+\begin{alist}
+\item    %(a)
+ There's a fundamental set $\{z_{1},z_{2}\}$ of solutions of
+$Ly=0$ such that
+\begin{equation} \label{eq:13.1.8}
+B_{1}(z_{1})B_{2}(z_{2})-B_{1}(z_{2})B_{2}(z_{1})\ne0.
+\end{equation}
+\item %(b)
+If  $\{y_{1},y_{2}\}$ is a fundamental set of solutions of $Ly=0$  then
+\begin{equation} \label{eq:13.1.9}
+B_{1}(y_{1})B_{2}(y_{2})-B_{1}(y_{2})B_{2}(y_{1})\ne0.
+\end{equation}
+\item % (c)
+For each continuous $F$ and pair of constants $(k_{1},k_{2}),$  the
+boundary value problem
+$$
+Ly=F, \quad B_{1}(y)=k_{1},\quad B_{2}(y)=k_{2}
+$$
+has a unique solution$.$
+\item % (d)
+The homogeneous boundary value problem
+\begin{equation} \label{eq:13.1.10}
+Ly=0,\quad  B_{1}(y)=0, \quad B_{2}(y)=0
+\end{equation}
+has only the trivial solution $y=0$.
+\item %(e)
+The homogeneous equation $Ly=0$ has linearly independent solutions
+$z_{1}$ and $z_{2}$ such that $B_{1}(z_{1})=0$ and $B_{2}(z_{2})=0.$
+\end{alist}
+\end{theorem}
+
+\proof
+We'll show  that
+$$
+\part{a}\implies
+\part{b}\implies
+\part{c}\implies
+\part{d}\implies
+\part{e}\implies
+\part{a}.
+$$
+
+\part{a} $\implies$ \part{b}:
+Since $\{z_{1},z_{2}\}$ is a fundamental set of solutions for $Ly=0$,
+there are
+constants
+$a_{1}$, $a_{2}$, $b_{1}$, and $b_{2}$  such that
+\begin{equation} \label{eq:13.1.11}
+\begin{aligned}
+y_{1} &=a_{1}z_{1}+a_{2}z_{2}\\
+y_{2} &=b_{1}z_{1}+b_{2}z_{2}.
+\end{aligned}
+\end{equation}
+Moreover,
+\begin{equation} \label{eq:13.1.12}
+\left|\begin{array}{ccccccc}
+a_{1}&a_{2}\\b_{1}&b_{2}
+\end{array}\right|\ne0.
+\end{equation}
+because if this determinant were zero, its rows would be linearly
+dependent and therefore
+$\{y_{1},y_{2}\}$ would be linearly dependent, contrary to our assumption
+that  $\{y_{1},y_{2}\}$  is a fundamental set of solutions of $Ly=0$.
+From \eqref{eq:13.1.7} and \eqref{eq:13.1.11},
+$$
+\left[\begin{array}{ccccccc}
+B_{1}(y_{1})&B_{2}(y_{1})\\B_{1}(y_{2})&B_{2}(y_{2})
+\end{array}\right]=
+\left[\begin{array}{ccccccc}
+a_{1}&a_{2}\\b_{1}&b_{2}
+\end{array}\right]
+\left[\begin{array}{ccccccc}
+B_{1}(z_{1})&B_{2}(z_{1})\\
+B_{1}(z_{2})&B_{2}(z_{2})
+\end{array}\right].
+$$
+Since the determinant of a product of matrices is the product of the
+determinants of the matrices, \eqref{eq:13.1.8} and \eqref{eq:13.1.12} imply
+\eqref{eq:13.1.9}.
+
+\part{b} $\implies$ \part{c}:
+Since $\{y_{1},y_{2}\}$ is a fundamental set of solutions of
+$Ly=0$, the general solution of  $Ly=F$ is
+$$
+y=y_{p}+c_{1}y_{1}+c_{2}y_{2},
+$$
+where $c_{1}$ and $c_{2}$ are arbitrary constants and  $y_{p}$ is a
+particular solution of
+$Ly=F$. To satisfy the boundary conditions, we must choose $c_{1}$ and
+$c_{2}$ so that
+\begin{eqnarray*}
+k_{1}&=&B_{1}(y_{p})+c_{1}B_{1}(y_{1})+c_{2}B_{1}(y_{2})\\
+k_{2}&=&B_{2}(y_{p})+c_{1}B_{2}(y_{1})+c_{2}B_{2}(y_{2}),
+\end{eqnarray*}
+(recall \eqref{eq:13.1.7}), which is equivalent to
+$$
+\begin{aligned}
+c_{1}B_{1}(y_{1})+c_{2}B_{1}(y_{2}) &= k_{1}-B_{1}(y_{p}) \\
+c_{1}B_{2}(y_{1})+c_{2}B_{2}(2_{2}) &= k_{2}-B_{2}(y_{p}).
+\end{aligned}
+$$
+From  \eqref{eq:13.1.9}, this system always has a  unique solution
+ $(c_{1},c_{2})$.
+
+\part {c} $\implies$ \part{d}: Obviously, $y=0$ is a solution of
+\eqref{eq:13.1.10}. From \part{c} with $F=0$ and $k_{1}=k_{2}=0$, it's the only
+solution.
+
+\part{d} $\implies$ \part{e}: Let  $\{y_{1},y_{2}\}$ be a fundamental
+system for $Ly=0$ and  let
+$$
+z_{1}=B_{1}(y_{2})y_{1}-B_{1}(y_{1})y_{2}\text{\;    and\; \;  }
+z_{2}=B_{2}(y_{2})y_{1}-B_{2}(y_{1})y_{2}.
+$$
+Then $B_{1}(z_{1})=0$  and $B_{2}(z_{2})=0$. To see
+that $z_{1}$ and $z_{2}$ are linearly independent, note that
+\begin{eqnarray*}
+a_{1}z_{1}+a_{2}z_{2}&=&
+a_{1}[B_{1}(y_{2})y_{1}-B_{1}(y_{1})y_{2}]+
+a_{2}[B_{2}(y_{2})y_{1}-B_{2}(y_{1})y_{2}]\\
+&=&
+[B_{1}(y_{2})a_{1}+B_{2}(y_{2})a_{2}]y_{1}-[B_{1}(y_{1})a_{1}+B_{2}(y_{1})a_{2}]y_{2}.
+\end{eqnarray*}
+Therefore, since $y_{1}$ and $y_{2}$ are linearly independent,
+$a_{1}z_{1}+a_{2}z_{2}=0$ if and only if
+$$
+\left[\begin{array}{ccccccc}
+B_{1}(y_{1})&B_{2}(y_{1})\\
+B_{1}(y_{2})&B_{2}(y_{2})
+\end{array}\right]
+\left[\begin{array}{ccccccc}
+a_{1}\\a_{2}
+\end{array}\right]=
+\left[\begin{array}{ccccccc}
+0\\0
+\end{array}\right].
+$$
+If this system has a nontrivial solution then so does the system
+$$
+\left[\begin{array}{ccccccc}
+B_{1}(y_{1})&B_{1}(y_{2})\\
+B_{2}(y_{1})&B_{2}(y_{2})
+\end{array}\right]
+\left[\begin{array}{ccccccc}
+c_{1} \\c_{2}
+\end{array}\right]=
+\left[\begin{array}{ccccccc}
+0\\0
+\end{array}\right].
+$$
+This and \eqref{eq:13.1.7} imply that $y=c_{1}z_{1}+c_{2}z_{2}$ is
+a nontrivial solution of \eqref{eq:13.1.10}, which contradicts~\part{d}.
+
+\part{e} $\implies$ \part{a}.
+Theorem~\ref{thmtype:13.1.1} implies that if  $B_{1}(z_{1})=0$  and
+$B_{2}(z_{2})=0$ then $B_{1}(z_{2})\ne0$ and $B_{2}(z_{1})\ne0$.
+This implies~\eqref{eq:13.1.8}, which completes the proof.
+
+\begin{example}\label{example:13.1.4} \rm
+Solve the boundary value problem
+\begin{equation} \label{eq:13.1.13}
+x^{2}y''-2xy'+2y-2x^{3}=0,\quad y(1)=4,\quad y'(2)=3,
+\end{equation}
+given that $\{x,x^{2}\}$ is a fundamental set of solutions
+of the complementary equation
+\end{example}
+
+\solution
+Using variation of parameters (Section~5.7), you can show
+that
+$y_{p}=x^{3}$ is a solution of the complementary equation
+$$
+x^{2}y''-2xy'+2y=2x^{3}=0.
+$$
+Therefore the solution of
+\eqref{eq:13.1.13} can be written as
+$$
+y=x^{3}+c_{1}x+c_{2}x^{2}.
+$$
+Then
+$$
+y'=3x^{2}+c_{1}+2c_{2}x,
+$$
+and imposing the boundary conditions yields the system
+\begin{eqnarray*}
+c_{1}+\phantom{4}c_{2}&=&\phantom{-}3\\ c_{1}+4c_{2}&=&-9,
+\end{eqnarray*}
+so $c_{1}=7$ and $c_{2}=-4$.
+Therefore
+$$
+y=x^{3}+7x-4x^{2}
+$$
+is the unique solution of \eqref{eq:13.1.13}
+
+\begin{example}\label{example:13.1.5} \rm
+Solve the boundary value problem
+$$
+y''-7y'+12y=4e^{2x},\quad y(0)=3,\quad y(1)=5e^{2}.
+$$
+\end{example}
+
+\solution
+From Example~\ref{example:5.4.1}, $y_{p}=2e^{2x}$ is a particular solution
+of
+\begin{equation} \label{eq:13.1.14}
+y''-7y'+12y=4e^{2x}.
+\end{equation}
+Since $\{e^{3x},e^{4x}\}$ is a fundamental set for the complementary
+equation, we could write the solution of \eqref{eq:13.1.13} as
+$$
+y=2e^{2x}+c_{1}e^{3x}+c_{2}e^{4x}
+$$
+and determine $c_{1}$ and $c_{2}$ by imposing the boundary conditions.
+However, this would lead to some tedious algebra, and the form of the
+solution would be very unappealing. (Try it!) In this case it's convenient
+to use the fundamental system $\{z_{1},z_{2}\}$ mentioned in
+Theorem~\ref{thmtype:13.1.2}\part{e}; that is, we choose
+$\{z_{1},z_{2}\}$ so that $B_{1}(z_{1})=z_{1}(0)=0$ and
+$B_{2}(z_{2})=z_{2}(1)=0$. It is easy to see that
+$$
+z_{1}=e^{3x}-e^{4x}\text{\;    and\; \;  }z_{2}=e^{3(x-1)}-e^{4(x-1)}
+$$
+satisfy these requirements.
+Now we write the solution of \eqref{eq:13.1.14} as
+$$
+y=2e^{2x}+c_{1}\left(e^{3x}-e^{4x}\right)+c_{2}\left(e^{3(x-1)}-e^{4(x-1)}\right).
+$$
+Imposing the boundary conditions $y(0)=3$  and $y(1)=5e^{2}$ yields
+$$
+3=2+c_{2}e^{-4}(e-1)\text{\;    and\; \;  }
+5e^{2}=2e^{2}+c_{1}e^{3}(1-e).
+$$
+Therefore
+$$
+c_{1}=\frac{3}{e(1-e)},\quad c_{2}=\frac{e^{4}}{e-1},
+$$
+and
+$$
+y=2e^{2x}+\frac{3}{e(1-e)}(e^{3x}-e^{4x})+
+\frac{e^{4}}{e-1}(e^{3(x-1)}-e^{4(x-1)}).
+$$
+
+Sometimes  it's useful to have a formula for the solution of a general
+boundary problem. Our next theorem addresses this question.
+
+\begin{theorem}\color{blue} \label{thmtype:13.1.3}
+Suppose the homogeneous boundary value problem
+\begin{equation} \label{eq:13.1.15}
+Ly=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0
+\end{equation}
+has only the trivial solution$.$ Let $y_{1}$ and $y_{2}$ be linearly
+independent solutions   of $Ly=0$ such that $B_{1}(y_{1})=0$ and
+$B_{2}(y_{2})=0,$ and let
+$$
+W=y_{1}y_{2}'-y_{1}'y_{2}.
+$$
+Then the unique solution of
+\begin{equation} \label{eq:13.1.16}
+Ly=F,\quad B_{1}(y)=0,\quad B_{2}(y)=0
+\end{equation}
+is
+\begin{equation} \label{eq:13.1.17}
+y(x)= y_{1}(x)\int_{x}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt+
+y_{2}(x)\int_{a}^{x}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt.
+\end{equation}
+\end{theorem}
+
+\medskip
+\proof In Section~5.7  we saw that if
+\begin{equation} \label{eq:13.1.18}
+y=u_{1}y_{1}+u_{2}y_{2}
+\end{equation}
+where
+\begin{eqnarray*}
+u_{1}'y_{1}+u_{2}'y_{2}&=&0\\
+u_{1}'y_{1}'+u_{2}'y_{2}'&=&F,
+\end{eqnarray*}
+then  $Ly=F$. Solving for $u_{1}'$ and $u_{2}'$ yields
+$$
+u_{1}'=-\frac{Fy_{2}}{P_{0}W}\text{\;    and\; \;  }
+u_{2}'=\frac{Fy_{1}}{P_{0}W},
+$$
+which hold if
+$$
+u_{1}(x)=\int_{x}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt
+\text{\;    and\; \;  }
+u_{2}(x)=\int_{a}^{x}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt.
+$$
+This and \eqref{eq:13.1.18} show that \eqref{eq:13.1.17} is a solution of $Ly=F$.
+Differentiating \eqref{eq:13.1.17}  yields
+\begin{equation} \label{eq:13.1.19}
+y'(x)=y_{1}'(x)\int_{x}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt+
+y_{2}'(x)\int_{a}^{x}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt.
+\end{equation}
+(Verify.) From \eqref{eq:13.1.17} and \eqref{eq:13.1.19},
+$$
+B_{1}(y)=B_{1}(y_{1})\int_{a}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt=0
+$$
+because $B_{1}(y_{1})=0$, and
+$$
+B_{2}(y)=B_{2}(y_{2})\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt=0
+$$
+because $B_{2}(y_{2})=0$. Hence, $y$  satisfies \eqref{eq:13.1.16}.
+This completes the proof.
+
+We  can rewrite \eqref{eq:13.1.17} as
+\begin{equation} \label{eq:13.1.20}
+y=\int_{a}^{b} G(x,t)F(t)\,dt,
+\end{equation}
+where
+$$
+G(x,t)=
+\begin{cases}
+\dst{\frac{y_{1}(t)y_{2}(x)}{P_{0}(t)W(t)}}&,\quad a\le t\le x,\\[.1in]
+\dst{\frac{y_{1}(x)y_{2}(t)}{P_{0}(t)W(t)}} &,\quad x\le t\le b.
+\end{cases}.
+$$
+
+This is the   \emph{Green's function} for the boundary value problem
+\eqref{eq:13.1.16}.
+The Green's function  is related to the boundary value problem
+\eqref{eq:13.1.16} in much the
+same way that the inverse of a square matrix ${\mathbf A}$ is related to
+the linear algebraic system ${\mathbf y}={\mathbf A}{\mathbf x}$;   just as
+we substitute the given vector ${\mathbf y}$ into the formula
+${\mathbf x}={\mathbf A}^{-1}{\mathbf y}$ to solve
+ ${\mathbf y} ={\mathbf Ax}$, we substitute the given
+function $F$ into the formula \eqref{eq:13.1.20} to obtain the solution of
+\eqref{eq:13.1.16}. The analogy goes further:
+just as ${\mathbf A}^{-1}$ exists if and only if
+ ${\mathbf A}{\mathbf x} ={\mathbf 0}$
+has only the trivial solution, the boundary value problem  \eqref{eq:13.1.16}
+has a Green's function if and only the homogeneous boundary value problem
+\eqref{eq:13.1.15}  has only the trivial solution.
+
+We leave it to you (Exercise~\ref{exer:13.1.32}) to show that the
+assumptions of Theorem~\ref{thmtype:13.1.3} imply that the unique solution
+of the boundary value problem
+$$
+Ly=F,\quad B_{1}(y)=k_{1},\quad B_{2}(y)=k_{2}
+$$
+is
+$$
+y(x)=\int_{a}^{b}G(x,t)F(t)\,dt +\frac{k_{2}}{B_{2}(y_{1})}y_{1}+
+\frac{k_{1}}{B_{1}(y_{2})}y_{2}.
+$$
+
+\begin{example}\label{example:13.1.6}\rm
+Solve the boundary value problem
+\begin{equation} \label{eq:13.1.21}
+y''+y=F(x).\quad y(0)+y'(0)=0,\quad y(\pi)-y'(\pi)=0,
+\end{equation}
+and find the Green's function for this problem.
+\end{example}
+
+\solution
+Here
+$$
+B_{1}(y)=y(0)+y'(0)   \text{\;    and\; \;  } B_{2}(y)=y(\pi)-y'(\pi).
+$$
+Let $\{z_{1},z_{2}\}=\{\cos x,\sin x\}$, which is a fundamental set of
+solutions of $y''+y=0$. Then
+\begin{eqnarray*}
+B_{1}(z_{1})&=&(\cos x-\sin x)\big|_{x=0}=\phantom{-}1\\
+B_{2}(z_{1})&=&(\cos x+\sin x)\big|_{x=\pi}=-1
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+B_{1}(z_{2})&=&(\sin x+\cos x)\big|_{x=0}=1\\
+B_{2}(z_{2})&=&(\sin x-\cos x)\big|_{x=\pi}=1.
+\end{eqnarray*}
+Therefore
+$$
+B_{1}(z_{1})B_{2}(z_{2})-B_{1}(z_{2})B_{2}(z_{1})=2,
+$$
+so Theorem~\ref{thmtype:13.1.2} implies that \eqref{eq:13.1.21} has a unique
+solution. Let
+$$
+y_{1}=B_{1}(z_{2})z_{1}-B_{1}(z_{1})z_{2}= \cos x-\sin x
+$$
+ and
+$$
+y_{2}=B_{2}(z_{2})z_{1}-B_{2}(z_{1})z_{2}=  \cos x+\sin x.
+$$
+Then $B_{1}(y_{1})=0$, $B_{2}(y_{2})=0$, and the Wronskian of
+$\{y_{1},y_{2}\}$ is
+$$
+W(x)=
+\left|\begin{array}{rrccccc}
+\cos x-\sin x& \cos x+ \sin x\\
+-\sin x-\cos x&-\sin x+\cos x
+\end{array}\right|=2.
+$$
+Since $P_{0}=1$, \eqref{eq:13.1.17} yields the solution
+\begin{eqnarray*}
+y(x)&=&\dst{\frac{\cos x-\sin x}{2}}\int_{x}^{\pi}F(t)(\cos t+\sin t)\,dt\\
+&&+\dst{\frac{\cos x +\sin x}{2}}\int_{0}^{x}F(t)(\cos t-\sin t)\,dt.
+\end{eqnarray*}
+The Green's function is
+$$
+G(x,t)=
+\begin{cases}
+\dst{\frac{(\cos t-\sin t)(\cos x+\sin x)}{2}},&\quad  0\le t\le
+x,\\[.1in]
+\dst{\frac{(\cos x-\sin x)(\cos t+\sin t)}{2}},&\quad x\le t\le \pi.
+\end{cases}
+$$
+
+We'll now consider the situation not covered by Theorem~\ref{thmtype:13.1.3}.
+
+\begin{theorem}\color{blue} \label{thmtype:13.1.4}
+Suppose the homogeneous boundary value problem
+\begin{equation} \label{eq:13.1.22}
+Ly=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0
+\end{equation}
+has a nontrivial solution $y_{1},$  and let $y_{2}$ be  any solution of
+$Ly=0$ that isn't  a constant multiple of $y_{1}.$  Let
+$W=y_{1}y_{2}'-y_{1}'y_{2}.$ If
+\begin{equation} \label{eq:13.1.23}
+\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt=0,
+\end{equation}
+then the homogeneous boundary value problem
+\begin{equation} \label{eq:13.1.24}
+Ly=F, \quad B_{1}(y)=0,\quad B_{2}(y)=0
+\end{equation}
+has infinitely many solutions$,$ all of the form $y=y_{p}+c_{1}y_{1},$
+where
+$$
+y_{p}=y_{1}(x)
+\int_{x}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt+
+y_{2}(x)
+\int_{a}^{x}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt
+$$
+and $c_{1}$ is a constant$.$ If
+$$
+\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt \ne0,
+$$
+then \eqref{eq:13.1.24}  has no solution$.$
+\end{theorem}
+
+\proof
+From the proof of Theorem~\ref{thmtype:13.1.3}, $y_{p}$ is a particular solution
+of $Ly=F$,
+and
+$$
+y_{p}'(x)=y_{1}'(x)\int_{x}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt
++y_{2}'(x)\int_{a}^{x}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt.
+$$
+Therefore the general solution of \eqref{eq:13.1.22} is of the form
+$$
+y=y_{p}+c_{1}y_{1}+c_{2}y_{2},
+$$
+where $c_{1}$ and $c_{2}$  are constants.  Then
+\begin{eqnarray*}
+B_{1}(y)&=&
+B_{1}(y_{p}+c_{1}y_{1}+c_{2}y_{2})=
+B_{1}(y_{p})+c_{1}B_{1}(y_{1})+c_{2}B_{1}y_{2}\\
+&=&B_{1}(y_{1})\int_{a}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt
++c_{1}B_{1}(y_{1})+c_{2}B_{1}(y_{2})\\
+&=&c_{2}B_{1}(y_{2})
+\end{eqnarray*}
+Since $B_{1}(y_{1})=0$, Theorem~\ref{thmtype:13.1.1} implies that
+$B_{1}(y_{2})\ne0$; hence, $B_{1}(y)=0$ if and only if $c_{2}=0$.
+Therefore $y=y_{p}+c_{1}y_{1}$ and
+\begin{eqnarray*}
+B_{2}(y)&=&B_{2}(y_{p}+c_{1}y_{1})
+=B_{2}(y_{2})\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt+c_{1}B_{2}(y_{1})\\
+&=&B_{2}(y_{2})\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt,
+\end{eqnarray*}
+since $B_{2}(y_{1})=0$.  From Theorem~\ref{thmtype:13.1.1},
+$B_{2}(y_{2})\ne0$ (since $B_{2}(y_{1}=0$).
+Therefore $Ly=0$   if and only if  \eqref{eq:13.1.23} holds.
+This completes the proof.
+
+\begin{example}\label{example:13.1.7} \rm
+Applying Theorem~\ref{thmtype:13.1.4} to the boundary value problem
+\begin{equation} \label{eq:13.1.25}
+y''+y=F(x),\quad y(0)=0,\quad y(\pi)=0
+\end{equation}
+explains the  Examples~\ref{example:13.1.2} and \ref{example:13.1.3}. The
+complementary equation $y''+y=0$ has the linear independent solutions
+$y_{1}=\sin x$ and $y_{2}=\cos x$, and $y_{1}$ satisfies both boundary
+conditions. Since $P_{0}=1$ and
+$$
+W=
+\left|\begin{array}{crccccc}
+\sin x&\cos x \\\cos x&-\sin x
+\end{array}\right|=-1,
+$$
+\eqref{eq:13.1.23} reduces to
+$$
+\int_{0}^{\pi} F(x)\sin x\,dx=0.
+$$
+From Example~\ref{example:13.1.2}, $F(x)=1$ and
+$$
+\int_{0}^{\pi} F(x)\sin x\,dx=\int_{0}^{\pi} \sin x\,dx=2,
+$$
+so      Theorem~\ref{thmtype:13.1.3}  implies that \eqref{eq:13.1.25} has no
+solution.  In Example~\ref{example:13.1.3},
+$$
+F(x)=\sin 2x=2\sin x \cos x
+$$
+and
+$$
+\int_{0}^{\pi}F(x)\sin x\,dx=2\int_{0}^{\pi}\sin^{2}x\cos x\,dx
+=\frac{2}{3}\sin^{3}x\bigg|_{0}^{\pi}=0,
+$$
+so Theorem~\ref{thmtype:13.1.3} implies that \eqref{eq:13.1.25} has infinitely
+many solutions, differing by constant multiples of $y_{1}(x)=\sin x$.
+\end{example}
+
+\exercises
+
+\begin{exerciselist}
+
+\item\label{exer:13.1.1}
+Verify that $B_{1}$ and $B_{2}$ are linear operators; that is, if $c_{1}$
+and $c_{2}$  are constants then
+$$
+B_{i}(c_{1}y_{1}+c_{2}y_{2})=c_{1}B_{i}(y_{1})+c_{2}B_{i}(y_{2}),\quad
+i=1,2.
+$$
+
+\exercisetext{In Exercises~\ref{exer:13.1.2}--\ref{exer:13.1.7} solve the boundary
+value problem.}
+
+\item\label{exer:13.1.2} $y''-y=x$, \quad  $y(0)=-2$,\quad  $y(1)=1$
+
+\item\label{exer:13.1.3} $y''=2-3x$, \quad  $y(0)=0$,\quad  $y(1)-y'(1)=0$
+
+\item\label{exer:13.1.4} $y''-y=x$, \quad  $y(0)+y'(0)=3$,\quad  $y(1)-y'(1)=2$
+
+\item\label{exer:13.1.5} $y''+4y=1$, \quad  $y(0)=3$,\quad
+ $y(\pi/2)+y'(\pi/2)=-7$
+
+\item\label{exer:13.1.6} $y''-2y'+y=2e^{x}$, \quad  $y(0)-2y'(0)=3$,\quad
+ $y(1)+y'(1)=6e$
+
+\item\label{exer:13.1.7} $y''-7y'+12y=4e^{2x}$, \quad  $y(0)+y'(0)=8$,\quad
+ $y(1)=-7e^{2}$ (see Example~\ref{example:13.1.5})
+
+\item\label{exer:13.1.8} State a condition on $F$ such that the boundary
+value problem
+$$
+y''=F(x), \quad  y(0)=0, \quad y(1)-y'(1)=0
+$$
+has a  solution, and find all solutions.
+
+\item\label{exer:13.1.9}
+\begin{alist}
+\item % (a)
+State  a condition on $a$ and $b$ such that the boundary
+value problem
+\begin{equation}
+y''+y=F(x),\quad y(a)=0,\quad y(b)=0     \tag{A}
+\end{equation}
+has a unique solution for every continuous $F$, and find the solution
+by the method used to prove Theorem~\ref{thmtype:13.1.3}
+\item % (b)
+In the case where $a$ and $b$ don't satisfy the condition you gave for
+\part{a}, state necessary and sufficient     on $F$ such that (A) has
+a solution, and find all solutions by the method used to prove
+Theorem~\ref{thmtype:13.1.4}.
+\end{alist}
+
+\item\label{exer:13.1.10}
+Follow the instructions in Exercise~\ref{exer:13.1.9} for the boundary value
+problem
+$$
+y''+y=F(x),\quad y(a)=0,\quad y'(b)=0.
+$$
+
+\item\label{exer:13.1.11}
+Follow the instructions in Exercise~\ref{exer:13.1.9} for the boundary value
+problem
+$$
+y''+y=F(x),\quad y'(a)=0,\quad y'(b)=0.
+$$
+
+\exercisetext{In Exercises~\ref{exer:13.1.12}--\ref{exer:13.1.15} find a formula for
+the solution of the  boundary problem by the method used to prove
+Theorem~\ref{thmtype:13.1.3}. Assume that $a<b$.}
+
+\item\label{exer:13.1.12}
+$y''-y=F(x)$,\quad  $y(a)=0$,\quad  $y(b)=0$
+
+\item\label{exer:13.1.13}
+$y''-y=F(x)$,\quad  $y(a)=0$,\quad  $y'(b)=0$
+
+\item\label{exer:13.1.14}
+$y''-y=F(x)$,\quad  $y'(a)=0$,\quad  $y'(b)=0$
+
+\item\label{exer:13.1.15}
+$y''-y=F(x)$,\quad  $y(a)-y'(a)=0$,\quad  $y(b)+y'(b)=0$
+
+\exercisetext{In Exercises~\ref{exer:13.1.16}--\ref{exer:13.1.19} find all values of
+$\omega$ such that
+ boundary problem has a unique solution, and find the solution  by the
+method used to prove Theorem~\ref{thmtype:13.1.3}. For other values of $\omega$,
+find conditions on $F$ such that the problem has a solution,
+ and find all solutions  by the
+method used to prove Theorem~\ref{thmtype:13.1.4}.}
+
+\item\label{exer:13.1.16}
+$y''+ \omega^{2}y=F(x)$,\quad $y(0)=0$,\quad $y(\pi)=0$
+
+\item\label{exer:13.1.17}
+$y''+ \omega^{2}y=F(x)$,\quad $y(0)=0$,\quad $y'(\pi)=0$
+
+\item\label{exer:13.1.18}
+$y''+ \omega^{2}y=F(x)$,\quad $y'(0)=0$,\quad $y(\pi)=0$
+
+\item\label{exer:13.1.19}
+$y''+ \omega^{2}y=F(x)$,\quad $y'(0)=0$,\quad $y'(\pi)=0$
+
+\item\label{exer:13.1.20}
+Let $\{z_{1},z_{2}\}$ be a fundamental set of solutions of $Ly=0$.
+Given that the homogeneous boundary value problem
+$$
+Ly=0, \quad B_{1}(y)=0,\quad B_{2}(y)=0
+$$
+has a nontrivial solution, express it explicity in terms of $z_{1}$
+and $z_{2}$.
+
+\item\label{exer:13.1.21}
+If the boundary value problem has a solution for every continuous  $F$,
+then find  the Green's function for the problem and use it to write
+an explicit formula for the solution. Otherwise, if the
+boundary value problem does not have a solution for every continuous $F$,
+find a necessary and sufficient condition on $F$ for the problem to have
+a solution, and find all solutions. Assume that $a<b$.
+
+\begin{alist}
+\item % (a)
+$y''=F(x)$, \quad $y(a)=0$,\quad $y(b)=0$
+
+\item % (b)
+$y''=F(x)$, \quad $y(a)=0$,\quad $y'(b)=0$
+
+\item % (c)
+$y''=F(x)$, \quad $y'(a)=0$,\quad $y(b)=0$
+
+\item % (d)
+$y''=F(x)$, \quad $y'(a)=0$,\quad $y'(b)=0$
+\end{alist}
+
+\item\label{exer:13.1.22}
+Find the Green's function  for the boundary value problem
+\begin{equation}
+y''=F(x), \quad y(0)-2y'(0)=0, \quad y(1)+2y'(1)=0.   \tag{A}
+\end{equation}
+Then  use the Green's function to solve (A) with
+\part{a} $F(x)=1$, \part{b} $F(x)=x$, and \part{c} $F(x)=x^{2}$.
+
+\item\label{exer:13.1.23}
+Find the Green's function  for the boundary value problem
+\begin{equation}
+x^{2}y''+xy'+(x^{2}-1/4)y=F(x), \quad y(\pi/2)=0,\quad y(\pi)=0,   \tag{A}
+\end{equation}
+given that
+$$
+y_{1}(x)=\frac{\cos x}{\sqrt{x}}
+\text{\;    and\; \;  }
+y_{2}(x)=\frac{\sin x}{\sqrt{x}}
+$$
+are solutions of the complementary equation. Then use the Green's function
+to solve  (A) with \part{a} $F(x)=x^{3/2}$  and \part{b} $F(x)=x^{5/2}$.
+
+\item\label{exer:13.1.24}
+Find the Green's function  for the boundary value problem
+\begin{equation}
+x^{2}y''-2xy'+2y=F(x), \quad y(1)=0,\quad y(2)=0,   \tag{A}
+\end{equation}
+given that  $\{x,x^{2}\}$ is a fundamental set of solutions
+of the complementary equation.
+Then use the Green's function
+to solve  (A) with \part{a} $F(x)=2x^{3}$  and \part{b} $F(x)~=~6x^{4}$.
+
+\item\label{exer:13.1.25}
+Find the Green's function  for the boundary value problem
+\begin{equation}
+x^{2}y''+xy'-y=F(x), \quad y(1)-2y'(1)=0,\quad y'(2)=0,   \tag{A}
+\end{equation}
+given that  $\{x,1/x\}$ is a fundamental set of solutions
+of the complementary equation.
+Then use the Green's function
+to solve  (A) with \part{a} $F(x)=1$,   \part{b} $F(x)=x^{2}$, and
+\part{c} $F(x)=x^{3}$.
+
+\exercisetext{In Exercises~\ref{exer:13.1.26}--\ref{exer:13.1.30} find
+necessary and sufficient conditions on $\alpha$, $\beta$, $\rho$,
+and $\delta$ for the boundary value
+ problem to have a  unique solution for every continuous $F$, and
+find the Green's function.}
+
+\item\label{exer:13.1.26}
+$y''=F(x)$, \quad $\alpha y(0)+\beta y'(0)=0$, \quad
+$\rho y(1)+\delta y'(1)=0$
+
+\item\label{exer:13.1.27}
+$y''+y=F(x)$, \quad $\alpha y(0)+\beta y'(0)=0$, \quad
+$\rho y(\pi)+\delta y'(\pi)=0$
+
+\item\label{exer:13.1.28}
+$y''+y=F(x)$, \quad $\alpha y(0)+\beta y'(0)=0$, \quad
+$\rho y(\pi/2)+\delta y'(\pi/2)=0$
+
+\item\label{exer:13.1.29}
+$y''-2y'+2y=F(x)$, \quad $\alpha y(0)+\beta y'(0)=0$, \quad
+$\rho y(\pi)+\delta y'(\pi)=0$
+
+\item\label{exer:13.1.30}
+$y''-2y'+2y=F(x)$, \quad $\alpha y(0)+\beta y'(0)=0$, \quad
+$\rho y(\pi/2)+\delta y'(\pi/2)=0$
+
+\item\label{exer:13.1.31}
+Find
+necessary and sufficient conditions on $\alpha$, $\beta$, $\rho$,
+and $\delta$ for the boundary value
+ problem
+\begin{equation}
+y''-y=F(x), \quad \alpha y(a)+\beta y'(a)=0, \quad
+\rho y(b)+\delta y'(b)=0   \tag{A}
+\end{equation}
+to have a  unique solution for every continuous $F$, and find the Green's
+function for (A). Assume that $a<b$.
+
+\item\label{exer:13.1.32}
+Show that  the assumptions of Theorem~\ref{thmtype:13.1.3} imply that the unique
+solution of
+$$
+Ly=F, \quad  B_{1}(y)=k_{1},\quad B_{2}(y)=f_{2}
+$$
+is
+$$
+y=\int_{a}^{b} G(x,t)F(t)\,dt +\frac{k_{2}}{B_{2}}(y_{1})y_{1}
++\frac{k_{1}}{B_{1}(y_{2})}y_{2}.
+$$
+\end{exerciselist}

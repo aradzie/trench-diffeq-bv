@@ -1,0 +1,678 @@
+\newsection{4} {Linear Higher Order Equations}
+{Variation of Parameters for Higher Order  Equations}
+\currentpdfbookmark{Section 9.4 Variation of Parameters for Higher Order  Equations}{section:9.4}
+\vskip14pt
+
+\renewcommand{\thissection}{\sectiontitle
+{\,VARIATION OF PARAMETERS  FOR HIGHER ORDER  EQUATIONS}}
+\thissection
+
+\noindent
+\boxit{Derivation of the method}
+
+\noindent
+We assume throughout this section that the nonhomogeneous linear
+equation
+\begin{equation} \label{eq:9.4.1}
+P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=F(x)
+\end{equation}
+is normal on an interval $(a,b)$. We'll abbreviate this equation as
+$Ly=F$, where
+$$
+Ly=P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y.
+$$
+When we speak of solutions of this equation and its complementary
+equation $Ly=0$, we mean solutions on $(a,b)$. We'll show how to use
+the method of variation of parameters to find a particular solution of
+$Ly=F$, provided that we know a fundamental set of solutions
+$\{y_1,y_2,\dots,y_n\}$ of $Ly=0$.
+
+We seek a particular solution of $Ly=F$ in the form
+\begin{equation} \label{eq:9.4.2}
+y_p=u_1y_1+u_2y_2+\cdots+u_ny_n
+\end{equation}
+where $\{y_1,y_2,\dots,y_n\}$ is a known fundamental set of solutions
+of the complementary equation
+$$
+P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=0
+$$
+and $u_1$, $u_2$, \dots, $u_n$ are functions to be determined. We begin by
+imposing the following $n-1$ conditions on $u_1,u_2,\dots,u_n$:
+\begin{equation} \label{eq:9.4.3}
+\begin{array}{rcl}
+u'_1y_1+u'_2y_2+&\cdots&+u'_ny_n=0 \\
+u'_1y'_1+u'_2y'_2+&\cdots&+u'_ny'_n=0 \\
+\phantom{u'_1y^{(n_1)}+u'_2y_2^{(n-1)}}&\vdots&
+\phantom{\cdots+u'_ny^{(n-1)}_n=q} \\
+u'_1y_1^{(n-2)}+u'_2y^{(n-2)}_2+&\cdots&+u'_ny^{(n-2)}_n
+=0.
+\end{array}
+\end{equation}
+These conditions lead to simple formulas for the first $n-1$
+derivatives of $y_p$:
+\begin{equation} \label{eq:9.4.4}
+y^{(r)}_p=u_1y^{(r)}_1+u_2y_2^{(r)}\cdots+u_ny^{(r)}_n,\ 0
+\le r \le n-1.
+\end{equation}
+These formulas are easy to remember, since they look as though we
+obtained them by differentiating \eqref{eq:9.4.2} $n-1$ times while
+treating $u_1$, $u_2$, \dots, $u_n$ as constants. To see that
+\eqref{eq:9.4.3}
+implies \eqref{eq:9.4.4}, we first differentiate \eqref{eq:9.4.2} to obtain
+$$
+y_p'=u_1y_1'+u_2y_2'+\cdots+u_ny_n'+u_1'y_1+u_2'y_2+\cdots+u_n'y_n,
+$$
+which  reduces to
+$$
+y_p'=u_1y_1'+u_2y_2'+\cdots+u_ny_n'
+$$
+because of the first equation in \eqref{eq:9.4.3}. Differentiating this
+yields
+$$
+y_p''=u_1y_1''+u_2y_2''+\cdots+u_ny_n''+u_1'y_1'+u_2'y_2'+\cdots+u_n'y_n',
+$$
+which reduces to
+$$
+y_p''=u_1y_1''+u_2y_2''+\cdots+u_ny_n''
+$$
+because of  the second equation in \eqref{eq:9.4.3}.
+Continuing in this way yields \eqref{eq:9.4.4}.
+
+The last equation in \eqref{eq:9.4.4} is
+$$
+y_p^{(n-1)}=u_1y_1^{(n-1)}+u_2y_2^{(n-1)}+\cdots+u_ny_n^{(n-1)}.
+$$
+Differentiating this yields
+$$
+y_p^{(n)}=u_1y_1^{(n)}+u_2y_2^{(n)}+\cdots+u_ny_n^{(n)}+
+u_1'y_1^{(n-1)}+u_2'y_2^{(n-1)}+\cdots+u_n'y_n^{(n-1)}.
+$$
+Substituting this and  \eqref{eq:9.4.4} into \eqref{eq:9.4.1}
+yields
+$$
+u_1Ly_1+u_2Ly_2+\cdots+u_nLy_n+P_0(x)\left(
+u_1'y_1^{(n-1)}+u_2'y_2^{(n-1)}+\cdots+u_n'y_n^{(n-1)}\right)=F(x).
+$$
+Since  $Ly_i=0$ $(1 \le i \le n)$, this reduces to
+$$
+u_1'y_1^{(n-1)}+u_2'y_2^{(n-1)}+\cdots+u_n'y_n^{(n-1)}={F(x)\over P_0(x)}.
+$$
+Combining this equation with \eqref{eq:9.4.3} shows that
+$$
+y_p=u_1y_1+u_2y_2+\cdots+u_ny_n
+$$
+is a solution of \eqref{eq:9.4.1} if
+$$
+\begin{array}{rcl}
+u'_1y_1+u'_2y_2+&\cdots&+u'_ny_n=0 \\
+u'_1y'_1+u'_2y'_2+&\cdots&+u'_ny'_n=0 \\
+\phantom{u'_1y^{(n_1)}+u'_2y_2^{(n-1)}}&\vdots&
+\phantom{\cdots+u'_ny^{(n-1)}_n=q} \\
+u'_1y_1^{(n-2)}+u'_2y^{(n-2)}_2+&\cdots&+u'_ny^{(n-2)}_n
+=0 \\
+u'_1y^{(n-1)}_1+u'_2y^{(n-1)}_2+&\cdots&+u'_n
+y^{(n-1)}_n=F/P_0,
+\end{array}
+$$
+which can be written in matrix form as
+\begin{equation} \label{eq:9.4.5}
+\left[\begin{array}{cccc}
+y_1&y_2&\cdots&y_n \\[2\jot]
+y'_1&y'_2&\cdots&y_n'\\[2\jot]
+\vdots&\vdots&\ddots&\vdots\\[2\jot]
+y_1^{(n-2)}&y_2^{(n-2)}&\cdots&y_n^{(n-2)}\\[2\jot]
+y_1^{(n-1)}&y_2^{(n-1)}&\cdots&y_n^{(n-1)}
+\end{array} \right]
+\left[\begin{array}{c}u_1'\\u_2'\\\vdots\\u_{n-1}'\\u_n'\end{array}
+\right]=
+\left[\begin{array}{c}0\\0\\ \vdots\\0\\F/ P_0\end{array}\right].
+\end{equation}
+The determinant of this system  is the Wronskian $W$ of
+the fundamental set of solutions  $\{y_1,y_2,\dots,y_n\}$,
+which has no zeros on $(a,b)$, by Theorem~\ref{thmtype:9.1.4}.
+Solving
+\eqref{eq:9.4.5} by Cramer's rule  yields
+\begin{equation} \label{eq:9.4.6}
+u'_j=(-1)^{n-j}{FW_j\over P_0W},\quad 1\le j\le n,
+\end{equation}
+ where $W_j$ is the Wronskian of the set of
+functions obtained by deleting $y_j$ from  $\{y_1,y_2,\dots,y_n\}$
+ and keeping the remaining functions in the
+same order. Equivalently, $W_j$ is the determinant obtained by
+deleting the last row and $j$-th column of $W$.
+
+Having obtained $u_1'$, $u_2'$$, \dots, $$u_n'$, we can integrate  to
+obtain $u_1,\,u_2,\dots,u_n$. As in Section~5.7, we
+take the constants
+of integration to be zero, and we drop any linear combination of
+$\{y_1,y_2,\dots,y_n\}$ that may appear in $y_p$.
+
+\medskip
+
+\color{blue}
+\remark{ For efficiency, it's best to compute $W_1$, $W_2$, \dots, $W_n$
+first, and then compute $W$ by expanding in cofactors of the last row;
+thus,
+$$
+W=\sum_{j=1}^n(-1)^{n-j}y_j^{(n-1)}W_j.
+$$}
+\color{black}
+
+\boxit{Third Order Equations}
+
+\noindent
+If $n=3$, then
+$$
+W=\left| \begin{array}{ccc}
+y_1&y_2&y_3 \\[2\jot]
+y'_1&y'_2&y'_3 \\[2\jot]
+y''_1&y''_2&y''_3 \end{array} \right|.
+$$
+Therefore
+$$
+W_1=\left| \begin{array}{cc}
+y_2&y_3 \\[2\jot]
+y'_2&y'_3 \end{array} \right|,
+\quad W_2=\left| \begin{array}{cc}
+y_1&y_3 \\[2\jot]
+ y'_1&y'_3 \end{array} \right|,
+\quad W_3=\left| \begin{array}{cc}
+y_1&y_2 \\[2\jot]
+y'_1&y'_2 \end{array} \right|,
+$$
+and  \eqref{eq:9.4.6}  becomes
+\begin{equation} \label{eq:9.4.7}
+u'_1={FW_1\over P_0W},\quad u'_2=-{FW_2\over P_0W},\quad
+u'_3={FW_3\over P_0W}.
+\end{equation}
+
+\begin{example}\label{example:9.4.1} \rm
+ Find a particular solution of
+\begin{equation} \label{eq:9.4.8}
+xy'''-y''-xy'+y=8x^2e^x,
+\end{equation}
+given that  $y_1=x$, $y_2=e^x$, and $y_3=e^{-x}$ form a fundamental
+set of solutions of the complementary equation. Then find the general
+solution of \eqref{eq:9.4.8}.
+ \end{example}
+
+\solution
+We seek a particular solution of \eqref{eq:9.4.8} of the form
+$$
+y_p=u_1x+u_2e^x+u_3e^{-x}.
+$$
+The Wronskian of  $\{y_1,y_2,y_3\}$ is
+$$
+W(x)=\left| \begin{array}{ccr}
+ x&e^x&e^{-x} \\ 1&e^x&-e^{-x} \\ 0&e^x&e^{-x}
+\end{array} \right|,
+$$
+so
+\begin{eqnarray*}
+W_1&=&
+\left| \begin{array}{cr}
+e^x&e^{-x}\\ e^x&-e^{-x}
+\end{array} \right|=-2,\\[10pt]
+W_2&=&
+\left| \begin{array}{cr}
+x&e^{-x}\\1&-e^{-x}
+\end{array} \right|=-e^{-x}(x+1),\\
+W_3&=&
+\left| \begin{array}{cc}
+x&e^x\\1&e^x
+\end{array} \right|=e^x(x-1).
+\end{eqnarray*}
+Expanding $W$ by cofactors of the last row yields
+$$
+W=0W_1-e^x W_2+e^{-x}W_3=0(-2)-e^x\left(-e^{-x}(x+1)\right)
++e^{-x}e^x(x-1)=2x.
+$$
+ Since $F(x)=8x^2e^x$ and $P_0(x)=x$,
+$$
+{F\over P_0W}={8x^2e^x\over x\cdot 2x}=4e^x.
+$$
+Therefore, from \eqref{eq:9.4.7}
+\begin{eqnarray*}
+u'_1&=&\phantom{-} 4e^xW_1=\phantom{-}4e^x(-2)=-8e^x,\\
+u_2'&=&-4e^xW_2=-4e^x\left(-e^{-x}(x+1)\right)=4(x+1),\\
+u_3'&=&\phantom{-}4e^xW_3=\phantom{-}4e^x\left(e^x(x-1)\right)=4e^{2x}(x-1).
+\end{eqnarray*}
+ Integrating and taking the constants of
+integration to be zero yields
+$$
+u_1=-8e^x,\quad u_2=2(x+1)^2, u_3=e^{2x}(2x-3).
+$$
+Hence,
+\begin{eqnarray*}
+y_p&=&u_1y_1+u_2y_2+u_3y_3\\
+&=&(-8e^x)x+e^x(2(x+1)^2)+e^{-x}\left(e^{2x}(2x-3)\right)
+\\&=&e^x(2x^2-2x-1).
+\end{eqnarray*}
+Since $-e^x$ is a solution of the complementary equation, we redefine
+$$
+y_p=2xe^x(x-1).
+$$
+ Therefore the general solution of \eqref{eq:9.4.8} is
+$$
+y=2xe^x(x-1)+c_1x+c_2e^x+c_3e^{-x}.
+$$
+
+\boxit{Fourth Order Equations}
+
+\noindent
+If $n=4$, then
+$$
+W=\left| \begin{array}{cccc}
+y_1&y_2&y_3&y_4 \\[2\jot]
+y'_1&y'_2&y'_3&y_4' \\[2\jot]
+y''_1&y''_2&y''_3&y_4''\\[2\jot]
+y'''_1&y'''_2&y'''_3&y_4'''
+ \end{array} \right|,
+$$
+Therefore
+$$
+W_1=\left| \begin{array}{ccc}
+y_2&y_3&y_4 \\[2\jot]
+y'_2&y'_3&y_4'\\[2\jot]
+y''_2&y''_3&y_4''
+\end{array} \right|,
+\quad W_2=\left| \begin{array}{ccc}
+y_1&y_3&y_4 \\[2\jot]
+y'_1&y'_3&y_4'\\[2\jot]
+y''_1&y''_3&y_4''
+ \end{array} \right|,
+$$
+\vskip5pt
+$$
+ W_3=\left| \begin{array}{ccc}
+y_1&y_2&y_4 \\[2\jot]
+y'_1&y'_2&y_4'\\[2\jot]
+y''_1&y''_2&y_4''
+ \end{array} \right|,\quad
+ W_4=\left| \begin{array}{ccc}
+y_1&y_2&y_3 \\[2\jot]
+y_1'&y'_2&y_3'\\[2\jot]
+y_1''&y''_2&y_3''
+ \end{array} \right|,
+$$
+and  \eqref{eq:9.4.6}  becomes
+\begin{equation} \label{eq:9.4.9}
+u'_1=-{FW_1\over P_0W},\quad u'_2={FW_2\over P_0W},\quad
+u'_3=-{FW_3\over P_0W},\quad u'_4={FW_4\over P_0W}.
+\end{equation}
+
+\begin{example}\label{example:9.4.2} \rm
+ Find a particular solution of
+\begin{equation} \label{eq:9.4.10}
+x^4y^{(4)}+6x^3y'''+2x^2y''-4xy'+4y=12x^2,
+\end{equation}
+given that  $y_1=x$, $y_2=x^2$, $y_3=1/x$ and $y_4=1/x^2$ form a
+fundamental set of solutions of the complementary equation. Then find
+the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and
+$(0,\infty)$.
+ \end{example}
+
+\solution
+We seek a particular solution of \eqref{eq:9.4.10} of the form
+$$
+y_p=u_1x+u_2x^2+{u_3\over x}+{u_4\over x^2}.
+$$
+The Wronskian of  $\{y_1,y_2,y_3,y_4\}$ is
+$$
+W(x)=\left| \begin{array}{cccr}
+ x&x^2&1/x&-1/x^2 \\[5pt] 1&2x&-1/x^2&-2/x^3 \\[5pt] 0
+&2&2/x^3&6/x^4\\[5pt]
+0&0&-6/x^4&-24/x^5
+\end{array} \right|,
+$$
+so
+\begin{eqnarray*}
+W_1&=&
+\left| \begin{array}{ccr}
+x^2&1/x&1/x^2\\[5pt]2x&-1/x^2&-2/x^3\\[5pt]
+2&2/x^3&6/x^4
+\end{array} \right|=-{12\over x^4},\\[10pt]
+W_2&=&
+\left| \begin{array}{ccr}
+x&1/x&1/x^2\\[5pt]1&-1/x^2&-2/x^3\\[5pt]
+0&2/x^3&6/x^4
+\end{array} \right|=-{6\over x^5},\\[10pt]
+W_3&=&
+\left| \begin{array}{ccc}
+x&x^2&1/x^2\\[5pt]1&2x&-2/x^3\\[5pt]
+0&2&6/x^4
+\end{array} \right|={12\over x^2},  \\
+W_4&=&
+\left| \begin{array}{ccc}
+x&x^2&1/x\\[5pt]1&2x&-1/x^2\\[5pt]
+0&2&2/x^3
+\end{array} \right|={6\over x}.
+\end{eqnarray*}
+Expanding $W$ by cofactors of the last row yields
+\begin{eqnarray*}
+W&=&-0W_1+0 W_2-\left(-{6\over
+x^4}\right)W_3+\left(-{24\over
+x^5}\right)W_4\\
+&=&{6\over x^4}{12\over x^2}-{24\over x^5}{6\over x}=-{72\over x^6}.
+\end{eqnarray*}
+ Since $F(x)=12x^2$ and $P_0(x)=x^4$,
+$$
+{F\over P_0W}={12x^2\over x^4}\left(-{x^6\over72}\right)=-{x^4\over 6}.
+$$
+Therefore, from \eqref{eq:9.4.9},
+\begin{eqnarray*}
+u'_1&=&-\left(-{x^4\over6}\right)W_1={x^4\over6}\left(-{12\over
+x^4}\right)=-2,\\[5pt]
+ u_2'&=&\phantom{-}-{x^4\over6}W_2=-{x^4\over6}\left(-{6\over x^5}\right)
+={1\over x},\\[5pt]
+u_3'&=&-\left(-{x^4\over6}\right)W_3={x^4\over6}{12\over x^2}=2x^2,\\
+  u_4'&=&\phantom{-}-{x^4\over6}W_4=-{x^4\over6}{6\over x}=-x^3.
+\end{eqnarray*}
+ Integrating these and taking the constants of
+integration to be zero yields
+$$
+u_1=-2x,\quad u_2=\ln|x|,\quad u_3={2x^3\over3},
+u_4=-{x^4\over4}.
+$$
+Hence,
+\begin{eqnarray*}
+y_p&=&u_1y_1+u_2y_2+u_3y_3+u_4y_4\\
+&=&(-2x)x+(\ln|x|)x^2+{2x^3\over3}{1\over x}+\left(-{x^4\over4}\right)
+{1\over x^2} \\&=&x^2\ln|x|-{19x^2\over12}.
+\end{eqnarray*}
+Since $-19x^2/12$ is a solution of the complementary equation, we redefine
+$$
+y_p=x^2\ln|x|.
+$$
+ Therefore
+$$
+y=x^2\ln|x|+c_1x+c_2x^2+{c_3\over x}+{c_4\over x^2}
+$$
+is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
+
+\enlargethispage{1in}
+\exercises
+In Exercises~\ref{exer:9.4.1}--\ref{exer:9.4.21} find a particular
+solution,
+given the fundamental set of solutions of the complementary equation.
+
+\begin{exerciselist}
+\item\label{exer:9.4.1}
+$x^3y'''-x^2(x+3)y''+2x(x+3)y'-2(x+3)y=-4x^4$;\quad
+$\{x,\,x^2,\,xe^x\}$
+\newpage
+
+\item\label{exer:9.4.2}
+$y'''+6xy''+(6+12x^2)y'+(12x+8x^3)y=x^{1/2}e^{-x^2}$;\quad
+ $\{e^{-x^2},\,xe^{-x^2},\,x^2e^{-x^2}\}$
+
+\item\label{exer:9.4.3} $x^3y'''-3x^2y''+6xy'-6y=2x$;
+ \quad  $\{x,x^2,x^3\}$
+
+\item\label{exer:9.4.4}
+$x^2y'''+2xy''-(x^2+2)y'=2x^2$;\quad   $\{1,\,e^x/x,\,e^{-x}/x\}$
+
+\item\label{exer:9.4.5}
+$x^3y'''-3x^2(x+1)y''+3x(x^2+2x+2)y'-(x^3+3x^2+6x+6)y=x^4e^{-3x}$;\quad
+
+$\{xe^x,\,x^2e^x,\,x^3e^x\}$
+
+\item\label{exer:9.4.6}
+$x(x^2-2)y'''+(x^2-6)y''+x(2-x^2)y'+(6-x^2)y=2(x^2-2)^2$; \quad
+ $\{e^x,\,e^{-x},\,1/x\}$
+
+\item\label{exer:9.4.7}
+$xy'''-(x-3)y''-(x+2)y'+(x-1)y=-4e^{-x}$; \quad
+$\{e^x,\,e^x/x,\,e^{-x}/x\}$
+
+\item\label{exer:9.4.8}
+$4x^3y'''+4x^2y''-5xy'+2y=30x^2$; \quad  $\{\sqrt x,\,1/\sqrt x,\,x^2\}$
+
+\item\label{exer:9.4.9}
+$x(x^2-1)y'''+(5x^2+1)y''+2xy'-2y=12x^2$; \quad
+$\{x,\,1/(x-1),\,1/(x+1)\}$
+
+\item\label{exer:9.4.10}
+$x(1-x)y'''+(x^2-3x+3)y''+xy'-y=2(x-1)^2$; \quad
+$\{x,\,1/x,e^x/x\}$
+
+\item\label{exer:9.4.11}
+$x^3y'''+x^2y''-2xy'+2y=x^2$;  \quad  $\{x,\,x^2,\,1/x\}$
+
+\item\label{exer:9.4.12} $xy'''-y''-xy'+y=x^2$; \quad
+$\{x,\,e^x,\,e^{-x}\}$
+
+\item\label{exer:9.4.13}
+$xy^{(4)}+4y'''=6 \ln |x|$; \quad   $\{1,\,x,\,x^2,\,1/x\}$
+
+\item\label{exer:9.4.14}
+$16x^4y^{(4)}+96x^3y'''+72x^2y''-24xy'+9y=96x^{5/2}$; \quad
+$\{\sqrt x,\,1/\sqrt x,\,x^{3/2},\,x^{-3/2}\}$
+
+\item\label{exer:9.4.15}
+$x(x^2-6)y^{(4)}+2(x^2-12)y'''+x(6-x^2)y''+2(12-x^2)y'=2(x^2-6)^2$; \quad
+
+ $\{1,\,1/x,\,e^x,\,e^{-x}\}$
+
+\item\label{exer:9.4.16}
+$x^4y^{(4)}-4x^3y'''+12x^2y''-24xy'+24y=x^4$; \quad
+$\{x,\,x^2,\,x^3,\,x^4\}$
+
+\item\label{exer:9.4.17}
+$x^4y^{(4)}-4x^3y'''+2x^2(6-x^2)y''+4x(x^2-6)y'+(x^4-4x^2+24)y=4x^5e^x$;
+\quad
+
+ $\{xe^x,\,x^2e^x,\,xe^{-x},\,x^2e^{-x}\}$
+
+\item\label{exer:9.4.18}
+$x^4y^{(4)}+6x^3y'''+2x^2y''-4xy'+4y=12x^2$;   \quad
+$\{x,x^2,1/x,1/x^2\}$
+
+\item\label{exer:9.4.19}
+$xy^{(4)}+4y'''-2xy''-4y'+xy=4e^x$; \quad
+$\{e^x,\,e^{-x},\,e^x/x,\,e^{-x}/x\}$
+
+\item\label{exer:9.4.20}
+$xy^{(4)}+(4-6x)y'''+(13x-18)y''+(26-12x)y'+(4x-12)y=3e^x$; \quad
+ $\{e^x,\,e^{2x},\,e^x/x,\,e^{2x}/x\}$
+
+\item\label{exer:9.4.21}
+$x^4y^{(4)}-4x^3y'''+x^2(12-x^2)y''+2x(x^2-12)y'+2(12-x^2)y=2x^5$;
+ $\{x,\,x^2,\,xe^x,\,xe^{-x}\}$
+
+\exercisetext{In Exercises~\ref{exer:9.4.22}--\ref{exer:9.4.33} solve the
+initial value problem, given the fundamental set of solutions of the
+complementary equation. Where indicated by \CGex, graph the solution.}
+
+\item\label{exer:9.4.22} \CGex
+$x^3y'''-2x^2y''+3xy'-3y=4x, \quad  y(1)=4,\quad y'(1)=4,
+\quad y''(1)=2$; \quad     $\{x,\,x^3,\,x \ln x\}$
+
+\item\label{exer:9.4.23}
+$x^3y'''-5x^2y''+14xy'-18y=x^3, \quad  y(1)=0,\quad y'(1)=1,\quad
+y''(1)=7$;
+\quad $\{x^2,\, x^3,\,x^3 \ln x\}$
+
+\item\label{exer:9.4.24}
+$\dst{(5-6x)y'''+(12x-4)y''+(6x-23)y'+(22-12x)y=-(6x-5)^2e^x}$
+
+$\dst{y(0)=-4, \quad  y'(0)=-{3\over2},\quad y''(0)=-19}$;\quad
+ $\{e^x,\,e^{2x},\,xe^{-x} \}$
+
+\item\label{exer:9.4.25}
+$x^3y'''-6x^2y''+16xy'-16y=9x^4, \quad  y(1)=2,\quad y'(1)=1,\quad y''(1)=5$;
+
+ $\{x,\,x^4,\,x^4 \ln |x|\}$
+
+\item\label{exer:9.4.26} \CGex
+$(x^2-2x+2)y'''-x^2y''+2xy'-2y=(x^2-2x+2)^2, \quad  y(0)=0,\quad y'(0)=5$,
+
+$y''(0)=0$;\quad       $\{x,\,x^2,\,e^x\}$
+
+\item\label{exer:9.4.27}
+$x^3y'''+x^2y''-2xy'+2y=x(x+1), \quad  y(-1)=-6,\quad y'(-1)=\dst{43\over6},\quad y''(-1)=
+-\dst{5\over2}$;\quad
+
+  $\{x,\,x^2,\,1/x\}$
+\newpage
+
+\item\label{exer:9.4.28}
+$(3x-1)y'''-(12x-1)y''+9(x+1)y'-9y=2e^x(3x-1)^2, \quad  y(0)=\dst{3\over4}$,
+
+$y'(0)=\dst{5\over4}, \quad  y''(0)=\dst{1\over4}$;\quad
+$\{x+1,\,e^x,\,e^{3x}\}$
+
+\item\label{exer:9.4.29}  \CGex
+$(x^2-2)y'''-2xy''+(2-x^2)y'+2xy=2(x^2-2)^2, \quad  y(0)=1,\quad y'(0)=-5$,
+
+ $y''(0)=5$;\quad      $\{x^2,\,e^x,\,e^{-x}\}$
+
+\item\label{exer:9.4.30} \CGex
+$x^4y^{(4)}+3x^3y'''-x^2y''+2xy'-2y=9x^2, \quad  y(1)=-7,\quad y'(1)=
+-11,\quad y''(1)=-5$,\;
+$y'''(1)=6; \quad \{x,\,x^2,\,1/x,\,x\ln x\}$
+
+\item\label{exer:9.4.31}
+$(2x-1)y^{(4)}-4xy'''+(5-2x)y''+4xy'-4y=6(2x-1)^2, \quad  y(0)=\dst{55\over4},
+\quad y'(0)=0$,
+
+$y''(0)=13, \quad  y'''(0)=1$;\quad    $\{x,\,e^x,\,e^{-x},\,e^{2x}\}$
+
+\item\label{exer:9.4.32}
+$4x^4y^{(4)}+24x^3y'''+23x^2y''-xy'+y=6x$,\quad $y(1)=2,\quad
+y'(1)=0,\quad y''(1)=4,\quad y'''(1)=-\dst{37\over4}$;
+\quad $\{x,\sqrt x,1/x,1/\sqrt x\}$
+
+\item\label{exer:9.4.33}
+$x^4y^{{(4)}}+5x^3y'''-3x^2y''-6xy'+6y=40x^3,
+\quad  y(-1)=-1, \;  y'(-1)=-7$,
+
+$y''(-1)=-1,\quad y'''(-1)=-31$;\quad
+$\{x,\, x^3,\,1/x,\,1/x^2\}$
+
+\item\label{exer:9.4.34}
+Suppose the equation
+$$
+P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=F(x)
+\eqno{\rm (A)}
+$$
+is normal on an interval $(a,b)$. Let $\{y_1,y_2,\dots,y_n\}$ be a
+fundamental set of solutions of its complementary equation on $(a,b)$,
+let $W$ be the Wronskian of $\{y_1,y_2,\dots,y_n\}$, and let $W_j$ be
+the determinant obtained by deleting the last row and the $j$-th
+column of $W$. Suppose $x_0$ is in $(a,b)$, let
+$$
+u_j(x)=(-1)^{(n-j)}\int_{x_0}^x{F(t)W_j(t)\over P_0(t)W(t)}\,dt,
+\quad 1\le j\le n,
+$$
+and define
+$$
+y_p=u_1y_1+u_2y_2+\cdots+u_ny_n.
+$$
+\begin{alist}
+\item % (a)
+Show that $y_p$ is a solution of (A) and that
+$$
+y_p^{(r)}=u_1y^{(r)}_1+u_2y_2^{(r)}\cdots+u_ny^{(r)}_n,\quad 1
+\le r \le n-1,
+$$
+and
+$$
+y_p^{(n)}=u_1y_1^{(n)}+u_2y_2^{(n)}+\cdots+u_ny_n^{(n)}+{F\over P_0}.
+$$
+\hint{See the derivation of the method of variation of
+parameters at the beginning of the section.}
+\item % (b)
+Show that    $y_p$  is the
+solution of the initial value problem
+$$
+\begin{array}{r}
+P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=F(x),\\[5pt]
+\hspace*{20pt} y(x_0)=0,\;
+y'(x_0)=0,\dots,\quad y^{(n-1)}(x_0)=0.
+\end{array}
+$$
+\item % (c)
+Show that  $y_p$  can be written as
+$$
+y_p(x)=\int_{x_0}^x G(x,t)F(t)\,dt,
+$$
+where
+$$
+G(x,t)={1\over P_0(t)W(t)}\left|\begin{array}{cccc}
+y_1(t)&y_2(t)&\cdots&y_n(t)\\[5pt]
+y_1'(t)&y_2'(t)&\cdots&y_n'(t)\\[5pt]
+\vdots&\vdots&\ddots&\vdots\\[5pt]
+y_1^{(n-2)}(t)&y_2^{(n-2)}(t)&\cdots&y_n^{(n-2)}(t)\\[5pt]
+y_1(x)&y_2(x)&\cdots&y_n(x)\end{array}\right|,
+$$
+which is called  the
+\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Green.html}
+{\color{blue}\it Green's function\/} for (A).
+\item % (c)
+Show that
+$$
+{\partial^{j}G(x,t)\over\partial x^j}
+={1\over P_0(t)W(t)}\left|\begin{array}{cccc}
+y_1(t)&y_2(t)&\cdots&y_n(t)\\[5pt]
+y_1'(t)&y_2'(t)&\cdots&y_n'(t)\\[5pt]
+\vdots&\vdots&\ddots&\vdots\\[5pt]
+y_1^{(n-2)}(t)&y_2^{(n-2)}(t)&\cdots&y_n^{(n-2)}(t)\\[5pt]
+y_1^{(j)}(x)&y_2^{(j)}(x)&\cdots&y_n^{(j)}(x)\end{array}\right|,\quad 0\le j\le
+n.
+$$
+\item % (d)
+Show that if $a<t<b$ then
+$$
+\left.{\partial^{j}G(x,t)\over\partial x^j}\right|_{x=t}=
+\left\{\begin{array}{cl} 0,&1\le j\le n-2,\\[5pt]
+\dst{1\over P_0(t)},&j=n-1.
+\end{array}\right.
+$$
+\item % (e)
+Show that
+$$
+ y_p^{(j)}(x)=\left\{\begin{array}{cl}\dst{\int_{x_0}^x
+{\partial^{j}G(x,t)\over\partial x^j}F(t)\,dt},&1\le j\le n-1,\\[10pt]
+\dst{{F(x)\over P_0(x)}+
+\int_{x_0}^x{\partial^{(n)}G(x,t)\over\partial x^n}F(t)\,dt},&j=n.
+\end{array}\right.
+$$
+\end{alist}
+
+\exercisetext{In Exercises~\ref{exer:9.4.35}--\ref{exer:9.4.42}
+use the method suggested by Exercise~\ref{exer:9.4.34} to find a particular
+ solution in the form
+$y_p=\int_{x_0}^x G(x,t)F(t)\,dt$, given the indicated fundamental
+set of
+ solutions.
+ Assume that $x$ and $x_0$ are in an interval on which
+the equation is normal.}
+
+\item\label{exer:9.4.35}
+$y'''+2y'-y'-2y=F(x); \quad \{e^x,\,e^{-x},e^{-2x}\}$
+
+\item\label{exer:9.4.36}
+$x^3y'''+x^2y''-2xy'+2y=F(x); \quad \{x,\,x^2,\,1/x\}$
+
+\item\label{exer:9.4.37}
+$x^3y'''-x^2(x+3)y''+2x(x+3)y'-2(x+3)y=F(x); \{x,x^2,xe^x\}$
+
+\item\label{exer:9.4.38}
+$x(1-x)y'''+(x^2-3x+3)y''+xy'-y=F(x); \quad \{x,\,1/x,\,e^x/x\}$
+
+\item\label{exer:9.4.39}
+$y^{(4)}-5y''+4y=F(x); \quad \{e^x,\,e^{-x},\,e^{2x},\,e^{-2x}\}$
+
+\item\label{exer:9.4.40}
+$xy^{(4)}+4y'''=F(x); \quad  \{1,\,x,\,x^2,\,1/x\}$
+
+\item\label{exer:9.4.41}
+$x^4y^{(4)}+6x^3y'''+2x^2y''-4xy'+4y=F(x)$;\quad
+$\{x,x^2,1/x,1/x^2\}$
+
+\item\label{exer:9.4.42}
+$xy^{(4)}-y'''-4xy'+4y'=F(x); \quad \{1,\,x^2,\,e^{2x}, e^{-2x}\}$
+
+\end{exerciselist}
+

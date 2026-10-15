@@ -1,7 +1,10 @@
 SOURCE_DIR := book
 BUILD_DIR := build
 TEXLIVE := $(CURDIR)/texlive.sh
-SOURCES := $(wildcard $(SOURCE_DIR)/*.tex) $(SOURCE_DIR)/wtrench.sty $(wildcard $(SOURCE_DIR)/figures/*)
+export SOURCE_DATE_EPOCH := 0
+SOURCES := $(wildcard $(SOURCE_DIR)/*.tex) $(SOURCE_DIR)/wtrench.sty \
+           $(wildcard $(SOURCE_DIR)/figures/*) \
+           $(wildcard $(SOURCE_DIR)/chapters/*/*.tex)
 
 .PHONY: all book clean
 
@@ -10,7 +13,7 @@ book: $(BUILD_DIR)/TRENCH_DIFFEQ_BV.pdf
 
 $(BUILD_DIR)/%.pdf: $(SOURCE_DIR)/%.tex $(SOURCES) texlive.sh
 	mkdir -p $(BUILD_DIR)
-	cd $(SOURCE_DIR) && $(TEXLIVE) latexmk -pdfps -interaction=nonstopmode -halt-on-error -file-line-error -outdir=../$(BUILD_DIR) $*.tex
+	cd $(SOURCE_DIR) && $(TEXLIVE) env SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH) latexmk -pdfps -interaction=nonstopmode -halt-on-error -file-line-error -outdir=../$(BUILD_DIR) $*.tex
 
 clean:
 	rm -rf $(BUILD_DIR)

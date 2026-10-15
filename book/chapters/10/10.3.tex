@@ -1,0 +1,763 @@
+\newsection{3} {Linear Systems of Differential  Equations}
+{Basic Theory of Homogeneous Linear System}
+\currentpdfbookmark{Section 10.3 Basic Theory of Homogeneous Linear System}{section:10.3}
+\vskip14pt
+
+\renewcommand{\thissection}{\sectiontitle
+{\,\quad BASIC THEORY OF HOMOGENEOUS LINEAR SYSTEMS}}
+\thissection
+
+\noindent
+In this section we consider homogeneous linear systems ${\bf y}'=
+A(t){\bf y}$, where $A=A(t)$ is a continuous $n\times n$ matrix
+function on an interval $(a,b)$. The theory of linear homogeneous
+systems has much in common with the theory of linear homogeneous
+scalar equations, which we considered in
+Sections~2.1, 5.1, and 9.1.
+
+Whenever we refer to solutions of ${\bf y}'=A(t){\bf y}$ we'll mean
+solutions on $(a,b)$. Since ${\bf y}\equiv{\bf 0}$ is obviously a
+solution of ${\bf y}'=A(t){\bf y}$, we call it the {\color{blue}\it trivial\/}
+solution. Any other solution is {\color{blue}\it nontrivial\/}.
+
+If ${\bf y}_1$, ${\bf y}_2$, \dots, ${\bf y}_n$ are vector functions
+defined on an interval $(a,b)$ and $c_1$, $c_2$, \dots, $c_n$ are
+constants, then
+\begin{equation} \label{eq:10.3.1}
+{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots+c_n{\bf y}_n
+\end{equation}
+is a {\color{blue}\it linear combination of\/} ${\bf y}_1$, ${\bf y}_2$, \ldots,${\bf
+y}_n$. It's easy show that if ${\bf
+y}_1$, ${\bf y}_2$, \dots,${\bf y}_n$ are solutions of ${\bf y}'=A(t){\bf
+y}$ on $(a,b)$, then so is any linear combination of
+ ${\bf y}_1$, ${\bf y}_2$, \dots, ${\bf y}_n$ (Exercise~\ref{exer:10.3.1}). We say that
+$\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is a {\color{blue}\it fundamental set of
+solutions of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$ on if every solution of
+${\bf y}'=A(t){\bf y}$ on $(a,b)$ can be written as a linear combination of
+${\bf y}_1$, ${\bf y}_2$, \dots, ${\bf y}_n$, as in \eqref{eq:10.3.1}.
+In this
+case we say that \eqref{eq:10.3.1} is the {\color{blue}\it general solution of ${\bf
+y}'=A(t){\bf y}$ on\/} $(a,b)$.
+
+It can be shown that if $A$ is continuous on $(a,b)$ then ${\bf
+y}'=A(t){\bf y}$ has infinitely many fundamental sets of solutions on
+$(a,b)$ (Exercises~\ref{exer:10.3.15} and \ref{exer:10.3.16}). The next
+definition will help to characterize fundamental sets of solutions of
+${\bf y}'=A(t){\bf y}$.
+
+We say that a set $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ of
+$n$-vector functions is {\color{blue}\it linearly independent\/} on $(a,b)$ if the
+only constants $c_1$, $c_2$, \dots, $c_n$ such that
+\begin{equation} \label{eq:10.3.2}
+ c_1{\bf y}_1(t)+c_2{\bf y}_2(t)+\cdots+c_n{\bf y}_n(t)=0,\quad
+a<t<b,
+\end{equation}
+are $c_1=c_2=\cdots=c_n=0$. If \eqref{eq:10.3.2} holds for some set of
+constants $c_1$, $c_2$, \dots, $c_n$ that are not all zero, then $\{{\bf
+y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is {\color{blue}\it linearly dependent\/} on
+$(a,b)$
+
+The next theorem is analogous to
+Theorems~\ref{thmtype:5.1.3} and
+\ref{thmtype:9.1.2}.
+
+\begin{theorem}\color{blue}\label{thmtype:10.3.1}
+Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$.
+Then a set
+$\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ of $n$ solutions of ${\bf
+y}'=A(t){\bf y}$ on $(a,b)$ is a fundamental set if and only if it's
+linearly independent on $(a,b)$.
+\end{theorem}
+
+\begin{example}\label{example:10.3.1} \rm
+Show that the vector functions
+$$
+{\bf y}_1=\left[\begin{array}{c}e^t\\0\\e^{-t}\end{array}\right],\quad
+{\bf
+y}_2=\left[\begin{array}{c}0\\e^{3t}\\1\end{array}\right],
+\mbox{\quad and \quad}{\bf
+y}_3=\left[\begin{array}{c}e^{2t}\\e^{3t}\\0\end{array}\right]
+$$
+are linearly independent on every interval  $(a,b)$.
+\end{example}
+
+\solution
+Suppose
+$$
+c_1\left[\begin{array}{c}e^t\\0\\e^{-t}\end{array}\right]+
+c_2\left[\begin{array}{c}0\\e^{3t}\\1\end{array}\right]+c_3
+\left[\begin{array}{c}e^{2t}\\e^{3t}\\0\end{array}\right]=
+\left[\begin{array}{c}0\\0\\0\end{array}\right],\quad a<t<b.
+$$
+We must show that $c_1=c_2=c_3=0$. Rewriting this equation in matrix
+form yields
+$$
+\left[\begin{array}{ccc}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0
+\end{array}\right]
+\left[\begin{array}{c}c_1\\c_2\\c_3\end{array}\right]=
+\left[\begin{array}{c}0\\0\\0\end{array}\right],\quad a<t<b.
+$$
+Expanding the determinant of this system in cofactors of the entries
+of the first row yields
+\begin{eqnarray*}
+\left|\begin{array}{ccc}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0
+\end{array}\right|&=&e^t
+\left|\begin{array}{cc}e^{3t}&e^{3t}\\1&0\end{array}\right|-0
+\left|\begin{array}{cc}0&e^{3t}\\e^{-t}&0\end{array}\right|
++e^{2t}\left|\begin{array}{cc}0&e^{3t}\\e^{-t}&1\end{array}\right| \\
+&=&e^t(-e^{3t})+e^{2t}(-e^{2t})=-2e^{4t}.
+\end{eqnarray*}
+Since this determinant is never zero,
+$c_1=c_2=c_3=0$. \bbox
+
+We can use the method in
+ Example~\ref{example:10.3.1}  to test
+$n$ solutions $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ of any
+$n\times n$ system
+${\bf y}'=A(t){\bf y}$  for linear independence on an interval $(a,b)$
+on which $A$ is continuous.  To explain this (and for other purposes
+later), it's useful to write a linear combination of
+${\bf y}_1$, ${\bf y}_2$, \dots, ${\bf y}_n$ in a different way. We first
+write the vector functions in terms of their components as
+$$
+{\bf y}_1=\left[\begin{array}{c} y_{11}\\y_{21}\\ \vdots\\
+y_{n1}\end{array}\right],\quad
+{\bf y}_2=\left[\begin{array}{c} y_{12}\\y_{22}\\ \vdots\\
+y_{n2}\end{array}\right],\dots,\quad
+{\bf y}_n=\left[\begin{array}{c} y_{1n}\\y_{2n}\\ \vdots\\
+y_{nn}\end{array}\right].
+$$
+If
+$$
+{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots+c_n{\bf y}_n
+$$
+then
+\enlargethispage{.3in}
+\begin{eqnarray*}
+{\bf y}&=&
+c_1\left[\begin{array}{c} y_{11}\\y_{21}\\ \vdots\\
+y_{n1}\end{array}\right]+
+c_2\left[\begin{array}{c} y_{12}\\y_{22}\\ \vdots\\
+y_{n2}\end{array}\right]+\cdots
++c_n\left[\begin{array}{c} y_{1n}\\y_{2n}\\ \vdots\\
+y_{nn}\end{array}\right]\\[2\jot]
+&=&\left[\begin{array}{cccc}
+y_{11}&y_{12}&\cdots&y_{1n} \\
+y_{21}&y_{22}&\cdots&y_{2n}\\
+\vdots&\vdots&\ddots&\vdots \\
+y_{n1}&y_{n2}&\cdots&y_{nn} \\
+\end{array}\right]\col cn.
+\end{eqnarray*}
+This shows that
+\begin{equation} \label{eq:10.3.3}
+c_1{\bf y}_1+c_2{\bf y}_2+\cdots+c_n{\bf y}_n=Y{\bf c},
+\end{equation}
+where
+$$
+{\bf c}=\col cn
+$$
+and
+\begin{equation} \label{eq:10.3.4}
+Y=[{\bf y}_1\; {\bf y}_2\; \cdots\; {\bf y}_n]=
+\left[\begin{array}{cccc}
+y_{11}&y_{12}&\cdots&y_{1n} \\
+y_{21}&y_{22}&\cdots&y_{2n}\\
+\vdots&\vdots&\ddots&\vdots \\
+y_{n1}&y_{n2}&\cdots&y_{nn} \\
+\end{array}\right];
+\end{equation}
+ that is, the columns of $Y$
+are the vector functions ${\bf y}_1,{\bf y}_2,\dots,{\bf y}_n$.
+
+For reference below, note that
+\begin{eqnarray*}
+Y'&=&[{\bf y}_1'\; {\bf y}_2'\; \cdots\; {\bf y}_n']\\
+&=&[A{\bf y}_1\; A{\bf y}_2\; \cdots\; A{\bf y}_n]\\
+&=&A[{\bf y}_1\; {\bf y}_2\; \cdots\; {\bf y}_n]=AY;
+\end{eqnarray*}
+that is, $Y$ satisfies the matrix differential equation
+
+$$
+Y'=AY.
+$$
+
+The determinant of $Y$,
+\begin{equation} \label{eq:10.3.5}
+W=\left|\begin{array}{cccc}
+y_{11}&y_{12}&\cdots&y_{1n} \\
+y_{21}&y_{22}&\cdots&y_{2n}\\
+\vdots&\vdots&\ddots&\vdots \\
+y_{n1}&y_{n2}&\cdots&y_{nn} \\
+\end{array}\right|
+\end{equation}
+is called the
+\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Wronski.html}
+{\color{blue}\it Wronskian\/} of $\{{\bf y}_1,{\bf y}_2,\dots,{\bf
+y}_n\}$. It can be shown (Exercises~\ref{exer:10.3.2} and \ref{exer:10.3.3})
+that this definition is analogous to definitions of the Wronskian of
+scalar functions given in Sections~5.1 and 9.1.
+The next theorem is analogous to
+Theorems~\ref{thmtype:5.1.4} and
+\ref{thmtype:9.1.3}. The proof is sketched in
+Exercise~\ref{exer:10.3.4} for
+$n=2$ and in Exercise~\ref{exer:10.3.5} for general~$n$.
+
+\begin{theorem}\color{blue}$[$Abel's Formula$]$ \label{thmtype:10.3.2}
+Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b),$ let
+${\bf y}_1$, ${\bf y}_2$, \dots, ${\bf y}_n$ be solutions of ${\bf
+y}'=A(t){\bf y}$ on $(a,b),$ and let $t_0$ be in $(a,b)$. Then the
+Wronskian of $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is given by
+\begin{equation} \label{eq:10.3.6}
+W(t)=W(t_0)\exp\left(
+\int^t_{t_0}\big[a_{11}(s)+a_{22}(s)+\cdots+a_{nn}(s)]\,
+ds\right), \quad  a < t < b.
+\end{equation}
+Therefore$,$  either $W$ has no zeros in  $(a,b)$ or $W\equiv0$
+on  $(a,b).$
+\end{theorem}
+
+\color{blue}
+\remark{
+The sum of the diagonal entries of a square matrix $A$ is called the
+{\color{blue}\it trace\/} of $A$, denoted by tr$(A)$. Thus, for an $n\times n$
+matrix $A$,
+$$
+\mbox{tr}(A)=a_{11}+a_{22}+\cdots+a_{nn},
+$$
+and  \eqref{eq:10.3.6} can be written as
+$$
+W(t)=W(t_0)\exp\left(
+\int^t_{t_0}\mbox{tr}(A(s))\,
+ds\right), \quad a < t < b.
+$$}
+\color{black}
+
+The next theorem is analogous to
+Theorems~\ref{thmtype:5.1.6} and
+\ref{thmtype:9.1.4}.
+
+\begin{theorem}\color{blue}\label{thmtype:10.3.3}
+Suppose the  $n\times n$ matrix $A=A(t)$ is continuous
+ on $(a,b)$ and let
+${\bf y}_1$, ${\bf y}_2$, \dots$,$${\bf y}_n$
+be  solutions of ${\bf y}'=A(t){\bf y}$ on  $(a,b)$.
+ Then the following statements are equivalent; that is, they are
+either all true or all false:
+\begin{alist}
+\item % (a)
+The general solution of ${\bf y}'=A(t){\bf y}$ on  $(a,b)$ is
+${\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots+c_n{\bf y}_n$,
+where $c_1$, $c_2$, \dots, $c_n$  are arbitrary constants.
+\item % (b)
+  $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is a fundamental
+set of solutions of ${\bf y}'=A(t){\bf y}$  on $(a,b)$.
+\item % (c)
+ $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is linearly
+independent on $(a,b)$.
+\item % (d)
+The Wronskian of  $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is nonzero
+at some point in $(a,b)$.
+\item % (e)
+The Wronskian of  $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is nonzero
+at all points in $(a,b)$.
+\end{alist}
+\end{theorem}
+
+We say that $Y$ in \eqref{eq:10.3.4} is a {\color{blue}\it fundamental matrix\/} for
+${\bf y}'=A(t){\bf y}$ if any (and therefore all) of the statements
+({\bf a})-({\bf e}) of Theorem~\ref{thmtype:10.3.2} are true for the
+columns of $Y$. In this case, \eqref{eq:10.3.3} implies that the general
+solution of ${\bf y}'=A(t){\bf y}$ can be written as ${\bf y}=Y{\bf
+c}$, where ${\bf c}$ is an arbitrary constant $n$-vector.
+
+\begin{example}\label{example:10.3.2} \rm
+The vector functions
+$$
+{\bf y}_1=\twocol {-e^{2t}}{2e^{2t}}\mbox{\quad and \quad}
+{\bf y}_2=\twocol{-e^{-t}}{\phantom{-}e^{-t}}
+$$
+are solutions of the constant coefficient system
+\begin{equation} \label{eq:10.3.7}
+{\bf y}'=\twobytwo{-4}{-3} 65 {\bf y}
+\end{equation}
+on $(-\infty,\infty)$.  (Verify.)
+\begin{alist}
+\item % (a)
+Compute the Wronskian of $\{{\bf y}_1,{\bf y}_2\}$
+directly from the definition \eqref{eq:10.3.5}
+\item % (b)
+Verify Abel's formula \eqref{eq:10.3.6} for the Wronskian of
+$\{{\bf y}_1,{\bf y}_2\}$.
+\item % (c)
+Find the general solution of \eqref{eq:10.3.7}.
+\item % (d)
+ Solve the initial value problem
+\begin{equation} \label{eq:10.3.8}
+{\bf y}'=\twobytwo{-4}{-3}65 {\bf y}, \quad {\bf y}(0)=
+\left[\begin{array}{r} 4 \\-5\end{array}\right].
+\end{equation}
+\end{alist}
+\end{example}
+
+\solutionpart{a}
+From \eqref{eq:10.3.5}
+\begin{equation} \label{eq:10.3.9}
+W(t)=\left|\begin{array}{cc}-e^{2t}&-e^{-t}\\2e^{2t}&\hfill
+e^{-t}\end{array}\right|=
+e^{2t}e^{-t}
+\twobytwo{-1}{-1}21=e^t.
+\end{equation}
+
+\solutionpart{b}  Here
+$$
+A=\twobytwo{-4}{-3} 65,
+$$
+so
+tr$(A)=-4+5=1$. If $t_0$ is an arbitrary real number then
+\eqref{eq:10.3.6}  implies that
+$$
+W(t)=W(t_0)\exp{\left(\int_{t_0}^t1\,ds\right)}=
+\left|\begin{array}{cc}
+-e^{2t_0}&-e^{-t_0}\\2e^{2t_0}&e^{-t_0}\end{array}\right|e^{(t-t_0)}
+=e^{t_0}e^{t-t_0}=e^t,
+$$
+which is consistent with \eqref{eq:10.3.9}.
+
+\solutionpart{c} Since $W(t)\ne0$,
+Theorem~\ref{thmtype:10.3.3} implies that $\{{\bf y}_1,{\bf y}_2\}$ is
+a fundamental set of solutions  of \eqref{eq:10.3.7} and
+$$
+Y=\left[\begin{array}{cc}-e^{2t}&-e^{-t}\\2e^{2t}&\hfill
+e^{-t}\end{array}\right]
+$$
+is a fundamental matrix for \eqref{eq:10.3.7}.
+ Therefore the general
+solution of \eqref{eq:10.3.7} is
+\begin{equation} \label{eq:10.3.10}
+{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2=
+c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol{-e^{-t}}{e^{-t}}
+=\left[\begin{array}{cc}-e^{2t}&-e^{-t}\\2e^{2t}&\hfill
+e^{-t}\end{array}\right]
+\left[\begin{array}{c}c_1\\c_2\end{array}\right].
+\end{equation}
+
+\solutionpart{d}
+Setting $t=0$ in \eqref{eq:10.3.10} and imposing the initial condition
+in \eqref{eq:10.3.8} yields
+$$
+c_1\left[\begin{array}{r}-1 \\2\end{array}\right]+c_2
+\left[\begin{array}{r}-1 \\1\end{array}\right]=
+\left[\begin{array}{r} 4 \\-5\end{array}\right].
+$$
+Thus,
+\begin{eqnarray*}
+-c_1-c_2&=&\phantom{-}4 \\
+2c_1+c_2&=&-5.
+\end{eqnarray*}
+The solution of this system is $c_1=-1$, $c_2=-3$.  Substituting these
+values into  \eqref{eq:10.3.10} yields
+$$
+{\bf y}=-\left[\begin{array}{c}-e^{2t} \\ 2e^{2t}\end{array}
+\right]-3
+\left[\begin{array}{c}-e^{-t} \\ e^{-t}\end{array}\right]=
+\left[
+\begin{array}{c} e^{2t}+3e^{-t} \\-2e^{2t}-3e^{-t}
+\end{array}\right]
+$$
+as the solution of  \eqref{eq:10.3.8}.
+
+\enlargethispage{1in}
+\exercises
+
+\begin{exerciselist}
+\item\label{exer:10.3.1}
+Prove: If ${\bf y}_1$, ${\bf y}_2$, \dots, ${\bf y}_n$ are solutions of
+${\bf y}'=A(t){\bf y}$ on  $(a,b)$, then any linear
+combination of ${\bf y}_1$, ${\bf y}_2$, \dots, ${\bf y}_n$ is also a
+solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
+
+\item\label{exer:10.3.2}
+In Section~5.1 the Wronskian of two
+solutions $y_1$ and $y_2$ of the scalar second order equation
+$$
+P_0(x)y''+P_1(x)y'+P_2(x)y=0
+\eqno{\rm (A)}
+$$
+was defined to be
+$$
+W=\left|\begin{array}{cc} y_1&y_2 \\ y'_1&y'_2\end{array}\right|.
+$$
+\begin{alist}
+\item % (a)
+Rewrite  (A)   as a system of first order equations and show
+that $W$ is
+the Wronskian (as defined in this section) of two solutions of this system.
+\item % (b)
+Apply Eqn.~\eqref{eq:10.3.6} to the system  derived in \part{a}, and
+show that
+$$
+W(x)=W(x_0)\exp\left\{-\int^x_{x_0}{P_1(s)\over P_0(s)}\,
+ds\right\},
+$$
+which is the form of Abel's formula given in
+Theorem~9.1.3.
+\end{alist}
+
+\item\label{exer:10.3.3}
+In Section~9.1 the Wronskian of $n$
+solutions $y_1$, $y_2$, \dots, $y_n$  of the $n-$th order
+equation
+$$
+P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=0
+\eqno{\rm (A)}
+$$
+was defined to be
+$$
+W=\left|\begin{array}{cccc}
+y_1&y_2&\cdots&y_n \\[2\jot]
+y'_1&y'_2&\cdots&y_n'\\[2\jot]
+\vdots&\vdots&\ddots&\vdots\\[2\jot]
+y_1^{(n-1)}&y_2^{(n-1)}&\cdots&y_n^{(n-1)}
+\end{array}\right|.
+$$
+\begin{alist}
+\item % (a)
+Rewrite (A) as a system of first order equations and
+show that $W$ is the Wronskian (as defined in this section) of $n$
+solutions of this system.
+\item % (b)
+Apply Eqn.~\eqref{eq:10.3.6} to the system  derived in \part{a}, and
+show that
+$$
+W(x)=W(x_0)\exp\left\{-\int^x_{x_0}{P_1(s)\over P_0(s)}\,
+ds\right\},
+$$
+which is the form of Abel's formula given in
+Theorem~9.1.3.
+\end{alist}
+
+\item\label{exer:10.3.4}
+ Suppose
+$$
+{\bf y}_1=\twocol{y_{11}}{y_{21}}\mbox{\quad and \quad}
+{\bf y}_2=\twocol{y_{12}}{y_{22}}
+$$
+are solutions of the $2\times 2$ system ${\bf y}'=A{\bf y}$ on
+$(a,b)$, and let
+$$
+ Y=\twobytwo {y_{11}} {y_{12}} {y_{21}} {y_{22}}\mbox{\quad and \quad}
+W=\left|\begin{array}{cc} y_{11}&y_{12}\\y_{21}&y_{22}\end{array}\right|;
+$$ thus, $W$ is the Wronskian of $\{{\bf y}_1,{\bf y}_2\}$.
+\begin{alist}
+\item % (a)
+ Deduce from the definition of  determinant that
+$$
+W'=\left|\begin{array}{cc} {y'_{11}}&{y'_{12}}\\ {y_{21}}&
+{y_{22}}\end{array}\right|
++\left|\begin{array}{cc} {y_{11}}&{y_{12}}\\
+ {y'_{21}}&{y'_{22}}\end{array}\right|.
+$$
+
+\item % (b)
+ Use the equation $Y'=A(t)Y$ and
+the definition of matrix multiplication to show that
+$$
+[y'_{11}\quad y'_{12}]=a_{11} [y_{11}\quad y_{12}]+a_{12} [y_{21}
+\quad y_{22}]
+$$
+and
+$$
+[y'_{21}\quad  y'_{22}]=a_{21} [y_{11}\quad y_{12}]+a_{22}
+[y_{21}\quad y_{22}].
+$$
+\item % (c)
+ Use  properties of determinants to deduce from \part{a} and \part{a}
+ that
+$$
+\left|\begin{array}{cc} {y'_{11}}&{y'_{12}}\\ {y_{21}}&
+{y_{22}}\end{array}\right|=a_{11}W\mbox{\quad and \quad}
+\left|\begin{array}{cc} {y_{11}}&{y_{12}}\\
+ {y'_{21}}&{y'_{22}}\end{array}\right|=a_{22}W.
+$$
+
+\item % (d)
+ Conclude from \part{c} that
+$$
+W'=(a_{11}+a_{22})W,
+$$
+and use this to show that if $a<t_0<b$  then
+$$
+W(t)=W(t_0)\exp\left(\int^t_{t_0} \left[a_{11}(s)+a_{22} (s)
+\right]\, ds\right)\quad a<t<b.
+$$
+\end{alist}
+
+\item\label{exer:10.3.5}
+Suppose  the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$. Let
+$$
+ Y=
+\left[\begin{array}{cccc} y_{11}&y_{12}&\cdots&y_{1n} \\
+y_{21}&y_{22}&\cdots&y_{2n} \\
+\vdots&\vdots&\ddots&\vdots \\
+y_{n1}&y_{n2}&\cdots&y_{nn}
+\end{array}\right],
+$$
+where the columns of $Y$ are solutions of ${\bf y}'=A(t){\bf y}$. Let
+$$
+r_i=[y_{i1}\, y_{i2}\, \dots\, y_{in}]
+$$
+be the $i$th row of $Y$, and let $W$ be the determinant of $Y$.
+
+\begin{alist}
+\item % (a)
+ Deduce from the definition of  determinant that
+$$
+W'=W_1+W_2+\cdots+W_n,
+$$
+where, for $1 \le m \le n$, the $i$th row of $W_m$ is $r_i$ if $i \ne m$,
+and $r'_m$ if $i=m$.
+
+\item % (b)
+ Use the equation $Y'=A Y$
+and the definition of matrix multiplication to show that
+$$
+r'_m=a_{m1}r_1+a_{m2} r_2+\cdots+a_{mn}r_n.
+$$
+
+\item % (c)
+ Use  properties of determinants to deduce
+from \part{b} that
+$$
+\det (W_m)=a_{mm}W.
+$$
+
+\item % (d)
+ Conclude from \part{a} and \part{c} that
+$$
+W'=(a_{11}+a_{22}+\cdots+a_{nn})W,
+$$
+and use this to  show that  if $a<t_0<b$ then
+$$
+W(t)=W(t_0)\exp\left(
+\int^t_{t_0}\big[a_{11}(s)+a_{22}(s)+\cdots+a_{nn}(s)]\,
+ds\right), \quad a < t < b.
+$$
+\end{alist}
+
+\item\label{exer:10.3.6}
+Suppose the $n\times n$ matrix $A$ is continuous on $(a,b)$
+and $t_0$ is a point in  $(a,b)$. Let $Y$  be a fundamental matrix for
+${\bf y}'=A(t){\bf y}$ on  $(a,b)$.
+\begin{alist}
+\item % (a)
+Show that $Y(t_0)$  is invertible.
+\item % (b)
+Show that if ${\bf k}$ is an arbitrary $n$-vector then the solution
+of the initial value problem
+$$
+{\bf y}'=A(t){\bf y},\quad {\bf y}(t_0)={\bf k}
+$$
+is
+$$
+{\bf y}=Y(t)Y^{-1}(t_0){\bf k}.
+$$
+\end{alist}
+
+\item\label{exer:10.3.7}
+Let
+$$
+ A=\twobytwo2442, \quad {\bf y}_1=\left[\begin{array}{c} e^{6t} \\
+e^{6t}
+\end{array}\right], \quad {\bf y}_2=\left[\begin{array}{r}
+e^{-2t} \\
+-e^{-2t}\end{array}\right], \quad {\bf k}=\left[\begin{array}{r}-3
+\\ 9\end{array}\right].
+$$
+\begin{alist}
+\item % (a)
+ Verify that $\{{\bf y}_1,{\bf y}_2\}$
+is a fundamental set of solutions for
+${\bf y}'=A{\bf y}$.
+
+\item % (b)
+Solve  the initial value problem
+$$
+{\bf y}'=A{\bf y},\quad   {\bf y}(0)={\bf k}.
+\eqno{\rm(A)}
+$$
+
+\item % (c)
+Use the result of Exercise~\ref{exer:10.3.6}\part{b} to find a formula for
+the solution of (A) for an arbitrary initial vector ${\bf
+k}$.
+\end{alist}
+
+\item\label{exer:10.3.8}
+ Repeat Exercise~\ref{exer:10.3.7}  with
+$$
+ A=\twobytwo {-2} {-2} {-5}1, \quad {\bf y}_1=\left[\begin{array}{r}
+e^{-4t} \\ e^{-4t}\end{array}\right], \quad {\bf y}_2=\left[
+\begin{array}{r}-2e^{3t}
+\\ 5e^{3t}\end{array}\right], \quad {\bf k}=\left[\begin{array}{r}
+10 \\-4\end{array}\right].
+$$
+
+\item\label{exer:10.3.9}
+Repeat Exercise~\ref{exer:10.3.7}  with
+$$
+ A=\twobytwo{-4} {-10} 3 7, \quad
+{\bf y}_1=\left[\begin{array}{r}-5e^{2t} \\ 3e^{2t}
+\end{array}\right], \quad
+{\bf y}_2=\left[\begin{array}{r} 2e^t \\-e^t
+\end{array}\right], \quad
+{\bf k}=\left[\begin{array}{r}-19 \\ 11\end{array}
+\right
+]. $$
+
+\item\label{exer:10.3.10}
+ Repeat Exercise~\ref{exer:10.3.7} with
+$$
+ A=\twobytwo 2 1 1 2, \quad {\bf y}_1=\left[\begin{array}{r} e^{3t} \\
+e^{3t}
+\end{array}\right], \quad {\bf y}_2=\left[\begin{array}{r}e^t \\
+-e^t\end{array}\right], \quad {\bf k}=\left[\begin{array}{r} 2 \\ 8
+\end{array}\right].$$
+
+\item\label{exer:10.3.11}
+Let
+\begin{eqnarray*}
+ A&=&\threebythree 3 {-1} {-1} {-2} 3
+24 {-1} {-2}, \\
+{\bf y}_1&=&\left[\begin{array}{c} e^{2t} \\ 0 \\ e^{2t}\end{array}
+\right], \quad
+{\bf y}_2=\left[\begin{array}{c} e^{3t} \\-e^{3t} \\
+e^{3t}\end{array}\right], \quad
+{\bf y}_3=\left[\begin{array}{c} e^{-t} \\-3e^{-t} \\
+7e^{-t}
+\end{array}\right], \quad {\bf k}=\left[\begin{array}{r}
+2 \\-7 \\ 20\end{array}\right].
+\end{eqnarray*}
+
+\begin{alist}
+\item % (a)
+ Verify that $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
+is a fundamental set of solutions for
+${\bf y}'=A{\bf y}$.
+
+\item % (b)
+ Solve the initial value problem
+$$
+{\bf y}'=A{\bf y}, \quad   {\bf y}(0)={\bf k}.
+\eqno{\rm(A)}
+$$
+
+\item % (c)
+Use the result of Exercise~\ref{exer:10.3.6}\part{b} to find a formula
+for
+ the solution of  (A)
+for an arbitrary initial vector ${\bf k}$.
+\end{alist}
+
+\item\label{exer:10.3.12}
+ Repeat Exercise~\ref{exer:10.3.11} with
+\begin{eqnarray*}
+ A&=&\threebythree 0 2 2 2 0 2 2 2 0, \\
+{\bf y}_1&=&\left[\begin{array}{c}-e^{-2t} \\ 0 \\ e^{-2t}
+\end{array}\right], \quad
+{\bf y}_2=\left[\begin{array}{c}-e^{-2t} \\ e^{-2t} \\
+0\end{array}\right], \quad
+{\bf y}_3=\left[\begin{array}{c} e^{4t} \\ e^{4t} \\ e^{4t}\end{array}
+\right], \quad
+{\bf k}=\left[\begin{array}{r} 0 \\-9 \\ 12\end{array}
+\right].
+\end{eqnarray*}
+
+\item\label{exer:10.3.13}
+ Repeat Exercise~\ref{exer:10.3.11}  with
+\begin{eqnarray*}
+ A&=&\threebythree {-1} 2 3 0 1 6
+0 0 {-2}, \\
+{\bf y}_1&=&\left[\begin{array}{c} e^t \\ e^t \\ 0\end{array}\right],
+\quad
+{\bf y}_2=\left[\begin{array}{c} e^{-t} \\ 0 \\ 0\end{array}\right],
+\quad {\bf y}_3=\left[\begin{array}{c} e^{-2t} \\-2e^{-2t}
+\\ e^{-2t}\end{array}\right], \quad
+{\bf k}=\left[\begin{array}{r} 5 \\ 5 \\-1
+\end{array}\right].
+\end{eqnarray*}
+
+\item\label{exer:10.3.14}
+Suppose $Y$ and $Z$ are fundamental matrices for the $n\times n$
+system ${\bf y}'=A(t){\bf y}$. Then some of the four matrices
+$YZ^{-1}$, $Y^{-1}Z$, $Z^{-1}Y$, $Z Y^{-1}$ are necessarily
+constant. Identify them and prove that they are constant.
+
+\item\label{exer:10.3.15}
+Suppose the columns of an $n\times n$ matrix $Y$ are solutions of
+the $n\times n$ system ${\bf y}'=A{\bf y}$ and $C$ is an $n \times n$
+constant matrix.
+
+\begin{alist}
+\item % (a)
+Show that the matrix $Z=YC$ satisfies the differential equation
+$Z'=AZ$.
+
+\item % (b)
+Show that $Z$ is a fundamental matrix for ${\bf y}'=A(t){\bf y}$ if
+and only if $C$ is invertible and $Y$ is a fundamental matrix for
+${\bf y}'=A(t){\bf y}$.
+\end{alist}
+
+\item\label{exer:10.3.16}
+ Suppose the $n\times n$  matrix $A=A(t)$ is
+continuous on $(a,b)$ and $t_0$ is in $(a,b)$.
+ For $i=1$, $2$, \dots, $n$, let ${\bf y}_i$ be the solution of the initial
+value
+problem ${\bf y}_i'=A(t){\bf y}_i,\; {\bf y}_i(t_0)={\bf e}_i$, where
+$$
+{\bf e}_1=\left[\begin{array}{c} 1\\0\\ \vdots\\0\end{array}\right],\quad
+ {\bf e}_2=\left[\begin{array}{c} 0\\1\\
+\vdots\\0\end{array}\right],\quad\cdots\quad
+ {\bf e}_n=\left[\begin{array}{c} 0\\0\\ \vdots\\1\end{array}\right];
+$$
+that is, the $j$th component of ${\bf e}_i$ is $1$ if $j=i$, or $0$ if
+$j\ne i$.
+
+\begin{alist}
+\item % (a)
+ Show that$\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ is a fundamental set of
+solutions of ${\bf y}'=A(t){\bf y}$ on  $(a,b)$.
+
+\item % (b)
+ Conclude from \part{a} and Exercise~\ref{exer:10.3.15}  that ${\bf y}'=
+A(t){\bf y}$ has infinitely many fundamental sets of solutions on
+$(a,b)$.
+\end{alist}
+
+\item\label{exer:10.3.17}
+ Show that $Y$ is a
+fundamental matrix for the system ${\bf y}'=A(t){\bf y}$ if and only
+if $Y^{-1}$ is a fundamental matrix for ${\bf y}'=-
+A^T(t){\bf y}$, where $A^T$ denotes the transpose of $A$.
+\hint{See Exercise \ref{exer:10.2.11}.}
+
+\enlargethispage{1in}
+\item\label{exer:10.3.18}
+Let $Z$ be the fundamental matrix for the constant coefficient system
+ ${\bf y}'=A{\bf y}$ such that $Z(0)=I$.
+\begin{alist}
+\item % (a)
+Show that $Z(t)Z(s)=Z(t+s)$ for all $s$ and $t$. \hint{For
+fixed
+$s$ let $\Gamma_1(t)=Z(t)Z(s)$ and $\Gamma_2(t)=Z(t+s)$. Show that
+$\Gamma_1$ and $\Gamma_2$ are both solutions of the matrix initial value
+problem $\Gamma'=A\Gamma,\quad\Gamma(0)=Z(s)$. Then conclude from
+Theorem~\ref{thmtype:10.2.1} that $\Gamma_1=\Gamma_2$.}
+\item % (b)
+Show that $(Z(t))^{-1}=Z(-t)$.
+\item % (c)
+The matrix $Z$ defined above is sometimes denoted by $e^{tA}$. Discuss
+ the motivation for this notation.
+\end{alist}
+
+\end{exerciselist}

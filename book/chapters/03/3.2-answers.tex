@@ -1,0 +1,574 @@
+\medskip{\bf Section~3.2 Answers,
+pp.~\pageref{exer:3.2.1}--\pageref{exer:3.1.23}}\medskip
+
+\answer{3.2.1}
+$y_1=1.542812500,\; y_2=2.421622101,\; y_3=4.208020541$
+
+\answer{3.2.2}
+$y_1=1.220207973,\; y_2=1.489578775\; y_3=1.819337186$
+
+\answer{3.2.3}
+$y_1=1.890687500,\; y_2=1.763784003,\; y_3=1.622698378$
+
+\answer{3.2.4}
+$y_1=2.961317914$\; $y_2=2.920132727$\; $y_3=2.876213748$.
+
+\answer{3.2.5}
+$y_1=2.478055238,\; y_2=1.844042564,\; y_3=1.313882333$
+
+\bigskip
+\answer{3.2.6}
+{\small
+\begin{tabular}{|c|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+1.0 & 56.134480009 & 55.003390448 & 54.734674836 &  54.647937102 \\
+\hline
+\end{tabular}}
+
+\bigskip
+\answer{3.2.7}
+{\small
+\begin{tabular}{|c|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+2.0 & 1.353501839 & 1.353288493 & 1.353219485 & 1.353193719\\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.8}
+{\small
+\begin{tabular}{|c|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{$h=0.0125$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+1.50 &10.141969585  & 10.396770409 & 10.472502111 & 10.500000000 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.9}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}\\ \hline
+3.0 & 1.455674816 & 1.455935127 &1.456001289  &-0.00818  & -0.00207 & -0.000518  \\
+\hline
+&\multicolumn{3}{c|}{Approximate Solutions}&
+\multicolumn{3}{c|}{Residuals}\\\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.10}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}\\ \hline
+2.0 & 0.492862999 & 0.492709931 & 0.492674855 &0.00335 & 0.000777 &  0.000187  \\
+\hline
+&\multicolumn{3}{c|}{Approximate Solutions}&
+\multicolumn{3}{c|}{Residuals}\\\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.11}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.0 & 0.660268159 & 0.660028505 & 0.659974464 & 0.659957689 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.12}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+2.0 & -0.749751364 & -0.750637632 & -0.750845571 & -0.750912371 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.13}
+Applying variation of parameters to the given initial value problem
+
+\begin{quote} $y=ue^{-3x}$, where (A) $u'=1-2x,\quad u(0)=2$. Since
+$u'''=0$,
+the improved Euler method yields the exact solution of (A). Therefore
+the improved Euler semilinear method produces the exact solution of
+the given problem.\end{quote}
+
+\bigskip
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+1.0 & 0.105660401 & 0.100924399 & 0.099893685 & 0.099574137 \\
+\hline
+\end{tabular}}
+
+\bigskip
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+1.0 & 0.099574137 & 0.099574137 &0.099574137  &0.099574137  \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.14}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+3.0 & 15.107600968 & 15.234856000 & 15.269755072 & 15.282004826 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+3.0 & 15.285231726 & 15.282812424 & 15.282206780 & 15.282004826 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.15}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.2$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+2.0 & 0.924335375 & 0.907866081 & 0.905058201 & 0.904276722 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.2$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+2.0 & 0.969670789 & 0.920861858 & 0.908438261 & 0.904276722 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.16}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.2$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+3.0 & 0.967473721 & 0.967510790 & 0.967520062 & 0.967523153 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler semilinear method}\\
+\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.2$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+3.0 & 0.967473721 & 0.967510790 & 0.967520062 & 0.967523153 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.17}
+\small{
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.0500$}&
+\multicolumn{1}{|c|}{$h=0.0250$}&
+\multicolumn{1}{|c|}{$h=0.0125$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.50 &0.349176060  & 0.345171664 & 0.344131282 & 0.343780513 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler  semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.0500$}&
+\multicolumn{1}{|c|}{$h=0.0250$}&
+\multicolumn{1}{|c|}{$h=0.0125$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.50 & 0.349350206 & 0.345216894 & 0.344142832 & 0.343780513 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.18}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.2$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+2.0 & 0.732679223 & 0.732721613 & 0.732667905 & 0.732638628 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{
+Improved Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.2$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+2.0 & 0.732166678 & 0.732521078 & 0.732609267 & 0.732638628 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.19}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.0500$}&
+\multicolumn{1}{|c|}{$h=0.0250$}&
+\multicolumn{1}{|c|}{$h=0.0125$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.50 & 2.247880315 & 2.244975181 & 2.244260143 & 2.244023982 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{
+Improved Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.0500$}&
+\multicolumn{1}{|c|}{$h=0.0250$}&
+\multicolumn{1}{|c|}{$h=0.0125$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.50 & 2.248603585 & 2.245169707 & 2.244310465 & 2.244023982 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.20}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.0 & 0.059071894 & 0.056999028 & 0.056553023 & 0.056415515 \\
+\hline
+\end{tabular}}
+\medskip
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.0 & 0.056295914 & 0.056385765 & 0.056408124 & 0.056415515 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.21}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.0 & 50.534556346 & 53.483947013 & 54.391544440 & 54.729594761 \\
+\hline
+\end{tabular}}
+\medskip
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{
+ Improved Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.0 & 54.709041434 & 54.724083572 & 54.728191366 & 54.729594761 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.22}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved Euler method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+3.0 & 1.361395309 & 1.361379259 & 1.361382239 & 1.361383810 \\
+\hline
+\end{tabular}}
+\medskip
+
+\bigskip
+
+\hspace{.75in}
+{\small
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+\multicolumn{5}{|c|}{Improved
+ Euler semilinear method}\\\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+3.0 & 1.375699933 & 1.364730937 & 1.362193997 & 1.361383810 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.23}
+{\small
+\begin{tabular}{|c|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+2.0 & 1.349489056 & 1.352345900 & 1.352990822 & 1.353193719\\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.24}
+{\small
+\begin{tabular}{|c|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+2.0 & 1.350890736 & 1.352667599 & 1.353067951 & 1.353193719\\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.25}
+{\small
+\begin{tabular}{|c|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{$h=0.0125$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+1.50 & 10.133021311 & 10.391655098 & 10.470731411 & 10.500000000 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.26}
+{\small
+\begin{tabular}{|c|r|r|r|r|}\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{$h=0.0125$}&
+\multicolumn{1}{|c|}{Exact}\\ \hline
+1.50 & 10.136329642 & 10.393419681 & 10.470731411 & 10.500000000 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.27}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.0 & 0.660846835 & 0.660189749 & 0.660016904 & 0.659957689 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.28}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+1.0 & 0.660658411 & 0.660136630 & 0.660002840 & 0.659957689 \\
+\hline
+\end{tabular}}
+
+\bigskip
+
+\answer{3.2.29}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+2.0 &-0.750626284 &-0.750844513  &-0.750895864  & -0.751331499 \\
+\hline
+\end{tabular}}
+
+\answer{3.2.30}
+{\small
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{$x$}&
+\multicolumn{1}{|c|}{$h=0.1$}&
+\multicolumn{1}{|c|}{$h=0.05$}&
+\multicolumn{1}{|c|}{$h=0.025$}&
+\multicolumn{1}{|c|}{``Exact"}\\ \hline
+2.0 &-0.750335016 &-0.750775571  & -0.750879100 & -0.751331499 \\
+\hline
+\end{tabular}}
+

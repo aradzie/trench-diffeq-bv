@@ -1,3 +1,5 @@
+\RequirePackage{enumitem}
+
 \textwidth 5in
 \textheight 45pc
 \evensidemargin 0in
@@ -47,10 +49,7 @@
 \newcommand{\threetab} {\begin{tabular}[t]{@{}p{112pt}@{}p{122pt}@{}p{112pt}}}
 \newcommand{\solution}{\vskip10pt\noindent{\sc\bf Solution }\  }
 
-\newcounter{place}
-\newcommand{\exercisetext}[1]{\setcounter{place}
-{\value{exercise}}\end{exerciselist}{\it #1}
-\begin{exerciselist}\setcounter{exercise}{\value{place}}}
+\newcommand{\exercisetext}[1]{\end{exerciselist}{\itshape #1}\begin{exerciselist}[resume]}
 
 \newcommand{\arraytext}[1]{\noalign{\hspace*{-1.75em}
 \mbox{#1}\vspace*{-9\jot}}\nonumber\\}
@@ -63,34 +62,16 @@
   \subsection*{Exercises}%
   \noindent}
 
-\newcounter{exercise}
-\newenvironment{exerciselist}{\begin{list}{\bf
-\arabic{exercise}.}
-{\topsep 10pt\partopsep 0pt\labelwidth 16pt
-\labelsep 12pt\leftmargin 28pt
-\itemsep 0pt\usecounter{exercise}}}{\end{list}}
+\newlist{exerciselist}{enumerate}{1}
+\setlist[exerciselist]{label=\textbf{\arabic*.},ref=\arabic*}
+\newlist{alist}{enumerate}{1}
+\setlist[alist]{label=\textbf{(\alph*)},ref=\alph*}
+\newlist{rmlist}{enumerate}{1}
+\setlist[rmlist]{label=\textbf{(\roman*)},ref=\roman*}
+\newlist{numberlist}{enumerate}{1}
+\setlist[numberlist]{label=\textbf{\arabic*.},ref=\arabic*}
 
-\newcounter{lcal}
-\newenvironment{alist}{\begin{list}{\bf (\alph{lcal})}
-{\topsep 0pt\partopsep 0pt\labelwidth 14pt
-\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-\usecounter{lcal}}}{\end{list}}
-
-\newenvironment{Alist}{\begin{list}{\bf (\Alph{lcal})}
-{\topsep 0pt\partopsep 0pt\labelwidth 14pt
-\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-\usecounter{lcal}}}{\end{list}}
-
-\newcounter{rm}
-\newenvironment{rmlist}{\begin{list}{\bf (\roman{rm})}
-{\topsep 0pt\partopsep 0pt\labelwidth 24pt
-\labelsep 8pt\leftmargin 32pt\itemsep 0pt
-\usecounter{rm}}}{\end{list}}
-
-\newenvironment{definition}[1]{
-\begin{trivlist}\item[]{\sc\bf Definition}\space
-\refstepcounter{theorem}{\bf\thetheorem}\
- #1}{\end{trivlist}}
+\newtheorem{definition}[theorem]{\sc\bf Definition}
 
 \newenvironment{tindex}
                {\if@twocolumn

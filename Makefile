@@ -1,7 +1,7 @@
 SOURCE_DIR := book
 BUILD_DIR := build
 TEXLIVE := $(CURDIR)/texlive.sh
-SOURCES := $(wildcard $(SOURCE_DIR)/*.tex) $(SOURCE_DIR)/wtrench.sty $(wildcard $(SOURCE_DIR)/EPS/*)
+SOURCES := $(wildcard $(SOURCE_DIR)/*.tex) $(SOURCE_DIR)/wtrench.sty $(wildcard $(SOURCE_DIR)/figures/*)
 
 .PHONY: all book clean
 

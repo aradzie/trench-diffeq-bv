@@ -1,41 +1,62 @@
 \documentclass[dvips]{book}
-\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
+
+% Fonts and encoding
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \renewcommand{\rmdefault}{ptm}
 \usepackage[scaled=0.92]{helvet}
-\usepackage[psamsfonts]{amsfonts}
-\usepackage{amsmath, amsbsy, wtrench}
-\usepackage[dvips,
- bookmarks = true,
- colorlinks=true,
-plainpages = false,
-  bookmarksdepth = 3,
-  citecolor = blue,
-urlcolor = blue,
-filecolor = blue,
- pageanchor = true]
-{hyperref}
 
-\setcounter{secnumdepth}{2}
-\setcounter{tocdepth}{2}
-\usepackage[justification=centering, labelsep=space, skip=-10 pt]{caption}
+% Colors
+\usepackage[dvipsnames, svgnames, table]{xcolor}
+
+% Math
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+% Page layout
+\textwidth 5in
+\textheight 45pc
+\evensidemargin 0in
+\oddsidemargin 0in
+\parskip=0pt
+\raggedbottom
+\setlength{\parindent}{10pt}
+\pagestyle{headings}
+
+% Lists, floats, figures, captions, page geometry
+\usepackage{enumitem}
 \usepackage[a4paper]{geometry}
 \usepackage{float}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% Links and bookmarks
+\usepackage[dvips,
+  bookmarks=true,
+  bookmarksdepth=3,
+  colorlinks=true,
+  citecolor=blue,
+  urlcolor=blue,
+  filecolor=blue,
+  plainpages=false,
+  pageanchor=true]{hyperref}
+
+\usepackage[justification=centering, labelsep=space, skip=-10pt]{caption}
 \usepackage{upref}
 
+% Section numbering and table of contents depth
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+% Book macros and environments
+\input{macros}
+
+% Number theorems, examples, equations, figures and tables within sections
 \numberwithin{example}{section}
 \numberwithin{equation}{section}
 \numberwithin{theorem}{section}
 \numberwithin{table}{section}
 \numberwithin{figure}{section}
 
-\input{macros}
 \setlength{\oddsidemargin}{15.5pt}
 \setlength{\evensidemargin}{15.5pt}
-
-\usepackage{graphicx}
-\graphicspath{%
-    {converted_graphics/}% inserted by PCTeX
-    {figures/}% inserted by PCTeX
-}

@@ -2,7 +2,7 @@ SOURCE_DIR := book
 BUILD_DIR := build
 TEXLIVE := $(CURDIR)/texlive.sh
 export SOURCE_DATE_EPOCH := 0
-SOURCES := $(wildcard $(SOURCE_DIR)/*.tex) $(SOURCE_DIR)/wtrench.sty \
+SOURCES := $(wildcard $(SOURCE_DIR)/*.tex) \
            $(wildcard $(SOURCE_DIR)/figures/*) \
            $(wildcard $(SOURCE_DIR)/chapters/*/*.tex)
 

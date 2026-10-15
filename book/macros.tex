@@ -1,15 +1,15 @@
 % ---------------------------------------------------------------------------
 % Theorem-like environments
 % ---------------------------------------------------------------------------
-\newtheorem{theorem}{\sc\bf Theorem}
-\newtheorem{example}{\sc\bf Example}
-\newtheorem{definition}[theorem]{\sc\bf Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{example}{Example}
+\newtheorem{definition}[theorem]{Definition}
 
-\newcommand{\proof}{\noindent{\sc\bf Proof}\quad }
+\newcommand{\proof}{\noindent\textbf{Proof}\quad }
 \newcommand{\bbox}{\phantom{1}\hfill{\rule{6pt}{6pt}}}
-\newcommand{\remark}[1]{\noindent{\sc Remark}:\ #1}
-\newcommand{\hint}[1]{{\sc Hint}:\ {\it #1}}
-\newcommand{\note}[1]{({\sc Note}:\ #1)}
+\newcommand{\remark}[1]{\noindent\textbf{Remark}:\ #1}
+\newcommand{\hint}[1]{\textbf{Hint}:\ \textit{#1}}
+\newcommand{\note}[1]{(\textbf{Note}:\ #1)}
 
 % ---------------------------------------------------------------------------
 % Headings
@@ -52,9 +52,8 @@ TECHNOLOGY}\par}
 % ---------------------------------------------------------------------------
 \renewcommand{\part}[1]{{\bf (#1)}}
 \newcommand{\answer}[1]{\;{\bf $\mathbf{#1}$ (p.~\pageref{exer:#1})}\;}
-\newcommand{\solution}{\vskip10pt\noindent{\sc\bf Solution }\  }
-\newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc
-Solution({\bf #1})\ }}
+\newcommand{\solution}{\vskip10pt\noindent\textbf{Solution}\ }
+\newcommand{\solutionpart}[1]{\vskip10pt\noindent\textbf{Solution (#1)}\ }
 
 % Markers for exercises that call for computation and graphics (C, C/G)
 % or for extensive use of technology (L).

@@ -39,8 +39,10 @@
 \newcommand{\bbox}{\phantom{1}\hfill{\rule{6pt}{6pt}}}
 \newcommand{\helpbox}{\vspace*{-20pt}}
 \newcommand{\topfig}[1]{\newpage\mbox{}\newline\vspace*{#1pc}}
-\newcommand{\boxit}[1]{\medskip\noindent\textcolor{red}{#1}
-\vskip-6pt\hskip-\parindent}
+\newcommand{\boxit}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{subsubsection}{#1}%
+  \subsection*{#1}}
 \newcommand{\twotab} {\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}}
 \newcommand{\threetab} {\begin{tabular}[t]{@{}p{112pt}@{}p{122pt}@{}p{112pt}}}
 \newcommand{\solution}{\vskip10pt\noindent{\sc\bf Solution }\  }

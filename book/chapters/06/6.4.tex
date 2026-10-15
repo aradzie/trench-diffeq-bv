@@ -48,11 +48,11 @@ of ${\bf F}$ is from the point to the origin if $f(r)<0$, or from the
 origin to the point if $f(r)>0$. We'll show that the orbit of an
 object with mass $m$ moving under this force is given by
 $$
-r(\theta)={1\over u(\theta)},
+r(\theta)=\frac{1}{u(\theta)},
 $$
 where $u$  is solution of the differential equation
 \begin{equation} \label{eq:6.4.1}
- {d^2u\over d\theta^2}+u=-{1\over mh^2u^2}f(1/u),
+ \frac{d^{2}u}{d\theta^{2}}+u=-\frac{1}{mh^{2}u^{2}}f(1/u),
 \end{equation}
 and $h$ is a constant defined below.
 
@@ -66,30 +66,30 @@ f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
 \end{equation}
 To deal with this equation we introduce  the unit vectors
 $$
-{\bf e}_1=\cos\theta\,{\bf i}+\sin\theta\,{\bf j}
+{\bf e}_{1}=\cos\theta\,{\bf i}+\sin\theta\,{\bf j}
 \mbox{\quad and \quad}
-{\bf e}_2=-\sin\theta\,{\bf i}+\cos\theta\,{\bf j}.
+{\bf e}_{2}=-\sin\theta\,{\bf i}+\cos\theta\,{\bf j}.
 $$
-Note that   ${\bf e}_1$ points in the
-direction of increasing $r$ and ${\bf e}_2$ points in the
+Note that   ${\bf e}_{1}$ points in the
+direction of increasing $r$ and ${\bf e}_{2}$ points in the
 direction of increasing $\theta$ (Figure~\ref{figure:6.4.2});
 moreover,
 \begin{equation} \label{eq:6.4.3}
-{d{\bf e}_1\over d\theta}={\bf e}_2,\quad
-{d{\bf e}_2\over d\theta}=-{\bf e}_1,
+\frac{d{\bf e}_{1}}{d\theta}={\bf e}_{2},\quad
+\frac{d{\bf e}_{2}}{d\theta}=-{\bf e}_{1},
 \end{equation}
 and
 $$
-{\bf e}_1\cdot{\bf
-e}_2=\cos\theta(-\sin\theta)+\sin\theta\cos\theta=0,
+{\bf e}_{1}\cdot{\bf
+e}_{2}=\cos\theta(-\sin\theta)+\sin\theta\cos\theta=0,
 $$
-so ${\bf e}_1$ and ${\bf e}_2$ are  perpendicular.
+so ${\bf e}_{1}$ and ${\bf e}_{2}$ are  perpendicular.
 Recalling that the single prime $(')$ stands for differentiation with
 respect to
 $t$, we see from \eqref{eq:6.4.3}  and the chain rule that
 \begin{equation} \label{eq:6.4.4}
-{\bf e}_1'=\theta'{\bf e}_2\mbox{\quad and \quad}
-{\bf e}_2'=-\theta'{\bf e}_1.
+{\bf e}_{1}'=\theta'{\bf e}_{2}\mbox{\quad and \quad}
+{\bf e}_{2}'=-\theta'{\bf e}_{1}.
 \end{equation}
 
 \begin{figure}[tbp]
@@ -101,32 +101,32 @@ $t$, we see from \eqref{eq:6.4.3}  and the chain rule that
 
 Now we can write \eqref{eq:6.4.2} as
 \begin{equation} \label{eq:6.4.5}
-m(r{\bf e}_1)''=f(r){\bf e}_1.
+m(r{\bf e}_{1})''=f(r){\bf e}_{1}.
 \end{equation}
 But
 $$
-(r{\bf e}_1)'=r'{\bf e}_1+r{\bf e}_1'=r'{\bf e}_1+r\theta'{\bf
-e}_2
+(r{\bf e}_{1})'=r'{\bf e}_{1}+r{\bf e}_{1}'=r'{\bf e}_{1}+r\theta'{\bf
+e}_{2}
 $$
 (from \eqref{eq:6.4.4}), and
 \begin{eqnarray*}
-(r{\bf e}_1)''&=&(r'{\bf e}_1+r\theta'{\bf e}_2)'\\
-&=&r''{\bf e}_1+r'{\bf e}_1'+(r\theta''+r'\theta'){\bf e}_2
-+r\theta'{\bf e}_2'\\
-&=&r''{\bf e}_1+r'\theta'{\bf e}_2+(r\theta''+r'\theta'){\bf
-e}_2 -r(\theta')^2{\bf e}_1\mbox{\quad (from \eqref{eq:6.4.4})}\\
-&=&\left(r''-r(\theta')^2\right){\bf e}_1+(r\theta''+2r'\theta'){\bf
-e}_2.
+(r{\bf e}_{1})''&=&(r'{\bf e}_{1}+r\theta'{\bf e}_{2})'\\
+&=&r''{\bf e}_{1}+r'{\bf e}_{1}'+(r\theta''+r'\theta'){\bf e}_{2}
++r\theta'{\bf e}_{2}'\\
+&=&r''{\bf e}_{1}+r'\theta'{\bf e}_{2}+(r\theta''+r'\theta'){\bf
+e}_{2}-r(\theta')^{2}{\bf e}_{1}\mbox{\quad (from \eqref{eq:6.4.4})}\\
+&=&\left(r''-r(\theta')^{2}\right){\bf e}_{1}+(r\theta''+2r'\theta'){\bf
+e}_{2}.
 \end{eqnarray*}
 Substituting this into \eqref{eq:6.4.5} yields
 $$
-m\left(r''-r(\theta')^2\right){\bf e}_1+m(r\theta''+2r'\theta'){\bf
-e}_2=f(r){\bf e}_1.
+m\left(r''-r(\theta')^{2}\right){\bf e}_{1}+m(r\theta''+2r'\theta'){\bf
+e}_{2}=f(r){\bf e}_{1}.
 $$
-By equating the coefficients of ${\bf e}_1$ and ${\bf e}_2$ on the
+By equating the coefficients of ${\bf e}_{1}$ and ${\bf e}_{2}$ on the
 two sides of this equation we see that
 \begin{equation} \label{eq:6.4.6}
-m\left(r''-r(\theta')^2\right)=f(r)
+m\left(r''-r(\theta')^{2}\right)=f(r)
 \end{equation}
 and
 $$
@@ -134,56 +134,56 @@ r\theta''+2r'\theta'=0.
 $$
 Multiplying the last equation by $r$ yields
 $$
-r^2\theta''+2rr'\theta'=(r^2\theta')'=0,
+r^{2}\theta''+2rr'\theta'=(r^{2}\theta')'=0,
 $$
 so
 \begin{equation} \label{eq:6.4.7}
-r^2\theta'=h,
+r^{2}\theta'=h,
 \end{equation}
 where $h$ is a constant that we can write in terms of the initial
 conditions as
 $$
-h=r^2(0)\theta'(0).
+h=r^{2}(0)\theta'(0).
 $$
 Since the initial position and velocity vectors are
 $$
- r(0){\bf e}_1(0)\mbox{\quad and \quad}
-r'(0){\bf e}_1(0)+r(0)\theta'(0){\bf e}_2(0),
+ r(0){\bf e}_{1}(0)\mbox{\quad and \quad}
+r'(0){\bf e}_{1}(0)+r(0)\theta'(0){\bf e}_{2}(0),
 $$
 our assumption that these two vectors are not parallel implies that
 $\theta'(0)\ne0$, so $h\ne0$.
 
 Now let $u=1/r$.
-Then  $u^2=\theta'/h$ (from \eqref{eq:6.4.7}) and
+Then  $u^{2}=\theta'/h$ (from \eqref{eq:6.4.7}) and
 $$
-r'=-\dst{u'\over u^2}=-h\left(u'\over \theta'\right),
+r'=-\dst\frac{u'}{u^{2}}=-h\left(\frac{u'}{\theta'}\right),
 $$
 which implies that
 \begin{equation} \label{eq:6.4.8}
-r'=-h{du\over d\theta},
+r'=-h\frac{du}{d\theta},
 \end{equation}
 since
 $$
-{u'\over\theta'}={du\over dt}\left/{d\theta\over dt}\right.=
-{du\over d\theta}.
+\frac{u'}{\theta'}=\frac{du}{dt}\left/\frac{d\theta}{dt}\right.=
+\frac{du}{d\theta}.
 $$
 Differentiating \eqref{eq:6.4.8} with respect to $t$ yields
 $$
-r''=-h{d\over dt}\left({du\over d\theta}\right)
-=-h{d^2u\over d\theta^2}\theta',
+r''=-h\frac{d}{dt}\left(\frac{du}{d\theta}\right)
+=-h\frac{d^{2}u}{d\theta^{2}}\theta',
 $$
 which implies that
 $$
-r''=-h^2u^2{d^2u\over d\theta^2}
-\mbox{\quad since\quad} \theta'=hu^2.
+r''=-h^{2}u^{2}\frac{d^{2}u}{d\theta^{2}}
+\mbox{\quad since\quad}\theta'=hu^{2}.
 $$
 Substituting from these equalities into
 \eqref{eq:6.4.6} and recalling that $r=1/u$ yields
 $$
--m\left(h^2u^2{d^2u\over d\theta^2}+{1\over u}h^2u^4\right)
+-m\left(h^{2}u^{2}\frac{d^{2}u}{d\theta^{2}}+\frac{1}{u}h^{2}u^{4}\right)
 =f(1/u),
 $$
-and dividing through by $-mh^2u^2$ yields \eqref{eq:6.4.1}.
+and dividing through by $-mh^{2}u^{2}$ yields \eqref{eq:6.4.1}.
 
 Eqn.~\eqref{eq:6.4.7} has the following geometrical interpretation, which
 is known as
@@ -194,16 +194,16 @@ is known as
  The position vector
  of an object moving under a central force
 sweeps out equal areas in equal times; more precisely, if
-$\theta(t_1)\le\theta(t_2)$ then the (signed) area of the sector
+$\theta(t_{1})\le\theta(t_{2})$ then the (signed) area of the sector
 $$
-\{(x,y)=(r\cos\theta,r\sin\theta)\;  :\;  0\le r\le r(\theta),\;
-\theta(t_1)\le\theta(t_2)\}
+\{(x,y)=(r\cos\theta,r\sin\theta)\;:\;0\le r\le r(\theta),\;
+\theta(t_{1})\le\theta(t_{2})\}
 $$
 {\rm (Figure~\ref{figure:6.4.3})} is given by
 $$
-A={h(t_2-t_1)\over2},
+A=\frac{h(t_{2}-t_{1})}{2},
 $$
-where $h=r^2\theta'$, which we have shown to be constant.
+where $h=r^{2}\theta'$, which we have shown to be constant.
 \end{theorem}
 
 \begin{figure}[tbp]
@@ -216,17 +216,17 @@ where $h=r^2\theta'$, which we have shown to be constant.
 \proof  Recall from calculus that the area of the shaded sector
 in Figure~\ref{figure:6.4.3} is
 $$
-A={1\over2}\int_{\theta(t_1)}^{\theta(t_2)} r^2(\theta)\,d\theta,
+A=\frac{1}{2}\int_{\theta(t_{1})}^{\theta(t_{2})}r^{2}(\theta)\,d\theta,
 $$
 where $r=r(\theta)$ is the polar representation of the orbit.
 Making the change of variable $\theta=\theta(t)$ yields
 \begin{equation} \label{eq:6.4.9}
-A={1\over2}\int_{t_1}^{t_2} r^2(\theta(t))\theta'(t)\,dt.
+A=\frac{1}{2}\int_{t_{1}}^{t_{2}}r^{2}(\theta(t))\theta'(t)\,dt.
 \end{equation}
  But
 \eqref{eq:6.4.7}  and \eqref{eq:6.4.9} imply that
 $$
-A={1\over2}\int_{t_1}^{t_2} h\,dt={h(t_2-t_1)\over2},
+A=\frac{1}{2}\int_{t_{1}}^{t_{2}}h\,dt=\frac{h(t_{2}-t_{1})}{2},
 $$
 which completes the proof.
 
@@ -234,36 +234,36 @@ which completes the proof.
 
 \noindent
 In the special case where
- $f(r)=-mk/r^2=-mku^2$, so ${\bf F}$  can be interpreted
+ $f(r)=-mk/r^{2}=-mku^{2}$, so ${\bf F}$  can be interpreted
 as a gravitational force, \eqref{eq:6.4.1}  becomes
 \begin{equation} \label{eq:6.4.10}
- {d^2u\over d\theta^2}+u={k\over h^2}.
+ \frac{d^{2}u}{d\theta^{2}}+u=\frac{k}{h^{2}}.
 \end{equation}
 The general solution of the complementary equation
 $$
- {d^2u\over d\theta^2}+u=0
+ \frac{d^{2}u}{d\theta^{2}}+u=0
 $$
 can be written in amplitude--phase form as
 $$
 u=A\cos(\theta-\phi),
 $$
 where $A\ge0$ and $\phi$ is a phase angle.
-Since $u_p=k/h^2$ is a particular solution of \eqref{eq:6.4.10},
+Since $u_{p}=k/h^{2}$ is a particular solution of \eqref{eq:6.4.10},
 the general solution of \eqref{eq:6.4.10} is
 $$
-u=A\cos(\theta-\phi)+{k\over h^2};
+u=A\cos(\theta-\phi)+\frac{k}{h^{2}};
 $$
 hence, the orbit is given by
 $$
-r=\left(A\cos(\theta-\phi)+{k\over h^2}\right)^{-1},
+r=\left(A\cos(\theta-\phi)+\frac{k}{h^{2}}\right)^{-1},
 $$
 which we rewrite as
 \begin{equation} \label{eq:6.4.11}
-r={\rho\over 1+e\cos(\theta-\phi)},
+r=\frac{\rho}{1+e\cos(\theta-\phi)},
 \end{equation}
 where
 $$
-\rho={h^2\over k}\mbox{\quad and \quad} e=A\rho.
+\rho=\frac{h^{2}}{k}\mbox{\quad and \quad}e=A\rho.
 $$
 A curve satisfying \eqref{eq:6.4.11} is a conic section with a focus at
 the origin (Exercise~\ref{exer:6.4.1}). The nonnegative constant $e$ is
@@ -282,10 +282,10 @@ ellipse (a circle if $e=0$), a parabola if $e=1$, or a hyperbola if $e>1$.
 If  the orbit is an ellipse, then the minimum and maximum
 values of $r$  are
 \begin{eqnarray*}
-r_{\min}&=&{\rho\over1+e}\quad\mbox{(the {\color{blue}\it perihelion
+r_{\min}&=&\frac{\rho}{1+e}\quad\mbox{(the {\color{blue}\it perihelion
 distance\/}, attained when
-$\theta=\phi$)}  \\
- r_{\max}&=&{\rho\over1-e}\quad\mbox{(the
+$\theta=\phi$)}\\
+ r_{\max}&=&\frac{\rho}{1-e}\quad\mbox{(the
 {\color{blue}\it aphelion distance\/}, attained when
 $\theta=\phi+\pi$)}.
 \end{eqnarray*}
@@ -298,11 +298,11 @@ apogee\/}.
 \newpage
 
 For example, Earth's orbit around the Sun is approximately an ellipse
-with $e\approx.017$, $r_{\min}\approx91\times 10^6$ miles, and
-$r_{\max}\approx 95\times 10^6$ miles. Halley's comet has a very
+with $e\approx.017$, $r_{\min}\approx91\times10^{6}$ miles, and
+$r_{\max}\approx95\times10^{6}$ miles. Halley's comet has a very
 elongated approximately elliptical orbit around the sun, with
-$e\approx.967$, $r_{\min}\approx55\times10^6$ miles, and
-$r_{\max}\approx33\times10^8$ miles. Some comets (the nonrecurring
+$e\approx.967$, $r_{\min}\approx55\times10^{6}$ miles, and
+$r_{\max}\approx33\times10^{8}$ miles. Some comets (the nonrecurring
 type) have parabolic or hyperbolic orbits.
 
 \exercises
@@ -311,8 +311,8 @@ type) have parabolic or hyperbolic orbits.
 \item\label{exer:6.4.1}
 Find the equation of the curve
 $$
-r={\rho\over 1+e\cos(\theta-\phi)}
-\eqno{\rm (A)}
+r=\frac{\rho}{1+e\cos(\theta-\phi)}
+\eqno{\rm(A)}
 $$
 in terms of
 $(X,Y)=\left(r\cos(\theta-\phi),r\sin(\theta-\phi)\right)$,
@@ -323,16 +323,16 @@ is the equation of an ellipse if $0<e<1$, a parabola if $e=1$,
 or a hyperbola if $e>1$. If $e<1$, leave your answer in
 the form
 $$
- {(X-X_0)^2\over a^2}+{(Y-Y_0)^2\over b^2}=1,
+ \frac{(X-X_{0})^{2}}{a^{2}}+\frac{(Y-Y_{0})^{2}}{b^{2}}=1,
 $$
 and show that  the area of the ellipse is
 $$
-A={\pi\rho^2\over(1-e^2)^{3/2}}.
+A=\frac{\pi\rho^{2}}{(1-e^{2})^{3/2}}.
 $$
 Then use Theorem~\ref{thmtype:6.4.1} to show that the time required for
 the object to traverse the entire orbit is
 $$
-T={2\pi\rho^2\over h(1-e^2)^{3/2}}.
+T=\frac{2\pi\rho^{2}}{h(1-e^{2})^{3/2}}.
 $$
 (This is
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/}
@@ -351,18 +351,18 @@ $$
 Suppose an object with mass $m$ moves in the $xy$-plane under the
 central force
 $$
-{\bf F}(r,\theta)=-{mk\over r^2}(\cos\theta\,{\bf i}+\sin\theta\,{\bf
+{\bf F}(r,\theta)=-\frac{mk}{r^{2}}(\cos\theta\,{\bf i}+\sin\theta\,{\bf
 j}),
 $$
 where $k$ is a positive constant. As we shown, the orbit of the
 object is given by
 $$
-r={\rho\over 1+e\cos(\theta-\phi)}.
+r=\frac{\rho}{1+e\cos(\theta-\phi)}.
 $$
 Determine $\rho$, $e$, and $\phi$ in terms of the initial conditions
 $$
-r(0)=r_0,\quad  r'(0)=r_0', \text{\; and \;} \theta(0)=\theta_0,\quad
-\theta'(0)=\theta_0'.
+r(0)=r_{0},\quad  r'(0)=r_{0}',\text{\; and \;}\theta(0)=\theta_{0},\quad
+\theta'(0)=\theta_{0}'.
 $$
 Assume that the initial position and velocity vectors are not
 collinear.
@@ -372,7 +372,7 @@ Suppose we wish to put a satellite with mass $m$ into an
 elliptical orbit around Earth. Assume that the only force acting on
 the object is Earth's gravity, given by
 $$
-{\bf F}(r,\theta)=-mg\left(R^2\over r^2\right)(\cos\theta\,{\bf
+{\bf F}(r,\theta)=-mg\left(\frac{R^{2}}{r^{2}}\right)(\cos\theta\,{\bf
 i}+\sin\theta\,{\bf j}),
 $$
 where $R$ is Earth's radius, $g$ is the acceleration due to gravity at
@@ -382,13 +382,13 @@ plane of the orbit, with the origin at Earth's center.
 \begin{alist}
 \item % (a)
 Find the eccentricity required to make the aphelion and perihelion
-distances equal to $R\gamma_1$ and $R\gamma_2$, respectively, where
-$1<\gamma_1<\gamma_2$.
+distances equal to $R\gamma_{1}$ and $R\gamma_{2}$, respectively, where
+$1<\gamma_{1}<\gamma_{2}$.
 \item % (b)
 Find the  initial conditions
 $$
-r(0)=r_0,\quad  r'(0)=r_0', \text{\; and \;} \theta(0)=\theta_0,\quad
-\theta'(0)=\theta_0'
+r(0)=r_{0},\quad  r'(0)=r_{0}',\text{\; and \;}\theta(0)=\theta_{0},\quad
+\theta'(0)=\theta_{0}'
 $$
 required to make the initial point the perigee, and the motion along
 the orbit in the direction of increasing $\theta$. \hint{Use the
@@ -397,7 +397,7 @@ results of Exercise~\ref{exer:6.4.2}.}
 
 \item\label{exer:6.4.4}
  An object with mass $m$  moves in a spiral orbit
-$r=c\theta^2$ under a central force
+$r=c\theta^{2}$ under a central force
 $$
 {\bf
 F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
@@ -406,7 +406,7 @@ Find $f$.
 
 \item\label{exer:6.4.5}
  An object with mass $m$  moves in the orbit
-$r=r_0e^{\gamma\theta}$ under a central force
+$r=r_{0}e^{\gamma\theta}$ under a central force
 $$
  {\bf
 F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
@@ -416,22 +416,22 @@ $$
 \item\label{exer:6.4.6}
 Suppose an object with mass $m$ moves under the central force
 $$
-{\bf F}(r,\theta)=-{mk\over r^3}(\cos\theta\,{\bf i}+\sin\theta\,{\bf
+{\bf F}(r,\theta)=-\frac{mk}{r^{3}}(\cos\theta\,{\bf i}+\sin\theta\,{\bf
 j}),
 $$
 with
 $$
-r(0)=r_0,\quad  r'(0)=r_0', \text{\; and \;} \theta(0)=\theta_0,\quad
-\theta'(0)=\theta_0',
+r(0)=r_{0},\quad  r'(0)=r_{0}',\text{\; and \;}\theta(0)=\theta_{0},\quad
+\theta'(0)=\theta_{0}',
 $$
- where $h=r_0^2\theta_0'\ne0$.
+ where $h=r_{0}^{2}\theta_{0}'\ne0$.
 \begin{alist}
 \item % (a)
  Set up a second order initial
 value problem for $u=1/r$ as a function of~$\theta$.
 \item % (b)
-Determine $r=r(\theta)$ if (i) $h^2<k$;\;   (ii) $h^2=k$;\;   (iii)
-$h^2>k$.
+Determine $r=r(\theta)$ if (i) $h^{2}<k$;\;   (ii) $h^{2}=k$;\;   (iii)
+$h^{2}>k$.
 \end{alist}
 
 \end{exerciselist}

@@ -5,7 +5,7 @@ We now consider the system ${\bf y}'=A{\bf y}$, where $A$ has a complex
 eigenvalue $\lambda=\alpha+i\beta$ with $\beta\ne0$. We continue to
 assume that $A$ has real entries, so the characteristic polynomial of
 $A$ has real coefficients. This implies that
-$\overline\lambda=\alpha-i\beta$ is also an eigenvalue of $A$.
+$\overline{\lambda}=\alpha-i\beta$ is also an eigenvalue of $A$.
 
 An eigenvector ${\bf x}$ of $A$ associated with
 $\lambda=\alpha+i\beta$ will have complex entries, so we'll write
@@ -14,7 +14,7 @@ $$
 $$
 where ${\bf u}$ and ${\bf v}$ have real entries; that is, ${\bf u}$
 and ${\bf v}$ are the real and imaginary parts of ${\bf x}$. Since
-$A{\bf x}=\lambda {\bf x}$,
+$A{\bf x}=\lambda{\bf x}$,
 \begin{equation} \label{eq:10.6.1}
 A({\bf u}+i{\bf v})=(\alpha+i\beta)({\bf u}+i{\bf v}).
 \end{equation}
@@ -24,16 +24,16 @@ $$
 A({\bf u}-i{\bf v})=(\alpha-i\beta)({\bf u}-i{\bf v}),
 $$
 which shows that ${\bf x}={\bf u}-i{\bf v}$ is an eigenvector
-associated with $\overline\lambda=\alpha-i\beta$. The complex
-conjugate eigenvalues $\lambda$ and $\overline\lambda$ can be
+associated with $\overline{\lambda}=\alpha-i\beta$. The complex
+conjugate eigenvalues $\lambda$ and $\overline{\lambda}$ can be
 separately associated with linearly independent solutions ${\bf
 y}'=A{\bf y}$;     however, we won't pursue this approach, since solutions
 obtained in this way turn out to be complex--valued. Instead, we'll
 obtain solutions of ${\bf y}'=A{\bf y}$ in the form
 \begin{equation} \label{eq:10.6.2}
-{\bf y}=f_1{\bf u}+f_2{\bf v}
+{\bf y}=f_{1}{\bf u}+f_{2}{\bf v}
 \end{equation}
-where $f_1$ and $f_2$ are real--valued scalar functions.
+where $f_{1}$ and $f_{2}$ are real--valued scalar functions.
 The next theorem shows how to do this.
 
 \begin{theorem}\color{blue} \label{thmtype:10.6.1}
@@ -43,9 +43,9 @@ eigenvalue of $A$ and let ${\bf x}={\bf u}+i{\bf v}$ be an associated
 eigenvector, where ${\bf u}$ and ${\bf v}$ have real components. Then
 ${\bf u}$ and ${\bf v}$ are both nonzero and
 $$
-{\bf y}_1=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
+{\bf y}_{1}=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
 \mbox{\quad and\quad}
-{\bf y}_2=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t),
+{\bf y}_{2}=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t),
 $$
 which are the real and imaginary parts of
 \begin{equation} \label{eq:10.6.3}
@@ -58,8 +58,8 @@ are linearly independent solutions of  ${\bf y}'=A{\bf y}$.
 A function of the form \eqref{eq:10.6.2} is a solution of ${\bf y}'=A{\bf
 y}$ if and only if
 \begin{equation} \label{eq:10.6.4}
-f_1'{\bf u}+f_2'{\bf
-v}=f_1A{\bf u}+f_2A{\bf v}.
+f_{1}'{\bf u}+f_{2}'{\bf
+v}=f_{1}A{\bf u}+f_{2}A{\bf v}.
 \end{equation}
 Carrying out the multiplication indicated on the  right side
 of \eqref{eq:10.6.1} and collecting the  real and imaginary parts of the
@@ -80,65 +80,65 @@ ${\bf u}$ and
 ${\bf v}$ are both nonzero.
 Substituting from these equations into \eqref{eq:10.6.4} yields
 \begin{eqnarray*}
-f_1'{\bf u}+f_2'{\bf v}
-&=&f_1(\alpha{\bf u}-\beta{\bf v})+f_2(\alpha{\bf v}+\beta{\bf u})\\
-&=&(\alpha f_1+\beta f_2){\bf u}+(-\beta f_1+\alpha f_2){\bf v}.
+f_{1}'{\bf u}+f_{2}'{\bf v}
+&=&f_{1}(\alpha{\bf u}-\beta{\bf v})+f_{2}(\alpha{\bf v}+\beta{\bf u})\\
+&=&(\alpha f_{1}+\beta f_{2}){\bf u}+(-\beta f_{1}+\alpha f_{2}){\bf v}.
 \end{eqnarray*}
 This is true if
 $$
 \begin{array}{rcr}
-f_1'&=&\alpha f_1+\beta f_2\phantom{,}\\
-f_2'&=&-\beta f_1+\alpha f_2,
+f_{1}'&=&\alpha f_{1}+\beta f_{2}\phantom{,}\\
+f_{2}'&=&-\beta f_{1}+\alpha f_{2},
 \end{array}
 \mbox{\quad or, equivalently,\quad}
 \begin{array}{rcr}
-f_1'-\alpha f_1&=&\phantom{-}\beta f_2\phantom{.}\\
-f_2'-\alpha f_2&=&-\beta f_1.
+f_{1}'-\alpha f_{1}&=&\phantom{-}\beta f_{2}\phantom{.}\\
+f_{2}'-\alpha f_{2}&=&-\beta f_{1}.
 \end{array}
 $$
-If we let $f_1=g_1e^{\alpha t}$ and $f_2=g_2e^{\alpha t}$, where
-$g_1$ and $g_2$ are to be determined, then the last two equations
+If we let $f_{1}=g_{1}e^{\alpha t}$ and $f_{2}=g_{2}e^{\alpha t}$, where
+$g_{1}$ and $g_{2}$ are to be determined, then the last two equations
 become
 $$
 \begin{array}{rcr}
-g_1'&=&\beta g_2\phantom{.}\\
-g_2'&=&-\beta g_1,
+g_{1}'&=&\beta g_{2}\phantom{.}\\
+g_{2}'&=&-\beta g_{1},
 \end{array}
 $$
 which implies that
 $$
-g_1''=\beta g_2'=-\beta^2 g_1,
+g_{1}''=\beta g_{2}'=-\beta^{2}g_{1},
 $$
 so
 $$
-g_1''+\beta^2 g_1=0.
+g_{1}''+\beta^{2}g_{1}=0.
 $$
 The general solution of this equation is
 $$
-g_1=c_1\cos\beta t+c_2\sin\beta t.
+g_{1}=c_{1}\cos\beta t+c_{2}\sin\beta t.
 $$
-Moreover, since $g_2=g_1'/\beta$,
+Moreover, since $g_{2}=g_{1}'/\beta$,
 $$
-g_2=-c_1\sin\beta t+c_2\cos\beta t.
+g_{2}=-c_{1}\sin\beta t+c_{2}\cos\beta t.
 $$
-Multiplying  $g_1$  and $g_2$  by $e^{\alpha t}$ shows that
+Multiplying  $g_{1}$  and $g_{2}$  by $e^{\alpha t}$ shows that
 \begin{eqnarray*}
-f_1&=&e^{\alpha t}(\phantom{-}c_1\cos\beta t+c_2\sin\beta t ),\\
-f_2&=&e^{\alpha t}(-c_1\sin\beta t+c_2\cos\beta t).
+f_{1}&=&e^{\alpha t}(\phantom{-}c_{1}\cos\beta t+c_{2}\sin\beta t),\\
+f_{2}&=&e^{\alpha t}(-c_{1}\sin\beta t+c_{2}\cos\beta t).
 \end{eqnarray*}
 Substituting these into \eqref{eq:10.6.2} shows that
 \begin{equation} \label{eq:10.6.5}
 \begin{array}{rcl}
-{\bf y}&=&e^{\alpha t}\left[(c_1\cos\beta t+c_2\sin\beta t){\bf u}
-+(-c_1\sin\beta t+c_2\cos\beta t){\bf v}\right]\\
-&=&c_1e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
-+c_2e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t)
+{\bf y}&=&e^{\alpha t}\left[(c_{1}\cos\beta t+c_{2}\sin\beta t){\bf u}
++(-c_{1}\sin\beta t+c_{2}\cos\beta t){\bf v}\right]\\
+&=&c_{1}e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
++c_{2}e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t)
 \end{array}
 \end{equation}
 is a solution of ${\bf y}'=A{\bf y}$ for any choice of the constants
-$c_1$ and $c_2$. In particular, by first taking $c_1=1$ and $c_2=0$
-and then taking $c_1=0$ and $c_2=1$, we see that ${\bf y}_1$ and ${\bf
-y}_2$ are solutions of $ {\bf y}'=A{\bf y}$. We leave it to you to
+$c_{1}$ and $c_{2}$. In particular, by first taking $c_{1}=1$ and $c_{2}=0$
+and then taking $c_{1}=0$ and $c_{2}=1$, we see that ${\bf y}_{1}$ and ${\bf
+y}_{2}$ are solutions of $ {\bf y}'=A{\bf y}$. We leave it to you to
 verify that they are, respectively, the real and imaginary parts of
 \eqref{eq:10.6.3} (Exercise~\ref{exer:10.6.26}), and that they are linearly
 independent (Exercise~\ref{exer:10.6.27}).
@@ -153,43 +153,43 @@ independent (Exercise~\ref{exer:10.6.27}).
 \solution The characteristic polynomial of the coefficient matrix $A$
 in \eqref{eq:10.6.6} is
 $$
-\left|\begin{array}{cc} 4-\lambda&-5\\ 5&-2-\lambda
-\end{array}\right|=(\lambda-1)^2+16.
+\left|\begin{array}{cc}4-\lambda&-5\\5&-2-\lambda
+\end{array}\right|=(\lambda-1)^{2}+16.
 $$
 Hence, $\lambda=1+4i$ is an eigenvalue of $A$. The associated
 eigenvectors satisfy $\left(A-\left(1+4i\right)I\right){\bf x}={\bf
 0}$. The augmented matrix of this system is
 $$
-\left[\begin{array}{cccr} 3-4i&-5&\vdots&0\\
-5&-3-4i&\vdots&0  \end{array}\right],
+\left[\begin{array}{cccr}3-4i&-5&\vdots&0\\
+5&-3-4i&\vdots&0\end{array}\right],
  $$
 which is row equivalent to
 $$
-\left[\begin{array}{cccr} 1&-{3+4i\over5}&\vdots&0\\ 0&0&\vdots&0
+\left[\begin{array}{cccr}1&-\frac{3+4i}{5}&\vdots&0\\0&0&\vdots&0
 \end{array}\right].
 $$
-Therefore $x_1=(3+4i)x_2/5$. Taking $x_2=5$ yields $x_1=3+4i$, so
+Therefore $x_{1}=(3+4i)x_{2}/5$. Taking $x_{2}=5$ yields $x_{1}=3+4i$, so
 $$
 {\bf x}=\left[\begin{array}{c}3+4i\\5\end{array}\right]
 $$
 is an eigenvector.  The real and imaginary parts of
 $$
-e^t(\cos4t+i\sin4t)\left[\begin{array}{c}3+4i\\5\end{array}\right]
+e^{t}(\cos4t+i\sin4t)\left[\begin{array}{c}3+4i\\5\end{array}\right]
 $$
  are
 $$
-{\bf y}_1=e^t\left[\begin{array}{c}3\cos4t-4\sin
+{\bf y}_{1}=e^{t}\left[\begin{array}{c}3\cos4t-4\sin
 4t\\5\cos4t\end{array}\right]\quad\mbox{ and }\quad
-{\bf y}_2=e^t\left[\begin{array}{c}3\sin4t+4\cos4t\\5\sin
+{\bf y}_{2}=e^{t}\left[\begin{array}{c}3\sin4t+4\cos4t\\5\sin
 4t\end{array}\right],
 $$
 which are linearly independent solutions of  \eqref{eq:10.6.6}.
 The general solution of \eqref{eq:10.6.6} is
 $$
 {\bf y}=
-c_1e^t\left[\begin{array}{c}3\cos4t-4\sin
+c_{1}e^{t}\left[\begin{array}{c}3\cos4t-4\sin
 4t\\5\cos4t\end{array}\right]+
-c_2e^t\left[\begin{array}{c}3\sin4t+4\cos4t\\5\sin
+c_{2}e^{t}\left[\begin{array}{c}3\sin4t+4\cos4t\\5\sin
 4t\end{array}\right].
 $$
 
@@ -204,41 +204,41 @@ $$
 in \eqref{eq:10.6.7} is
 $$
 \left|\begin{array}{cc}-14-\lambda&39\\-6&16-\lambda
-\end{array}\right|=(\lambda-1)^2+9.
+\end{array}\right|=(\lambda-1)^{2}+9.
 $$
 Hence, $\lambda=1+3i$ is an eigenvalue of $A$. The associated
-eigenvectors satisfy $\left(A-(1+3i)I\right){\bf x}={\bf 0}$. The
+eigenvectors satisfy $\left(A-(1+3i)I\right){\bf x}={\bf0}$. The
 augmented matrix of this system is
 $$
 \left[\begin{array}{cccr}-15-3i&39&\vdots&0\\
--6&15-3i&\vdots&0  \end{array}\right],
+-6&15-3i&\vdots&0\end{array}\right],
  $$
 which is row equivalent to
 $$
-\left[\begin{array}{cccr} 1&{-5+i\over2}&\vdots&0\\ 0&0&\vdots&0
+\left[\begin{array}{cccr}1&\frac{-5+i}{2}&\vdots&0\\0&0&\vdots&0
 \end{array}\right].
 $$
-Therefore $x_1=(5-i)/2$. Taking $x_2=2$ yields $x_1=5-i$, so
+Therefore $x_{1}=(5-i)/2$. Taking $x_{2}=2$ yields $x_{1}=5-i$, so
 $$
 {\bf x}=\left[\begin{array}{c}5-i\\2\end{array}\right]
 $$
 is an eigenvector. The real and imaginary parts of
 $$
-e^t(\cos3t+i\sin3t)\left[\begin{array}{c}5-i\\2\end{array}\right]
+e^{t}(\cos3t+i\sin3t)\left[\begin{array}{c}5-i\\2\end{array}\right]
 $$
  are
 $$
-{\bf y}_1=e^t\left[\begin{array}{c}\sin3t+5\cos3t\\2\cos
+{\bf y}_{1}=e^{t}\left[\begin{array}{c}\sin3t+5\cos3t\\2\cos
 3t\end{array}\right]\quad\mbox{ and }\quad
-{\bf y}_2=e^t\left[\begin{array}{c}-\cos3t+5\sin3t\\2\sin
+{\bf y}_{2}=e^{t}\left[\begin{array}{c}-\cos3t+5\sin3t\\2\sin
 3t\end{array}\right],
  $$
 which are  linearly independent solutions of  \eqref{eq:10.6.7}.
 The general solution of \eqref{eq:10.6.7} is
 $$
-{\bf y}=c_1e^t\left[\begin{array}{c}\sin3t+5\cos3t\\2\cos
+{\bf y}=c_{1}e^{t}\left[\begin{array}{c}\sin3t+5\cos3t\\2\cos
 3t\end{array}\right]+
-c_2e^t\left[\begin{array}{c}-\cos3t+5\sin3t\\2\sin
+c_{2}e^{t}\left[\begin{array}{c}-\cos3t+5\sin3t\\2\sin
 3t\end{array}\right].
 $$
 
@@ -253,47 +253,47 @@ $$
 polynomial of the  coefficient matrix $A$ in  \eqref{eq:10.6.8} is
 $$
 \left|\begin{array}{ccc}-5-\lambda&5&4\\-8&7-\lambda&
-6\\ \phantom{-}1
-&0&-\lambda\end{array}\right|=-(\lambda-2)(\lambda^2+1).
+6\\\phantom{-}1
+&0&-\lambda\end{array}\right|=-(\lambda-2)(\lambda^{2}+1).
 $$
-Hence, the eigenvalues of $A$ are $\lambda_1=2$, $\lambda_2=i$, and
-$\lambda_3=-i$.
+Hence, the eigenvalues of $A$ are $\lambda_{1}=2$, $\lambda_{2}=i$, and
+$\lambda_{3}=-i$.
 The augmented matrix of $(A-2I){\bf x=0}$ is
 $$
 \left[\begin{array}{rrrcr}-7&5&4&\vdots&0\\-8&
-5&6&\vdots&0\\ 1&0&-2&\vdots&0
+5&6&\vdots&0\\1&0&-2&\vdots&0
 \end{array}\right],
 $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1&0&-2&\vdots&0\\ 0&1&-2&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&-2&\vdots&0\\0&1&-2&
+\vdots&0\\0&0&0&\vdots&0\end{array}\right].
 $$
-Therefore $x_1=x_2=2x_3$.  Taking $x_3=1$ yields
+Therefore $x_{1}=x_{2}=2x_{3}$.  Taking $x_{3}=1$ yields
 $$
-{\bf x}_1=\threecol221,
+{\bf x}_{1}=\threecol221,
 $$
 so
 $$
-{\bf y}_1=\threecol221e^{2t}
+{\bf y}_{1}=\threecol221e^{2t}
 $$
 is a solution of  \eqref{eq:10.6.8}.
 
 The augmented  matrix of $(A-iI){\bf x=0}$ is
 $$
 \left[\begin{array}{ccrccc}-5-i&5&4&\vdots&0\\-8&
-7-i&6&\vdots&0\\ \phantom{-}1&0&-i&\vdots&0
+7-i&6&\vdots&0\\\phantom{-}1&0&-i&\vdots&0
 \end{array}\right],
 $$
 which is row equivalent to
 $$
-\left[\begin{array}{ccccc} 1&0&-i&\vdots&0\\ 0&1&1-i&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\left[\begin{array}{ccccc}1&0&-i&\vdots&0\\0&1&1-i&
+\vdots&0\\0&0&0&\vdots&0\end{array}\right].
 $$
-Therefore $x_1=ix_3$ and $x_2=-(1-i)x_3$. Taking $x_3=1$ yields
+Therefore $x_{1}=ix_{3}$ and $x_{2}=-(1-i)x_{3}$. Taking $x_{3}=1$ yields
 the eigenvector
 $$
-{\bf x}_2=\left[\begin{array}{c} i\\-1+i\\ 1\end{array}
+{\bf x}_{2}=\left[\begin{array}{c}i\\-1+i\\1\end{array}
 \right].
 $$
 The real and imaginary parts of
@@ -302,26 +302,26 @@ $$
 $$
  are
 $$
-{\bf y}_2=
+{\bf y}_{2}=
 \left[\begin{array}{c}-\sin t\\-\cos t-\sin t\\\cos t\end{array}\right]
 \quad\mbox{ and }\quad
-{\bf y}_3=\left[\begin{array}{c}\cos t\\\cos t-\sin t\\\sin
+{\bf y}_{3}=\left[\begin{array}{c}\cos t\\\cos t-\sin t\\\sin
 t\end{array}\right],
  $$
 which are solutions of  \eqref{eq:10.6.8}.
-Since the  Wronskian of $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
+Since the  Wronskian of $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$
 at $t=0$  is
 $$
 \left|\begin{array}{rrr}
 2&0&1\\2&-1&1\\1&1&0\end{array}\right|=1,
 $$
- $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is a
+ $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a
 fundamental set of solutions of \eqref{eq:10.6.8}. The general solution of
 \eqref{eq:10.6.8} is
 $$
-{\bf y}=c_1 \threecol221e^{2t}
-+c_2\left[\begin{array}{c}-\sin t\\-\cos t-\sin t\\\cos t\end{array}\right]
-+c_3\left[\begin{array}{c}\cos t\\\cos t-\sin t\\\sin
+{\bf y}=c_{1}\threecol221e^{2t}
++c_{2}\left[\begin{array}{c}-\sin t\\-\cos t-\sin t\\\cos t\end{array}\right]
++c_{3}\left[\begin{array}{c}\cos t\\\cos t-\sin t\\\sin
 t\end{array}\right].
 $$
 
@@ -335,49 +335,49 @@ $$
 \solution The characteristic
 polynomial of the  coefficient matrix $A$ in  \eqref{eq:10.6.9} is
 $$
-\left|\begin{array}{ccc} 1-\lambda&-1&-2\\ 1&3-\lambda&
-\phantom{-}2\\ 1
+\left|\begin{array}{ccc}1-\lambda&-1&-2\\1&3-\lambda&
+\phantom{-}2\\1
 &-1&2-\lambda\end{array}\right|=
--(\lambda-2)\left((\lambda-2)^2+4\right).
+-(\lambda-2)\left((\lambda-2)^{2}+4\right).
  $$
-Hence, the eigenvalues of $A$ are $\lambda_1=2$, $\lambda_2=2+2i$,
-and $\lambda_3=2-2i$.
+Hence, the eigenvalues of $A$ are $\lambda_{1}=2$, $\lambda_{2}=2+2i$,
+and $\lambda_{3}=2-2i$.
 The augmented matrix of $(A-2I){\bf x=0}$ is
 $$
 \left[\begin{array}{rrrcr}-1&-1&-2&\vdots&0\\1&
-1&2&\vdots&0\\ 1&-1&0&\vdots&0
+1&2&\vdots&0\\1&-1&0&\vdots&0
 \end{array}\right],
 $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1&0&1&\vdots&0\\ 0&1&1&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&1&1&
+\vdots&0\\0&0&0&\vdots&0\end{array}\right].
 $$
-Therefore $x_1=x_2=-x_3$.  Taking $x_3=1$ yields
+Therefore $x_{1}=x_{2}=-x_{3}$.  Taking $x_{3}=1$ yields
 $$
-{\bf x}_1=\threecol{-1}{-1}1,
+{\bf x}_{1}=\threecol{-1}{-1}1,
 $$
 so
 $$
-{\bf y}_1=\threecol{-1}{-1}1e^{2t}
+{\bf y}_{1}=\threecol{-1}{-1}1e^{2t}
 $$
 is a solution of  \eqref{eq:10.6.9}.
 
 The augmented  matrix of $\left(A-(2+2i)I\right){\bf x=0}$ is
 $$
-\left[\begin{array}{ccrcc}-1-2i&-1&-2&\vdots&0\\ 1&
-1-2i&\phantom{-}2&\vdots&0\\ 1&-1&-2i&\vdots&0
+\left[\begin{array}{ccrcc}-1-2i&-1&-2&\vdots&0\\1&
+1-2i&\phantom{-}2&\vdots&0\\1&-1&-2i&\vdots&0
 \end{array}\right],
 $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1&0&-i&\vdots&0\\ 0&1&i&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&-i&\vdots&0\\0&1&i&
+\vdots&0\\0&0&0&\vdots&0\end{array}\right].
 $$
-Therefore $x_1=ix_3$ and $x_2=-ix_3$. Taking $x_3=1$ yields
+Therefore $x_{1}=ix_{3}$ and $x_{2}=-ix_{3}$. Taking $x_{3}=1$ yields
 the eigenvector
 $$
-{\bf x}_2=\threecol i{-i}1
+{\bf x}_{2}=\threecol i{-i}1
 $$
 The real and imaginary parts of
 $$
@@ -385,25 +385,25 @@ e^{2t}(\cos2t+i\sin2t)\threecol i{-i}1
 $$
 are
 $$
-{\bf y}_2=e^{2t}\left[\begin{array}{r}-\sin2t\\\sin2t\\\cos
+{\bf y}_{2}=e^{2t}\left[\begin{array}{r}-\sin2t\\\sin2t\\\cos
 2t\end{array}\right]\quad\mbox{ and }\quad
-{\bf y}_2=e^{2t}\left[\begin{array}{r}\cos2t\\-\cos2t\\\sin
+{\bf y}_{2}=e^{2t}\left[\begin{array}{r}\cos2t\\-\cos2t\\\sin
 2t\end{array}\right],
 $$
 which are solutions of  \eqref{eq:10.6.9}.
-Since  the Wronskian of $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
+Since  the Wronskian of $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$
 at $t=0$ is
 $$
 \left|\begin{array}{rrr}
 -1&0&1\\-1&0&-1\\1&1&0\end{array}\right|=-2,
 $$
-$\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is a fundamental set of solutions
+$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions
 of \eqref{eq:10.6.9}.  The general solution of \eqref{eq:10.6.9} is
 $$
-{\bf y}=c_1\threecol{-1}{-1}1e^{2t}+
-c_2e^{2t}\left[\begin{array}{r}-\sin2t\\\sin2t\\\cos
+{\bf y}=c_{1}\threecol{-1}{-1}1e^{2t}+
+c_{2}e^{2t}\left[\begin{array}{r}-\sin2t\\\sin2t\\\cos
 2t\end{array}\right]+
-c_3e^{2t}\left[\begin{array}{r}\cos2t\\-\cos2t\\\sin
+c_{3}e^{2t}\left[\begin{array}{r}\cos2t\\-\cos2t\\\sin
 2t\end{array}\right].
 $$
 
@@ -413,8 +413,8 @@ $$
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
 \begin{equation} \label{eq:10.6.10}
-\twocol{y_1'}{y_2'}=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]\twocol{y_1}{y_2}
+\twocol{y_{1}'}{y_{2}'}=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
+\end{array}\right]\twocol{y_{1}}{y_{2}}
 \end{equation}
 under the assumptions of this section; that is, when the matrix
 $$
@@ -425,7 +425,7 @@ has a complex eigenvalue $\lambda=\alpha+i\beta$
 {\rm(}$\beta\ne0${\rm}) and ${\bf x}={\bf u}+i{\bf v}$ is an
 associated eigenvector, where ${\bf u}$ and ${\bf v}$ have real
 components. To describe the trajectories accurately it's necessary to
-introduce a new rectangular coordinate system in the $y_1$-$y_2$
+introduce a new rectangular coordinate system in the $y_{1}$-$y_{2}$
 plane. This raises a point that hasn't come up before: It is always
 possible to choose ${\bf x}$ so that $({\bf u},{\bf v})=0$. A special
 effort is required to do this, since not every eigenvector has this
@@ -434,32 +434,32 @@ multiply it by a suitable complex constant to obtain one that does. To
 see this, note that if ${\bf x}$ is a $\lambda$-eigenvector of $A$ and
 $k$ is an arbitrary real number, then
 $$
-{\bf x}_1=(1+ik){\bf x}=(1+ik)({\bf u}+i{\bf v})
+{\bf x}_{1}=(1+ik){\bf x}=(1+ik)({\bf u}+i{\bf v})
 =({\bf u}-k{\bf v})+i({\bf v}+k{\bf u})
 $$
 is also a $\lambda$-eigenvector of $A$, since
 $$
-A{\bf x}_1= A((1+ik){\bf x})=(1+ik)A{\bf x}=(1+ik)\lambda{\bf x}=
-\lambda((1+ik){\bf x})=\lambda{\bf x}_1.
+A{\bf x}_{1}=A((1+ik){\bf x})=(1+ik)A{\bf x}=(1+ik)\lambda{\bf x}=
+\lambda((1+ik){\bf x})=\lambda{\bf x}_{1}.
 $$
-The real and imaginary parts of ${\bf x}_1$ are
+The real and imaginary parts of ${\bf x}_{1}$ are
 \begin{equation} \label{eq:10.6.11}
-{\bf u}_1={\bf u}-k{\bf v} \mbox{\quad and \quad}
-{\bf v}_1={\bf v}+k{\bf u},
+{\bf u}_{1}={\bf u}-k{\bf v}\mbox{\quad and \quad}
+{\bf v}_{1}={\bf v}+k{\bf u},
 \end{equation}
 so
 $$
-({\bf u}_1,{\bf v}_1)=({\bf u}-k{\bf v},{\bf v}+k{\bf u})
-=-\left[({\bf u},{\bf v})k^2+(\|{\bf v}\|^2-\|{\bf u}\|^2)k
+({\bf u}_{1},{\bf v}_{1})=({\bf u}-k{\bf v},{\bf v}+k{\bf u})
+=-\left[({\bf u},{\bf v})k^{2}+(\|{\bf v}\|^{2}-\|{\bf u}\|^{2})k
 -({\bf u},{\bf v})\right].
 $$
-Therefore $({\bf u}_1,{\bf v}_1)=0$ if
+Therefore $({\bf u}_{1},{\bf v}_{1})=0$ if
 \begin{equation} \label{eq:10.6.12}
-({\bf u},{\bf v})k^2+(\|{\bf v}\|^2-\|{\bf u}\|^2)k-({\bf u},{\bf
+({\bf u},{\bf v})k^{2}+(\|{\bf v}\|^{2}-\|{\bf u}\|^{2})k-({\bf u},{\bf
 v})=0.
 \end{equation}
 If $({\bf u},{\bf v})\ne0$ we can use the quadratic formula to find
-two real values of $k$ such that $({\bf u}_1,{\bf v}_1)=0$
+two real values of $k$ such that $({\bf u}_{1},{\bf v}_{1})=0$
 (Exercise~\ref{exer:10.6.28}).
 
 \begin{example}\label{example:10.6.5} \rm  In Example~\ref{example:10.6.1}
@@ -469,25 +469,25 @@ $$
 $$
 for the matrix of the system \eqref{eq:10.6.6}. Here ${\bf u}=\dst{\twocol35}$
 and ${\bf v}=\twocol40$ are not orthogonal, since $({\bf u},{\bf
-v})=12$. Since $\|{\bf v}\|^2-\|{\bf u}\|^2=-18$, \eqref{eq:10.6.12} is
+v})=12$. Since $\|{\bf v}\|^{2}-\|{\bf u}\|^{2}=-18$, \eqref{eq:10.6.12} is
 equivalent to
 $$
-2k^2-3k-2=0.
+2k^{2}-3k-2=0.
 $$
-The zeros of this equation are $k_1=2$ and $k_2=-1/2$. Letting $k=2$
+The zeros of this equation are $k_{1}=2$ and $k_{2}=-1/2$. Letting $k=2$
 in \eqref{eq:10.6.11} yields
 $$
-{\bf u}_1={\bf u}-2{\bf v}=\twocol{-5}{\phantom{-}5}\mbox{\quad and \quad}
-{\bf v}_1={\bf v}+2{\bf u}=\twocol{10}{10},
+{\bf u}_{1}={\bf u}-2{\bf v}=\twocol{-5}{\phantom{-}5}\mbox{\quad and \quad}
+{\bf v}_{1}={\bf v}+2{\bf u}=\twocol{10}{10},
 $$
-and $({\bf u}_1,{\bf v}_1)=0$.
+and $({\bf u}_{1},{\bf v}_{1})=0$.
  Letting $k=-1/2$
 in \eqref{eq:10.6.11} yields
 $$
-{\bf u}_1={\bf u}+{{\bf v}\over2}=\twocol{5}5\mbox{\quad and \quad}
-{\bf v}_1={\bf v}-{{\bf u}\over2}={1\over2}\twocol{-5}{\phantom{-}5},
+{\bf u}_{1}={\bf u}+\frac{{\bf v}}{2}=\twocol{5}5\mbox{\quad and \quad}
+{\bf v}_{1}={\bf v}-\frac{{\bf u}}{2}=\frac{1}{2}\twocol{-5}{\phantom{-}5},
 $$
-and again $({\bf u}_1,{\bf v}_1)=0$. \bbox
+and again $({\bf u}_{1},{\bf v}_{1})=0$. \bbox
 \end{example}
 
 (The numbers don't always work out as nicely as in this example.
@@ -498,35 +498,35 @@ Henceforth, we'll assume that $({\bf u},{\bf v})=0$. Let ${\bf U}$ and
 ${\bf V}$ be unit vectors in the directions of ${\bf u}$ and ${\bf
 v}$, respectively; that is, ${\bf U}={\bf u}/\|{\bf u}\|$ and ${\bf
 V}={\bf v}/\|{\bf v}\|$. The new rectangular coordinate system will
-have the same origin as the $y_1$-$y_2$ system. The coordinates of a
-point in this system will be denoted by $(z_1,z_2)$, where $z_1$ and
-$z_2$ are the displacements in the directions of ${\bf U}$ and ${\bf
+have the same origin as the $y_{1}$-$y_{2}$ system. The coordinates of a
+point in this system will be denoted by $(z_{1},z_{2})$, where $z_{1}$ and
+$z_{2}$ are the displacements in the directions of ${\bf U}$ and ${\bf
 V}$, respectively.
 
 From \eqref{eq:10.6.5}, the solutions of \eqref{eq:10.6.10} are given by
-\begin{equation} \label{eq:10.6.13} {\bf y}=e^{\alpha t}\left[(c_1\cos\beta
-t+c_2\sin\beta t){\bf u} +(-c_1\sin\beta t+c_2\cos\beta t){\bf
+\begin{equation} \label{eq:10.6.13}{\bf y}=e^{\alpha t}\left[(c_{1}\cos\beta
+t+c_{2}\sin\beta t){\bf u}+(-c_{1}\sin\beta t+c_{2}\cos\beta t){\bf
 v}\right]. \end{equation} For convenience, let's call the curve
 traversed by $e^{-\alpha t}{\bf y}(t)$ a {\color{blue}\it shadow trajectory\/} of
 \eqref{eq:10.6.10}. Multiplying \eqref{eq:10.6.13} by $e^{-\alpha t}$ yields
 $$
-e^{-\alpha t}{\bf y}(t)=z_1(t){\bf U}+z_2(t){\bf V},
+e^{-\alpha t}{\bf y}(t)=z_{1}(t){\bf U}+z_{2}(t){\bf V},
 $$
 where
 \begin{eqnarray*}
-z_1(t)&=&\|{\bf u}\|(c_1\cos\beta t+c_2\sin\beta
-t)\\ z_2(t)&=&\|{\bf v}\|(-c_1\sin\beta t+c_2\cos\beta t).
+z_{1}(t)&=&\|{\bf u}\|(c_{1}\cos\beta t+c_{2}\sin\beta
+t)\\z_{2}(t)&=&\|{\bf v}\|(-c_{1}\sin\beta t+c_{2}\cos\beta t).
 \end{eqnarray*}
 Therefore
-$$ {(z_1(t))^2\over\|{\bf
-u}\|^2}+{(z_2(t))^2\over\|{\bf v}\|^2} =c_1^2+c_2^2
+$$ \frac{(z_{1}(t))^{2}}{\|{\bf
+u}\|^{2}}+\frac{(z_{2}(t))^{2}}{\|{\bf v}\|^{2}}=c_{1}^{2}+c_{2}^{2}
 $$
 (verify!), which means that the shadow trajectories of \eqref{eq:10.6.10}
 are ellipses centered at the origin, with axes of symmetry parallel to
 ${\bf U}$ and ${\bf V}$. Since
 $$
-z_1'={\beta\|{\bf u}\|\over\|{\bf v}\|} z_2\mbox{\quad and \quad}
-z_2'=-{\beta\|{\bf v}\|\over\|{\bf u}\|} z_1,
+z_{1}'=\frac{\beta\|{\bf u}\|}{\|{\bf v}\|}z_{2}\mbox{\quad and \quad}
+z_{2}'=-\frac{\beta\|{\bf v}\|}{\|{\bf u}\|}z_{1},
 $$
  the vector from the
 origin to a point on the shadow ellipse rotates in the same direction
@@ -653,7 +653,7 @@ y}'=\threebythree{-3}1{-3}4{-1}24{-2}3{\bf y}}$
 \item\label{exer:10.6.9}  $\dst{{\bf y}'=\twobytwo5{-4}{10}1{\bf
 y}}$&
  \item\label{exer:10.6.10}  $\dst{{\bf
-y}'={1\over3}\twobytwo7{-5}25{\bf y}}$
+y}'=\frac{1}{3}\twobytwo7{-5}25{\bf y}}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -680,33 +680,33 @@ y}'=\threebythree12{-2}02{-1}100{\bf y}'}$
 solve the initial value problem.}
 
 \item\label{exer:10.6.17}
-$\dst{{\bf y}'=\twobytwo4{-6}3{-2}{\bf y},\quad {\bf
+$\dst{{\bf y}'=\twobytwo4{-6}3{-2}{\bf y},\quad{\bf
 y}(0)=\twocol52}$
 
 \item\label{exer:10.6.18}
-$\dst{{\bf y}'=\twobytwo7{15}{-3}1{\bf y},\quad {\bf
+$\dst{{\bf y}'=\twobytwo7{15}{-3}1{\bf y},\quad{\bf
 y}(0)=\twocol51}$
 
 \item\label{exer:10.6.19}
-$\dst{{\bf y}'=\twobytwo7{-15}3{-5}{\bf y},\quad {\bf
+$\dst{{\bf y}'=\twobytwo7{-15}3{-5}{\bf y},\quad{\bf
 y}(0)=\twocol{17}7}$
 
 \item\label{exer:10.6.20}
-$\dst{{\bf y}'={1\over6}\twobytwo4{-2}52{\bf y},\quad {\bf
+$\dst{{\bf y}'=\frac{1}{6}\twobytwo4{-2}52{\bf y},\quad{\bf
 y}(0)=\twocol1{-1}}$
 
 \item\label{exer:10.6.21}
-$\dst{{\bf y}'=\threebythree52{-1}{-3}22132{\bf y},\quad {\bf
+$\dst{{\bf y}'=\threebythree52{-1}{-3}22132{\bf y},\quad{\bf
 y}(0)=\threecol406}$
 
 \item\label{exer:10.6.22}
-$\dst{{\bf y}'=\threebythree4408{10}{-20}23{-2}{\bf y},\quad {\bf
+$\dst{{\bf y}'=\threebythree4408{10}{-20}23{-2}{\bf y},\quad{\bf
 y}(0)=\threecol865}$
 
 \item\label{exer:10.6.23}
 $\dst{{\bf
 y}'=\threebythree1{15}{-15}{-6}{18}{-22}{-3}{11}{-15}{\bf
-y},\quad {\bf y}(0)=\threecol{15}{17}{10}}$
+y},\quad{\bf y}(0)=\threecol{15}{17}{10}}$
 
 \item\label{exer:10.6.24}
 $\dst{{\bf y}'=\threebythree4{-4}4{-10}3{15}2{-3}1{\bf y},\quad
@@ -722,9 +722,9 @@ u}$ and ${\bf v}$ are both nonzero.
 \item\label{exer:10.6.26}
 Verify that
 $$
-{\bf y}_1=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
+{\bf y}_{1}=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
 \mbox{\quad and\quad}
-{\bf y}_2=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t),
+{\bf y}_{2}=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t),
 $$
 are the real and imaginary parts of
 $$
@@ -735,9 +735,9 @@ $$
  Show that if the vectors ${\bf u}$ and ${\bf v}$ are not both ${\bf
 0}$ and $\beta\ne0$ then the vector functions
 $$
-{\bf y}_1=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)\quad
+{\bf y}_{1}=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)\quad
 \mbox{ and }\quad
-{\bf y}_2=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t)
+{\bf y}_{2}=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t)
 $$
 are linearly independent on every interval. \hint{There are
 two
@@ -747,35 +747,35 @@ independent, and {\rm(ii)}
 on every interval.}
 
 \item\label{exer:10.6.28}
-Suppose ${\bf u}=\dst{\twocol{u_1}{u_2}}$ and ${\bf
-v}=\dst{\twocol{v_1}{v_2}}$ are not orthogonal; that is, $({\bf
+Suppose ${\bf u}=\dst{\twocol{u_{1}}{u_{2}}}$ and ${\bf
+v}=\dst{\twocol{v_{1}}{v_{2}}}$ are not orthogonal; that is, $({\bf
 u},{\bf v})\ne0$.
 \begin{alist}
 \item % (a)
 Show that  the quadratic equation
 $$
-({\bf u},{\bf v})k^2+(\|{\bf v}\|^2-\|{\bf u}\|^2)k-({\bf u},{\bf
+({\bf u},{\bf v})k^{2}+(\|{\bf v}\|^{2}-\|{\bf u}\|^{2})k-({\bf u},{\bf
 v})=0
 $$
-has a positive root $k_1$ and a negative root $k_2=-1/k_1$.
+has a positive root $k_{1}$ and a negative root $k_{2}=-1/k_{1}$.
 \item % (b)
-Let ${\bf u}_1^{(1)}={\bf u}-k_1{\bf v}$, ${\bf v}_1^{(1)}={\bf
-v}+k_1{\bf u}$, ${\bf u}_1^{(2)}={\bf u}-k_2{\bf v}$, and ${\bf
-v}_1^{(2)}={\bf v}+k_2{\bf u}$, so that $({\bf u}_1^{(1)},{\bf
-v}_1^{(1)}) =({\bf u}_1^{(2)},{\bf v}_1^{(2)})=0$, from the discussion
+Let ${\bf u}_{1}^{(1)}={\bf u}-k_{1}{\bf v}$, ${\bf v}_{1}^{(1)}={\bf
+v}+k_{1}{\bf u}$, ${\bf u}_{1}^{(2)}={\bf u}-k_{2}{\bf v}$, and ${\bf
+v}_{1}^{(2)}={\bf v}+k_{2}{\bf u}$, so that $({\bf u}_{1}^{(1)},{\bf
+v}_{1}^{(1)})=({\bf u}_{1}^{(2)},{\bf v}_{1}^{(2)})=0$, from the discussion
 given above. Show that
 $$
-{\bf u}_1^{(2)}={{\bf v}_1^{(1)}\over k_1}
+{\bf u}_{1}^{(2)}=\frac{{\bf v}_{1}^{(1)}}{k_{1}}
 \mbox{\quad and \quad}
-{\bf v}_1^{(2)}=-{{\bf u}_1^{(1)}\over k_1}.
+{\bf v}_{1}^{(2)}=-\frac{{\bf u}_{1}^{(1)}}{k_{1}}.
 $$
 \item % (c)
-Let ${\bf U}_1$, ${\bf V}_1$, ${\bf U}_2$, and ${\bf V}_2$ be unit
-vectors in the directions of ${\bf u}_1^{(1)}$, ${\bf v}_1^{(1)}$,
-${\bf u}_1^{(2)}$, and ${\bf v}_1^{(2)}$, respectively. Conclude from
-\part{a} that ${\bf U}_2={\bf V}_1$ and ${\bf V}_2=-{\bf U}_1$, and
-that therefore the counterclockwise angles from ${\bf U}_1$ to ${\bf
-V}_1$ and from ${\bf U}_2$ to ${\bf V}_2$ are both $\pi/2$ or both
+Let ${\bf U}_{1}$, ${\bf V}_{1}$, ${\bf U}_{2}$, and ${\bf V}_{2}$ be unit
+vectors in the directions of ${\bf u}_{1}^{(1)}$, ${\bf v}_{1}^{(1)}$,
+${\bf u}_{1}^{(2)}$, and ${\bf v}_{1}^{(2)}$, respectively. Conclude from
+\part{a} that ${\bf U}_{2}={\bf V}_{1}$ and ${\bf V}_{2}=-{\bf U}_{1}$, and
+that therefore the counterclockwise angles from ${\bf U}_{1}$ to ${\bf
+V}_{1}$ and from ${\bf U}_{2}$ to ${\bf V}_{2}$ are both $\pi/2$ or both
 $-\pi/2$.
 \end{alist}
 

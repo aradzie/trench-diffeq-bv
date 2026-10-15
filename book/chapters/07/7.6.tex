@@ -7,16 +7,16 @@ equation near a regular singular point in the case where the indicial
 equation has a repeated real root. As in the preceding section, we
 consider equations that can be written as
 \begin{equation} \label{eq:7.6.1}
-x^2(\alpha_0+\alpha_1x+\alpha_2x^2)y''+x(\beta_0+\beta_1x+\beta_2x^2)y'
-+(\gamma_0+\gamma_1x+\gamma_2x^2)y=0
+x^{2}(\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2})y''+x(\beta_{0}+\beta_{1}x+\beta_{2}x^{2})y'
++(\gamma_{0}+\gamma_{1}x+\gamma_{2}x^{2})y=0
 \end{equation}
-where $\alpha_0\ne0$. We assume that the indicial equation $p_0(r)=0$
-has a repeated real root $r_1$. In this case Theorem~\ref{thmtype:7.5.3}
+where $\alpha_{0}\ne0$. We assume that the indicial equation $p_{0}(r)=0$
+has a repeated real root $r_{1}$. In this case Theorem~\ref{thmtype:7.5.3}
 implies that \eqref{eq:7.6.1} has one solution of the form
 $$
-y_1=x^{r_1}\sum_{n=0}^\infty a_nx^n,
+y_{1}=x^{r_{1}}\sum_{n=0}^{\infty}a_{n}x^{n},
 $$
-but does not provide a second solution $y_2$ such that $\{y_1,y_2\}$
+but does not provide a second solution $y_{2}$ such that $\{y_{1},y_{2}\}$
 is a fundamental set of solutions. The following extension of
 Theorem~\ref{thmtype:7.5.2} provides a way to find a second solution.
 
@@ -24,43 +24,42 @@ Theorem~\ref{thmtype:7.5.2} provides a way to find a second solution.
 Let
 \begin{equation} \label{eq:7.6.2}
 Ly=
-x^2(\alpha_0+\alpha_1x+\alpha_2x^2)y''+x(\beta_0+\beta_1x+\beta_2x^2)y'
-+(\gamma_0+\gamma_1x+\gamma_2x^2)y,
+x^{2}(\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2})y''+x(\beta_{0}+\beta_{1}x+\beta_{2}x^{2})y'
++(\gamma_{0}+\gamma_{1}x+\gamma_{2}x^{2})y,
 \end{equation}
-where $\alpha_0\ne0$ and define
+where $\alpha_{0}\ne0$ and define
 \begin{eqnarray*}
-p_0(r)&=&\alpha_0r(r-1)+\beta_0r+\gamma_0,\\[5pt]
-p_1(r)&=&\alpha_1r(r-1)+\beta_1r+\gamma_1,\\[5pt]
-p_2(r)&=&\alpha_2r(r-1)+\beta_2r+\gamma_2.\\
+p_{0}(r)&=&\alpha_{0}r(r-1)+\beta_{0}r+\gamma_{0},\\[5pt]
+p_{1}(r)&=&\alpha_{1}r(r-1)+\beta_{1}r+\gamma_{1},\\[5pt]
+p_{2}(r)&=&\alpha_{2}r(r-1)+\beta_{2}r+\gamma_{2}.\\
 \end{eqnarray*}
 Suppose $r$ is
-a real number such that $p_0(n+r)$ is nonzero
+a real number such that $p_{0}(n+r)$ is nonzero
 for all positive integers $n$, and define
 $$
 \begin{array}{ccl}
-a_0(r)&=&1,\\
-a_1(r)&=&-\dst{p_1(r)\over p_0(r+1)},\\[10pt]
-a_n(r)&=&-\dst{p_1(n+r-1)a_{n-1}(r)+p_2(n+r-2)a_{n-2}(r)\over
-p_0(n+r)},\quad n\ge2.
+a_{0}(r)&=&1,\\
+a_{1}(r)&=&-\dst\frac{p_{1}(r)}{p_{0}(r+1)},\\[10pt]
+a_{n}(r)&=&-\dst\frac{p_{1}(n+r-1)a_{n-1}(r)+p_{2}(n+r-2)a_{n-2}(r)}{p_{0}(n+r)},\quad n\ge2.
 \end{array}
 $$
 Then the Frobenius series
 \begin{equation} \label{eq:7.6.3}
-y(x,r)=x^r\sum_{n=0}^\infty a_n(r)x^n
+y(x,r)=x^{r}\sum_{n=0}^{\infty}a_{n}(r)x^{n}
 \end{equation}
 satisfies
 \begin{equation} \label{eq:7.6.4}
-Ly(x,r)=p_0(r)x^r.
+Ly(x,r)=p_{0}(r)x^{r}.
 \end{equation}
 Moreover,
 \begin{equation} \label{eq:7.6.5}
-{\partial y\over \partial r}(x,r)=y(x,r)\ln x+x^r\sum_{n=1}^\infty
-a_n'(r) x^n,
+\frac{\partial y}{\partial r}(x,r)=y(x,r)\ln x+x^{r}\sum_{n=1}^{\infty}
+a_{n}'(r)x^{n},
 \end{equation}
 and
 \begin{equation} \label{eq:7.6.6}
-L\left({\partial y\over \partial
-r}(x,r)\right)=p'_0(r)x^r+x^rp_0(r)\ln x.
+L\left(\frac{\partial y}{\partial
+r}(x,r)\right)=p'_{0}(r)x^{r}+x^{r}p_{0}(r)\ln x.
 \end{equation}
 \end{theorem}
 
@@ -69,13 +68,13 @@ Theorem~\ref{thmtype:7.5.2} implies \eqref{eq:7.6.4}. Differentiating
 formally
 with respect to $r$ in \eqref{eq:7.6.3} yields
 \begin{eqnarray*}
-{\partial y\over \partial
-r}(x,r)&=&\dst{{\partial\over\partial r}(x^r)\sum_{n=0}^\infty
-a_n(r)x^n +x^r\sum_{n=1}^\infty  a_n'(r)x^n}\\[10pt]
-&=&\dst{x^r\ln x\sum_{n=0}^\infty
-a_n(r)x^n +x^r\sum_{n=1}^\infty  a_n'(r)x^n}\\[10pt]
-&=&y(x,r) \ln x +
-x^r\sum_{n=1}^\infty  a_n'(r)x^n,
+{\frac{\partial y}{\partial
+r}}(x,r)&=&\dst{\frac{\partial}{\partial r}(x^{r})\sum_{n=0}^{\infty}
+a_{n}(r)x^{n}+x^{r}\sum_{n=1}^{\infty}a_{n}'(r)x^{n}}\\[10pt]
+&=&\dst{x^{r}\ln x\sum_{n=0}^{\infty}
+a_{n}(r)x^{n}+x^{r}\sum_{n=1}^{\infty}a_{n}'(r)x^{n}}\\[10pt]
+&=&y(x,r)\ln x+
+x^{r}\sum_{n=1}^{\infty}a_{n}'(r)x^{n},
 \end{eqnarray*}
 which proves \eqref{eq:7.6.5}.
 
@@ -84,90 +83,89 @@ view $y$ in \eqref{eq:7.6.2} as a function $y=y(x,r)$  of two
 variables, where the prime indicates partial differentiation with
 respect to $x$;   thus,
 $$
-y'=y'(x,r)={\partial y\over\partial x}(x,r)\mbox{\quad and \quad}
-y''=y''(x,r)={\partial^2 y\over\partial x^2}(x,r).
+y'=y'(x,r)=\frac{\partial y}{\partial x}(x,r)\mbox{\quad and \quad}
+y''=y''(x,r)=\frac{\partial^{2}y}{\partial x^{2}}(x,r).
 $$
 With this notation we can use \eqref{eq:7.6.2} to rewrite \eqref{eq:7.6.4} as
 \begin{equation} \label{eq:7.6.7}
-x^2q_0(x){\partial^2 y\over \partial x^2}(x,r)+xq_1(x){\partial y\over
-\partial x}(x,r)+q_2(x)y(x,r)=p_0(r)x^r,
+x^{2}q_{0}(x)\frac{\partial^{2}y}{\partial x^{2}}(x,r)+xq_{1}(x)\frac{\partial y}{\partial x}(x,r)+q_{2}(x)y(x,r)=p_{0}(r)x^{r},
 \end{equation}
 where
 \begin{eqnarray*}
-q_0(x)&=&\alpha_0+\alpha_1x+\alpha_2x^2,\\[5pt]
-q_1(x)&=&\beta_0+\beta_1x+\beta_2x^2,\\[5pt]
-q_2(x)&=&\gamma_0+\gamma_1x+\gamma_2x^2.\\[5pt]
+q_{0}(x)&=&\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2},\\[5pt]
+q_{1}(x)&=&\beta_{0}+\beta_{1}x+\beta_{2}x^{2},\\[5pt]
+q_{2}(x)&=&\gamma_{0}+\gamma_{1}x+\gamma_{2}x^{2}.\\[5pt]
 \end{eqnarray*}
 Differentiating both sides of \eqref{eq:7.6.7} with respect to $r$
 yields
 $$
-x^2q_0(x){\partial^3y\over \partial r\partial x^2}(x,r)+
-xq_1(x){\partial^2y\over \partial r\partial x}(x,r)+q_2(x){\partial
-y\over\partial r}(x,r)=p'_0(r)x^r+p_0(r) x^r \ln x.
+x^{2}q_{0}(x)\frac{\partial^{3}y}{\partial r\partial x^{2}}(x,r)+
+xq_{1}(x)\frac{\partial^{2}y}{\partial r\partial x}(x,r)+q_{2}(x)\frac{\partial
+y}{\partial r}(x,r)=p'_{0}(r)x^{r}+p_{0}(r)x^{r}\ln x.
 $$
 By changing the order of differentiation in the first two terms on the left
 we can rewrite this  as
 $$
-x^2q_0(x){\partial^3 y\over \partial x^2\partial r}(x,r)
-+xq_1(x){\partial^2 y\over \partial x\partial r}(x,r)+q_2(x){\partial
-y\over \partial r}(x,r)=p'_0(r)x^r+p_0(r) x^r \ln x,
+x^{2}q_{0}(x)\frac{\partial^{3}y}{\partial x^{2}\partial r}(x,r)
++xq_{1}(x)\frac{\partial^{2}y}{\partial x\partial r}(x,r)+q_{2}(x)\frac{\partial
+y}{\partial r}(x,r)=p'_{0}(r)x^{r}+p_{0}(r)x^{r}\ln x,
 $$
 or
 $$
-x^2q_0(x){\partial^2\over \partial x^2}
-\left({\partial y\over\partial r}(x,r)\right)
-+xq_1(x){\partial\over\partial r}\left({\partial y\over\partial
-x}(x,r)\right) +q_2(x){\partial y\over\partial r}(x,r)=
-p'_0(r)x^r+p_0(r) x^r \ln x,
+x^{2}q_{0}(x)\frac{\partial^{2}}{\partial x^{2}}
+\left(\frac{\partial y}{\partial r}(x,r)\right)
++xq_{1}(x)\frac{\partial}{\partial r}\left(\frac{\partial y}{\partial
+x}(x,r)\right)+q_{2}(x)\frac{\partial y}{\partial r}(x,r)=
+p'_{0}(r)x^{r}+p_{0}(r)x^{r}\ln x,
 $$
 which is equivalent to \eqref{eq:7.6.6}.
 
 \begin{theorem}\color{blue} \label{thmtype:7.6.2}
 Let $L$ be as in Theorem~{\rm\ref{thmtype:7.6.1}} and suppose the
-indicial equation $p_0(r)=0$ has a repeated real root $r_1$.
+indicial equation $p_{0}(r)=0$ has a repeated real root $r_{1}$.
 Then
 $$
-y_1(x)=y(x,r_1)=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n
+y_{1}(x)=y(x,r_{1})=x^{r_{1}}\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}
 $$
 and
 \begin{equation} \label{eq:7.6.8}
-y_2(x)={\partial y\over\partial r}(x,r_1)=y_1(x)\ln
-x+x^{r_1}\sum_{n=1}^\infty a_n'(r_1)x^n
+y_{2}(x)=\frac{\partial y}{\partial r}(x,r_{1})=y_{1}(x)\ln
+x+x^{r_{1}}\sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}
 \end{equation}
 form a fundamental set of solutions of $Ly=0$.
 \end{theorem}
 
 \proof
-Since $r_1$  is a repeated root of $p_0(r)=0$, the indicial polynomial
+Since $r_{1}$  is a repeated root of $p_{0}(r)=0$, the indicial polynomial
 can be factored as
 $$
-p_0(r)=\alpha_0(r-r_1)^2,
+p_{0}(r)=\alpha_{0}(r-r_{1})^{2},
 $$
 so
 $$
-p_0(n+r_1)=\alpha_0n^2,
+p_{0}(n+r_{1})=\alpha_{0}n^{2},
 $$
 which is nonzero if $n>0$. Therefore the assumptions of
-Theorem~\ref{thmtype:7.6.1} hold with $r=r_1$, and \eqref{eq:7.6.4} implies
-that $Ly_1=p_0(r_1)x^{r_1}=0$. Since
+Theorem~\ref{thmtype:7.6.1} hold with $r=r_{1}$, and \eqref{eq:7.6.4} implies
+that $Ly_{1}=p_{0}(r_{1})x^{r_{1}}=0$. Since
 $$
-p_0'(r)=2\alpha(r-r_1)
+p_{0}'(r)=2\alpha(r-r_{1})
 $$
-it follows that $p_0'(r_1)=0$, so \eqref{eq:7.6.6} implies that
+it follows that $p_{0}'(r_{1})=0$, so \eqref{eq:7.6.6} implies that
 $$
-Ly_2=p_0'(r_1)x^{r_1}+x^{r_1}p_0(r_1)\ln x=0.
+Ly_{2}=p_{0}'(r_{1})x^{r_{1}}+x^{r_{1}}p_{0}(r_{1})\ln x=0.
 $$
-This proves that $y_1$ and $y_2$ are both solutions of $Ly=0$. We
-leave the proof that $\{y_1,y_2\}$ is a fundamental set as an exercise
+This proves that $y_{1}$ and $y_{2}$ are both solutions of $Ly=0$. We
+leave the proof that $\{y_{1},y_{2}\}$ is a fundamental set as an exercise
 (Exercise~\ref{exer:7.6.53}).
 
 \begin{example}\label{example:7.6.1} \rm
 Find  a fundamental set of solutions of
 \begin{equation} \label{eq:7.6.9}
-x^2(1-2x+x^2)y''-x(3+x)y'+(4+x)y=0.
+x^{2}(1-2x+x^{2})y''-x(3+x)y'+(4+x)y=0.
 \end{equation}
-Compute just the terms involving $x^{n+r_1}$, where  $0\le n\le4$
-and $r_1$ is the root of the indicial equation.
+Compute just the terms involving $x^{n+r_{1}}$, where  $0\le n\le4$
+and $r_{1}$ is the root of the indicial equation.
 \end{example}
 
 \solution
@@ -175,41 +173,39 @@ For the given equation,  the polynomials defined in
 Theorem~\ref{thmtype:7.6.1} are
 $$
 \begin{array}{lllll}
-p_0(r)&=&r(r-1)-3r+4&=&(r-2)^2,\\[5pt]
-p_1(r)&=&-2r(r-1)-r+1&=&-(r-1)(2r+1),\\[5pt]
-p_2(r)&=&r(r-1).
+p_{0}(r)&=&r(r-1)-3r+4&=&(r-2)^{2},\\[5pt]
+p_{1}(r)&=&-2r(r-1)-r+1&=&-(r-1)(2r+1),\\[5pt]
+p_{2}(r)&=&r(r-1).
 \end{array}
 $$
-Since $r_1=2$ is a repeated root of the indicial polynomial $p_0$,
+Since $r_{1}=2$ is a repeated root of the indicial polynomial $p_{0}$,
 Theorem~\ref{thmtype:7.6.2} implies that
 \begin{equation} \label{eq:7.6.10}
-y_1=x^2\sum_{n=0}^\infty  a_n(2)x^n\quad\mbox{ and }\quad
-y_2=y_1\ln x+x^2\sum_{n=1}^\infty a_n'(2)x^n
+y_{1}=x^{2}\sum_{n=0}^{\infty}a_{n}(2)x^{n}\quad\mbox{ and }\quad
+y_{2}=y_{1}\ln x+x^{2}\sum_{n=1}^{\infty}a_{n}'(2)x^{n}
 \end{equation}
 form a fundamental set of  Frobenius solutions of \eqref{eq:7.6.9}.
 To find the coefficients in these series, we use the recurrence
 formulas from Theorem~\ref{thmtype:7.6.1}:
 \begin{equation} \label{eq:7.6.11}
 \begin{array}{ccl}
-a_0(r)&=&1,\\
-a_1(r)&=&-\dst{p_1(r)\over p_0(r+1)}
-=-\dst{(r-1)(2r+1)\over(r-1)^2}
-=\dst{2r+1\over r-1},\\[10pt]
-a_n(r)&=&-\dst{p_1(n+r-1)a_{n-1}(r)+p_2(n+r-2)a_{n-2}(r)\over
-p_0(n+r)}\\[10pt]
-&=&\dst{(n+r-2)\left[(2n+2r-1)a_{n-1}(r)
--(n+r-3)a_{n-2}(r)\right]\over(n+r-2)^2}\\[10pt]
-&=&\dst{{(2n+2r-1)\over(n+r-2)}a_{n-1}(r)-
-{(n+r-3)\over(n+r-2)}a_{n-2}(r)},n\ge2.
+a_{0}(r)&=&1,\\
+a_{1}(r)&=&-\dst\frac{p_{1}(r)}{p_{0}(r+1)}
+=-\dst\frac{(r-1)(2r+1)}{(r-1)^{2}}
+=\dst\frac{2r+1}{r-1},\\[10pt]
+a_{n}(r)&=&-\dst\frac{p_{1}(n+r-1)a_{n-1}(r)+p_{2}(n+r-2)a_{n-2}(r)}{p_{0}(n+r)}\\[10pt]
+&=&\dst\frac{(n+r-2)\left[(2n+2r-1)a_{n-1}(r)
+-(n+r-3)a_{n-2}(r)\right]}{(n+r-2)^{2}}\\[10pt]
+&=&\dst{\frac{(2n+2r-1)}{(n+r-2)}a_{n-1}(r)-
+\frac{(n+r-3)}{(n+r-2)}a_{n-2}(r)},n\ge2.
 \end{array}
 \end{equation}
 Differentiating yields
 \begin{equation} \label{eq:7.6.12}
 \begin{array}{ccl}
-a'_1(r)&=&-\dst{3\over (r-1)^2},\\[10pt]
-a'_n(r)&=&\dst{{2n+2r-1\over n+r-2}a'_{n-1}(r)-{n+r-3\over
-n+r-2}a'_{n-2}(r)}\\[10pt]
-&&\dst{-{3\over(n+r-2)^2}a_{n-1}(r)-{1\over(n+r-2)^2}a_{n-2}(r)},\quad
+a'_{1}(r)&=&-\dst\frac{3}{(r-1)^{2}},\\[10pt]
+a'_{n}(r)&=&\dst{\frac{2n+2r-1}{n+r-2}a'_{n-1}(r)-\frac{n+r-3}{n+r-2}a'_{n-2}(r)}\\[10pt]
+&&\dst{-\frac{3}{(n+r-2)^{2}}a_{n-1}(r)-\frac{1}{(n+r-2)^{2}}a_{n-2}(r)},\quad
 n\ge2.
 \end{array}
 \end{equation}
@@ -217,48 +213,48 @@ n\ge2.
 Setting $r=2$ in \eqref{eq:7.6.11} and \eqref{eq:7.6.12} yields
 \begin{equation} \label{eq:7.6.13}
 \begin{array}{ccl}
-a_0(2)&=&1,\\
-a_1(2)&=&5,\\[10pt]
-a_n(2)&=&\dst{{(2n+3)\over n}
-a_{n-1}(2)-{(n-1)\over n}a_{n-2}(2)},\quad n\ge2
+a_{0}(2)&=&1,\\
+a_{1}(2)&=&5,\\[10pt]
+a_{n}(2)&=&\dst{\frac{(2n+3)}{n}
+a_{n-1}(2)-\frac{(n-1)}{n}a_{n-2}(2)},\quad n\ge2
 \end{array}
 \end{equation}
 and
 \begin{equation} \label{eq:7.6.14}
 \begin{array}{ccl}
-a_1'(2)&=&-3,\\[10pt]
-a'_n(2)&=&\dst{{2n+3\over n}a'_{n-1}(2)-{n-1\over n}a'_{n-2}(2)
--{3\over n^2}a_{n-1}(2)-{1\over n^2}a_{n-2}(2)},\quad n\ge2.
+a_{1}'(2)&=&-3,\\[10pt]
+a'_{n}(2)&=&\dst{\frac{2n+3}{n}a'_{n-1}(2)-\frac{n-1}{n}a'_{n-2}(2)
+-\frac{3}{n^{2}}a_{n-1}(2)-\frac{1}{n^{2}}a_{n-2}(2)},\quad n\ge2.
 \end{array}
 \end{equation}
 Computing recursively with  \eqref{eq:7.6.13} and \eqref{eq:7.6.14}
 yields
 $$
-a_0(2)=1,\,a_1(2)=5,\,a_2(2)=17,\,a_3(2)={143\over3},\,a_4(2)={355\over3},
+a_{0}(2)=1,\,a_{1}(2)=5,\,a_{2}(2)=17,\,a_{3}(2)=\frac{143}{3},\,a_{4}(2)=\frac{355}{3},
 $$
 and
 $$
-a_1'(2)=-3,\,a_2'(2)=-{29\over2},\,a_3'(2)=-{859\over18},
-\,a_4'(2)=-{4693\over36}.
+a_{1}'(2)=-3,\,a_{2}'(2)=-\frac{29}{2},\,a_{3}'(2)=-\frac{859}{18},
+\,a_{4}'(2)=-\frac{4693}{36}.
 $$
 Substituting these coefficients into \eqref{eq:7.6.10} yields
 $$
-y_1=x^2\left(1+5x+17x^2+{143\over3}x^3
-+{355\over3}x^4+\cdots\right)
+y_{1}=x^{2}\left(1+5x+17x^{2}+\frac{143}{3}x^{3}
++\frac{355}{3}x^{4}+\cdots\right)
 $$
 and
 $$
-y_2=y_1 \ln x
--x^3\left(3+{29\over2}x+{859\over18}x^2+{4693\over36}x^3
-+\cdots\right). \bbox
+y_{2}=y_{1}\ln x
+-x^{3}\left(3+\frac{29}{2}x+\frac{859}{18}x^{2}+\frac{4693}{36}x^{3}
++\cdots\right).\bbox
 $$
 
 Since the recurrence formula \eqref{eq:7.6.11} involves three terms, it's
 not possible to obtain a simple explicit formula for the coefficients
 in the Frobenius solutions of \eqref{eq:7.6.9}. However, as we saw in the
-preceding sections, the recurrence formula for $\{a_n(r)\}$ involves
-only two terms if either $\alpha_1=\beta_1=\gamma_1=0$ or
-$\alpha_2=\beta_2=\gamma_2=0$ in \eqref{eq:7.6.1}. In this case, it's
+preceding sections, the recurrence formula for $\{a_{n}(r)\}$ involves
+only two terms if either $\alpha_{1}=\beta_{1}=\gamma_{1}=0$ or
+$\alpha_{2}=\beta_{2}=\gamma_{2}=0$ in \eqref{eq:7.6.1}. In this case, it's
 often
 possible to find explicit formulas for the coefficients. The next two
 examples illustrate this.
@@ -266,7 +262,7 @@ examples illustrate this.
 \begin{example}\label{example:7.6.2} \rm
 Find a fundamental set of Frobenius  solutions of
 \begin{equation} \label{eq:7.6.15}
-2x^2(2+x)y''+5x^2y'+(1+x)y=0.
+2x^{2}(2+x)y''+5x^{2}y'+(1+x)y=0.
 \end{equation}
 Give explicit formulas for the coefficients in the solutions.
 \end{example}
@@ -276,92 +272,90 @@ For  the given equation, the polynomials defined in
 Theorem~\ref{thmtype:7.6.1} are
 $$
 \begin{array}{ccccc}
-p_0(r)&=&4r(r-1)+1&=&(2r-1)^2,\\[5pt]
-p_1(r)&=&2r(r-1)+5r+1&=&(r+1)(2r+1),\\[5pt]
-p_2(r)&=&0.
+p_{0}(r)&=&4r(r-1)+1&=&(2r-1)^{2},\\[5pt]
+p_{1}(r)&=&2r(r-1)+5r+1&=&(r+1)(2r+1),\\[5pt]
+p_{2}(r)&=&0.
 \end{array}
 $$
-Since $r_1=1/2$ is a repeated zero of the  indicial polynomial $p_0$,
+Since $r_{1}=1/2$ is a repeated zero of the  indicial polynomial $p_{0}$,
 Theorem~\ref{thmtype:7.6.2} implies that
 \begin{equation} \label{eq:7.6.16}
-y_1=x^{1/2}\sum_{n=0}^\infty  a_n(1/2)x^n
+y_{1}=x^{1/2}\sum_{n=0}^{\infty}a_{n}(1/2)x^{n}
 \end{equation}
 and
 \begin{equation} \label{eq:7.6.17}
-y_2=y_1\ln x+x^{1/2}\sum_{n=1}^\infty a_n'(1/2)x^n
+y_{2}=y_{1}\ln x+x^{1/2}\sum_{n=1}^{\infty}a_{n}'(1/2)x^{n}
 \end{equation}
 form a fundamental set of Frobenius solutions of \eqref{eq:7.6.15}.
-Since $p_2\equiv0$, the recurrence formulas in Theorem~\ref{thmtype:7.6.1}
+Since $p_{2}\equiv0$, the recurrence formulas in Theorem~\ref{thmtype:7.6.1}
  reduce to
 $$
 \begin{array}{ccl}
-a_0(r)&=&1,\\
-a_n(r)&=&-\dst{p_1(n+r-1)\over p_0(n+r)}a_{n-1}(r),\\[10pt]
-&=&-\dst{(n+r)(2n+2r-1)\over(2n+2r-1)^2}a_{n-1}(r),\\[10pt]
-&=&-\dst{n+r\over2n+2r-1}a_{n-1}(r),\quad n\ge0.
+a_{0}(r)&=&1,\\
+a_{n}(r)&=&-\dst\frac{p_{1}(n+r-1)}{p_{0}(n+r)}a_{n-1}(r),\\[10pt]
+&=&-\dst\frac{(n+r)(2n+2r-1)}{(2n+2r-1)^{2}}a_{n-1}(r),\\[10pt]
+&=&-\dst\frac{n+r}{2n+2r-1}a_{n-1}(r),\quad n\ge0.
 \end{array}
 $$
 We leave it to you to show that
 \begin{equation} \label{eq:7.6.18}
-a_n(r)=(-1)^n\prod_{j=1}^n{j+r\over2j+2r-1},\quad n\ge0.
+a_{n}(r)=(-1)^{n}\prod_{j=1}^{n}\frac{j+r}{2j+2r-1},\quad n\ge0.
 \end{equation}
 Setting $r=1/2$  yields
 \begin{equation} \label{eq:7.6.19}
 \begin{array}{ccl}
-a_n(1/2)&=&(-1)^n\dst\prod_{j=1}^n\dst{j+1/2\over2j}=
-(-1)^n\prod_{j=1}^n\dst{2j+1\over4j},\\[10pt]
-&=&\dst{(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!},\quad n\ge0.
+a_{n}(1/2)&=&(-1)^{n}\dst\prod_{j=1}^{n}\dst\frac{j+1/2}{2j}=
+(-1)^{n}\prod_{j=1}^{n}\dst\frac{2j+1}{4j},\\[10pt]
+&=&\dst\frac{(-1)^{n}\prod_{j=1}^{n}(2j+1)}{4^{n}n!},\quad n\ge0.
 \end{array}
 \end{equation}
 Substituting this into \eqref{eq:7.6.16} yields
 $$
-y_1=x^{1/2}\sum_{n=0}^\infty{(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}x^n.
+y_{1}=x^{1/2}\sum_{n=0}^{\infty}\frac{(-1)^{n}\prod_{j=1}^{n}(2j+1)}{4^{n}n!}x^{n}.
 $$
 
-To obtain $y_2$ in \eqref{eq:7.6.17}, we must compute $a_n'(1/2)$
+To obtain $y_{2}$ in \eqref{eq:7.6.17}, we must compute $a_{n}'(1/2)$
 for $n=1$, $2$,\dots. We'll do this by logarithmic
 differentiation.  From \eqref{eq:7.6.18},
 $$
-|a_n(r)|=\prod_{j=1}^n{|j+r|\over|2j+2r-1|},\quad n\ge1.
+|a_{n}(r)|=\prod_{j=1}^{n}\frac{|j+r|}{|2j+2r-1|},\quad n\ge1.
 $$
 Therefore
 $$
-\ln |a_n(r)|=\sum^n_{j=1} \left(\ln |j+r|-\ln|2j+2r-1|\right).
+\ln|a_{n}(r)|=\sum^{n}_{j=1}\left(\ln|j+r|-\ln|2j+2r-1|\right).
 $$
 Differentiating with respect to $r$ yields
 $$
-{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left({1\over
-j+r}-{2\over2j+2r-1}\right).
+\frac{a'_{n}(r)}{a_{n}(r)}=\sum^{n}_{j=1}\left(\frac{1}{j+r}-\frac{2}{2j+2r-1}\right).
 $$
 Therefore
 $$
-a'_n(r)=a_n(r) \sum^n_{j=1} \left({1\over j+r}-{2\over2j+2r-1}\right).
+a'_{n}(r)=a_{n}(r)\sum^{n}_{j=1}\left(\frac{1}{j+r}-\frac{2}{2j+2r-1}\right).
 $$
 Setting $r=1/2$ here and recalling \eqref{eq:7.6.19} yields
 \begin{equation} \label{eq:7.6.20}
-a'_n(1/2)={(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}\left(\sum_{j=1}^n{1\over
-j+1/2}-\sum_{j=1}^n{1\over j}\right).
+a'_{n}(1/2)=\frac{(-1)^{n}\prod_{j=1}^{n}(2j+1)}{4^{n}n!}\left(\sum_{j=1}^{n}\frac{1}{j+1/2}-\sum_{j=1}^{n}\frac{1}{j}\right).
 \end{equation}
 Since
 $$
-{1\over j+1/2}-{1\over j}={j-j-1/2\over j(j+1/2)}=-{1\over j(2j+1)},
+\frac{1}{j+1/2}-\frac{1}{j}=\frac{j-j-1/2}{j(j+1/2)}=-\frac{1}{j(2j+1)},
 $$
  \eqref{eq:7.6.20} can be rewritten as
 $$
-a'_n(1/2)=-{(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}
-\sum_{j=1}^n{1\over j(2j+1)}.
+a'_{n}(1/2)=-\frac{(-1)^{n}\prod_{j=1}^{n}(2j+1)}{4^{n}n!}
+\sum_{j=1}^{n}\frac{1}{j(2j+1)}.
 $$
 Therefore, from \eqref{eq:7.6.17},
 $$
-y_2=y_1\ln
-x-x^{1/2}\sum_{n=1}^\infty{(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}
-\left(\sum_{j=1}^n{1\over j(2j+1)}\right)x^n.
+y_{2}=y_{1}\ln
+x-x^{1/2}\sum_{n=1}^{\infty}\frac{(-1)^{n}\prod_{j=1}^{n}(2j+1)}{4^{n}n!}
+\left(\sum_{j=1}^{n}\frac{1}{j(2j+1)}\right)x^{n}.
 $$
 
 \begin{example}\label{example:7.6.3} \rm
 Find a fundamental set of Frobenius  solutions of
 \begin{equation} \label{eq:7.6.21}
-x^2(2-x^2)y''-2x(1+2x^2)y'+(2-2x^2)y=0.
+x^{2}(2-x^{2})y''-2x(1+2x^{2})y'+(2-2x^{2})y=0.
 \end{equation}
 Give explicit formulas for the coefficients in the solutions.
 \end{example}
@@ -371,98 +365,96 @@ For \eqref{eq:7.6.21}, the polynomials defined in
 Theorem~\ref{thmtype:7.6.1} are
 $$
 \begin{array}{ccccc}
-p_0(r)&=&2r(r-1)-2r+2&=&2(r-1)^2,\\[5pt]
-p_1(r)&=&0,\\[5pt]
-p_2(r)&=&-r(r-1)-4r-2&=&-(r+1)(r+2).
+p_{0}(r)&=&2r(r-1)-2r+2&=&2(r-1)^{2},\\[5pt]
+p_{1}(r)&=&0,\\[5pt]
+p_{2}(r)&=&-r(r-1)-4r-2&=&-(r+1)(r+2).
 \end{array}
 $$
-As in Section~7.5, since $p_1\equiv0$,  the recurrence
+As in Section~7.5, since $p_{1}\equiv0$,  the recurrence
 formulas
-of Theorem~\ref{thmtype:7.6.1} imply that $a_n(r)=0$ if $n$ is odd, and
+of Theorem~\ref{thmtype:7.6.1} imply that $a_{n}(r)=0$ if $n$ is odd, and
 $$
 \begin{array}{ccl}
-a_0(r)&=&1,\\
-a_{2m}(r)&=&-\dst{p_2(2m+r-2)\over p_0(2m+r)}a_{2m-2}(r)\\[10pt]
-&=&\dst{(2m+r-1)(2m+r)\over2(2m+r-1)^2}a_{2m-2}(r)\\[10pt]
-&=&\dst{2m+r\over2(2m+r-1)}a_{2m-2}(r),\quad m\ge1.
+a_{0}(r)&=&1,\\
+a_{2m}(r)&=&-\dst\frac{p_{2}(2m+r-2)}{p_{0}(2m+r)}a_{2m-2}(r)\\[10pt]
+&=&\dst\frac{(2m+r-1)(2m+r)}{2(2m+r-1)^{2}}a_{2m-2}(r)\\[10pt]
+&=&\dst\frac{2m+r}{2(2m+r-1)}a_{2m-2}(r),\quad m\ge1.
 \end{array}
 $$
-Since $r_1=1$ is a repeated root of the indicial polynomial $p_0$,
+Since $r_{1}=1$ is a repeated root of the indicial polynomial $p_{0}$,
 Theorem~\ref{thmtype:7.6.2} implies that
 \begin{equation} \label{eq:7.6.22}
-y_1=x\sum_{m=0}^\infty  a_{2m}(1)x^{2m}
+y_{1}=x\sum_{m=0}^{\infty}a_{2m}(1)x^{2m}
 \end{equation}
 and
 \begin{equation} \label{eq:7.6.23}
-y_2=y_1\ln x+x\sum_{m=1}^\infty a'_{2m}(1)x^{2m}
+y_{2}=y_{1}\ln x+x\sum_{m=1}^{\infty}a'_{2m}(1)x^{2m}
 \end{equation}
 form a fundamental set of  Frobenius solutions of \eqref{eq:7.6.21}.
 We leave it to you to show  that
 \begin{equation} \label{eq:7.6.24}
-a_{2m}(r)={1\over2^m}\prod_{j=1}^m{2j+r\over2j+r-1}.
+a_{2m}(r)=\frac{1}{2^{m}}\prod_{j=1}^{m}\frac{2j+r}{2j+r-1}.
 \end{equation}
 Setting $r=1$ yields
 \begin{equation} \label{eq:7.6.25}
-a_{2m}(1)={1\over2^m}\prod_{j=1}^m{2j+1\over2j}
-={\prod_{j=1}^m(2j+1)\over4^mm!},
+a_{2m}(1)=\frac{1}{2^{m}}\prod_{j=1}^{m}\frac{2j+1}{2j}
+=\frac{\prod_{j=1}^{m}(2j+1)}{4^{m}m!},
 \end{equation}
 and substituting this into \eqref{eq:7.6.22} yields
 $$
-y_1=x\sum_{m=0}^\infty{\prod_{j=1}^m(2j+1)\over4^mm!}x^{2m}.
+y_{1}=x\sum_{m=0}^{\infty}\frac{\prod_{j=1}^{m}(2j+1)}{4^{m}m!}x^{2m}.
 $$
 
-To obtain $y_2$ in \eqref{eq:7.6.23}, we must compute $a_{2m}'(1)$
+To obtain $y_{2}$ in \eqref{eq:7.6.23}, we must compute $a_{2m}'(1)$
 for $m=1$, $2$, \dots. Again we use logarithmic differentiation. From
 \eqref{eq:7.6.24},
 $$
-|a_{2m}(r)|={1\over2^m}\prod_{j=1}^m{|2j+r|\over|2j+r-1|}.
+|a_{2m}(r)|=\frac{1}{2^{m}}\prod_{j=1}^{m}\frac{|2j+r|}{|2j+r-1|}.
 $$
 Taking logarithms yields
 $$
-\ln |a_{2m}(r)|=-m\ln2+ \sum^m_{j=1} \left(\ln
+\ln|a_{2m}(r)|=-m\ln2+\sum^{m}_{j=1}\left(\ln
 |2j+r|-\ln|2j+r-1|\right).
 $$
 Differentiating with respect to $r$ yields
 $$
-{a'_{2m}(r)\over a_{2m}(r)}=\sum^m_{j=1} \left({1\over
-2j+r}-{1\over2j+r-1}\right).
+\frac{a'_{2m}(r)}{a_{2m}(r)}=\sum^{m}_{j=1}\left(\frac{1}{2j+r}-\frac{1}{2j+r-1}\right).
 $$
 Therefore
 $$
-a'_{2m}(r)=a_{2m}(r) \sum^m_{j=1} \left({1\over
-2j+r}-{1\over2j+r-1}\right).
+a'_{2m}(r)=a_{2m}(r)\sum^{m}_{j=1}\left(\frac{1}{2j+r}-\frac{1}{2j+r-1}\right).
 $$
 Setting $r=1$  and recalling \eqref{eq:7.6.25} yields
 \begin{equation} \label{eq:7.6.26}
-a'_{2m}(1)=\dst{{\prod_{j=1}^m(2j+1)\over4^mm!}
-\sum_{j=1}^m\left({1\over2j+1}-{1\over2j}\right)}.
+a'_{2m}(1)=\dst{\frac{\prod_{j=1}^{m}(2j+1)}{4^{m}m!}
+\sum_{j=1}^{m}\left(\frac{1}{2j+1}-\frac{1}{2j}\right)}.
 \end{equation}
 Since
 $$
-{1\over2j+1}-{1\over2j}=-{1\over2j(2j+1)},
+\frac{1}{2j+1}-\frac{1}{2j}=-\frac{1}{2j(2j+1)},
 $$
 \eqref{eq:7.6.26} can be rewritten as
 $$
-a_{2m}'(1)=-\dst{{\prod_{j=1}^m(2j+1)\over2\cdot4^mm!}
-\sum_{j=1}^m{1\over j(2j+1)}}.
+a_{2m}'(1)=-\dst{\frac{\prod_{j=1}^{m}(2j+1)}{2\cdot4^{m}m!}
+\sum_{j=1}^{m}\frac{1}{j(2j+1)}}.
 $$
 Substituting this into \eqref{eq:7.6.23} yields
 $$
-y_2=y_1\ln
-x-{x\over2}\sum_{m=1}^\infty{\prod_{j=1}^m(2j+1)\over4^mm!}
-\left(\sum_{j=1}^m{1\over j(2j+1)}\right)x^{2m}. \bbox
+y_{2}=y_{1}\ln
+x-\frac{x}{2}\sum_{m=1}^{\infty}\frac{\prod_{j=1}^{m}(2j+1)}{4^{m}m!}
+\left(\sum_{j=1}^{m}\frac{1}{j(2j+1)}\right)x^{2m}.\bbox
 $$
 
-If the solution $y_1=y(x,r_1)$ of $Ly=0$ reduces to a finite sum, then
+If the solution $y_{1}=y(x,r_{1})$ of $Ly=0$ reduces to a finite sum, then
 there's a
 difficulty in using logarithmic differentiation to obtain the coefficients
-$\{a_n'(r_1)\}$ in the second solution. The next example illustrates
+$\{a_{n}'(r_{1})\}$ in the second solution. The next example illustrates
 this difficulty and shows how to overcome it.
 
 \begin{example}\label{example:7.6.4} \rm
 Find a fundamental set of Frobenius solutions of
 \begin{equation} \label{eq:7.6.27}
-x^2y''-x(5-x)y'+(9-4x)y=0.
+x^{2}y''-x(5-x)y'+(9-4x)y=0.
 \end{equation}
 Give explicit formulas for the coefficients in the solutions.
 \end{example}
@@ -472,113 +464,111 @@ For \eqref{eq:7.6.27} the polynomials defined in Theorem~\ref{thmtype:7.6.1}
 are
 $$
 \begin{array}{ccccc}
-p_0(r)&=&r(r-1)-5r+9&=&(r-3)^2,\\[5pt]
-p_1(r)&=&r-4,\\[5pt]
-p_2(r)&=&0.
+p_{0}(r)&=&r(r-1)-5r+9&=&(r-3)^{2},\\[5pt]
+p_{1}(r)&=&r-4,\\[5pt]
+p_{2}(r)&=&0.
 \end{array}
 $$
-Since $r_1=3$ is a repeated zero of the  indicial polynomial $p_0$,
+Since $r_{1}=3$ is a repeated zero of the  indicial polynomial $p_{0}$,
 Theorem~\ref{thmtype:7.6.2} implies that
 \begin{equation} \label{eq:7.6.28}
-y_1=x^3\sum_{n=0}^\infty  a_n(3)x^n
+y_{1}=x^{3}\sum_{n=0}^{\infty}a_{n}(3)x^{n}
 \end{equation}
 and
 \begin{equation} \label{eq:7.6.29}
-y_2=y_1\ln x+x^3\sum_{n=1}^\infty a_n'(3)x^n
+y_{2}=y_{1}\ln x+x^{3}\sum_{n=1}^{\infty}a_{n}'(3)x^{n}
 \end{equation}
 are linearly independent Frobenius solutions of \eqref{eq:7.6.27}.
 To find the coefficients in \eqref{eq:7.6.28} we use the recurrence
 formulas
 $$
 \begin{array}{ccl}
-a_0(r)&=&1,\\
-a_n(r)&=&-\dst{p_1(n+r-1)\over p_0(n+r)}a_{n-1}(r)\\[10pt]
-&=&-\dst{n+r-5\over(n+r-3)^2}a_{n-1}(r),\quad n\ge1.
+a_{0}(r)&=&1,\\
+a_{n}(r)&=&-\dst\frac{p_{1}(n+r-1)}{p_{0}(n+r)}a_{n-1}(r)\\[10pt]
+&=&-\dst\frac{n+r-5}{(n+r-3)^{2}}a_{n-1}(r),\quad n\ge1.
 \end{array}
 $$
 We leave it to you to show that
 \begin{equation} \label{eq:7.6.30}
-a_n(r)=(-1)^n\prod_{j=1}^n{j+r-5\over(j+r-3)^2}.
+a_{n}(r)=(-1)^{n}\prod_{j=1}^{n}\frac{j+r-5}{(j+r-3)^{2}}.
 \end{equation}
 Setting $r=3$ here yields
 $$
-a_n(3)=(-1)^n\prod_{j=1}^n{j-2\over j^2},
+a_{n}(3)=(-1)^{n}\prod_{j=1}^{n}\frac{j-2}{j^{2}},
 $$
-so  $a_1(3)=1$ and $a_n(3)=0$ if $n\ge2$. Substituting
+so  $a_{1}(3)=1$ and $a_{n}(3)=0$ if $n\ge2$. Substituting
 these coefficients into \eqref{eq:7.6.28} yields
 $$
-y_1=x^3(1+x).
+y_{1}=x^{3}(1+x).
 $$
 
-To obtain $y_2$ in \eqref{eq:7.6.29} we must compute $a_n'(3)$
+To obtain $y_{2}$ in \eqref{eq:7.6.29} we must compute $a_{n}'(3)$
 for $n=1$, $2$, \dots.
  Let's first try  logarithmic differentiation.
 From \eqref{eq:7.6.30},
 $$
-|a_n(r)|=\prod_{j=1}^n{|j+r-5|\over|j+r-3|^2},\quad n\ge1,
+|a_{n}(r)|=\prod_{j=1}^{n}\frac{|j+r-5|}{|j+r-3|^{2}},\quad n\ge1,
 $$
 so
 $$
-\ln |a_n(r)|=\sum^n_{j=1} \left(\ln |j+r-5|-2\ln|j+r-3|\right).
+\ln|a_{n}(r)|=\sum^{n}_{j=1}\left(\ln|j+r-5|-2\ln|j+r-3|\right).
 $$
 Differentiating  with respect to $r$ yields
 $$
-{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left({1\over
-j+r-5}-{2\over j+r-3}\right).
+\frac{a'_{n}(r)}{a_{n}(r)}=\sum^{n}_{j=1}\left(\frac{1}{j+r-5}-\frac{2}{j+r-3}\right).
 $$
 Therefore
 \begin{equation} \label{eq:7.6.31}
-a'_n(r)=a_n(r) \sum^n_{j=1} \left({1\over j+r-5}-{2\over j+r-3}\right).
+a'_{n}(r)=a_{n}(r)\sum^{n}_{j=1}\left(\frac{1}{j+r-5}-\frac{2}{j+r-3}\right).
 \end{equation}
 However, we can't simply set $r=3$ here if $n\ge2$,  since the bracketed
 expression in the sum corresponding to  $j=2$ contains the term $1/(r-3)$.
-In fact, since $a_n(3)=0$ for $n\ge2$, the  formula \eqref{eq:7.6.31} for
-$a_n'(r)$ is actually an indeterminate form at $r=3$.
+In fact, since $a_{n}(3)=0$ for $n\ge2$, the  formula \eqref{eq:7.6.31} for
+$a_{n}'(r)$ is actually an indeterminate form at $r=3$.
 
 We  overcome this difficulty as follows. From \eqref{eq:7.6.30} with
 $n=1$,
 $$
-a_1(r)=-{r-4\over (r-2)^2}.
+a_{1}(r)=-\frac{r-4}{(r-2)^{2}}.
 $$
 Therefore
 $$
-a_1'(r)={r-6\over(r-2)^3},
+a_{1}'(r)=\frac{r-6}{(r-2)^{3}},
 $$
 so
 \begin{equation} \label{eq:7.6.32}
-a_1'(3)=-3.
+a_{1}'(3)=-3.
 \end{equation}
 From \eqref{eq:7.6.30} with $n\ge2$,
 $$
-a_n(r)=(-1)^n (r-4)(r-3)\,{\prod_{j=3}^n(j+r-5)\over\prod_{j=1}^n(j+r-3)^2}
-=(r-3)c_n(r),
+a_{n}(r)=(-1)^{n}(r-4)(r-3)\,\frac{\prod_{j=3}^{n}(j+r-5)}{\prod_{j=1}^{n}(j+r-3)^{2}}
+=(r-3)c_{n}(r),
 $$
 where
 $$
-c_n(r)=(-1)^n(r-4)\,
-{\prod_{j=3}^n(j+r-5)\over\prod_{j=1}^n(j+r-3)^2},\quad  n\ge2.
+c_{n}(r)=(-1)^{n}(r-4)\,
+\frac{\prod_{j=3}^{n}(j+r-5)}{\prod_{j=1}^{n}(j+r-3)^{2}},\quad  n\ge2.
 $$
 Therefore
 $$
-a_n'(r)=c_n(r)+(r-3)c_n'(r),\quad n\ge2,
+a_{n}'(r)=c_{n}(r)+(r-3)c_{n}'(r),\quad n\ge2,
 $$
-which implies that  $a_n'(3)=c_n(3)$ if $n\ge3$. We leave it to
+which implies that  $a_{n}'(3)=c_{n}(3)$ if $n\ge3$. We leave it to
 you to verify that
 $$
-a_n'(3)=c_n(3)={(-1)^{n+1}\over n(n-1)n!},\quad n\ge2.
+a_{n}'(3)=c_{n}(3)=\frac{(-1)^{n+1}}{n(n-1)n!},\quad n\ge2.
 $$
 Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29}
 yields
 $$
-y_2=x^3(1+x)\ln x-3x^4-x^3\dst{\sum_{n=2}^\infty {(-1)^n\over
-n(n-1)n!}x^n}.
+y_{2}=x^{3}(1+x)\ln x-3x^{4}-x^{3}\dst{\sum_{n=2}^{\infty}\frac{(-1)^{n}}{n(n-1)n!}x^{n}}.
 $$
 
 \exercises
 In Exercises~\ref{exer:7.6.1}--\ref{exer:7.6.11} find a fundamental set of
 Frobenius solutions.
-Compute  the terms involving $x^{n+r_1}$,
-where $0\le n\le N$ ($N$ at least $7$) and $r_1$ is the root of the
+Compute  the terms involving $x^{n+r_{1}}$,
+where $0\le n\le N$ ($N$ at least $7$) and $r_{1}$ is the root of the
 indicial equation.
  Optionally, write a computer program to implement the applicable
 recurrence formulas and take $N>7$.
@@ -586,206 +576,206 @@ recurrence formulas and take $N>7$.
 \begin{exerciselist}
 
 \item\label{exer:7.6.1} \Cex
-$x^2y''-x(1-x)y'+(1-x^2)y=0$
+$x^{2}y''-x(1-x)y'+(1-x^{2})y=0$
 
 \item\label{exer:7.6.2} \Cex
-$x^2(1+x+2x^2)y'+x(3+6x+7x^2)y'+(1+6x-3x^2)y=0$
+$x^{2}(1+x+2x^{2})y'+x(3+6x+7x^{2})y'+(1+6x-3x^{2})y=0$
 
 \item\label{exer:7.6.3} \Cex
-$x^2(1+2x+x^2)y''+x(1+3x+4x^2)y'-x(1-2x)y=0$
+$x^{2}(1+2x+x^{2})y''+x(1+3x+4x^{2})y'-x(1-2x)y=0$
 
 \item\label{exer:7.6.4} \Cex
-$4x^2(1+x+x^2)y''+12x^2(1+x)y'+(1+3x+3x^2)y=0$
+$4x^{2}(1+x+x^{2})y''+12x^{2}(1+x)y'+(1+3x+3x^{2})y=0$
 
 \item\label{exer:7.6.5} \Cex
-$x^2(1+x+x^2)y''-x(1-4x-2x^2)y'+y=0$
+$x^{2}(1+x+x^{2})y''-x(1-4x-2x^{2})y'+y=0$
 
 \item\label{exer:7.6.6} \Cex
-$9x^2y''+3x(5+3x-2x^2)y'+(1+12x-14x^2)y=0$
+$9x^{2}y''+3x(5+3x-2x^{2})y'+(1+12x-14x^{2})y=0$
 
 \item\label{exer:7.6.7} \Cex
-$x^2y''+x(1+x+x^2)y'+x(2-x)y=0$
+$x^{2}y''+x(1+x+x^{2})y'+x(2-x)y=0$
 
 \item\label{exer:7.6.8} \Cex
-$x^2(1+2x)y''+x(5+14x+3x^2)y'+(4+18x+12x^2)y=0$
+$x^{2}(1+2x)y''+x(5+14x+3x^{2})y'+(4+18x+12x^{2})y=0$
 
 \item\label{exer:7.6.9} \Cex
-$4x^2y''+2x(4+x+x^2)y'+(1+5x+3x^2)y=0$
+$4x^{2}y''+2x(4+x+x^{2})y'+(1+5x+3x^{2})y=0$
 
 \item\label{exer:7.6.10} \Cex
-$16x^2y''+4x(6+x+2x^2)y'+(1+5x+18x^2)y=0$
+$16x^{2}y''+4x(6+x+2x^{2})y'+(1+5x+18x^{2})y=0$
 
 \item\label{exer:7.6.11} \Cex
-$9x^2(1+x)y''+3x(5+11x-x^2)y'+(1+16x-7x^2)y=0$
+$9x^{2}(1+x)y''+3x(5+11x-x^{2})y'+(1+16x-7x^{2})y=0$
 
 \exercisetext{In Exercises~\ref{exer:7.6.12}--\ref{exer:7.6.22}
 find a fundamental set of Frobenius  solutions.
 Give explicit formulas for the coefficients.}
 
 \item\label{exer:7.6.12}
-$4x^2y''+(1+4x)y=0$
+$4x^{2}y''+(1+4x)y=0$
 
 \item\label{exer:7.6.13}
-$36x^2(1-2x)y''+24x(1-9x)y'+(1-70x)y=0$
+$36x^{2}(1-2x)y''+24x(1-9x)y'+(1-70x)y=0$
 
 \item\label{exer:7.6.14}
-$x^2(1+x)y''-x(3-x)y'+4y=0$
+$x^{2}(1+x)y''-x(3-x)y'+4y=0$
 
 \item\label{exer:7.6.15}
-$x^2(1-2x)y''-x(5-4x)y'+(9-4x)y=0$
+$x^{2}(1-2x)y''-x(5-4x)y'+(9-4x)y=0$
 
 \item\label{exer:7.6.16}
-$25x^2y''+x(15+x)y'+(1+x)y=0$
+$25x^{2}y''+x(15+x)y'+(1+x)y=0$
 
 \item\label{exer:7.6.17}
-$2x^2(2+x)y''+x^2y'+(1-x)y=0$
+$2x^{2}(2+x)y''+x^{2}y'+(1-x)y=0$
 
 \item\label{exer:7.6.18}
-$x^2(9+4x)y''+3xy'+(1+x)y=0$
+$x^{2}(9+4x)y''+3xy'+(1+x)y=0$
 
 \item\label{exer:7.6.19}
-$x^2y''-x(3-2x)y'+(4+3x)y=0$
+$x^{2}y''-x(3-2x)y'+(4+3x)y=0$
 
 \item\label{exer:7.6.20}
-$x^2(1-4x)y''+3x(1-6x)y'+(1-12x)y=0$
+$x^{2}(1-4x)y''+3x(1-6x)y'+(1-12x)y=0$
 
 \item\label{exer:7.6.21}
-$x^2(1+2x)y''+x(3+5x)y'+(1-2x)y=0$
+$x^{2}(1+2x)y''+x(3+5x)y'+(1-2x)y=0$
 
 \item\label{exer:7.6.22}
-$2x^2(1+x)y''-x(6-x)y'+(8-x)y=0$
+$2x^{2}(1+x)y''-x(6-x)y'+(8-x)y=0$
 
 \exercisetext{In Exercises~\ref{exer:7.6.23}--\ref{exer:7.6.27} find a
 fundamental set of Frobenius solutions. Compute the terms involving
-$x^{n+r_1}$, where $0\le n\le N$ ($N$ at least $7$) and $r_1$ is the
+$x^{n+r_{1}}$, where $0\le n\le N$ ($N$ at least $7$) and $r_{1}$ is the
 root of the indicial equation. Optionally, write a computer program to
 implement the applicable recurrence formulas and take $N>7$.}
 
-\item\label{exer:7.6.23} \Cex $x^2(1+2x)y''+x(5+9x)y'+(4+3x)y=0$
+\item\label{exer:7.6.23} \Cex $x^{2}(1+2x)y''+x(5+9x)y'+(4+3x)y=0$
 
-\item\label{exer:7.6.24} \Cex $x^2(1-2x)y''-x(5+4x)y'+(9+4x)y=0$
+\item\label{exer:7.6.24} \Cex $x^{2}(1-2x)y''-x(5+4x)y'+(9+4x)y=0$
 
 \item\label{exer:7.6.25} \Cex
-$x^2(1+4x)y''-x(1-4x)y'+(1+x)y=0$
+$x^{2}(1+4x)y''-x(1-4x)y'+(1+x)y=0$
 
 \item\label{exer:7.6.26} \Cex
-$x^2(1+x)y''+x(1+2x)y'+xy=0$
+$x^{2}(1+x)y''+x(1+2x)y'+xy=0$
 
 \item\label{exer:7.6.27} \Cex
-$x^2(1-x)y''+x(7+x)y'+(9-x)y=0$
+$x^{2}(1-x)y''+x(7+x)y'+(9-x)y=0$
 
 \exercisetext{In Exercises~\ref{exer:7.6.28}--\ref{exer:7.6.38} find a
 fundamental set of Frobenius solutions. Give explicit formulas for the
 coefficients.}
 
 \item\label{exer:7.6.28}
-$x^2y''-x(1-x^2)y'+(1+x^2)y=0$
+$x^{2}y''-x(1-x^{2})y'+(1+x^{2})y=0$
 
 \item\label{exer:7.6.29}
-$x^2(1+x^2)y''-3x(1-x^2)y'+4y=0$
+$x^{2}(1+x^{2})y''-3x(1-x^{2})y'+4y=0$
 
 \item\label{exer:7.6.30}
-$4x^2y''+2x^3y'+(1+3x^2)y=0$
+$4x^{2}y''+2x^{3}y'+(1+3x^{2})y=0$
 
 \item\label{exer:7.6.31}
-$x^2(1+x^2)y''-x(1-2x^2)y'+y=0$
+$x^{2}(1+x^{2})y''-x(1-2x^{2})y'+y=0$
 
 \item\label{exer:7.6.32}
-$2x^2(2+x^2)y''+7x^3y'+(1+3x^2)y=0$
+$2x^{2}(2+x^{2})y''+7x^{3}y'+(1+3x^{2})y=0$
 
 \item\label{exer:7.6.33}
-$x^2(1+x^2)y''-x(1-4x^2)y'+(1+2x^2)y=0$
+$x^{2}(1+x^{2})y''-x(1-4x^{2})y'+(1+2x^{2})y=0$
 
 \item\label{exer:7.6.34}
-$4x^2(4+x^2)y''+3x(8+3x^2)y'+(1-9x^2)y=0$
+$4x^{2}(4+x^{2})y''+3x(8+3x^{2})y'+(1-9x^{2})y=0$
 
 \item\label{exer:7.6.35}
-$3x^2(3+x^2)y''+x(3+11x^2)y'+(1+5x^2)y=0$
+$3x^{2}(3+x^{2})y''+x(3+11x^{2})y'+(1+5x^{2})y=0$
 
 \item\label{exer:7.6.36}
-$4x^2(1+4x^2)y''+32x^3y'+y=0$
+$4x^{2}(1+4x^{2})y''+32x^{3}y'+y=0$
 
 \item\label{exer:7.6.37}
-$9x^2y''-3x(7-2x^2)y'+(25+2x^2)y=0$
+$9x^{2}y''-3x(7-2x^{2})y'+(25+2x^{2})y=0$
 
 \item\label{exer:7.6.38}
-$x^2(1+2x^2)y''+x(3+7x^2)y'+(1-3x^2)y=0$
+$x^{2}(1+2x^{2})y''+x(3+7x^{2})y'+(1-3x^{2})y=0$
 
 \exercisetext{In Exercises~\ref{exer:7.6.39}--\ref{exer:7.6.43} find a
 fundamental set of Frobenius solutions. Compute the terms involving
-$x^{2m+r_1}$, where $0\le m\le M$ ($M$ at least $3$) and $r_1$ is the
+$x^{2m+r_{1}}$, where $0\le m\le M$ ($M$ at least $3$) and $r_{1}$ is the
 root of the indicial equation. Optionally, write a computer program to
 implement the applicable recurrence formulas and take $M>3$.}
 
 \item\label{exer:7.6.39} \Cex
-$x^2(1+x^2)y''+x(3+8x^2)y'+(1+12x^2)y$
+$x^{2}(1+x^{2})y''+x(3+8x^{2})y'+(1+12x^{2})y$
 
 \item\label{exer:7.6.40} \Cex
-$x^2y''-x(1-x^2)y'+(1+x^2)y=0$
+$x^{2}y''-x(1-x^{2})y'+(1+x^{2})y=0$
 
 \item\label{exer:7.6.41} \Cex
-$x^2(1-2x^2)y''+x(5-9x^2)y'+(4-3x^2)y=0$
+$x^{2}(1-2x^{2})y''+x(5-9x^{2})y'+(4-3x^{2})y=0$
 
 \item\label{exer:7.6.42} \Cex
-$x^2(2+x^2)y''+x(14-x^2)y'+2(9+x^2)y=0$
+$x^{2}(2+x^{2})y''+x(14-x^{2})y'+2(9+x^{2})y=0$
 
 \item\label{exer:7.6.43} \Cex
-$x^2(1+x^2)y''+x(3+7x^2)y'+(1+8x^2)y=0$
+$x^{2}(1+x^{2})y''+x(3+7x^{2})y'+(1+8x^{2})y=0$
 
 \exercisetext{In Exercises~\ref{exer:7.6.44}--\ref{exer:7.6.52} find a
 fundamental set of Frobenius solutions. Give explicit formulas for the
 coefficients.}
 
 \item\label{exer:7.6.44}
-$x^2(1-2x)y''+3xy'+(1+4x)y=0$
+$x^{2}(1-2x)y''+3xy'+(1+4x)y=0$
 
 \item\label{exer:7.6.45}
 $x(1+x)y''+(1-x)y'+y=0$
 
 \item\label{exer:7.6.46}
-$x^2(1-x)y''+x(3-2x)y'+(1+2x)y=0$
+$x^{2}(1-x)y''+x(3-2x)y'+(1+2x)y=0$
 
 \item\label{exer:7.6.47}
-$4x^2(1+x)y''-4x^2y'+(1-5x)y=0$
+$4x^{2}(1+x)y''-4x^{2}y'+(1-5x)y=0$
 
 \item\label{exer:7.6.48}
-$x^2(1-x)y''-x(3-5x)y'+(4-5x)y=0$
+$x^{2}(1-x)y''-x(3-5x)y'+(4-5x)y=0$
 
 \item\label{exer:7.6.49}
-$x^2(1+x^2)y''-x(1+9x^2)y'+(1+25x^2)y=0$
+$x^{2}(1+x^{2})y''-x(1+9x^{2})y'+(1+25x^{2})y=0$
 
 \item\label{exer:7.6.50}
-$9x^2y''+3x(1-x^2)y'+(1+7x^2)y=0$
+$9x^{2}y''+3x(1-x^{2})y'+(1+7x^{2})y=0$
 
 \item\label{exer:7.6.51}
-$x(1+x^2)y''+(1-x^2)y'-8xy=0$
+$x(1+x^{2})y''+(1-x^{2})y'-8xy=0$
 
 \item\label{exer:7.6.52}
-$4x^2y''+2x(4-x^2)y'+(1+7x^2)y=0$
+$4x^{2}y''+2x(4-x^{2})y'+(1+7x^{2})y=0$
 
 \item\label{exer:7.6.53}
 Under the assumptions of Theorem~\ref{thmtype:7.6.2}, suppose
 the power series
 $$
-\sum_{n=0}^\infty a_n(r_1)x^n \quad\mbox{ and }\quad
-\sum_{n=1}^\infty a_n'(r_1)x^n
+\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}\quad\mbox{ and }\quad
+\sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}
 $$
   converge on $(-\rho,\rho)$.
 \begin{alist}
 \item % (a)
 Show that
 $$
-y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n\quad\mbox{ and }\quad
-y_2=y_1\ln x+x^{r_1}\sum_{n=1}^\infty a_n'(r_1)x^n
+y_{1}=x^{r_{1}}\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}\quad\mbox{ and }\quad
+y_{2}=y_{1}\ln x+x^{r_{1}}\sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}
 $$
-are linearly independent on $(0,\rho)$. \hint{Show that if $c_1$
-and $c_2$ are constants such that $c_1y_1+c_2y_2\equiv0$ on $(0,\rho)$,
+are linearly independent on $(0,\rho)$. \hint{Show that if $c_{1}$
+and $c_{2}$ are constants such that $c_{1}y_{1}+c_{2}y_{2}\equiv0$ on $(0,\rho)$,
 then
 $$
-(c_1+c_2\ln x)\sum_{n=0}^\infty a_n(r_1)x^n+
-c_2\sum_{n=1}^\infty a_n'(r_1)x^n=0,\quad 0<x<\rho.
+(c_{1}+c_{2}\ln x)\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}+
+c_{2}\sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}=0,\quad0<x<\rho.
 $$
-Then let $x\to0+$ to conclude that $c_2=0$.}
+Then let $x\to0+$ to conclude that $c_{2}=0$.}
 \item % (b)
 Use the result of \part{a} to
 complete the proof of Theorem~\ref{thmtype:7.6.2}.
@@ -794,120 +784,117 @@ complete the proof of Theorem~\ref{thmtype:7.6.2}.
 \item\label{exer:7.6.54}
 Let
 $$
-Ly=x^2(\alpha_0+\alpha_1x)y''+x(\beta_0+\beta_1x)y'+(\gamma_0+\gamma_1x)y
+Ly=x^{2}(\alpha_{0}+\alpha_{1}x)y''+x(\beta_{0}+\beta_{1}x)y'+(\gamma_{0}+\gamma_{1}x)y
 $$
 and define
 $$
-p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\mbox{ and }\quad
-p_1(r)=\alpha_1r(r-1)+\beta_1r+\gamma_1.
+p_{0}(r)=\alpha_{0}r(r-1)+\beta_{0}r+\gamma_{0}\quad\mbox{ and }\quad
+p_{1}(r)=\alpha_{1}r(r-1)+\beta_{1}r+\gamma_{1}.
 $$
 Theorem~\ref{thmtype:7.6.1}  and Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.55}\part{a}
 imply that if
 $$
-y(x,r)=x^r\sum_{n=0}^\infty a_n(r)x^n
+y(x,r)=x^{r}\sum_{n=0}^{\infty}a_{n}(r)x^{n}
 $$
 where
 $$
-a_n(r)=(-1)^n\prod_{j=1}^n{p_1(j+r-1)\over p_0(j+r)},
+a_{n}(r)=(-1)^{n}\prod_{j=1}^{n}\frac{p_{1}(j+r-1)}{p_{0}(j+r)},
 $$
 then
 $$
-Ly(x,r)=p_0(r)x^r.
+Ly(x,r)=p_{0}(r)x^{r}.
 $$
 Now suppose
-$p_0(r)=\alpha_0(r-r_1)^2$ and $p_1(k+r_1)\ne0$ if $k$
+$p_{0}(r)=\alpha_{0}(r-r_{1})^{2}$ and $p_{1}(k+r_{1})\ne0$ if $k$
 is a nonnegative integer.
 \begin{alist}
 \item % (a)
 Show that $Ly=0$ has the solution
 $$
-y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n,
+y_{1}=x^{r_{1}}\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n},
 $$
 where
 $$
-a_n(r_1)={(-1)^n\over\alpha_0^n(n!)^2}\prod_{j=1}^np_1(j+r_1-1).
+a_{n}(r_{1})=\frac{(-1)^{n}}{\alpha_{0}^{n}(n!)^{2}}\prod_{j=1}^{n}p_{1}(j+r_{1}-1).
 $$
 \item % ()
 Show that $Ly=0$ has the second solution
 $$
-y_2=y_1\ln x+x^{r_1}\sum_{n=1}^\infty a_n(r_1)J_nx^n,
+y_{2}=y_{1}\ln x+x^{r_{1}}\sum_{n=1}^{\infty}a_{n}(r_{1})J_{n}x^{n},
 $$
 where
 $$
-J_n=\sum_{j=1}^n{p_1'(j+r_1-1)\over p_1(j+r_1-1)}-2\sum_{j=1}^n{1\over j}.
+J_{n}=\sum_{j=1}^{n}\frac{p_{1}'(j+r_{1}-1)}{p_{1}(j+r_{1}-1)}-2\sum_{j=1}^{n}\frac{1}{j}.
 $$
 \item % (c)
 Conclude from \part{a} and \part{b} that if
- $\gamma_1\ne0$ then
+ $\gamma_{1}\ne0$ then
 $$
-y_1=x^{r_1}\sum_{n=0}^\infty
-{(-1)^n\over(n!)^2}\left(\gamma_1\over\alpha_0\right)^nx^n
+y_{1}=x^{r_{1}}\sum_{n=0}^{\infty}
+\frac{(-1)^{n}}{(n!)^{2}}\left(\frac{\gamma_{1}}{\alpha_{0}}\right)^{n}x^{n}
 $$
 and
 $$
-y_2=y_1\ln x-2x^{r_1}\sum_{n=1}^\infty
-{(-1)^n\over(n!)^2}\left(\gamma_1\over\alpha_0\right)^n
-\left(\sum_{j=1}^n{1\over j}\right)x^n
+y_{2}=y_{1}\ln x-2x^{r_{1}}\sum_{n=1}^{\infty}
+\frac{(-1)^{n}}{(n!)^{2}}\left(\frac{\gamma_{1}}{\alpha_{0}}\right)^{n}
+\left(\sum_{j=1}^{n}\frac{1}{j}\right)x^{n}
 $$
 are solutions of
 $$
-\alpha_0x^2y''+\beta_0xy'+(\gamma_0+\gamma_1x)y=0.
+\alpha_{0}x^{2}y''+\beta_{0}xy'+(\gamma_{0}+\gamma_{1}x)y=0.
 $$
-(The conclusion is also valid if $\gamma_1=0$. Why?)
+(The conclusion is also valid if $\gamma_{1}=0$. Why?)
 \end{alist}
 
 \item\label{exer:7.6.55}
 Let
 $$
-Ly=x^2(\alpha_0+\alpha_qx^q)y''+x(\beta_0+\beta_qx^q)y'+(\gamma_0+\gamma_qx^q)y
+Ly=x^{2}(\alpha_{0}+\alpha_{q}x^{q})y''+x(\beta_{0}+\beta_{q}x^{q})y'+(\gamma_{0}+\gamma_{q}x^{q})y
 $$
 where $q$ is a positive integer, and define
 $$
-p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\mbox{ and }\quad
-p_q(r)=\alpha_qr(r-1)+\beta_qr+\gamma_q.
+p_{0}(r)=\alpha_{0}r(r-1)+\beta_{0}r+\gamma_{0}\quad\mbox{ and }\quad
+p_{q}(r)=\alpha_{q}r(r-1)+\beta_{q}r+\gamma_{q}.
 $$
 Suppose
 $$
-p_0(r)=\alpha_0(r-r_1)^2 \quad\mbox{ and }\quad p_q(r)\not\equiv0.
+p_{0}(r)=\alpha_{0}(r-r_{1})^{2}\quad\mbox{ and }\quad p_{q}(r)\not\equiv0.
 $$
 \begin{alist}
 \item % (a)
 Recall from  Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.59}  that
  $Ly~=0$ has the solution
 $$
-y_1=x^{r_1}\sum_{m=0}^\infty a_{qm}(r_1)x^{qm},
+y_{1}=x^{r_{1}}\sum_{m=0}^{\infty}a_{qm}(r_{1})x^{qm},
 $$
 where
 $$
-a_{qm}(r_1)={(-1)^m\over
-(q^2\alpha_0)^m(m!)^2}\prod_{j=1}^mp_q\left(q(j-1)+r_1\right).
+a_{qm}(r_{1})=\frac{(-1)^{m}}{(q^{2}\alpha_{0})^{m}(m!)^{2}}\prod_{j=1}^{m}p_{q}\left(q(j-1)+r_{1}\right).
 $$
 \item % ()
 Show that $Ly=0$ has the second solution
 $$
-y_2=y_1\ln x+x^{r_1}\sum_{m=1}^\infty a_{qm}'(r_1)J_mx^{qm},
+y_{2}=y_{1}\ln x+x^{r_{1}}\sum_{m=1}^{\infty}a_{qm}'(r_{1})J_{m}x^{qm},
 $$
 where
 $$
-J_m=\sum_{j=1}^m{p_q'\left(q(j-1)+r_1\right)\over
-p_q\left(q(j-1)+r_1\right)}-{2\over q}\sum_{j=1}^m{1\over j}.
+J_{m}=\sum_{j=1}^{m}\frac{p_{q}'\left(q(j-1)+r_{1}\right)}{p_{q}\left(q(j-1)+r_{1}\right)}-\frac{2}{q}\sum_{j=1}^{m}\frac{1}{j}.
 $$
 \item % (c)
 Conclude from \part{a} and \part{b} that if
- $\gamma_q\ne0$ then
+ $\gamma_{q}\ne0$ then
 $$
-y_1=x^{r_1}\sum_{m=0}^\infty
-{(-1)^m\over(m!)^2}\left(\gamma_q\over q^2\alpha_0\right)^mx^{qm}
+y_{1}=x^{r_{1}}\sum_{m=0}^{\infty}
+\frac{(-1)^{m}}{(m!)^{2}}\left(\frac{\gamma_{q}}{q^{2}\alpha_{0}}\right)^{m}x^{qm}
 $$
 and
 $$
-y_2=y_1\ln x-{2\over q}x^{r_1}\sum_{m=1}^\infty
-{(-1)^m\over(m!)^2}\left(\gamma_q\over
-q^2\alpha_0\right)^m\left(\sum_{j=1}^m{1\over j}\right)x^{qm}
+y_{2}=y_{1}\ln x-\frac{2}{q}x^{r_{1}}\sum_{m=1}^{\infty}
+\frac{(-1)^{m}}{(m!)^{2}}\left(\frac{\gamma_{q}}{q^{2}\alpha_{0}}\right)^{m}\left(\sum_{j=1}^{m}\frac{1}{j}\right)x^{qm}
 $$
 are solutions of
 $$
-\alpha_0x^2y''+\beta_0xy'+(\gamma_0+\gamma_qx^q)y=0.
+\alpha_{0}x^{2}y''+\beta_{0}xy'+(\gamma_{0}+\gamma_{q}x^{q})y=0.
 $$
 \end{alist}
 
@@ -926,48 +913,48 @@ Exercise~\ref{exer:7.5.53}.)
 Suppose the assumptions of Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.53}
 hold, except that
 $$
-p_0(r)=\alpha_0(r-r_1)^2.
+p_{0}(r)=\alpha_{0}(r-r_{1})^{2}.
 $$
  Show that
 $$
-y_1={x^{r_1}\over\alpha_0+\alpha_1x+\alpha_2x^2}\quad\mbox{ and }\quad
-y_2={x^{r_1}\ln x\over\alpha_0+\alpha_1x+\alpha_2x^2}
+y_{1}=\frac{x^{r_{1}}}{\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2}}\quad\mbox{ and }\quad
+y_{2}=\frac{x^{r_{1}}\ln x}{\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2}}
 $$
 are linearly independent Frobenius  solutions of
 $$
-x^2(\alpha_0+\alpha_1x+\alpha_2 x^2)y''+x(\beta_0+\beta_1x+\beta_2x^2)y'+
-(\gamma_0+\gamma_1x+\gamma_2x^2)y=0
+x^{2}(\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2})y''+x(\beta_{0}+\beta_{1}x+\beta_{2}x^{2})y'+
+(\gamma_{0}+\gamma_{1}x+\gamma_{2}x^{2})y=0
 $$
 on any interval $(0,\rho)$ on which
-$\alpha_0+\alpha_1x+\alpha_2x^2$ has no zeros.
+$\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2}$ has no zeros.
 
 \exercisetext{In Exercises~\ref{exer:7.6.58}--\ref{exer:7.6.65} use the method
 suggested by Exercise~\ref{exer:7.6.57} to find the general solution on
 some interval $(0,\rho)$.}
 
 \item\label{exer:7.6.58}
-$4x^2(1+x)y''+8x^2y'+(1+x)y=0$
+$4x^{2}(1+x)y''+8x^{2}y'+(1+x)y=0$
 
 \item\label{exer:7.6.59}
-$9x^2(3+x)y''+3x(3+7x)y'+(3+4x)y=0$
+$9x^{2}(3+x)y''+3x(3+7x)y'+(3+4x)y=0$
 
 \item\label{exer:7.6.60}
-$x^2(2-x^2)y''-x(2+3x^2)y'+(2-x^2)y=0$
+$x^{2}(2-x^{2})y''-x(2+3x^{2})y'+(2-x^{2})y=0$
 
 \item\label{exer:7.6.61}
-$16x^2(1+x^2)y''+8x(1+9x^2)y'+(1+49x^2)y=0$
+$16x^{2}(1+x^{2})y''+8x(1+9x^{2})y'+(1+49x^{2})y=0$
 
 \item\label{exer:7.6.62}
-$x^2(4+3x)y''-x(4-3x)y'+4y=0$
+$x^{2}(4+3x)y''-x(4-3x)y'+4y=0$
 
 \item\label{exer:7.6.63}
-$4x^2(1+3x+x^2)y''+8x^2(3+2x)y'+(1+3x+9x^2)y=0$
+$4x^{2}(1+3x+x^{2})y''+8x^{2}(3+2x)y'+(1+3x+9x^{2})y=0$
 
 \item\label{exer:7.6.64}
-$x^2(1-x)^2y''-x(1+2x-3x^2)y'+(1+x^2)y=0$
+$x^{2}(1-x)^{2}y''-x(1+2x-3x^{2})y'+(1+x^{2})y=0$
 
 \item\label{exer:7.6.65}
-$9x^2(1+x+x^2)y''+3x(1+7x+13x^2)y'+(1+4x+25x^2)y=0$
+$9x^{2}(1+x+x^{2})y''+3x(1+7x+13x^{2})y'+(1+4x+25x^{2})y=0$
 
 \item\label{exer:7.6.66}
 \begin{alist}
@@ -975,18 +962,18 @@ $9x^2(1+x+x^2)y''+3x(1+7x+13x^2)y'+(1+4x+25x^2)y=0$
 Let $L$ and $y(x,r)$ be as in Exercises~\ref{exer:7.5.57} and
 \ref{exer:7.5.58}. Extend Theorem~\ref{thmtype:7.6.1} by showing that
 $$
-L\left({\partial y\over \partial
-r}(x,r)\right)=p'_0(r)x^r+x^rp_0(r)\ln x.
+L\left(\frac{\partial y}{\partial
+r}(x,r)\right)=p'_{0}(r)x^{r}+x^{r}p_{0}(r)\ln x.
 $$
 \item % (b)
 Show that if
 $$
-p_0(r)=\alpha_0(r-r_1)^2
+p_{0}(r)=\alpha_{0}(r-r_{1})^{2}
 $$
 then
 $$
-y_1=y(x,r_1) \mbox{\quad and \quad} y_2={\partial
-y\over\partial r}(x,r_1)
+y_{1}=y(x,r_{1})\mbox{\quad and \quad}y_{2}=\frac{\partial
+y}{\partial r}(x,r_{1})
 $$
  are solutions of $Ly=0$.
 \end{alist}

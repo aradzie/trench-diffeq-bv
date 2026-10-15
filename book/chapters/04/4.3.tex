@@ -23,7 +23,7 @@ mass, force, and time: the cgs, mks, and British systems. All three
 use the second as the unit of time. Table~1 shows the other units.
  Consistent with (\ref{eq:4.3.1}), the unit of
 force in each system is defined to be the force required to impart an
-acceleration of (one unit of length)$/s^2$ to one unit of
+acceleration of (one unit of length)$/s^{2}$ to one unit of
 mass.
 
 \bigskip
@@ -54,9 +54,9 @@ magnitude of the acceleration due to gravity at Earth's surface}.)\
 This quantity has been determined experimentally. Approximate
 values of $g$  are
 $$\begin{array}{rl}
-g &=980\ \mbox{cm/s}^2 \hskip40pt \mbox{(cgs)}   \\
-g &=9.8\ \mbox{m/s}^2 \hskip48pt \mbox{(mks)}   \\
-g &=32\ \mbox{ft/s}^2 \hskip52pt \mbox{(British)}.
+g&=980\ \mbox{cm/s}^{2}\hskip40pt\mbox{(cgs)}\\
+g&=9.8\ \mbox{m/s}^{2}\hskip48pt\mbox{(mks)}\\
+g&=32\ \mbox{ft/s}^{2}\hskip52pt\mbox{(British)}.
 \end{array}$$
 
 In general, the force $F$ in (\ref{eq:4.3.1}) may depend upon $t$, $y$, and
@@ -79,7 +79,7 @@ equation for $v$:
 mv'=F(t,v).
 \end{equation}
 Solving this equation yields $v$ as a function of $t$. If we know
-$y(t_0)$ for some time $t_0$, we can  integrate $v$ to obtain $y$
+$y(t_{0})$ for some time $t_{0}$, we can  integrate $v$ to obtain $y$
 as a function of $t$.
 
 Equations of the form (\ref{eq:4.3.3}) occur in problems involving motion
@@ -104,26 +104,26 @@ through a medium that exerts a resistance with magnitude proportional
 to the speed of the object. (Recall that the speed of an object is
 $|v|$, the absolute value of its velocity $v$.) Find the velocity of
 the object as a function of $t$, and find the terminal velocity.
-Assume  that the initial velocity is $v_0$.
+Assume  that the initial velocity is $v_{0}$.
  \end{example}
 
 \solution
 The total force acting on the object is
 \begin{equation} \label{eq:4.3.4}
-F=-mg+F_1,
+F=-mg+F_{1},
 \end{equation}
-where $-mg$ is  the force due to  gravity and $F_1$ is the
+where $-mg$ is  the force due to  gravity and $F_{1}$ is the
 resisting force of the medium, which has magnitude $k|v|$, where $k$ is a
 positive constant. If the
-object is moving downward ($v\le 0$),  the resisting force is
+object is moving downward ($v\le0$),  the resisting force is
 upward (Figure~\ref{figure:4.3.1}\part{a}), so
 $$
-F_1=k|v|=k(-v)=-kv.
+F_{1}=k|v|=k(-v)=-kv.
 $$
-On the other hand, if the object is moving upward ($v\ge 0$),
+On the other hand, if the object is moving upward ($v\ge0$),
 the resisting force is downward (Figure~\ref{figure:4.3.1}\part{b}), so
 $$
-F_1=-k|v|=-kv.
+F_{1}=-k|v|=-kv.
 $$
 Thus, (\ref{eq:4.3.4}) can be written as
 \begin{equation} \label{eq:4.3.5}
@@ -149,38 +149,38 @@ mv'=-mg-kv,
 $$
  or
 \begin{equation} \label{eq:4.3.6}
-v'+{k\over m}v=-g.
+v'+\frac{k}{m}v=-g.
 \end{equation}
 Since $e^{-kt/m}$ is a solution of the  complementary
 equation, the solutions of (\ref{eq:4.3.6}) are of the form
 $v=ue^{-kt/m}$, where $u'e^{-kt/m}=-g$, so $u'=-ge^{kt/m}$.
 Hence,
 $$
-u=-{mg\over k} e^{kt/m}+c,
+u=-\frac{mg}{k}e^{kt/m}+c,
 $$
 so
 \begin{equation} \label{eq:4.3.7}
-v=ue^{-kt/m}=-{mg\over k}+ce^{-kt/m}.
+v=ue^{-kt/m}=-\frac{mg}{k}+ce^{-kt/m}.
 \end{equation}
 Since
- $v(0)=v_0$,
+ $v(0)=v_{0}$,
 $$
-v_0=-{mg\over k}+c,
+v_{0}=-\frac{mg}{k}+c,
 $$
  so
 $$
-c=v_0+{mg\over k}
+c=v_{0}+\frac{mg}{k}
 $$
  and (\ref{eq:4.3.7}) becomes
 $$
-v=-{mg\over k}+\left(v_0+{mg\over k}\right) e^{-kt/m}.
+v=-\frac{mg}{k}+\left(v_{0}+\frac{mg}{k}\right)e^{-kt/m}.
 $$
 Letting $t\to\infty$ here shows that the terminal velocity is
 $$
-\lim_{t\to\infty} v(t)=-{mg\over k},
+\lim_{t\to\infty}v(t)=-\frac{mg}{k},
 $$
 which  is independent of the
-initial velocity $v_0$ (Figure~\ref{figure:4.3.2}).
+initial velocity $v_{0}$ (Figure~\ref{figure:4.3.2}).
 
 \begin{figure}[tbp]
   \centering
@@ -207,20 +207,20 @@ $$
 $$
 which we rewrite as
 $$
-v'+{1\over 10}v=-32.
+v'+\frac{1}{10}v=-32.
 $$
 Since $e^{-t/10}$ is a solution of the complementary equation, the
 solutions of this equation are of the form $v=ue^{-t/10}$, where
 $u'e^{-t/10}=-32$, so $u'=-32e^{t/10}$. Hence,
 $$
-u=-320 e^{t/10}+c,
+u=-320e^{t/10}+c,
 $$
 so
 \begin{equation} \label{eq:4.3.8}
 v=ue^{-t/10}=-320+ce^{-t/10}.
 \end{equation}
 The initial velocity is 60 ft/s in the upward (positive) direction;
-hence, $v_0=60$. Substituting $t=0$ and $v=60$ in (\ref{eq:4.3.8})
+hence, $v_{0}=60$. Substituting $t=0$ and $v=60$ in (\ref{eq:4.3.8})
 yields
 $$
 60=-320+c,
@@ -235,7 +235,7 @@ $$
 $$
 
 \begin{example}\label{example:4.3.3} \rm
-A 10 kg mass is given an initial velocity $v_0\le0$
+A 10 kg mass is given an initial velocity $v_{0}\le0$
  near Earth's surface. The only forces acting on it are
 gravity and atmospheric resistance proportional to the square of the
 speed. Assuming that the resistance is 8 N if the speed is 2 m/s,
@@ -246,75 +246,74 @@ find the terminal velocity.
 \solution Since the object is falling, the resistance is in the upward
 (positive) direction. Hence,
 \begin{equation} \label{eq:4.3.9}
-mv'=-mg+kv^2,
+mv'=-mg+kv^{2},
 \end{equation}
 where $k$ is a constant. Since the magnitude of the resistance is 8 N
 when $v=2$ m/s,
 $$
-k(2^2)=8,
+k(2^{2})=8,
 $$
- so $k=2\  \mbox{N-s}^2/\mbox{m}^2$.  Since
+ so $k=2\ \mbox{N-s}^{2}/\mbox{m}^{2}$.  Since
 $m=10$ and $g=9.8$, (\ref{eq:4.3.9}) becomes
 \begin{equation} \label{eq:4.3.10}
-10v'=-98+2v^2=2(v^2-49).
+10v'=-98+2v^{2}=2(v^{2}-49).
 \end{equation}
-If $v_0=-7$, then $v\equiv-7$ for all $t\ge0$. If $v_0\ne-7$,
+If $v_{0}=-7$, then $v\equiv-7$ for all $t\ge0$. If $v_{0}\ne-7$,
 we separate  variables to obtain
 \begin{equation} \label{eq:4.3.11}
-{1\over v^2-49}v'={1\over5},
+\frac{1}{v^{2}-49}v'=\frac{1}{5},
 \end{equation}
 which is convenient for the required partial fraction expansion
 \begin{equation} \label{eq:4.3.12}
-\frac{1}{v^2-49} =\frac{1}{(v-7)(v+7)}
-={1\over 14}\left[{1\over v-7}
--{1\over v+7}\right].
+\frac{1}{v^{2}-49}=\frac{1}{(v-7)(v+7)}
+=\frac{1}{14}\left[\frac{1}{v-7}
+-\frac{1}{v+7}\right].
 \end{equation}
  Substituting (\ref{eq:4.3.12})  into (\ref{eq:4.3.11}) yields
 $$
-{1\over14}\left[{1\over v-7}-{1\over v+7}\right]v'={1\over5},
+\frac{1}{14}\left[\frac{1}{v-7}-\frac{1}{v+7}\right]v'=\frac{1}{5},
 $$
  so
 $$
-\left[{1\over v-7}-{1\over v+7}\right]v'={14\over5}.
+\left[\frac{1}{v-7}-\frac{1}{v+7}\right]v'=\frac{14}{5}.
 $$
 Integrating this yields
 $$
-\ln |v-7|-\ln|v+7|=14t/5+k.
+\ln|v-7|-\ln|v+7|=14t/5+k.
 $$
 Therefore
 $$
-\left|{v-7\over v+7}\right|=e^ke^{14t/5}.
+\left|\frac{v-7}{v+7}\right|=e^{k}e^{14t/5}.
 $$
 Since  Theorem~\ref{thmtype:2.3.1}  implies  that  $(v-7)/(v+7)$   can't
 change sign (why?), we can rewrite the last equation as
  \begin{equation} \label{eq:4.3.13}
- {v-7\over v+7}=ce^{14t/5},
+ \frac{v-7}{v+7}=ce^{14t/5},
 \end{equation}
 which is an implicit solution of (\ref{eq:4.3.10}).
 Solving this for $v$ yields
 \begin{equation} \label{eq:4.3.14}
-v=-7{c+e^{-14t/5}\over c-e^{-14t/5}}.
+v=-7{\frac{c+e^{-14t/5}}{c-e^{-14t/5}}}.
 \end{equation}
- Since $v(0)=v_0$, it
+ Since $v(0)=v_{0}$, it
  (\ref{eq:4.3.13}) implies that
 $$
-c={v_0-7\over v_0+7}.
+c=\frac{v_{0}-7}{v_{0}+7}.
 $$
  Substituting this into (\ref{eq:4.3.14}) and simplifying yields
 $$
-v=-7{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})\over
-v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}.
+v=-7{\frac{v_{0}(1+e^{-14t/5})-7(1-e^{-14t/5})}{v_{0}(1-e^{-14t/5})-7(1+e^{-14t/5}}}.
 $$
-Since $v_0\le0$, $v$ is defined and negative for all
+Since $v_{0}\le0$, $v$ is defined and negative for all
 $t>0$. The terminal velocity is
 $$
-\lim_{t\to\infty} v(t)=-7\  \mbox{m/s},
+\lim_{t\to\infty}v(t)=-7\ \mbox{m/s},
 $$
-independent of $v_0$. More generally, it
+independent of $v_{0}$. More generally, it
 can be shown (Exercise~\ref{exer:4.3.11}) that if $v$ is any solution
-of (\ref{eq:4.3.9}) such that $v_0\le0$ then
+of (\ref{eq:4.3.9}) such that $v_{0}\le0$ then
 $$
-\lim_{t\to\infty}v(t)=-\sqrt{mg\over k}
+\lim_{t\to\infty}v(t)=-\sqrt{\frac{mg}{k}}
 $$
 (Figure~\ref{figure:4.3.3}).
 
@@ -322,13 +321,13 @@ $$
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040303}
 \color{blue}
-  \caption{Solutions of $mv'=-mg+kv^2$, $v(0)=v_0\le0$}
+  \caption{Solutions of $mv'=-mg+kv^{2}$, $v(0)=v_{0}\le0$}
   \label{figure:4.3.3}
 \end{figure}
 
 \begin{example}\label{example:4.3.4} \rm
 A 10-kg mass is launched vertically upward from Earth's surface with
-an initial velocity of $v_0$ m/s. The only forces acting on the mass
+an initial velocity of $v_{0}$ m/s. The only forces acting on the mass
 are gravity and atmospheric resistance proportional to the square of
 the speed. Assuming that the atmospheric resistance is 8 N if the
 speed is 2 m/s, find the time $T$ required for the mass to reach
@@ -343,66 +342,66 @@ the same as those in Example 3,  (\ref{eq:4.3.10}) does
 not apply here, since the resisting force is negative if $v>0$;
 therefore, we replace (\ref{eq:4.3.10}) by
 \begin{equation} \label{eq:4.3.15}
-10v'=-98-2v^2.
+10v'=-98-2v^{2}.
 \end{equation}
 
 Separating variables  yields
 $$
-{5\over v^2+49}v'=-1,
+\frac{5}{v^{2}+49}v'=-1,
 $$
  and integrating this yields
 $$
-{5\over7}\tan^{-1}{v\over7}=-t+c.
+\frac{5}{7}\tan^{-1}\frac{v}{7}=-t+c.
 $$
  (Recall that $\tan^{-1}u$ is the number $\theta$
-such that $-\pi/2 < \theta < \pi/2$ and $\tan \theta=u$.)
- Since $v(0)=v_0$,
+such that $-\pi/2<\theta<\pi/2$ and $\tan\theta=u$.)
+ Since $v(0)=v_{0}$,
 $$
-c={5\over7}\tan^{-1}{v_0\over7},
+c=\frac{5}{7}\tan^{-1}\frac{v_{0}}{7},
 $$
 so $v$ is defined implicitly by
 \begin{equation} \label{eq:4.3.16}
-{5\over7} \tan^{-1}{v\over7}=-t+{5\over7}
-\tan^{-1}{v_0\over7}, \quad 0\le t\le T.
+\frac{5}{7}\tan^{-1}\frac{v}{7}=-t+\frac{5}{7}
+\tan^{-1}\frac{v_{0}}{7},\quad0\le t\le T.
 \end{equation}
 Solving this for $v$ yields
 \begin{equation} \label{eq:4.3.17}
-v=7\tan\left(-{7t\over5}+\tan^{-1}{v_0\over7}\right).
+v=7\tan\left(-\frac{7t}{5}+\tan^{-1}\frac{v_{0}}{7}\right).
 \end{equation}
 Using the identity
 $$
-\tan(A-B)={\tan A-\tan B\over1+\tan A\tan B}
+\tan(A-B)=\frac{\tan A-\tan B}{1+\tan A\tan B}
 $$
-with $A=\tan^{-1}(v_0/7)$ and $B=7t/5$, and noting that
+with $A=\tan^{-1}(v_{0}/7)$ and $B=7t/5$, and noting that
 $\tan(\tan^{-1}\theta)=\theta$,
 we can simplify (\ref{eq:4.3.17}) to
 $$
-v=7{v_0-7\tan(7t/5)\over7+v_0\tan(7t/5)}.
+v=7{\frac{v_{0}-7\tan(7t/5)}{7+v_{0}\tan(7t/5)}}.
 $$
 
  Since $v(T)=0$ and $\tan^{-1}(0)=0$, (\ref{eq:4.3.16}) implies that
 $$
--T+{5\over7} \tan^{-1}{v_0\over7}=0.
+-T+\frac{5}{7}\tan^{-1}\frac{v_{0}}{7}=0.
 $$
 Therefore
 $$
-T={5\over7} \tan^{-1}{v_0\over7}.
+T=\frac{5}{7}\tan^{-1}\frac{v_{0}}{7}.
 $$
-Since $\tan^{-1}(v_0/7)<\pi/2$ for all $v_0$,
+Since $\tan^{-1}(v_{0}/7)<\pi/2$ for all $v_{0}$,
 the  time required for the mass to reach its maximum
 altitude is less than
 $$
-{5\pi\over 14} \approx 1.122\  \mbox{s}
+\frac{5\pi}{14}\approx1.122\ \mbox{s}
 $$
 regardless of the initial velocity.  Figure~\ref{figure:4.3.4}
-shows graphs of $v$ over $[0,T]$ for various values of $v_0$.
+shows graphs of $v$ over $[0,T]$ for various values of $v_{0}$.
 
 \begin{figure}[tbp]
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040304}
 \color{blue}
 \caption{Solutions of (\ref{eq:4.3.15}) for various
-$v_0>0$}
+$v_{0}>0$}
   \label{figure:4.3.4}
 \end{figure}
 
@@ -416,14 +415,14 @@ exhausted when the vehicle reaches an altitude $h$ above Earth, where
 $h$ is sufficiently large so that resistance due to Earth's atmosphere
 can be neglected. Let $t=0$ be the time when burnout occurs.
 Assuming that the gravitational forces of all other celestial bodies
-can be neglected, the motion of the vehicle for $t > 0$ is that of an
+can be neglected, the motion of the vehicle for $t>0$ is that of an
 object with constant mass $m$ under the influence of Earth's
 gravitational force, which we now assume to vary inversely with the
 square of the distance from Earth's center;  thus, if we take the
 upward direction to be positive then
 gravitational force on the vehicle at an altitude $y$ above Earth is
 \begin{equation} \label{eq:4.3.18}
-F=-{K\over(y+R)^2},
+F=-\frac{K}{(y+R)^{2}},
 \end{equation}
 where $R$ is  Earth's radius (Figure~\ref{figure:4.3.5}).
 
@@ -438,36 +437,36 @@ where $R$ is  Earth's radius (Figure~\ref{figure:4.3.5}).
  Since $F=-mg$ when $y=0$, setting $y=0$ in
 (\ref{eq:4.3.18}) yields
 $$
--mg=-{K\over R^2};
+-mg=-\frac{K}{R^{2}};
 $$
- therefore $K=mgR^2$ and (\ref{eq:4.3.18}) can be written more
+ therefore $K=mgR^{2}$ and (\ref{eq:4.3.18}) can be written more
 specifically as
 \begin{equation} \label{eq:4.3.19}
-F=-{mgR^2\over(y+R)^2}.
+F=-\frac{mgR^{2}}{(y+R)^{2}}.
 \end{equation}
 
 From Newton's second law of motion,
 $$
-F=m{d^2y\over dt^2},
+F=m\frac{d^{2}y}{dt^{2}},
 $$
 so (\ref{eq:4.3.19}) implies that
 \begin{equation} \label{eq:4.3.20}
-{d^2y\over dt^2}=-{gR^2\over(y+R)^2}.
+\frac{d^{2}y}{dt^{2}}=-\frac{gR^{2}}{(y+R)^{2}}.
 \end{equation}
 
-We'll show that there's a number $v_e$, called the {\color{blue}\it
+We'll show that there's a number $v_{e}$, called the {\color{blue}\it
 escape
 velocity\/}, with these properties:
 
 \begin{enumerate}
-\item If $v_0\ge v_e$ then $v(t)>0$ for all $t>0$, and the vehicle
+\item If $v_{0}\ge v_{e}$ then $v(t)>0$ for all $t>0$, and the vehicle
 continues to climb for all $t>0$; that is, it ``escapes'' Earth.
 (Is it really so obvious that $\lim_{t\to\infty}y(t)=\infty$
 in this case? For a proof, see Exercise~\ref{exer:4.3.20}.)
-\item  If $v_0<v_e$  then  $v(t)$   decreases to zero and becomes negative.
+\item  If $v_{0}<v_{e}$  then  $v(t)$   decreases to zero and becomes negative.
 Therefore
  the vehicle attains a  maximum
-altitude  $y_m$ and
+altitude  $y_{m}$ and
 falls back to Earth.
  \end{enumerate}
 
@@ -476,54 +475,54 @@ Since
 so far. However, we're concerned with $v$ rather than $y$, and $v$ is
 easier to find. Since $v=y'$ the chain rule implies that
 $$
-{d^2y\over dt^2}={dv\over dt}={dv\over dy}{dy\over dt}=v{dv\over dy}.
+\frac{d^{2}y}{dt^{2}}=\frac{dv}{dt}=\frac{dv}{dy}\frac{dy}{dt}=v\frac{dv}{dy}.
 $$
  Substituting this into (\ref{eq:4.3.20}) yields the first order
 separable equation
 \begin{equation} \label{eq:4.3.21}
-v{dv\over dy}=-{gR^2\over(y+R)^2}.
+v\frac{dv}{dy}=-\frac{gR^{2}}{(y+R)^{2}}.
 \end{equation}
-When $t=0$, the velocity is $v_0$ and the altitude is $h$. Therefore
+When $t=0$, the velocity is $v_{0}$ and the altitude is $h$. Therefore
 we can
 obtain $v$ as a function of $y$ by solving the initial value problem
 $$
-v{dv\over dy}=-{gR^2\over(y+R)^2},\quad  v(h)=v_0.
+v\frac{dv}{dy}=-\frac{gR^{2}}{(y+R)^{2}},\quad  v(h)=v_{0}.
 $$
 
 Integrating (\ref{eq:4.3.21}) with respect to $y$ yields
 \begin{equation} \label{eq:4.3.22}
-{v^2\over 2}={gR^2\over y+R}+c.
+\frac{v^{2}}{2}=\frac{gR^{2}}{y+R}+c.
 \end{equation}
- Since $v(h)=v_0$,
+ Since $v(h)=v_{0}$,
 $$
-c={v_0^2\over 2}-{gR^2\over h+R},
+c=\frac{v_{0}^{2}}{2}-\frac{gR^{2}}{h+R},
 $$
  so (\ref{eq:4.3.22}) becomes
 \begin{equation} \label{eq:4.3.23}
-{v^2\over 2}={gR^2\over y+R}+\left({v_0^2\over 2}-
-{gR^2\over h+R}\right).
+\frac{v^{2}}{2}=\frac{gR^{2}}{y+R}+\left(\frac{v_{0}^{2}}{2}-
+\frac{gR^{2}}{h+R}\right).
 \end{equation}
 If
 $$
-v_0 \ge\left({2gR^2\over h+R}\right)^{1/2},
+v_{0}\ge\left(\frac{2gR^{2}}{h+R}\right)^{1/2},
 $$
  the parenthetical expression in (\ref{eq:4.3.23})  is nonnegative,
  so $v(y)>0$ for $y>h$. This proves that there's an escape
-velocity $v_e$. We'll now prove that
+velocity $v_{e}$. We'll now prove that
 $$
-v_e=\left({2gR^2\over h+R}\right)^{1/2}
+v_{e}=\left(\frac{2gR^{2}}{h+R}\right)^{1/2}
 $$
 by showing that the vehicle falls back to Earth if
 \begin{equation} \label{eq:4.3.24}
-v_0 <\left({2gR^2\over h+R}\right)^{1/2}.
+v_{0}<\left(\frac{2gR^{2}}{h+R}\right)^{1/2}.
 \end{equation}
 If (\ref{eq:4.3.24})  holds then  the parenthetical expression in
 (\ref{eq:4.3.23})
-is negative and the vehicle will attain a maximum altitude $y_m>h$
+is negative and the vehicle will attain a maximum altitude $y_{m}>h$
 that satisfies the equation
 $$
-0={gR^2\over y_m+R}+\left({v_0^2\over 2}-
-{gR^2\over h+R}\right).
+0=\frac{gR^{2}}{y_{m}+R}+\left(\frac{v_{0}^{2}}{2}-
+\frac{gR^{2}}{h+R}\right).
 $$
 The velocity will be zero at the maximum  altitude, and the object will
 then fall to Earth under the influence of gravity.
@@ -564,7 +563,7 @@ A constant horizontal force of 10 N pushes a 20 kg-mass through a
 medium that resists its motion with .5 N for every m/s of speed. The
 initial velocity of the mass is 7 m/s in the direction opposite to
 the direction of the applied force. Find the velocity of the mass for
-$t > 0$.
+$t>0$.
 
 \item\label{exer:4.3.5}
 A stone weighing 1/2 lb is thrown upward from an initial height of 5
@@ -576,7 +575,7 @@ maximum height attained by the stone.
 A 3200-lb car is moving at 64 ft/s down a 30-degree grade when it
 runs out of fuel. Find its velocity after that if friction exerts a
 resistive force with magnitude proportional to the square of the
-speed, with $k=1\ \mbox{lb-s}^2/{\mbox ft}^2$. Also find its
+speed, with $k=1\ \mbox{lb-s}^{2}/{\mbox ft}^{2}$. Also find its
 terminal velocity.
 
 \item\label{exer:4.3.7}
@@ -589,36 +588,36 @@ ft/s.
 An object with mass $m$ moves vertically through a medium that exerts
 a resistive force with magnitude proportional to the  speed. Let
 $y=y(t)$ be the
-altitude of the object at time $t$, with $y(0)=y_0$. Use the results
+altitude of the object at time $t$, with $y(0)=y_{0}$. Use the results
 of Example~\ref{example:4.3.1} to show that
 $$
- y(t)=y_0+{m\over k}(v_0-v-gt).
+ y(t)=y_{0}+\frac{m}{k}(v_{0}-v-gt).
 $$
 
 \item\label{exer:4.3.9}
 An object with mass $m$ is launched vertically upward with initial
-velocity $v_0$ from Earth's surface ($y_0=0$) in a medium that exerts
+velocity $v_{0}$ from Earth's surface ($y_{0}=0$) in a medium that exerts
 a resistive force with magnitude proportional to the speed. Find the
-time $T$ when the object attains its maximum altitude $y_m$. Then use
-the result of Exercise~\ref{exer:4.3.8} to find $y_m$.
+time $T$ when the object attains its maximum altitude $y_{m}$. Then use
+the result of Exercise~\ref{exer:4.3.8} to find $y_{m}$.
 
 \item\label{exer:4.3.10}
 An object weighing 256 lb is dropped from rest in a medium that
 exerts a resistive force with magnitude proportional to the square of
 the speed. The magnitude of the resisting force is 1 lb when $|v|=4\
-\mbox{ft/s}$. Find $v$ for $t > 0$, and find its terminal
+\mbox{ft/s}$. Find $v$ for $t>0$, and find its terminal
 velocity.
 
 \item\label{exer:4.3.11}
-An object with mass $m$ is given an initial velocity $v_0\le0$ in
+An object with mass $m$ is given an initial velocity $v_{0}\le0$ in
 a medium that exerts
 a resistive force with magnitude proportional to the square of the
-speed. Find the velocity of the object for $t > 0$, and find its
+speed. Find the velocity of the object for $t>0$, and find its
 terminal velocity.
 
 \item\label{exer:4.3.12}
 An object with mass $m$ is launched vertically upward with initial
-velocity $v_0$ in a medium that exerts a resistive force
+velocity $v_{0}$ in a medium that exerts a resistive force
 with magnitude  proportional to the square of the  speed.
 
 \begin{alist}
@@ -627,11 +626,11 @@ Find the time $T$ when the object reaches its maximum
 altitude.
 \item %(b)
 Use the result of Exercise~\ref{exer:4.3.11} to find the velocity of the
-object for $t > T$.
+object for $t>T$.
 \end{alist}
 
 \item\label{exer:4.3.13} \Lex
-An object with mass $m$ is given an  initial velocity $v_0\le0$
+An object with mass $m$ is given an  initial velocity $v_{0}\le0$
 in a medium that exerts a resistive force of the form
  $a|v|/(1+|v|)$, where  $a$ is positive constant.
 
@@ -640,11 +639,11 @@ in a medium that exerts a resistive force of the form
 Set up a differential equation for the speed of the object.
 \item % (b)
 Use your favorite numerical method to solve the equation you found in
-\part{a}, to convince yourself that there's  a unique number $a_0$ such
-that $\lim_{t\to\infty}s(t)=\infty$ if $a\le a_0$ and
-$\lim_{t\to\infty}s(t)$ exists (finite) if $a>a_0$. (We say that $a_0$
-is the {\color{blue}\it bifurcation value\/} of $a$.) Try to find $a_0$ and
-$\lim_{t\to\infty}s(t)$ in the case where $a>a_0$.
+\part{a}, to convince yourself that there's  a unique number $a_{0}$ such
+that $\lim_{t\to\infty}s(t)=\infty$ if $a\le a_{0}$ and
+$\lim_{t\to\infty}s(t)$ exists (finite) if $a>a_{0}$. (We say that $a_{0}$
+is the {\color{blue}\it bifurcation value\/} of $a$.) Try to find $a_{0}$ and
+$\lim_{t\to\infty}s(t)$ in the case where $a>a_{0}$.
 \hint{See Exercise~\ref{exer:4.3.14}.}
 \end{alist}
 
@@ -664,12 +663,12 @@ Show that if $\lim_{s\to\infty}f(s)\le mg$ then
 $\lim_{t\to\infty}s(t)=\infty$.
 \item % (c)
 Show that if $\lim_{s\to\infty}f(s)>mg$ then
-$\lim_{t\to\infty}s(t)=s_T$ (terminal speed), where $f(s_T)=mg$.
+$\lim_{t\to\infty}s(t)=s_{T}$ (terminal speed), where $f(s_{T})=mg$.
 \hint{Use Theorem~\ref{thmtype:2.3.1}}.
 \end{alist}
 
 \item\label{exer:4.3.15}
-A 100-g mass with initial velocity $v_0\le0$ falls in a medium that
+A 100-g mass with initial velocity $v_{0}\le0$ falls in a medium that
 exerts a resistive force proportional to the fourth power of the
 speed. The resistance is $.1$ N if the speed is 3 m/s.
 
@@ -685,12 +684,12 @@ the object.
 To confirm your answer to \part{b},  use one of the numerical methods  studied
 in Chapter~3 to compute  approximate solutions on $[0,1]$
 (seconds) of the initial value problem of \part{a}, with initial values
-$v_0=0$, $-2$, $-4$, \dots, $-12$. Present your results in graphical form
+$v_{0}=0$, $-2$, $-4$, \dots, $-12$. Present your results in graphical form
 similar to Figure~\ref{figure:4.3.3}.
 \end{alist}
 
 \item\label{exer:4.3.16}
-A 64-lb object with initial velocity $v_0\le0$ falls through a dense
+A 64-lb object with initial velocity $v_{0}\le0$ falls through a dense
 fluid that exerts a resistive force proportional to the square root of
 the speed. The resistance is $64$ lb if the speed is 16 ft/s.
 
@@ -707,7 +706,7 @@ To confirm your answer to \part{b}, use one of the numerical methods
 studied in Chapter~3 to compute approximate
 solutions on
 $[0,4]$ (seconds) of the initial value problem of \part{a}, with
-initial values $v_0=0$, $-5$, $-10$, \dots, $-30$. Present your results in
+initial values $v_{0}=0$, $-5$, $-10$, \dots, $-30$. Present your results in
 graphical form similar to Figure~\ref{figure:4.3.3}.
 \end{alist}
 
@@ -725,34 +724,34 @@ miles/s.  Take Earth's radius to be 3960 miles.
 A space vehicle is to be launched from the moon, which has a
 radius of about 1080 miles.  The acceleration due to
 gravity at the surface of the moon is about $5.31$
-ft/s$^2$.  Find the escape velocity in miles/s.
+ft/s$^{2}$.  Find the escape velocity in miles/s.
 
 \item\label{exer:4.3.19}
 \begin{alist}
 \item %(a)
 Show that Eqn.~(\ref{eq:4.3.23})  can be rewritten as
 $$
-v^2={h-y\over y+R} v^2_e+v_0^2.
+v^{2}=\frac{h-y}{y+R}v^{2}_{e}+v_{0}^{2}.
 $$
 \item %(b)
-Show that if $v_0=\rho v_e$ with $ 0\le \rho < 1$, then
-the maximum altitude $y_m$ attained by the space
+Show that if $v_{0}=\rho v_{e}$ with $ 0\le\rho<1$, then
+the maximum altitude $y_{m}$ attained by the space
 vehicle is
 $$
-y_m={h+R\rho^2\over 1-\rho^2}.
+y_{m}=\frac{h+R\rho^{2}}{1-\rho^{2}}.
 $$
 \item %(c)
-By requiring that $v(y_m)=0$, use Eqn.~(\ref{eq:4.3.22}) to
-deduce that if $v_0 < v_e$ then
+By requiring that $v(y_{m})=0$, use Eqn.~(\ref{eq:4.3.22}) to
+deduce that if $v_{0}<v_{e}$ then
 $$
-|v|=v_e\left[{(1-\rho^2)(y_m-y)\over y+R}\right]^{1/2},
+|v|=v_{e}\left[\frac{(1-\rho^{2})(y_{m}-y)}{y+R}\right]^{1/2},
 $$
-where $y_m$ and $\rho$ are as defined in \part{b} and
-$y \ge h$.
+where $y_{m}$ and $\rho$ are as defined in \part{b} and
+$y\ge h$.
 \item %(d)
-Deduce from \part{c} that if $v < v_e$,  the vehicle takes
-equal times to climb from $y=h$ to $y=y_m$ and to
-fall back from $y=y_m$ to $y=h$.
+Deduce from \part{c} that if $v<v_{e}$,  the vehicle takes
+equal times to climb from $y=h$ to $y=y_{m}$ and to
+fall back from $y=y_{m}$ to $y=h$.
 \end{alist}
 
 \item\label{exer:4.3.20}
@@ -760,7 +759,7 @@ In the situation considered in the discussion of escape velocity, show
 that $\lim_{t\to\infty}y(t)=\infty$ if $v(t)>0$ for all $t>0$.
 
 \hint{Use a proof by contradiction. Assume that there's a number
-$y_m$ such that $y(t)\le y_m$ for all $t>0$. Deduce from this that
+$y_{m}$ such that $y(t)\le y_{m}$ for all $t>0$. Deduce from this that
 there's positive number $\alpha$ such that $y''(t)\le-\alpha$ for all
 $t\ge0$. Show that this contradicts the assumption that $v(t)>0$ for
 all $t>0$.}

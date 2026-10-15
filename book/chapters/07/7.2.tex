@@ -4,129 +4,129 @@
 Many physical applications give rise to second order homogeneous
 linear  differential equations of the form
 \begin{equation}\label{eq:7.2.1}
-P_0(x)y''+P_1(x)y'+P_2(x)y=0,
+P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0,
 \end{equation}
-where $P_0$, $P_1$, and $P_2$ are polynomials. Usually the solutions
+where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials. Usually the solutions
 of these equations can't be expressed in terms of familiar elementary
 functions. Therefore we'll consider the problem of representing
 solutions of \eqref{eq:7.2.1} with series.
 
-We assume throughout that $P_0$, $P_1$ and $P_2$ have no common
-factors. Then we say that $x_0$ is an {\color{blue}\it ordinary point\/} of
-\eqref{eq:7.2.1} if $P_0(x_0)\ne0$, or a {\color{blue}\it singular point\/} if
-$P_0(x_0)=0$. For  Legendre's equation,
+We assume throughout that $P_{0}$, $P_{1}$ and $P_{2}$ have no common
+factors. Then we say that $x_{0}$ is an {\color{blue}\it ordinary point\/} of
+\eqref{eq:7.2.1} if $P_{0}(x_{0})\ne0$, or a {\color{blue}\it singular point\/} if
+$P_{0}(x_{0})=0$. For  Legendre's equation,
 \begin{equation}\label{eq:7.2.2}
-(1-x^2)y''-2xy'+\alpha(\alpha+1)y=0,
+(1-x^{2})y''-2xy'+\alpha(\alpha+1)y=0,
 \end{equation}
-$x_0=1$ and $x_0=-1$ are singular points and all other points are
+$x_{0}=1$ and $x_{0}=-1$ are singular points and all other points are
 ordinary points. For  Bessel's~ equation,
 $$
-x^2y''+xy'+(x^2-\nu^2)y=0,
+x^{2}y''+xy'+(x^{2}-\nu^{2})y=0,
 $$
-$x_0=0$ is a singular point and all other points are ordinary points.
-If $P_0$ is a nonzero constant as in  Airy's
+$x_{0}=0$ is a singular point and all other points are ordinary points.
+If $P_{0}$ is a nonzero constant as in  Airy's
 equation,
 \begin{equation}\label{eq:7.2.3}
 y''-xy=0,
 \end{equation}
 then every point is an ordinary point.
 
-Since polynomials are continuous everywhere, $P_1/P_0$ and $P_2/P_0$
-are continuous at any point $x_0$ that isn't  a zero of $P_0$.
-Therefore, if $x_0$ is an ordinary point of \eqref{eq:7.2.1} and $a_0$ and
-$a_1$ are arbitrary real numbers, then the initial value problem
+Since polynomials are continuous everywhere, $P_{1}/P_{0}$ and $P_{2}/P_{0}$
+are continuous at any point $x_{0}$ that isn't  a zero of $P_{0}$.
+Therefore, if $x_{0}$ is an ordinary point of \eqref{eq:7.2.1} and $a_{0}$ and
+$a_{1}$ are arbitrary real numbers, then the initial value problem
 \begin{equation}\label{eq:7.2.4}
-P_0(x)y''+P_1(x)y'+P_2(x)y=0, \quad  y(x_0)=a_0,\quad y'(x_0)=a_1
+P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0,\quad  y(x_{0})=a_{0},\quad y'(x_{0})=a_{1}
 \end{equation}
-has a unique solution on the largest open interval that contains $x_0$
-and does not contain any zeros of $P_0$. To see this, we rewrite the
+has a unique solution on the largest open interval that contains $x_{0}$
+and does not contain any zeros of $P_{0}$. To see this, we rewrite the
 differential equation in \eqref{eq:7.2.4} as
 $$
-y''+{P_1(x)\over P_0(x)}y'+{P_2(x)\over P_0(x)}y=0
+y''+\frac{P_{1}(x)}{P_{0}(x)}y'+\frac{P_{2}(x)}{P_{0}(x)}y=0
 $$
-and apply Theorem~\ref{thmtype:5.1.1} with $p=P_1/P_0$ and $q=P_2/P_0$.
+and apply Theorem~\ref{thmtype:5.1.1} with $p=P_{1}/P_{0}$ and $q=P_{2}/P_{0}$.
 In this section and the next we  consider the problem of
 representing  solutions of \eqref{eq:7.2.1}  by power series that
-converge  for values of $x$  near an ordinary point $x_0$.
+converge  for values of $x$  near an ordinary point $x_{0}$.
 
 We state the next theorem without proof.
 
 \begin{theorem}\color{blue}\label{thmtype:7.2.1}
-Suppose $P_0$, $P_1$, and $P_2$ are polynomials with no common
-factor and $P_0$ isn't  identically zero. Let $x_0$ be a point such
-that $P_0(x_0)\ne0$, and let $\rho$ be the distance from $x_0$ to the
-nearest zero of $P_0$ in the complex plane. (If $P_0$ is constant,
+Suppose $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials with no common
+factor and $P_{0}$ isn't  identically zero. Let $x_{0}$ be a point such
+that $P_{0}(x_{0})\ne0$, and let $\rho$ be the distance from $x_{0}$ to the
+nearest zero of $P_{0}$ in the complex plane. (If $P_{0}$ is constant,
 then $\rho=\infty$.) Then every solution of
 \begin{equation}\label{eq:7.2.5}
-P_0(x)y''+P_1(x)y'+P_2(x)y=0
+P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0
 \end{equation}
 can be represented by a power series
  \begin{equation}\label{eq:7.2.6}
-y=\sum_{n=0}^\infty a_n(x-x_0)^n
+y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
 \end{equation}
-that converges at least on the open interval $(x_0-\rho,x_0+\rho)$.
-( If $P_0$ is nonconstant, so that $\rho$ is necessarily finite,
+that converges at least on the open interval $(x_{0}-\rho,x_{0}+\rho)$.
+(If $P_{0}$ is nonconstant, so that $\rho$ is necessarily finite,
 then the open interval of convergence of \eqref{eq:7.2.6} may be larger
-than $(x_0-\rho,x_0+\rho)$. If $P_0$ is constant then $\rho=\infty$
-and $(x_0-\rho,x_0+\rho)=(-\infty,\infty)$.)
+than $(x_{0}-\rho,x_{0}+\rho)$. If $P_{0}$ is constant then $\rho=\infty$
+and $(x_{0}-\rho,x_{0}+\rho)=(-\infty,\infty)$.)
 \end{theorem}
 
-We call \eqref{eq:7.2.6} a {\color{blue}\it power series solution in $x-x_0$\/}  of
+We call \eqref{eq:7.2.6} a {\color{blue}\it power series solution in $x-x_{0}$\/}  of
 \eqref{eq:7.2.5}. We'll now develop a method for finding power series
 solutions of \eqref{eq:7.2.5}. For this purpose we write \eqref{eq:7.2.5} as
 $Ly=0$, where
 \begin{equation}\label{eq:7.2.7}
-Ly=P_0y''+P_1y'+P_2y.
+Ly=P_{0}y''+P_{1}y'+P_{2}y.
 \end{equation}
 
 Theorem~\ref{thmtype:7.2.1} implies that every solution of $Ly=0$ on
-$(x_0-\rho,x_0+\rho)$ can be written as
+$(x_{0}-\rho,x_{0}+\rho)$ can be written as
 $$
-y=\sum_{n=0}^\infty a_n(x-x_0)^n.
+y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}.
 $$
-Setting $x=x_0$ in this series and in the series
+Setting $x=x_{0}$ in this series and in the series
 $$
-y'=\sum_{n=1}^\infty na_n(x-x_0)^{n-1}
+y'=\sum_{n=1}^{\infty}na_{n}(x-x_{0})^{n-1}
 $$
-shows that $y(x_0)=a_0$ and $y'(x_0)=a_1$. Since every initial value
-problem \eqref{eq:7.2.4} has a unique solution, this means that $a_0$ and
-$a_1$ can be chosen arbitrarily, and  $a_2$, $a_3$, \dots are
+shows that $y(x_{0})=a_{0}$ and $y'(x_{0})=a_{1}$. Since every initial value
+problem \eqref{eq:7.2.4} has a unique solution, this means that $a_{0}$ and
+$a_{1}$ can be chosen arbitrarily, and  $a_{2}$, $a_{3}$, \dots are
 uniquely determined by them.
 
-To find $a_2$, $a_3$, \dots, we write $P_0$, $P_1$, and $P_2$ in powers of
-$x-x_0$, substitute
+To find $a_{2}$, $a_{3}$, \dots, we write $P_{0}$, $P_{1}$, and $P_{2}$ in powers of
+$x-x_{0}$, substitute
 $$
-y=\sum^\infty_{n=0}a_n(x-x_0)^n,
-$$
-$$
-y'=\sum^\infty_{n=1}na_n(x-x_0)^{n-1},
+y=\sum^{\infty}_{n=0}a_{n}(x-x_{0})^{n},
 $$
 $$
-y''=\sum^\infty_{n=2}n(n-1)a_n(x-x_0)^{n-2}
+y'=\sum^{\infty}_{n=1}na_{n}(x-x_{0})^{n-1},
+$$
+$$
+y''=\sum^{\infty}_{n=2}n(n-1)a_{n}(x-x_{0})^{n-2}
 $$
 into \eqref{eq:7.2.7}, and collect the coefficients of like powers of
-$x-x_0$. This yields
+$x-x_{0}$. This yields
 \begin{equation}\label{eq:7.2.8}
-Ly=\sum^\infty_{n=0}b_n(x-x_0)^n,
+Ly=\sum^{\infty}_{n=0}b_{n}(x-x_{0})^{n},
 \end{equation}
-where $\{b_0, b_1, \dots, b_n, \dots\}$ are expressed in terms of
-$\{a_0, a_1, \dots,a_n, \dots\}$ and the coefficients of $P_0$, $P_1$,
-and $P_2$, written in powers of $x-x_0$. Since \eqref{eq:7.2.8} and
+where $\{b_{0},b_{1},\dots,b_{n},\dots\}$ are expressed in terms of
+$\{a_{0},a_{1},\dots,a_{n},\dots\}$ and the coefficients of $P_{0}$, $P_{1}$,
+and $P_{2}$, written in powers of $x-x_{0}$. Since \eqref{eq:7.2.8} and
 \part{a} of Theorem~\ref{thmtype:7.1.6} imply that $Ly=0$ if and only if
-$b_n=0$ for $n\ge0$,  all power series solutions in
-$x-x_0$ of $Ly=0$ can be obtained by choosing $a_0$ and $a_1$
-arbitrarily and computing $a_2$, $a_3$, \dots, successively so that
-$b_n=0$
+$b_{n}=0$ for $n\ge0$,  all power series solutions in
+$x-x_{0}$ of $Ly=0$ can be obtained by choosing $a_{0}$ and $a_{1}$
+arbitrarily and computing $a_{2}$, $a_{3}$, \dots, successively so that
+$b_{n}=0$
 for $n\ge0$. For simplicity, we call the power series obtained  this
-way {\color{blue}\it the power series in $x-x_0$ for the general solution\/} of
+way {\color{blue}\it the power series in $x-x_{0}$ for the general solution\/} of
 $Ly=0$, without explicitly identifying the open interval of
 convergence of the series.
 
 \begin{example}\label{example:7.2.1}\rm
-Let $x_0$ be an arbitrary real number. Find the power series in
-$x-x_0$ for the general solution of
+Let $x_{0}$ be an arbitrary real number. Find the power series in
+$x-x_{0}$ for the general solution of
 \begin{equation}\label{eq:7.2.9}
- y''+ y=0.
+ y''+y=0.
 \end{equation}
 \end{example}
 
@@ -137,112 +137,112 @@ Ly=y''+y.
 $$
 If
 $$
-y=\sum_{n=0}^\infty a_n(x-x_0)^n,
+y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n},
 $$
 then
 $$
-y''=\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2},
+y''=\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2},
 $$
 so
 $$
-Ly=\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+\sum_{n=0}^\infty a_n(x-x_0)^n.
+Ly=\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}+\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}.
 $$
-To collect coefficients of like powers of $x-x_0$, we shift the summation
+To collect coefficients of like powers of $x-x_{0}$, we shift the summation
 index in the first sum. This yields
 $$
-Ly=\sum^\infty_{n=0}(n+2)(n+1)a_{n+2}(x-x_0)^n +
- \sum^\infty_{n=0}a_n(x-x_0)^n
-=\sum^\infty_{n=0}b_n(x-x_0)^n,
+Ly=\sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}(x-x_{0})^{n}+
+ \sum^{\infty}_{n=0}a_{n}(x-x_{0})^{n}
+=\sum^{\infty}_{n=0}b_{n}(x-x_{0})^{n},
 $$
 with
 $$
-b_n=(n+2)(n+1)a_{n+2}+a_n.
+b_{n}=(n+2)(n+1)a_{n+2}+a_{n}.
 $$
 Therefore $Ly=0$ if and only if
 \begin{equation}\label{eq:7.2.10}
-a_{n+2}={-a_n\over(n+2)(n+1)},\quad n\ge0,
+a_{n+2}=\frac{-a_{n}}{(n+2)(n+1)},\quad n\ge0,
 \end{equation}
-where $a_0$ and $a_1$ are arbitrary. Since the indices on the left and
+where $a_{0}$ and $a_{1}$ are arbitrary. Since the indices on the left and
 right sides of \eqref{eq:7.2.10} differ by two, we write \eqref{eq:7.2.10}
 separately for $n$ even $(n=2m)$ and $n$ odd $(n=2m+1)$. This yields
 \begin{eqnarray}
-a_{2m+2}&=&{-a_{2m}\over(2m+2)(2m+1)},\quad m\ge0,
+a_{2m+2}&=&\frac{-a_{2m}}{(2m+2)(2m+1)},\quad m\ge0,
 \label{eq:7.2.11} \\%dummy \eqref{eq:7.2.14}
 \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\
-a_{2m+3}&=&{-a_{2m+1}\over(2m+3)(2m+2)},\quad  m\ge0.
+a_{2m+3}&=&\frac{-a_{2m+1}}{(2m+3)(2m+2)},\quad  m\ge0.
 \label{eq:7.2.12}
 \end{eqnarray}
-Computing the coefficients of the even powers of $x-x_0$ from
+Computing the coefficients of the even powers of $x-x_{0}$ from
 \eqref{eq:7.2.11} yields
 \begin{eqnarray*}
-a_2&=&-{a_0\over2\cdot1}\\[2\jot]
-a_4&=&-{a_2\over4\cdot3}=-{1\over4\cdot3}
- \left(-{a_0\over2\cdot1}\right)=
- {a_0\over4\cdot3\cdot2\cdot1}, \\
-a_6&=&-{a_4\over6\cdot5}=-{1\over6\cdot5}
- \left({a_0\over4\cdot3\cdot2\cdot1}\right)
-=-{a_0\over6\cdot5\cdot4\cdot3\cdot
+a_{2}&=&-\frac{a_{0}}{2\cdot1}\\[2\jot]
+a_{4}&=&-\frac{a_{2}}{4\cdot3}=-\frac{1}{4\cdot3}
+ \left(-\frac{a_{0}}{2\cdot1}\right)=
+ \frac{a_{0}}{4\cdot3\cdot2\cdot1},\\
+a_{6}&=&-\frac{a_{4}}{6\cdot5}=-\frac{1}{6\cdot5}
+ \left(\frac{a_{0}}{4\cdot3\cdot2\cdot1}\right)
+=-\frac{a_{0}}{6\cdot5\cdot4\cdot3\cdot
  2\cdot1},
 \end{eqnarray*}
 and, in general,
 \begin{equation}\label{eq:7.2.13}
-a_{2m}=(-1)^m {a_0\over(2m)!}\;   ,\quad  m\ge0.
+a_{2m}=(-1)^{m}\frac{a_{0}}{(2m)!}\;,\quad  m\ge0.
 \end{equation}
-Computing the coefficients of the odd powers of $x-x_0$ from \eqref{eq:7.2.12}
+Computing the coefficients of the odd powers of $x-x_{0}$ from \eqref{eq:7.2.12}
 yields
 \begin{eqnarray*}
-a_3&=&-{a_1\over3\cdot2}\\[2\jot]
-a_5&=&-{a_3\over5\cdot4}=-{1\over5\cdot4}
- \left(-{a_1\over3\cdot2}\right)=
- {a_1\over5\cdot4\cdot3\cdot2}, \\
-a_7&=&-{a_5\over7\cdot6}=-{1\over7\cdot6}
- \left({a_1\over5\cdot4\cdot3\cdot2}\right)
-=-{a_1\over7\cdot6\cdot5\cdot4\cdot
+a_{3}&=&-\frac{a_{1}}{3\cdot2}\\[2\jot]
+a_{5}&=&-\frac{a_{3}}{5\cdot4}=-\frac{1}{5\cdot4}
+ \left(-\frac{a_{1}}{3\cdot2}\right)=
+ \frac{a_{1}}{5\cdot4\cdot3\cdot2},\\
+a_{7}&=&-\frac{a_{5}}{7\cdot6}=-\frac{1}{7\cdot6}
+ \left(\frac{a_{1}}{5\cdot4\cdot3\cdot2}\right)
+=-\frac{a_{1}}{7\cdot6\cdot5\cdot4\cdot
  3\cdot2},
 \end{eqnarray*}
 and, in general,
 \begin{equation}\label{eq:7.2.14}
-a_{2m+1}={(-1)^ma_1\over(2m+1)!}\quad m\ge0.
+a_{2m+1}=\frac{(-1)^{m}a_{1}}{(2m+1)!}\quad m\ge0.
 \end{equation}
 Thus, the general solution of \eqref{eq:7.2.9} can be written as
 $$
-y=\sum_{m=0}^\infty a_{2m}(x-x_0)^{2m}+\sum_{m=0}^\infty a_{2m+1}(x-x_0)^{2m+1},
+y=\sum_{m=0}^{\infty}a_{2m}(x-x_{0})^{2m}+\sum_{m=0}^{\infty}a_{2m+1}(x-x_{0})^{2m+1},
 $$
 or, from \eqref{eq:7.2.13} and \eqref{eq:7.2.14}, as
 \begin{equation}\label{eq:7.2.15}
-y=a_0\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m}\over(2m)!}
-+a_1\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m+1}\over(2m+1)!}.
+y=a_{0}\sum_{m=0}^{\infty}(-1)^{m}\frac{(x-x_{0})^{2m}}{(2m)!}
++a_{1}\sum_{m=0}^{\infty}(-1)^{m}\frac{(x-x_{0})^{2m+1}}{(2m+1)!}.
 \end{equation}
 If we recall from calculus that
 $$
-\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m}\over(2m)!}=\cos(x-x_0)
+\sum_{m=0}^{\infty}(-1)^{m}\frac{(x-x_{0})^{2m}}{(2m)!}=\cos(x-x_{0})
 \mbox{\quad  and \quad }
-\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m+1}\over(2m+1)!}=\sin(x-x_0),
+\sum_{m=0}^{\infty}(-1)^{m}\frac{(x-x_{0})^{2m+1}}{(2m+1)!}=\sin(x-x_{0}),
 $$
 then \eqref{eq:7.2.15} becomes
 $$
-y=a_0\cos(x-x_0)+a_1\sin(x-x_0),
+y=a_{0}\cos(x-x_{0})+a_{1}\sin(x-x_{0}),
 $$
 which should look familiar. \bbox
 
 Equations like \eqref{eq:7.2.10}, \eqref{eq:7.2.11}, and \eqref{eq:7.2.12}, which
-define a given coefficient in the sequence $\{a_n\}$ in terms of one
+define a given coefficient in the sequence $\{a_{n}\}$ in terms of one
 or more coefficients with lesser indices are called {\color{blue}\it recurrence
 relations\/}. When we use a recurrence relation to compute terms
 of a sequence we're computing {\color{blue}\it recursively\/}.
 
 In  the remainder of this  section we  consider the problem of
-finding power series solutions in $x-x_0$  for equations of the form
+finding power series solutions in $x-x_{0}$  for equations of the form
 \begin{equation}\label{eq:7.2.16}
-\left(1+\alpha(x-x_0)^2\right)y''+\beta(x-x_0) y'+\gamma y=0.
+\left(1+\alpha(x-x_{0})^{2}\right)y''+\beta(x-x_{0})y'+\gamma y=0.
 \end{equation}
 Many important equations that arise in applications are of this
-form with $x_0=0$, including  Legendre's equation \eqref{eq:7.2.2},
+form with $x_{0}=0$, including  Legendre's equation \eqref{eq:7.2.2},
 Airy's equation \eqref{eq:7.2.3},
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Chebyshev/}
 {\color{blue}\it Chebyshev's  equation\/},
 $$
-(1-x^2)y''-xy'+\alpha^2 y=0,
+(1-x^{2})y''-xy'+\alpha^{2}y=0,
 $$
 and
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Hermite/}
@@ -252,12 +252,12 @@ y''-2xy'+2\alpha y=0.
 $$
 Since
 $$
-P_0(x)=1+\alpha(x-x_0)^2
+P_{0}(x)=1+\alpha(x-x_{0})^{2}
 $$
-in \eqref{eq:7.2.16}, the point $x_0$ is an ordinary point of
+in \eqref{eq:7.2.16}, the point $x_{0}$ is an ordinary point of
 \eqref{eq:7.2.16}, and Theorem~\ref{thmtype:7.2.1} implies that the solutions
-of \eqref{eq:7.2.16} can be written as power series in $x-x_0$ that
-converge on the interval $(x_0-1/\sqrt|\alpha|,x_0+1/\sqrt|\alpha|)$
+of \eqref{eq:7.2.16} can be written as power series in $x-x_{0}$ that
+converge on the interval $(x_{0}-1/\sqrt|\alpha|,x_{0}+1/\sqrt|\alpha|)$
 if $\alpha\ne0$, or on $(-\infty,\infty)$ if $\alpha=0$. We'll see
 that the coefficients in these power series can be obtained by methods
 similar to the one used in Example~\ref{example:7.2.1}.
@@ -266,192 +266,192 @@ To simplify
 finding the coefficients, we introduce some notation for
 products:
 $$
-\prod^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \mbox{if}
+\prod^{s}_{j=r}b_{j}=b_{r}b_{r+1}\cdots b_{s}\quad\mbox{if}
 \quad s\ge r.
 $$
 Thus,
 $$
-\prod^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7,
+\prod^{7}_{j=2}b_{j}=b_{2}b_{3}b_{4}b_{5}b_{6}b_{7},
 $$
 $$
-\prod^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945,
+\prod^{4}_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945,
 $$
 and
 $$
-\prod^2_{j=2}j^2=2^2=4.
+\prod^{2}_{j=2}j^{2}=2^{2}=4.
 $$
 We define
 $$
-\prod^s_{j=r}b_j=1\quad \mbox{if}\quad s < r,
+\prod^{s}_{j=r}b_{j}=1\quad\mbox{if}\quad s<r,
 $$
-no matter what the form of $b_j$.
+no matter what the form of $b_{j}$.
 
 \begin{example}\label{example:7.2.2}\rm
 Find the power series in $x$ for the general solution of
 \begin{equation}\label{eq:7.2.17}
- (1+2x^2)y''+6xy'+2y=0.
+ (1+2x^{2})y''+6xy'+2y=0.
 \end{equation}
 \end{example}
 
 \solution
 Here
 $$
-Ly=(1+2x^2)y''+6xy'+2y.
+Ly=(1+2x^{2})y''+6xy'+2y.
 $$
 If
 $$
-y=\sum_{n=0}^\infty a_nx^n
+y=\sum_{n=0}^{\infty}a_{n}x^{n}
 $$
 then
 $$
-y'=\sum_{n=1}^\infty na_nx^{n-1}\quad\mbox{ and }\quad
-y''=\sum_{n=2}^\infty n(n-1)a_nx^{n-2},
+y'=\sum_{n=1}^{\infty}na_{n}x^{n-1}\quad\mbox{ and }\quad
+y''=\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-2},
 $$
 so
 \begin{eqnarray*}
-Ly&=&(1+2x^2) \sum^\infty_{n=2}n(n-1)a_nx^{n-2}+ 6x
- \sum^\infty_{n=1}na_nx^{n-1}
- +2 \sum^\infty_{n=0}a_nx^n\\[2\jot]
-&=&\sum_{n=2}^\infty n(n-1)a_nx^{n-2}+\sum_{n=0}^\infty
-\left[2n(n-1)+6n+2\right]a_nx^n\\[2\jot]
-&=&\sum_{n=2}^\infty n(n-1)a_nx^{n-2}+2\sum_{n=0}^\infty(n+1)^2a_nx^n.
+Ly&=&(1+2x^{2})\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2}+6x
+ \sum^{\infty}_{n=1}na_{n}x^{n-1}
+ +2\sum^{\infty}_{n=0}a_{n}x^{n}\\[2\jot]
+&=&\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-2}+\sum_{n=0}^{\infty}
+\left[2n(n-1)+6n+2\right]a_{n}x^{n}\\[2\jot]
+&=&\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-2}+2\sum_{n=0}^{\infty}(n+1)^{2}a_{n}x^{n}.
 \end{eqnarray*}
-To collect coefficients of $x^n$,  we shift the summation index
+To collect coefficients of $x^{n}$,  we shift the summation index
 in the first sum.  This yields
 $$
-Ly=\sum_{n=0}^\infty(n+2)(n+1)a_{n+2}x^n+2\sum_{n=0}^\infty(n+1)^2a_nx^n
-=\sum_{n=0}^\infty b_nx^n,
+Ly=\sum_{n=0}^{\infty}(n+2)(n+1)a_{n+2}x^{n}+2\sum_{n=0}^{\infty}(n+1)^{2}a_{n}x^{n}
+=\sum_{n=0}^{\infty}b_{n}x^{n},
 $$
 with
 $$
-b_n=(n+2)(n+1)a_{n+2}+2(n+1)^2a_n,\quad n\ge0.
+b_{n}=(n+2)(n+1)a_{n+2}+2(n+1)^{2}a_{n},\quad n\ge0.
 $$
-To obtain solutions of \eqref{eq:7.2.17}, we set $b_n=0$ for $n\ge0$. This
+To obtain solutions of \eqref{eq:7.2.17}, we set $b_{n}=0$ for $n\ge0$. This
 is equivalent to the recurrence relation
  \begin{equation}\label{eq:7.2.18}
-a_{n+2}=-2{n+1\over n+2}a_n,\quad n\ge0.
+a_{n+2}=-2{\frac{n+1}{n+2}}a_{n},\quad n\ge0.
 \end{equation}
 Since the
 indices on the left and right differ by two, we write \eqref{eq:7.2.18}
 separately for $n=2m$ and $n=2m+1$, as in Example~\ref{example:7.2.1}.
 This yields
 \begin{eqnarray}
-a_{2m+2}&=&-2 {2m+1\over2m+2}a_{2m}=-{2m+1\over m+1}a_{2m},\quad m
+a_{2m+2}&=&-2{\frac{2m+1}{2m+2}}a_{2m}=-\frac{2m+1}{m+1}a_{2m},\quad m
 \ge0,\label{eq:7.2.19}\\
 \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\
-a_{2m+3}&=&-2{2m+2\over2m+3}a_{2m+1}=-4{m+1\over2m+3}a_{2m+1},\quad
-m\ge0. \label{eq:7.2.20}
+a_{2m+3}&=&-2{\frac{2m+2}{2m+3}}a_{2m+1}=-4{\frac{m+1}{2m+3}}a_{2m+1},\quad
+m\ge0.\label{eq:7.2.20}
 \end{eqnarray}
 Computing the coefficients of even powers of $x$ from \eqref{eq:7.2.19}
 yields
 \begin{eqnarray*}
-a_2&=&-{1\over1}a_0,\\[5pt]
-a_4&=&-{3\over2}a_2=\left(-{3\over2}\right)\left(-{1\over1}\right)a_0
-={1\cdot3\over1\cdot2}a_0,
-\\[5pt] a_6&=&-{5\over3}a_4=
--{5\over3}\left(1\cdot3\over1\cdot2\right)a_0
-=-{1\cdot3\cdot5\over1\cdot2\cdot3}a_0, \\[5pt]
-a_8&=&-{7\over4}a_6=-{7\over4}
-\left(-{1\cdot3\cdot5\over1\cdot2\cdot3}\right)a_0=
-{1\cdot3\cdot5\cdot7\over1\cdot2\cdot3\cdot4}a_0.\\
+a_{2}&=&-\frac{1}{1}a_{0},\\[5pt]
+a_{4}&=&-\frac{3}{2}a_{2}=\left(-\frac{3}{2}\right)\left(-\frac{1}{1}\right)a_{0}
+=\frac{1\cdot3}{1\cdot2}a_{0},
+\\[5pt]a_{6}&=&-\frac{5}{3}a_{4}=
+-\frac{5}{3}\left(\frac{1\cdot3}{1\cdot2}\right)a_{0}
+=-\frac{1\cdot3\cdot5}{1\cdot2\cdot3}a_{0},\\[5pt]
+a_{8}&=&-\frac{7}{4}a_{6}=-\frac{7}{4}
+\left(-\frac{1\cdot3\cdot5}{1\cdot2\cdot3}\right)a_{0}=
+\frac{1\cdot3\cdot5\cdot7}{1\cdot2\cdot3\cdot4}a_{0}.\\
 \end{eqnarray*}
 In general,
 \begin{equation}\label{eq:7.2.21}
-a_{2m}=(-1)^m{\prod_{j=1}^m(2j-1)\over m!}a_0,\quad m\ge0.
+a_{2m}=(-1)^{m}\frac{\prod_{j=1}^{m}(2j-1)}{m!}a_{0},\quad m\ge0.
 \end{equation}
 (Note that \eqref{eq:7.2.21} is correct for $m=0$  because we
-defined $\prod_{j=1}^0b_j=1$  for any~$b_j$.)
+defined $\prod_{j=1}^{0}b_{j}=1$  for any~$b_{j}$.)
 
 Computing the coefficients of odd powers of $x$ from \eqref{eq:7.2.20}
 yields
 \begin{eqnarray*}
-a_3&=&-4\,{1\over3}a_1, \\[5pt]
-a_5&=&-4\,{2\over5}a_3=-4\,{2\over5}\left(-4{1\over3}\right)a_1
-=4^2{1\cdot2\over3\cdot5}a_1,
-\\[5pt] a_7&=&-4\,{3\over7}a_5=-4\,{3\over7}\left(
-4^2{1\cdot2\over3\cdot5}\right)a_1=
--4^3{1\cdot2\cdot3\over3\cdot5\cdot7}a_1,\\[5pt]
-a_9&=&-4\, {4\over9}a_7=-4\, {4\over9}\left(
-4^3{1\cdot2\cdot3\over3\cdot5\cdot7}\right)a_1=
-4^4{1\cdot2\cdot3\cdot4\over3\cdot5\cdot7\cdot9}a_1.
+a_{3}&=&-4\,\frac{1}{3}a_{1},\\[5pt]
+a_{5}&=&-4\,\frac{2}{5}a_{3}=-4\,\frac{2}{5}\left(-4{\frac{1}{3}}\right)a_{1}
+=4^{2}\frac{1\cdot2}{3\cdot5}a_{1},
+\\[5pt]a_{7}&=&-4\,\frac{3}{7}a_{5}=-4\,\frac{3}{7}\left(
+4^{2}\frac{1\cdot2}{3\cdot5}\right)a_{1}=
+-4^{3}\frac{1\cdot2\cdot3}{3\cdot5\cdot7}a_{1},\\[5pt]
+a_{9}&=&-4\,\frac{4}{9}a_{7}=-4\,\frac{4}{9}\left(
+4^{3}\frac{1\cdot2\cdot3}{3\cdot5\cdot7}\right)a_{1}=
+4^{4}\frac{1\cdot2\cdot3\cdot4}{3\cdot5\cdot7\cdot9}a_{1}.
 \end{eqnarray*}
 In general,
 \begin{equation}\label{eq:7.2.22}
-a_{2m+1}={(-1)^m4^m m!\over\prod_{j=1}^m(2j+1)}a_1,\quad m\ge0.
+a_{2m+1}=\frac{(-1)^{m}4^{m}m!}{\prod_{j=1}^{m}(2j+1)}a_{1},\quad m\ge0.
 \end{equation}
 From \eqref{eq:7.2.21} and \eqref{eq:7.2.22},
 $$
-y=a_0
- \sum^\infty_{m=0}(-1)^m {\prod_{j=1}^m(2j-1)\over m!}x^{2m}
-+a_1 \sum^\infty_{m=0}(-1)^m {4^mm!\over\prod_{j=1}^m(2j+1)}
+y=a_{0}
+ \sum^{\infty}_{m=0}(-1)^{m}\frac{\prod_{j=1}^{m}(2j-1)}{m!}x^{2m}
++a_{1}\sum^{\infty}_{m=0}(-1)^{m}\frac{4^{m}m!}{\prod_{j=1}^{m}(2j+1)}
  x^{2m+1}.
 $$
 is the power series in $x$ for the general solution of \eqref{eq:7.2.17}.
-Since $P_0(x)=1+2x^2$ has no real zeros, Theorem~\ref{thmtype:5.1.1} implies
+Since $P_{0}(x)=1+2x^{2}$ has no real zeros, Theorem~\ref{thmtype:5.1.1} implies
 that every solution of \eqref{eq:7.2.17} is defined on $(-\infty,\infty)$.
-However, since $P_0(\pm i/\sqrt2)=0$, Theorem~\ref{thmtype:7.2.1} implies
-only that the power series converges in $(-1/\sqrt2,1/\sqrt2)$ for any
-choice of $a_0$ and $a_1$.
+However, since $P_{0}(\pm i/\sqrt{2})=0$, Theorem~\ref{thmtype:7.2.1} implies
+only that the power series converges in $(-1/\sqrt{2},1/\sqrt{2})$ for any
+choice of $a_{0}$ and $a_{1}$.
 
 The results in Examples~\ref{example:7.2.1} and \ref{example:7.2.2} are
 consequences of the following general theorem.
 
 \begin{theorem}\color{blue}\label{thmtype:7.2.2}
-The coefficients $\{a_n\}$ in any solution
-$y=\sum_{n=0}^\infty a_n(x-x_0)^n$ of
+The coefficients $\{a_{n}\}$ in any solution
+$y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ of
 \begin{equation}\label{eq:7.2.23}
-\left(1+\alpha(x-x_0)^2\right)y''+\beta(x-x_0) y'+\gamma y=0
+\left(1+\alpha(x-x_{0})^{2}\right)y''+\beta(x-x_{0})y'+\gamma y=0
 \end{equation}
 satisfy the recurrence relation
 \begin{equation}\label{eq:7.2.24}
-a_{n+2}=-{p(n) \over(n+2)(n+1)}a_n,\quad  n\ge0,
+a_{n+2}=-\frac{p(n)}{(n+2)(n+1)}a_{n},\quad  n\ge0,
 \end{equation}
 where
 \begin{equation}\label{eq:7.2.25}
-p(n)=\alpha n(n-1) +\beta n+\gamma.
+p(n)=\alpha n(n-1)+\beta n+\gamma.
 \end{equation}
-Moreover, the coefficients of the even and odd powers of $x-x_0$ can
+Moreover, the coefficients of the even and odd powers of $x-x_{0}$ can
 be computed separately as
 \begin{eqnarray}
-a_{2m+2}&=&-{p(2m)\over(2m+2)(2m+1)}a_{2m},\quad m\ge0\label{eq:7.2.26}\\
+a_{2m+2}&=&-\frac{p(2m)}{(2m+2)(2m+1)}a_{2m},\quad m\ge0\label{eq:7.2.26}\\
 \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\
-a_{2m+3}&=&-{p(2m+1)\over(2m+3)(2m+2)}a_{2m+1},\quad m\ge0, \label{eq:7.2.27}
+a_{2m+3}&=&-\frac{p(2m+1)}{(2m+3)(2m+2)}a_{2m+1},\quad m\ge0,\label{eq:7.2.27}
 \end{eqnarray}
-where $a_0$ and $a_1$ are arbitrary.
+where $a_{0}$ and $a_{1}$ are arbitrary.
 \end{theorem}
 
 \proof   Here
 $$
-Ly=\left(1+\alpha(x-x_0\right)^2)y''+\beta(x-x_0) y'+\gamma y.
+Ly=\left(1+\alpha(x-x_{0}\right)^{2})y''+\beta(x-x_{0})y'+\gamma y.
 $$
 If
 $$
-y=\sum_{n=0}^\infty a_n(x-x_0)^n,
+y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n},
 $$
 then
 $$
-y'=\sum_{n=1}^\infty na_n(x-x_0)^{n-1}
-\quad\mbox{ and }\quad y''=\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}.
+y'=\sum_{n=1}^{\infty}na_{n}(x-x_{0})^{n-1}
+\quad\mbox{ and }\quad y''=\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}.
 $$
 Hence,
 $$
 \begin{array}{ccl}
-Ly&=&\dst{\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+
-\sum_{n=0}^\infty \left[\alpha
+Ly&=&\dst{\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}+
+\sum_{n=0}^{\infty}\left[\alpha
 n(n-1)
-+\beta n+\gamma\right]a_n(x-x_0)^n}\\[2\jot]
-&=&\dst{\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+\sum_{n=0}^\infty
-p(n)a_n(x-x_0)^n},
++\beta n+\gamma\right]a_{n}(x-x_{0})^{n}}\\[2\jot]
+&=&\dst{\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}+\sum_{n=0}^{\infty}
+p(n)a_{n}(x-x_{0})^{n}},
 \end{array}
 $$
-from \eqref{eq:7.2.25}.  To collect coefficients of powers of $x-x_0$,
+from \eqref{eq:7.2.25}.  To collect coefficients of powers of $x-x_{0}$,
 we shift the summation index in the first sum. This yields
 $$
-Ly=\sum_{n=0}^\infty \left[(n+2)(n+1)a_{n+2}+p(n)a_n\right](x-x_0)^n.
+Ly=\sum_{n=0}^{\infty}\left[(n+2)(n+1)a_{n+2}+p(n)a_{n}\right](x-x_{0})^{n}.
 $$
 Thus, $Ly=0$ if and only if
 $$
-(n+2)(n+1)a_{n+2}+p(n)a_n=0,\quad n\ge0,
+(n+2)(n+1)a_{n+2}+p(n)a_{n}=0,\quad n\ge0,
 $$
 which is equivalent to \eqref{eq:7.2.24}. Writing \eqref{eq:7.2.24} separately
 for the cases where $n=2m$ and $n=2m+1$ yields \eqref{eq:7.2.26} and
@@ -461,53 +461,53 @@ for the cases where $n=2m$ and $n=2m+1$ yields \eqref{eq:7.2.26} and
 Find the power series in $x-1$  for the general
 solution of
 \begin{equation}\label{eq:7.2.28}
-(2+4x-2x^2)y''-12(x-1)y'-12y=0.
+(2+4x-2x^{2})y''-12(x-1)y'-12y=0.
 \end{equation}
 \end{example}
 
 \solution
-We must first write the coefficient $P_0(x)=2+4x-x^2$ in powers of
+We must first write the coefficient $P_{0}(x)=2+4x-x^{2}$ in powers of
 $x-1$. To do this,
- we write $x=(x-1)+1$ in $P_0(x)$ and then expand
+ we write $x=(x-1)+1$ in $P_{0}(x)$ and then expand
 the terms, collecting powers of $x-1$;   thus,
 \begin{eqnarray*}
-2+4x-2x^2&=&2+4[(x-1)+1]-2[(x-1)+1]^2\\
-&=&4-2(x-1)^2.
+2+4x-2x^{2}&=&2+4[(x-1)+1]-2[(x-1)+1]^{2}\\
+&=&4-2(x-1)^{2}.
 \end{eqnarray*}
   Therefore we can rewrite \eqref{eq:7.2.28} as
 $$
-\left(4-2(x-1)^2\right)y''-12(x-1)y'-12y=0,
+\left(4-2(x-1)^{2}\right)y''-12(x-1)y'-12y=0,
 $$
 or, equivalently,
 $$
-\left(1-{1\over2}(x-1)^2\right)y''-3(x-1)y'-3y=0.
+\left(1-\frac{1}{2}(x-1)^{2}\right)y''-3(x-1)y'-3y=0.
 $$
 This is of the form \eqref{eq:7.2.23} with  $\alpha=-1/2$, $\beta=-3$, and
 $\gamma=-3$. Therefore, from \eqref{eq:7.2.25}
 $$
-p(n)=-{n(n-1)\over2}-3n-3=-{(n+2)(n+3)\over2}.
+p(n)=-\frac{n(n-1)}{2}-3n-3=-\frac{(n+2)(n+3)}{2}.
 $$
 Hence, Theorem~\ref{thmtype:7.2.2} implies that
 \begin{eqnarray*}
-a_{2m+2}&=&-{p(2m)\over(2m+2)(2m+1)}a_{2m}\\[2\jot]&=&
-{(2m+2)(2m+3)\over2(2m+2)(2m+1)}
-a_{2m}={2m+3\over2(2m+1)}a_{2m},\quad m\ge0\\
+a_{2m+2}&=&-\frac{p(2m)}{(2m+2)(2m+1)}a_{2m}\\[2\jot]&=&
+\frac{(2m+2)(2m+3)}{2(2m+2)(2m+1)}
+a_{2m}=\frac{2m+3}{2(2m+1)}a_{2m},\quad m\ge0\\
 \noalign{\hspace*{-15pt}\mbox{and}}\\
-a_{2m+3}&=&-{p(2m+1)\over(2m+3)(2m+2)}a_{2m+1}\\[2\jot]&=&
-{(2m+3)(2m+4)\over2
-(2m+3)(2m+2)}a_{2m+1}={m+2\over2(m+1)}a_{2m+1},\quad m\ge0.
+a_{2m+3}&=&-\frac{p(2m+1)}{(2m+3)(2m+2)}a_{2m+1}\\[2\jot]&=&
+\frac{(2m+3)(2m+4)}{2
+(2m+3)(2m+2)}a_{2m+1}=\frac{m+2}{2(m+1)}a_{2m+1},\quad m\ge0.
 \end{eqnarray*}
 We leave it to you to show that
 $$
-a_{2m}={2m+1\over2^m}a_0\quad\mbox{ and }\quad
-a_{2m+1}={m+1\over2^m}a_1,\quad m\ge0,
+a_{2m}=\frac{2m+1}{2^{m}}a_{0}\quad\mbox{ and }\quad
+a_{2m+1}=\frac{m+1}{2^{m}}a_{1},\quad m\ge0,
 $$
 which implies that the power series in $x-1$ for the general solution
 of
 \eqref{eq:7.2.28} is
 $$
-y=a_0\sum_{m=0}^\infty{2m+1\over2^m}(x-1)^{2m}+a_1\sum_{m=0}^\infty
-{m+1\over2^m}(x-1)^{2m+1}.\bbox
+y=a_{0}\sum_{m=0}^{\infty}\frac{2m+1}{2^{m}}(x-1)^{2m}+a_{1}\sum_{m=0}^{\infty}
+\frac{m+1}{2^{m}}(x-1)^{2m+1}.\bbox
 $$
 
 In the examples considered so far we were able to obtain closed
@@ -517,48 +517,48 @@ of terms in the series. The next example illustrates this with an
 initial value problem.
 
 \begin{example}\label{example:7.2.4}\rm
-Compute  $a_0$, $a_1$, \dots, $a_7$  in the series solution
-$y=\sum_{n=0}^\infty a_nx^n$ of the initial value problem
+Compute  $a_{0}$, $a_{1}$, \dots, $a_{7}$  in the series solution
+$y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial value problem
 \begin{equation}\label{eq:7.2.29}
-(1+2x^2)y''+10xy'+8y=0,\quad y(0)=2,\quad y'(0)=-3.
+(1+2x^{2})y''+10xy'+8y=0,\quad y(0)=2,\quad y'(0)=-3.
 \end{equation}
 \end{example}
 
 \solution
 Since $\alpha=2$, $\beta=10$, and $\gamma=8$ in \eqref{eq:7.2.29},
 $$
-p(n)=2n(n-1)+10n+8=2(n+2)^2.
+p(n)=2n(n-1)+10n+8=2(n+2)^{2}.
 $$
  Therefore
 $$
-a_{n+2}=-2{(n+2)^2\over(n+2)(n+1)}a_n=-2{n+2\over n+1}a_n,\quad n\ge0.
+a_{n+2}=-2{\frac{(n+2)^{2}}{(n+2)(n+1)}}a_{n}=-2{\frac{n+2}{n+1}}a_{n},\quad n\ge0.
 $$
 Writing this equation separately for $n=2m$  and $n=2m+1$ yields
 \begin{eqnarray}
-a_{2m+2}&=&-2{(2m+2)\over2m+1}a_{2m}=-4{m+1\over2m+1}a_{2m},\quad m\ge
+a_{2m+2}&=&-2{\frac{(2m+2)}{2m+1}}a_{2m}=-4{\frac{m+1}{2m+1}}a_{2m},\quad m\ge
 0\label{eq:7.2.30}\\
 \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\
-a_{2m+3}&=&-2{2m+3\over2m+2}a_{2m+1}=-{2m+3\over m+1}a_{2m+1},\quad m\ge0.
+a_{2m+3}&=&-2{\frac{2m+3}{2m+2}}a_{2m+1}=-\frac{2m+3}{m+1}a_{2m+1},\quad m\ge0.
 \label{eq:7.2.31}
 \end{eqnarray}
-Starting with  $a_0=y(0)=2$, we compute $a_2$, $a_4$, and $a_6$ from
+Starting with  $a_{0}=y(0)=2$, we compute $a_{2}$, $a_{4}$, and $a_{6}$ from
 \eqref{eq:7.2.30}:
 \begin{eqnarray*}
-a_2&=&-4\,{1\over1}2=-8,\\[2\jot]
-a_4&=&-4\,{2\over3}(-8)={64\over3},\\[2\jot]
-a_6&=&-4\,{3\over5}\left(64\over3\right)=-{256\over5}.
+a_{2}&=&-4\,\frac{1}{1}2=-8,\\[2\jot]
+a_{4}&=&-4\,\frac{2}{3}(-8)=\frac{64}{3},\\[2\jot]
+a_{6}&=&-4\,\frac{3}{5}\left(\frac{64}{3}\right)=-\frac{256}{5}.
 \end{eqnarray*}
-Starting with $a_1=y'(0)=-3$, we compute $a_3$, $a_5$ and $a_7$ from
+Starting with $a_{1}=y'(0)=-3$, we compute $a_{3}$, $a_{5}$ and $a_{7}$ from
 \eqref{eq:7.2.31}:
 \begin{eqnarray*}
-a_3&=&-{3\over1}(-3)=9,\\[2\jot]
-a_5&=&-{5\over2}9=-{45\over2},\\[2\jot]
-a_7&=&-{7\over3}\left(-{45\over2}\right)={105\over2}.
+a_{3}&=&-\frac{3}{1}(-3)=9,\\[2\jot]
+a_{5}&=&-\frac{5}{2}9=-\frac{45}{2},\\[2\jot]
+a_{7}&=&-\frac{7}{3}\left(-\frac{45}{2}\right)=\frac{105}{2}.
 \end{eqnarray*}
 Therefore the solution of \eqref{eq:7.2.29} is
 $$
-y=2-3x-8x^2+9x^3+{64\over3}x^4-{45\over2}x^5-{256\over5}
-x^6+{105\over2}x^7+\cdots\; .
+y=2-3x-8x^{2}+9x^{3}+\frac{64}{3}x^{4}-\frac{45}{2}x^{5}-\frac{256}{5}
+x^{6}+\frac{105}{2}x^{7}+\cdots\;.
 $$
 
 \technology
@@ -581,30 +581,30 @@ If you're interested in actually using series to compute numerical
 approximations to solutions of a differential equation, then whether
 or not there's a simple closed form for the coefficients is
 essentially irrelevant. For computational purposes it's usually
-more efficient to start with the given coefficients $a_0=y(x_0)$ and
-$a_1=y'(x_0)$, compute $a_2$, \dots, $a_N$ recursively,
+more efficient to start with the given coefficients $a_{0}=y(x_{0})$ and
+$a_{1}=y'(x_{0})$, compute $a_{2}$, \dots, $a_{N}$ recursively,
  and then compute approximate values of the solution from the
 Taylor polynomial
 $$
-T_N(x)=\sum_{n=0}^Na_n(x-x_0)^n.
+T_{N}(x)=\sum_{n=0}^{N}a_{n}(x-x_{0})^{n}.
 $$
 The trick is to decide how to choose $N$ so the approximation
-$y(x)\approx T_N(x)$ is sufficiently accurate on the subinterval of
+$y(x)\approx T_{N}(x)$ is sufficiently accurate on the subinterval of
 the interval of convergence that you're interested in. In the
 computational exercises in this  and the next two sections,
 you will often be asked to obtain the solution of a given problem by
 numerical integration with  software  of your choice (see
 Section~10.1 for a brief discussion of one such method),
 and to compare the solution obtained in this way with the
-approximations obtained with $T_N$ for various values of $N$. This is
+approximations obtained with $T_{N}$ for various values of $N$. This is
 a typical textbook kind of exercise, designed to give you insight into
-how the accuracy of the approximation $y(x)\approx T_N(x)$ behaves as
+how the accuracy of the approximation $y(x)\approx T_{N}(x)$ behaves as
 a function of $N$ and the interval that you're working on. In real
 life, you would choose one or the other of the two methods (numerical
 integration or series solution). If you choose the method of series
 solution, then a practical procedure for determining a suitable value
 of $N$ is to continue increasing $N$ until the maximum of
-$|T_N-T_{N-1}|$ on the interval of interest is within the margin of
+$|T_{N}-T_{N-1}|$ on the interval of interest is within the margin of
 error that you're willing to accept.
 
 In doing computational problems  that call for
@@ -620,24 +620,24 @@ series in $x$ for the general solution.
 
 \begin{exerciselist}
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:7.2.1}  $(1+x^2)y''+6xy'+6y=0$&
-\vspace*{10pt}\item\label{exer:7.2.2}  $(1+x^2)y''+2xy'-2y=0$
+\item\label{exer:7.2.1}  $(1+x^{2})y''+6xy'+6y=0$&
+\vspace*{10pt}\item\label{exer:7.2.2}  $(1+x^{2})y''+2xy'-2y=0$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:7.2.3}  $(1+x^2)y''-8xy'+20y=0$&
-\item\label{exer:7.2.4} $(1-x^2)y''-8xy'-12y=0$
+\item\label{exer:7.2.3}  $(1+x^{2})y''-8xy'+20y=0$&
+\item\label{exer:7.2.4} $(1-x^{2})y''-8xy'-12y=0$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:7.2.5} $(1+2x^2)y''+7xy'+2y=0$&
-\item\label{exer:7.2.6} $\dst{(1+x^2)y''+2xy'+{1\over4}y=0}$
+\item\label{exer:7.2.5} $(1+2x^{2})y''+7xy'+2y=0$&
+\item\label{exer:7.2.6} $\dst{(1+x^{2})y''+2xy'+\frac{1}{4}y=0}$
 \end{tabular}
 
 \vspace{-10pt}
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:7.2.7} $(1-x^2)y''-5xy'-4y=0$&
-\item\label{exer:7.2.8} $(1+x^2)y''-10xy'+28y=0$
+\item\label{exer:7.2.7} $(1-x^{2})y''-5xy'-4y=0$&
+\item\label{exer:7.2.8} $(1+x^{2})y''-10xy'+28y=0$
 \end{tabular}
 
 \newpage
@@ -648,18 +648,18 @@ series in $x$ for the general solution.
 Find the power series in $x$ for the general solution of
 $y''+xy'+2y=0$.
 \item % (b)
-For several choices of $a_0$ and $a_1$,
+For several choices of $a_{0}$ and $a_{1}$,
 use  differential equations software to solve the initial
 value problem
 $$
-y''+xy'+2y=0,\quad y(0)=a_0,\quad y'(0)=a_1,
+y''+xy'+2y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1},
 \eqno{\rm(A)}
 $$
 numerically on $(-5,5)$.
 \item % ()
 For fixed $r$ in $\{1,2,3,4,5\}$ graph
 $$
-T_N(x)=\sum_{n=0}^N a_nx^n
+T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
 $$
 and the solution obtained in \part{a} on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
@@ -674,36 +674,36 @@ y''+2xy'+3y=0.
 $$
 
 \exercisetext{In Exercises~\ref{exer:7.2.11} --\ref{exer:7.2.13}
- find $a_0$, \dots, $a_N$ for $N$ at least $7$ in the power series
+ find $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the power series
 solution
-$y=\sum_{n=0}^\infty a_nx^n$
+$y=\sum_{n=0}^{\infty}a_{n}x^{n}$
 of the initial value problem.}
 
-\item\label{exer:7.2.11} \Cex  $(1+x^2)y''+xy'+y=0,\quad y(0)=2,\quad
+\item\label{exer:7.2.11} \Cex  $(1+x^{2})y''+xy'+y=0,\quad y(0)=2,\quad
 y'(0)=-1$
-\item\label{exer:7.2.12} \Cex  $(1+2x^2)y''-9xy'-6y=0,\quad y(0)=1,\quad
+\item\label{exer:7.2.12} \Cex  $(1+2x^{2})y''-9xy'-6y=0,\quad y(0)=1,\quad
 y'(0)=-1$
-\item\label{exer:7.2.13}  \Cex  $(1+8x^2)y''+2y=0,\quad y(0)=2,\quad
+\item\label{exer:7.2.13}  \Cex  $(1+8x^{2})y''+2y=0,\quad y(0)=2,\quad
 y'(0)=-1$
 
 \item\label{exer:7.2.14}   \Lex
 Do the next experiment for various choices of
-real numbers  $a_0$, $a_1$, and $r$, with $0<r<1/\sqrt2$.
+real numbers  $a_{0}$, $a_{1}$, and $r$, with $0<r<1/\sqrt{2}$.
 \begin{alist}
 \item % (a)
 Use  differential equations software  to solve the initial
 value problem
 $$
-(1-2x^2)y''-xy'+3y=0,\quad y(0)=a_0,\quad y'(0)=a_1,
+(1-2x^{2})y''-xy'+3y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1},
 \eqno{\rm(A)}
 $$
 numerically on $(-r,r)$.
 \item % (b)
-For $N=2$, $3$, $4$, \dots, compute $a_2$, \dots, $a_N$ in the power series
+For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series
 solution
-$y=\sum_{n=0}^\infty a_nx^n$ of (A), and graph
+$y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A), and graph
 $$
-T_N(x)=\sum_{n=0}^N a_nx^n
+T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
 $$
 and the solution obtained in \part{a} on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
@@ -719,17 +719,17 @@ $(0,1)$:
 Use  differential equations software  to solve the initial
 value problem
 $$
-(1+x^2)y''+10xy'+14y=0,\quad y(0)=5,\quad y'(0)=1,
+(1+x^{2})y''+10xy'+14y=0,\quad y(0)=5,\quad y'(0)=1,
 \eqno{\rm(A)}
 $$
 numerically on $(-r,r)$.
 \item % (b)
-For $N=2$, $3$, $4$, \dots, compute $a_2$, \dots, $a_N$ in the power series
+For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series
 solution
-$y=\sum_{n=0}^\infty a_nx^n$ of (A) , and
+$y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A) , and
 graph
 $$
-T_N(x)=\sum_{n=0}^N a_nx^n
+T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
 $$
 \enlargethispage{1in}
 and the solution obtained in \part{a} on $(-r,r)$.
@@ -743,49 +743,49 @@ Try \part{a} and \part{b} with $r=1.2$. Explain your results.
 \newpage
 
 \exercisetext{In Exercises~\ref{exer:7.2.16} --\ref{exer:7.2.20}
- find the power series in $x-x_0$
+ find the power series in $x-x_{0}$
 for the general solution.}
 
 \begin{tabular}[t]{@{}p{120pt}@{}p{130pt}}
-\item\label{exer:7.2.16} $y''-y=0;\quad   x_0=3$&\vspace*{5pt}
-\vspace*{5pt}\item\label{exer:7.2.17} $y''-(x-3)y'-y=0;\quad   x_0=3$
+\item\label{exer:7.2.16} $y''-y=0;\quad   x_{0}=3$&\vspace*{5pt}
+\vspace*{5pt}\item\label{exer:7.2.17} $y''-(x-3)y'-y=0;\quad   x_{0}=3$
 \end{tabular}
 
-\item\label{exer:7.2.18} $(1-4x+2x^2)y''+10(x-1)y'+6y=0;\quad  x_0=1$
-\item\label{exer:7.2.19} $(11-8x+2x^2)y''-16(x-2)y'+36y=0;\quad  x_0=2$
-\item\label{exer:7.2.20} $(5+6x+3x^2)y''+9(x+1)y'+3y=0;\quad  x_0=-1$
+\item\label{exer:7.2.18} $(1-4x+2x^{2})y''+10(x-1)y'+6y=0;\quad  x_{0}=1$
+\item\label{exer:7.2.19} $(11-8x+2x^{2})y''-16(x-2)y'+36y=0;\quad  x_{0}=2$
+\item\label{exer:7.2.20} $(5+6x+3x^{2})y''+9(x+1)y'+3y=0;\quad  x_{0}=-1$
 
 \exercisetext{In Exercises~\ref{exer:7.2.21} --\ref{exer:7.2.26}
- find $a_0$, \dots, $a_N$ for $N$ at least $7$ in the power series
-$y=\sum_{n=0}^\infty a_n(x-x_0)^n$
- for the  solution of the initial value problem.  Take $x_0$ to be the
+ find $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the power series
+$y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$
+ for the  solution of the initial value problem.  Take $x_{0}$ to be the
 point where the initial conditions are imposed.}
 
-\item\label{exer:7.2.21}  \Cex $(x^2-4)y''-xy'-3y=0,\quad y(0)=-1,\quad
+\item\label{exer:7.2.21}  \Cex $(x^{2}-4)y''-xy'-3y=0,\quad y(0)=-1,\quad
 y'(0)=2$
 \item\label{exer:7.2.22}  \Cex $y''+(x-3)y'+3y=0,\quad y(3)=-2,\quad
 y'(3)=3$
-\item\label{exer:7.2.23}  \Cex $(5-6x+3x^2)y''+(x-1)y'+12y=0,\quad
+\item\label{exer:7.2.23}  \Cex $(5-6x+3x^{2})y''+(x-1)y'+12y=0,\quad
 y(1)=-1,\quad y'(1)=1$
-\item\label{exer:7.2.24}  \Cex $(4x^2-24x+37)y''+y=0,\quad y(3)=4,\quad
+\item\label{exer:7.2.24}  \Cex $(4x^{2}-24x+37)y''+y=0,\quad y(3)=4,\quad
 y'(3)=-6$
-\item\label{exer:7.2.25}  \Cex $(x^2-8x+14)y''-8(x-4)y'+20y=0,\quad
+\item\label{exer:7.2.25}  \Cex $(x^{2}-8x+14)y''-8(x-4)y'+20y=0,\quad
 y(4)=3,\quad y'(4)=-4$
 \item\label{exer:7.2.26}  \Cex
-$(2x^2+4x+5)y''-20(x+1)y'+60y=0,\quad y(-1)=3,\quad y'(-1)=-3$
+$(2x^{2}+4x+5)y''-20(x+1)y'+60y=0,\quad y(-1)=3,\quad y'(-1)=-3$
 
 \item\label{exer:7.2.27}
 \begin{alist}
 \item % (a)
 Find a power series in $x$ for the general solution of
 $$
-(1+x^2)y''+4xy'+2y=0.
-\eqno{\rm (A)}
+(1+x^{2})y''+4xy'+2y=0.
+\eqno{\rm(A)}
 $$
 \item % (b)
 Use (a) and the formula
 $$
-{1\over1-r}=1+r+r^2+\cdots+r^n+\cdots \quad(-1<r<1)
+\frac{1}{1-r}=1+r+r^{2}+\cdots+r^{n}+\cdots\quad(-1<r<1)
 $$
 for the sum of a geometric series to find a closed form expression for
 the general solution of (A) on $(-1,1)$.
@@ -798,22 +798,22 @@ solution of (A) on $(-\infty,\infty)$.
 Use Theorem~\ref{thmtype:7.2.2} to show that the power series in
 $x$ for the general solution of
 $$
-(1+\alpha x^2)y''+\beta xy'+\gamma y=0
+(1+\alpha x^{2})y''+\beta xy'+\gamma y=0
 $$
 is
 $$
-y=a_0\sum^\infty_{m=0}(-1)^m \left[\prod^{m-1}_{j=0}
-p(2j)\right] {x^{2m}\over(2m)!} +
-a_1\sum^\infty_{m=0}(-1)^m
+y=a_{0}\sum^{\infty}_{m=0}(-1)^{m}\left[\prod^{m-1}_{j=0}
+p(2j)\right]{\frac{x^{2m}}{(2m)!}}+
+a_{1}\sum^{\infty}_{m=0}(-1)^{m}
 \left[\prod^{m-1}_{j=0}p(2j+1)\right]
-{x^{2m+1}\over(2m+1)!}.
+{\frac{x^{2m+1}}{(2m+1)!}}.
 $$
 
 \item\label{exer:7.2.29}
 Use Exercise~\ref{exer:7.2.28}  to
  show that  all  solutions of
 $$
-(1+\alpha x^2)y''+\beta xy'+\gamma y=0
+(1+\alpha x^{2})y''+\beta xy'+\gamma y=0
 $$
  are polynomials if and only if
 $$
@@ -828,50 +828,50 @@ where $r$ and $s$ are nonnegative integers.
 Use Exercise~\ref{exer:7.2.28}  to show that the power series in $x$
 for the general solution of
 $$
-(1-x^2)y''-2bxy'+\alpha(\alpha+2b-1)y=0
+(1-x^{2})y''-2bxy'+\alpha(\alpha+2b-1)y=0
 $$
-is $y=a_0y_1+a_1y_2$, where
+is $y=a_{0}y_{1}+a_{1}y_{2}$, where
 \begin{eqnarray*}
-y_1&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j-\alpha)(2j+\alpha+2b-1)
-\right]{x^{2m}\over(2m)!}\\
+y_{1}&=&\sum_{m=0}^{\infty}\left[\prod_{j=0}^{m-1}(2j-\alpha)(2j+\alpha+2b-1)
+\right]{\frac{x^{2m}}{(2m)!}}\\
 \noalign{\hspace*{50pt}\mbox{and}}\\
-y_2&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j+1-\alpha)(2j+\alpha+2b)
-\right]{x^{2m+1}\over(2m+1)!}.
+y_{2}&=&\sum_{m=0}^{\infty}\left[\prod_{j=0}^{m-1}(2j+1-\alpha)(2j+\alpha+2b)
+\right]{\frac{x^{2m+1}}{(2m+1)!}}.
 \end{eqnarray*}
 \item % (b)
 Suppose $2b$ isn't  a negative odd integer and $k$ is a
-nonnegative integer. Show that $y_1$ is a polynomial of degree $2k$
-such that $y_1(-x)=y_1(x)$ if $\alpha=2k$, while $y_2$ is a polynomial
-of degree $2k+1$ such that $y_2(-x)=-y_2(-x)$ if $\alpha=2k+1$.
+nonnegative integer. Show that $y_{1}$ is a polynomial of degree $2k$
+such that $y_{1}(-x)=y_{1}(x)$ if $\alpha=2k$, while $y_{2}$ is a polynomial
+of degree $2k+1$ such that $y_{2}(-x)=-y_{2}(-x)$ if $\alpha=2k+1$.
 Conclude that if $n$ is a nonnegative integer, then there's a
-polynomial $P_n$ of degree $n$ such that $P_n(-x)=(-1)^nP_n(x)$ and
+polynomial $P_{n}$ of degree $n$ such that $P_{n}(-x)=(-1)^{n}P_{n}(x)$ and
 $$
-(1-x^2)P_n''-2bxP_n'+n(n+2b-1)P_n=0.
-\eqno{\rm (A)}
+(1-x^{2})P_{n}''-2bxP_{n}'+n(n+2b-1)P_{n}=0.
+\eqno{\rm(A)}
 $$
 \item % (c)
 Show that (A) implies that
 $$
-[(1-x^2)^b P_n']'=-n(n+2b-1)(1-x^2)^{b-1}P_n,
+[(1-x^{2})^{b}P_{n}']'=-n(n+2b-1)(1-x^{2})^{b-1}P_{n},
 $$
 and use this to show that if $m$ and $n$ are nonnegative integers, then
 $$
 \begin{array}{ll}
-[(1-x^2)^bP_n']'P_m-[(1-x^2)^bP_m']'P_n=&\\[2\jot]
-\hspace*{40pt}\left[m(m+2b-1)-n(n+2b-1)\right](1-x^2)^{b-1}P_mP_n.&
+[(1-x^{2})^{b}P_{n}']'P_{m}-[(1-x^{2})^{b}P_{m}']'P_{n}=&\\[2\jot]
+\hspace*{40pt}\left[m(m+2b-1)-n(n+2b-1)\right](1-x^{2})^{b-1}P_{m}P_{n}.&
 \end{array}
-\eqno{\rm (B)}
+\eqno{\rm(B)}
 $$
 \item % (d)
 Now suppose   $b>0$.
 Use (B) and integration by parts to show that
 if $m\ne n$, then
 $$
-\int_{-1}^1 (1-x^2)^{b-1}P_m(x)P_n(x)\,dx=0.
+\int_{-1}^{1}(1-x^{2})^{b-1}P_{m}(x)P_{n}(x)\,dx=0.
 $$
-(We say  that $P_m$ and $P_n$ are {\color{blue}\it orthogonal on\/}
+(We say  that $P_{m}$ and $P_{n}$ are {\color{blue}\it orthogonal on\/}
 $(-1,1)$ {\color{blue}\it with respect to the weighting
-function\/}\newline $(1-x^2)^{b-1}$.)
+function\/}\newline $(1-x^{2})^{b-1}$.)
 \end{alist}
 
 \item\label{exer:7.2.31}
@@ -883,52 +883,52 @@ for the general solution
 $$
 y''-2xy'+2\alpha y=0
 $$
-is $y=a_0y_1+a_1y_1$, where
+is $y=a_{0}y_{1}+a_{1}y_{1}$, where
 \begin{eqnarray*}
-y_1&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j-\alpha)
-\right]{2^mx^{2m}\over(2m)!}\\
+y_{1}&=&\sum_{m=0}^{\infty}\left[\prod_{j=0}^{m-1}(2j-\alpha)
+\right]{\frac{2^{m}x^{2m}}{(2m)!}}\\
 \noalign{\hspace*{25pt}\mbox{and}}\\
-y_2&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j+1-\alpha)
-\right]{2^mx^{2m+1}\over(2m+1)!}.
+y_{2}&=&\sum_{m=0}^{\infty}\left[\prod_{j=0}^{m-1}(2j+1-\alpha)
+\right]{\frac{2^{m}x^{2m+1}}{(2m+1)!}}.
 \end{eqnarray*}
 \item % (b)
-Suppose $k$ is a nonnegative integer. Show that $y_1$ is a
-polynomial of degree $2k$ such that $y_1(-x)=y_1(x)$ if $\alpha=2k$,
-while $y_2$ is a polynomial of degree $2k+1$ such that
-$y_2(-x)=-y_2(-x)$ if $\alpha=2k+1$. Conclude that if $n$ is a
-nonnegative integer then there's a polynomial $P_n$ of degree $n$
-such that $P_n(-x)=(-1)^nP_n(x)$ and
+Suppose $k$ is a nonnegative integer. Show that $y_{1}$ is a
+polynomial of degree $2k$ such that $y_{1}(-x)=y_{1}(x)$ if $\alpha=2k$,
+while $y_{2}$ is a polynomial of degree $2k+1$ such that
+$y_{2}(-x)=-y_{2}(-x)$ if $\alpha=2k+1$. Conclude that if $n$ is a
+nonnegative integer then there's a polynomial $P_{n}$ of degree $n$
+such that $P_{n}(-x)=(-1)^{n}P_{n}(x)$ and
 $$
-P_n''-2xP_n'+2nP_n=0.
-\eqno{\rm (A)}
+P_{n}''-2xP_{n}'+2nP_{n}=0.
+\eqno{\rm(A)}
 $$
 \item % (c)
 Show that (A) implies that
 $$
-[e^{-x^2}P_n']'=-2ne^{-x^2}P_n,
+[e^{-x^{2}}P_{n}']'=-2ne^{-x^{2}}P_{n},
 $$
 and use this to show that if $m$ and $n$ are nonnegative integers, then
 $$
-[e^{-x^2}P_n']'P_m-[e^{-x^2}P_m']'P_n=
-2(m-n)e^{-x^2}P_mP_n.
-\eqno{\rm (B)}
+[e^{-x^{2}}P_{n}']'P_{m}-[e^{-x^{2}}P_{m}']'P_{n}=
+2(m-n)e^{-x^{2}}P_{m}P_{n}.
+\eqno{\rm(B)}
 $$
 \item % (d)
 Use (B) and integration by parts to show that
 if $m\ne n$, then
 $$
-\int_{-\infty}^\infty e^{-x^2}P_m(x)P_n(x)\,dx=0.
+\int_{-\infty}^{\infty}e^{-x^{2}}P_{m}(x)P_{n}(x)\,dx=0.
 $$
-(We say  that $P_m$ and $P_n$ are {\color{blue}\it orthogonal on\/}
+(We say  that $P_{m}$ and $P_{n}$ are {\color{blue}\it orthogonal on\/}
 $(-\infty,\infty)$ {\color{blue}\it with respect to the weighting function\/}
-$e^{-x^2}$.)
+$e^{-x^{2}}$.)
 \end{alist}
 
 \item\label{exer:7.2.32}
 Consider the equation
 $$
-\left(1+\alpha x^3\right)y''+\beta x^2y'+\gamma xy=0,
-\eqno{\rm (A)}
+\left(1+\alpha x^{3}\right)y''+\beta x^{2}y'+\gamma xy=0,
+\eqno{\rm(A)}
 $$
 and let
 $p(n)=\alpha n(n-1)+\beta n+\gamma$.
@@ -940,35 +940,35 @@ $p(n)=\alpha n(n-1)+\beta n+\gamma$.
  Modify the argument used to prove Theorem~\ref{thmtype:7.2.2}
 to show that
 $$
-y=\sum_{n=0}^\infty a_nx^n
+y=\sum_{n=0}^{\infty}a_{n}x^{n}
 $$
   is a solution of
-(A)  if and only if  $a_2=0$  and
+(A)  if and only if  $a_{2}=0$  and
 $$
-a_{n+3}=-{p(n)\over(n+3)(n+2)}a_n,\quad n\ge0.
+a_{n+3}=-\frac{p(n)}{(n+3)(n+2)}a_{n},\quad n\ge0.
 $$
 \item % (b)
-Show from (a)  that $a_n=0$  unless $n=3m$  or $n=3m+1$
+Show from (a)  that $a_{n}=0$  unless $n=3m$  or $n=3m+1$
 for some nonnegative integer $m$, and that
 \begin{eqnarray*}
-a_{3m+3}&=&-{p(3m)\over(3m+3)(3m+2)}a_{3m},\quad m\ge
+a_{3m+3}&=&-\frac{p(3m)}{(3m+3)(3m+2)}a_{3m},\quad m\ge
 0,\\
 \noalign{\hspace*{50pt}\mbox{and}}\\
-a_{3m+4}&=&-{p(3m+1)\over(3m+4)(3m+3)}
+a_{3m+4}&=&-\frac{p(3m+1)}{(3m+4)(3m+3)}
 a_{3m+1},\quad m\ge0,
 \end{eqnarray*}
-where $a_0$ and $a_1$ may be specified arbitrarily.
+where $a_{0}$ and $a_{1}$ may be specified arbitrarily.
 \item % (c)
 Conclude from \part{b}  that the  power series in $x$ for the general
 solution
 of (A)  is
 $$
 \begin{array}{l}
-y=\dst{a_0\sum^\infty_{m=0}(-1)^m \left[\prod^{m-1}_{j=0}
-{p(3j)\over3j+2}\right] {x^{3m}\over3^m m!}}\\[2\jot]
-\qquad\dst{+a_1\sum^\infty_{m=0}(-1)^m
-\left[\prod^{m-1}_{j=0}{p(3j+1)\over3j+4}\right]
-{x^{3m+1}\over3^mm!}}.
+y=\dst{a_{0}\sum^{\infty}_{m=0}(-1)^{m}\left[\prod^{m-1}_{j=0}
+\frac{p(3j)}{3j+2}\right]{\frac{x^{3m}}{3^{m}m!}}}\\[2\jot]
+\qquad\dst{+a_{1}\sum^{\infty}_{m=0}(-1)^{m}
+\left[\prod^{m-1}_{j=0}\frac{p(3j+1)}{3j+4}\right]
+{\frac{x^{3m+1}}{3^{m}m!}}}.
 \end{array}
 $$
 \end{alist}
@@ -979,22 +979,22 @@ $x$ for the general solution.}
 
 \begin{tabular}[t]{@{}p{100pt}@{}p{168pt}}
 \item\label{exer:7.2.33} $y''-xy=0$&
-\vspace*{10pt}\item\label{exer:7.2.34} $(1-2x^3)y''-10x^2y'-8xy=0$
+\vspace*{10pt}\item\label{exer:7.2.34} $(1-2x^{3})y''-10x^{2}y'-8xy=0$
 \end{tabular}
 
 \vspace*{-10pt}
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:7.2.35} $(1+x^3)y''+7x^2y'+9xy=0$&
-\item\label{exer:7.2.36} $(1-2x^3)y''+6x^2y'+24xy=0$
+\item\label{exer:7.2.35} $(1+x^{3})y''+7x^{2}y'+9xy=0$&
+\item\label{exer:7.2.36} $(1-2x^{3})y''+6x^{2}y'+24xy=0$
 \end{tabular}
 
- \item\label{exer:7.2.37} $(1-x^3)y''+15x^2y'-63xy=0$
+ \item\label{exer:7.2.37} $(1-x^{3})y''+15x^{2}y'-63xy=0$
 
 \item\label{exer:7.2.38}
 Consider the equation
 $$
-\left(1+\alpha x^{k+2}\right)y''+\beta x^{k+1}y'+\gamma x^ky=0,
-\eqno{\rm (A)}
+\left(1+\alpha x^{k+2}\right)y''+\beta x^{k+1}y'+\gamma x^{k}y=0,
+\eqno{\rm(A)}
 $$
 where $k$ is a positive integer,
 and let
@@ -1003,37 +1003,36 @@ $p(n)=\alpha n(n-1)+\beta n+\gamma$.
 \item % (a)
 Modify the argument used to prove Theorem~\ref{thmtype:7.2.2} to show that
 $$
-y=\sum_{n=0}^\infty a_nx^n
+y=\sum_{n=0}^{\infty}a_{n}x^{n}
 $$
   is a solution of
-(A)  if and only if  $a_n=0$ for $2\le n\le k+1$ and
+(A)  if and only if  $a_{n}=0$ for $2\le n\le k+1$ and
 $$
-a_{n+k+2}=-{p(n)\over(n+k+2)(n+k+1)}a_n,\quad n\ge0.
+a_{n+k+2}=-\frac{p(n)}{(n+k+2)(n+k+1)}a_{n},\quad n\ge0.
 $$
 \item % (b)
-Show from \part{a}  that $a_n=0$  unless $n=(k+2)m$  or $n=(k+2)m+1$
+Show from \part{a}  that $a_{n}=0$  unless $n=(k+2)m$  or $n=(k+2)m+1$
 for some nonnegative integer $m$, and that
 \begin{eqnarray*}
-a_{(k+2)(m+1)}&=&-{p\left((k+2)m\right)\over
-(k+2)(m+1)[(k+2)(m+1)-1]}a_{(k+2)m},\quad m\ge
-0, \\
+a_{(k+2)(m+1)}&=&-\frac{p\left((k+2)m\right)}{(k+2)(m+1)[(k+2)(m+1)-1]}a_{(k+2)m},\quad m\ge
+0,\\
 \noalign{\hspace*{50pt}\mbox{and}}\\
-a_{(k+2)(m+1)+1}&=&-{p\left((k+2)m+1\right)\over[(k+2)(m+1)+1](k+2)(m+1)}
+a_{(k+2)(m+1)+1}&=&-\frac{p\left((k+2)m+1\right)}{[(k+2)(m+1)+1](k+2)(m+1)}
 a_{(k+2)m+1},\quad m\ge0,
 \end{eqnarray*}
-where $a_0$ and $a_1$ may be specified arbitrarily.
+where $a_{0}$ and $a_{1}$ may be specified arbitrarily.
 \item % (c)
 Conclude from \part{b}  that the  power series in $x$ for the general
 solution
 of (A) is
 $$
 \begin{array}{l}
-y=a_0\dst{\sum^\infty_{m=0}(-1)^m \left[\prod^{m-1}_{j=0}
-{p\left((k+2)j\right)\over(k+2)(j+1)-1}\right] {x^{(k+2)m}\over(k+2)^m
-m!}}\\ [15pt]
-\qquad+a_1\dst{\sum^\infty_{m=0}(-1)^m
-\left[\prod^{m-1}_{j=0}{p\left((k+2)j+1\right)\over(k+2)(j+1)+1}\right]
-{x^{(k+2)m+1}\over(k+2)^mm!}}.
+y=a_{0}\dst{\sum^{\infty}_{m=0}(-1)^{m}\left[\prod^{m-1}_{j=0}
+\frac{p\left((k+2)j\right)}{(k+2)(j+1)-1}\right]{\frac{x^{(k+2)m}}{(k+2)^{m}
+m!}}}\\[15pt]
+\qquad+a_{1}\dst{\sum^{\infty}_{m=0}(-1)^{m}
+\left[\prod^{m-1}_{j=0}\frac{p\left((k+2)j+1\right)}{(k+2)(j+1)+1}\right]
+{\frac{x^{(k+2)m+1}}{(k+2)^{m}m!}}}.
 \end{array}
 $$
 \end{alist}
@@ -1042,16 +1041,16 @@ $$
 Exercise~\ref{exer:7.2.38}  to find the power series in $x$
  for the general solution.}
 
-\item\label{exer:7.2.39} $(1+2x^5)y''+14x^4y'+10x^3y=0$
+\item\label{exer:7.2.39} $(1+2x^{5})y''+14x^{4}y'+10x^{3}y=0$
 
 \vspace*{-10pt}
 \begin{tabular}[t]{@{}p{100pt}@{}p{168pt}}
-\item\label{exer:7.2.40} $y''+x^2y=0$&
-\item\label{exer:7.2.41}  $y''+x^6y'+7x^5y=0$
+\item\label{exer:7.2.40} $y''+x^{2}y=0$&
+\item\label{exer:7.2.41}  $y''+x^{6}y'+7x^{5}y=0$
 \end{tabular}
 
-\item\label{exer:7.2.42} $(1+x^8)y''-16x^7y'+72x^6y=0$
-\item\label{exer:7.2.43} $(1-x^6)y''-12x^5y'-30x^4y=0$
-\item\label{exer:7.2.44} $y''+x^5y'+6x^4y=0$
+\item\label{exer:7.2.42} $(1+x^{8})y''-16x^{7}y'+72x^{6}y=0$
+\item\label{exer:7.2.43} $(1-x^{6})y''-12x^{5}y'-30x^{4}y=0$
+\item\label{exer:7.2.44} $y''+x^{5}y'+6x^{4}y=0$
 
 \end{exerciselist}

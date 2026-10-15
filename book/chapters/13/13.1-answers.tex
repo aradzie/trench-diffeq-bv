@@ -6,10 +6,10 @@ pp.~\pageref{exer:13.1.1}--\pageref{exer:13.1.32}}\medskip
  $y=x^{2}-\dst{\frac{x^{3}}{3}}+cx$ with $c$ arbitrary
 
 \answer{13.1.4}$y=-x+2e^{x}+e^{-(x-1)}$\;
-\answer{13.1.5} $y= \dst{\frac{1}{4}+\frac{11}{4}\cos2x+\frac{9}{4}\sin2x}$
+\answer{13.1.5} $y=\dst{\frac{1}{4}+\frac{11}{4}\cos2x+\frac{9}{4}\sin2x}$
 
 \smallskip
-\answer{13.1.6}  $y=(x^2+13-8x)e^{x}$\;
+\answer{13.1.6}  $y=(x^{2}+13-8x)e^{x}$\;
 \answer{13.1.7}  $y=2e^{2x}+\dst{\frac{3(5e^{3x}-4e^{4x})}{e(15-16e)}
 +\frac{2e^{4}(4e^{3(x-1)}-3e^{4(x-1)})}{16e-15}}$
 
@@ -38,7 +38,7 @@ $+c_{1}\sin(x-a)$ with  $c_{1}$ arbitrary
 \answer{13.1.10} \part{a}\;    $b-a\ne(k+1/2)\pi$\;    ($k=$ integer)
 
 \qquad\; \;  \,
-$y=-\dst{ \frac{\sin(x-a)}{\cos(b-a)}\int_{x}^{b}F(t)\cos(t-b)\,dt-
+$y=-\dst{\frac{\sin(x-a)}{\cos(b-a)}\int_{x}^{b}F(t)\cos(t-b)\,dt-
  \frac{\cos(x-b)}{\cos(b-a)}\int_{x}^{b}F(t)\sin(t-a)\,dt}$
 
 \quad\;  \;  \part{b}\;    $\dst{\int_{a}^{b}F(t)\sin(t-a)\,dt=0}$
@@ -65,7 +65,7 @@ $y=\dst{\frac{\cos(x-a)}{\sin(b-a)}\int_{x}^{b}F(t)\cos(t-b)\,dt+
 \smallskip
 
 \qquad\; \;  \,
-$y=\dst{\cos(x-a)\int_{x}^{b} F(t)\sin(t-a)\,dt +\sin(x-a)\int_{a}^{x}
+$y=\dst{\cos(x-a)\int_{x}^{b}F(t)\sin(t-a)\,dt+\sin(x-a)\int_{a}^{x}
 F(t)\cos(t-a)\,dt}$
 \smallskip
 
@@ -117,7 +117,7 @@ of a solution. In this case,
 
 \quad\;   \,
 $y=-\dst{\frac{1}{n}\left(\sin nx\int_{x}^{\pi}F(t)\cos nt\,dt
-+\cos nx\int_{0}^{x} F(t)\sin nt\,dt\right) +c_{1}\sin nx}$
++\cos nx\int_{0}^{x}F(t)\sin nt\,dt\right)+c_{1}\sin nx}$
 
 \smallskip \quad\;   \,
  with $c_{1}$ arbitrary.
@@ -132,7 +132,7 @@ t\,dt.
 $$
 
 \smallskip \quad\;   \,
-If $\omega= n+1/2$ ($n=$ integer), then
+If $\omega=n+1/2$ ($n=$ integer), then
 $\dst{\int_{0}^{\pi}F(t)\sin(n+1/2)t\,dt=0}$
 is necessary
 
@@ -160,7 +160,7 @@ t\,dt.
 $$
 
 \smallskip \quad\;   \,
-If $\omega= n+1/2$ ($n=$ integer), then
+If $\omega=n+1/2$ ($n=$ integer), then
 $\dst{\int_{0}^{\pi}F(t)\cos(n+1/2)t\,dt=0}$
 is necessary
 
@@ -198,7 +198,7 @@ of a solution. In this case,
 
 \quad\;   \,
 $y=-\dst{\frac{1}{n}\left(\cos nx\int_{x}^{\pi}F(t)\sin nt\,dt
-+\sin nx\int_{0}^{x} F(t)\cos nt\,dt\right) +c_{1}\cos nx}$
++\sin nx\int_{0}^{x}F(t)\cos nt\,dt\right)+c_{1}\cos nx}$
 
 \smallskip \quad\;   \,
  with $c_{1}$ arbitrary.
@@ -212,7 +212,7 @@ $y=-\dst{\frac{1}{n}\left(\cos nx\int_{x}^{\pi}F(t)\sin nt\,dt
 \answer{13.1.21} \part{a}
 $G(x,t)=
 \begin{cases}
-\dst{\frac{(t-a)(x-b)}{b-a}} &a\le t\le x,\\[.11in]
+\dst{\frac{(t-a)(x-b)}{b-a}}&a\le t\le x,\\[.11in]
 \dst{\frac{(x-a)(t-b)}{b-a)}}&x\le t\le b
 \end{cases}$
 
@@ -224,8 +224,8 @@ $y=\dst{\frac{1}{b-a}\left((x-a)\int_{x}^{b}(t-b)F(t)\,dt+(x-b)\int_{a}^{x}(t-a)
 \part{b}\;
 $G(x,t)=
 \begin{cases}
-a-t & a\le t\le x\\
-a-x &x\le t\le b
+a-t&a\le t\le x\\
+a-x&x\le t\le b
 \end{cases}$  \quad
 $y=\dst{(a-x)\int_{x}^{b}F(t)\,dt+\int_{a}^{x}(a-t)F(t)\,dt}$
 
@@ -234,8 +234,8 @@ $y=\dst{(a-x)\int_{x}^{b}F(t)\,dt+\int_{a}^{x}(a-t)F(t)\,dt}$
 \part{c}\;
 $G(x,t)=
 \begin{cases}
-x-b & a\le t\le x\\
-t-b &x\le t\le b
+x-b&a\le t\le x\\
+t-b&x\le t\le b
 \end{cases}$  \quad
 $y=\dst{\int_{x}^{b}(t-b)F(t)\,dt+(x-b)\int_{a}^{x}F(t)\,dt}$
 
@@ -253,36 +253,36 @@ with $c_{1}$ arbitrary.
 \answer{13.1.22}
 $G(x,t)=
 \begin{cases}
-\dst{-\frac{(2+t)(3-x)}{5}},& 0\le t\le x,\\[.11in]
--\dst{\frac{(2+x)(3-t)}{5}}, &x\le t\le 1
+\dst{-\frac{(2+t)(3-x)}{5}},&0\le t\le x,\\[.11in]
+-\dst{\frac{(2+x)(3-t)}{5}},&x\le t\le1
 \end{cases}$
 \;  \part{a} $y=\dst{\frac{x^{2}-x-2}{2}}$
 \;  \part{b} $y=\dst{\frac{5x^{2}-7x-14}{30}}$
 
 \medskip
 \quad \quad
-\part{c}$\, y=\dst{\frac{5x^{4}-9x-18}{60}}$
+\part{c}$\,y=\dst{\frac{5x^{4}-9x-18}{60}}$
 
 \smallskip
 \answer{13.1.23}
 $G(x,t)=
 \begin{cases}
-\dst{\frac{\cos t\sin x}{t^{3/2}\sqrt{x}}}, &\dst{\frac{\pi}{2}}\le t\le
+\dst{\frac{\cos t\sin x}{t^{3/2}\sqrt{x}}},&\dst{\frac{\pi}{2}}\le t\le
 x,\\[.11in]
-\dst{\frac{\cos x\sin t}{t^{3/2}\sqrt{x}}}, &x\le t\le \pi
+\dst{\frac{\cos x\sin t}{t^{3/2}\sqrt{x}}},&x\le t\le\pi
 \end{cases}$
 
 \smallskip
 \quad \quad
-\;  \part{a}\;   $y=\dst{\frac{1+\cos x-\sin x}{\sqrt x}}$
-\;  \part{b}\;   $y=\dst{\frac{x+\pi \cos x-\pi/2\sin x}{\sqrt x}}$
+\;  \part{a}\;   $y=\dst{\frac{1+\cos x-\sin x}{\sqrt{x}}}$
+\;  \part{b}\;   $y=\dst{\frac{x+\pi\cos x-\pi/2\sin x}{\sqrt{x}}}$
 
 \smallskip
 \answer{13.1.24}
 $G(x,t)=
 \begin{cases}
-\dst{\frac{(t-1)x(x-2)}{t^{3}}},\;  1\le t\le x,\\[.11in]
-\dst{\frac{x(x-1)(t-2)}{t^{3}}},\;   x\le t\le 2
+\dst{\frac{(t-1)x(x-2)}{t^{3}}},\;1\le t\le x,\\[.11in]
+\dst{\frac{x(x-1)(t-2)}{t^{3}}},\;x\le t\le2
 \end{cases}$
 
 \smallskip
@@ -294,8 +294,8 @@ $G(x,t)=
 \answer{13.1.25}
 $G(x,t)=
 \begin{cases}
--\dst{\frac{1}{22}\left(3+\frac{1}{t^{2}}\right)\left(x+\frac{4}{x}\right)},&\;  1\le x\le t,\\[.11in]
--\dst{\frac{1}{22}\left(3x+\frac{1}{x}\right)\left(1+\frac{4}{t^{2}}\right)},&\;   x\le t\le 2
+-\dst{\frac{1}{22}\left(3+\frac{1}{t^{2}}\right)\left(x+\frac{4}{x}\right)},&\;1\le x\le t,\\[.11in]
+-\dst{\frac{1}{22}\left(3x+\frac{1}{x}\right)\left(1+\frac{4}{t^{2}}\right)},&\;x\le t\le2
 \end{cases}$
 
 \smallskip
@@ -312,10 +312,8 @@ $y=\dst{\frac{11x^{4}-139x^{2}-28}{88x}}$
 \answer{13.1.26} $\alpha(\rho+\delta)-\beta\rho\ne0$   \quad
 $G(x,t)=
 \begin{cases}
-\dst{\frac{(\beta-\alpha t)(\rho+\delta-\rho x)}
-{\alpha(\rho+\delta)-\beta\rho}}, \quad  0\le t\le x, \\[.11in]
-\dst{\frac{(\beta-\alpha x)(\rho+\delta-\rho t)}
-{\alpha(\rho+\delta)-\beta\rho}},\quad  x\le t\le 1
+\dst{\frac{(\beta-\alpha t)(\rho+\delta-\rho x)}{\alpha(\rho+\delta)-\beta\rho}},\quad0\le t\le x,\\[.11in]
+\dst{\frac{(\beta-\alpha x)(\rho+\delta-\rho t)}{\alpha(\rho+\delta)-\beta\rho}},\quad  x\le t\le1
 \end{cases}$
 
 \smallskip
@@ -323,21 +321,17 @@ $G(x,t)=
 $\alpha\delta-\beta\rho\ne0$  \quad
 $G(x,t)=
 \begin{cases}
-\dst{\frac{(\beta\cos t-\alpha\sin t)(\delta \cos x-\rho\sin
-x)}
-{\alpha\delta-\beta\rho}},\;    &0\le t\le x,\\[.11in]
-\dst{\frac{(\beta\cos x-\alpha\sin x)(\delta \cos t-\rho\sin t)}
-{\alpha\delta-\beta\rho}},\;   &x\le t\le \pi
+\dst{\frac{(\beta\cos t-\alpha\sin t)(\delta\cos x-\rho\sin
+x)}{\alpha\delta-\beta\rho}},\;&0\le t\le x,\\[.11in]
+\dst{\frac{(\beta\cos x-\alpha\sin x)(\delta\cos t-\rho\sin t)}{\alpha\delta-\beta\rho}},\;&x\le t\le\pi
 \end{cases}$
 
 \smallskip
 \answer{13.1.28} $\alpha\rho+\beta\delta\ne0$ \;
 $G(x,t)=
 \begin{cases}
-\dst{\frac{(\beta\cos t-\alpha\sin t)(\rho\cos x+\delta\sin x)}
-{\alpha\rho+\beta\delta}}\;   & x\le t\le \pi  \\[.11in]
-\dst{\frac{(\beta\cos x-\alpha\sin x)(\rho\cos t+\delta\sin t)}
-{\alpha\rho+\beta\delta}}\;
+\dst{\frac{(\beta\cos t-\alpha\sin t)(\rho\cos x+\delta\sin x)}{\alpha\rho+\beta\delta}}\;&x\le t\le\pi\\[.11in]
+\dst{\frac{(\beta\cos x-\alpha\sin x)(\rho\cos t+\delta\sin t)}{\alpha\rho+\beta\delta}}\;
 &0\le t\le x
 \end{cases}$
 
@@ -347,22 +341,20 @@ $G(x,t)=
 \begin{cases}
 \dst{\frac{e^{x-t)}(\beta\cos t-(\alpha+\beta)\sin t)
 (\delta\cos x-(\rho+\delta)\sin x)}{\alpha\delta-\beta\rho}}\;
-&0\le t\le x, \\[.11in]
+&0\le t\le x,\\[.11in]
 \dst{\frac{e^{x-t}(\beta\cos x-(\alpha+\beta)\sin x)
 (\delta\cos t-(\rho+\delta)\sin t)}{\alpha\delta-\beta\rho}},\;
-&x\le t\le \pi
+&x\le t\le\pi
 \end{cases}$
 
 \smallskip
-\answer{13.1.30} $\beta \delta+(\alpha+\beta)(\rho+\delta)\ne0$ \;
+\answer{13.1.30} $\beta\delta+(\alpha+\beta)(\rho+\delta)\ne0$ \;
 $G(x,t)=
 \begin{cases}
 \dst{\frac{e^{x-t}(\beta\cos t-(\alpha+\beta)\sin t)
-((\rho+\delta)\cos x+\delta \sin x)}
-{\beta \delta+(\alpha+\beta)(\rho+\delta}},& 0\le t\le  x, \\[.11in]
+((\rho+\delta)\cos x+\delta\sin x)}{\beta\delta+(\alpha+\beta)(\rho+\delta}},&0\le t\le  x,\\[.11in]
 \dst{\frac{e^{x-t}(\beta\cos x-(\alpha+\beta)\sin x)
-((\rho+\delta)\cos t+\delta \sin t)}
-{\beta \delta+(\alpha+\beta)(\rho+\delta}},  &x\le t\le \pi/2
+((\rho+\delta)\cos t+\delta\sin t)}{\beta\delta+(\alpha+\beta)(\rho+\delta}},&x\le t\le\pi/2
 \end{cases}$
 
 \smallskip
@@ -374,12 +366,10 @@ $(\rho+\delta)(\alpha-\beta)e^{(b-a)}-(\rho-\delta)(\alpha+\beta)e^{(a-b)}\ne0$
 $G(x,t)=
 \begin{cases}
 \dst{\frac{((\alpha-\beta)e^{(t-a)}-(\alpha+\beta)e^{-(t-a)})
-((\rho-\delta)e^{(x-b)}-(\rho+\delta)e^{-(x-b)})}
-{2[(\rho+\delta)(\alpha-\beta)e^{(b-a)}-(\rho-\delta)(\alpha+\beta)e^{(a-b)}]}},\;
+((\rho-\delta)e^{(x-b)}-(\rho+\delta)e^{-(x-b)})}{2[(\rho+\delta)(\alpha-\beta)e^{(b-a)}-(\rho-\delta)(\alpha+\beta)e^{(a-b)}]}},\;
 &0\le t\le x,\\[.11in]
 \dst{\frac{((\alpha-\beta)e^{(x-a)}-(\alpha+\beta)e^{-(x-a)})
-((\rho-\delta)e^{(t-b)}-(\rho+\delta)e^{-(t-b)})}
-{2[(\rho+\delta)(\alpha-\beta)e^{(b-a)}-(\rho-\delta)(\alpha+\beta)e^{(a-b)}]}}\;
-&x\le t\le \pi
+((\rho-\delta)e^{(t-b)}-(\rho+\delta)e^{-(t-b)})}{2[(\rho+\delta)(\alpha-\beta)e^{(b-a)}-(\rho-\delta)(\alpha+\beta)e^{(a-b)}]}}\;
+&x\le t\le\pi
 \end{cases}$
 

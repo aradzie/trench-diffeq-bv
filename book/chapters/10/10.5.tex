@@ -3,13 +3,13 @@
 \noindent
 We saw in Section~10.4 that if an $n\times n$
 constant matrix
-$A$ has $n$ real eigenvalues $\lambda_1$, $\lambda_2$, \dots, $\lambda_n$
+$A$ has $n$ real eigenvalues $\lambda_{1}$, $\lambda_{2}$, \dots, $\lambda_{n}$
 (which need not be distinct) with associated linearly independent
-eigenvectors ${\bf x}_1$, ${\bf x}_2$, \dots, ${\bf x}_n$, then the general
+eigenvectors ${\bf x}_{1}$, ${\bf x}_{2}$, \dots, ${\bf x}_{n}$, then the general
 solution of ${\bf y}'=A{\bf y}$ is
 $$
-{\bf y}=c_1{\bf x}_1e^{\lambda_1t}+c_2{\bf x}_2e^{\lambda_2 t}
-+\cdots+c_n{\bf x}_ne^{\lambda_n t}.
+{\bf y}=c_{1}{\bf x}_{1}e^{\lambda_{1}t}+c_{2}{\bf x}_{2}e^{\lambda_{2}t}
++\cdots+c_{n}{\bf x}_{n}e^{\lambda_{n}t}.
 $$
 In this section we consider the case where $A$ has $n$ real
 eigenvalues, but does not have $n$ linearly independent eigenvectors.
@@ -26,9 +26,9 @@ will restrict our attention to some commonly occurring special cases.
 {\bf y}'=\twobytwo{11}{-25}4{-9}{\bf y}
 \end{equation}
 does not have a fundamental set of solutions of the form $\{{\bf
-x}_1e^{\lambda_1t},{\bf x}_2e^{\lambda_2t}\}$, where $\lambda_1$ and
-$\lambda_2$ are eigenvalues of the coefficient matrix $A$ of
-\eqref{eq:10.5.1} and ${\bf x}_1$, and ${\bf x}_2$ are associated
+x}_{1}e^{\lambda_{1}t},{\bf x}_{2}e^{\lambda_{2}t}\}$, where $\lambda_{1}$ and
+$\lambda_{2}$ are eigenvalues of the coefficient matrix $A$ of
+\eqref{eq:10.5.1} and ${\bf x}_{1}$, and ${\bf x}_{2}$ are associated
 linearly independent eigenvectors.
 \end{example}
 
@@ -36,30 +36,30 @@ linearly independent eigenvectors.
 \begin{eqnarray*}
 \twochar{11}{-25}4{-9}
 &=&(\lambda-11)(\lambda+9)+100\\
-&=&\lambda^2-2\lambda+1=(\lambda-1)^2.
+&=&\lambda^{2}-2\lambda+1=(\lambda-1)^{2}.
 \end{eqnarray*}
 Hence, $\lambda=1$ is the only eigenvalue of $A$. The augmented
-matrix of the system $(A-I){\bf x}={\bf 0}$ is
+matrix of the system $(A-I){\bf x}={\bf0}$ is
 $$
 \left[\begin{array}{rrcr}10&-25&\vdots&0\\4&
 -10&\vdots&0\end{array}\right],
 $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrcr}1&-\dst{5\over2}&\vdots&0\\[10pt]0&
+\left[\begin{array}{rrcr}1&-\dst\frac{5}{2}&\vdots&0\\[10pt]0&
 0&\vdots&0\end{array}\right].
 $$
-Hence, $x_1=5x_2/2$ where $x_2$ is arbitrary. Therefore all
+Hence, $x_{1}=5x_{2}/2$ where $x_{2}$ is arbitrary. Therefore all
 eigenvectors of $A$ are scalar multiples of ${\bf
-x}_1=\dst{\twocol52}$,
+x}_{1}=\dst{\twocol52}$,
 so $A$ does not have a set of two linearly independent eigenvectors.
 \bbox
 
 From Example~\ref{example:10.5.1}, we know that all scalar multiples of
-${\bf y}_1=\dst{\twocol52}e^t$ are solutions of \eqref{eq:10.5.1};
+${\bf y}_{1}=\dst{\twocol52}e^{t}$ are solutions of \eqref{eq:10.5.1};
 however,
 to find the general solution we must find a second solution ${\bf
-y}_2$ such that $\{{\bf y}_1,{\bf y}_2\}$ is linearly independent.
+y}_{2}$ such that $\{{\bf y}_{1},{\bf y}_{2}\}$ is linearly independent.
 Based on your recollection of the procedure for solving a constant
 coefficient scalar equation
 $$
@@ -68,71 +68,71 @@ $$
 in the case where the characteristic polynomial has a repeated root,
 you might expect to obtain a second solution of \eqref{eq:10.5.1} by
 multiplying the first solution by $t$. However, this yields ${\bf
-y}_2=\dst{\twocol52}te^t$, which doesn't work, since
+y}_{2}=\dst{\twocol52}te^{t}$, which doesn't work, since
 $$
-{\bf y}_2'=\twocol52(te^t+e^t),\mbox{\quad  while \quad }
-\twobytwo{11}{-25}4{-9}{\bf y}_2=\twocol52te^t.
+{\bf y}_{2}'=\twocol52(te^{t}+e^{t}),\mbox{\quad  while \quad }
+\twobytwo{11}{-25}4{-9}{\bf y}_{2}=\twocol52te^{t}.
 $$
 
 The next theorem shows what to do in this situation.
 
 \begin{theorem}\color{blue}\label{thmtype:10.5.1}
-Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$
+Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_{1}$
 of multiplicity $\ge2$ and the associated eigenspace has dimension
-$1$; that is, all $\lambda_1$-eigenvectors of $A$ are scalar
+$1$; that is, all $\lambda_{1}$-eigenvectors of $A$ are scalar
 multiples
 of  an eigenvector ${\bf x}$.  Then there are infinitely many vectors
 ${\bf u}$ such that
 \begin{equation}\label{eq:10.5.2}
-(A-\lambda_1I){\bf u}={\bf x}.
+(A-\lambda_{1}I){\bf u}={\bf x}.
 \end{equation}
 Moreover, if ${\bf u}$ is any such vector  then
 \begin{equation}\label{eq:10.5.3}
-{\bf y}_1={\bf x}e^{\lambda_1t}\quad\mbox{and }\quad
-{\bf y}_2={\bf u}e^{\lambda_1t}+{\bf x}te^{\lambda_1t}
+{\bf y}_{1}={\bf x}e^{\lambda_{1}t}\quad\mbox{and }\quad
+{\bf y}_{2}={\bf u}e^{\lambda_{1}t}+{\bf x}te^{\lambda_{1}t}
 \end{equation}
 are linearly independent  solutions of ${\bf y}'=A{\bf y}$.
 \end{theorem}
 
 A complete proof of this theorem is beyond the scope of this book. The
 difficulty is in proving that there's a vector ${\bf u}$ satisfying
-\eqref{eq:10.5.2}, since $\det(A-\lambda_1I)=0$. We'll take this without
+\eqref{eq:10.5.2}, since $\det(A-\lambda_{1}I)=0$. We'll take this without
 proof and verify the other assertions of the theorem.
 
-We already know that ${\bf y}_1$ in \eqref{eq:10.5.3} is a solution of
-${\bf y}'=A{\bf y}$. To see that ${\bf y}_2$ is also a solution, we
+We already know that ${\bf y}_{1}$ in \eqref{eq:10.5.3} is a solution of
+${\bf y}'=A{\bf y}$. To see that ${\bf y}_{2}$ is also a solution, we
 compute
 \begin{eqnarray*}
-{\bf y}_2'-A{\bf y}_2&=&\lambda_1{\bf u}e^{\lambda_1t}+{\bf
-x} e^{\lambda_1t}
-+\lambda_1{\bf x} te^{\lambda_1t}-A{\bf
-u}e^{\lambda_1t}-A{\bf x} te^{\lambda_1t}\\
-&=&(\lambda_1{\bf u}+{\bf x} -A{\bf
-u})e^{\lambda_1t}+(\lambda_1{\bf x} -A{\bf x} )te^{\lambda_1t}.
+{\bf y}_{2}'-A{\bf y}_{2}&=&\lambda_{1}{\bf u}e^{\lambda_{1}t}+{\bf
+x}e^{\lambda_{1}t}
++\lambda_{1}{\bf x}te^{\lambda_{1}t}-A{\bf
+u}e^{\lambda_{1}t}-A{\bf x}te^{\lambda_{1}t}\\
+&=&(\lambda_{1}{\bf u}+{\bf x}-A{\bf
+u})e^{\lambda_{1}t}+(\lambda_{1}{\bf x}-A{\bf x})te^{\lambda_{1}t}.
 \end{eqnarray*}
-Since $A{\bf x}=\lambda_1{\bf x}$, this can be written as
+Since $A{\bf x}=\lambda_{1}{\bf x}$, this can be written as
 $$
-{\bf y}_2'-A{\bf y}_2=-
-\left((A-\lambda_1I){\bf u}-{\bf x}\right)e^{\lambda_1t},
+{\bf y}_{2}'-A{\bf y}_{2}=-
+\left((A-\lambda_{1}I){\bf u}-{\bf x}\right)e^{\lambda_{1}t},
 $$
 and now \eqref{eq:10.5.2} implies that
-${\bf y}_2'=A{\bf y}_2$.
+${\bf y}_{2}'=A{\bf y}_{2}$.
 
-To see that ${\bf y}_1$ and ${\bf y}_2$  are linearly independent,
-suppose   $c_1$ and $c_2$ are constants such that
+To see that ${\bf y}_{1}$ and ${\bf y}_{2}$  are linearly independent,
+suppose   $c_{1}$ and $c_{2}$ are constants such that
 \begin{equation}\label{eq:10.5.4}
-c_1{\bf y}_1+c_2{\bf y}_2=c_1{\bf x}e^{\lambda_1t}+c_2({\bf
-u}e^{\lambda_1t} +{\bf x}te^{\lambda_1t})={\bf 0}.
+c_{1}{\bf y}_{1}+c_{2}{\bf y}_{2}=c_{1}{\bf x}e^{\lambda_{1}t}+c_{2}({\bf
+u}e^{\lambda_{1}t}+{\bf x}te^{\lambda_{1}t})={\bf0}.
 \end{equation}
-We must show that $c_1=c_2=0$.  Multiplying \eqref{eq:10.5.4}
-by $e^{-\lambda_1t}$ shows that
+We must show that $c_{1}=c_{2}=0$.  Multiplying \eqref{eq:10.5.4}
+by $e^{-\lambda_{1}t}$ shows that
 \begin{equation}\label{eq:10.5.5}
-c_1{\bf x}+c_2({\bf u} +{\bf x}t)={\bf 0}.
+c_{1}{\bf x}+c_{2}({\bf u}+{\bf x}t)={\bf0}.
 \end{equation}
-By differentiating this with respect to $t$, we see that $c_2{\bf
-x}={\bf 0}$, which implies $c_2=0$, because ${\bf x}\ne{\bf 0}$.
-Substituting  $c_2=0$ into \eqref{eq:10.5.5}  yields $c_1{\bf x}={\bf 0}$,
-which implies that $c_1=0$, again because ${\bf x}\ne{\bf 0}$
+By differentiating this with respect to $t$, we see that $c_{2}{\bf
+x}={\bf0}$, which implies $c_{2}=0$, because ${\bf x}\ne{\bf0}$.
+Substituting  $c_{2}=0$ into \eqref{eq:10.5.5}  yields $c_{1}{\bf x}={\bf0}$,
+which implies that $c_{1}=0$, again because ${\bf x}\ne{\bf0}$
 
 \begin{example}\label{example:10.5.2}\rm
 Use Theorem~\ref{thmtype:10.5.1} to find the general solution of the system
@@ -142,7 +142,7 @@ Use Theorem~\ref{thmtype:10.5.1} to find the general solution of the system
 considered in Example~\ref{example:10.5.1}.
 \end{example}
 
-\solution In Example~\ref{example:10.5.1} we saw that $\lambda_1=1$ is an
+\solution In Example~\ref{example:10.5.1} we saw that $\lambda_{1}=1$ is an
 eigenvalue of multiplicity $2$ of the coefficient matrix $A$ in
 \eqref{eq:10.5.6}, and that all of the eigenvectors of $A$ are multiples of
 $$
@@ -150,180 +150,180 @@ $$
 $$
 Therefore
 $$
-{\bf y}_1=\twocol52e^t
+{\bf y}_{1}=\twocol52e^{t}
 $$
 is a solution of \eqref{eq:10.5.6}. From Theorem~\ref{thmtype:10.5.1}, a second
-solution is given by ${\bf y}_2={\bf u}e^t+{\bf x}te^t$, where
+solution is given by ${\bf y}_{2}={\bf u}e^{t}+{\bf x}te^{t}$, where
 $(A-I){\bf u}={\bf x}$. The augmented matrix of this system is
 $$
 \left[\begin{array}{rrcr}10&-25&\vdots&5\\4&-10&\vdots&2\end{array}\right],
 $$
 which is row equivalent to
 $$
-\dst{\left[\begin{array}{rrcr}1&-{5\over2}&\vdots&1\over2\\
+\dst{\left[\begin{array}{rrcr}1&-\frac{5}{2}&\vdots&1\over2\\
 0&0&\vdots&0\end{array}\right]}.
 $$
 Therefore the components of ${\bf u}$ must satisfy
 $$
-u_1-{5\over2}u_2={1\over2},
+u_{1}-\frac{5}{2}u_{2}=\frac{1}{2},
 $$
-where  $u_2$ is arbitrary. We choose $u_2=0$, so that $u_1=1/2$ and
+where  $u_{2}$ is arbitrary. We choose $u_{2}=0$, so that $u_{1}=1/2$ and
 $$
-{\bf u}=\twocol{1\over2}0.
+{\bf u}=\twocol{\frac{1}{2}}0.
 $$
 Thus,
 $$
-{\bf y}_2=\twocol10{e^t\over2}+\twocol52te^t.
+{\bf y}_{2}=\twocol10{\frac{e^{t}}{2}}+\twocol52te^{t}.
 $$
-Since ${\bf y}_1$ and ${\bf y}_2$ are linearly independent by
+Since ${\bf y}_{1}$ and ${\bf y}_{2}$ are linearly independent by
 Theorem~\ref{thmtype:10.5.1}, they form a fundamental set of solutions of
 \eqref{eq:10.5.6}. Therefore the general solution of \eqref{eq:10.5.6} is
 $$
 {\bf
-y}=c_1\twocol52e^t+c_2\left(\twocol10{e^t\over2}+\twocol52te^t\right).\bbox
+y}=c_{1}\twocol52e^{t}+c_{2}\left(\twocol10{\frac{e^{t}}{2}}+\twocol52te^{t}\right).\bbox
 $$
 
-Note that choosing the arbitrary constant $u_2$ to be nonzero is
-equivalent to adding a scalar multiple of ${\bf y}_1$ to the second
-solution ${\bf y}_2$ (Exercise~\ref{exer:10.5.33}).
+Note that choosing the arbitrary constant $u_{2}$ to be nonzero is
+equivalent to adding a scalar multiple of ${\bf y}_{1}$ to the second
+solution ${\bf y}_{2}$ (Exercise~\ref{exer:10.5.33}).
 
 \begin{example}\label{example:10.5.3}\rm
  Find the general solution of
 \begin{equation}\label{eq:10.5.7}
-{\bf y}'=\threebythree34{-10}21{-2}22{-5} {\bf y}.
+{\bf y}'=\threebythree34{-10}21{-2}22{-5}{\bf y}.
 \end{equation}
 \end{example}
 
 \solution  The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.7} is
 $$
-\left|\begin{array}{ccc} 3-\lambda & 4 & -10\\ 2 & 1-\lambda &
--2\\ 2 & 2 &-5-\lambda\end{array}\right| =-
-(\lambda-1)(\lambda+1)^2.
+\left|\begin{array}{ccc}3-\lambda&4&-10\\2&1-\lambda&
+-2\\2&2&-5-\lambda\end{array}\right|=-
+(\lambda-1)(\lambda+1)^{2}.
 $$
-Hence, the eigenvalues are $\lambda_1=1$ with multiplicity~$1$ and
-$\lambda_2=-1$ with  multiplicity~$2$.
+Hence, the eigenvalues are $\lambda_{1}=1$ with multiplicity~$1$ and
+$\lambda_{2}=-1$ with  multiplicity~$2$.
 
-Eigenvectors associated with $\lambda_1=1$ must satisfy $(A-I){\bf
-x}={\bf 0}$. The augmented matrix of this system is
+Eigenvectors associated with $\lambda_{1}=1$ must satisfy $(A-I){\bf
+x}={\bf0}$. The augmented matrix of this system is
 $$
-\left[\begin{array}{rrrcr} 2 & 4 & -10 &\vdots & 0\\
-2& 0 & -2 &\vdots & 0\\ 2 & 2 & -6 &
-\vdots & 0\end{array}\right], $$
+\left[\begin{array}{rrrcr}2&4&-10&\vdots&0\\
+2&0&-2&\vdots&0\\2&2&-6&
+\vdots&0\end{array}\right], $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1 & 0 & -1 &\vdots& 0\\  0 & 1 & -2
-&\vdots& 0\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&-2
+&\vdots&0\\0&0&0&\vdots&0\end{array}\right].
 $$
-Hence, $x_1 =x_3$ and  $x_2 =2 x_3$, where $x_3$ is arbitrary.
-Choosing $x_3=1$ yields the eigenvector
+Hence, $x_{1}=x_{3}$ and  $x_{2}=2x_{3}$, where $x_{3}$ is arbitrary.
+Choosing $x_{3}=1$ yields the eigenvector
 $$
-{\bf x}_1=\threecol121.
+{\bf x}_{1}=\threecol121.
 $$
 Therefore
 $$
-{\bf y}_1 =\threecol121e^t
+{\bf y}_{1}=\threecol121e^{t}
 $$
 is a solution of  \eqref{eq:10.5.7}.
 
-Eigenvectors associated with $\lambda_2 =-1$ satisfy $(A+I){\bf
-x}={\bf 0}$. The  augmented matrix of this system is
+Eigenvectors associated with $\lambda_{2}=-1$ satisfy $(A+I){\bf
+x}={\bf0}$. The  augmented matrix of this system is
 $$
-\left[\begin{array}{rrrcr} 4 & 4 & -10 &\vdots & 0\\ 2 & 2 & -2 &
-\vdots & 0\\2 & 2 & -4 &\vdots & 0\end{array}\right],
+\left[\begin{array}{rrrcr}4&4&-10&\vdots&0\\2&2&-2&
+\vdots&0\\2&2&-4&\vdots&0\end{array}\right],
 $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1 & 1 & 0 &\vdots& 0\\ 0 & 0 & 1
-&\vdots& 0
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&1&0&\vdots&0\\0&0&1
+&\vdots&0
+\\0&0&0&\vdots&0\end{array}\right].
 $$
-Hence, $x_3=0$ and $x_1 =-x_2$, where $x_2$ is
-arbitrary. Choosing $x_2=1$  yields the eigenvector
+Hence, $x_{3}=0$ and $x_{1}=-x_{2}$, where $x_{2}$ is
+arbitrary. Choosing $x_{2}=1$  yields the eigenvector
 $$
-{\bf x}_2=\threecol{-1}10,
+{\bf x}_{2}=\threecol{-1}10,
 $$
 so
 $$
-{\bf y}_2 =\threecol{-1}10e^{-t}
+{\bf y}_{2}=\threecol{-1}10e^{-t}
 $$
 is a solution of  \eqref{eq:10.5.7}.
 
-Since all the eigenvectors of $A$ associated with $\lambda_2=-1$ are
-multiples of ${\bf x}_2$, we must now use Theorem~\ref{thmtype:10.5.1} to
+Since all the eigenvectors of $A$ associated with $\lambda_{2}=-1$ are
+multiples of ${\bf x}_{2}$, we must now use Theorem~\ref{thmtype:10.5.1} to
 find a third solution of \eqref{eq:10.5.7} in the form
 \begin{equation}\label{eq:10.5.8}
-{\bf y}_3={\bf u}e^{-t}+\threecol{-1}10te^{-t},
+{\bf y}_{3}={\bf u}e^{-t}+\threecol{-1}10te^{-t},
 \end{equation}
-where ${\bf u}$ is a solution of $(A+I){\bf u=x}_2$.
+where ${\bf u}$ is a solution of $(A+I){\bf u=x}_{2}$.
 The  augmented matrix  of this system is
 $$
-\left[\begin{array}{rrrcr} 4 & 4 & -10 &\vdots & -1\\ 2 & 2 & -2 &
-\vdots & 1\\ 2 & 2 & -4 &\vdots & 0\end{array}\right],
+\left[\begin{array}{rrrcr}4&4&-10&\vdots&-1\\2&2&-2&
+\vdots&1\\2&2&-4&\vdots&0\end{array}\right],
 $$
 which is  row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1 & 1 & 0 &\vdots& 1\\ 0 & 0 & 1
-&\vdots& {1\over2}
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&1&0&\vdots&1\\0&0&1
+&\vdots&\frac{1}{2}
+\\0&0&0&\vdots&0\end{array}\right].
 $$
-Hence, $u_3=1/2$ and $u_1 =1-u_2$, where $u_2$  is
-arbitrary. Choosing $u_2=0$ yields
+Hence, $u_{3}=1/2$ and $u_{1}=1-u_{2}$, where $u_{2}$  is
+arbitrary. Choosing $u_{2}=0$ yields
 $$
-{\bf u} =\threecol10{1\over2},
+{\bf u}=\threecol10{\frac{1}{2}},
 $$
 and substituting this into  \eqref{eq:10.5.8}
 yields the solution
 $$
-{\bf y}_3=\threecol201{e^{-t}\over2}+\threecol{-1}10te^{-t}
+{\bf y}_{3}=\threecol201{\frac{e^{-t}}{2}}+\threecol{-1}10te^{-t}
 $$
 of  \eqref{eq:10.5.7}.
 
-Since the Wronskian of $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
+Since the Wronskian of $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$
 at $t=0$ is
 $$
 \left|\begin{array}{rrr}
-1&-1&1\\2&1&0\\1&0&1\over2\end{array}\right|={1\over2},
+1&-1&1\\2&1&0\\1&0&1\over2\end{array}\right|=\frac{1}{2},
 $$
-$\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is a fundamental set of solutions
+$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions
 of \eqref{eq:10.5.7}. Therefore the general solution of \eqref{eq:10.5.7}
 is
 $$
 {\bf y}=c_1\threecol121e^t+c_2\threecol{-1}10e^{-t}+c_3\left
-(\threecol201{e^{-t}\over2}+\threecol{-1}10te^{-t}\right).
+(\threecol201{\frac{e^{-t}}{2}}+\threecol{-1}10te^{-t}\right).
 $$
 
 \begin{theorem}\color{blue}\label{thmtype:10.5.2}
-Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$ of
-multiplicity $\ge 3$ and the associated eigenspace is
+Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_{1}$ of
+multiplicity $\ge3$ and the associated eigenspace is
 one--dimensional; that is, all eigenvectors associated with
-$\lambda_1$
+$\lambda_{1}$
 are scalar multiples of the eigenvector ${\bf x}$. Then there are
 infinitely many vectors ${\bf u}$ such that
 \begin{equation}\label{eq:10.5.9}
-(A-\lambda_1I){\bf u}={\bf x},
+(A-\lambda_{1}I){\bf u}={\bf x},
 \end{equation}
 and, if ${\bf u}$ is any such vector,  there are infinitely many
 vectors ${\bf v}$ such that
 \begin{equation}\label{eq:10.5.10}
-(A-\lambda_1I){\bf v}={\bf u}.
+(A-\lambda_{1}I){\bf v}={\bf u}.
 \end{equation}
  If ${\bf u}$ satisfies {\rm\eqref{eq:10.5.9}}  and ${\bf v}$ satisfies
 {\rm\eqref{eq:10.5.10}},  then
 \begin{eqnarray*}
-{\bf y}_1 &=&{\bf x} e^{\lambda_1t},\\
-{\bf y}_2&=&{\bf u}e^{\lambda_1t}+{\bf x} te^{\lambda_1t},\mbox{
+{\bf y}_{1}&=&{\bf x}e^{\lambda_{1}t},\\
+{\bf y}_{2}&=&{\bf u}e^{\lambda_{1}t}+{\bf x}te^{\lambda_{1}t},\mbox{
 and }\\
-{\bf y}_3&=&{\bf v}e^{\lambda_1t}+{\bf u}te^{\lambda_1t}+{\bf
-x} {t^2e^{\lambda_1t}\over2}
+{\bf y}_{3}&=&{\bf v}e^{\lambda_{1}t}+{\bf u}te^{\lambda_{1}t}+{\bf
+x}{\frac{t^{2}e^{\lambda_{1}t}}{2}}
 \end{eqnarray*}
 are linearly independent solutions of  ${\bf y}'=A{\bf y}$.
 \end{theorem}
 
 Again, it's beyond the scope of this book to prove that there are
 vectors ${\bf u}$ and ${\bf v}$ that satisfy \eqref{eq:10.5.9} and
-\eqref{eq:10.5.10}. Theorem~\ref{thmtype:10.5.1} implies that ${\bf y}_1$ and
-${\bf y}_2$ are solutions of ${\bf y}'=A{\bf y}$. We leave the rest of
+\eqref{eq:10.5.10}. Theorem~\ref{thmtype:10.5.1} implies that ${\bf y}_{1}$ and
+${\bf y}_{2}$ are solutions of ${\bf y}'=A{\bf y}$. We leave the rest of
 the proof to you (Exercise~\ref{exer:10.5.34}).
 
 \begin{example}\label{example:10.5.4}\rm
@@ -336,116 +336,116 @@ Use Theorem~\ref{thmtype:10.5.2} to find the general solution of
 \solution  The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.11} is
 $$
-\left|\begin{array}{ccc} 1-\lambda & 1 & \phantom{-}1\\ 1 & 3-\lambda
+\left|\begin{array}{ccc}1-\lambda&1&\phantom{-}1\\1&3-\lambda
 &
--1\\ 0 & 2 & 2-\lambda\end{array}\right| =-(\lambda-2)^3.
+-1\\0&2&2-\lambda\end{array}\right|=-(\lambda-2)^{3}.
 $$
-Hence, $\lambda_1=2$ is an eigenvalue of multiplicity $3$. The
+Hence, $\lambda_{1}=2$ is an eigenvalue of multiplicity $3$. The
 associated eigenvectors satisfy $(A-2I){\bf x=0}$. The augmented
 matrix of this system is
 $$
-\left[\begin{array}{rrrcr} -1 & 1 & 1 &\vdots & 0\\
-1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &
-\vdots & 0\end{array}\right],
+\left[\begin{array}{rrrcr}-1&1&1&\vdots&0\\
+1&1&-1&\vdots&0\\0&2&0&
+\vdots&0\end{array}\right],
 $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& 0\\ 0 & 1 & 0  &\vdots& 0
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&0&\vdots&0
+\\0&0&0&\vdots&0\end{array}\right].
 $$
-Hence, $x_1 =x_3$ and  $x_2 = 0$, so the eigenvectors are all scalar
+Hence, $x_{1}=x_{3}$ and  $x_{2}=0$, so the eigenvectors are all scalar
 multiples of
 $$
-{\bf x}_1=\threecol101.
+{\bf x}_{1}=\threecol101.
 $$
 Therefore
 $$
-{\bf y}_1=\threecol101e^{2t}
+{\bf y}_{1}=\threecol101e^{2t}
 $$
 is a solution of  \eqref{eq:10.5.11}.
 
 We  now find a second solution of  \eqref{eq:10.5.11}  in the form
 $$
-{\bf y}_2={\bf u}e^{2t}+\threecol101te^{2t},
+{\bf y}_{2}={\bf u}e^{2t}+\threecol101te^{2t},
 $$
-where ${\bf u}$ satisfies $(A-2I){\bf u=x}_1$.
+where ${\bf u}$ satisfies $(A-2I){\bf u=x}_{1}$.
 The  augmented matrix  of this system is
 $$
-\left[\begin{array}{rrrcr} -1 & 1 & 1 &\vdots & 1\\
-1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &
-\vdots & 1\end{array}\right], $$
+\left[\begin{array}{rrrcr}-1&1&1&\vdots&1\\
+1&1&-1&\vdots&0\\0&2&0&
+\vdots&1\end{array}\right], $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& -{1\over2}\\ 0 & 1 & 0
-&\vdots& {1\over2}\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&-1&\vdots&-\frac{1}{2}\\0&1&0
+&\vdots&\frac{1}{2}\\0&0&0&\vdots&0\end{array}\right].
 $$
-Letting $u_3=0$ yields $u_1=-1/2$ and $u_2=1/2$; hence,
+Letting $u_{3}=0$ yields $u_{1}=-1/2$ and $u_{2}=1/2$; hence,
 $$
-{\bf u}={1\over2}\threecol{-1}10
+{\bf u}=\frac{1}{2}\threecol{-1}10
 $$
 and
 $$
-{\bf y}_2=\threecol{-1}10{e^{2t}\over2}+\threecol101te^{2t}
+{\bf y}_{2}=\threecol{-1}10{\frac{e^{2t}}{2}}+\threecol101te^{2t}
 $$
 is a solution of  \eqref{eq:10.5.11}.
 
 We  now find a third solution of  \eqref{eq:10.5.11}  in the form
 $$
-{\bf y}_3={\bf
-v}e^{2t}+\threecol{-1}10{te^{2t}\over2}+\threecol101{t^2e^{2t}\over2}
+{\bf y}_{3}={\bf
+v}e^{2t}+\threecol{-1}10{\frac{te^{2t}}{2}}+\threecol101{\frac{t^{2}e^{2t}}{2}}
 $$
 where ${\bf v}$ satisfies $(A-2I){\bf v}={\bf u}$.
 The  augmented matrix  of this system is
 $$
-\left[\begin{array}{rrrcr} -1 & 1 & 1 &\vdots &-{1\over2}\\
-1& 1 & -1 &\vdots & {1\over2}\\ 0 & 2 & 0 &
-\vdots & 0\end{array}\right], $$
+\left[\begin{array}{rrrcr}-1&1&1&\vdots&-\frac{1}{2}\\
+1&1&-1&\vdots&\frac{1}{2}\\0&2&0&
+\vdots&0\end{array}\right], $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& {1\over2}\\ 0 & 1 & 0
-&\vdots& 0\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&-1&\vdots&\frac{1}{2}\\0&1&0
+&\vdots&0\\0&0&0&\vdots&0\end{array}\right].
 $$
-Letting $v_3=0$ yields $v_1=1/2$ and $v_2=0$; hence,
+Letting $v_{3}=0$ yields $v_{1}=1/2$ and $v_{2}=0$; hence,
 $$
-{\bf v}={1\over2}\threecol100.
+{\bf v}=\frac{1}{2}\threecol100.
 $$
 Therefore
 $$
-{\bf y}_3=\threecol100{e^{2t}\over2}+
-\threecol{-1}10{te^{2t}\over2}+\threecol101{t^2e^{2t}\over2}
+{\bf y}_{3}=\threecol100{\frac{e^{2t}}{2}}+
+\threecol{-1}10{\frac{te^{2t}}{2}}+\threecol101{\frac{t^{2}e^{2t}}{2}}
 $$
-is a solution of  \eqref{eq:10.5.11}. Since ${\bf y}_1$, ${\bf y}_2$, and
-${\bf y}_3$ are linearly independent by Theorem~\ref{thmtype:10.5.2}, they
+is a solution of  \eqref{eq:10.5.11}. Since ${\bf y}_{1}$, ${\bf y}_{2}$, and
+${\bf y}_{3}$ are linearly independent by Theorem~\ref{thmtype:10.5.2}, they
 form a fundamental set of solutions of \eqref{eq:10.5.11}. Therefore the
 general solution of \eqref{eq:10.5.11} is
 \begin{eqnarray*}
-{\bf y} &=&\dst{c_1\threecol101e^{2t}+
-c_2\left(\threecol{-1}10{e^{2t}\over2}+\threecol101te^{2t}\right)}\\[2\jot]
-&&+c_3\dst{\left(\threecol100{e^{2t}\over2}+
-\threecol{-1}10{te^{2t}\over2}+\threecol101{t^2e^{2t}\over2}\right)}.
+{\bf y}&=&\dst{c_{1}\threecol101e^{2t}+
+c_{2}\left(\threecol{-1}10{\frac{e^{2t}}{2}}+\threecol101te^{2t}\right)}\\[2\jot]
+&&+c_{3}\dst{\left(\threecol100{\frac{e^{2t}}{2}}+
+\threecol{-1}10{\frac{te^{2t}}{2}}+\threecol101{\frac{t^{2}e^{2t}}{2}}\right)}.
 \end{eqnarray*}
 
 \enlargethispage{1in}
 
 \begin{theorem}\color{blue}\label{thmtype:10.5.3}
-Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$ of
-multiplicity $\ge 3$ and the associated eigenspace is
+Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_{1}$ of
+multiplicity $\ge3$ and the associated eigenspace is
 two--dimensional; that is, all eigenvectors of $A$ associated with
-$\lambda_1$ are linear combinations of two linearly independent
-eigenvectors ${\bf x}_1$ and ${\bf x}_2$. Then there are constants
+$\lambda_{1}$ are linear combinations of two linearly independent
+eigenvectors ${\bf x}_{1}$ and ${\bf x}_{2}$. Then there are constants
 $\alpha$ and $\beta$ (not both zero) such that if
 \begin{equation}\label{eq:10.5.12}
-{\bf x}_3=\alpha{\bf x}_1+\beta{\bf x}_2,
+{\bf x}_{3}=\alpha{\bf x}_{1}+\beta{\bf x}_{2},
 \end{equation}
 then there are infinitely many vectors ${\bf u}$ such that
 \begin{equation}\label{eq:10.5.13}
-(A-\lambda_1I){\bf u}={\bf x}_3.
+(A-\lambda_{1}I){\bf u}={\bf x}_{3}.
 \end{equation}
 If ${\bf u}$ satisfies  {\rm\eqref{eq:10.5.13}}, then
 \begin{eqnarray}
-{\bf y}_1&=&{\bf x}_1 e^{\lambda_1t},\nonumber\\
-{\bf y}_2&=&{\bf x}_2e^{\lambda_1t},\mbox{and }\nonumber\\
-{\bf y}_3&=&{\bf u}e^{\lambda_1t}+{\bf x}_3te^{\lambda_1t}\label{eq:10.5.14},
+{\bf y}_{1}&=&{\bf x}_{1}e^{\lambda_{1}t},\nonumber\\
+{\bf y}_{2}&=&{\bf x}_{2}e^{\lambda_{1}t},\mbox{and }\nonumber\\
+{\bf y}_{3}&=&{\bf u}e^{\lambda_{1}t}+{\bf x}_{3}te^{\lambda_{1}t}\label{eq:10.5.14},
 \end{eqnarray}
 are linearly independent solutions of  ${\bf y}'=A{\bf y}$.
 \end{theorem}
@@ -464,35 +464,35 @@ Use Theorem~\ref{thmtype:10.5.3} to find the general solution of
 \solution  The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.15} is
 $$
-\left|\begin{array}{ccc} -\lambda & 0 & 1\\ -1 & 1-\lambda &
-1\\ -1 & 0 & 2-\lambda\end{array}\right| =-(\lambda-1)^3.
+\left|\begin{array}{ccc}-\lambda&0&1\\-1&1-\lambda&
+1\\-1&0&2-\lambda\end{array}\right|=-(\lambda-1)^{3}.
 $$
-Hence,  $\lambda_1=1$ is
+Hence,  $\lambda_{1}=1$ is
 an eigenvalue of multiplicity $3$.  The associated eigenvectors
 satisfy $(A-I){\bf x=0}$. The  augmented
 matrix of this system is
 $$
-\left[\begin{array}{rrrcr} -1 & 0 & 1 &\vdots & 0\\
--1& 0 & 1 &\vdots & 0\\ -1 & 0 & 1 &
-\vdots & 0\end{array}\right],
+\left[\begin{array}{rrrcr}-1&0&1&\vdots&0\\
+-1&0&1&\vdots&0\\-1&0&1&
+\vdots&0\end{array}\right],
  $$
 which is row equivalent to
 $$
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& 0\\ 0 & 0 & 0  &\vdots& 0
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&0&0&\vdots&0
+\\0&0&0&\vdots&0\end{array}\right].
 $$
-Hence, $x_1 =x_3$ and  $x_2$ is arbitrary, so the eigenvectors are  of
+Hence, $x_{1}=x_{3}$ and  $x_{2}$ is arbitrary, so the eigenvectors are  of
 the form
 $$
-{\bf x}_1=\threecol{x_3}{x_2}{x_3}=x_3\threecol101+x_2\threecol010.
+{\bf x}_{1}=\threecol{x_{3}}{x_{2}}{x_{3}}=x_{3}\threecol101+x_{2}\threecol010.
 $$
 Therefore the vectors
 \begin{equation}\label{eq:10.5.16}
-{\bf x}_1  =\threecol101\quad\mbox{and }\quad {\bf x}_2=\threecol010
+{\bf x}_{1}=\threecol101\quad\mbox{and }\quad{\bf x}_{2}=\threecol010
 \end{equation}
 form a basis for the eigenspace, and
 $$
-{\bf y}_1  =\threecol101e^t\quad\mbox{and }\quad {\bf y}_2=\threecol010e^t
+{\bf y}_{1}=\threecol101e^{t}\quad\mbox{and }\quad{\bf y}_{2}=\threecol010e^{t}
 $$
 are linearly independent solutions of   \eqref{eq:10.5.15}.
 
@@ -500,49 +500,49 @@ To find a third linearly independent solution of  \eqref{eq:10.5.15}, we
 must
 find constants $\alpha$  and $\beta$ (not both zero) such that the system
 \begin{equation}\label{eq:10.5.17}
-(A-I){\bf u}=\alpha{\bf x}_1+\beta{\bf x}_2
+(A-I){\bf u}=\alpha{\bf x}_{1}+\beta{\bf x}_{2}
 \end{equation}
 has a solution ${\bf u}$. The augmented matrix of this system is
 $$
-\left[\begin{array}{rrrcr} -1 & 0 & 1 &\vdots &\alpha\\
--1& 0 & 1 &\vdots &\beta\\ -1 & 0 & 1 &
-\vdots &\alpha\end{array}\right], $$
+\left[\begin{array}{rrrcr}-1&0&1&\vdots&\alpha\\
+-1&0&1&\vdots&\beta\\-1&0&1&
+\vdots&\alpha\end{array}\right], $$
 which is row equivalent to
 \begin{equation}\label{eq:10.5.18}
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& -\alpha\\ 0 & 0 & 0
-&\vdots&\beta-\alpha\\ 0 & 0 & 0 &\vdots&0\end{array}
+\left[\begin{array}{rrrcr}1&0&-1&\vdots&-\alpha\\0&0&0
+&\vdots&\beta-\alpha\\0&0&0&\vdots&0\end{array}
 \right].
 \end{equation}
 Therefore  \eqref{eq:10.5.17} has a solution if and only if
 $\beta=\alpha$, where $\alpha$ is arbitrary. If
 $\alpha=\beta=1$ then \eqref{eq:10.5.12} and \eqref{eq:10.5.16} yield
 $$
-{\bf x}_3={\bf x}_1+{\bf x}_2=
+{\bf x}_{3}={\bf x}_{1}+{\bf x}_{2}=
 \threecol101+\threecol010=\threecol111,
 $$
 and the augmented matrix \eqref{eq:10.5.18}  becomes
 $$
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& -1\\ 0 & 0 & 0
-&\vdots& 0\\ 0 & 0 & 0 &\vdots&0\end{array}
+\left[\begin{array}{rrrcr}1&0&-1&\vdots&-1\\0&0&0
+&\vdots&0\\0&0&0&\vdots&0\end{array}
 \right].
 $$
-This implies that $u_1=-1+u_3$, while  $u_2$  and $u_3$ are arbitrary.
-Choosing $u_2=u_3=0$  yields
+This implies that $u_{1}=-1+u_{3}$, while  $u_{2}$  and $u_{3}$ are arbitrary.
+Choosing $u_{2}=u_{3}=0$  yields
 $$
 {\bf u}=\threecol{-1}00.
 $$
  Therefore \eqref{eq:10.5.14} implies that
 $$
-{\bf y}_3={\bf u}e^t+{\bf
-x}_3te^t=\threecol{-1}00e^t+\threecol111te^t
+{\bf y}_{3}={\bf u}e^{t}+{\bf
+x}_{3}te^{t}=\threecol{-1}00e^{t}+\threecol111te^{t}
 $$
-is a solution of  \eqref{eq:10.5.15}. Since ${\bf y}_1$, ${\bf y}_2$, and
-${\bf y}_3$ are linearly independent by Theorem~\ref{thmtype:10.5.3},
+is a solution of  \eqref{eq:10.5.15}. Since ${\bf y}_{1}$, ${\bf y}_{2}$, and
+${\bf y}_{3}$ are linearly independent by Theorem~\ref{thmtype:10.5.3},
 they form a fundamental set of solutions for \eqref{eq:10.5.15}.
 Therefore the general solution of \eqref{eq:10.5.15} is
 $$
-{\bf y}=c_1\threecol101e^t+c_2\threecol010e^t
-+c_3\left(\threecol{-1}00e^t+\threecol111te^t\right).\bbox
+{\bf y}=c_{1}\threecol101e^{t}+c_{2}\threecol010e^{t}
++c_{3}\left(\threecol{-1}00e^{t}+\threecol111te^{t}\right).\bbox
 $$
 
 \boxit{Geometric Properties of Solutions when  $n=2$}
@@ -551,27 +551,27 @@ $$
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
 \begin{equation} \label{eq:10.5.19}
-\twocol{y_1'}{y_2'}=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]\twocol{y_1}{y_2}
+\twocol{y_{1}'}{y_{2}'}=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
+\end{array}\right]\twocol{y_{1}}{y_{2}}
 \end{equation}
 under the assumptions of this section; that is, when the matrix
 $$
 A=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
 \end{array}\right]
 $$
-has a repeated eigenvalue $\lambda_1$ and the associated eigenspace is
+has a repeated eigenvalue $\lambda_{1}$ and the associated eigenspace is
 one-dimensional. In this case we know from Theorem~\ref{thmtype:10.5.1}
 that the general solution of \eqref{eq:10.5.19} is
 \begin{equation} \label{eq:10.5.20}
-{\bf y}=c_1{\bf x}e^{\lambda_1t}+c_2({\bf u}e^{\lambda_1t}+{\bf
-x}te^{\lambda_1t}),
+{\bf y}=c_{1}{\bf x}e^{\lambda_{1}t}+c_{2}({\bf u}e^{\lambda_{1}t}+{\bf
+x}te^{\lambda_{1}t}),
 \end{equation}
 where ${\bf x}$ is an eigenvector of $A$ and ${\bf u}$ is any one of
 the infinitely many solutions of
 \begin{equation} \label{eq:10.5.21}
-(A-\lambda_1I){\bf u}={\bf x}.
+(A-\lambda_{1}I){\bf u}={\bf x}.
 \end{equation}
-We assume that $\lambda_1\ne0$.
+We assume that $\lambda_{1}\ne0$.
 
 \begin{figure}[H]
   \centering
@@ -585,23 +585,23 @@ Let $L$ denote the line through the origin parallel to ${\bf x}$. By a
 {\color{blue}\it half-line\/} of $L$ we mean either of the rays obtained by
 removing the origin from $L$. Eqn.~\eqref{eq:10.5.20} is a parametric
 equation of the half-line of $L$ in the direction of ${\bf x}$ if
-$c_1>0$, or of the half-line of $L$ in the direction of $-{\bf x}$ if
-$c_1<0$. The origin is the trajectory of the trivial solution ${\bf
-y}\equiv{\bf 0}$.
+$c_{1}>0$, or of the half-line of $L$ in the direction of $-{\bf x}$ if
+$c_{1}<0$. The origin is the trajectory of the trivial solution ${\bf
+y}\equiv{\bf0}$.
 
-Henceforth, we assume that $c_2\ne0$. In this case, the trajectory of
+Henceforth, we assume that $c_{2}\ne0$. In this case, the trajectory of
 \eqref{eq:10.5.20} can't intersect $L$, since every point of $L$ is on a
-trajectory obtained by setting $c_2=0$. Therefore the trajectory of
+trajectory obtained by setting $c_{2}=0$. Therefore the trajectory of
 \eqref{eq:10.5.20} must lie entirely in one of the open half-planes
 bounded
 by $L$, but does not contain any point on $L$. Since the initial point
-$(y_1(0),y_2(0))$ defined by ${\bf y}(0)=c_1{\bf x}_1+c_2{\bf u}$ is
+$(y_{1}(0),y_{2}(0))$ defined by ${\bf y}(0)=c_{1}{\bf x}_{1}+c_{2}{\bf u}$ is
 on the trajectory, we can determine which half-plane contains the
-trajectory from the sign of $c_2$, as shown in
+trajectory from the sign of $c_{2}$, as shown in
 Figure~\pageref{figure:10.5.1}.
-For convenience we'll call the half-plane where $c_2>0$ the
+For convenience we'll call the half-plane where $c_{2}>0$ the
 {\color{blue}\it
-positive half-plane\/}. Similarly, the-half plane where $c_2<0$ is
+positive half-plane\/}. Similarly, the-half plane where $c_{2}<0$ is
 the {\color{blue}\it negative half-plane\/}. You should convince yourself
 (Exercise~\ref{exer:10.5.35}) that even though there are infinitely
 many vectors ${\bf u}$ that satisfy \eqref{eq:10.5.21}, they all define
@@ -615,9 +615,9 @@ the direction of ${\bf x}$ (as in Figures~\ref{figure:10.5.2} and
 \ref{figure:10.5.5}), or to the left of the observer (as in
 Figures~\ref{figure:10.5.3} and \ref{figure:10.5.4}).
 
-Multiplying \eqref{eq:10.5.20} by $e^{-\lambda_1t}$ yields
+Multiplying \eqref{eq:10.5.20} by $e^{-\lambda_{1}t}$ yields
 $$
-e^{-\lambda_1t}{\bf y}(t)=c_1{\bf x}+c_2{\bf u}+c_2t
+e^{-\lambda_{1}t}{\bf y}(t)=c_{1}{\bf x}+c_{2}{\bf u}+c_{2}t
 {\bf x}.
 $$
 Since the last term on the right is dominant when $|t|$ is large,
@@ -625,11 +625,11 @@ this provides the following information on the direction of ${\bf
 y}(t)$:
 \begin{alist}
 \item % (a)
-Along trajectories in the positive half-plane ($c_2>0$), the direction
+Along trajectories in the positive half-plane ($c_{2}>0$), the direction
 of ${\bf y}(t)$ approaches the direction of ${\bf x}$ as $t\to\infty$
 and the direction of $-{\bf x}$ as $t\to-\infty$.
 \item % (b)
-Along trajectories in the negative half-plane ($c_2<0$), the direction
+Along trajectories in the negative half-plane ($c_{2}<0$), the direction
 of ${\bf y}(t)$ approaches the direction of $-{\bf x}$ as $t\to\infty$
 and the direction of ${\bf x}$ as $t\to-\infty$.
 \end{alist}
@@ -637,24 +637,24 @@ and the direction of ${\bf x}$ as $t\to-\infty$.
 Since
 $$
 \lim_{t\to\infty}\|{\bf y}(t)\|=\infty\mbox{\quad and \quad}
-\lim_{t\to-\infty}{\bf y}(t)={\bf 0}\mbox{\quad if \quad}\lambda_1>0,
+\lim_{t\to-\infty}{\bf y}(t)={\bf0}\mbox{\quad if \quad}\lambda_{1}>0,
 $$
 or
 $$
 \lim_{t-\to\infty}\|{\bf y}(t)\|=\infty\mbox{\quad and \quad}
-\lim_{t\to\infty}{\bf y}(t)={\bf 0}\mbox{\quad if \quad}\lambda_1<0,
+\lim_{t\to\infty}{\bf y}(t)={\bf0}\mbox{\quad if \quad}\lambda_{1}<0,
 $$
  there are four possible patterns for the trajectories
-of \eqref{eq:10.5.19}, depending upon the signs of $c_2$ and $\lambda_1$.
+of \eqref{eq:10.5.19}, depending upon the signs of $c_{2}$ and $\lambda_{1}$.
 Figures~\ref{figure:10.5.2}-\ref{figure:10.5.5} illustrate these patterns, and
 reveal the following principle:
 
-{\color{blue}\it If $\lambda_1$ and $c_2$ have the same sign then the
+{\color{blue}\it If $\lambda_{1}$ and $c_{2}$ have the same sign then the
 direction of
 the trajectory approaches the direction of $-{\bf x}$ as $\|{\bf y}
 \|\to0$ and the direction of ${\bf x}$ as $\|{\bf y}\|\to\infty$. If
-$\lambda_1$ and $c_2$ have opposite signs then the direction of the
-trajectory approaches the direction of ${\bf x}$ as $\|{\bf y} \|\to0$
+$\lambda_{1}$ and $c_{2}$ have opposite signs then the direction of the
+trajectory approaches the direction of ${\bf x}$ as $\|{\bf y}\|\to0$
 and the direction of $-{\bf x}$ as $\|{\bf y}\|\to\infty$.}
 
 \begin{figure}[H]
@@ -726,7 +726,7 @@ y'}=\threebythree021{-4}61042{\bf y}}$
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:10.5.9}
-$\dst{{\bf y}' ={1\over3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf y}}$&
+$\dst{{\bf y}'=\frac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf y}}$&
 \item\label{exer:10.5.10}  $\dst{{\bf y}'
 =\threebythree{-1}1{-1}{-2}02{-1}3{-1}{\bf y}}$
 \end{tabular}
@@ -742,19 +742,19 @@ $\dst{{\bf y}' ={1\over3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf y}}$&
 solve the initial value problem.}
 
 \item\label{exer:10.5.13} $\dst{{\bf
-y}'=\twobytwo{-11}8{-2}{-3}{\bf y} ,\quad{\bf y}(0)=\twocol62}$
+y}'=\twobytwo{-11}8{-2}{-3}{\bf y},\quad{\bf y}(0)=\twocol62}$
 
 \item\label{exer:10.5.14}  $\dst{{\bf
-y}'=\twobytwo{15}{-9}{16}{-9}{\bf y} ,\quad{\bf y}(0)=\twocol58}$
+y}'=\twobytwo{15}{-9}{16}{-9}{\bf y},\quad{\bf y}(0)=\twocol58}$
 
 \item\label{exer:10.5.15}  $\dst{{\bf y}'=\twobytwo{-3}{-4}1{-7}{\bf
 y},\quad{\bf y}(0)=\twocol23}$
 
 \item\label{exer:10.5.16}  $\dst{{\bf
-y}'=\twobytwo{-7}{24}{-6}{17}{\bf y} ,\quad{\bf y}(0)=\twocol31}$
+y}'=\twobytwo{-7}{24}{-6}{17}{\bf y},\quad{\bf y}(0)=\twocol31}$
 
 \item\label{exer:10.5.17}  $\dst{{\bf y}'=\twobytwo{-7}3{-3}{-1}{\bf
-y} ,\quad{\bf y}(0)=\twocol02}$
+y},\quad{\bf y}(0)=\twocol02}$
 
 \item\label{exer:10.5.18}  $\dst{{\bf y}'
 =\threebythree{-1}101{-1}{-2}{-1}{-1}{-1}{\bf y},\quad
@@ -820,30 +820,30 @@ ${\bf y}'={\threebythree{-3}{-1}01{-1}0{-1}{-1}{-2}}{\bf y}$
 Under the assumptions of Theorem~\ref{thmtype:10.5.1}, suppose
 ${\bf u}$ and $\hat{\bf u}$ are vectors such that
 $$
-(A-\lambda_1I){\bf u}={\bf x}\quad\mbox{and }\quad
-(A-\lambda_1I)\hat{\bf u}={\bf x},
+(A-\lambda_{1}I){\bf u}={\bf x}\quad\mbox{and }\quad
+(A-\lambda_{1}I)\hat{\bf u}={\bf x},
 $$
 and let
 $$
-{\bf y}_2={\bf u}e^{\lambda_1t}+{\bf x}te^{\lambda_1t}
+{\bf y}_{2}={\bf u}e^{\lambda_{1}t}+{\bf x}te^{\lambda_{1}t}
 \quad\mbox{and }\quad
-\hat{\bf y}_2=\hat{\bf u}e^{\lambda_1t}+{\bf x}te^{\lambda_1t}.
+\hat{\bf y}_{2}=\hat{\bf u}e^{\lambda_{1}t}+{\bf x}te^{\lambda_{1}t}.
 $$
-Show that ${\bf y}_2-\hat{\bf y}_2$ is a scalar multiple of
-${\bf y}_1={\bf x}e^{\lambda_1t}$.
+Show that ${\bf y}_{2}-\hat{\bf y}_{2}$ is a scalar multiple of
+${\bf y}_{1}={\bf x}e^{\lambda_{1}t}$.
 
 \item\label{exer:10.5.34}
 Under the assumptions of Theorem~\ref{thmtype:10.5.2}, let
 \begin{eqnarray*}
-{\bf y}_1 &=&{\bf x} e^{\lambda_1t},\\
-{\bf y}_2&=&{\bf u}e^{\lambda_1t}+{\bf x} te^{\lambda_1t},\mbox{
+{\bf y}_{1}&=&{\bf x}e^{\lambda_{1}t},\\
+{\bf y}_{2}&=&{\bf u}e^{\lambda_{1}t}+{\bf x}te^{\lambda_{1}t},\mbox{
 and }\\
-{\bf y}_3&=&{\bf v}e^{\lambda_1t}+{\bf u}te^{\lambda_1t}+{\bf
-x} {t^2e^{\lambda_1t}\over2}.
+{\bf y}_{3}&=&{\bf v}e^{\lambda_{1}t}+{\bf u}te^{\lambda_{1}t}+{\bf
+x}{\frac{t^{2}e^{\lambda_{1}t}}{2}}.
 \end{eqnarray*}
 Complete the proof of Theorem~\ref{thmtype:10.5.2} by showing
-that ${\bf y}_3$ is a solution of ${\bf y}'=A{\bf y}$ and
-that $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is linearly independent.
+that ${\bf y}_{3}$ is a solution of ${\bf y}'=A{\bf y}$ and
+that $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is linearly independent.
 
 \item\label{exer:10.5.35}
 Suppose the matrix
@@ -851,15 +851,15 @@ $$
 A=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
 \end{array}\right]
 $$
-has a repeated eigenvalue $\lambda_1$ and the associated eigenspace is
+has a repeated eigenvalue $\lambda_{1}$ and the associated eigenspace is
 one-dimensional. Let
- ${\bf x}$ be a $\lambda_1$-eigenvector of $A$.
+ ${\bf x}$ be a $\lambda_{1}$-eigenvector of $A$.
 Show that if
-$(A-\lambda_1I){\bf u}_1={\bf x}$ and
-$(A-\lambda_1I){\bf u}_2={\bf x}$, then ${\bf u}_2-{\bf u}_1$
+$(A-\lambda_{1}I){\bf u}_{1}={\bf x}$ and
+$(A-\lambda_{1}I){\bf u}_{2}={\bf x}$, then ${\bf u}_{2}-{\bf u}_{1}$
 is parallel to ${\bf x}$. Conclude from this that all vectors ${\bf
 u}$
-such that $(A-\lambda_1I){\bf u}={\bf x}$ define the same positive and
+such that $(A-\lambda_{1}I){\bf u}={\bf x}$ define the same positive and
 negative half-planes with respect to the line $L$
  through the origin parallel to ${\bf x}$.
 

@@ -3,7 +3,7 @@
 \noindent
 If an initial value problem
 \begin{equation} \label{eq:3.1.1}
-y'=f(x,y),\quad y(x_0)=y_0
+y'=f(x,y),\quad y(x_{0})=y_{0}
  \end{equation}
 can't be solved analytically,
  it's necessary to resort to
@@ -12,27 +12,27 @@ numerical methods to obtain useful  approximations to a solution of
 
 We're interested in
 computing approximate values of the solution of \eqref{eq:3.1.1} at
-equally spaced points $x_0$, $x_1$, \dots, $x_n=b$ in an interval
-$[x_0,b]$.
+equally spaced points $x_{0}$, $x_{1}$, \dots, $x_{n}=b$ in an interval
+$[x_{0},b]$.
  Thus,
 $$
-x_i=x_0+ih,\quad i=0,1, \dots,n,
+x_{i}=x_{0}+ih,\quad i=0,1,\dots,n,
 $$
 where
 $$
-h={b-x_0\over n}.
+h=\frac{b-x_{0}}{n}.
 $$
 We'll denote the approximate values of the solution at these points
-by $y_0$, $y_1$, \dots, $y_n$;   thus, $y_i$ is an approximation to
-$y(x_i)$.
+by $y_{0}$, $y_{1}$, \dots, $y_{n}$;   thus, $y_{i}$ is an approximation to
+$y(x_{i})$.
 We'll call
 $$
-e_i=y(x_i)-y_i
+e_{i}=y(x_{i})-y_{i}
 $$
 the {\color{blue}\it  error at the $i$th step.\/} Because of the initial
 condition
-$y(x_0)=y_0$, we'll always have $e_0=0$. However, in general
-$e_i\ne0$ if $i>0$.
+$y(x_{0})=y_{0}$, we'll always have $e_{0}=0$. However, in general
+$e_{i}\ne0$ if $i>0$.
 
 We encounter two sources of error
 in applying a numerical method to solve an initial value problem:
@@ -63,43 +63,43 @@ is seldom used in practice;     however, its simplicity makes it useful
 for illustrative purposes.
 
 Euler's method is based on the assumption that the tangent line to the
-integral curve of \eqref{eq:3.1.1} at $(x_i,y(x_i))$ approximates the
-integral curve over the interval $[x_i,x_{i+1}]$.
+integral curve of \eqref{eq:3.1.1} at $(x_{i},y(x_{i}))$ approximates the
+integral curve over the interval $[x_{i},x_{i+1}]$.
  Since the slope of the integral curve of
-\eqref{eq:3.1.1} at $(x_i,y(x_i))$ is $y'(x_i)=f(x_i,y(x_i))$, the
-equation of the tangent line to the integral curve at $(x_i,y(x_i))$
+\eqref{eq:3.1.1} at $(x_{i},y(x_{i}))$ is $y'(x_{i})=f(x_{i},y(x_{i}))$, the
+equation of the tangent line to the integral curve at $(x_{i},y(x_{i}))$
 is
 \begin{equation} \label{eq:3.1.2}
-y=y(x_i)+f(x_i,y(x_i))(x-x_i).
+y=y(x_{i})+f(x_{i},y(x_{i}))(x-x_{i}).
 \end{equation}
 
-Setting $x=x_{i+1}=x_i+h$ in \eqref{eq:3.1.2} yields
+Setting $x=x_{i+1}=x_{i}+h$ in \eqref{eq:3.1.2} yields
 \begin{equation} \label{eq:3.1.3}
-y_{i+1}=y(x_i)+hf(x_i,y(x_i))
+y_{i+1}=y(x_{i})+hf(x_{i},y(x_{i}))
 \end{equation}
-as an approximation to $y(x_{i+1})$. Since $y(x_0)=y_0$ is known, we
+as an approximation to $y(x_{i+1})$. Since $y(x_{0})=y_{0}$ is known, we
 can use \eqref{eq:3.1.3} with $i=0$ to compute
 $$
-y_1=y_0+hf(x_0,y_0).
+y_{1}=y_{0}+hf(x_{0},y_{0}).
 $$
 However, setting $i=1$ in \eqref{eq:3.1.3} yields
 $$
-y_2=y(x_1)+hf(x_1,y(x_1)),
+y_{2}=y(x_{1})+hf(x_{1},y(x_{1})),
 $$
-which isn't  useful, since we {\color{blue}\it don't know\/} $y(x_1)$. Therefore
-we replace $y(x_1)$ by its approximate value $y_1$ and redefine
+which isn't  useful, since we {\color{blue}\it don't know\/} $y(x_{1})$. Therefore
+we replace $y(x_{1})$ by its approximate value $y_{1}$ and redefine
 $$
-y_2=y_1+hf(x_1,y_1).
+y_{2}=y_{1}+hf(x_{1},y_{1}).
 $$
-Having computed $y_2$, we can  compute
+Having computed $y_{2}$, we can  compute
 $$
-y_3=y_2+hf(x_2,y_2).
+y_{3}=y_{2}+hf(x_{2},y_{2}).
 $$
-In general, Euler's method starts with the known value $y(x_0)=y_0$
-and computes $y_1$, $y_2$, \dots, $y_n$ successively by with the
+In general, Euler's method starts with the known value $y(x_{0})=y_{0}$
+and computes $y_{1}$, $y_{2}$, \dots, $y_{n}$ successively by with the
  formula
 \begin{equation} \label{eq:3.1.4}
-y_{i+1}=y_i+hf(x_i,y_i),\quad 0\le i\le n-1.
+y_{i+1}=y_{i}+hf(x_{i},y_{i}),\quad0\le i\le n-1.
 \end{equation}
 
 The next example illustrates the computational procedure
@@ -109,7 +109,7 @@ indicated in Euler's method.
 Use Euler's method with $h=0.1$ to find approximate values for the
 solution of the initial value problem
 \begin{equation}\label{eq:3.1.5}
-y'+2y=x^3e^{-2x},\quad y(0)=1
+y'+2y=x^{3}e^{-2x},\quad y(0)=1
 \end{equation}
 at $x=0.1,0.2,0.3$.
 \end{example}
@@ -117,21 +117,21 @@ at $x=0.1,0.2,0.3$.
 \solution
 We rewrite \eqref{eq:3.1.5}  as
 $$
-y'=-2y+x^3e^{-2x},\quad y(0)=1,
+y'=-2y+x^{3}e^{-2x},\quad y(0)=1,
 $$
 which is of the form \eqref{eq:3.1.1}, with
 $$
-f(x,y)=-2y+x^3e^{-2x},\ x_0=0,\mbox{\ and}\ y_0=1.
+f(x,y)=-2y+x^{3}e^{-2x},\ x_{0}=0,\mbox{\ and}\ y_{0}=1.
 $$
 Euler's method yields
 \begin{eqnarray*}
-y_1 & = & y_0+hf(x_0,y_0)\\
- & = & 1+(.1)f(0,1)=1+(.1)(-2)=.8,\\[4\jot]
-y_2 & = & y_1+hf(x_1,y_1)\\
- & = & .8+(.1)f(.1,.8)=.8+(.1)\left(-2(.8)+(.1)^3e^{-.2}\right)=
+y_{1}&=&y_{0}+hf(x_{0},y_{0})\\
+ &=&1+(.1)f(0,1)=1+(.1)(-2)=.8,\\[4\jot]
+y_{2}&=&y_{1}+hf(x_{1},y_{1})\\
+ &=&.8+(.1)f(.1,.8)=.8+(.1)\left(-2(.8)+(.1)^{3}e^{-.2}\right)=
 .640081873,\\[4\jot]
-y_3 & = & y_2+hf(x_2,y_2)\\
- & = & .640081873+(.1)\left(-2(.640081873)+(.2)^3e^{-.4}\right)=
+y_{3}&=&y_{2}+hf(x_{2},y_{2})\\
+ &=&.640081873+(.1)\left(-2(.640081873)+(.2)^{3}e^{-.4}\right)=
 .512601754.\bbox
 \end{eqnarray*}
 
@@ -149,13 +149,13 @@ to carry out the necessary computations.
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 $$
-y'+2y=x^3e^{-2x},\quad y(0)=1
+y'+2y=x^{3}e^{-2x},\quad y(0)=1
 $$
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values
 with the values of the exact solution
 \begin{equation} \label{eq:3.1.6}
-y={e^{-2x}\over4}(x^4+4),
+y=\frac{e^{-2x}}{4}(x^{4}+4),
 \end{equation}
 which can be obtained by the method of Section~2.1. (Verify.)
 \end{example}
@@ -174,7 +174,7 @@ in the column corresponding to $h=0.025$ are actually the results of
 
 \begin{newtable} \label{table:3.1.1}
 Numerical solution of
-$y'+2y=x^3e^{-2x}$, $y(0)=1$, by Euler's method.
+$y'+2y=x^{3}e^{-2x}$, $y(0)=1$, by Euler's method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|}
 \hline
@@ -218,7 +218,7 @@ $y_{\mbox{\tiny exact}}-y_{\mbox{\tiny approx}}$ at
 $x=0.1$, $0.2$, \dots, $1.0$.
 
 \begin{newtable} \label{table:3.1.2}
-Errors in approximate solutions of $y'+2y=x^3e^{-2x}$, $y(0)=1$, obtained by Euler's method.
+Errors in approximate solutions of $y'+2y=x^{3}e^{-2x}$, $y(0)=1$, obtained by Euler's method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|}
 \hline
@@ -245,7 +245,7 @@ Errors in approximate solutions of $y'+2y=x^3e^{-2x}$, $y(0)=1$, obtained by Eul
 Tables~\ref{table:3.1.3} and \ref{table:3.1.4} show analogous results
 for the nonlinear initial value problem
 \begin{equation} \label{eq:3.1.7}
-y'=-2y^2+xy+x^2,\ y(0)=1,
+y'=-2y^{2}+xy+x^{2},\ y(0)=1,
 \end{equation}
 except in this case we can't solve \eqref{eq:3.1.7} exactly.
 The results in the ``Exact'' column were obtained by using a
@@ -271,7 +271,7 @@ right of the decimal point.
 
 \begin{newtable} \label{table:3.1.3}
 Numerical solution of
-$y'=-2y^2+xy+x^2$, $y(0)=1$, by Euler's method.
+$y'=-2y^{2}+xy+x^{2}$, $y(0)=1$, by Euler's method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|}
 \hline
@@ -297,7 +297,7 @@ $y'=-2y^2+xy+x^2$, $y(0)=1$, by Euler's method.
 \end{newtable}
 
 \begin{newtable} \label{table:3.1.4}
-Errors in approximate solutions of $y'=-2y^2+xy+x^2$, $y(0)=1$, obtained by Euler's method.
+Errors in approximate solutions of $y'=-2y^{2}+xy+x^{2}$, $y(0)=1$, obtained by Euler's method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|}
 \hline
@@ -328,12 +328,12 @@ Tables~\ref{table:3.1.1}--\ref{table:3.1.4}, we'll now show that under
 reasonable assumptions on $f$ there's a constant $K$ such that
 the error in approximating the solution of the initial value problem
 $$
-y'=f(x,y),\quad y(x_0)=y_0,
+y'=f(x,y),\quad y(x_{0})=y_{0},
 $$
-at a given point $b>x_0$ by Euler's method with step size
-$h=(b-x_0)/n$ satisfies the inequality
+at a given point $b>x_{0}$ by Euler's method with step size
+$h=(b-x_{0})/n$ satisfies the inequality
 $$
-|y(b)-y_n|\le Kh,
+|y(b)-y_{n}|\le Kh,
 $$
 where $K$ is a constant independent of $n$.
 
@@ -342,9 +342,9 @@ method:
 \begin{numberlist}
 \item % (1)
 The error committed in approximating the integral curve by the tangent
-line \eqref{eq:3.1.2} over the interval $[x_i,x_{i+1}]$.
+line \eqref{eq:3.1.2} over the interval $[x_{i},x_{i+1}]$.
 \item % (2)
-The error committed in replacing $y(x_i)$ by $y_i$ in
+The error committed in replacing $y(x_{i})$ by $y_{i}$ in
 \eqref{eq:3.1.2} and using \eqref{eq:3.1.4} rather than \eqref{eq:3.1.2} to
 compute $y_{i+1}$.
  \end{numberlist}
@@ -352,60 +352,60 @@ compute $y_{i+1}$.
 Euler's method assumes that $y_{i+1}$ defined in \eqref{eq:3.1.2}  is
 an approximation to $y(x_{i+1})$. We call the error in this
 approximation the {\color{blue}\it local truncation error at the $i$th step\/},
-and denote it by $T_i$;   thus,
+and denote it by $T_{i}$;   thus,
 \begin{equation} \label{eq:3.1.8}
-T_i=y(x_{i+1})-y(x_i)-hf(x_i,y(x_i)).
+T_{i}=y(x_{i+1})-y(x_{i})-hf(x_{i},y(x_{i})).
 \end{equation}
 We'll now use
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/}
 {\color{blue}\it Taylor's theorem\/}
- to estimate $T_i$, assuming for
-simplicity that $f$, $f_x$, and $f_y$ are continuous and bounded for
-all $(x,y)$. Then $y''$ exists and is bounded on $[x_0,b]$. To see
+ to estimate $T_{i}$, assuming for
+simplicity that $f$, $f_{x}$, and $f_{y}$ are continuous and bounded for
+all $(x,y)$. Then $y''$ exists and is bounded on $[x_{0},b]$. To see
 this, we differentiate
 $$
 y'(x)=f(x,y(x))
 $$
 to obtain
 \begin{eqnarray*}
-y''(x) & = & f_x(x,y(x))+f_y(x,y(x))y'(x)\\
- & = & f_x(x,y(x))+f_y(x,y(x))f(x,y(x)).
+y''(x)&=&f_{x}(x,y(x))+f_{y}(x,y(x))y'(x)\\
+ &=&f_{x}(x,y(x))+f_{y}(x,y(x))f(x,y(x)).
 \end{eqnarray*}
-Since we assumed that $f$, $f_x$ and $f_y$ are bounded, there's
+Since we assumed that $f$, $f_{x}$ and $f_{y}$ are bounded, there's
 a constant $M$ such that
 $$
-|f_x(x,y(x))+f_y(x,y(x))f(x,y(x))|\le M,\quad x_0<x<b,
+|f_{x}(x,y(x))+f_{y}(x,y(x))f(x,y(x))|\le M,\quad x_{0}<x<b,
 $$
 which implies that
 \begin{equation} \label{eq:3.1.9}
-|y''(x)|\le M,\quad x_0<x<b.
+|y''(x)|\le M,\quad x_{0}<x<b.
 \end{equation}
-Since $x_{i+1}=x_i+h$, Taylor's theorem implies that
+Since $x_{i+1}=x_{i}+h$, Taylor's theorem implies that
 $$
-y(x_{i+1})=y(x_i)+hy'(x_i)+{h^2\over2}y''(\tilde x_i),
+y(x_{i+1})=y(x_{i})+hy'(x_{i})+\frac{h^{2}}{2}y''(\tilde{x}_{i}),
 $$
-where $\tilde x_i$ is some number between $x_i$ and $x_{i+1}$.
-Since $y'(x_i)=f(x_i,y(x_i))$  this can be written as
+where $\tilde{x}_{i}$ is some number between $x_{i}$ and $x_{i+1}$.
+Since $y'(x_{i})=f(x_{i},y(x_{i}))$  this can be written as
 $$
-y(x_{i+1})=y(x_i)+hf(x_i,y(x_i))+{h^2\over2}y''(\tilde x_i),
+y(x_{i+1})=y(x_{i})+hf(x_{i},y(x_{i}))+\frac{h^{2}}{2}y''(\tilde{x}_{i}),
 $$
 or, equivalently,
 $$
-y(x_{i+1})-y(x_i)-hf(x_i,y(x_i))={h^2\over2}y''(\tilde x_i).
+y(x_{i+1})-y(x_{i})-hf(x_{i},y(x_{i}))=\frac{h^{2}}{2}y''(\tilde{x}_{i}).
 $$
 Comparing this with \eqref{eq:3.1.8} shows that
 $$
-T_i={h^2\over2}y''(\tilde x_i).
+T_{i}=\frac{h^{2}}{2}y''(\tilde{x}_{i}).
 $$
 Recalling \eqref{eq:3.1.9}, we can establish the bound
 \begin{equation} \label{eq:3.1.10}
-|T_i|\le{Mh^2\over2},\quad 1\le i\le n.
+|T_{i}|\le\frac{Mh^{2}}{2},\quad1\le i\le n.
 \end{equation}
 Although it may be difficult to determine the constant $M$, what is
 important is that there's an $M$ such that \eqref{eq:3.1.10} holds.
  We say that the
-local truncation error of Euler's method is {\color{blue}\it  of order\/} $h^2$,
-which we write as $O(h^2)$.
+local truncation error of Euler's method is {\color{blue}\it  of order\/} $h^{2}$,
+which we write as $O(h^{2})$.
 
 Note that the magnitude of the local truncation error in
 Euler's method is determined by the second derivative $y''$ of the
@@ -413,7 +413,7 @@ solution of the initial value problem. Therefore
  the local truncation error will be larger where $|y''|$ is large,
 or smaller where $|y''|$ is small.
 
-Since the local truncation error for Euler's method is $O(h^2)$, it's
+Since the local truncation error for Euler's method is $O(h^{2})$, it's
 reasonable to expect that halving $h$ reduces the local truncation
 error by a factor of 4. This is true, but
  halving the step size also requires twice as many steps to
@@ -421,57 +421,57 @@ approximate the solution at a given point. To analyze the overall
 effect of truncation error in Euler's method, it's useful to  derive
 an equation relating the errors
 $$
-e_{i+1}=y(x_{i+1})-y_{i+1}\mbox{\quad and \quad} e_i=y(x_i)-y_i.
+e_{i+1}=y(x_{i+1})-y_{i+1}\mbox{\quad and \quad}e_{i}=y(x_{i})-y_{i}.
 $$
 To this end, recall that
 \begin{equation} \label{eq:3.1.11}
-y(x_{i+1})=y(x_i)+hf(x_i,y(x_i))+T_i
+y(x_{i+1})=y(x_{i})+hf(x_{i},y(x_{i}))+T_{i}
 \end{equation}
 and
 \begin{equation} \label{eq:3.1.12}
-y_{i+1}=y_i+hf(x_i,y_i).
+y_{i+1}=y_{i}+hf(x_{i},y_{i}).
 \end{equation}
 Subtracting \eqref{eq:3.1.12} from \eqref{eq:3.1.11} yields
 \begin{equation} \label{eq:3.1.13}
-e_{i+1}=e_i+h\left[f(x_i,y(x_i))-f(x_i,y_i)\right]+T_i.
+e_{i+1}=e_{i}+h\left[f(x_{i},y(x_{i}))-f(x_{i},y_{i})\right]+T_{i}.
 \end{equation}
 The last term on the right is the local truncation error at the $i$th
 step. The other terms reflect the way errors made at {\color{blue}\it previous
-steps\/} affect $e_{i+1}$. Since $|T_i|\le Mh^2/2$, we see from
+steps\/} affect $e_{i+1}$. Since $|T_{i}|\le Mh^{2}/2$, we see from
 \eqref{eq:3.1.13} that
 \begin{equation} \label{eq:3.1.14}
-|e_{i+1}|\le |e_i|+h|f(x_i,y(x_i))-f(x_i,y_i)|+{Mh^2\over2}.
+|e_{i+1}|\le|e_{i}|+h|f(x_{i},y(x_{i}))-f(x_{i},y_{i})|+\frac{Mh^{2}}{2}.
 \end{equation}
-Since we assumed that $f_y$ is continuous and bounded, the mean
+Since we assumed that $f_{y}$ is continuous and bounded, the mean
 value theorem implies that
 $$
-f(x_i,y(x_i))-f(x_i,y_i)=f_y(x_i,y_i^*)(y(x_i)-y_i)=f_y(x_i,y_i^*)e_i,
+f(x_{i},y(x_{i}))-f(x_{i},y_{i})=f_{y}(x_{i},y_{i}^*)(y(x_{i})-y_{i})=f_{y}(x_{i},y_{i}^*)e_{i},
 $$
-where $y_i^*$ is between $y_i$ and $y(x_i)$. Therefore
+where $y_{i}^*$ is between $y_{i}$ and $y(x_{i})$. Therefore
 $$
-|f(x_i,y(x_i))-f(x_i,y_i)|\le R|e_i|
+|f(x_{i},y(x_{i}))-f(x_{i},y_{i})|\le R|e_{i}|
 $$
 for some constant $R$. From this and \eqref{eq:3.1.14},
 \begin{equation} \label{eq:3.1.15}
-|e_{i+1}|\le (1+Rh)|e_i|+{Mh^2\over2},\quad 0\le i\le n-1.
+|e_{i+1}|\le(1+Rh)|e_{i}|+\frac{Mh^{2}}{2},\quad0\le i\le n-1.
 \end{equation}
-For convenience, let $C=1+Rh$. Since $e_0=y(x_0)-y_0=0$, applying
+For convenience, let $C=1+Rh$. Since $e_{0}=y(x_{0})-y_{0}=0$, applying
 \eqref{eq:3.1.15} repeatedly yields
 \begin{eqnarray}
-|e_1| & \le & {Mh^2\over2}\nonumber\\
-|e_2| & \le & C|e_1|+{Mh^2\over2}\le(1+C){Mh^2\over2}\nonumber\\
-|e_3| & \le & C|e_2|+{Mh^2\over2}\le(1+C+C^2){Mh^2\over2}\nonumber\\
- & \vdots &\nonumber \\|e_n| & \le &
-C|e_{n-1}|+{Mh^2\over2}\le(1+C+\cdots+C^{n-1}){Mh^2\over2}.\label{eq:3.1.16}
+|e_{1}|&\le&\frac{Mh^{2}}{2}\nonumber\\
+|e_{2}|&\le&C|e_{1}|+\frac{Mh^{2}}{2}\le(1+C)\frac{Mh^{2}}{2}\nonumber\\
+|e_{3}|&\le&C|e_{2}|+\frac{Mh^{2}}{2}\le(1+C+C^{2})\frac{Mh^{2}}{2}\nonumber\\
+ &\vdots&\nonumber\\|e_{n}|&\le&
+C|e_{n-1}|+\frac{Mh^{2}}{2}\le(1+C+\cdots+C^{n-1})\frac{Mh^{2}}{2}.\label{eq:3.1.16}
 \end{eqnarray}
 
 Recalling the formula for the sum of a geometric series, we see that
 $$
-1+C+\cdots+C^{n-1}={1-C^n\over 1-C}={(1+Rh)^n-1\over Rh}
+1+C+\cdots+C^{n-1}=\frac{1-C^{n}}{1-C}=\frac{(1+Rh)^{n}-1}{Rh}
 $$
 (since $C=1+Rh$). From this and \eqref{eq:3.1.16},
 \begin{equation} \label{eq:3.1.17}
-|y(b)-y_n|=|e_n|\le{(1+Rh)^n-1\over R}{Mh\over2}.
+|y(b)-y_{n}|=|e_{n}|\le\frac{(1+Rh)^{n}-1}{R}\frac{Mh}{2}.
 \end{equation}
 Since Taylor's theorem implies that
 $$
@@ -479,15 +479,15 @@ $$
 $$
 (verify),
 $$
-(1+Rh)^n<e^{nRh}=e^{R(b-x_0)}\quad (\mbox{since }nh=b-x_0).
+(1+Rh)^{n}<e^{nRh}=e^{R(b-x_{0})}\quad(\mbox{since }nh=b-x_{0}).
 $$
 This and \eqref{eq:3.1.17} imply that
 \begin{equation} \label{eq:3.1.18}
-|y(b)-y_n|\le Kh,
+|y(b)-y_{n}|\le Kh,
 \end{equation}
 with
 $$
-K=M{e^{R(b-x_0)}-1\over2R}.
+K=M\frac{e^{R(b-x_{0})}-1}{2R}.
 $$
 Because of \eqref{eq:3.1.18} we say that the
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Euler/}
@@ -505,11 +505,11 @@ with $p\not\equiv0$ is said to be {\color{blue}\it semilinear\/}. (Of course,
 \eqref{eq:3.1.19} is linear if $h$ is independent of $y$.) One way to
 apply Euler's method to an initial value problem
 \begin{equation} \label{eq:3.1.20}
-y'+p(x)y=h(x,y),\quad y(x_0)=y_0
+y'+p(x)y=h(x,y),\quad y(x_{0})=y_{0}
 \end{equation}
 for \eqref{eq:3.1.19} is to think of it  as
 $$
-y'=f(x,y),\quad y(x_0)=y_0,
+y'=f(x,y),\quad y(x_{0})=y_{0},
 $$
 where
 $$
@@ -517,17 +517,17 @@ f(x,y)=-p(x)y+h(x,y).
 $$
 However, we can also start by applying variation of parameters to
 \eqref{eq:3.1.20}, as in Sections~2.1\ and 2.4;   thus, we
-write the solution of \eqref{eq:3.1.20} as $y=uy_1$, where $y_1$ is a
+write the solution of \eqref{eq:3.1.20} as $y=uy_{1}$, where $y_{1}$ is a
 nontrivial solution of the complementary equation $y'+p(x)y=0$. Then
-$y=uy_1$ is a solution of \eqref{eq:3.1.20} if and only if $u$ is a
+$y=uy_{1}$ is a solution of \eqref{eq:3.1.20} if and only if $u$ is a
 solution of the initial value problem
 \begin{equation} \label{eq:3.1.21}
-u'=h(x,uy_1(x))/y_1(x),\quad u(x_0)=y(x_0)/y_1(x_0).
+u'=h(x,uy_{1}(x))/y_{1}(x),\quad u(x_{0})=y(x_{0})/y_{1}(x_{0}).
 \end{equation}
 We can apply Euler's method to obtain approximate values
-$u_0$, $u_1$, \dots, $u_n$ of this initial value problem, and then take
+$u_{0}$, $u_{1}$, \dots, $u_{n}$ of this initial value problem, and then take
 $$
-y_i=u_iy_1(x_i)
+y_{i}=u_{i}y_{1}(x_{i})
 $$
 as approximate values of the solution of \eqref{eq:3.1.20}.
 We'll call this procedure the
@@ -548,7 +548,7 @@ y'-2xy=1,\quad y(0)=3
 \end{equation}
 in the  form
 \begin{equation} \label{eq:3.1.23}
-y=e^{x^2}\left(3 +\int^x_0 e^{-t^2}dt\right)
+y=e^{x^{2}}\left(3+\int^{x}_{0}e^{-t^{2}}dt\right)
 \end{equation}
 \newpage
 \noindent
@@ -609,22 +609,22 @@ value problem \eqref{eq:3.1.22} on $(0,2)$. The problem is that $y''$
 assumes very large values on this interval. To see this, we
 differentiate \eqref{eq:3.1.24} to obtain
 $$
-y''(x)=2y(x)+2xy'(x)=2y(x)+2x(1+2xy(x))=2(1+2x^2)y(x)+2x,
+y''(x)=2y(x)+2xy'(x)=2y(x)+2x(1+2xy(x))=2(1+2x^{2})y(x)+2x,
 $$
 where the second equality follows again from \eqref{eq:3.1.24}.
-Since \eqref{eq:3.1.23} implies that $y(x)>3e^{x^2}$ if $x>0$,
+Since \eqref{eq:3.1.23} implies that $y(x)>3e^{x^{2}}$ if $x>0$,
 $$
-y''(x)>6(1+2x^2)e^{x^2}+2x,\quad x>0.
+y''(x)>6(1+2x^{2})e^{x^{2}}+2x,\quad x>0.
 $$
 For example, letting $x=2$ shows that $y''(2)>2952$.
 
 \solutionpart{b}
-Since $y_1=e^{x^2}$ is a solution of the complementary equation
+Since $y_{1}=e^{x^{2}}$ is a solution of the complementary equation
 $y'-2xy=0$, we can  apply the Euler semilinear method to
 \eqref{eq:3.1.22}, with
 $$
-y=ue^{x^2}\mbox{\quad and \quad}
-u'=e^{-x^2},\quad u(0)=3.
+y=ue^{x^{2}}\mbox{\quad and \quad}
+u'=e^{-x^{2}},\quad u(0)=3.
 $$
 The results listed in Table~\ref{table:3.1.6} are clearly better than
 those obtained by Euler's method.
@@ -662,8 +662,8 @@ better results for a given semilinear initial value problem
 \eqref{eq:3.1.19}.
  As a rule of thumb, the Euler semilinear method will
 yield better results than Euler's method if $|u''|$ is small on
-$[x_0,b]$, while Euler's method  yields better results if $|u''|$
-is large on $[x_0,b]$.
+$[x_{0},b]$, while Euler's method  yields better results if $|u''|$
+is large on $[x_{0},b]$.
  In many cases the results obtained by the two methods don't
  differ appreciably. However, we propose the an intuitive
 way to decide which is the better method: Try both methods with
@@ -675,13 +675,13 @@ which the approximations change less as the step size decreases.
 Applying Euler's method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to the initial value problem
 \begin{equation}\label{eq:3.1.25}
-y'-2y={x\over1+y^2},\quad y(1)=7
+y'-2y=\frac{x}{1+y^{2}},\quad y(1)=7
 \end{equation}
 on $[1,2]$ yields the results in
 Table~\ref{table:3.1.7}. Applying the Euler semilinear method
 with
 $$
-y=ue^{2x}\mbox{\quad and \quad}u'={xe^{-2x}\over1+u^2e^{4x}},\quad
+y=ue^{2x}\mbox{\quad and \quad}u'=\frac{xe^{-2x}}{1+u^{2}e^{4x}},\quad
 u(1)=7e^{-2}
 $$
  yields the results in Table~\ref{table:3.1.8}.
@@ -694,7 +694,7 @@ two methods with the ``exact'' values of the solution.
 
 \begin{newtable} \label{table:3.1.7}
 Numerical solution of
-$y'-2y=x/(1+y^2)$, $y(1)=7$, by Euler's method.
+$y'-2y=x/(1+y^{2})$, $y(1)=7$, by Euler's method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|}
 \hline
@@ -721,7 +721,7 @@ $y'-2y=x/(1+y^2)$, $y(1)=7$, by Euler's method.
 
 \begin{newtable} \label{table:3.1.8}
 Numerical solution of
-$y'-2y=x/(1+y^2)$, $y(1)=7$, by the Euler semilinear method.
+$y'-2y=x/(1+y^{2})$, $y(1)=7$, by the Euler semilinear method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|r|}
 \hline
@@ -750,13 +750,13 @@ $y'-2y=x/(1+y^2)$, $y(1)=7$, by the Euler semilinear method.
 Applying Euler's method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to  the initial value problem
 \begin{equation}\label{eq:3.1.26}
-y'+3x^2y=1+y^2,\quad y(2)=2
+y'+3x^{2}y=1+y^{2},\quad y(2)=2
 \end{equation}
 on  $[2,3]$ yields the results in
 Table~\ref{table:3.1.9}. Applying the Euler semilinear method with
 $$
-y=ue^{-x^3}\mbox{\quad and \quad}u'=e^{x^3}(1+u^2e^{-2x^3}),\quad
-u(2)=2e^8
+y=ue^{-x^{3}}\mbox{\quad and \quad}u'=e^{x^{3}}(1+u^{2}e^{-2x^{3}}),\quad
+u(2)=2e^{8}
 $$
 yields the results in Table~\ref{table:3.1.10}. Noting the close
 agreement among the  three columns of Table~\ref{table:3.1.9} (at
@@ -769,7 +769,7 @@ supports this conclusion.
 
 \begin{newtable} \label{table:3.1.9}
 Numerical solution of
-$y'+3x^2y=1+y^2,\quad y(2)=2$, by Euler's method.
+$y'+3x^{2}y=1+y^{2},\quad y(2)=2$, by Euler's method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|r|}
 \hline
@@ -796,7 +796,7 @@ $y'+3x^2y=1+y^2,\quad y(2)=2$, by Euler's method.
 
 \begin{newtable} \label{table:3.1.10}
 Numerical solution of
-$y'+3x^2y=1+y^2,\quad y(2)=2$, by the Euler semilinear method.
+$y'+3x^{2}y=1+y^{2},\quad y(2)=2$, by the Euler semilinear method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|r|}
 \hline
@@ -855,22 +855,22 @@ exercises, since we'll revisit in the next two
 sections.
 In Exercises~\ref{exer:3.1.1}--\ref{exer:3.1.5} use Euler's method to find
 approximate values of the solution of the given initial value problem
-at the points $x_i=x_0+ih$, where $x_0$ is the point where the
+at the points $x_{i}=x_{0}+ih$, where $x_{0}$ is the point where the
 initial condition is imposed and $i=1$, $2$, $3$. The purpose of these
 exercises is to familiarize you with the computational procedure of
 Euler's method.
 
 \begin{exerciselist}
 \item\label{exer:3.1.1} \Cex
-$y'=2x^2+3y^2-2,\quad y(2)=1;\quad h=0.05$
+$y'=2x^{2}+3y^{2}-2,\quad y(2)=1;\quad h=0.05$
 \item\label{exer:3.1.2} \Cex
-$y'=y+\sqrt{x^2+y^2},\quad y(0)=1;\quad h=0.1$
+$y'=y+\sqrt{x^{2}+y^{2}},\quad y(0)=1;\quad h=0.1$
 \item\label{exer:3.1.3} \Cex
-$y'+3y=x^2-3xy+y^2,\quad y(0)=2;\quad h=0.05$
+$y'+3y=x^{2}-3xy+y^{2},\quad y(0)=2;\quad h=0.05$
 \item\label{exer:3.1.4} \Cex
-$y'=\dst{1+x\over1-y^2},\quad y(2)=3;\quad h=0.1$
+$y'=\dst\frac{1+x}{1-y^{2}},\quad y(2)=3;\quad h=0.1$
 \item\label{exer:3.1.5} \Cex
-$y'+x^2y=\sin xy,\quad y(1)=\pi;\quad h=0.2$
+$y'+x^{2}y=\sin xy,\quad y(1)=\pi;\quad h=0.2$
 
 \item\label{exer:3.1.6} \Cex
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
@@ -888,13 +888,13 @@ in a table like Table~\ref{table:3.1.1}.
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 $$
-y'+{2\over x}y={3\over x^3}+1,\quad y(1)=1
+y'+\frac{2}{x}y=\frac{3}{x^{3}}+1,\quad y(1)=1
 $$
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Compare these approximate
 values
 with the values of the exact solution
 $$
-y={1\over3x^2}(9\ln x+x^3+2),
+y=\frac{1}{3x^{2}}(9\ln x+x^{3}+2),
 $$
 which can be obtained by the method of Section~2.1. Present
 your results in a table like Table~\ref{table:3.1.1}.
@@ -903,13 +903,13 @@ your results in a table like Table~\ref{table:3.1.1}.
 Use Euler's method with step sizes $h=0.05$, $h=0.025$, and $h=0.0125$ to
 find approximate values of the solution of the initial value problem
 $$
-y'={y^2+xy-x^2\over x^2},\quad y(1)=2
+y'=\frac{y^{2}+xy-x^{2}}{x^{2}},\quad y(1)=2
 $$
 at $x=1.0$, $1.05$, $1.10$, $1.15$, \dots, $1.5$. Compare these approximate
 values
 with the values of the exact solution
 $$
-y={x(1+x^2/3)\over1-x^2/3}
+y=\frac{x(1+x^{2}/3)}{1-x^{2}/3}
 $$
 obtained in Example~\ref{example:2.4.3}. Present your results in a table
 like Table~\ref{table:3.1.1}.
@@ -917,11 +917,11 @@ like Table~\ref{table:3.1.1}.
 \item\label{exer:3.1.9} \Cex
 In Example~\ref{example:2.2.3} it was shown that
 $$
-y^5+y=x^2+x-4
+y^{5}+y=x^{2}+x-4
 $$
 is an implicit solution of  the initial value problem
 $$
-y'={2x+1\over5y^4+1},\quad y(2)=1.
+y'=\frac{2x+1}{5y^{4}+1},\quad y(2)=1.
 \eqno{\rm(A)}
 $$
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
@@ -932,18 +932,18 @@ To
 check the error in these approximate values, construct another table
 of values of the residual
 $$
-  R(x,y)=y^5+y-x^2-x+4
+  R(x,y)=y^{5}+y-x^{2}-x+4
 $$
 for each value of $(x,y)$ appearing in the first table.
 
 \item\label{exer:3.1.10} \Cex
 You can see from Example~\ref{example:2.5.1} that
 $$
-x^4y^3+x^2y^5+2xy=4
+x^{4}y^{3}+x^{2}y^{5}+2xy=4
 $$
 is an implicit solution of  the initial value problem
 $$
-y'=-{4x^3y^3+2xy^5+2y\over3x^4y^2+5x^2y^4+2x},\quad y(1)=1.
+y'=-\frac{4x^{3}y^{3}+2xy^{5}+2y}{3x^{4}y^{2}+5x^{2}y^{4}+2x},\quad y(1)=1.
 \eqno{\rm(A)}
 $$
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
@@ -953,7 +953,7 @@ form.
 To check the error in these approximate values, construct another
 table of values of the residual
 $$
-R(x,y)=x^4y^3+x^2y^5+2xy-4
+R(x,y)=x^{4}y^{3}+x^{2}y^{5}+2xy-4
 $$
 for each value of $(x,y)$ appearing in the first table.
 
@@ -961,7 +961,7 @@ for each value of $(x,y)$ appearing in the first table.
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 $$
-(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1; \mbox{\;
+(3y^{2}+4y)y'+2x+\cos x=0,\quad y(0)=1;\mbox{\;
 (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.13})}
 $$
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
@@ -970,7 +970,7 @@ at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 $$
-y'+{(y+1)(y-1)(y-2)\over x+1}=0, \quad y(1)=0
+y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0,\quad y(1)=0
 \mbox{\; (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.14})}
 $$
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$.
@@ -998,31 +998,31 @@ solution of the given initial value problem at 11 equally spaced
 points (including the endpoints) in the interval.}
 
 \item\label{exer:3.1.14} \Cex
-$y'-2y=\dst{1\over1+x^2},\quad y(2)=2$;  \;
+$y'-2y=\dst\frac{1}{1+x^{2}},\quad y(2)=2$;  \;
 $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.1.15} \Cex
-$y'+2xy=x^2,\quad y(0)=3$\;
+$y'+2xy=x^{2},\quad y(0)=3$\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38});  \;
 $h=0.2,0.1,0.05$ on $[0,2]$
 
 \item\label{exer:3.1.16} \Cex
-$\dst{y'+{1\over x}y={\sin x\over x^2},\quad y(1)=2}$;\;
+$\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^{2}},\quad y(1)=2}$;\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.39});  \;
 $h=0.2,0.1,0.05$ on $[1,3]$
 
 \item\label{exer:3.1.17} \Cex
-$\dst{y'+y={e^{-x}\tan x\over x},\quad y(1)=0}$;\;
+$\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0}$;\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40});  \;
 $h=0.05,0.025,0.0125$ on $[1,1.5]$
 
 \item\label{exer:3.1.18} \Cex
-$\dst{y'+{2x\over 1+x^2}y={e^x\over (1+x^2)^2}, \quad y(0)=1}$;
+$\dst{y'+\frac{2x}{1+x^{2}}y=\frac{e^{x}}{(1+x^{2})^{2}},\quad y(0)=1}$;
 \; (Exercise~2.1.~\hspace*{-3pt}~\hspace*{-3pt}\ref{exer:2.1.41});  \;
 $h=0.2,0.1,0.05$ on $[0,2]$
 
 \item\label{exer:3.1.19} \Cex
-$xy'+(x+1)y=e^{x^2},\quad y(1)=2$;\;
+$xy'+(x+1)y=e^{x^{2}},\quad y(1)=2$;\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.42});  \;
 $h=0.05,0.025,0.0125$ on $[1,1.5]$
 
@@ -1035,15 +1035,15 @@ of the solution of the given initial value problem at 11 equally
 spaced points (including the endpoints) in the interval.}
 
 \item\label{exer:3.1.20} \Cex
-$y'+3y=xy^2(y+1),\quad y(0)=1$;  \;
+$y'+3y=xy^{2}(y+1),\quad y(0)=1$;  \;
 $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.1.21} \Cex
-$\dst{y'-4y={x\over y^2(y+1)},\quad y(0)=1}$;  \;
+$\dst{y'-4y=\frac{x}{y^{2}(y+1)},\quad y(0)=1}$;  \;
  $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.1.22} \Cex
-$\dst{y'+2y={x^2\over1+y^2},\quad y(2)=1}$;  \;
+$\dst{y'+2y=\frac{x^{2}}{1+y^{2}},\quad y(2)=1}$;  \;
  $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.1.23}
@@ -1052,7 +1052,7 @@ The fundamental theorem of  calculus says that if $f$
 is continuous on a closed interval $[a,b]$ then it has an
 antiderivative $F$ such that $F'(x)=f(x)$ on $[a,b]$  and
 $$
-\int_a^bf(x)\,dx=F(b)-F(a).
+\int_{a}^{b}f(x)\,dx=F(b)-F(a).
 \eqno{\rm(A)}
 $$
 This solves the problem of evaluating a definite integral if
@@ -1064,18 +1064,18 @@ approximate methods. There's a class of such methods called
 {\color{blue}\it numerical quadrature\/}, where the approximation takes the
 form
 $$
-\int_a^bf(x)\,dx\approx \sum_{i=0}^n c_if(x_i),
+\int_{a}^{b}f(x)\,dx\approx\sum_{i=0}^{n}c_{i}f(x_{i}),
 \eqno{\rm(B)}
 $$
-where $a=x_0<x_1<\cdots<x_n=b$ are suitably chosen points and
-$c_0$, $c_1$, \dots, $c_n$
+where $a=x_{0}<x_{1}<\cdots<x_{n}=b$ are suitably chosen points and
+$c_{0}$, $c_{1}$, \dots, $c_{n}$
 are suitably chosen constants. We call (B)  a {\color{blue}\it quadrature
 formula\/}.
 \begin{alist}
 \item % (a)
 Derive the quadrature formula
 $$
-\int_a^bf(x)\,dx\approx
+\int_{a}^{b}f(x)\,dx\approx
 h\sum_{i=0}^{n-1}f(a+ih)\mbox{\quad(where $h=(b-a)/n$)}
 \eqno{\rm(C)}
 $$
@@ -1089,7 +1089,7 @@ rectangle rule\/}. Draw a figure that justifies this terminology.
 \item % (c)
 \Lex
 For several choices of $a$, $b$, and $A$,
- apply (C) to $f(x)=A$ with $n = 10,20,40,80,160,320$.
+ apply (C) to $f(x)=A$ with $n=10,20,40,80,160,320$.
 Compare your results with the exact answers
 and explain what you find.
 \item % (d)

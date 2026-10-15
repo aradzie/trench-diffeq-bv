@@ -9,18 +9,18 @@ equations. In these examples and throughout this chapter we'll
 denote the independent variable by $t$.
 
 \begin{example}\label{example:10.1.1}  \rm
-Tanks $T_1$ and $T_2$ contain 100 gallons and 300 gallons of salt
+Tanks $T_{1}$ and $T_{2}$ contain 100 gallons and 300 gallons of salt
 solutions, respectively. Salt solutions are simultaneously added to
 both tanks from external sources, pumped from each tank to the other,
 and drained from both tanks (Figure~\ref{figure:10.1.1}). A solution with
-$1$ pound of salt per gallon is pumped into $T_1$ from an external source
+$1$ pound of salt per gallon is pumped into $T_{1}$ from an external source
 at $5$~gal/min, and a solution with $2$ pounds of salt per gallon is
-pumped into $T_2$ from an external source at $4$~gal/min. The solution
-from $T_1$ is pumped into $T_2$ at 2 gal/min, and the solution from
-$T_2$ is pumped into $T_1$ at $3$ gal/min. $T_1$ is drained at $6$~gal/min
-and $T_2$ is drained at 3~gal/min. Let $Q_1(t)$ and $Q_2(t)$ be the
-number of pounds of salt in $T_1$ and $T_2$, respectively, at time
-$t>0$. Derive a system of differential equations for $Q_1$ and $Q_2$.
+pumped into $T_{2}$ from an external source at $4$~gal/min. The solution
+from $T_{1}$ is pumped into $T_{2}$ at 2 gal/min, and the solution from
+$T_{2}$ is pumped into $T_{1}$ at $3$ gal/min. $T_{1}$ is drained at $6$~gal/min
+and $T_{2}$ is drained at 3~gal/min. Let $Q_{1}(t)$ and $Q_{2}(t)$ be the
+number of pounds of salt in $T_{1}$ and $T_{2}$, respectively, at time
+$t>0$. Derive a system of differential equations for $Q_{1}$ and $Q_{2}$.
 Assume that both mixtures are well stirred.
 \end{example}
 
@@ -37,88 +37,88 @@ rate
 out\/} denote the rates (lb/min) at which salt enters and leaves a tank;
 thus,
 \begin{eqnarray*}
-Q_1'&=&(\mbox{rate in})_1-(\mbox{rate out})_1,\\[2\jot]
-Q_2'&=&(\mbox{rate in})_2-(\mbox{rate out})_2.
+Q_{1}'&=&(\mbox{rate in})_{1}-(\mbox{rate out})_{1},\\[2\jot]
+Q_{2}'&=&(\mbox{rate in})_{2}-(\mbox{rate out})_{2}.
 \end{eqnarray*}
-Note that the volumes of the solutions in $T_1$ and $T_2$
+Note that the volumes of the solutions in $T_{1}$ and $T_{2}$
 remain constant at 100~gallons and 300~gallons, respectively.
 
-$T_1$ receives salt from the external source at the rate of
+$T_{1}$ receives salt from the external source at the rate of
 $$
 \mbox{(1 lb/gal) }\times\mbox{ (5~gal/min)}=\mbox{ 5 lb/min},
 $$
-and from $T_2$ at the rate of
+and from $T_{2}$ at the rate of
 $$
-\mbox{(lb/gal in }T_2)\times\mbox{ (3~gal/min)
-}={1\over300}Q_2\times3\\[2\jot]={1\over100}Q_2 \mbox{ lb/min}.
+\mbox{(lb/gal in }T_{2})\times\mbox{ (3~gal/min)
+}=\frac{1}{300}Q_{2}\times3\\[2\jot]=\frac{1}{100}Q_{2}\mbox{ lb/min}.
 $$
 Therefore
 \begin{equation} \label{eq:10.1.1}
-\mbox{(rate in)}_1= 5+{1\over100}Q_2.
+\mbox{(rate in)}_{1}=5+\frac{1}{100}Q_{2}.
 \end{equation}
-Solution leaves $T_1$  at the rate of 8~gal/min, since 6~gal/min are
-drained and 2~gal/min are pumped to $T_2$; hence,
+Solution leaves $T_{1}$  at the rate of 8~gal/min, since 6~gal/min are
+drained and 2~gal/min are pumped to $T_{2}$; hence,
 \begin{equation} \label{eq:10.1.2}
-(\mbox{rate out})_1=(\mbox{ lb/gal in T}_1)\times \mbox{(8~gal/min) }
-={1\over100}Q_1\times8={2\over25}Q_1.
+(\mbox{rate out})_{1}=(\mbox{ lb/gal in T}_{1})\times\mbox{(8~gal/min) }
+=\frac{1}{100}Q_{1}\times8=\frac{2}{25}Q_{1}.
 \end{equation}
 Eqns.~\eqref{eq:10.1.1} and \eqref{eq:10.1.2}  imply that
 \begin{equation} \label{eq:10.1.3}
-Q_1'=5+{1\over100}Q_2-{2\over25}Q_1.
+Q_{1}'=5+\frac{1}{100}Q_{2}-\frac{2}{25}Q_{1}.
 \end{equation}
 
-$T_2$ receives salt from the external source at the rate of
+$T_{2}$ receives salt from the external source at the rate of
 $$
 \mbox{(2 lb/gal) }\times\mbox{ (4~gal/min)}=\mbox{ 8 lb/min},
 $$
-and from $T_1$ at the rate of
+and from $T_{1}$ at the rate of
 $$
-\mbox{(lb/gal in }T_1)\times\mbox{ (2~gal/min)
-}={1\over100}Q_1\times2\\[2\jot]={1\over50}Q_1 \mbox{ lb/min}.
+\mbox{(lb/gal in }T_{1})\times\mbox{ (2~gal/min)
+}=\frac{1}{100}Q_{1}\times2\\[2\jot]=\frac{1}{50}Q_{1}\mbox{ lb/min}.
 $$
 Therefore
 \begin{equation} \label{eq:10.1.4}
-\mbox{(rate in)}_2= 8+{1\over50}Q_1.
+\mbox{(rate in)}_{2}=8+\frac{1}{50}Q_{1}.
 \end{equation}
-Solution leaves $T_2$  at the rate of $6$~gal/min, since $3$~gal/min are
-drained and $3$~gal/min are pumped to $T_1$; hence,
+Solution leaves $T_{2}$  at the rate of $6$~gal/min, since $3$~gal/min are
+drained and $3$~gal/min are pumped to $T_{1}$; hence,
 \begin{equation} \label{eq:10.1.5}
-(\mbox{rate out})_2=(\mbox{ lb/gal in T}_2)\times \mbox{(6~gal/min) }
-={1\over300}Q_2\times6={1\over50}Q_2.
+(\mbox{rate out})_{2}=(\mbox{ lb/gal in T}_{2})\times\mbox{(6~gal/min) }
+=\frac{1}{300}Q_{2}\times6=\frac{1}{50}Q_{2}.
 \end{equation}
 Eqns.~\eqref{eq:10.1.4} and \eqref{eq:10.1.5} imply that
 \begin{equation} \label{eq:10.1.6}
-Q_2'=8+{1\over50}Q_1-{1\over50}Q_2.
+Q_{2}'=8+\frac{1}{50}Q_{1}-\frac{1}{50}Q_{2}.
 \end{equation}
 
 We say that \eqref{eq:10.1.3} and \eqref{eq:10.1.6}  form a {\color{blue}\it system of two
 first order equations in two unknowns\/}, and write them together as
 \begin{eqnarray*}
-Q_1'&=&\dst{5-{2\over25}Q_1+{1\over100}Q_2}\\
-Q_2'&=&\dst{8+{1\over50}Q_1-{1\over50}Q_2}. \quad\bbox
+Q_{1}'&=&\dst{5-\frac{2}{25}Q_{1}+\frac{1}{100}Q_{2}}\\
+Q_{2}'&=&\dst{8+\frac{1}{50}Q_{1}-\frac{1}{50}Q_{2}}.\quad\bbox
 \end{eqnarray*}
 
 \begin{example}\label{example:10.1.2}  \rm
-A mass $m_1$ is suspended from a rigid support on a spring $S_1$ and a
-second mass $m_2$ is suspended from the first on a spring $S_2$
+A mass $m_{1}$ is suspended from a rigid support on a spring $S_{1}$ and a
+second mass $m_{2}$ is suspended from the first on a spring $S_{2}$
 (Figure~\ref{figure:10.1.2}). The springs obey Hooke's law, with spring
-constants $k_1$ and $k_2$. Internal friction causes the springs to
+constants $k_{1}$ and $k_{2}$. Internal friction causes the springs to
 exert damping forces proportional to the rates of change of their
-lengths, with damping constants $c_1$ and $c_2$. Let $y_1=y_1(t)$ and
-$y_2=y_2(t)$ be the displacements of the two masses from their
+lengths, with damping constants $c_{1}$ and $c_{2}$. Let $y_{1}=y_{1}(t)$ and
+$y_{2}=y_{2}(t)$ be the displacements of the two masses from their
 equilibrium positions at time $t$, measured positive upward.
  Derive a system of differential equations
-for $y_1$ and $y_2$, assuming that the masses of the springs are
-negligible and that vertical external forces $F_1$ and $F_2$ also act
+for $y_{1}$ and $y_{2}$, assuming that the masses of the springs are
+negligible and that vertical external forces $F_{1}$ and $F_{2}$ also act
 on the objects.
 \end{example}
 
 \solution
-In equilibrium, $S_1$ supports both $m_1$ and $m_2$ and $S_2$ supports
-only $m_2$. Therefore, if $\Delta\ell_1$ and $\Delta\ell_2$ are the
+In equilibrium, $S_{1}$ supports both $m_{1}$ and $m_{2}$ and $S_{2}$ supports
+only $m_{2}$. Therefore, if $\Delta\ell_{1}$ and $\Delta\ell_{2}$ are the
 elongations of the springs in equilibrium then
 \begin{equation} \label{eq:10.1.7}
-(m_1+m_2)g=k_1\Delta\ell_1\quad\mbox{ and }\quad m_2g=k_2\Delta\ell_2.
+(m_{1}+m_{2})g=k_{1}\Delta\ell_{1}\quad\mbox{ and }\quad m_{2}g=k_{2}\Delta\ell_{2}.
 \end{equation}
 
    \begin{figure}[tbp]
@@ -128,62 +128,62 @@ elongations of the springs in equilibrium then
   \label{figure:10.1.2}
 \end{figure}
 
-Let $H_1$ be the Hooke's law force acting on $m_1$, and let $D_1$ be
-the damping force on $m_1$. Similarly, let $H_2$ and $D_2$ be the
-Hooke's law and damping forces acting on $m_2$. According to Newton's
+Let $H_{1}$ be the Hooke's law force acting on $m_{1}$, and let $D_{1}$ be
+the damping force on $m_{1}$. Similarly, let $H_{2}$ and $D_{2}$ be the
+Hooke's law and damping forces acting on $m_{2}$. According to Newton's
 second law of motion,
 \begin{equation} \label{eq:10.1.8}
 \begin{array}{ccl}
-m_1y_1''=-m_1g+H_1+D_1+F_1,\\[1\jot]
-m_2y_2''=-m_2g+H_2+D_2+F_2.
+m_{1}y_{1}''=-m_{1}g+H_{1}+D_{1}+F_{1},\\[1\jot]
+m_{2}y_{2}''=-m_{2}g+H_{2}+D_{2}+F_{2}.
 \end{array}
 \end{equation}
-When the displacements are $y_1$ and $y_2$, the change in length of
-$S_1$ is $-y_1+\Delta\ell_1$ and the change in length of $S_2$ is
-$-y_2+y_1+\Delta\ell_2$. Both springs exert Hooke's law forces on $m_1$,
-while only $S_2$ exerts a Hooke's law force on $m_2$. These forces are
+When the displacements are $y_{1}$ and $y_{2}$, the change in length of
+$S_{1}$ is $-y_{1}+\Delta\ell_{1}$ and the change in length of $S_{2}$ is
+$-y_{2}+y_{1}+\Delta\ell_{2}$. Both springs exert Hooke's law forces on $m_{1}$,
+while only $S_{2}$ exerts a Hooke's law force on $m_{2}$. These forces are
 in directions that tend to restore the springs to their natural
 lengths. Therefore
 \begin{equation} \label{eq:10.1.9}
-H_1=k_1(-y_1+\Delta\ell_1)-k_2(-y_2+y_1+\Delta\ell_2)\quad\mbox{ and
-}\quad H_2=k_2(-y_2+y_1+\Delta\ell_2).
+H_{1}=k_{1}(-y_{1}+\Delta\ell_{1})-k_{2}(-y_{2}+y_{1}+\Delta\ell_{2})\quad\mbox{ and
+}\quad H_{2}=k_{2}(-y_{2}+y_{1}+\Delta\ell_{2}).
 \end{equation}
-When the velocities are $y_1'$ and $y_2'$,  $S_1$ and $S_2$ are
-changing length at the rates $-y_1'$ and $-y_2'+y_1'$, respectively.
-Both springs exert damping forces on $m_1$, while only $S_2$ exerts a
-damping force on $m_2$. Since the force due to damping exerted by a
+When the velocities are $y_{1}'$ and $y_{2}'$,  $S_{1}$ and $S_{2}$ are
+changing length at the rates $-y_{1}'$ and $-y_{2}'+y_{1}'$, respectively.
+Both springs exert damping forces on $m_{1}$, while only $S_{2}$ exerts a
+damping force on $m_{2}$. Since the force due to damping exerted by a
 spring is proportional to the rate of change of length of the spring
 and in a direction that opposes the change, it follows that
 \begin{equation} \label{eq:10.1.10}
-D_1=-c_1y_1'+c_2(y_2'-y_1')\quad\mbox{ and }\quad
-D_2=-c_2(y_2'-y_1').
+D_{1}=-c_{1}y_{1}'+c_{2}(y_{2}'-y_{1}')\quad\mbox{ and }\quad
+D_{2}=-c_{2}(y_{2}'-y_{1}').
 \end{equation}
 
 From \eqref{eq:10.1.8}, \eqref{eq:10.1.9}, and \eqref{eq:10.1.10},
 \begin{equation} \label{eq:10.1.11}
 \begin{array}{ccl}
-m_1y_1''&=&-m_1g+k_1(-y_1+\Delta\ell_1)-k_2(-y_2+y_1+\Delta\ell_2)\\[1\jot]
-  &\mbox{}&-c_1y_1'+c_2(y_2'-y_1')+F_1\\[1\jot]
-&=&-(m_1g-k_1\Delta\ell_1+k_2\Delta\ell_2)-k_1y_1+k_2(y_2-y_1)\\[1\jot]
-&\mbox{}&-c_1y_1'+c_2(y_2'-y_1')+F_1
+m_{1}y_{1}''&=&-m_{1}g+k_{1}(-y_{1}+\Delta\ell_{1})-k_{2}(-y_{2}+y_{1}+\Delta\ell_{2})\\[1\jot]
+  &\mbox{}&-c_{1}y_{1}'+c_{2}(y_{2}'-y_{1}')+F_{1}\\[1\jot]
+&=&-(m_{1}g-k_{1}\Delta\ell_{1}+k_{2}\Delta\ell_{2})-k_{1}y_{1}+k_{2}(y_{2}-y_{1})\\[1\jot]
+&\mbox{}&-c_{1}y_{1}'+c_{2}(y_{2}'-y_{1}')+F_{1}
 \end{array}
 \end{equation}
 and
 \begin{equation} \label{eq:10.1.12}
 \begin{array}{ccl}
-m_2y_2''&=&-m_2g+k_2(-y_2+y_1+\Delta\ell_2)-c_2(y_2'-y_1')+F_2\\[1\jot]
-&=&-(m_2g-k_2\Delta\ell_2)-k_2(y_2-y_1)-c_2(y_2'-y_1')+F_2.
+m_{2}y_{2}''&=&-m_{2}g+k_{2}(-y_{2}+y_{1}+\Delta\ell_{2})-c_{2}(y_{2}'-y_{1}')+F_{2}\\[1\jot]
+&=&-(m_{2}g-k_{2}\Delta\ell_{2})-k_{2}(y_{2}-y_{1})-c_{2}(y_{2}'-y_{1}')+F_{2}.
 \end{array}
 \end{equation}
 From \eqref{eq:10.1.7},
 $$
-m_1g-k_1\Delta\ell_1+k_2\Delta\ell_2=-m_2g+k_2\Delta\ell_2=0.
+m_{1}g-k_{1}\Delta\ell_{1}+k_{2}\Delta\ell_{2}=-m_{2}g+k_{2}\Delta\ell_{2}=0.
 $$
 Therefore we can rewrite \eqref{eq:10.1.11} and \eqref{eq:10.1.12}
 as
 \begin{eqnarray*}
-m_1y_1''&=&-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\
-m_2y_2''&=&c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2.  \quad\bbox
+m_{1}y_{1}''&=&-(c_{1}+c_{2})y_{1}'+c_{2}y_{2}'-(k_{1}+k_{2})y_{1}+k_{2}y_{2}+F_{1}\\
+m_{2}y_{2}''&=&c_{2}y_{1}'-c_{2}y_{2}'+k_{2}y_{1}-k_{2}y_{2}+F_{2}.\quad\bbox
 \end{eqnarray*}
 
 \begin{example}\label{example:10.1.3}  \rm
@@ -195,42 +195,41 @@ Earth's gravitational force ${\bf F}={\bf F}(x,y,z)$ on the object is
 inversely proportional to the square of the distance of the object
 from Earth's center, and directed toward the center;   thus,
 \begin{equation} \label{eq:10.1.13}
-{\bf F}={K\over\|{\bf X}\|^2}\left(-{{\bf X}
-\over\|{\bf X}\|}\right)=-K{x\,{\bf
-i}+y\,{\bf j}+z\,{\bf k}\over\mbox{}\left(x^2+y^2+z^2\right)^{3/2}},
+{\bf F}=\frac{K}{\|{\bf X}\|^{2}}\left(-\frac{{\bf X}}{\|{\bf X}\|}\right)=-K\frac{x\,{\bf
+i}+y\,{\bf j}+z\,{\bf k}}{\mbox{}\left(x^{2}+y^{2}+z^{2}\right)^{3/2}},
 \end{equation}
 where $K$ is a constant.  To determine $K$,  we observe that the magnitude
 of ${\bf F}$  is
 $$
-\|{\bf F}\|=K{\|{\bf X}\|\over\|{\bf X}\|^3}={K\over\|{\bf X}\|^2}
-={K\over(x^2+y^2+z^2)}.
+\|{\bf F}\|=K\frac{\|{\bf X}\|}{\|{\bf X}\|^{3}}=\frac{K}{\|{\bf X}\|^{2}}
+=\frac{K}{(x^{2}+y^{2}+z^{2})}.
 $$
 Let $R$  be Earth's radius.
 Since $\|{\bf F}\|=mg$ when the object is at Earth's
 surface,
 $$
-mg = {K\over R^2},\quad\mbox{ so }\quad K=mgR^2.
+mg=\frac{K}{R^{2}},\quad\mbox{ so }\quad K=mgR^{2}.
 $$
 Therefore we can rewrite \eqref{eq:10.1.13} as
 $$
-{\bf F}=-mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf
-k}\over\mbox{}\left(x^2+y^2+z^2\right)^{3/2}}.
+{\bf F}=-mgR^{2}\frac{x\,{\bf i}+y\,{\bf j}+z\,{\bf
+k}}{\mbox{}\left(x^{2}+y^{2}+z^{2}\right)^{3/2}}.
 $$
 Now suppose ${\bf F}$ is the only force acting on the object.
 According to Newton's second law of motion, ${\bf F}=m{\bf X}''$;   that
 is,
 $$
  m(x''\,{\bf i}+y''\,{\bf j}+z''\,{\bf k})=
--mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf
-k}\over\left(x^2+y^2+z^2\right)^{3/2}}.
+-mgR^{2}\frac{x\,{\bf i}+y\,{\bf j}+z\,{\bf
+k}}{\left(x^{2}+y^{2}+z^{2}\right)^{3/2}}.
 $$
 Cancelling the common factor $m$ and equating components on the two sides
 of this equation yields the  system
 \begin{equation} \label{eq:10.1.14}
 \begin{array}{rcl}
- x''&=&-\dst{gR^2x\over(x^2+y^2+z^2)^{3/2}}\\[2\jot]
- y''&=&-\dst{gR^2y\over(x^2+y^2+z^2)^{3/2}}\\[2\jot]
- z''&=&-\dst{gR^2z\over(x^2+y^2+z^2)^{3/2}}.
+ x''&=&-\dst\frac{gR^{2}x}{(x^{2}+y^{2}+z^{2})^{3/2}}\\[2\jot]
+ y''&=&-\dst\frac{gR^{2}y}{(x^{2}+y^{2}+z^{2})^{3/2}}\\[2\jot]
+ z''&=&-\dst\frac{gR^{2}z}{(x^{2}+y^{2}+z^{2})^{3/2}}.
 \end{array}
 \end{equation}
 \end{example}
@@ -248,10 +247,10 @@ of this equation yields the  system
 A system of the form
 \begin{equation} \label{eq:10.1.15}
 \begin{array}{ccl}
-y_1'&=&g_1(t,y_1,y_2,\dots,y_n)\\
-y_2'&=&g_2(t,y_1,y_2,\dots,y_n)\\
+y_{1}'&=&g_{1}(t,y_{1},y_{2},\dots,y_{n})\\
+y_{2}'&=&g_{2}(t,y_{1},y_{2},\dots,y_{n})\\
 &\vdots&\\
-y_n'&=&g_n(t,y_1,y_2,\dots,y_n)
+y_{n}'&=&g_{n}(t,y_{1},y_{2},\dots,y_{n})
 \end{array}
 \end{equation}
 is called a {\color{blue}\it first order system\/}, since the only derivatives
@@ -269,8 +268,8 @@ two examples illustrate this.
 Rewrite the system
 \begin{equation} \label{eq:10.1.16}
 \begin{array}{rcl}
-m_1y_1''&=&-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\[1\jot]
-m_2y_2''&=&c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2.
+m_{1}y_{1}''&=&-(c_{1}+c_{2})y_{1}'+c_{2}y_{2}'-(k_{1}+k_{2})y_{1}+k_{2}y_{2}+F_{1}\\[1\jot]
+m_{2}y_{2}''&=&c_{2}y_{1}'-c_{2}y_{2}'+k_{2}y_{1}-k_{2}y_{2}+F_{2}.
 \end{array}
 \end{equation}
 derived in Example~\ref{example:10.1.2}  as a system of first order
@@ -278,23 +277,22 @@ equations.
 \end{example}
 
 \solution{}
-If we define $v_1=y_1'$ and $v_2=y_2'$,  then $v_1'=y_1''$ and
-$v_2'=y_2''$,  so \eqref{eq:10.1.16} becomes
+If we define $v_{1}=y_{1}'$ and $v_{2}=y_{2}'$,  then $v_{1}'=y_{1}''$ and
+$v_{2}'=y_{2}''$,  so \eqref{eq:10.1.16} becomes
 $$
 \begin{array}{rcl}
-m_1v_1'&=&-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\\[1\jot]
-m_2v_2'&=&c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2.
+m_{1}v_{1}'&=&-(c_{1}+c_{2})v_{1}+c_{2}v_{2}-(k_{1}+k_{2})y_{1}+k_{2}y_{2}+F_{1}\\[1\jot]
+m_{2}v_{2}'&=&c_{2}v_{1}-c_{2}v_{2}+k_{2}y_{1}-k_{2}y_{2}+F_{2}.
 \end{array}
 $$
-Therefore $\{y_1,y_2,v_1,v_2\}$  satisfies the $4\times4$ first order
+Therefore $\{y_{1},y_{2},v_{1},v_{2}\}$  satisfies the $4\times4$ first order
 system
 \begin{equation} \label{eq:10.1.17}
 \begin{array}{rcl}
-y_1'&=&v_1\\[1\jot]
-y_2'&=&v_2\\[1\jot]
-v_1'&=&\dst{1\over
-m_1}\left[-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right]\\[1\jot]
-v_2'&=&\dst{1\over m_2}\left[c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right].
+y_{1}'&=&v_{1}\\[1\jot]
+y_{2}'&=&v_{2}\\[1\jot]
+v_{1}'&=&\dst\frac{1}{m_{1}}\left[-(c_{1}+c_{2})v_{1}+c_{2}v_{2}-(k_{1}+k_{2})y_{1}+k_{2}y_{2}+F_{1}\right]\\[1\jot]
+v_{2}'&=&\dst\frac{1}{m_{2}}\left[c_{2}v_{1}-c_{2}v_{2}+k_{2}y_{1}-k_{2}y_{2}+F_{2}\right].
  \end{array}
 \end{equation}
 
@@ -310,7 +308,7 @@ not involve derivatives of any of the other unknowns.}
 \begin{example}\label{example:10.1.5}  \rm
  Rewrite the system
 $$
-\begin{array}{ccc} x''&=&f(t,x,x',y,y',y'')\\[1\jot]y'''&=&g(t,x,x',y,y'y'')
+\begin{array}{ccc}x''&=&f(t,x,x',y,y',y'')\\[1\jot]y'''&=&g(t,x,x',y,y'y'')
 \end{array}
 $$
  as a first order system.
@@ -320,13 +318,13 @@ $$
 We regard $x$, $x'$, $y$, $y'$, and $y''$ as unknown functions, and
 rename them
 $$
-x=x_1,\; x'=x_2,\quad y=y_1,\quad y'=y_2,\quad y''=y_3.
+x=x_{1},\;x'=x_{2},\quad y=y_{1},\quad y'=y_{2},\quad y''=y_{3}.
 $$
 These unknowns satisfy the system
 $$
-\begin{array}{ccl} x_1'&=&x_2\\[1\jot]x_2'&=&f(t,x_1,x_2,y_1,y_2,y_3)
-\\[1\jot]y_1'&=&y_2\\[1\jot]y_2'&=&y_3\\[1\jot]
-y_3'&=&g(t,x_1,x_2,y_1,y_2,y_3).\end{array}
+\begin{array}{ccl}x_{1}'&=&x_{2}\\[1\jot]x_{2}'&=&f(t,x_{1},x_{2},y_{1},y_{2},y_{3})
+\\[1\jot]y_{1}'&=&y_{2}\\[1\jot]y_{2}'&=&y_{3}\\[1\jot]
+y_{3}'&=&g(t,x_{1},x_{2},y_{1},y_{2},y_{3}).\end{array}
 $$
 
 \boxit{Rewriting Scalar Differential Equations as Systems}
@@ -348,18 +346,18 @@ as a $4\times4$ first order system.
 \solution
 We regard $y$, $y'$, $y''$, and $y'''$  as unknowns and rename them
 $$
-y=y_1,\quad y'=y_2,\quad y''=y_3,\mbox{\quad and \quad} y'''=y_4.
+y=y_{1},\quad y'=y_{2},\quad y''=y_{3},\mbox{\quad and \quad}y'''=y_{4}.
 $$
-Then $y^{(4)}=y_4'$, so \eqref{eq:10.1.18} can be written as
+Then $y^{(4)}=y_{4}'$, so \eqref{eq:10.1.18} can be written as
 $$
-y_4'+4y_4+6y_3+4y_2+y_1=0.
+y_{4}'+4y_{4}+6y_{3}+4y_{2}+y_{1}=0.
 $$
-Therefore $\{y_1,y_2,y_3,y_4\}$ satisfies the system
+Therefore $\{y_{1},y_{2},y_{3},y_{4}\}$ satisfies the system
  \begin{eqnarray*}
-y_1'&=&y_2\\
-y_2'&=&y_3 \\
-y_3'&=&y_4\\
-y_4'&=&-4y_4-6y_3-4y_2-y_1.\bbox
+y_{1}'&=&y_{2}\\
+y_{2}'&=&y_{3}\\
+y_{3}'&=&y_{4}\\
+y_{4}'&=&-4y_{4}-6y_{3}-4y_{2}-y_{1}.\bbox
 \end{eqnarray*}
 
 \begin{example}\label{example:10.1.7}  \rm
@@ -373,16 +371,16 @@ as a system of first order equations.
 \solution
 We regard $x$, $x'$, and $x''$ as unknowns and rename them
 $$
-x=y_1, \quad x'=y_2,\mbox{\quad and \quad} x''=y_3.
+x=y_{1},\quad x'=y_{2},\mbox{\quad and \quad}x''=y_{3}.
 $$
 Then
 $$
-y_1'=x'=y_2,\quad y_2'=x''=y_3,\mbox{\quad and \quad} y_3'=x'''.
+y_{1}'=x'=y_{2},\quad y_{2}'=x''=y_{3},\mbox{\quad and \quad}y_{3}'=x'''.
 $$
-Therefore $\{y_1,y_2,y_3\}$ satisfies the first order system
+Therefore $\{y_{1},y_{2},y_{3}\}$ satisfies the first order system
 $$
 \begin{array}{ccl}
-y_1'&=&y_2\\[2\jot]y_2'&=&y_3\\[1\jot]y_3'&=&f(t,y_1,y_2,y_3).
+y_{1}'&=&y_{2}\\[2\jot]y_{2}'&=&y_{3}\\[1\jot]y_{3}'&=&f(t,y_{1},y_{2},y_{3}).
 \end{array}
 $$
 
@@ -402,42 +400,42 @@ into detail on numerical methods for systems;     however, for
 illustrative purposes we'll describe  the Runge-Kutta method for
 the numerical solution of  the initial value problem
 \begin{eqnarray*}
-y_1'&=&g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\
-y_2'&=&g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20}
+y_{1}'&=&g_{1}(t,y_{1},y_{2}),\quad y_{1}(t_{0})=y_{10},\\
+y_{2}'&=&g_{2}(t,y_{1},y_{2}),\quad y_{2}(t_{0})=y_{20}
 \end{eqnarray*}
-at equally spaced points $t_0$, $t_1$, \dots, $t_n=b$ in an interval
-$[t_0,b]$. Thus,
+at equally spaced points $t_{0}$, $t_{1}$, \dots, $t_{n}=b$ in an interval
+$[t_{0},b]$. Thus,
 $$
-t_i=t_0+ih,\quad i=0,1,\dots,n,
+t_{i}=t_{0}+ih,\quad i=0,1,\dots,n,
 $$
 where
 $$
-h={b-t_0\over n}.
+h=\frac{b-t_{0}}{n}.
 $$
-We'll denote the approximate values of $y_1$ and $y_2$ at these
+We'll denote the approximate values of $y_{1}$ and $y_{2}$ at these
 points
 by $y_{10},y_{11},\dots,y_{1n}$ and
  $y_{20},y_{21},\dots,y_{2n}$.
 The Runge-Kutta method computes these approximate values as follows:
 given $y_{1i}$ and $y_{2i}$, compute
 \begin{eqnarray*}
-I_{1i}&=&g_1(t_i,y_{1i},y_{2i}),\\
-J_{1i}&=&g_2(t_i,y_{1i},y_{2i}),\\
-I_{2i}&=&g_1\left(t_i+{h\over2},y_{1i}+{h\over2}I_{1i},y_{2i}+{h\over2}J_{1i}\right),\\
-J_{2i}&=&g_2\left(t_i+{h\over2},y_{1i}+{h\over2}I_{1i},y_{2i}+{h\over2}J_{1i}\right),\\
-I_{3i}&=&g_1\left(t_i+{h\over2},y_{1i}+{h\over2}I_{2i},y_{2i}+{h\over2}J_{2i}\right),\\
-J_{3i}&=&g_2\left(t_i+{h\over2},y_{1i}+{h\over2}I_{2i},y_{2i}+{h\over2}J_{2i}\right),\\
-I_{4i}&=&g_1(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),\\
-J_{4i}&=&g_2(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),
+I_{1i}&=&g_{1}(t_{i},y_{1i},y_{2i}),\\
+J_{1i}&=&g_{2}(t_{i},y_{1i},y_{2i}),\\
+I_{2i}&=&g_{1}\left(t_{i}+\frac{h}{2},y_{1i}+\frac{h}{2}I_{1i},y_{2i}+\frac{h}{2}J_{1i}\right),\\
+J_{2i}&=&g_{2}\left(t_{i}+\frac{h}{2},y_{1i}+\frac{h}{2}I_{1i},y_{2i}+\frac{h}{2}J_{1i}\right),\\
+I_{3i}&=&g_{1}\left(t_{i}+\frac{h}{2},y_{1i}+\frac{h}{2}I_{2i},y_{2i}+\frac{h}{2}J_{2i}\right),\\
+J_{3i}&=&g_{2}\left(t_{i}+\frac{h}{2},y_{1i}+\frac{h}{2}I_{2i},y_{2i}+\frac{h}{2}J_{2i}\right),\\
+I_{4i}&=&g_{1}(t_{i}+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),\\
+J_{4i}&=&g_{2}(t_{i}+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-y_{1,i+1}&=&y_{1i}+{h\over6}(I_{1i}+2I_{2i}+2I_{3i}+I_{4i}),\\
-y_{2,i+1}&=&y_{2i}+{h\over6}(J_{1i}+2J_{2i}+2J_{3i}+J_{4i})
+y_{1,i+1}&=&y_{1i}+\frac{h}{6}(I_{1i}+2I_{2i}+2I_{3i}+I_{4i}),\\
+y_{2,i+1}&=&y_{2i}+\frac{h}{6}(J_{1i}+2J_{2i}+2J_{3i}+J_{4i})
 \end{eqnarray*}
-for $i=0$, \dots, $n-1$. Under appropriate conditions on $g_1$ and $g_2$,
+for $i=0$, \dots, $n-1$. Under appropriate conditions on $g_{1}$ and $g_{2}$,
 it can be shown that the global truncation error for the Runge-Kutta
-method is $O(h^4)$, as in the scalar case considered in
+method is $O(h^{4})$, as in the scalar case considered in
 Section~3.3.
 
 \exercises
@@ -445,45 +443,45 @@ Section~3.3.
 \begin{exerciselist}
 
 \item\label{exer:10.1.1}
-Tanks $T_1$ and $T_2$ contain 50 gallons and 100 gallons of salt
+Tanks $T_{1}$ and $T_{2}$ contain 50 gallons and 100 gallons of salt
 solutions, respectively. A solution with 2 pounds of salt per gallon
-is pumped into $T_1$ from an external source at $1$~gal/min, and a
-solution with $3$ pounds of salt per gallon is pumped into $T_2$ from an
-external source at $2$~gal/min. The solution from $T_1$ is pumped into
-$T_2$ at $3$ gal/min, and the solution from $T_2$ is pumped into $T_1$
-at $4$ gal/min. $T_1$ is drained at $2$~gal/min and $T_2$ is drained at
-$1$~gal/min. Let $Q_1(t)$ and $Q_2(t)$ be the number of pounds of salt
-in $T_1$ and $T_2$, respectively, at time $t>0$. Derive a system of
-differential equations for $Q_1$ and $Q_2$. Assume that both mixtures
+is pumped into $T_{1}$ from an external source at $1$~gal/min, and a
+solution with $3$ pounds of salt per gallon is pumped into $T_{2}$ from an
+external source at $2$~gal/min. The solution from $T_{1}$ is pumped into
+$T_{2}$ at $3$ gal/min, and the solution from $T_{2}$ is pumped into $T_{1}$
+at $4$ gal/min. $T_{1}$ is drained at $2$~gal/min and $T_{2}$ is drained at
+$1$~gal/min. Let $Q_{1}(t)$ and $Q_{2}(t)$ be the number of pounds of salt
+in $T_{1}$ and $T_{2}$, respectively, at time $t>0$. Derive a system of
+differential equations for $Q_{1}$ and $Q_{2}$. Assume that both mixtures
 are well stirred.
 
 \item\label{exer:10.1.2}
-Two 500 gallon tanks $T_1$ and $T_2$ initially contain 100
+Two 500 gallon tanks $T_{1}$ and $T_{2}$ initially contain 100
 gallons each of salt solution. A solution with $2$ pounds of salt per
-gallon is pumped into $T_1$ from an external source at $6$~gal/min, and
-a solution with $1$ pound of salt per gallon is pumped into $T_2$ from
-an external source at $5$~gal/min. The solution from $T_1$ is pumped
-into $T_2$ at $2$ gal/min, and the solution from $T_2$ is pumped into
-$T_1$ at $1$ gal/min. Both tanks are drained at $3$~gal/min. Let $Q_1(t)$
-and $Q_2(t)$ be the number of pounds of salt in $T_1$ and $T_2$,
+gallon is pumped into $T_{1}$ from an external source at $6$~gal/min, and
+a solution with $1$ pound of salt per gallon is pumped into $T_{2}$ from
+an external source at $5$~gal/min. The solution from $T_{1}$ is pumped
+into $T_{2}$ at $2$ gal/min, and the solution from $T_{2}$ is pumped into
+$T_{1}$ at $1$ gal/min. Both tanks are drained at $3$~gal/min. Let $Q_{1}(t)$
+and $Q_{2}(t)$ be the number of pounds of salt in $T_{1}$ and $T_{2}$,
 respectively, at time $t>0$. Derive a system of differential equations
-for $Q_1$ and $Q_2$ that's valid until a tank is about to overflow.
+for $Q_{1}$ and $Q_{2}$ that's valid until a tank is about to overflow.
 Assume that both mixtures are well stirred.
 
 \item\label{exer:10.1.3}
-A mass $m_1$ is suspended from a rigid support on a spring $S_1$ with
-spring constant $k_1$ and damping constant $c_1$. A second mass $m_2$
-is suspended from the first on a spring $S_2$ with spring constant
-$k_2$ and damping constant $c_2$, and a third mass $m_3$ is suspended
-from the second on a spring $S_3$ with spring constant $k_3$ and
+A mass $m_{1}$ is suspended from a rigid support on a spring $S_{1}$ with
+spring constant $k_{1}$ and damping constant $c_{1}$. A second mass $m_{2}$
+is suspended from the first on a spring $S_{2}$ with spring constant
+$k_{2}$ and damping constant $c_{2}$, and a third mass $m_{3}$ is suspended
+from the second on a spring $S_{3}$ with spring constant $k_{3}$ and
 damping
-constant $c_3$. Let $y_1=y_1(t)$, $y_2=y_2(t)$, and $y_3=y_3(t)$ be the
+constant $c_{3}$. Let $y_{1}=y_{1}(t)$, $y_{2}=y_{2}(t)$, and $y_{3}=y_{3}(t)$ be the
 displacements of the three masses from their equilibrium positions at
 time $t$, measured positive upward. Derive a system of differential
-equations for $y_1$, $y_2$ and $y_3$, assuming that the masses of the
-springs are negligible and that vertical external forces $F_1$, $F_2$,
+equations for $y_{1}$, $y_{2}$ and $y_{3}$, assuming that the masses of the
+springs are negligible and that vertical external forces $F_{1}$, $F_{2}$,
 and
-$F_3$ also act on the masses.
+$F_{3}$ also act on the masses.
 
 \item\label{exer:10.1.4}
 Let ${\bf X}=x\,{\bf i}+y\,{\bf j}+z\,{\bf k}$ be the position vector
@@ -499,14 +497,14 @@ speed of the object. Let $\alpha$ be the constant of proportionality.
  Rewrite the given system as a first order system.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-${\bf (a)}\begin{array}{lcc} x''' = f(t,x,y,y')\\[1\jot] y'' =
-g(t,y,y') \end{array}$&
-{\bf (b)}$\begin{array}{lcl} u' =
-f(t,u,v,v',w')\\[1\jot] v''=g(t,u,v,v',w)
-\\[1\jot] w''=h(t,u,v,v',w,w')\end{array}$\\[30pt]{\bf (c)} $y''' =
-f(t,y,y',y'')$&{\bf (d)} $y^{(4)} = f(t,y)$\\[20pt]
-{\bf (e)}$\begin{array}{lcc} x'' = f(t,x,y)\\[1\jot] y'' =
-g(t,x,y) \end{array}$
+${\bf(a)}\begin{array}{lcc}x'''=f(t,x,y,y')\\[1\jot]y''=
+g(t,y,y')\end{array}$&
+{\bf (b)}$\begin{array}{lcl}u'=
+f(t,u,v,v',w')\\[1\jot]v''=g(t,u,v,v',w)
+\\[1\jot]w''=h(t,u,v,v',w,w')\end{array}$\\[30pt]{\bf (c)} $y'''=
+f(t,y,y',y'')$&{\bf (d)} $y^{(4)}=f(t,y)$\\[20pt]
+{\bf (e)}$\begin{array}{lcc}x''=f(t,x,y)\\[1\jot]y''=
+g(t,x,y)\end{array}$
 \end{tabular}
 
 \item\label{exer:10.1.6}
@@ -518,11 +516,11 @@ Formulate a version of Euler's method (Section~3.1)
 for the numerical solution of the initial value problem
 $$
 \begin{array}{rcl}
-y_1'&=&g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\
-y_2'&=&g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20},
+y_{1}'&=&g_{1}(t,y_{1},y_{2}),\quad y_{1}(t_{0})=y_{10},\\
+y_{2}'&=&g_{2}(t,y_{1},y_{2}),\quad y_{2}(t_{0})=y_{20},
 \end{array}
 $$
-on an interval $[t_0,b]$.
+on an interval $[t_{0},b]$.
 
 \item\label{exer:10.1.8}
 Formulate a version of the improved Euler method
@@ -530,10 +528,10 @@ Formulate a version of the improved Euler method
 for the numerical solution of the initial value problem
 $$
 \begin{array}{rcl}
-y_1'&=&g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\
-y_2'&=&g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20},
+y_{1}'&=&g_{1}(t,y_{1},y_{2}),\quad y_{1}(t_{0})=y_{10},\\
+y_{2}'&=&g_{2}(t,y_{1},y_{2}),\quad y_{2}(t_{0})=y_{20},
 \end{array}
 $$
-on an interval $[t_0,b]$.
+on an interval $[t_{0},b]$.
 
 \end{exerciselist}

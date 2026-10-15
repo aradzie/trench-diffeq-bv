@@ -33,19 +33,19 @@ object:
 \begin{itemize}
 \item The force $-mg$, due to gravity.
 
-\item A force $F_s$ exerted by the spring resisting change in its
+\item A force $F_{s}$ exerted by the spring resisting change in its
 length. The {\color{blue}\it natural length} of the spring is its length with
 no mass attached. We assume that the spring obeys
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Hooke/}
 {\color{blue}\it Hooke's law}:
 If the length of the spring is changed by an amount $\Delta L$
-from its natural length,  then the spring exerts a force $F_s=k\Delta
+from its natural length,  then the spring exerts a force $F_{s}=k\Delta
 L$, where $k$ is a positive number called the {\color{blue}\it spring constant\/}.
-If the spring is stretched then  $\Delta L>0$ and $F_s>0$, so the
+If the spring is stretched then  $\Delta L>0$ and $F_{s}>0$, so the
 spring force is upward, while if the spring is compressed then $\Delta
-L<0$ and $F_s<0$, so the spring force is downward.
+L<0$ and $F_{s}<0$, so the spring force is downward.
 
-\item A {\color{blue}\it damping force\/} $F_d=-cy'$ that resists the motion with
+\item A {\color{blue}\it damping force\/} $F_{d}=-cy'$ that resists the motion with
 a force proportional to the velocity of the object. It may be due to
 air resistance or friction in the spring. However, a convenient way to
 visualize a damping force is to assume that the object is rigidly
@@ -64,9 +64,9 @@ if $F\not\equiv0$.
 
 From Newton's second law of motion,
 \begin{equation}\label{eq:6.1.1}
-my''=-mg+F_d+F_s+F=-mg-cy'+F_s+F.
+my''=-mg+F_{d}+F_{s}+F=-mg-cy'+F_{s}+F.
 \end{equation}
-We must now relate $F_s$ to $y$. In the absence of external forces the
+We must now relate $F_{s}$ to $y$. In the absence of external forces the
 object stretches the spring by an amount $\Delta l$ to assume its
 equilibrium position (Figure~\ref{figure:6.1.3}). Since the sum of the forces acting on the object
 is then zero, Hooke's Law implies that $mg=k\Delta l$. If the object
@@ -74,7 +74,7 @@ is displaced $y$ units from its equilibrium position, the total
 change in the length of the spring is $\Delta L=\Delta l-y$,
  so Hooke's law implies that
  $$
-F_s=k\Delta L=k\Delta l-ky.
+F_{s}=k\Delta L=k\Delta l-ky.
 $$
 Substituting this into \eqref{eq:6.1.1} yields
 $$
@@ -125,16 +125,16 @@ my''+ky=0,
 $$
 which we rewrite as
 \begin{equation}\label{eq:6.1.3}
-y''+{k\over m}y=0.
+y''+\frac{k}{m}y=0.
 \end{equation}
 Although we would need the weight of the object to obtain $k$ from the
 equation $mg=k\Delta l$ we can obtain $k/m$ from $\Delta l$ alone;
 thus, $k/m=g/\Delta l$. Consistent with the units used in the problem
-statement, we take $g=32$ ft/s$^2$. Although $\Delta l$ is stated in
+statement, we take $g=32$ ft/s$^{2}$. Although $\Delta l$ is stated in
 inches, we must convert it to feet to be consistent with this choice
-of $g$; that is, $\Delta l =1/2$ ft. Therefore
+of $g$; that is, $\Delta l=1/2$ ft. Therefore
 $$
-{k\over m}={32\over1/2}=64
+\frac{k}{m}=\frac{32}{1/2}=64
 $$
 and \eqref{eq:6.1.3} becomes
 \begin{equation}\label{eq:6.1.4}
@@ -142,28 +142,28 @@ y''+64y=0.
 \end{equation}
  The characteristic equation of \eqref{eq:6.1.4} is
 $$
-r^2+64=0,
+r^{2}+64=0,
 $$
-which has the zeros $r=\pm 8i$. Therefore the general solution of
+which has the zeros $r=\pm8i$. Therefore the general solution of
 \eqref{eq:6.1.4} is
 \begin{equation}\label{eq:6.1.5}
-y=c_1\cos8t+c_2\sin8t.
+y=c_{1}\cos8t+c_{2}\sin8t.
 \end{equation}
 
 \solutionpart{b}
 The initial upward displacement of 18 inches is positive and must be
 expressed in feet. The initial downward velocity is negative;   thus,
 $$
-y(0)={3\over2}\mbox{\quad and \quad} y'(0)=-3.
+y(0)=\frac{3}{2}\mbox{\quad and \quad}y'(0)=-3.
 $$
  Differentiating \eqref{eq:6.1.5} yields
 \begin{equation}\label{eq:6.1.6}
-y'=-8c_1\sin8t+8c_2\cos8t.
+y'=-8c_{1}\sin8t+8c_{2}\cos8t.
 \end{equation}
 Setting $t=0$ in \eqref{eq:6.1.5} and \eqref{eq:6.1.6} and imposing the
-initial conditions shows that $c_1=3/2$ and $c_2=-3/8$. Therefore
+initial conditions shows that $c_{1}=3/2$ and $c_{2}=-3/8$. Therefore
 $$
-y={3\over2}\cos8t-{3\over8}\sin8t,
+y=\frac{3}{2}\cos8t-\frac{3}{8}\sin8t,
 $$
 where $y$ is in feet (Figure~\ref{figure:6.1.4}).
 
@@ -171,7 +171,7 @@ where $y$ is in feet (Figure~\ref{figure:6.1.4}).
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060104}
 \color{blue}
-\caption{$y=\dst{}{3\over2}\cos8t-{3\over8}\sin 8t$}
+\caption{$y=\dst{}{\frac{3}{2}}\cos8t-\frac{3}{8}\sin8t$}
   \label{figure:6.1.4}
 \end{figure}
 
@@ -180,40 +180,40 @@ $$
 my''+ky=0
 $$
 where $m$ and $k$ are arbitrary positive numbers. Dividing through by
-$m$ and defining $\omega_0=\sqrt{k/m}$ yields
+$m$ and defining $\omega_{0}=\sqrt{k/m}$ yields
 $$
-y''+\omega_0^2y=0.
+y''+\omega_{0}^{2}y=0.
 $$
 The general solution of this equation is
 \begin{equation}\label{eq:6.1.7}
-y=c_1\cos\omega_0t+c_2\sin\omega_0t.
+y=c_{1}\cos\omega_{0}t+c_{2}\sin\omega_{0}t.
 \end{equation}
 We can rewrite this in a more useful form by defining
 \begin{equation}\label{eq:6.1.8}
-R=\sqrt{c_1^2+c_2^2},
+R=\sqrt{c_{1}^{2}+c_{2}^{2}},
 \end{equation}
 and
 \begin{equation}\label{eq:6.1.9}
-c_1=R\cos\phi\mbox{\quad and \quad}c_2=R\sin\phi.
+c_{1}=R\cos\phi\mbox{\quad and \quad}c_{2}=R\sin\phi.
 \end{equation}
 Substituting from \eqref{eq:6.1.9} into \eqref{eq:6.1.7} and applying the
 identity
 $$
-\cos\omega_0t\cos\phi+\sin\omega_0t\sin\phi=\cos(\omega_0t-\phi)
+\cos\omega_{0}t\cos\phi+\sin\omega_{0}t\sin\phi=\cos(\omega_{0}t-\phi)
 $$
 yields
 \begin{equation}\label{eq:6.1.10}
-y=R\cos(\omega_0t-\phi).
+y=R\cos(\omega_{0}t-\phi).
 \end{equation}
 
 From \eqref{eq:6.1.8} and \eqref{eq:6.1.9} we see that the $R$ and $\phi$
 can be interpreted as polar coordinates of the point with rectangular
-coordinates $(c_1,c_2)$ (Figure~\ref{figure:6.1.5}). Given $c_1$ and
-$c_2$, we can compute $R$ from \eqref{eq:6.1.8}. From \eqref{eq:6.1.8} and
-\eqref{eq:6.1.9}, we see that $\phi$ is related to $c_1$ and $c_2$ by
+coordinates $(c_{1},c_{2})$ (Figure~\ref{figure:6.1.5}). Given $c_{1}$ and
+$c_{2}$, we can compute $R$ from \eqref{eq:6.1.8}. From \eqref{eq:6.1.8} and
+\eqref{eq:6.1.9}, we see that $\phi$ is related to $c_{1}$ and $c_{2}$ by
 $$
-\cos\phi={c_1\over\sqrt{c_1^2+c_2^2}}\mbox{\quad and \quad}\sin\phi=
-{c_2\over\sqrt{c_1^2+c_2^2}}.
+\cos\phi=\frac{c_{1}}{\sqrt{c_{1}^{2}+c_{2}^{2}}}\mbox{\quad and \quad}\sin\phi=
+\frac{c_{2}}{\sqrt{c_{1}^{2}+c_{2}^{2}}}.
 $$
 There are infinitely many angles $\phi$, differing
  by integer multiples of $2\pi$, that satisfy these equations. We
@@ -223,8 +223,8 @@ will always choose $\phi$ so that $-\pi\le\phi<\pi$.
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060105}
 \color{blue}
-\caption{$R=\protect\sqrt{c_1^2+c_2^2}$;  \quad
-$c_1=R\cos\phi$;  \quad $c_2=R\sin\phi$}
+\caption{$R=\protect\sqrt{c_{1}^{2}+c_{2}^{2}}$;  \quad
+$c_{1}=R\cos\phi$;  \quad $c_{2}=R\sin\phi$}
   \label{figure:6.1.5}
 \end{figure}
 
@@ -232,7 +232,7 @@ The motion described by \eqref{eq:6.1.7} or \eqref{eq:6.1.10}
 is  {\color{blue}\it simple harmonic motion\/}. We see from either of these
 equations that the motion is periodic, with period
 $$
-T=2\pi/\omega_0.
+T=2\pi/\omega_{0}.
 $$
 This is the time required for the object to complete one full cycle of
 oscillation (for example, to move from its highest position to its
@@ -242,7 +242,7 @@ $R$ is the {\color{blue}\it amplitude\/} of the oscillation. The angle $\phi$ in
 \eqref{eq:6.1.10} is the {\color{blue}\it phase angle\/}. It's measured
 in
 radians. Equation~\eqref{eq:6.1.10} is the {\color{blue}\it amplitude--phase
-form\/} of the displacement. If $t$ is in seconds then $\omega_0$ is
+form\/} of the displacement. If $t$ is in seconds then $\omega_{0}$ is
 in radians per second (rad/s);   it's  the {\color{blue}\it
 frequency\/} of
 the motion. It is also called the {\color{blue}\it natural frequency\/} of
@@ -252,26 +252,26 @@ the spring--mass system without damping.
 We found the displacement of the object
  in Example~\ref{example:6.1.1} to be
 $$
-y={3\over2}\cos8t-{3\over8}\sin8t.
+y=\frac{3}{2}\cos8t-\frac{3}{8}\sin8t.
 $$
 Find the frequency, period, amplitude, and phase angle of the motion.
 \end{example}
 
 \solution
-The frequency is $\omega_0=8$ rad/s, and the period is
-$T=2\pi/\omega_0=\pi/4$ s. Since $c_1=3/2$ and $c_2=-3/8$,
+The frequency is $\omega_{0}=8$ rad/s, and the period is
+$T=2\pi/\omega_{0}=\pi/4$ s. Since $c_{1}=3/2$ and $c_{2}=-3/8$,
 the amplitude is
 $$
-R=\sqrt{c^2_1+c^2_2}=\sqrt{\left({3\over2}\right)^2+\left({3\over8}\right)^2}
-={3\over8}\sqrt{17}.
+R=\sqrt{c^{2}_{1}+c^{2}_{2}}=\sqrt{\left(\frac{3}{2}\right)^{2}+\left(\frac{3}{8}\right)^{2}}
+=\frac{3}{8}\sqrt{17}.
 $$
 The phase angle is determined by
 \begin{equation}\label{eq:6.1.11}
-\cos\phi={{3\over2}\over{3\over8}\sqrt{17}}={4\over\sqrt{17}}
+\cos\phi=\frac{\frac{3}{2}}{{\frac{3}{8}}\sqrt{17}}=\frac{4}{\sqrt{17}}
 \end{equation}
 and
 \begin{equation}\label{eq:6.1.12}
-\sin\phi={-{3\over8}\over{3\over8}\sqrt{17}}=-{1\over\sqrt{17}}.
+\sin\phi=\frac{-\frac{3}{8}}{{\frac{3}{8}}\sqrt{17}}=-\frac{1}{\sqrt{17}}.
 \end{equation}
  Using a calculator, we see from \eqref{eq:6.1.11} that
 $$
@@ -293,40 +293,40 @@ angle of the resulting motion. Express the answers in cgs units.
 \end{example}
 
 \solution
-In cgs units $g=980$ cm/s$^2$. Since $\Delta l=2$ cm,
-$\omega_0^2=g/\Delta l=490$.
+In cgs units $g=980$ cm/s$^{2}$. Since $\Delta l=2$ cm,
+$\omega_{0}^{2}=g/\Delta l=490$.
 Therefore
 $$
-y''+490y=0, \quad  y(0)=-1,\quad y'(0)=14.
+y''+490y=0,\quad  y(0)=-1,\quad y'(0)=14.
 $$
  The general solution of the differential equation is
 $$
-y=c_1\cos7\sqrt{10}t+c_2\sin7\sqrt{10}t,
+y=c_{1}\cos7\sqrt{10}t+c_{2}\sin7\sqrt{10}t,
 $$
 so
 $$
-y'=7\sqrt{10}\left(-c_1\sin7\sqrt{10}t+c_2\cos7\sqrt{10}t\right).
+y'=7\sqrt{10}\left(-c_{1}\sin7\sqrt{10}t+c_{2}\cos7\sqrt{10}t\right).
 $$
 Substituting the initial conditions into the last two equations yields
-$c_1=-1$ and $c_2=2/\sqrt{10}$. Hence,
+$c_{1}=-1$ and $c_{2}=2/\sqrt{10}$. Hence,
 $$
-y=-\cos7\sqrt{10}t+{2\over\sqrt{10}}\sin7\sqrt{10}t.
+y=-\cos7\sqrt{10}t+\frac{2}{\sqrt{10}}\sin7\sqrt{10}t.
 $$
 The frequency is $7\sqrt{10}$ rad/s, and  the period
 is $T=2\pi/(7\sqrt{10})$  s.
 The amplitude  is
 $$
-R=\sqrt{c_1^2+c_2^2}=\sqrt{(-1)^2+\left({2\over\sqrt{10}}\right)^2}=
-\sqrt{{7\over5}}\mbox{ cm}.
+R=\sqrt{c_{1}^{2}+c_{2}^{2}}=\sqrt{(-1)^{2}+\left(\frac{2}{\sqrt{10}}\right)^{2}}=
+\sqrt{\frac{7}{5}}\mbox{ cm}.
 $$
 The  phase angle  is determined by
 $$
-\cos\phi={c_1\over R}=-\sqrt{{5\over7}}\mbox{\quad and \quad}\sin\phi=
-{c_2\over R}=\sqrt{{2\over7}}.
+\cos\phi=\frac{c_{1}}{R}=-\sqrt{\frac{5}{7}}\mbox{\quad and \quad}\sin\phi=
+\frac{c_{2}}{R}=\sqrt{\frac{2}{7}}.
 $$
 Therefore $\phi$ is in the second quadrant and
 $$
-\phi=\cos^{-1}\left(-\sqrt{{5\over7}}\right)\approx2.58\mbox{ rad}.
+\phi=\cos^{-1}\left(-\sqrt{\frac{5}{7}}\right)\approx2.58\mbox{ rad}.
 $$
 
 \boxit{Undamped Forced Oscillation}
@@ -342,82 +342,82 @@ certain critical frequencies. To illustrate, this we'll consider the
 motion of an object in a spring--mass system without damping, subject
 to an external force
 $$
-F(t)=F_0\cos\omega t
+F(t)=F_{0}\cos\omega t
 $$
-where $F_0$ is a constant. In this case the equation of motion
+where $F_{0}$ is a constant. In this case the equation of motion
 \eqref{eq:6.1.2} is
 $$
-my''+ky=F_0\cos\omega t,
+my''+ky=F_{0}\cos\omega t,
 $$
 which we rewrite  as
 \begin{equation}\label{eq:6.1.13}
-y''+\omega_0^2y={F_0\over m}\cos\omega t
+y''+\omega_{0}^{2}y=\frac{F_{0}}{m}\cos\omega t
 \end{equation}
-with $\omega_0=\sqrt{k/m}$.
+with $\omega_{0}=\sqrt{k/m}$.
 We'll see from the next two examples that the solutions of
 \eqref{eq:6.1.13}
-with $\omega\ne\omega_0$ behave very differently from the solutions with
-$\omega=\omega_0$.
+with $\omega\ne\omega_{0}$ behave very differently from the solutions with
+$\omega=\omega_{0}$.
 
 \begin{example}\label{example:6.1.4}\rm
  Solve the initial value problem
 \begin{equation}\label{eq:6.1.14}
-y''+\omega_0^2y={F_0\over m}\cos\omega t, \quad  y(0)=0,\quad y'(0)=0,
+y''+\omega_{0}^{2}y=\frac{F_{0}}{m}\cos\omega t,\quad  y(0)=0,\quad y'(0)=0,
 \end{equation}
- given that $\omega\ne\omega_0$.
+ given that $\omega\ne\omega_{0}$.
 \end{example}
 
 \solution
 We first obtain a particular solution of \eqref{eq:6.1.13} by the method
-of undetermined coefficients. Since $\omega\ne\omega _0$,
+of undetermined coefficients. Since $\omega\ne\omega_{0}$,
  $\cos\omega t$ isn't  a solution of the complementary equation
 $$
-y''+\omega_0^2y=0.
+y''+\omega_{0}^{2}y=0.
 $$
 Therefore \eqref{eq:6.1.13} has a particular solution of the form
 $$
-y_p=A\cos\omega t+B\sin\omega t.
+y_{p}=A\cos\omega t+B\sin\omega t.
 $$
 Since
 $$
-y''_p=-\omega^2(A\cos\omega t+B\sin\omega t),
+y''_{p}=-\omega^{2}(A\cos\omega t+B\sin\omega t),
 $$
 $$
-y_p''+\omega_0^2y_p={F_0\over m}\cos\omega t
+y_{p}''+\omega_{0}^{2}y_{p}=\frac{F_{0}}{m}\cos\omega t
 $$
 if and only if
 $$
-(\omega_0^2-\omega^2)\left(A\cos\omega t+
-B\sin\omega t\right)={F_0\over m}\cos\omega t.
+(\omega_{0}^{2}-\omega^{2})\left(A\cos\omega t+
+B\sin\omega t\right)=\frac{F_{0}}{m}\cos\omega t.
 $$
  This holds if and only if
 $$
-A={F_0\over m(\omega_0^2-\omega^2)}\mbox{\quad and \quad} B=0,
+A=\frac{F_{0}}{m(\omega_{0}^{2}-\omega^{2})}\mbox{\quad and \quad}B=0,
 $$
 so
 $$
-y_p={F_0\over m(\omega_0^2-\omega^2)}\cos\omega t.
+y_{p}=\frac{F_{0}}{m(\omega_{0}^{2}-\omega^{2})}\cos\omega t.
 $$
 The general solution of \eqref{eq:6.1.13}  is
 \begin{equation}\label{eq:6.1.15}
-y={F_0\over m(\omega_0^2-\omega^2)}\cos\omega t
-+c_1\cos\omega_0 t+c_2\sin\omega_0t,
+y=\frac{F_{0}}{m(\omega_{0}^{2}-\omega^{2})}\cos\omega t
++c_{1}\cos\omega_{0}t+c_{2}\sin\omega_{0}t,
 \end{equation}
 so
 $$
-y'={-\omega F_0\over m(\omega_0^2-\omega^2)}\sin\omega t
-+\omega_0(-c_1\sin\omega_0 t+c_2\cos\omega_0t).
+y'=\frac{-\omega F_{0}}{m(\omega_{0}^{2}-\omega^{2})}\sin\omega t
++\omega_{0}(-c_{1}\sin\omega_{0}t+c_{2}\cos\omega_{0}t).
 $$
 The initial conditions $y(0)=0$ and $y'(0)=0$ in \eqref{eq:6.1.14} imply
 that
 $$
-c_1=-{F_0\over m(\omega_0^2-\omega^2)}\mbox{\quad and \quad}
-c_2=0.
+c_{1}=-\frac{F_{0}}{m(\omega_{0}^{2}-\omega^{2})}\mbox{\quad and \quad}
+c_{2}=0.
 $$
 Substituting these into \eqref{eq:6.1.15} yields
 \begin{equation}\label{eq:6.1.16}
-y={F_0\over m(\omega_0^2-\omega^2)}(\cos\omega t-\cos\omega
-_0t).
+y=\frac{F_{0}}{m(\omega_{0}^{2}-\omega^{2})}(\cos\omega t-\cos\omega
+_{0}t).
 \end{equation}
 
 It is revealing to write this in a different form.  We start with the
@@ -432,32 +432,32 @@ Subtracting the second identity from the first yields
 \end{equation}
  Now let
 \begin{equation}\label{eq:6.1.18}
-\alpha-\beta=\omega t\mbox{\quad and \quad}\alpha+\beta=\omega_0t,
+\alpha-\beta=\omega t\mbox{\quad and \quad}\alpha+\beta=\omega_{0}t,
 \end{equation}
  so that
 \begin{equation}\label{eq:6.1.19}
-\alpha={(\omega_0+\omega)t\over2}\mbox{\quad and \quad
-}\beta={(\omega_0-\omega
-)t\over2}.
+\alpha=\frac{(\omega_{0}+\omega)t}{2}\mbox{\quad and \quad
+}\beta=\frac{(\omega_{0}-\omega
+)t}{2}.
 \end{equation}
  Substituting \eqref{eq:6.1.18} and \eqref{eq:6.1.19} into \eqref{eq:6.1.17}
 yields
  $$
-\cos\omega t-\cos\omega_0t=
-2\sin{(\omega_0-\omega)t\over2}\sin{(\omega_0+\omega)t\over2},
+\cos\omega t-\cos\omega_{0}t=
+2\sin\frac{(\omega_{0}-\omega)t}{2}\sin\frac{(\omega_{0}+\omega)t}{2},
 $$
 and substituting this into \eqref{eq:6.1.16} yields
 \begin{equation}\label{eq:6.1.20}
-y=R(t)\sin{(\omega_0+\omega)t\over2},
+y=R(t)\sin\frac{(\omega_{0}+\omega)t}{2},
 \end{equation}
  where
 \begin{equation}\label{eq:6.1.21}
-R(t)={2F_0\over m(\omega_0^2-\omega^2)}
-\sin{(\omega_0-\omega)t\over2}.
+R(t)=\frac{2F_{0}}{m(\omega_{0}^{2}-\omega^{2})}
+\sin\frac{(\omega_{0}-\omega)t}{2}.
 \end{equation}
 
 From \eqref{eq:6.1.20} we can regard $y$ as a sinusoidal variation with
-frequency $(\omega_0+\omega)/2$ and variable amplitude
+frequency $(\omega_{0}+\omega)/2$ and variable amplitude
 $|R(t)|$. In Figure~\ref{figure:6.1.6} the dashed curve above the $t$ axis
 is $y=|R(t)|$, the dashed curve below the $t$ axis is $y=-|R(t)|$, and
 the displacement $y$ appears as an oscillation bounded by them. The
@@ -475,62 +475,62 @@ $R(t)$ is called a {\color{blue}\it beat\/}.
 You can see from
 \eqref{eq:6.1.20} and \eqref{eq:6.1.21} that
 $$
-|y(t)|\le{2|F_0|\over m|\omega_0^2-\omega^2|};
+|y(t)|\le\frac{2|F_{0}|}{m|\omega_{0}^{2}-\omega^{2}|};
 $$
-moreover, if $\omega+\omega_0$ is sufficiently large compared with $\omega
--\omega_0$, then $|y|$ assumes values close to (perhaps equal to) this
+moreover, if $\omega+\omega_{0}$ is sufficiently large compared with $\omega
+-\omega_{0}$, then $|y|$ assumes values close to (perhaps equal to) this
 upper bound during each beat. However, the oscillation remains bounded for
 all $t$. (This assumes that the spring can withstand
 deflections of this size and continue to obey Hooke's law.)  The next
-example shows that this isn't  so if $\omega=\omega_0$.
+example shows that this isn't  so if $\omega=\omega_{0}$.
 
 \begin{example}\label{example:6.1.5}\rm
 Find the general solution of
 \begin{equation}\label{eq:6.1.22}
-y''+\omega_0^2y={F_0\over m}\cos\omega_0t.
+y''+\omega_{0}^{2}y=\frac{F_{0}}{m}\cos\omega_{0}t.
 \end{equation}
 \end{example}
 
 \solution
-We first obtain a particular solution $y_p$ of \eqref{eq:6.1.22}. Since
-$\cos\omega_0t$ is a solution of the complementary equation, the form
-for $y_p$ is
+We first obtain a particular solution $y_{p}$ of \eqref{eq:6.1.22}. Since
+$\cos\omega_{0}t$ is a solution of the complementary equation, the form
+for $y_{p}$ is
 \begin{equation}\label{eq:6.1.23}
-y_p=t(A\cos\omega_0t+B\sin\omega_0t).
+y_{p}=t(A\cos\omega_{0}t+B\sin\omega_{0}t).
 \end{equation}
  Then
 $$
-y_p'=A\cos\omega_0t+B\sin\omega_0t
-+\omega_0t(-A\sin\omega_0t+B\cos\omega_0t)
+y_{p}'=A\cos\omega_{0}t+B\sin\omega_{0}t
++\omega_{0}t(-A\sin\omega_{0}t+B\cos\omega_{0}t)
 $$
 and
 \begin{equation}\label{eq:6.1.24}
-y''_p=2\omega_0(-A\sin\omega_0t
-+B\cos\omega_0t)-\omega_0^2t(A\cos\omega_0t+B\sin\omega_0t).
+y''_{p}=2\omega_{0}(-A\sin\omega_{0}t
++B\cos\omega_{0}t)-\omega_{0}^{2}t(A\cos\omega_{0}t+B\sin\omega_{0}t).
 \end{equation}
-From \eqref{eq:6.1.23} and \eqref{eq:6.1.24}, we see that $y_p$ satisfies
+From \eqref{eq:6.1.23} and \eqref{eq:6.1.24}, we see that $y_{p}$ satisfies
 \eqref{eq:6.1.22} if
 $$
--2A\omega_0\sin\omega_0t+2B\omega_0\cos\omega_0t={F_0\over m}
-\cos\omega_0t;
+-2A\omega_{0}\sin\omega_{0}t+2B\omega_{0}\cos\omega_{0}t=\frac{F_{0}}{m}
+\cos\omega_{0}t;
 $$
 that is, if
 $$
-A=0\mbox{\quad and \quad} B={F_0\over2m\omega_0}.
+A=0\mbox{\quad and \quad}B=\frac{F_{0}}{2m\omega_{0}}.
 $$
 Therefore
 $$
-y_p={F_0t\over2m\omega_0}\sin\omega_0t
+y_{p}=\frac{F_{0}t}{2m\omega_{0}}\sin\omega_{0}t
 $$
 is a particular solution of \eqref{eq:6.1.22}. The general solution of
  \eqref{eq:6.1.22} is
 $$
-y={F_0t\over2m\omega_0}\sin\omega_0t+c_1\cos\omega_0t+c_2\sin\omega_0t.
+y=\frac{F_{0}t}{2m\omega_{0}}\sin\omega_{0}t+c_{1}\cos\omega_{0}t+c_{2}\sin\omega_{0}t.
 $$
-The graph of $y_p$ is shown in Figure~\ref{figure:6.1.7},  where it can be
-seen that $y_p$ oscillates between the dashed lines
+The graph of $y_{p}$ is shown in Figure~\ref{figure:6.1.7},  where it can be
+seen that $y_{p}$ oscillates between the dashed lines
 $$
-y={F_0t\over2m\omega_0}\mbox{\quad and \quad} y=-{F_0t\over2m\omega_0}
+y=\frac{F_{0}t}{2m\omega_{0}}\mbox{\quad and \quad}y=-\frac{F_{0}t}{2m\omega_{0}}
 $$
 with increasing amplitude that approaches $\infty$ as $t\to\infty$. Of
 course, this means that the spring must eventually fail to obey Hooke's law
@@ -598,7 +598,7 @@ motion.
 \item\label{exer:6.1.7}
 A  weight stretches a spring 1.5 inches in equilibrium. The weight
 is initially displaced 8 inches above equilibrium and given a downward
-velocity of 4 ft/s. Find its displacement for $t > 0$.
+velocity of 4 ft/s. Find its displacement for $t>0$.
 
 \item\label{exer:6.1.8}
 A weight stretches a spring 6 inches in equilibrium. The weight is
@@ -623,7 +623,7 @@ its displacement for $t>0$.
 
 \item\label{exer:6.1.12} \CGex
 A 4 lb weight stretches a spring 1 ft in equilibrium. An external
-force $F(t)=.25\sin8 t$ lb is applied to the weight, which is
+force $F(t)=.25\sin8t$ lb is applied to the weight, which is
 initially displaced 4 inches above equilibrium and given a downward
 velocity of 1 ft/s. Find and graph its displacement for $t>0$.
 
@@ -640,8 +640,8 @@ harmonic motion of a 20 gm mass suspended from the same spring.
 
 \item\label{exer:6.1.15}
 A 6 lb weight stretches a spring 6 inches in equilibrium. Suppose
-an external force $F(t)=\dst{3\over16}\sin\omega
-t+\dst{3\over8}\cos\omega t $ lb is applied to the weight. For what
+an external force $F(t)=\dst\frac{3}{16}\sin\omega
+t+\dst\frac{3}{8}\cos\omega t $ lb is applied to the weight. For what
 value
 of $\omega$ will the displacement be unbounded? Find the displacement
 if $\omega$ has this value. Assume that the motion starts from
@@ -665,7 +665,7 @@ velocity of 450 cm/s.
 
 \item\label{exer:6.1.18}
 An object is in simple harmonic motion
-with frequency $\omega_0$, with $y(0)=y_0$ and $y'(0)=v_0$. Find
+with frequency $\omega_{0}$, with $y(0)=y_{0}$ and $y'(0)=v_{0}$. Find
 its displacement for $t>0$. Also, find the amplitude of the
 oscillation and give formulas for the sine and cosine of the initial
 phase angle.

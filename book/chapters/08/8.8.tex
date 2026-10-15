@@ -3,58 +3,52 @@
 \begin{center}
 \begin{tabular}{ccc}
  {$f(t)$}  &  {$F(s)$}  &  {}  \\[15pt]
-  1  &  $\displaystyle{{1\over s}}$
-& $(s > 0)$ \\[15pt]
-  $t^n$  &  $\displaystyle{{n!\over
-s^{n+1}}}$  & $(s > 0)$ \\
-  ($n = \mbox{ integer } > 0$)  & {} & {} \\[15pt]
-  $t^p,\;  p > -1$  &
-$\displaystyle{{\Gamma (p+1) \over s^{(p+1)}}}$ & $(s>0)$ \\[15pt]
-  $e^{at}$  &  $\displaystyle{{1 \over
-s-a}}$  & $(s > a)$ \\[15pt]
-  $t^ne^{at}$  &  $\displaystyle{{n! \over
-(s-a)^{n+1}}}$  & $(s > 0)$ \\[15pt]
-  ($n= \mbox{ integer } > 0$)  & {} & {} \\
-  $\cos \omega t$  &
-$\displaystyle{{s \over s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
- $\sin \omega t$  &
-$\displaystyle{{\omega \over s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
-  $e^{\lambda t} \cos \omega t$  &
-$\displaystyle{{s - \lambda \over (s-\lambda)^2+\omega^2}}$  & $(s >
+  1  &  $\displaystyle{\frac{1}{s}}$
+& $(s>0)$ \\[15pt]
+  $t^{n}$  &  $\displaystyle{\frac{n!}{s^{n+1}}}$  & $(s>0)$ \\
+  ($n=\mbox{ integer }>0$)  & {} & {} \\[15pt]
+  $t^{p},\;p>-1$  &
+$\displaystyle{\frac{\Gamma(p+1)}{s^{(p+1)}}}$ & $(s>0)$ \\[15pt]
+  $e^{at}$  &  $\displaystyle{\frac{1}{s-a}}$  & $(s>a)$ \\[15pt]
+  $t^{n}e^{at}$  &  $\displaystyle{\frac{n!}{(s-a)^{n+1}}}$  & $(s>0)$ \\[15pt]
+  ($n=\mbox{ integer }>0$)  & {} & {} \\
+  $\cos\omega t$  &
+$\displaystyle{\frac{s}{s^{2}+\omega^{2}}}$  & $(s>0)$ \\[15pt]
+ $\sin\omega t$  &
+$\displaystyle{\frac{\omega}{s^{2}+\omega^{2}}}$  & $(s>0)$ \\[15pt]
+  $e^{\lambda t}\cos\omega t$  &
+$\displaystyle{\frac{s-\lambda}{(s-\lambda)^{2}+\omega^{2}}}$  & $(s>
 \lambda)$ \\[15pt]
- $e^{\lambda t} \sin \omega t$  &
-$\displaystyle{{\omega \over (s-\lambda)^2+\omega^2}}$  & $(s >
+ $e^{\lambda t}\sin\omega t$  &
+$\displaystyle{\frac{\omega}{(s-\lambda)^{2}+\omega^{2}}}$  & $(s>
 \lambda)$ \\[15pt]
-  $\cosh bt$  &  $\displaystyle{{s \over
-s^2-b^2}}$  & $(s > |b|)$\\[15pt]
-  $\sinh bt$  &  $\displaystyle{{b \over
-s^2-b^2}}$  & $(s > |b|)$ \\[15pt]
- $t \cos \omega t$  &
-$\displaystyle{{s^2-\omega^2 \over (s^2+\omega^2)^2}}$  & $(s>0)$
+  $\cosh bt$  &  $\displaystyle{\frac{s}{s^{2}-b^{2}}}$  & $(s>|b|)$\\[15pt]
+  $\sinh bt$  &  $\displaystyle{\frac{b}{s^{2}-b^{2}}}$  & $(s>|b|)$ \\[15pt]
+ $t\cos\omega t$  &
+$\displaystyle{\frac{s^{2}-\omega^{2}}{(s^{2}+\omega^{2})^{2}}}$  & $(s>0)$
 \end{tabular}
 \end{center}
 
 \begin{center}
 \begin{tabular}{ccc}
-  $t \sin \omega t$  &
-$\displaystyle{{2\omega s \over (s^2+\omega^2)^2}}$  & $(s>0)$\\[15pt]
-  $\sin \omega t -\omega t\cos  \omega t $
- & $\displaystyle{{2\omega^3\over (s^2+\omega^2)^2}}$ & $(s>0)$\\[15pt]
-  $\omega t - \sin  \omega t $  &
-$\displaystyle{{\omega^3 \over s^2(s^2+\omega^2)^2}}$ & $(s>0)$ \\[15pt]
-  $\displaystyle{{1 \over t} \sin  \omega t }$
-& $\displaystyle{\arctan \left({\omega \over s}\right)}$ & $(s>0)$ \\[15pt]
+  $t\sin\omega t$  &
+$\displaystyle{\frac{2\omega s}{(s^{2}+\omega^{2})^{2}}}$  & $(s>0)$\\[15pt]
+  $\sin\omega t-\omega t\cos\omega t $
+ & $\displaystyle{\frac{2\omega^{3}}{(s^{2}+\omega^{2})^{2}}}$ & $(s>0)$\\[15pt]
+  $\omega t-\sin\omega t $  &
+$\displaystyle{\frac{\omega^{3}}{s^{2}(s^{2}+\omega^{2})^{2}}}$ & $(s>0)$ \\[15pt]
+  $\displaystyle{\frac{1}{t}\sin\omega t}$
+& $\displaystyle{\arctan\left(\frac{\omega}{s}\right)}$ & $(s>0)$ \\[15pt]
   $e^{at}f(t)$  &  $F(s-a)$  & \\[15pt]
-  $t^kf(t)$  &
-$\displaystyle{{(-1)^kF^{(k)}(s)}}$  &  \\[15pt]
-  $f(\omega t)$  &  $\displaystyle{{1\over
-\omega} F\left({s \over \omega}\right),  \quad \omega > 0}$ &  \\[15pt]
+  $t^{k}f(t)$  &
+$\displaystyle{{(-1)^{k}F^{(k)}(s)}}$  &  \\[15pt]
+  $f(\omega t)$  &  $\displaystyle{\frac{1}{\omega}F\left(\frac{s}{\omega}\right),\quad\omega>0}$ &  \\[15pt]
   $u(t-\tau)$  &
-$\displaystyle{{e^{-\tau s} \over s}}$ & $(s>0)$  \\[15pt]
-  $u(t-\tau)f(t-\tau)\, (\tau > 0)$  &
+$\displaystyle{\frac{e^{-\tau s}}{s}}$ & $(s>0)$  \\[15pt]
+  $u(t-\tau)f(t-\tau)\,(\tau>0)$  &
 $e^{-\tau s}F(s)$  &  \\[15pt]
-  $\displaystyle{\int^t_o f(\tau)g(t-\tau)\, d\tau}$
- &  $F(s) \cdot G(s)$ &  \\[15pt]
+  $\displaystyle{\int^{t}_{o}f(\tau)g(t-\tau)\,d\tau}$
+ &  $F(s)\cdot G(s)$ &  \\[15pt]
   $\delta(t-a)$  &  $e^{-as}$ & $(s>0)$\\[15pt]
 \end{tabular}
 \end{center}

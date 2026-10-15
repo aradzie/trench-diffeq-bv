@@ -54,7 +54,7 @@ setting in Section~13.2.
 \begin{theorem}\color{blue} \label{thmtype:11.1.1}
 Problems $1$--$5$ have no negative eigenvalues. Moreover, $\lambda=0$
 is an eigenvalue of Problems $2$ and $5$, with associated
-eigenfunction $y_0=1$, but $\lambda=0$ isn't  an eigenvalue of
+eigenfunction $y_{0}=1$, but $\lambda=0$ isn't  an eigenvalue of
 Problems~$1$, $3$, or $4$.
 \end{theorem}
 
@@ -64,18 +64,18 @@ We  consider Problems 1-4, and leave Problem 5 to you
 $y''+\lambda y=0$, then
 $y(y''+\lambda y)=0$, so
 $$
-\int_0^L y(x)(y''(x)+\lambda y(x))\,dx=0;
+\int_{0}^{L}y(x)(y''(x)+\lambda y(x))\,dx=0;
 $$
    therefore,
 \begin{equation} \label{eq:11.1.1}
-\lambda\int_0^L y^2(x)\,dx=-\int_0^L y(x)y''(x)\, dx.
+\lambda\int_{0}^{L}y^{2}(x)\,dx=-\int_{0}^{L}y(x)y''(x)\,dx.
 \end{equation}
 Integration by parts yields
 \begin{equation} \label{eq:11.1.2}
 \begin{array}{rcl}
-\dst\int_0^L y(x)y''(x)\, dx&=&\dst y(x)y'(x)\lims 0L-\int_0^L
-(y'(x))^2\,dx\\
-&=&\dst y(L)y'(L)-y(0)y'(0)-\int_0^L (y'(x))^2\,dx.
+\dst\int_{0}^{L}y(x)y''(x)\,dx&=&\dst y(x)y'(x)\lims0L-\int_{0}^{L}
+(y'(x))^{2}\,dx\\
+&=&\dst y(L)y'(L)-y(0)y'(0)-\int_{0}^{L}(y'(x))^{2}\,dx.
 \end{array}
 \end{equation}
 However, if $y$ satisfies any of the boundary conditions of Problems
@@ -85,10 +85,10 @@ y(L)y'(L)-y(0)y'(0)=0;
 $$
 hence, \eqref{eq:11.1.1} and \eqref{eq:11.1.2} imply that
 $$
-\lambda\int_0^L y^2(x)\,dx=\int_0^L (y'(x))^2\, dx.
+\lambda\int_{0}^{L}y^{2}(x)\,dx=\int_{0}^{L}(y'(x))^{2}\,dx.
 $$
 If $y\not\equiv0$, then
-$\int_0^L y^2(x)\,dx>0$. Therefore
+$\int_{0}^{L}y^{2}(x)\,dx>0$. Therefore
  $\lambda\ge0$ and,  if  $\lambda=0$, then $y'(x)=0$ for all $x$
 in
 $(0,L)$ (why?), and  $y$ is constant on $(0,L)$.
@@ -109,16 +109,16 @@ y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0.
 From Theorem~\ref{thmtype:11.1.1}, any eigenvalues of \eqref{eq:11.1.3} must be
 positive. If $y$ satisfies \eqref{eq:11.1.3} with $\lambda>0$, then
 $$
-y=c_1\cos\sqrt\lambda\, x+c_2\sin\sqrt\lambda\, x,
+y=c_{1}\cos\sqrt{\lambda}\,x+c_{2}\sin\sqrt{\lambda}\,x,
 $$
-where $c_1$ and $c_2$ are constants. The boundary condition $y(0)=0$
-implies that $c_1=0$. Therefore $y=c_2\sin\sqrt\lambda\, x$. Now the
-boundary condition $y(L)=0$ implies that $c_2\sin\sqrt\lambda\, L=0$.
-To make $c_2\sin\sqrt\lambda\, L=0$ with $c_2\ne0$, we must choose
-$\sqrt\lambda=n\pi/L$, where $n$ is a positive integer. Therefore
-$\lambda_n=n^2\pi^2/L^2$ is an eigenvalue and
+where $c_{1}$ and $c_{2}$ are constants. The boundary condition $y(0)=0$
+implies that $c_{1}=0$. Therefore $y=c_{2}\sin\sqrt{\lambda}\,x$. Now the
+boundary condition $y(L)=0$ implies that $c_{2}\sin\sqrt{\lambda}\,L=0$.
+To make $c_{2}\sin\sqrt{\lambda}\,L=0$ with $c_{2}\ne0$, we must choose
+$\sqrt{\lambda}=n\pi/L$, where $n$ is a positive integer. Therefore
+$\lambda_{n}=n^{2}\pi^{2}/L^{2}$ is an eigenvalue and
 $$
-y_n=\sin{n\pi x\over L}
+y_{n}=\sin\frac{n\pi x}{L}
 $$
 is an associated eigenfunction.
 \bbox\end{example}
@@ -132,10 +132,10 @@ $$
 y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0
 $$
 has infinitely many positive eigenvalues
-$\lambda_n=n^2\pi^2/L^2$,
+$\lambda_{n}=n^{2}\pi^{2}/L^{2}$,
 with associated eigenfunctions
 $$
-y_n=\sin {n\pi x\over L},\quad
+y_{n}=\sin\frac{n\pi x}{L},\quad
 n=1,2,3,\dots.
 $$
 There are no other eigenvalues.
@@ -150,11 +150,11 @@ The eigenvalue problem
 $$
 y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
 $$
-has the eigenvalue $\lambda_0=0$, with associated eigenfunction
-$y_0=1$, and infinitely many positive eigenvalues
-$\lambda_n=n^2\pi^2/L^2$, with associated eigenfunctions
+has the eigenvalue $\lambda_{0}=0$, with associated eigenfunction
+$y_{0}=1$, and infinitely many positive eigenvalues
+$\lambda_{n}=n^{2}\pi^{2}/L^{2}$, with associated eigenfunctions
 $$
-y_n=\cos {n\pi x\over L}, n=1,2,3\dots.
+y_{n}=\cos\frac{n\pi x}{L},n=1,2,3\dots.
 $$
 There are no other eigenvalues.
 \end{theorem}
@@ -170,20 +170,20 @@ From Theorem~\ref{thmtype:11.1.1},
  any eigenvalues of \eqref{eq:11.1.4} must be  positive.
 If $y$ satisfies \eqref{eq:11.1.4} with  $\lambda>0$, then
 $$
-y=c_1\cos\sqrt\lambda\, x+c_2\sin\sqrt\lambda\, x,
+y=c_{1}\cos\sqrt{\lambda}\,x+c_{2}\sin\sqrt{\lambda}\,x,
 $$
-where $c_1$ and $c_2$ are constants. The boundary condition $y(0)=0$
-implies that $c_1=0$. Therefore $y=c_2\sin\sqrt\lambda\, x$. Hence,
-$y'=c_2\sqrt\lambda\cos\sqrt\lambda\,x$ and the boundary condition
-$y'(L)=0$ implies that $c_2\cos\sqrt\lambda\,L=0$. To make
-$c_2\cos\sqrt\lambda\,L=0$ with $c_2\ne0$ we must choose
+where $c_{1}$ and $c_{2}$ are constants. The boundary condition $y(0)=0$
+implies that $c_{1}=0$. Therefore $y=c_{2}\sin\sqrt{\lambda}\,x$. Hence,
+$y'=c_{2}\sqrt{\lambda}\cos\sqrt{\lambda}\,x$ and the boundary condition
+$y'(L)=0$ implies that $c_{2}\cos\sqrt{\lambda}\,L=0$. To make
+$c_{2}\cos\sqrt{\lambda}\,L=0$ with $c_{2}\ne0$ we must choose
 $$
-\sqrt\lambda={(2n-1)\pi\over2L},
+\sqrt{\lambda}=\frac{(2n-1)\pi}{2L},
 $$
-where $n$ is a positive integer. Then $\lambda_n=(2n-1)^2\pi^2/4L^2$
+where $n$ is a positive integer. Then $\lambda_{n}=(2n-1)^{2}\pi^{2}/4L^{2}$
 is an eigenvalue and
 $$
-y_n=\sin{(2n-1)\pi x\over2L}
+y_{n}=\sin\frac{(2n-1)\pi x}{2L}
 $$
 is an associated eigenfunction.
 \bbox\end{example}
@@ -197,9 +197,9 @@ $$
 y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0
 $$
 has infinitely many positive eigenvalues
-$\lambda_n=(2n-1)^2\pi^2/4L^2$, with associated eigenfunctions
+$\lambda_{n}=(2n-1)^{2}\pi^{2}/4L^{2}$, with associated eigenfunctions
 $$
-y_n=\sin{(2n-1)\pi x\over2L},\quad n=1,2,3,\dots.
+y_{n}=\sin\frac{(2n-1)\pi x}{2L},\quad n=1,2,3,\dots.
 $$
 There are no other eigenvalues.
 \end{theorem}
@@ -214,10 +214,10 @@ $$
 y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0
 $$
 has infinitely many positive eigenvalues
-$\lambda_n=(2n-1)^2\pi^2/4L^2$, with associated eigenfunctions
+$\lambda_{n}=(2n-1)^{2}\pi^{2}/4L^{2}$, with associated eigenfunctions
 $$
-y_n=\cos{(2n-1)\pi
-x\over2L},\quad n=1,2,3,\dots.
+y_{n}=\cos\frac{(2n-1)\pi
+x}{2L},\quad n=1,2,3,\dots.
 $$
 There are no other eigenvalues.
 \end{theorem}
@@ -230,50 +230,50 @@ y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L).
 
 \solution
 From Theorem~\ref{thmtype:11.1.1}, $\lambda=0$ is an eigenvalue of
-\eqref{eq:11.1.5} with associated eigenfunction $y_0=1$, and any other
+\eqref{eq:11.1.5} with associated eigenfunction $y_{0}=1$, and any other
 eigenvalues must be positive. If $y$ satisfies \eqref{eq:11.1.5} with
 $\lambda>0$, then
 \begin{equation} \label{eq:11.1.6}
-y=c_1\cos\sqrt\lambda\, x+c_2\sin\sqrt\lambda\, x,
+y=c_{1}\cos\sqrt{\lambda}\,x+c_{2}\sin\sqrt{\lambda}\,x,
 \end{equation}
-where $c_1$ and $c_2$ are constants.
+where $c_{1}$ and $c_{2}$ are constants.
 The boundary condition $y(-L)=y(L)$ implies that
 \begin{equation} \label{eq:11.1.7}
-c_1\cos(-\sqrt\lambda\,L)+c_2\sin(-\sqrt\lambda\,L)=c_1\cos \sqrt\lambda\,L+c_2\sin \sqrt\lambda\,L.
+c_{1}\cos(-\sqrt{\lambda}\,L)+c_{2}\sin(-\sqrt{\lambda}\,L)=c_{1}\cos\sqrt{\lambda}\,L+c_{2}\sin\sqrt{\lambda}\,L.
 \end{equation}
 Since
 \begin{equation} \label{eq:11.1.8}
-\cos(-\sqrt\lambda\,L)=\cos \sqrt\lambda\,L\mbox
-{\quad and \quad}\sin(-\sqrt\lambda\,L)=-\sin \sqrt\lambda\,L,
+\cos(-\sqrt{\lambda}\,L)=\cos\sqrt{\lambda}\,L\mbox
+{\quad and \quad}\sin(-\sqrt{\lambda}\,L)=-\sin\sqrt{\lambda}\,L,
 \end{equation}
 \eqref{eq:11.1.7} implies that
 \begin{equation} \label{eq:11.1.9}
-c_2\sin \sqrt\lambda\,L=0.
+c_{2}\sin\sqrt{\lambda}\,L=0.
 \end{equation}
 Differentiating \eqref{eq:11.1.6} yields
 $$
-y'=\sqrt\lambda\left(-c_1\sin\sqrt\lambda x+c_2\cos\sqrt\lambda
+y'=\sqrt{\lambda}\left(-c_{1}\sin\sqrt{\lambda}x+c_{2}\cos\sqrt{\lambda}
 x\right).
 $$
 The boundary condition $y'(-L)=y'(L)$  implies that
 $$
--c_1\sin(-\sqrt\lambda\,L)+c_2\cos(-\sqrt\lambda\,L)=-c_1\sin \sqrt\lambda\,L+c_2\cos \sqrt\lambda\,L,
+-c_{1}\sin(-\sqrt{\lambda}\,L)+c_{2}\cos(-\sqrt{\lambda}\,L)=-c_{1}\sin\sqrt{\lambda}\,L+c_{2}\cos\sqrt{\lambda}\,L,
 $$
 and  \eqref{eq:11.1.8} implies that
 \begin{equation} \label{eq:11.1.10}
-c_1\sin \sqrt\lambda\,L=0.
+c_{1}\sin\sqrt{\lambda}\,L=0.
 \end{equation}
 
-Eqns.~\eqref{eq:11.1.9} and \eqref{eq:11.1.10} imply that $c_1=c_2=0$ unless
-$\sqrt\lambda =n\pi /L$, where $n$ is a positive integer. In this  case
-\eqref{eq:11.1.9} and \eqref{eq:11.1.10} both hold for arbitrary $c_1$ and
-$c_2$. The eigenvalue determined in this way is
-$\lambda_n=n^2\pi^2/L^2$, and each such eigenvalue has the linearly
+Eqns.~\eqref{eq:11.1.9} and \eqref{eq:11.1.10} imply that $c_{1}=c_{2}=0$ unless
+$\sqrt{\lambda}=n\pi/L$, where $n$ is a positive integer. In this  case
+\eqref{eq:11.1.9} and \eqref{eq:11.1.10} both hold for arbitrary $c_{1}$ and
+$c_{2}$. The eigenvalue determined in this way is
+$\lambda_{n}=n^{2}\pi^{2}/L^{2}$, and each such eigenvalue has the linearly
 independent associated eigenfunctions
 $$
-\cos {n\pi x\over L}
+\cos\frac{n\pi x}{L}
 \mbox{\quad and \quad}
-  \sin{ n\pi x\over L}.
+  \sin\frac{n\pi x}{L}.
 \eqno{\bbox}
 $$
 \end{example}
@@ -286,14 +286,14 @@ The eigenvalue problem
 $$
 y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L),
 $$
-has the eigenvalue $\lambda_0=0$, with associated eigenfunction $y_0=1$
+has the eigenvalue $\lambda_{0}=0$, with associated eigenfunction $y_{0}=1$
 and  infinitely many positive eigenvalues
-$\lambda_n=n^2\pi^2/L^2$,
+$\lambda_{n}=n^{2}\pi^{2}/L^{2}$,
 with associated eigenfunctions
 $$
-y_{1n}=\cos {n\pi x\over L}
+y_{1n}=\cos\frac{n\pi x}{L}
 \mbox{\quad and \quad}
-y_{2n}=\sin {n\pi x\over L},\quad n=1,2,3,\dots.
+y_{2n}=\sin\frac{n\pi x}{L},\quad n=1,2,3,\dots.
 $$
 There are no other eigenvalues.
 \end{theorem}
@@ -304,13 +304,13 @@ There are no other eigenvalues.
 We say that two integrable functions $f$ and $g$ are {\color{blue}\it
 orthogonal\/} on an interval $[a,b]$ if
 $$
-\int_a^bf(x)g(x)\,dx=0.
+\int_{a}^{b}f(x)g(x)\,dx=0.
 $$
-More generally, we say that the functions $\phi_1$, $\phi_2$, \dots,
-$\phi_n$, \dots (finitely or infinitely many) are orthogonal
+More generally, we say that the functions $\phi_{1}$, $\phi_{2}$, \dots,
+$\phi_{n}$, \dots (finitely or infinitely many) are orthogonal
 on $[a,b]$  if
 $$
-\int_a^b\phi_i(x)\phi_j(x)\,dx=0\mbox{\quad whenever \quad}
+\int_{a}^{b}\phi_{i}(x)\phi_{j}(x)\,dx=0\mbox{\quad whenever \quad}
 i\ne j.
 $$
 The  importance of orthogonality will become clear when we study
@@ -320,9 +320,9 @@ Fourier
 \begin{example}\label{example:11.1.4} \rm
 Show that the eigenfunctions
 \begin{equation} \label{eq:11.1.11}
-1,\, \cos{\pi x\over L},\, \sin{\pi x\over L},
-\, \cos{2\pi x\over L}, \, \sin{2\pi x\over L},\dots,
-\cos{n\pi x\over L}, \, \sin{n\pi x\over L},\dots
+1,\,\cos\frac{\pi x}{L},\,\sin\frac{\pi x}{L},
+\,\cos\frac{2\pi x}{L},\,\sin\frac{2\pi x}{L},\dots,
+\cos\frac{n\pi x}{L},\,\sin\frac{n\pi x}{L},\dots
 \end{equation}
 of Problem 5
 are orthogonal on $[-L,L]$.
@@ -330,18 +330,18 @@ are orthogonal on $[-L,L]$.
 
 \solution We must show that
 \begin{equation} \label{eq:11.1.12}
-\int_{-L}^L f(x)g(x)\,dx=0
+\int_{-L}^{L}f(x)g(x)\,dx=0
 \end{equation}
 whenever $f$ and $g$ are distinct functions from \eqref{eq:11.1.11}.
 If $r$ is any nonzero integer, then
 \begin{equation} \label{eq:11.1.13}
-\int_{-L}^L\cos{r\pi x\over L}\,dx
-={L\over r\pi}\sin{r\pi x\over L}\bigg|_{-L}^L=0.
+\int_{-L}^{L}\cos\frac{r\pi x}{L}\,dx
+=\frac{L}{r\pi}\sin\frac{r\pi x}{L}\bigg|_{-L}^{L}=0.
 \end{equation}
 and
 $$
-\int_{-L}^L\sin{r\pi x\over L}\,dx
-=-{L\over r\pi}\cos{r\pi x\over L}\bigg|_{-L}^L=0.
+\int_{-L}^{L}\sin\frac{r\pi x}{L}\,dx
+=-\frac{L}{r\pi}\cos\frac{r\pi x}{L}\bigg|_{-L}^{L}=0.
 $$
 Therefore \eqref{eq:11.1.12} holds  if $f\equiv1$
 and $g$ is any other function in \eqref{eq:11.1.11}.
@@ -349,18 +349,18 @@ and $g$ is any other function in \eqref{eq:11.1.11}.
 If $f(x)=\cos m\pi x/L$ and $g(x)=\cos n\pi x/L$ where $m$
 and $n$ are distinct positive integers, then
 \begin{equation} \label{eq:11.1.14}
-\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\cos{m\pi x\over L}
-\cos{n\pi x\over L}\,dx.
+\int_{-L}^{L}f(x)g(x)\,dx=\int_{-L}^{L}\cos\frac{m\pi x}{L}
+\cos\frac{n\pi x}{L}\,dx.
 \end{equation}
 To evaluate this integral, we use the identity
 $$
-\cos A\cos B={1\over2}[\cos(A-B)+\cos(A+B)]
+\cos A\cos B=\frac{1}{2}[\cos(A-B)+\cos(A+B)]
 $$
 with $A=m\pi x/L$ and $B=n\pi x/L$.  Then \eqref{eq:11.1.14} becomes
 $$
-\int_{-L}^L
-f(x)g(x)\,dx={1\over2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
-+\int_{-L}^L\cos{(m+n)\pi x\over L}\,dx\right].
+\int_{-L}^{L}
+f(x)g(x)\,dx=\frac{1}{2}\left[\int_{-L}^{L}\cos\frac{(m-n)\pi x}{L}\,dx
++\int_{-L}^{L}\cos\frac{(m+n)\pi x}{L}\,dx\right].
 $$
 Since $m-n$ and $m+n$ are both nonzero integers, \eqref{eq:11.1.13}
 implies that the  integrals on the right are both zero. Therefore
@@ -369,26 +369,26 @@ implies that the  integrals on the right are both zero. Therefore
 If $f(x)=\sin m\pi x/L$ and $g(x)=\sin n\pi x/L$ where $m$
 and $n$ are distinct positive integers, then
 \begin{equation} \label{eq:11.1.15}
-\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin{m\pi x\over L}
-\sin{n\pi x\over L}\,dx.
+\int_{-L}^{L}f(x)g(x)\,dx=\int_{-L}^{L}\sin\frac{m\pi x}{L}
+\sin\frac{n\pi x}{L}\,dx.
 \end{equation}
 To evaluate this integral, we use the  identity
 $$
-\sin A\sin B={1\over2}[\cos(A-B)-\cos(A+B)]
+\sin A\sin B=\frac{1}{2}[\cos(A-B)-\cos(A+B)]
 $$
 with $A=m\pi x/L$ and $B=n\pi x/L$.  Then \eqref{eq:11.1.15} becomes
 $$
-\int_{-L}^L
-f(x)g(x)\,dx={1\over2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
--\int_{-L}^L\cos{(m+n)\pi x\over L}\,dx\right]=0.
+\int_{-L}^{L}
+f(x)g(x)\,dx=\frac{1}{2}\left[\int_{-L}^{L}\cos\frac{(m-n)\pi x}{L}\,dx
+-\int_{-L}^{L}\cos\frac{(m+n)\pi x}{L}\,dx\right]=0.
 $$
 
 If $f(x)=\sin m\pi x/L$ and $g(x)=\cos n\pi x/L$ where $m$
 and $n$ are   positive integers (not necessarily distinct),
 then
 $$
-\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin{m\pi x\over L}
-\cos{n\pi x\over L}\,dx=0
+\int_{-L}^{L}f(x)g(x)\,dx=\int_{-L}^{L}\sin\frac{m\pi x}{L}
+\cos\frac{n\pi x}{L}\,dx=0
 $$
 because the integrand is an odd function and the limits are symmetric
 about $x=0$.
@@ -406,7 +406,7 @@ on $[0,L]$. However, this also follows from a general theorem that we'll
 \begin{exerciselist}
 \item\label{exer:11.1.1}
 Prove that $\lambda=0$ is an eigenvalue of Problem~5 with associated
-eigenfunction $y_0=1$, and that any other eigenvalues  must be
+eigenfunction $y_{0}=1$, and that any other eigenvalues  must be
 positive.
 \hint{See the proof of Theorem~\ref{thmtype:11.1.1}.}
 
@@ -425,7 +425,7 @@ $y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(\pi)=0$
 $y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(\pi)=0$
 
 \item\label{exer:11.1.6}
-$y''+\lambda y=0,\quad y(-\pi)= y(\pi), \quad y'(-\pi)=y'(\pi)$
+$y''+\lambda y=0,\quad y(-\pi)=y(\pi),\quad y'(-\pi)=y'(\pi)$
 
 \item\label{exer:11.1.7}
 $y''+\lambda y=0,\quad y'(0)=0,\quad y'(1)=0$
@@ -437,13 +437,13 @@ $y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(1)=0$
 $y''+\lambda y=0,\quad y(0)=0,\quad y(1)=0$
 
 \item\label{exer:11.1.10}
-$y''+\lambda y=0,\quad y(-1)= y(1), \quad y'(-1)=y'(1)$
+$y''+\lambda y=0,\quad y(-1)=y(1),\quad y'(-1)=y'(1)$
 
 \item\label{exer:11.1.11}
 $y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(1)=0$
 
 \item\label{exer:11.1.12}
-$y''+\lambda y=0,\quad y(-2)= y(2), \quad y'(-2)=y'(2)$
+$y''+\lambda y=0,\quad y(-2)=y(2),\quad y'(-2)=y'(2)$
 
 \item\label{exer:11.1.13}
 $y''+\lambda y=0,\quad y(0)=0,\quad y(2)=0$
@@ -466,9 +466,9 @@ Prove Theorem~\ref{thmtype:11.1.5}.
 \item\label{exer:11.1.19}
 Verify  that the eigenfunctions
 $$
-\sin{\pi x\over L},
-\, \sin{2\pi x\over L},\dots,
- \, \sin{n\pi x\over L},\dots
+\sin\frac{\pi x}{L},
+\,\sin\frac{2\pi x}{L},\dots,
+ \,\sin\frac{n\pi x}{L},\dots
 $$
  of Problem~1
 are orthogonal on $[0,L]$.
@@ -476,9 +476,9 @@ are orthogonal on $[0,L]$.
 \item\label{exer:11.1.20}
 Verify  that the eigenfunctions
 $$
-1,\, \cos{\pi x\over L},
-\, \cos{2\pi x\over L},\dots,
- \, \cos{n\pi x\over L},\dots
+1,\,\cos\frac{\pi x}{L},
+\,\cos\frac{2\pi x}{L},\dots,
+ \,\cos\frac{n\pi x}{L},\dots
 $$
 of Problem~2
 are orthogonal on $[0,L]$.
@@ -486,9 +486,9 @@ are orthogonal on $[0,L]$.
 \item\label{exer:11.1.21}
 Verify that  the eigenfunctions
 $$
-\sin{\pi x\over 2L},
-\, \sin{3\pi x\over 2L},\dots,
- \, \sin{(2n-1)\pi x\over 2L},\dots
+\sin\frac{\pi x}{2L},
+\,\sin\frac{3\pi x}{2L},\dots,
+ \,\sin\frac{(2n-1)\pi x}{2L},\dots
 $$
 of Problem~3
 are orthogonal on $[0,L]$.
@@ -496,9 +496,9 @@ are orthogonal on $[0,L]$.
 \item\label{exer:11.1.22}
 Verify  that the eigenfunctions
 $$
-\cos{\pi x\over 2L},
-\, \cos{3\pi x\over 2L},\dots,
- \, \cos{(2n-1)\pi x\over 2L},\dots
+\cos\frac{\pi x}{2L},
+\,\cos\frac{3\pi x}{2L},\dots,
+ \,\cos\frac{(2n-1)\pi x}{2L},\dots
 $$
 of Problem~4
 are orthogonal on $[0,L]$.
@@ -508,15 +508,15 @@ are orthogonal on $[0,L]$.
 eigenvalue problem.}
 
 \item\label{exer:11.1.23}
-$y''+\lambda y=0,\quad y(0)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+$y''+\lambda y=0,\quad y(0)=0,\quad\dst\int_{0}^{L}y(x)\,dx=0$
 
 \item\label{exer:11.1.24}
-$y''+\lambda y=0,\quad y'(0)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+$y''+\lambda y=0,\quad y'(0)=0,\quad\dst\int_{0}^{L}y(x)\,dx=0$
 
 \item\label{exer:11.1.25}
-$y''+\lambda y=0,\quad y(L)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+$y''+\lambda y=0,\quad y(L)=0,\quad\dst\int_{0}^{L}y(x)\,dx=0$
 
 \item\label{exer:11.1.26}
-$y''+\lambda y=0,\quad y'(L)=0,\quad \dst\int_0^Ly(x)\,dx=0$
+$y''+\lambda y=0,\quad y'(L)=0,\quad\dst\int_{0}^{L}y(x)\,dx=0$
 
 \end{exerciselist}

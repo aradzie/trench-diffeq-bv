@@ -4,7 +4,7 @@
 An $n$th order differential equation is said to be {\color{blue}\it linear} if it
 can be written in the form
 \begin{equation}\label{eq:9.1.1}
-y^{(n)}+p_1(x)y^{(n-1)}+\cdots+p_n(x)y=f(x).
+y^{(n)}+p_{1}(x)y^{(n-1)}+\cdots+p_{n}(x)y=f(x).
 \end{equation}
 We considered equations of this form with $n=1$ in
 Section~2.1 and with $n=2$ in
@@ -19,31 +19,31 @@ proofs.
 For convenience, we consider linear differential equations written
 as
 \begin{equation}\label{eq:9.1.2}
-P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=F(x),
+P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=F(x),
 \end{equation}
 which can be rewritten as \eqref{eq:9.1.1} on any interval on
-which $P_0$ has no zeros, with $p_1=P_1/P_0$, \dots, $p_n=P_n/P_0$ and
-$f=F/P_0$. For simplicity, throughout this chapter we'll
+which $P_{0}$ has no zeros, with $p_{1}=P_{1}/P_{0}$, \dots, $p_{n}=P_{n}/P_{0}$ and
+$f=F/P_{0}$. For simplicity, throughout this chapter we'll
 abbreviate the left side of \eqref{eq:9.1.2} by $Ly$; that is,
 $$
-Ly=P_0y^{(n)}+P_1y^{(n-1)}+\cdots+P_ny.
+Ly=P_{0}y^{(n)}+P_{1}y^{(n-1)}+\cdots+P_{n}y.
 $$
 We say that the equation $Ly=F$ is {\color{blue}\it normal\/} on $(a,b)$ if
-$P_0$, $P_1$, \dots, $P_n$ and $F$ are continuous on $(a,b)$ and $P_0$ has
+$P_{0}$, $P_{1}$, \dots, $P_{n}$ and $F$ are continuous on $(a,b)$ and $P_{0}$ has
 no zeros on $(a,b)$. If this is so then $Ly=F$ can be
-written as \eqref{eq:9.1.1} with $p_1$, \dots, $p_n$ and $f$ continuous on
+written as \eqref{eq:9.1.1} with $p_{1}$, \dots, $p_{n}$ and $f$ continuous on
 $(a,b)$.
 
 The next theorem is analogous to
 Theorem~\ref{thmtype:5.3.1}.
 
 \begin{theorem}\color{blue}\label{thmtype:9.1.1}
-Suppose   $Ly=F$ is normal on $(a,b)$, let $x_0$ be a point in
+Suppose   $Ly=F$ is normal on $(a,b)$, let $x_{0}$ be a point in
 $(a,b)$,
-and let $k_0$, $k_1$, \dots, $k_{n-1}$ be arbitrary real numbers. Then
+and let $k_{0}$, $k_{1}$, \dots, $k_{n-1}$ be arbitrary real numbers. Then
 the initial value problem
 $$
-Ly=F, \quad  y(x_0)=k_0,\quad y'(x_0)=k_1,\dots,\quad y^{(n-1)}(x_0)=k_{n-1}
+Ly=F,\quad  y(x_{0})=k_{0},\quad y'(x_{0})=k_{1},\dots,\quad y^{(n-1)}(x_{0})=k_{n-1}
 $$
 has a unique solution on $(a,b)$.
 \end{theorem}
@@ -56,20 +56,20 @@ Eqn.~\eqref{eq:9.1.2} is said to be {\color{blue}\it homogeneous} if $F\equiv0$ 
 solution of $Ly=0$, we call it the {\color{blue}\it trivial} solution. Any other
 solution is {\color{blue}\it nontrivial}.
 
-If $y_1$, $y_2$, \dots, $y_n$ are defined on $(a,b)$ and
-$c_1$, $c_2$, \dots, $c_n$ are constants, then
+If $y_{1}$, $y_{2}$, \dots, $y_{n}$ are defined on $(a,b)$ and
+$c_{1}$, $c_{2}$, \dots, $c_{n}$ are constants, then
 \begin{equation}\label{eq:9.1.3}
-y=c_1y_1+c_2y_2+\cdots+c_ny_n
+y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}
 \end{equation}
-is a {\color{blue}\it linear combination\/} of $\{y_1,y_2\dots,y_n\}$. It's
+is a {\color{blue}\it linear combination\/} of $\{y_{1},y_{2}\dots,y_{n}\}$. It's
 easy
- to show that if $y_1$, $y_2$, \dots, $y_n$ are solutions of
+ to show that if $y_{1}$, $y_{2}$, \dots, $y_{n}$ are solutions of
 $Ly=0$ on $(a,b)$, then so is any linear combination of
-$\{y_1,y_2,\dots,y_n\}$. (See the proof of Theorem~\ref{thmtype:5.1.2}.) We
-say that $\{y_1,y_2,\dots,y_n\}$ is a {\color{blue}\it fundamental set of
+$\{y_{1},y_{2},\dots,y_{n}\}$. (See the proof of Theorem~\ref{thmtype:5.1.2}.) We
+say that $\{y_{1},y_{2},\dots,y_{n}\}$ is a {\color{blue}\it fundamental set of
 solutions of $Ly=0$ on\/} $(a,b)$ if every solution of $Ly=0$ on
 $(a,b)$ can be written as a linear combination of
-$\{y_1,y_2,\dots,y_n\}$, as in \eqref{eq:9.1.3}. In this case we say that
+$\{y_{1},y_{2},\dots,y_{n}\}$, as in \eqref{eq:9.1.3}. In this case we say that
 \eqref{eq:9.1.3} is the {\color{blue}\it general solution of $Ly=0$ on
 $(a,b)$\/}.
 
@@ -79,61 +79,61 @@ infinitely many fundamental  sets of solutions  on $(a,b)$.
 The next definition will help to identify fundamental sets of
 solutions of $Ly=0$.
 
-We say that $\{y_1,y_2,\dots,y_n\}$ is {\color{blue}\it linearly independent\/} on
-$(a,b)$ if the only constants $c_1$, $c_2$, \dots, $c_n$ such that
+We say that $\{y_{1},y_{2},\dots,y_{n}\}$ is {\color{blue}\it linearly independent\/} on
+$(a,b)$ if the only constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ such that
 \begin{equation}\label{eq:9.1.4}
-c_1y_1(x)+c_2y_2(x)+\cdots+c_ny_n(x)=0,\quad a<x<b,
+c_{1}y_{1}(x)+c_{2}y_{2}(x)+\cdots+c_{n}y_{n}(x)=0,\quad a<x<b,
 \end{equation}
-are $c_1=c_2=\cdots=c_n=0$. If \eqref{eq:9.1.4} holds for some set of
-constants $c_1$, $c_2$, \dots, $c_n$ that are not all zero, then
-$\{y_1,y_2,\dots,y_n\}$ is {\color{blue}\it linearly dependent\/} on $(a,b)$
+are $c_{1}=c_{2}=\cdots=c_{n}=0$. If \eqref{eq:9.1.4} holds for some set of
+constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ that are not all zero, then
+$\{y_{1},y_{2},\dots,y_{n}\}$ is {\color{blue}\it linearly dependent\/} on $(a,b)$
 
 The next theorem is analogous to
 Theorem~\ref{thmtype:5.1.3}.
 
 \begin{theorem}\color{blue}\label{thmtype:9.1.2}
 If  $Ly=0$ is normal on $(a,b)$, then a set
-$\{y_1,y_2,\dots,y_n\}$ of $n$ solutions of $Ly=0$ on $(a,b)$ is a
+$\{y_{1},y_{2},\dots,y_{n}\}$ of $n$ solutions of $Ly=0$ on $(a,b)$ is a
 fundamental set if and only if it's linearly independent on $(a,b)$.
 \end{theorem}
 
 \begin{example}\label{example:9.1.1}\rm
 The equation
 \begin{equation}\label{eq:9.1.5}
-x^3y'''-x^2y''-2xy'+6y=0
+x^{3}y'''-x^{2}y''-2xy'+6y=0
 \end{equation}
-is normal and has the solutions $y_1=x^2$, $y_2=x^3$, and $y_3=1/x$ on
-$(-\infty,0)$ and $(0,\infty)$.  Show that $\{y_1,y_2,y_3\}$
-is linearly independent on $(-\infty, 0)$ and $(0,\infty)$. Then find
-the general solution of \eqref{eq:9.1.5} on $(-\infty, 0)$ and
+is normal and has the solutions $y_{1}=x^{2}$, $y_{2}=x^{3}$, and $y_{3}=1/x$ on
+$(-\infty,0)$ and $(0,\infty)$.  Show that $\{y_{1},y_{2},y_{3}\}$
+is linearly independent on $(-\infty,0)$ and $(0,\infty)$. Then find
+the general solution of \eqref{eq:9.1.5} on $(-\infty,0)$ and
 $(0,\infty)$.
 \end{example}
 
 \solution
 Suppose
 \begin{equation} \label{eq:9.1.6}
-c_1x^2+c_2x^3+{c_3\over x}=0
+c_{1}x^{2}+c_{2}x^{3}+\frac{c_{3}}{x}=0
 \end{equation}
-on $(0,\infty)$. We must show that $c_1=c_2=c_3=0$. Differentiating
+on $(0,\infty)$. We must show that $c_{1}=c_{2}=c_{3}=0$. Differentiating
 \eqref{eq:9.1.6} twice yields  the system
 \begin{equation} \label{eq:9.1.7}
 \begin{array}{rcl}
-c_1x^2+c_2x^3+\dst{c_3\over x}&=&0\\[2\jot]
-2c_1x+3c_2x^2-\dst{c_3\over x^2}&=&0\\[2\jot]
-2c_1+6c_2x+\dst{2c_3\over x^3}&=&0.
+c_{1}x^{2}+c_{2}x^{3}+\dst\frac{c_{3}}{x}&=&0\\[2\jot]
+2c_{1}x+3c_{2}x^{2}-\dst\frac{c_{3}}{x^{2}}&=&0\\[2\jot]
+2c_{1}+6c_{2}x+\dst\frac{2c_{3}}{x^{3}}&=&0.
 \end{array}
 \end{equation}
 If \eqref{eq:9.1.7} holds for all $x$ in $(0,\infty)$, then it
 certainly  holds at $x=1$;  therefore,
 \begin{equation} \label{eq:9.1.8}
 \begin{array}{rcl}
-\phantom{2}c_1+\phantom{3}c_2+\phantom{2}c_3&=&0\\
-2c_1+3c_2-\phantom{2}c_3&=&0\\
-2c_1+6c_2+2c_3&=&0.
+\phantom{2}c_{1}+\phantom{3}c_{2}+\phantom{2}c_{3}&=&0\\
+2c_{1}+3c_{2}-\phantom{2}c_{3}&=&0\\
+2c_{1}+6c_{2}+2c_{3}&=&0.
 \end{array}
 \end{equation}
 By solving this system directly, you can verify that it has only the
-trivial solution $c_1=c_2=c_3=0$;     however, for our purposes it's more
+trivial solution $c_{1}=c_{2}=c_{3}=0$;     however, for our purposes it's more
 useful to recall from linear algebra that a homogeneous linear system
 of $n$ equations in $n$ unknowns has only the trivial solution if its
 determinant is nonzero. Since the determinant of \eqref{eq:9.1.8} is
@@ -142,26 +142,26 @@ $$
 \left|\begin{array}{rrr}1&0&0\\2&1&-3\\2&4&0\end{array}\right|=12,
 $$
 it follows that \eqref{eq:9.1.8} has only the trivial solution, so
-$\{y_1,y_2,y_3\}$ is linearly independent on $(0,\infty)$. Now
+$\{y_{1},y_{2},y_{3}\}$ is linearly independent on $(0,\infty)$. Now
 Theorem~\ref{thmtype:9.1.2} implies that
 $$
-y=c_1x^2+c_2x^3+{c_3\over x}
+y=c_{1}x^{2}+c_{2}x^{3}+\frac{c_{3}}{x}
 $$
 is the general solution of \eqref{eq:9.1.5} on $(0,\infty)$.
 To see that this is also true
  on $(-\infty,0)$,  assume that \eqref{eq:9.1.6} holds on
 $(-\infty,0)$. Setting $x=-1$ in \eqref{eq:9.1.7} yields
 \begin{eqnarray*}
-\phantom{-2}c_1-\phantom{3}c_2-\phantom{2}c_3&=&0\\
--2c_1+3c_2-\phantom{2}c_3&=&0\\
-\phantom{-}2c_1-6c_2-2c_3&=&0.
+\phantom{-2}c_{1}-\phantom{3}c_{2}-\phantom{2}c_{3}&=&0\\
+-2c_{1}+3c_{2}-\phantom{2}c_{3}&=&0\\
+\phantom{-}2c_{1}-6c_{2}-2c_{3}&=&0.
 \end{eqnarray*}
 Since the determinant of this system is
 $$
 \left|\begin{array}{rrr}1&-1&-1\\-2&3&-1\\2&-6&-2\end{array}\right|=
 \left|\begin{array}{rrr}1&0&0\\-2&1&-3\\2&-4&0\end{array}\right|=-12,
 $$
-it follows that $c_1=c_2=c_3=0$; that is, $\{y_1,y_2,y_3\}$
+it follows that $c_{1}=c_{2}=c_{3}=0$; that is, $\{y_{1},y_{2},y_{3}\}$
 is linearly independent on $(-\infty,0)$.
 
 \begin{example}\label{example:9.1.2}\rm
@@ -169,36 +169,36 @@ The equation
 \begin{equation}\label{eq:9.1.9}
 y^{(4)}+y'''-7y''-y'+6y=0
 \end{equation}
-is normal and has the solutions $y_1=e^x$, $y_2=e^{-x}$, $y_3=e^{2x}$,
-and $y_4=e^{-3x}$ on $(-\infty,\infty)$. (Verify.) Show that
-$\{y_1,y_2,y_3,y_4\}$ is linearly independent on $(-\infty,\infty)$.
+is normal and has the solutions $y_{1}=e^{x}$, $y_{2}=e^{-x}$, $y_{3}=e^{2x}$,
+and $y_{4}=e^{-3x}$ on $(-\infty,\infty)$. (Verify.) Show that
+$\{y_{1},y_{2},y_{3},y_{4}\}$ is linearly independent on $(-\infty,\infty)$.
 Then find the general solution of \eqref{eq:9.1.9}.
 \end{example}
 
 \solution
-Suppose   $c_1$, $c_2$, $c_3$, and $c_4$
+Suppose   $c_{1}$, $c_{2}$, $c_{3}$, and $c_{4}$
 are constants such that
 \begin{equation} \label{eq:9.1.10}
-c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x}=0
+c_{1}e^{x}+c_{2}e^{-x}+c_{3}e^{2x}+c_{4}e^{-3x}=0
 \end{equation}
-for all $x$. We must show that $c_1=c_2=c_3=c_4=0$. Differentiating
+for all $x$. We must show that $c_{1}=c_{2}=c_{3}=c_{4}=0$. Differentiating
 \eqref{eq:9.1.10} three times yields the system
 \begin{equation} \label{eq:9.1.11}
 \begin{array}{rcl}
-c_1e^x+c_2e^{-x}+\phantom{2}c_3e^{2x}+\phantom{27}c_4e^{-3x}&=&0\\
-c_1e^x-c_2e^{-x}+2c_3e^{2x}-\phantom{2}3c_4e^{-3x}&=&0\\
-c_1e^x+c_2e^{-x}+4c_3e^{2x}+\phantom{2}9c_4e^{-3x}&=&0\\
-c_1e^x-c_2e^{-x}+8c_3e^{2x}-27c_4e^{-3x}&=&0.
+c_{1}e^{x}+c_{2}e^{-x}+\phantom{2}c_{3}e^{2x}+\phantom{27}c_{4}e^{-3x}&=&0\\
+c_{1}e^{x}-c_{2}e^{-x}+2c_{3}e^{2x}-\phantom{2}3c_{4}e^{-3x}&=&0\\
+c_{1}e^{x}+c_{2}e^{-x}+4c_{3}e^{2x}+\phantom{2}9c_{4}e^{-3x}&=&0\\
+c_{1}e^{x}-c_{2}e^{-x}+8c_{3}e^{2x}-27c_{4}e^{-3x}&=&0.
 \end{array}
 \end{equation}
 If \eqref{eq:9.1.11} holds for all $x$, then it certainly holds for $x=0$.
 Therefore
 $$
 \begin{array}{rcl}
-c_1+c_2+\phantom{2}c_3+\phantom{27}c_4&=&0\\
-c_1-c_2+2c_3-\phantom{2}3c_4&=&0\\
-c_1+c_2+4c_3+\phantom{2}9c_4&=&0\\
-c_1-c_2+8c_3-27c_4&=&0.
+c_{1}+c_{2}+\phantom{2}c_{3}+\phantom{27}c_{4}&=&0\\
+c_{1}-c_{2}+2c_{3}-\phantom{2}3c_{4}&=&0\\
+c_{1}+c_{2}+4c_{3}+\phantom{2}9c_{4}&=&0\\
+c_{1}-c_{2}+8c_{3}-27c_{4}&=&0.
 \end{array}
 $$
 The determinant of this system is
@@ -215,10 +215,10 @@ The determinant of this system is
 -2\left|\begin{array}{rr}3&8\\6&-24\end{array}\right|=240,
 \end{array}
 \end{equation}
-so the system has only the trivial solution $c_1=c_2=c_3=c_4=0$.
+so the system has only the trivial solution $c_{1}=c_{2}=c_{3}=c_{4}=0$.
 Now Theorem~\ref{thmtype:9.1.2} implies that
 $$
-y=c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x}
+y=c_{1}e^{x}+c_{2}e^{-x}+c_{3}e^{2x}+c_{4}e^{-3x}
 $$
 is the general solution of \eqref{eq:9.1.9}.
 
@@ -226,43 +226,43 @@ is the general solution of \eqref{eq:9.1.9}.
 
 \noindent
 We can use the method used in Examples~\ref{example:9.1.1} and
-\ref{example:9.1.2} to test $n$ solutions $\{y_1,y_2,\dots,y_n\}$ of any
+\ref{example:9.1.2} to test $n$ solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of any
 $n$th order equation $Ly=0$ for linear independence on an interval
-$(a,b)$ on which the equation is normal. Thus, if $c_1$, $c_2$ ,\dots,
-$c_n$ are constants such that
+$(a,b)$ on which the equation is normal. Thus, if $c_{1}$, $c_{2}$ ,\dots,
+$c_{n}$ are constants such that
 $$
-c_1y_1+c_2y_2+\cdots+c_ny_n=0,\quad a<x<b,
+c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}=0,\quad a<x<b,
 $$
 then differentiating $n-1$ times leads to the $n\times n$
 system of equations
 \begin{equation} \label{eq:9.1.13}
 \begin{array}{rcl}
-c_1y_1(x)+c_2y_2(x)+&\cdots&+c_ny_n(x)=0\\
-c_1y_1'(x)+c_2y_2'(x)+&\cdots&+c_ny_n'(x)=0\\
-\phantom{c_1y_1^{(n)}(x)+c_2y_2^{(n-1)}(x)}&\vdots&
-\phantom{\cdots+c_ny_n^{(n-1)(x)}=q}\\
-c_1y_1^{(n-1)}(x)+c_2y_2^{(n-1)}(x)+&\cdots&+c_ny_n^{(n-1)}(x)
+c_{1}y_{1}(x)+c_{2}y_{2}(x)+&\cdots&+c_{n}y_{n}(x)=0\\
+c_{1}y_{1}'(x)+c_{2}y_{2}'(x)+&\cdots&+c_{n}y_{n}'(x)=0\\
+\phantom{c_{1}y_{1}^{(n)}(x)+c_{2}y_{2}^{(n-1)}(x)}&\vdots&
+\phantom{\cdots+c_{n}y_{n}^{(n-1)(x)}=q}\\
+c_{1}y_{1}^{(n-1)}(x)+c_{2}y_{2}^{(n-1)}(x)+&\cdots&+c_{n}y_{n}^{(n-1)}(x)
 =0
 \end{array}
 \end{equation}
-for $c_1$, $c_2$, \dots, $c_n$. For a fixed $x$,  the determinant of this
+for $c_{1}$, $c_{2}$, \dots, $c_{n}$. For a fixed $x$,  the determinant of this
 system is
 $$
 W(x)=\left|\begin{array}{cccc}
-y_1(x)&y_2(x)&\cdots&y_n(x)\\[2\jot]
-y'_1(x)&y'_2(x)&\cdots&y_n'(x)\\[2\jot]
+y_{1}(x)&y_{2}(x)&\cdots&y_{n}(x)\\[2\jot]
+y'_{1}(x)&y'_{2}(x)&\cdots&y_{n}'(x)\\[2\jot]
 \vdots&\vdots&\ddots&\vdots\\[2\jot]
-y_1^{(n-1)}(x)&y_2^{(n-1)}(x)&\cdots&y_n^{(n-1)}(x)
+y_{1}^{(n-1)}(x)&y_{2}^{(n-1)}(x)&\cdots&y_{n}^{(n-1)}(x)
 \end{array}\right|.
 $$
 We call this determinant the
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Wronski/}
 {\color{blue}\it Wronskian\/} of
-$\{y_1,y_2,\dots,y_n\}$. If $W(x)\ne0$ for some $x$ in $(a,b)$ then
+$\{y_{1},y_{2},\dots,y_{n}\}$. If $W(x)\ne0$ for some $x$ in $(a,b)$ then
  the system \eqref{eq:9.1.13} has only the trivial solution
-$c_1=c_2=\cdots=c_n=0$, and Theorem~\ref{thmtype:9.1.2} implies that
+$c_{1}=c_{2}=\cdots=c_{n}=0$, and Theorem~\ref{thmtype:9.1.2} implies that
 $$
-y=c_1y_1+c_2y_2+\cdots+c_ny_n
+y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}
 $$
 is the general solution of $Ly=0$ on $(a,b)$.
 
@@ -272,13 +272,13 @@ The proof is sketched in (Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.20}).
 \begin{theorem}\color{blue}\label{thmtype:9.1.3}
  Suppose the   homogeneous linear $n$th order equation
 \begin{equation}\label{eq:9.1.14}
-P_0(x)y^{(n)}+P_1(x)y^{n-1}+\cdots+P_n(x)y=0
+P_{0}(x)y^{(n)}+P_{1}(x)y^{n-1}+\cdots+P_{n}(x)y=0
 \end{equation}
-is normal on $(a,b)$, let $y_1$, $y_2$, \dots, $y_n$ be solutions of
-\eqref{eq:9.1.14} on $(a,b)$, and let $x_0$ be in $(a,b)$. Then the
-Wronskian of $\{y_1,y_2,\dots,y_n\}$ is given by
+is normal on $(a,b)$, let $y_{1}$, $y_{2}$, \dots, $y_{n}$ be solutions of
+\eqref{eq:9.1.14} on $(a,b)$, and let $x_{0}$ be in $(a,b)$. Then the
+Wronskian of $\{y_{1},y_{2},\dots,y_{n}\}$ is given by
 \begin{equation}  \label{eq:9.1.15}
-W(x)=W(x_0)\exp\left\{-\int^x_{x_0}{P_1(t)\over P_0(t)}\,
+W(x)=W(x_{0})\exp\left\{-\int^{x}_{x_{0}}\frac{P_{1}(t)}{P_{0}(t)}\,
 dt\right\},\quad a<x<b.
 \end{equation}
 Therefore,  either $W$ has no zeros in  $(a,b)$ or $W\equiv0$
@@ -293,83 +293,81 @@ The next theorem is analogous to
 Theorem~\ref{thmtype:5.1.6}..
 
 \begin{theorem}\color{blue}\label{thmtype:9.1.4}
-Suppose $Ly=0$ is normal on $(a,b)$ and let $y_1$, $y_2$, \dots, $y_n$
+Suppose $Ly=0$ is normal on $(a,b)$ and let $y_{1}$, $y_{2}$, \dots, $y_{n}$
 be $n$ solutions of $Ly=0$ on $(a,b)$. Then the following statements
 are equivalent;  that is, they are either all true or all false:
 \begin{alist}
 \item % (a)
 The general solution of $Ly=0$ on $(a,b)$ is
-$y=c_1y_1+c_2y_2+\cdots+c_ny_n$.
+$y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}$.
 \item % (b)
- $\{y_1,y_2,\dots,y_n\}$ is a fundamental set of solutions of
+ $\{y_{1},y_{2},\dots,y_{n}\}$ is a fundamental set of solutions of
 $Ly=0$ on $(a,b)$.
 \item % (c)
-$\{y_1,y_2,\dots,y_n\}$ is linearly independent on $(a,b)$.
+$\{y_{1},y_{2},\dots,y_{n}\}$ is linearly independent on $(a,b)$.
 \item % (d)
-The Wronskian of $\{y_1,y_2,\dots,y_n\}$ is nonzero at some point in
+The Wronskian of $\{y_{1},y_{2},\dots,y_{n}\}$ is nonzero at some point in
 $(a,b)$.
 \item % (e)
-The Wronskian of $\{y_1,y_2,\dots,y_n\}$ is nonzero at all points in
+The Wronskian of $\{y_{1},y_{2},\dots,y_{n}\}$ is nonzero at all points in
 $(a,b)$.
 \end{alist}
 \end{theorem}
 
 \begin{example}\label{example:9.1.3} \rm
-In Example~\ref{example:9.1.1} we saw that the solutions $y_1=x^2$,
-$y_2=x^3$, and $y_3=1/x$ of
+In Example~\ref{example:9.1.1} we saw that the solutions $y_{1}=x^{2}$,
+$y_{2}=x^{3}$, and $y_{3}=1/x$ of
 $$
-x^3y'''-x^2y''-2xy'+6y=0
+x^{3}y'''-x^{2}y''-2xy'+6y=0
 $$
 are linearly independent on $(-\infty,0)$ and $(0,\infty)$. Calculate
-the Wronskian  of $\{y_1,y_2,y_3\}$.
+the Wronskian  of $\{y_{1},y_{2},y_{3}\}$.
 \end{example}
 
 \solution
 If $x\ne0$,  then
 $$
 W(x)=\left|\begin{array}{ccc}
-x^2&\phantom{2}x^3&\phantom{-}\dst{1\over x}\\[2\jot]
-2x&3x^2\phantom{^2}&\dst-\dst{1\over x^2}\\[2\jot]
-2&6x\phantom{x^2}&\phantom{-}\dst{2\over x^3}\end{array}
+x^{2}&\phantom{2}x^{3}&\phantom{-}\dst\frac{1}{x}\\[2\jot]
+2x&3x^{2}\phantom{^{2}}&\dst-\dst\frac{1}{x^{2}}\\[2\jot]
+2&6x\phantom{x^{2}}&\phantom{-}\dst\frac{2}{x^{3}}\end{array}
 \right|
-=2x^3\left|\begin{array}{ccc}
-1&\phantom{3}x&\phantom{-}\dst{1\over x^3}\\[2\jot]2&3x&-\dst{1\over
-x^3}
-\\[2\jot]1&3x&\phantom{-}\dst{1\over x^3}\end{array}\right|,
+=2x^{3}\left|\begin{array}{ccc}
+1&\phantom{3}x&\phantom{-}\dst\frac{1}{x^{3}}\\[2\jot]2&3x&-\dst\frac{1}{x^{3}}
+\\[2\jot]1&3x&\phantom{-}\dst\frac{1}{x^{3}}\end{array}\right|,
 $$
-where we factored $x^2$, $x$, and $2$ out of the first, second, and
+where we factored $x^{2}$, $x$, and $2$ out of the first, second, and
 third  rows of
 $W(x)$, respectively. Adding the second row of the last determinant
 to the first and third rows yields
 $$
-W(x)=2x^3\left|\begin{array}{ccc}
-3&4x&\phantom{-}0\\[2\jot]2&3x&-\dst{1\over
-x^3}
+W(x)=2x^{3}\left|\begin{array}{ccc}
+3&4x&\phantom{-}0\\[2\jot]2&3x&-\dst\frac{1}{x^{3}}
 \\[2\jot]3&6x&\phantom{-}0\end{array}\right|
-=2x^3\left(1\over x^3\right)\left|\begin{array}{cc}3&4x\\3&6x
+=2x^{3}\left(\frac{1}{x^{3}}\right)\left|\begin{array}{cc}3&4x\\3&6x
 \end{array}\right|=12x.
 $$
 Therefore $W(x)\ne0$ on $(-\infty,0)$ and $(0,\infty)$.
 
 \begin{example}\label{example:9.1.4} \rm In
-Example~\ref{example:9.1.2} we saw that the solutions $y_1=e^x$,
-$y_2=e^{-x}$,
-$y_3=e^{2x}$, and $y_4=e^{-3x}$ of
+Example~\ref{example:9.1.2} we saw that the solutions $y_{1}=e^{x}$,
+$y_{2}=e^{-x}$,
+$y_{3}=e^{2x}$, and $y_{4}=e^{-3x}$ of
 $$
 y^{(4)}+y'''-7y''-y'+6y=0
 $$
 are linearly independent on every open interval.
-Calculate the Wronskian  of $\{y_1,y_2,y_3,y_4\}$.
+Calculate the Wronskian  of $\{y_{1},y_{2},y_{3},y_{4}\}$.
 \end{example}
 
 \solution
 For all $x$,
 $$
 W(x)=\left|\begin{array}{rrrr}
-e^x&e^{-x}&e^{2x}&e^{-3x}\\
-e^x&-e^{-x}&2e^{2x}&-3e^{-3x}\\
-e^x&e^{-x}&4e^{2x}&9e^{-3x}\\
-e^x&-e^{-x}&8e^{2x}&-27e^{-3x}
+e^{x}&e^{-x}&e^{2x}&e^{-3x}\\
+e^{x}&-e^{-x}&2e^{2x}&-3e^{-3x}\\
+e^{x}&e^{-x}&4e^{2x}&9e^{-3x}\\
+e^{x}&-e^{-x}&8e^{2x}&-27e^{-3x}
 \end{array}\right|.
 $$
 Factoring the exponential common factor from each row yields
@@ -392,7 +390,7 @@ are real numbers, not all zero.
 Under the assumptions of Theorem~\ref{thmtype:10.3.3}, suppose
 $y_{1}$ and $y_{2}$ are  solutions  of \eqref{eq:5.1.35}   such that
 \begin{equation} \label{eq:9.1.16}
-\alpha y_{i}(c)+ y_{i}'(c)+\cdots +y_{i}^{(n-1)}(c)=0,\quad 1\le i\le n.
+\alpha y_{i}(c)+y_{i}'(c)+\cdots+y_{i}^{(n-1)}(c)=0,\quad1\le i\le n.
 \end{equation}
 Then $\{y_{1},y_{2},\dots y_{n}\}$ isn't  linearly independent on $(a,b)$.
 \end{theorem}
@@ -411,10 +409,10 @@ $$
 so
 $$
 \left|\begin{array}{cccccc}
-y_{1}(c)&y_{2}(c)&\cdots& y_{n}(c)\\
-y_{1}'(c)&y_{2}'(c)&\cdots& y_{n}'(c)\\
+y_{1}(c)&y_{2}(c)&\cdots&y_{n}(c)\\
+y_{1}'(c)&y_{2}'(c)&\cdots&y_{n}'(c)\\
 \vdots&\vdots&\ddots&\vdots\\
-y_{1}^{(n-1)}(c)&y_{2}^{(n-1)}(c)(c)&\cdots& y_{n}^{(n-1)}(c)(c)\\
+y_{1}^{(n-1)}(c)&y_{2}^{(n-1)}(c)(c)&\cdots&y_{n}^{(n-1)}(c)(c)\\
 \end{array}\right|=0
 $$
 \nopagebreak
@@ -431,28 +429,28 @@ solution of $Ly=F$ and a fundamental set of solutions of the {\color{blue}\it
 complementary equation\/} $Ly=0$.
 
 \begin{theorem}\color{blue}\label{thmtype:9.1.6}
-Suppose $Ly=F$ is normal on $(a,b)$. Let $y_p$ be a particular
-solution of $Ly=F$ on $(a,b)$, and let $\{y_1,y_2,\dots,y_n\}$ be a
+Suppose $Ly=F$ is normal on $(a,b)$. Let $y_{p}$ be a particular
+solution of $Ly=F$ on $(a,b)$, and let $\{y_{1},y_{2},\dots,y_{n}\}$ be a
 fundamental set of solutions of the complementary equation $Ly=0$ on
 $(a,b)$. Then $y$ is a solution of $Ly=F$ on $(a,b)$ if and only if
 $$
-y=y_p+c_1y_1+c_2y_2+\cdots+c_ny_n,
+y=y_{p}+c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n},
 $$
-where $c_1,c_2,\dots,c_n$  are constants.
+where $c_{1},c_{2},\dots,c_{n}$  are constants.
 \end{theorem}
 
 The next theorem is analogous to Theorem~\ref{thmtype:5.3.2}.
 
 \begin{theorem}\color{blue}$[$The Principle of
 Superposition$]$\label{thmtype:9.1.7}
-Suppose for each $i=1$, $2$, \dots, $r$, the function $y_{p_i}$ is a
-particular solution of $Ly=F_i$ on  $(a,b)$. Then
+Suppose for each $i=1$, $2$, \dots, $r$, the function $y_{p_{i}}$ is a
+particular solution of $Ly=F_{i}$ on  $(a,b)$. Then
 $$
-y_p=y_{p_1}+y_{p_2}+\cdots+y_{p_r}
+y_{p}=y_{p_{1}}+y_{p_{2}}+\cdots+y_{p_{r}}
 $$
 is a particular  solution of
 $$
-Ly=F_1(x)+F_2(x)+\cdots+F_r(x)
+Ly=F_{1}(x)+F_{2}(x)+\cdots+F_{r}(x)
 $$
 on $(a,b)$.
 \end{theorem}
@@ -468,43 +466,43 @@ throughout the rest of this chapter.
 Verify that the given function is the solution of the initial
 value problem.
 
-\part{a} $ x^3y'''-3x^2y''+6xy'-6y=-\dst{24\over x}, \quad  y(-1)=0$, $
-y'(-1)=0, \quad  y''(-1)=0$;
+\part{a} $ x^{3}y'''-3x^{2}y''+6xy'-6y=-\dst\frac{24}{x},\quad  y(-1)=0$, $
+y'(-1)=0,\quad  y''(-1)=0$;
 
-\hspace*{15pt}$\dst{y=-6x-8x^2-3x^3+{1\over x}}$
+\hspace*{15pt}$\dst{y=-6x-8x^{2}-3x^{3}+\frac{1}{x}}$
 
-\part{b} $\dst{ y'''-{1\over x}y''-y'+{1\over x}y={x^2-4\over x^4}, \quad
-y(1)={3\over2},\quad y'(1)={1\over2}}$, $ y''(1)=1$;
+\part{b} $\dst{y'''-\frac{1}{x}y''-y'+\frac{1}{x}y=\frac{x^{2}-4}{x^{4}},\quad
+y(1)=\frac{3}{2},\quad y'(1)=\frac{1}{2}}$, $ y''(1)=1$;
 
-\hspace*{15pt} $y=x+\dst{1\over2x}$
+\hspace*{15pt} $y=x+\dst\frac{1}{2x}$
 
-\part{c} $xy'''-y''-xy'+y=x^2, \quad  y(1)=2,\quad y'(1)=5,\quad
+\part{c} $xy'''-y''-xy'+y=x^{2},\quad  y(1)=2,\quad y'(1)=5,\quad
 y''(1)=-1$;
 
-\hspace*{15pt} $y=-x^2-2+2e^{(x-1)}-e^{-(x-1)}+4x$
+\hspace*{15pt} $y=-x^{2}-2+2e^{(x-1)}-e^{-(x-1)}+4x$
 
-\part{d} $4x^3y'''+4x^2y''-5xy'+2y=30x^2, \quad  y(1)=5,\quad
-y'(1)=\dst{17\over2}$;
+\part{d} $4x^{3}y'''+4x^{2}y''-5xy'+2y=30x^{2},\quad  y(1)=5,\quad
+y'(1)=\dst\frac{17}{2}$;
 
-\hspace*{15pt} $y''(1)=\dst{63\over4};\quad y=2x^2\ln
-x-x^{1/2}+2x^{-1/2}+4x^2$
+\hspace*{15pt} $y''(1)=\dst\frac{63}{4};\quad y=2x^{2}\ln
+x-x^{1/2}+2x^{-1/2}+4x^{2}$
 
-\part{e} $x^4y^{(4)}-4x^3y'''+12x^2y''-24xy'+24y=6x^4, \quad  y(1)=-2$,
+\part{e} $x^{4}y^{(4)}-4x^{3}y'''+12x^{2}y''-24xy'+24y=6x^{4},\quad  y(1)=-2$,
 
-\hspace*{15pt} $y'(1)=-9, \quad  y''(1)=-27,\quad y'''(1)=-52$;
+\hspace*{15pt} $y'(1)=-9,\quad  y''(1)=-27,\quad y'''(1)=-52$;
 
-\hspace*{15pt} $y=x^4\ln x+x-2x^2+3x^3-4x^4$
+\hspace*{15pt} $y=x^{4}\ln x+x-2x^{2}+3x^{3}-4x^{4}$
 
 \part{f}
-$xy^{(4)}-y'''-4xy''+4y'=96x^2, \quad  y(1)=-5,\quad y'(1)=-24$
+$xy^{(4)}-y'''-4xy''+4y'=96x^{2},\quad  y(1)=-5,\quad y'(1)=-24$
 
-\hspace*{15pt} $y''(1)=-36; \quad   y'''(1)=-48;\quad y=9-12x+6x^2-8x^3$
+\hspace*{15pt} $y''(1)=-36;\quad   y'''(1)=-48;\quad y=9-12x+6x^{2}-8x^{3}$
 
 \item\label{exer:9.1.2}
 Solve the initial value problem
 $$
-x^3y'''-x^2 y''-2xy'+6y=0,
-\quad   y(-1)=-4, \quad   y'(-1)=-14,\quad   y''(-1)=-20.
+x^{3}y'''-x^{2}y''-2xy'+6y=0,
+\quad   y(-1)=-4,\quad   y'(-1)=-14,\quad   y''(-1)=-20.
 $$
 \hint{See Example~\ref{example:9.1.1}.}
 
@@ -517,12 +515,12 @@ $$
 \hint{See Example~\ref{example:9.1.2}.}
 
 \item\label{exer:9.1.4}
-Find solutions $y_1$, $y_2$, \dots, $y_n$ of the equation $y^{(n)}=0$
+Find solutions $y_{1}$, $y_{2}$, \dots, $y_{n}$ of the equation $y^{(n)}=0$
 that satisfy the initial conditions
 $$
-y_i^{(j)}(x_0)=\left\{\begin{array}{cl}
+y_{i}^{(j)}(x_{0})=\left\{\begin{array}{cl}
 0,&j\ne i-1,\\[1\jot]
-1,&j=i-1,\end{array}\right.\; 1\le i\le n.
+1,&j=i-1,\end{array}\right.\;1\le i\le n.
 $$
 
 \item\label{exer:9.1.5}
@@ -530,30 +528,30 @@ $$
 \item %(a)
 Verify that the function
 $$
-y=c_1x^3+c_2x^2+{c_3\over x}
+y=c_{1}x^{3}+c_{2}x^{2}+\frac{c_{3}}{x}
 $$
 satisfies
 $$
-x^3 y'''-x^2y''-2xy'+6y=0
-\eqno{\rm (A)}
+x^{3}y'''-x^{2}y''-2xy'+6y=0
+\eqno{\rm(A)}
 $$
-if $c_1$, $c_2$, and $c_3$ are constants.
+if $c_{1}$, $c_{2}$, and $c_{3}$ are constants.
 
 \item %(b)
-Use \part{a} to find solutions $y_1$, $y_2$, and $y_3$ of
+Use \part{a} to find solutions $y_{1}$, $y_{2}$, and $y_{3}$ of
 (A) such that
 $$
 \begin{array}{rl}
-y_1(1)&=1,\quad y_1'(1)=0,\quad  y_1''(1)=0  \\[1\jot]
-y_2(1)&=0,\quad  y_2'(1)=1,\quad  y_2''(1)=0  \\[1\jot]
-y_3(1)&=0,\quad  y_3'(1)=0,\quad  y_3''(1)=1.
+y_{1}(1)&=1,\quad y_{1}'(1)=0,\quad  y_{1}''(1)=0\\[1\jot]
+y_{2}(1)&=0,\quad  y_{2}'(1)=1,\quad  y_{2}''(1)=0\\[1\jot]
+y_{3}(1)&=0,\quad  y_{3}'(1)=0,\quad  y_{3}''(1)=1.
 \end{array}
 $$
 
 \item %(c)
 Use \part{b} to find the solution of  (A) such that
 $$
-y(1)=k_0,\quad y'(1)=k_1,\quad   y''(1)=k_2.
+y(1)=k_{0},\quad y'(1)=k_{1},\quad   y''(1)=k_{2}.
 $$
 \end{alist}
 
@@ -562,44 +560,44 @@ Verify that the given functions are solutions of the given equation, and
  show that they  form a fundamental set of solutions of the
 equation on any interval on which the equation is normal.
 
-\part{a} $y'''+y''-y'-y=0;  \quad\{e^x,\,e^{-x},\,xe^{-x}\}$
+\part{a} $y'''+y''-y'-y=0;\quad\{e^{x},\,e^{-x},\,xe^{-x}\}$
 
-\part{b} $y'''-3y''+7y'-5y=0;  \quad\{e^x,\,e^x\cos2x,\,e^x\sin2x\}$.
+\part{b} $y'''-3y''+7y'-5y=0;\quad\{e^{x},\,e^{x}\cos2x,\,e^{x}\sin2x\}$.
 
-\part{c} $xy'''-y''-xy'+y=0;  \quad \{e^x,\,e^{-x},\,x\}$
+\part{c} $xy'''-y''-xy'+y=0;\quad\{e^{x},\,e^{-x},\,x\}$
 
-\part{d} $x^2y'''+2xy''-(x^2+2)y=0;  \quad\dst\{e^x/ x,\,e^{-x}/
+\part{d} $x^{2}y'''+2xy''-(x^{2}+2)y=0;\quad\dst\{e^{x}/x,\,e^{-x}/
 x,\,1\}$
 
-\part{e} $(x^2-2x+2)y'''-x^2y''+2xy'-2y=0;  \quad \{x,\,x^2,\,e^x\}$
+\part{e} $(x^{2}-2x+2)y'''-x^{2}y''+2xy'-2y=0;\quad\{x,\,x^{2},\,e^{x}\}$
 
 \part{f}
 $(2x-1)y^{(4)}-4xy'''+(5-2x)y''+4xy'-4y=0;
-\quad\{x,\,e^x,\,e^{-x},e^{2x}\}$
+\quad\{x,\,e^{x},\,e^{-x},e^{2x}\}$
 
-\part{g} $xy^{(4)}-y'''-4xy'+4y'=0;  \quad\{1,x^2,\,e^{2x},\,e^{-2x}\}$
+\part{g} $xy^{(4)}-y'''-4xy'+4y'=0;\quad\{1,x^{2},\,e^{2x},\,e^{-2x}\}$
 
 \item\label{exer:9.1.7} Find the Wronskian $W$ of a set of three solutions
-of $$ y'''+2xy''+e^xy'-y=0, $$ given that $W(0)=2$.
+of $$ y'''+2xy''+e^{x}y'-y=0, $$ given that $W(0)=2$.
 
 \item\label{exer:9.1.8}
 Find the Wronskian $W$ of a set of four solutions of
 $$
-y^{(4)}+(\tan x)y'''+x^2y''+2xy=0,
+y^{(4)}+(\tan x)y'''+x^{2}y''+2xy=0,
 $$
 given that $W(\pi/4)=K$.
 
 \item\label{exer:9.1.9}
 \begin{alist}
 \item %(a)
-Evaluate the Wronskian $W$ $\{e^x,\,xe^x,\,
-x^2e^x\}$. Evaluate $W(0)$.
+Evaluate the Wronskian $W$ $\{e^{x},\,xe^{x},\,
+x^{2}e^{x}\}$. Evaluate $W(0)$.
 
 \item %(b)
-Verify that $y_1$, $y_2$, and $y_3$ satisfy
+Verify that $y_{1}$, $y_{2}$, and $y_{3}$ satisfy
 $$
 y'''-3y''+3y'-y=0.
-\eqno{\rm (A)}
+\eqno{\rm(A)}
 $$
 
 \item %(c)
@@ -613,94 +611,94 @@ What is the general solution of  (A)?
 Compute the Wronskian of the given set of functions.
 
 \noindent\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $\{1,\,e^x,\,e^{-x}\}$
-&\part{b} $\{e^x,\, e^x\sin x,\,e^x\cos x\}$
+\part{a} $\{1,\,e^{x},\,e^{-x}\}$
+&\part{b} $\{e^{x},\,e^{x}\sin x,\,e^{x}\cos x\}$
 \end{tabular}
 
 \noindent\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{c} $\{2,\,x+1,\,x^2+2\}$
+\part{c} $\{2,\,x+1,\,x^{2}+2\}$
 &\part{d} $ x,\,x\ln x,\,1/x\}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \part{e} $\dst{\{1,\,x,\,{x^2\over2!},\,
-{x^3\over3!}\,,\cdots,\,{x^n\over n!}}\}$&
-\part{f} $\{e^x,\,e^{-x},\,x\}$
+ \part{e} $\dst{\{1,\,x,\,\frac{x^{2}}{2!},\,
+\frac{x^{3}}{3!}\,,\cdots,\,\frac{x^{n}}{n!}}\}$&
+\part{f} $\{e^{x},\,e^{-x},\,x\}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{g}  $\{e^x/x,\,e^{-x}/x,\,1\}$&
-\part{h}  $\{x,\,x^2,\,e^x\}$
+\part{g}  $\{e^{x}/x,\,e^{-x}/x,\,1\}$&
+\part{h}  $\{x,\,x^{2},\,e^{x}\}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{i} $\{x,\,x^3,\,1/x,\,1/x^2\}$&
-\part{j}  $\{e^x,\,e^{-x},\,x,\,e^{2x}\}$
+\part{i} $\{x,\,x^{3},\,1/x,\,1/x^{2}\}$&
+\part{j}  $\{e^{x},\,e^{-x},\,x,\,e^{2x}\}$
 \end{tabular}
 
-\part{k} $\{e^{2x},\,e^{-2x},\,1,\,x^2\}$
+\part{k} $\{e^{2x},\,e^{-2x},\,1,\,x^{2}\}$
 
 \item\label{exer:9.1.11}
-Suppose $Ly=0$ is normal on $(a,b)$ and $x_0$ is in $(a,b)$. Use
+Suppose $Ly=0$ is normal on $(a,b)$ and $x_{0}$ is in $(a,b)$. Use
 Theorem~\ref{thmtype:9.1.1} to show that $y\equiv0$ is the only solution
 of the initial value problem
 $$
-Ly=0, \quad  y(x_0)=0,\quad y'(x_0)=0,\dots, y^{(n-1)}(x_0)=0,
+Ly=0,\quad  y(x_{0})=0,\quad y'(x_{0})=0,\dots,y^{(n-1)}(x_{0})=0,
 $$
 on $(a,b)$.
 
 \item\label{exer:9.1.12}
-Prove:  If $y_1$, $y_2$, \dots, $y_n$ are solutions of $Ly=0$ and the
+Prove:  If $y_{1}$, $y_{2}$, \dots, $y_{n}$ are solutions of $Ly=0$ and the
 functions
 $$
-z_i=\sum^n_{j=1}a_{ij}y_j,\quad 1\le i\le n,
+z_{i}=\sum^{n}_{j=1}a_{ij}y_{j},\quad1\le i\le n,
 $$
-form a fundamental set of solutions of $Ly=0$, then so do $y_1$, $y_2$,
-\dots, $y_n$.
+form a fundamental set of solutions of $Ly=0$, then so do $y_{1}$, $y_{2}$,
+\dots, $y_{n}$.
 
 \item\label{exer:9.1.13}
 Prove:  If
 $$
-y=c_1y_1+c_2y_2+\cdots+c_ky_k+y_p
+y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{k}y_{k}+y_{p}
 $$
 is a solution of a linear equation $Ly=F$ for every choice of the
-constants $c_1$, $c_2$ ,\dots, $c_k$, then $Ly_i=0$ for $1\le i\le k$.
+constants $c_{1}$, $c_{2}$ ,\dots, $c_{k}$, then $Ly_{i}=0$ for $1\le i\le k$.
 
 \item\label{exer:9.1.14}
-Suppose $Ly=0$ is normal on $(a,b)$ and let $x_0$ be in $(a,b)$.
-For $1\le i\le n$, let $y_i$ be the solution of the initial value
+Suppose $Ly=0$ is normal on $(a,b)$ and let $x_{0}$ be in $(a,b)$.
+For $1\le i\le n$, let $y_{i}$ be the solution of the initial value
 problem
 $$
-Ly_i=0, \quad  y_i^{(j)} (x_0)=
+Ly_{i}=0,\quad  y_{i}^{(j)}(x_{0})=
 \left\{\begin{array}{cl}
-0,& j\ne i-1,\\ [1\jot]
-1,&j=i-1,\end{array}\right. 1\le i\le n,
+0,&j\ne i-1,\\[1\jot]
+1,&j=i-1,\end{array}\right.1\le i\le n,
 $$
-where $x_0$ is an arbitrary point in $(a,b)$.  Show that any solution
-of $Ly=0$ on $(a, b)$, can be written as
+where $x_{0}$ is an arbitrary point in $(a,b)$.  Show that any solution
+of $Ly=0$ on $(a,b)$, can be written as
 $$
-y=c_1y_1+c_2y_2+\cdots+c_ny_n,
+y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n},
 $$
-with $c_j=y^{(j-1)}(x_0)$.
+with $c_{j}=y^{(j-1)}(x_{0})$.
 
 \item\label{exer:9.1.15}
-Suppose $\{y_1, y_2,\dots, y_n\}$ is a fundamental set of
+Suppose $\{y_{1},y_{2},\dots,y_{n}\}$ is a fundamental set of
 solutions of
 $$
-\dst P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=0
+\dst P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=0
 $$
 on $(a,b)$, and let
 $$
 \begin{array}{rl}
-z_1&=a_{11}y_1+a_{12}y_2+\cdots+a_{1n}y_n\\
-z_2&=a_{21}y_1+a_{22}y_2+\cdots+a_{2n}y_n\\
-\phantom{z_1}&\vdots\phantom{_1y_1+a}\vdots
-\phantom{_2y_2+\cdots+a}\vdots\phantom{_ny_n} \phantom{=b}\vdots\\
-z_n&=a_{n1}y_1+a_{n2}y_2+\cdots+a_{nn}y_n,
+z_{1}&=a_{11}y_{1}+a_{12}y_{2}+\cdots+a_{1n}y_{n}\\
+z_{2}&=a_{21}y_{1}+a_{22}y_{2}+\cdots+a_{2n}y_{n}\\
+\phantom{z_{1}}&\vdots\phantom{_{1}y_{1}+a}\vdots
+\phantom{_{2}y_{2}+\cdots+a}\vdots\phantom{_{n}y_{n}}\phantom{=b}\vdots\\
+z_{n}&=a_{n1}y_{1}+a_{n2}y_{2}+\cdots+a_{nn}y_{n},
 \end{array}
 $$
-where the $\{a_{ij}\}$ are constants. Show that $\{z_1, z_2,\dots,
-z_n\}$ is a fundamental set of solutions  of (A) if and only if the
+where the $\{a_{ij}\}$ are constants. Show that $\{z_{1},z_{2},\dots,
+z_{n}\}$ is a fundamental set of solutions  of (A) if and only if the
 determinant
 $$
 \left|\begin{array}{cccc}
@@ -713,8 +711,8 @@ is nonzero.\hint{The determinant of a product of  $n\times
 n$ matrices equals the product of the determinants.}
 
 \item\label{exer:9.1.16}
-Show that $\{y_1,y_2,\dots,y_n\}$ is linearly dependent on $(a,b)$ if
-and only if at least one of the functions $y_1$, $y_2$, \dots, $y_n$ can be
+Show that $\{y_{1},y_{2},\dots,y_{n}\}$ is linearly dependent on $(a,b)$ if
+and only if at least one of the functions $y_{1}$, $y_{2}$, \dots, $y_{n}$ can be
 written as a linear combination of the others on $(a,b)$.
 
 \exercisetext{Take the following as a hint in
@@ -728,29 +726,29 @@ a_{11}&a_{12}&\cdots&a_{1n}\\[2\jot]
 a_{21}&a_{22}&\cdots&a_{2n}\\[2\jot]
 \vdots&\vdots&\ddots&\vdots\\[2\jot]
 a_{n1}&a_{n2}&\cdots&a_{nn}\end{array}\right|
-=\sum\pm a_{1i_1}a_{2i_2},\dots,a_{ni_n},
+=\sum\pm a_{1i_{1}}a_{2i_{2}},\dots,a_{ni_{n}},
 $$
-where the sum is over all permutations $(i_1,i_2,\dots,i_n)$ of
-$(1,2,\dots, n)$ and the choice of $+$ or $-$ in each term depends
+where the sum is over all permutations $(i_{1},i_{2},\dots,i_{n})$ of
+$(1,2,\dots,n)$ and the choice of $+$ or $-$ in each term depends
 only on the permutation associated with that term.}
 \color{black}\rm
 
 \item\label{exer:9.1.17}
 Prove:  If
 $$
-A(u_1,u_2,\dots,u_n)=
+A(u_{1},u_{2},\dots,u_{n})=
 \left|\begin{array}{cccc}
 a_{11}&a_{12}&\cdots&a_{1n}\\[2\jot]
 a_{21}&a_{22}&\cdots&a_{2n}\\[2\jot]
 \vdots&\vdots&\ddots&\vdots\\[2\jot]
 a_{n-1,1}&a_{n-1,2}&\cdots&a_{n-1,n}\\[2\jot]
-u_1&u_2&\cdots&u_n\end{array}\right|,
+u_{1}&u_{2}&\cdots&u_{n}\end{array}\right|,
 $$
 then
 $$
-A(u_1+v_1, u_2+v_2,\dots,
-  u_n+v_n)=A(u_1,u_2,\dots,u_n)+A(v_1,v_2,\dots,
-  v_n).
+A(u_{1}+v_{1},u_{2}+v_{2},\dots,
+  u_{n}+v_{n})=A(u_{1},u_{2},\dots,u_{n})+A(v_{1},v_{2},\dots,
+  v_{n}).
 $$
 
 \item\label{exer:9.1.18}
@@ -762,37 +760,37 @@ f_{21}&f_{22}&\cdots&f_{2n}\\[2\jot]
 \vdots&\vdots&\ddots&\vdots\\[2\jot]
 f_{n1}&f_{n2}&\cdots&f_{nn}\end{array}\right|,
 $$
-where $f_{ij}\; (1\le i,\;   j\le n)$ is differentiable.  Show that
+where $f_{ij}\;(1\le i,\;j\le n)$ is differentiable.  Show that
 $$
-F'=F_1+F_2+\cdots+F_n,
+F'=F_{1}+F_{2}+\cdots+F_{n},
 $$
-where $F_i$ is the determinant obtained by differentiating the
+where $F_{i}$ is the determinant obtained by differentiating the
 $i$th row of $F$.
 
 \item\label{exer:9.1.19}
 Use Exercise~\ref{exer:9.1.18}  to show that if $W$ is the
 Wronskian of the
-$n$-times differentiable functions $y_1$, $y_2$, \dots, $y_n$, then
+$n$-times differentiable functions $y_{1}$, $y_{2}$, \dots, $y_{n}$, then
 $$
 W'=
 \left|\begin{array}{cccc}
-y_1&y_2&\cdots&y_n\\[2\jot]
-y'_1&y'_2&\cdots&y'_n\\[2\jot]
+y_{1}&y_{2}&\cdots&y_{n}\\[2\jot]
+y'_{1}&y'_{2}&\cdots&y'_{n}\\[2\jot]
 \vdots&\vdots&\ddots&\vdots\\[2\jot]
-y_1^{(n-2)}&y_2^{(n-2)}&\cdots&y_n^{(n-2)}\\[2\jot]
-y_1^{(n)}&y_2^{(n)}&\cdots&y_n^{(n)}
+y_{1}^{(n-2)}&y_{2}^{(n-2)}&\cdots&y_{n}^{(n-2)}\\[2\jot]
+y_{1}^{(n)}&y_{2}^{(n)}&\cdots&y_{n}^{(n)}
 \end{array}\right|.
 $$
 
 \item\label{exer:9.1.20}
 Use Exercises~\ref{exer:9.1.17} and \ref{exer:9.1.19} to show that if $W$ is
 the Wronskian
-of  solutions $\{y_1,y_2,\dots,y_n\}$ of the normal equation
+of  solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of the normal equation
 $$
-P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=0,
-\eqno{\rm (A)}
+P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=0,
+\eqno{\rm(A)}
 $$
-then $W'=-P_1W/P_0$.
+then $W'=-P_{1}W/P_{0}$.
 Derive Abel's formula (Eqn.~\eqref{eq:9.1.15}) from this.
 \hint{Use (A) to write $y^{(n)}$ in terms of
 $y,y',\dots,y^{(n-1)}$.}
@@ -803,20 +801,20 @@ $y,y',\dots,y^{(n-1)}$.}
 
 \item\label{exer:9.1.23}
 Show that if the Wronskian of the $n$-times continuously
-differentiable functions $\{y_1,y_2,\dots,y_n\}$ has no zeros in
+differentiable functions $\{y_{1},y_{2},\dots,y_{n}\}$ has no zeros in
 $(a,b)$, then the differential equation obtained by expanding the
 determinant
 $$
 \left|\begin{array}{ccccc}
-y&y_1&y_2&\cdots&y_n\\[2\jot]
-y'&y'_1&y'_2&\cdots&y'_n\\[2\jot]
+y&y_{1}&y_{2}&\cdots&y_{n}\\[2\jot]
+y'&y'_{1}&y'_{2}&\cdots&y'_{n}\\[2\jot]
 \vdots&\vdots&\vdots&\ddots&
  \vdots\\[2\jot]
-y^{(n)}&y_{1}^{(n)}&y_2^{(n)}&\cdots&y_n^{(n)}
+y^{(n)}&y_{1}^{(n)}&y_{2}^{(n)}&\cdots&y_{n}^{(n)}
 \end{array}\right|=0,
 $$
 in cofactors of its first column is normal and has
-$\{y_1,y_2,\dots,y_n\}$ as a fundamental set of solutions on $(a,b)$.
+$\{y_{1},y_{2},\dots,y_{n}\}$ as a fundamental set of solutions on $(a,b)$.
 
 \item\label{exer:9.1.24}
 Use the method suggested by Exercise~\ref{exer:9.1.23}  to find a linear
@@ -825,28 +823,28 @@ is a fundamental set of solutions on intervals on which the Wronskian
 of the set has no zeros.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $\{x,\,x^2-1,\,x^2+1\}$&
-\part{b} $\{e^x,\,e^{-x},\,x\}$
+\part{a} $\{x,\,x^{2}-1,\,x^{2}+1\}$&
+\part{b} $\{e^{x},\,e^{-x},\,x\}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{c}  $\{e^x,\,xe^{-x},\,1\}$&
-\part{d}  $\{x,\,x^2,\,e^x\}$
+\part{c}  $\{e^{x},\,xe^{-x},\,1\}$&
+\part{d}  $\{x,\,x^{2},\,e^{x}\}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{e} $\{x,\,x^2,\,1/x\}$&
-\part{f} $\{x+1,\,e^x,\,e^{3x}\}$
+\part{e} $\{x,\,x^{2},\,1/x\}$&
+\part{f} $\{x+1,\,e^{x},\,e^{3x}\}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \part{g} $\{x,\,x^3,\,1/x,\,1/x^2\}$&
-\part{h} $\{x,\,x\ln x,\,1/x,\,x^2\}$
+ \part{g} $\{x,\,x^{3},\,1/x,\,1/x^{2}\}$&
+\part{h} $\{x,\,x\ln x,\,1/x,\,x^{2}\}$
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{i} $\{e^x,\,e^{-x},\,x,\,e^{2x}\}$&
-\part{j} $\{e^{2x},\,e^{-2x},\,1,\,x^2\}$
+\part{i} $\{e^{x},\,e^{-x},\,x,\,e^{2x}\}$&
+\part{j} $\{e^{2x},\,e^{-2x},\,1,\,x^{2}\}$
 \end{tabular}
 
 \end{exerciselist}

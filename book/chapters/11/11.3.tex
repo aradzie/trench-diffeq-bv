@@ -9,9 +9,9 @@ eigenfunctions of Problems~1-4 for Section~{\color{red}11.1}.
 \noindent
 From  Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.20}, the eigenfunctions
 $$
-1,\, \cos{\pi x\over L},
-\, \cos{2\pi x\over L},\dots,
- \, \cos{n\pi x\over L},\dots
+1,\,\cos\frac{\pi x}{L},
+\,\cos\frac{2\pi x}{L},\dots,
+ \,\cos\frac{n\pi x}{L},\dots
 $$
  of the boundary value problem
 \begin{equation} \label{eq:11.3.1}
@@ -22,25 +22,23 @@ y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
 Fourier expansion of $f$ in terms of these functions is called the
 {\color{blue}\it Fourier cosine series of $f$ on $[0,L]$\/}. This series is
 $$
-a_0+\sum_{n=1}^\infty a_n\cos{n\pi x\over L},
+a_{0}+\sum_{n=1}^{\infty}a_{n}\cos\frac{n\pi x}{L},
 $$
 where
 $$
-a_0={\dst\int_0^Lf(x)\,dx\over\dst\int_0^L\,dx}={1\over
-L}\int_0^Lf(x)\,dx
+a_{0}=\frac{\dst\int_{0}^{L}f(x)\,dx}{\dst\int_{0}^{L}\,dx}=\frac{1}{L}\int_{0}^{L}f(x)\,dx
 $$
 and
 $$
-a_n={\dst\int_0^Lf(x)\cos{n\pi x\over L}\,dx\over\dst\int_0^L
-\cos^2{n\pi x\over L}\,dx}={2\over L}\int_0^Lf(x)\cos{n\pi x\over
-L}\,dx,\quad n=1,2,3,\dots.
+a_{n}=\frac{\dst\int_{0}^{L}f(x)\cos\frac{n\pi x}{L}\,dx}{\dst\int_{0}^{L}
+\cos^{2}\frac{n\pi x}{L}\,dx}=\frac{2}{L}\int_{0}^{L}f(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots.
 $$
 Comparing this definition with
 Theorem~\ref{exer:11.2.6}\part{a} shows that the Fourier cosine
 series of $f$ on $[0,L]$ is  the Fourier series of
  the  function
 $$
-f_1(x)=
+f_{1}(x)=
 \left\{\begin{array}{cl}
 f(-x),&-L<x<0,\\f(x),&\phantom{-}0\le x\le L,
 \end{array}\right.
@@ -56,29 +54,29 @@ function (Figure~\ref{figure:11.3.1}).
 \end{figure}
 
 Applying
-Theorem~\ref{thmtype:11.2.4} to $f_1$ yields the next
+Theorem~\ref{thmtype:11.2.4} to $f_{1}$ yields the next
 theorem.
 
 \begin{theorem}\color{blue} \label{thmtype:11.3.1}
 If $f$ is piecewise smooth on $[0,L]$, then the Fourier cosine series
 $$
-C(x)=a_0+\sum_{n=1}^\infty a_n\cos{n\pi x\over L}
+C(x)=a_{0}+\sum_{n=1}^{\infty}a_{n}\cos\frac{n\pi x}{L}
 $$
 of $f$
 on $[0,L]$,
 with
 $$
-a_0={1\over L}\int_0^Lf(x)\,dx
+a_{0}=\frac{1}{L}\int_{0}^{L}f(x)\,dx
 \mbox{\quad and \quad}
-a_n={2\over L}\int_0^Lf(x)\cos{n\pi x\over L}\,dx,\quad n=1,2,3,\dots,
+a_{n}=\frac{2}{L}\int_{0}^{L}f(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots,
 $$
  converges for all $x$ in $[0,L]$;     moreover,
 $$
 C(x)=
 \left\{\begin{array}{cl}
-f(0+)&\mbox{if }x=0  \\
+f(0+)&\mbox{if }x=0\\
 f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x  $}\\[2\jot]
-\dst{f(x-)+f(x+)\over2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
+\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
 $x  $}\\[2\jot]
 f(L-)&\mbox{if }x=L.
 \end{array}\right.
@@ -92,35 +90,33 @@ Find the Fourier cosine series of $f(x)=x$ on $[0,L]$.
 \solution
  The coefficients are
 $$
-a_0={1\over L}\int_0^Lx\,dx={1\over
-L}{x^2\over2}
-\lims0L={L\over2}
+a_{0}=\frac{1}{L}\int_{0}^{L}x\,dx=\frac{1}{L}\frac{x^{2}}{2}
+\lims0L=\frac{L}{2}
 $$
 and, if $n\ge1$
 \begin{eqnarray*}
-a_n&=&{2\over L}\int_0^Lx\cos{n\pi x\over L}\,dx
-={2\over n\pi}\left[x\sin{n\pi x\over L}\lims0L-
-\int_0^L
-\sin{n\pi x\over L}\,dx\right]\\
-&=&-{2\over n\pi}\int_0^L
-\sin{n\pi x\over L}\,dx
-={2L\over n^2\pi^2}\cos{n\pi x\over L}\lims0L
-={2L\over
-n^2\pi^2}[(-1)^n-1]\\
+a_{n}&=&\frac{2}{L}\int_{0}^{L}x\cos\frac{n\pi x}{L}\,dx
+=\frac{2}{n\pi}\left[x\sin\frac{n\pi x}{L}\lims0L-
+\int_{0}^{L}
+\sin\frac{n\pi x}{L}\,dx\right]\\
+&=&-\frac{2}{n\pi}\int_{0}^{L}
+\sin\frac{n\pi x}{L}\,dx
+=\frac{2L}{n^{2}\pi^{2}}\cos\frac{n\pi x}{L}\lims0L
+=\frac{2L}{n^{2}\pi^{2}}[(-1)^{n}-1]\\
 &=&
 \left\{\begin{array}{cl}
-\dst-{4L\over(2m-1)^2\pi^2}&\mbox{if  $n=2m-1$},\\
+\dst-\frac{4L}{(2m-1)^{2}\pi^{2}}&\mbox{if  $n=2m-1$},\\
 0&\mbox{if $n=2m$}.
 \end{array}\right.
 \end{eqnarray*}
 Therefore
 $$
-C(x)=\dst{L\over2}-{4L\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
-\cos{(2n-1)\pi x\over L}.
+C(x)=\dst\frac{L}{2}-\frac{4L}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{2}}
+\cos\frac{(2n-1)\pi x}{L}.
 $$
 Theorem~\ref{thmtype:11.3.1} implies that
 $$
-C(x)=x,\quad 0\le x\le L.
+C(x)=x,\quad0\le x\le L.
 $$
 
 \boxit{Fourier Sine Series}
@@ -128,9 +124,9 @@ $$
 \noindent
 From   Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.19},  the eigenfunctions
 $$
-\sin{\pi x\over L},
-\, \sin{2\pi x\over L},\dots,
- \, \sin{n\pi x\over L},\dots
+\sin\frac{\pi x}{L},
+\,\sin\frac{2\pi x}{L},\dots,
+ \,\sin\frac{n\pi x}{L},\dots
 $$
  of the boundary value problem
 $$
@@ -141,20 +137,19 @@ $$
 Fourier expansion of $f$ in terms of these functions is called the
 {\color{blue}\it Fourier sine series of $f$ on $[0,L]$\/}. This series is
 $$
-\sum_{n=1}^\infty b_n\sin{n\pi x\over L},
+\sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{L},
 $$
 where
 $$
-b_n={\dst\int_0^Lf(x)\sin{n\pi x\over L}\,dx\over\dst\int_0^L
-\sin^2{n\pi x\over L}\,dx}={2\over L}\int_0^Lf(x)\sin{n\pi x\over
-L}\,dx,\quad n=1,2,3,\dots.
+b_{n}=\frac{\dst\int_{0}^{L}f(x)\sin\frac{n\pi x}{L}\,dx}{\dst\int_{0}^{L}
+\sin^{2}\frac{n\pi x}{L}\,dx}=\frac{2}{L}\int_{0}^{L}f(x)\sin\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots.
 $$
 Comparing this definition with
 Theorem~\ref{exer:11.2.6}\part{b} shows that the Fourier sine
 series of $f$ on $[0,L]$ is the Fourier series of
  the  function
 $$
-f_2(x)=
+f_{2}(x)=
 \left\{\begin{array}{cl}
 -f(-x),&-L<x<0,\\f(x),&\phantom{-}0\le x\le L,
 \end{array}\right.
@@ -170,27 +165,27 @@ function  (Figure~\ref{figure:11.3.2}).
 \end{figure}
 
 Applying
-Theorem~11.2.4 to $f_2$ yields the next
+Theorem~11.2.4 to $f_{2}$ yields the next
 theorem.
 
 \begin{theorem}\color{blue} \label{thmtype:11.3.2}
 If $f$ is piecewise smooth on $[0,L]$, then the Fourier sine series
 $$
-S(x)=\sum_{n=1}^\infty b_n\sin{n\pi x\over L}
+S(x)=\sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{L}
 $$
 of $f$
 on $[0,L]$,
 with
 $$
-b_n={2\over L}\int_0^Lf(x)\sin{n\pi x\over L}\,dx,
+b_{n}=\frac{2}{L}\int_{0}^{L}f(x)\sin\frac{n\pi x}{L}\,dx,
 $$
  converges for all $x$ in $[0,L]$; moreover,
 $$
 S(x)=
 \left\{\begin{array}{cl}
-0&\mbox{if }x=0  \\
+0&\mbox{if }x=0\\
 f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x  $}\\[2\jot]
-\dst{f(x-)+f(x+)\over2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
+\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
 $x  $}\\[2\jot]
 0&\mbox{if }x=L.
 \end{array}\right.
@@ -204,23 +199,22 @@ Find the Fourier sine series of $f(x)=x$ on $[0,L]$.
 \solution
  The coefficients are
 \begin{eqnarray*}
-b_n&=&{2\over L}\int_0^Lx\sin{n\pi x\over L}\,dx
-=-{2\over n\pi}\left[x\cos{n\pi x\over L}\lims0L-
-\int_0^L
-\cos{n\pi x\over L}\,dx\right]\\
-&=& (-1)^{n+1}{2L\over n\pi}+{2L\over n^2\pi^2}\sin{n\pi x\over
-L}\lims0L =(-1)^{n+1}{2L\over n\pi}.
+b_{n}&=&\frac{2}{L}\int_{0}^{L}x\sin\frac{n\pi x}{L}\,dx
+=-\frac{2}{n\pi}\left[x\cos\frac{n\pi x}{L}\lims0L-
+\int_{0}^{L}
+\cos\frac{n\pi x}{L}\,dx\right]\\
+&=&(-1)^{n+1}\frac{2L}{n\pi}+\frac{2L}{n^{2}\pi^{2}}\sin\frac{n\pi x}{L}\lims0L=(-1)^{n+1}\frac{2L}{n\pi}.
 \end{eqnarray*}
 Therefore
 $$
-S(x)=\dst-{2L\over\pi}\sum_{n=1}^\infty{(-1)^n\over n}
-\sin{n\pi x\over L}.
+S(x)=\dst-\frac{2L}{\pi}\sum_{n=1}^{\infty}\frac{(-1)^{n}}{n}
+\sin\frac{n\pi x}{L}.
 $$
 Theorem~\ref{thmtype:11.3.2} implies that
 $$
 S(x)=
 \left\{\begin{array}{cl}
-x,&0\le x< L,\\0,& x=L.
+x,&0\le x<L,\\0,&x=L.
 \end{array}\right.
 $$
 
@@ -229,9 +223,9 @@ $$
 \noindent
 From Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.22}, the eigenfunctions
 $$
- \cos{\pi x\over 2L},
-\, \cos{3\pi x\over 2L},\dots,
- \, \cos{(2n-1)\pi x\over 2L},\dots
+ \cos\frac{\pi x}{2L},
+\,\cos\frac{3\pi x}{2L},\dots,
+ \,\cos\frac{(2n-1)\pi x}{2L},\dots
 $$
  of the boundary value problem
 \begin{equation} \label{eq:11.3.2}
@@ -241,13 +235,13 @@ y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0
  If $f$ is integrable on $[0,L]$ then the
 Fourier expansion of $f$ in terms of these functions  is
 $$
-\sum_{n=1}^\infty c_n\cos{(2n-1)\pi x\over2L},
+\sum_{n=1}^{\infty}c_{n}\cos\frac{(2n-1)\pi x}{2L},
 $$
 where
 $$
-c_n={\dst\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx\over\dst\int_0^L
-\cos^2{(2n-1)\pi x\over L}\,dx}={2\over L}\int_0^Lf(x)\cos{(2n-1)\pi
-x\over2L}\,dx.
+c_{n}=\frac{\dst\int_{0}^{L}f(x)\cos\frac{(2n-1)\pi x}{2L}\,dx}{\dst\int_{0}^{L}
+\cos^{2}\frac{(2n-1)\pi x}{L}\,dx}=\frac{2}{L}\int_{0}^{L}f(x)\cos\frac{(2n-1)\pi
+x}{2L}\,dx.
 $$
 
 We'll  call this expansion the  {\color{blue}\it mixed Fourier cosine
@@ -265,9 +259,9 @@ of $f$ on $[0,L]$
 is simply the restriction to  $[0,L]$ of the Fourier
 cosine series  of
 $$
-f_3(x)=
+f_{3}(x)=
 \left\{\begin{array}{cl}
-f(x),&0\le x\le L,\\-f(2L-x),&L< x\le 2L
+f(x),&0\le x\le L,\\-f(2L-x),&L<x\le2L
 \end{array}\right.
 $$
 on $[0,2L]$ (Figure~\ref{figure:11.3.3}).
@@ -279,27 +273,27 @@ on $[0,2L]$ (Figure~\ref{figure:11.3.3}).
   \label{figure:11.3.3}
 \end{figure}
 
-Applying  Theorem~\ref{thmtype:11.3.1}  with $f$ replaced by $f_3$ and $L$
+Applying  Theorem~\ref{thmtype:11.3.1}  with $f$ replaced by $f_{3}$ and $L$
 replaced by $2L$ yields the next theorem.
 
 \begin{theorem}\color{blue} \label{thmtype:11.3.3}
 If  $f$ is piecewise smooth on $[0,L]$, then
 the mixed Fourier cosine series
 $$
-C_M(x)=\sum_{n=1}^\infty c_n\cos{(2n-1)\pi x\over2L}
+C_{M}(x)=\sum_{n=1}^{\infty}c_{n}\cos\frac{(2n-1)\pi x}{2L}
 $$
 of $f$ on $[0,L]$,
 with
 $$
-c_n={2\over L}\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx,
+c_{n}=\frac{2}{L}\int_{0}^{L}f(x)\cos\frac{(2n-1)\pi x}{2L}\,dx,
 $$
  converges for all $x$ in $[0,L]$; moreover,
 $$
-C_M(x)=
+C_{M}(x)=
 \left\{\begin{array}{cl}
-f(0+)&\mbox{if $x=0$}  \\
+f(0+)&\mbox{if $x=0$}\\
 f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x$  }\\[2\jot]
-\dst{f(x-)+f(x+)\over2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
+\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
 $x$  }\\[2\jot]
 0&\mbox{if $x=L$.}
 \end{array}\right.
@@ -314,22 +308,22 @@ $f(x)=x-L$ on $[0,L]$.
 \solution
  The coefficients are
 \begin{eqnarray*}
-c_n&=&{2\over L}\int_0^L(x-L)\cos{(2n-1)\pi x\over2L}\,dx\\
-&=&{4\over(2n-1)\pi}\left[(x-L)\sin{(2n-1)\pi
-x\over2L}\lims0L-\int_0^L
-\sin{(2n-1)\pi x\over2L}\,dx\right]\\
-&=&{8L\over(2n-1)^2\pi^2}
-\cos{(2n-1)\pi x\over2L}\lims0L
-=-{8L\over(2n-1)^2\pi^2}.
+c_{n}&=&\frac{2}{L}\int_{0}^{L}(x-L)\cos\frac{(2n-1)\pi x}{2L}\,dx\\
+&=&\frac{4}{(2n-1)\pi}\left[(x-L)\sin\frac{(2n-1)\pi
+x}{2L}\lims0L-\int_{0}^{L}
+\sin\frac{(2n-1)\pi x}{2L}\,dx\right]\\
+&=&\frac{8L}{(2n-1)^{2}\pi^{2}}
+\cos\frac{(2n-1)\pi x}{2L}\lims0L
+=-\frac{8L}{(2n-1)^{2}\pi^{2}}.
 \end{eqnarray*}
 Therefore
 $$
-C_M(x)=-{8L\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
-\cos{(2n-1)\pi x\over2L}.
+C_{M}(x)=-\frac{8L}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{2}}
+\cos\frac{(2n-1)\pi x}{2L}.
 $$
 Theorem~\ref{thmtype:11.3.3} implies that
 $$
-C_M(x)= x-L,\quad 0\le x\le L.
+C_{M}(x)=x-L,\quad0\le x\le L.
 $$
 
 \boxit{Mixed Fourier Sine Series}
@@ -337,9 +331,9 @@ $$
 \noindent
 From  Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.21},  the eigenfunctions
 $$
- \sin{\pi x\over 2L},
-\, \sin{3\pi x\over 2L},\dots,
- \, \sin{(2n-1)\pi x\over 2L},\dots
+ \sin\frac{\pi x}{2L},
+\,\sin\frac{3\pi x}{2L},\dots,
+ \,\sin\frac{(2n-1)\pi x}{2L},\dots
 $$
 of the boundary value problem
 $$
@@ -350,13 +344,13 @@ $$
 Fourier expansion of $f$ in terms of these functions
 is
 $$
-\sum_{n=1}^\infty d_n\sin{(2n-1)\pi x\over2L},
+\sum_{n=1}^{\infty}d_{n}\sin\frac{(2n-1)\pi x}{2L},
 $$
 where
 $$
-d_n={\dst\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx\over\dst\int_0^L
-\sin^2{(2n-1)\pi x\over2L}\,dx}={2\over L}\int_0^Lf(x)\sin{(2n-1)\pi
-x\over2L}\,dx.
+d_{n}=\frac{\dst\int_{0}^{L}f(x)\sin\frac{(2n-1)\pi x}{2L}\,dx}{\dst\int_{0}^{L}
+\sin^{2}\frac{(2n-1)\pi x}{2L}\,dx}=\frac{2}{L}\int_{0}^{L}f(x)\sin\frac{(2n-1)\pi
+x}{2L}\,dx.
 $$
 We'll  call this expansion the  {\color{blue}\it mixed Fourier sine
 series\/} of $f$ on $[0,L]$.
@@ -367,9 +361,9 @@ of $f$ on $[0,L]$
 is simply the restriction to  $[0,L]$ of the Fourier
 sine series of
 $$
-f_4(x)=
+f_{4}(x)=
 \left\{\begin{array}{cl}
-f(x),&0\le x\le L,\\f(2L-x),&L< x\le 2L,
+f(x),&0\le x\le L,\\f(2L-x),&L<x\le2L,
 \end{array}\right.
 $$
 on $[0,2L]$ (Figure~\ref{figure:11.3.4}).
@@ -381,26 +375,26 @@ on $[0,2L]$ (Figure~\ref{figure:11.3.4}).
   \label{figure:11.3.4}
 \end{figure}
 
-Applying Theorem~\ref{thmtype:11.3.2} with $f$ replaced by $f_4$ and $L$
+Applying Theorem~\ref{thmtype:11.3.2} with $f$ replaced by $f_{4}$ and $L$
 replaced by $2L$ yields the next theorem.
 
 \begin{theorem}\color{blue} \label{thmtype:11.3.4}
 If $f$ is piecewise smooth on $[0,L]$, then the mixed Fourier
 sine series
 $$
-S_M(x)=\sum_{n=1}^\infty d_n\sin{(2n-1)\pi x\over2L}
+S_{M}(x)=\sum_{n=1}^{\infty}d_{n}\sin\frac{(2n-1)\pi x}{2L}
 $$
 of $f$ on $[0,L]$, with
 $$
-d_n={2\over L}\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx,
+d_{n}=\frac{2}{L}\int_{0}^{L}f(x)\sin\frac{(2n-1)\pi x}{2L}\,dx,
 $$
  converges for all $x$ in $[0,L]$; moreover,
 $$
-S_M(x)=
+S_{M}(x)=
 \left\{\begin{array}{cl}
-0&\mbox{if $x=0$}  \\
+0&\mbox{if $x=0$}\\
 f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x$  }\\[2\jot]
-\dst{f(x-)+f(x+)\over2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
+\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
 $x$  }\\[2\jot]
 f(L-)&\mbox{if $x=L$.}
 \end{array}\right.
@@ -414,25 +408,25 @@ Find the mixed Fourier sine series of $f(x)=x$ on $[0,L]$.
 \solution
  The coefficients are
 \begin{eqnarray*}
-d_n&=&{2\over L}\int_0^Lx\sin{(2n-1)\pi x\over2L}\,dx\\
-&=&-{4\over(2n-1)\pi}\left[x\cos{(2n-1)\pi
-x\over2L}\lims0L-
-\int_0^L
-\cos{(2n-1)\pi x\over2L}\,dx\right]\\
-&=&{4\over(2n-1)\pi}
-\int_0^L
-\cos{(2n-1)\pi x\over2L}\,dx\\
-&=&{8L\over(2n-1)^2\pi^2}\sin{(2n-1)\pi
-x\over2L}\lims0L=(-1)^{n+1}{8L\over(2n-1)^2\pi^2}.
+d_{n}&=&\frac{2}{L}\int_{0}^{L}x\sin\frac{(2n-1)\pi x}{2L}\,dx\\
+&=&-\frac{4}{(2n-1)\pi}\left[x\cos\frac{(2n-1)\pi
+x}{2L}\lims0L-
+\int_{0}^{L}
+\cos\frac{(2n-1)\pi x}{2L}\,dx\right]\\
+&=&\frac{4}{(2n-1)\pi}
+\int_{0}^{L}
+\cos\frac{(2n-1)\pi x}{2L}\,dx\\
+&=&\frac{8L}{(2n-1)^{2}\pi^{2}}\sin\frac{(2n-1)\pi
+x}{2L}\lims0L=(-1)^{n+1}\frac{8L}{(2n-1)^{2}\pi^{2}}.
 \end{eqnarray*}
 Therefore
 $$
-S_M(x)=-{8L\over\pi^2}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^2}
-\sin{(2n-1)\pi x\over2L}.
+S_{M}(x)=-\frac{8L}{\pi^{2}}\sum_{n=1}^{\infty}\frac{(-1)^{n}}{(2n-1)^{2}}
+\sin\frac{(2n-1)\pi x}{2L}.
 $$
 Theorem~\ref{thmtype:11.3.4} implies that
 $$
-S_M(x)=x,\quad 0\le x\le L.
+S_{M}(x)=x,\quad0\le x\le L.
 $$
 
 \boxit{A Useful Observation}
@@ -454,14 +448,14 @@ coefficients in the expansion.
 If $f'(0)=f'(L)=0$, $f''$ is continuous, and $f'''$ is piecewise
 continuous  on $[0,L]$, then
 \begin{equation} \label{eq:11.3.3}
-f(x)=a_0+\sum_{n=1}^\infty a_n\cos{n\pi x\over L},
-\quad 0\le x\le L,
+f(x)=a_{0}+\sum_{n=1}^{\infty}a_{n}\cos\frac{n\pi x}{L},
+\quad0\le x\le L,
 \end{equation}
 with
 \begin{equation} \label{eq:11.3.4}
-a_0={1\over L}\int_0^L f(x)\,dx \mbox{\quad and \quad}
-a_n= {2L^2\over n^3\pi^3}\int_0^L f'''(x)\sin{n\pi
-x\over L}\,dx,
+a_{0}=\frac{1}{L}\int_{0}^{L}f(x)\,dx\mbox{\quad and \quad}
+a_{n}=\frac{2L^{2}}{n^{3}\pi^{3}}\int_{0}^{L}f'''(x)\sin\frac{n\pi
+x}{L}\,dx,
 \quad n\ge1.
 \end{equation}
 
@@ -471,25 +465,25 @@ continuous on $[0,L]$.
 \part{b}
 If  $f(0)=f(L)=0$, then
 $$
-f(x)=\sum_{n=1}^\infty b_n\sin{n\pi x\over L},
-\quad 0\le x\le L,
+f(x)=\sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{L},
+\quad0\le x\le L,
 $$
 with
 \begin{equation} \label{eq:11.3.5}
-b_n=-{2L\over n^2\pi^2}\int_0^L f''(x)\sin{n\pi
-x\over L}\,dx.
+b_{n}=-\frac{2L}{n^{2}\pi^{2}}\int_{0}^{L}f''(x)\sin\frac{n\pi
+x}{L}\,dx.
 \end{equation}
 
 \part{c}
 If  $f'(0)=f(L)=0$, then
 $$
 f(x)=
-\sum_{n=1}^\infty c_n\cos{(2n-1)\pi x\over2L},
-\quad 0\le x\le L,
+\sum_{n=1}^{\infty}c_{n}\cos\frac{(2n-1)\pi x}{2L},
+\quad0\le x\le L,
 $$
 with
 \begin{equation} \label{eq:11.3.6}
-c_n=-{8L\over(2n-1)^2\pi^2}\int_0^L f''(x)\cos{(2n-1)\pi x\over2L}
+c_{n}=-\frac{8L}{(2n-1)^{2}\pi^{2}}\int_{0}^{L}f''(x)\cos\frac{(2n-1)\pi x}{2L}
 \,dx.
 \end{equation}
 
@@ -497,12 +491,12 @@ c_n=-{8L\over(2n-1)^2\pi^2}\int_0^L f''(x)\cos{(2n-1)\pi x\over2L}
 If  $f(0)=f'(L)=0$, then
 $$
 f(x)=
-\sum_{n=1}^\infty d_n\sin{(2n-1)\pi x\over2L},
-\quad 0\le x\le L,
+\sum_{n=1}^{\infty}d_{n}\sin\frac{(2n-1)\pi x}{2L},
+\quad0\le x\le L,
 $$
 with
 \begin{equation} \label{eq:11.3.7}
-d_n=-{8L\over(2n-1)^2\pi^2}\int_0^L f''(x)\sin{(2n-1)\pi x\over2L}
+d_{n}=-\frac{8L}{(2n-1)^{2}\pi^{2}}\int_{0}^{L}f''(x)\sin\frac{(2n-1)\pi x}{2L}
 \,dx.
 \end{equation}
 \end{theorem}
@@ -510,27 +504,27 @@ d_n=-{8L\over(2n-1)^2\pi^2}\int_0^L f''(x)\sin{(2n-1)\pi x\over2L}
 \proof  We'll prove \part{a} and leave the rest to you
 (Exercises~\ref{exer:11.3.35}, \ref{exer:11.3.42}, and \ref{exer:11.3.50}).  Since
 $f$ is continuous on
-$[0,L]$, Theorem~\ref{thmtype:11.3.1} implies (\ref{eq:11.3.3}) with $a_0$,
-$a_1$, $a_2$,... as defined in Theorem~\ref{thmtype:11.3.1}. We already
+$[0,L]$, Theorem~\ref{thmtype:11.3.1} implies (\ref{eq:11.3.3}) with $a_{0}$,
+$a_{1}$, $a_{2}$,... as defined in Theorem~\ref{thmtype:11.3.1}. We already
 know that
-$a_0$ is as in
+$a_{0}$ is as in
 (\ref{eq:11.3.4}). If  $n\ge1$, integrating twice by parts yields
 \begin{eqnarray*}
-a_n&=& {2\over L}\int_0^L f(x)\cos{n\pi x\over L}\,dx\\
-&=&{2\over n\pi}\left[f(x)\sin{n\pi x\over L}\lims0L
--\int_0^Lf'(x)\sin{n\pi x\over L}\,dx\right]\\
-&=&-{2\over n\pi}
-\int_0^Lf'(x)\sin{n\pi x\over L}\,dx
+a_{n}&=&\frac{2}{L}\int_{0}^{L}f(x)\cos\frac{n\pi x}{L}\,dx\\
+&=&\frac{2}{n\pi}\left[f(x)\sin\frac{n\pi x}{L}\lims0L
+-\int_{0}^{L}f'(x)\sin\frac{n\pi x}{L}\,dx\right]\\
+&=&-\frac{2}{n\pi}
+\int_{0}^{L}f'(x)\sin\frac{n\pi x}{L}\,dx
 \mbox{ (since $\sin0=\sin n\pi=0$)}\\
-&=&{2L\over n^2\pi^2}\left[f'(x)\cos{n\pi x\over L}\lims0L
--\int_0^Lf''(x)\cos{n\pi x\over L}\right]\,dx\\
+&=&\frac{2L}{n^{2}\pi^{2}}\left[f'(x)\cos\frac{n\pi x}{L}\lims0L
+-\int_{0}^{L}f''(x)\cos\frac{n\pi x}{L}\right]\,dx\\
 &=&
--{2L\over n^2\pi^2}\int_0^Lf''(x)\cos{n\pi x\over L}\,dx
+-\frac{2L}{n^{2}\pi^{2}}\int_{0}^{L}f''(x)\cos\frac{n\pi x}{L}\,dx
 \mbox{ (since $f'(0)=f'(L)=0$)}\\
-&=&-{2L^2\over n^3\pi^3}\left[f''(x)\sin{n\pi x\over L}\lims0L
--\int_0^Lf'''(x)\sin{n\pi x\over L}\,dx\right]\\
+&=&-\frac{2L^{2}}{n^{3}\pi^{3}}\left[f''(x)\sin\frac{n\pi x}{L}\lims0L
+-\int_{0}^{L}f'''(x)\sin\frac{n\pi x}{L}\,dx\right]\\
 &=&
-{2L^2\over n^3\pi^3}\int_0^Lf'''(x)\sin{n\pi x\over L}\,dx
+\frac{2L^{2}}{n^{3}\pi^{3}}\int_{0}^{L}f'''(x)\sin\frac{n\pi x}{L}\,dx
 \mbox{ (since $\sin0=\sin n\pi=0$).}
 \end{eqnarray*}
 (By an argument similar to one used in the proof of Theorem~8.3.1,
@@ -540,43 +534,40 @@ $[0,L]$, so long as it's piecewise continuous on $[0,L]$.)
 This completes the proof.
 
 \begin{example}\label{example:11.3.5} \rm
-Find the Fourier cosine expansion of $f(x)=x^2(3L-2x)$
+Find the Fourier cosine expansion of $f(x)=x^{2}(3L-2x)$
 on $[0,L]$.
 \end{example}
 
 \solution
 Here
 $$
-a_0={1\over L}\int_0^L(3Lx^2-2x^3)\,dx={1\over
-L}\left(Lx^3-{x^4\over2}
-\right)\lims0L={L^3\over2}
+a_{0}=\frac{1}{L}\int_{0}^{L}(3Lx^{2}-2x^{3})\,dx=\frac{1}{L}\left(Lx^{3}-\frac{x^{4}}{2}
+\right)\lims0L=\frac{L^{3}}{2}
 $$
 and
 $$
-a_n={2\over L}\int_0^L(3Lx^2-2x^3)\cos{n\pi x\over L}\,dx,\quad n\ge1.
+a_{n}=\frac{2}{L}\int_{0}^{L}(3Lx^{2}-2x^{3})\cos\frac{n\pi x}{L}\,dx,\quad n\ge1.
 $$
 Evaluating this integral directly is laborious.
-However, since $f'(x)=6Lx-6x^2$, we see that $f'(0)=f'(L)=0$.
+However, since $f'(x)=6Lx-6x^{2}$, we see that $f'(0)=f'(L)=0$.
 Since $f'''(x)=-12$, we see from (\ref{eq:11.3.4}) that if $n\ge1$ then
 \begin{eqnarray*}
-a_n&=&-{24L^2\over n^3\pi^3}\int_0^L\sin{n\pi x\over L}\,dx
-={24L^3\over n^4\pi^4}\cos{n\pi x\over L}\lims0L={24L^3\over
-n^4\pi^4}[(-1)^n-1]\\
+a_{n}&=&-\frac{24L^{2}}{n^{3}\pi^{3}}\int_{0}^{L}\sin\frac{n\pi x}{L}\,dx
+=\frac{24L^{3}}{n^{4}\pi^{4}}\cos\frac{n\pi x}{L}\lims0L=\frac{24L^{3}}{n^{4}\pi^{4}}[(-1)^{n}-1]\\
 &=&
 \left\{\begin{array}{cl}
-\dst-{48L^3\over(2m-1)^4\pi^4}&\mbox{if  $n=2m-1$},\\
+\dst-\frac{48L^{3}}{(2m-1)^{4}\pi^{4}}&\mbox{if  $n=2m-1$},\\
 0&\mbox{if $n=2m$.}
 \end{array}\right.
 \end{eqnarray*}
 Therefore
 $$
-C(x)={L^3\over2}-{48L^3\over\pi^4}\sum_{n=1}^\infty{1\over
-(2n-1)^4}\cos{(2n-1)\pi x\over L}.
+C(x)=\frac{L^{3}}{2}-\frac{48L^{3}}{\pi^{4}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{4}}\cos\frac{(2n-1)\pi x}{L}.
 $$
 
 \begin{example}\label{example:11.3.6} \rm
 Find the Fourier sine expansion of
-$f(x)=x(x^2-3Lx+2L^2)$
+$f(x)=x(x^{2}-3Lx+2L^{2})$
 on $[0,L]$.
 \end{example}
 
@@ -584,24 +575,23 @@ on $[0,L]$.
 Since $f(0)=f(L)=0$ and $f''(x)=6(x-L)$, we see from (\ref{eq:11.3.5})
 that
 \begin{eqnarray*}
-b_n&=&-
-{12L\over n^2\pi^2}\int_0^L(x-L)\sin{n\pi x\over L}\,dx\\
-&=&{12L^2\over n^3\pi^3}\left[(x-L)\cos{n\pi x\over L}\lims0L
--\int_0^L\cos{n\pi x\over L}\,dx\right]\\
-&=&{12L^2\over n^3\pi^3}\left[L-\frac{L}{n\pi}\sin\frac{n\pi
+b_{n}&=&-
+\frac{12L}{n^{2}\pi^{2}}\int_{0}^{L}(x-L)\sin\frac{n\pi x}{L}\,dx\\
+&=&\frac{12L^{2}}{n^{3}\pi^{3}}\left[(x-L)\cos\frac{n\pi x}{L}\lims0L
+-\int_{0}^{L}\cos\frac{n\pi x}{L}\,dx\right]\\
+&=&\frac{12L^{2}}{n^{3}\pi^{3}}\left[L-\frac{L}{n\pi}\sin\frac{n\pi
 x}{L}\lims0L\right]
-={12L^3\over
-n^3\pi^3}.
+=\frac{12L^{3}}{n^{3}\pi^{3}}.
 \end{eqnarray*}
 Therefore
 $$
-S(x)=\dst{12L^3\over\pi^3}\sum_{n=1}^\infty{1\over n^3}
-\sin{n\pi x\over L}.
+S(x)=\dst\frac{12L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{n^{3}}
+\sin\frac{n\pi x}{L}.
 $$
 
 \begin{example}\label{example:11.3.7} \rm
 Find  the mixed Fourier cosine expansion of
-$f(x)=3x^3-4Lx^2+L^3$
+$f(x)=3x^{3}-4Lx^{2}+L^{3}$
 on $[0,L]$.
 \end{example}
 
@@ -609,28 +599,28 @@ on $[0,L]$.
 Since $f'(0)=f(L)=0$ and $f''(x)=2(9x-4L)$, we see from (\ref{eq:11.3.6})
 that
 \begin{eqnarray*}
-c_n&=&
--{16L\over(2n-1)^2\pi^2}
-\int_0^L(9x-4L)\cos{(2n-1)\pi x\over2L}\,dx\\
-&=&-{32L^2\over(2n-1)^3\pi^3}\left[(9x-4L)\sin{(2n-1)\pi x\over2L}
-\lims0L-9\int_0^L\sin{(2n-1)\pi x\over2L}\right]\,dx\\
-&=&-{32L^2\over(2n-1)^3\pi^3}
-\left[(-1)^{n+1}5L+{18L\over(2n-1)\pi}\cos{(2n-1)\pi x\over2L}
-\lims0L\right] \\
-&=&{32L^3\over(2n-1)^3\pi^3}
-\left[(-1)^n5+{18\over(2n-1)\pi}\right].
+c_{n}&=&
+-\frac{16L}{(2n-1)^{2}\pi^{2}}
+\int_{0}^{L}(9x-4L)\cos\frac{(2n-1)\pi x}{2L}\,dx\\
+&=&-\frac{32L^{2}}{(2n-1)^{3}\pi^{3}}\left[(9x-4L)\sin\frac{(2n-1)\pi x}{2L}
+\lims0L-9\int_{0}^{L}\sin\frac{(2n-1)\pi x}{2L}\right]\,dx\\
+&=&-\frac{32L^{2}}{(2n-1)^{3}\pi^{3}}
+\left[(-1)^{n+1}5L+\frac{18L}{(2n-1)\pi}\cos\frac{(2n-1)\pi x}{2L}
+\lims0L\right]\\
+&=&\frac{32L^{3}}{(2n-1)^{3}\pi^{3}}
+\left[(-1)^{n}5+\frac{18}{(2n-1)\pi}\right].
 \end{eqnarray*}
 Therefore
 $$
-C_M(x)=\dst{32L^3\over\pi^3}\sum_{n=1}^\infty{1\over(2n-1)^3}\left[
-(-1)^n5+{18\over(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}.
+C_{M}(x)=\dst\frac{32L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{3}}\left[
+(-1)^{n}5+\frac{18}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}.
 $$
 
 \begin{example}\label{example:11.3.8} \rm
 Find  the mixed Fourier  sine expansion of
 $$
-f(x)=x(2x^2-9Lx+12L^2)
+f(x)=x(2x^{2}-9Lx+12L^{2})
 $$
 on $[0,L]$.
 \end{example}
@@ -639,20 +629,20 @@ on $[0,L]$.
 Since $f(0)=f'(L)=0$, and $f''(x)=6(2x-3L)$, we see from (\ref{eq:11.3.7})
 that
 \begin{eqnarray*}
-d_n&=&-\dst{48L\over(2n-1)^2\pi^2}\int_0^L(2x-3L)
-\sin{(2n-1)\pi x\over2L}\,dx\\
-&=&\dst{96L^2\over(2n-1)^3\pi^3}\left[(2x-3L)\cos{(2n-1)\pi
-x\over2L}\lims0L-2\int_0^L\cos{(2n-1)\pi x\over2L}\,dx\right]\\
-&=&\dst{96L^2\over(2n-1)^3\pi^3}\left[3L-{4L\over(2n-1)\pi}
-\sin{(2n-1)\pi x\over2L}\lims0L\right]\\
-&=&\dst{96L^3\over(2n-1)^3\pi^3}\left[3+(-1)^n{4\over(2n-1)\pi}\right].
+d_{n}&=&-\dst\frac{48L}{(2n-1)^{2}\pi^{2}}\int_{0}^{L}(2x-3L)
+\sin\frac{(2n-1)\pi x}{2L}\,dx\\
+&=&\dst\frac{96L^{2}}{(2n-1)^{3}\pi^{3}}\left[(2x-3L)\cos\frac{(2n-1)\pi
+x}{2L}\lims0L-2\int_{0}^{L}\cos\frac{(2n-1)\pi x}{2L}\,dx\right]\\
+&=&\dst\frac{96L^{2}}{(2n-1)^{3}\pi^{3}}\left[3L-\frac{4L}{(2n-1)\pi}
+\sin\frac{(2n-1)\pi x}{2L}\lims0L\right]\\
+&=&\dst\frac{96L^{3}}{(2n-1)^{3}\pi^{3}}\left[3+(-1)^{n}\frac{4}{(2n-1)\pi}\right].
 \end{eqnarray*}
 Therefore
 $$
-S_M(x)
-=\dst{96L^3\over\pi^3}\sum_{n=1}^\infty
-{1\over(2n-1)^3}\left[3+(-1)^n{4\over(2n-1)\pi}\right]\sin{(2n-1)\pi
-x\over2L}.
+S_{M}(x)
+=\dst\frac{96L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}
+\frac{1}{(2n-1)^{3}}\left[3+(-1)^{n}\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
+x}{2L}.
 $$
 
 \exercises
@@ -668,13 +658,13 @@ cosine series.}
 \begin{exerciselist}
 
 \item\label{exer:11.3.1}
-$f(x)=x^2$;  \quad $[0,L]$
+$f(x)=x^{2}$;  \quad $[0,L]$
 
 \item\label{exer:11.3.2}
 \Cex $f(x)=1-x$;   \quad $[0,1]$
 
 \item\label{exer:11.3.3} \Cex
-$f(x)=x^2-2Lx$;   \quad $[0,L]$
+$f(x)=x^{2}-2Lx$;   \quad $[0,L]$
 
 \item\label{exer:11.3.4}
 $f(x)=\sin kx$\, ($k\ne$ integer);\quad    $[0,\pi]$
@@ -682,17 +672,17 @@ $f(x)=\sin kx$\, ($k\ne$ integer);\quad    $[0,\pi]$
 \item\label{exer:11.3.5} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$ \quad $[0,L]$
 
 \item\label{exer:11.3.6}
-$f(x)=x^2-L^2$;   \quad $[0,L]$
+$f(x)=x^{2}-L^{2}$;   \quad $[0,L]$
 
 \item\label{exer:11.3.7}
- $f(x)=(x-1)^2$;  \quad $[0,1]$
+ $f(x)=(x-1)^{2}$;  \quad $[0,1]$
 
 \item\label{exer:11.3.8}
-$f(x)=e^x$;   \quad $[0,\pi]$
+$f(x)=e^{x}$;   \quad $[0,\pi]$
 
 \item\label{exer:11.3.9} \Cex
 $f(x)=x(L-x)$;  \quad $[0,L]$
@@ -716,13 +706,13 @@ $f(x)=\cos kx$\, ($k\ne$ integer);  \quad $[0,\pi]$
 \item\label{exer:11.3.14} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$ \quad $[0,L]$
 
 \item\label{exer:11.3.15} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{L\over2},\\L-x,&{L\over2}\le x\le L;
+x,&0\le x\le\frac{L}{2},\\L-x,&\frac{L}{2}\le x\le L;
 \end{array}\right.$
 \quad $[0,L]$.
 
@@ -730,7 +720,7 @@ x,&0\le x\le{L\over2},\\L-x,&{L\over2}\le x\le L;
 $f(x)=x\sin x$;   \quad $[0,\pi]$
 
 \item\label{exer:11.3.17}
-$f(x)=e^x$;   \quad $[0,\pi]$
+$f(x)=e^{x}$;   \quad $[0,\pi]$
 
 \exercisetext{
 In Exercises~\ref{exer:11.3.18}-\ref{exer:11.3.24} find the mixed Fourier
@@ -740,7 +730,7 @@ cosine series.}
 $f(x)=1$;  \quad$[0,L]$
 
 \item\label{exer:11.3.19}
-$f(x)=x^2$;  \quad $[0,L]$
+$f(x)=x^{2}$;  \quad $[0,L]$
 
 \item\label{exer:11.3.20}
 \Cex $f(x)=x$;   \quad $[0,1]$
@@ -748,7 +738,7 @@ $f(x)=x^2$;  \quad $[0,L]$
 \item\label{exer:11.3.21} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$ \quad $[0,L]$
 
 \item\label{exer:11.3.22}
@@ -768,12 +758,12 @@ series.}
 $f(x)=1$;  \quad$[0,L]$
 
 \item\label{exer:11.3.26}
-$f(x)=x^2$;  \quad $[0,L]$
+$f(x)=x^{2}$;  \quad $[0,L]$
 
 \item\label{exer:11.3.27} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$\quad  $[0,L]$
 
 \item\label{exer:11.3.28}
@@ -790,16 +780,16 @@ use Theorem~\ref{thmtype:11.3.5}\part{a} to find the  Fourier
 cosine series of $f$ on~$[0,L]$.}
 
 \item\label{exer:11.3.31}
-$f(x)=3x^2(x^2-2L^2)$
+$f(x)=3x^{2}(x^{2}-2L^{2})$
 
 \item\label{exer:11.3.32}
-$f(x)=x^3(3x-4L)$
+$f(x)=x^{3}(3x-4L)$
 
 \item\label{exer:11.3.33}
-$f(x)=x^2(3x^2-8Lx+6L^2)$
+$f(x)=x^{2}(3x^{2}-8Lx+6L^{2})$
 
 \item\label{exer:11.3.34}
-$f(x)=x^2(x-L)^2$
+$f(x)=x^{2}(x-L)^{2}$
 
 \item\label{exer:11.3.35}
 \begin{alist}
@@ -811,8 +801,8 @@ suppose  $f''(0)=f''(L)=0$, $f'''$ is continuous,  and $f^{(4)}$
 is piecewise continuous on $[0,L]$.
 Show that
 $$
-b_n={2L^3\over n^4\pi^4}\int_0^L f^{(4)}(x)\sin{n\pi
-x\over L}\,dx,
+b_{n}=\frac{2L^{3}}{n^{4}\pi^{4}}\int_{0}^{L}f^{(4)}(x)\sin\frac{n\pi
+x}{L}\,dx,
 \quad n\ge1.
 $$
 \end{alist}
@@ -828,19 +818,19 @@ to find the Fourier sine series of $f$  on $[0,L]$.}
 \Cex $f(x)=x(L-x)$
 
 \item\label{exer:11.3.37}
-\Cex\quad$f(x)=x^2(L-x)$
+\Cex\quad$f(x)=x^{2}(L-x)$
 
 \item\label{exer:11.3.38}
-$f(x)=x(L^2-x^2)$
+$f(x)=x(L^{2}-x^{2})$
 
 \item\label{exer:11.3.39}
-$f(x)=x(x^3-2Lx^2+L^3)$
+$f(x)=x(x^{3}-2Lx^{2}+L^{3})$
 
 \item\label{exer:11.3.40}
-$f(x)=x(3x^4-10L^2x^2+7L^4)$
+$f(x)=x(3x^{4}-10L^{2}x^{2}+7L^{4})$
 
 \item\label{exer:11.3.41}
-$f(x)=x(3x^4-5Lx^3+2L^4)$
+$f(x)=x(3x^{4}-5Lx^{3}+2L^{4})$
 
 \item\label{exer:11.3.42}
 \begin{alist}
@@ -852,7 +842,7 @@ suppose
 $f''(L)=0$, $f''$ is continuous, and $f'''$ is piecewise continuous on
 $[0,L]$. Show that
 $$
-c_n={16L^2\over(2n-1)^3\pi^3}\int_0^L f'''(x)\sin{(2n-1)\pi x\over2L}
+c_{n}=\frac{16L^{2}}{(2n-1)^{3}\pi^{3}}\int_{0}^{L}f'''(x)\sin\frac{(2n-1)\pi x}{2L}
 \,dx,\quad n\ge1.
 $$
 \end{alist}
@@ -866,25 +856,25 @@ to find the mixed Fourier
 cosine series of $f$ on $[0,L]$.}
 
 \item\label{exer:11.3.43}
-\Cex $f(x)=x^2(L-x)$
+\Cex $f(x)=x^{2}(L-x)$
 
 \item\label{exer:11.3.44}
-$f(x)=L^2-x^2$
+$f(x)=L^{2}-x^{2}$
 
 \item\label{exer:11.3.45}
-$f(x)=L^3-x^3$
+$f(x)=L^{3}-x^{3}$
 
 \item\label{exer:11.3.46}
-$f(x)=2x^3+3Lx^2-5L^3$
+$f(x)=2x^{3}+3Lx^{2}-5L^{3}$
 
 \item\label{exer:11.3.47}
-$f(x)=4x^3+3Lx^2-7L^3$
+$f(x)=4x^{3}+3Lx^{2}-7L^{3}$
 
 \item\label{exer:11.3.48}
-$f(x)=x^4-2Lx^3+L^4$
+$f(x)=x^{4}-2Lx^{3}+L^{4}$
 
 \item\label{exer:11.3.49}
-$f(x)=x^4-4Lx^3+6L^2x^2-3L^4$
+$f(x)=x^{4}-4Lx^{3}+6L^{2}x^{2}-3L^{4}$
 
 \item\label{exer:11.3.50}
 \begin{alist}
@@ -896,7 +886,7 @@ suppose
 $f''(0)=0$, $f''$ is continuous, and $f'''$ is piecewise continuous on
 $[0,L]$. Show that
 $$
-d_n=-{16L^2\over(2n-1)^3\pi^3}\int_0^L f'''(x)\cos{(2n-1)\pi x\over2L}
+d_{n}=-\frac{16L^{2}}{(2n-1)^{3}\pi^{3}}\int_{0}^{L}f'''(x)\cos\frac{(2n-1)\pi x}{2L}
 \,dx,\quad n\ge1.
 $$
 \end{alist}
@@ -907,30 +897,30 @@ Exercise~\ref{exer:11.3.50}\part{b}, to find the mixed Fourier sine series
 of the $f$ on $[0,L]$.}
 
 \item\label{exer:11.3.51}
-$f(x)=x(2L -x)$
+$f(x)=x(2L-x)$
 
 \item\label{exer:11.3.52}
-$f(x)=x^2(3L-2x)$
+$f(x)=x^{2}(3L-2x)$
 
 \item\label{exer:11.3.53}
- $f(x)=(x-L)^3+L^3$
+ $f(x)=(x-L)^{3}+L^{3}$
 
 \item\label{exer:11.3.54}
- $f(x)=x(x^2-3L^2)$
+ $f(x)=x(x^{2}-3L^{2})$
 
 \item\label{exer:11.3.55}
-$f(x)=x^3(3x-4L)$
+$f(x)=x^{3}(3x-4L)$
 
 \item\label{exer:11.3.56}
- $f(x)=x(x^3-2Lx^2+2L^3)$
+ $f(x)=x(x^{3}-2Lx^{2}+2L^{3})$
 
 \item\label{exer:11.3.57}
 Show that the mixed Fourier cosine series of $f$ on $[0,L]$ is the
 restriction to $[0,L]$ of the Fourier cosine series of
 $$
-f_3(x)=
+f_{3}(x)=
 \left\{\begin{array}{cl}
-f(x),&0\le x\le L,\\-f(2L-x),&L< x\le 2L
+f(x),&0\le x\le L,\\-f(2L-x),&L<x\le2L
 \end{array}\right.
 $$
 on $[0,2L]$.  Use this to prove Theorem~\ref{thmtype:11.3.3}.
@@ -939,9 +929,9 @@ on $[0,2L]$.  Use this to prove Theorem~\ref{thmtype:11.3.3}.
 Show that the mixed Fourier sine series of $f$ on $[0,L]$ is the
 restriction to $[0,L]$ of the Fourier sine series of
 $$
-f_4(x)=
+f_{4}(x)=
 \left\{\begin{array}{cl}
-f(x),&0\le x\le L,\\f(2L-x),&L< x\le 2L
+f(x),&0\le x\le L,\\f(2L-x),&L<x\le2L
 \end{array}\right.
 $$
 on $[0,2L]$.  Use this to prove Theorem~\ref{thmtype:11.3.4}.
@@ -950,9 +940,9 @@ on $[0,2L]$.  Use this to prove Theorem~\ref{thmtype:11.3.4}.
 Show that the Fourier sine series of $f$ on $[0,L]$ is the restriction
 to $[0,L]$ of the Fourier sine series of
 $$
-f_3(x)=
+f_{3}(x)=
 \left\{\begin{array}{cl}
-f(x),&0\le x\le L,\\-f(2L-x),&L< x\le 2L
+f(x),&0\le x\le L,\\-f(2L-x),&L<x\le2L
 \end{array}\right.
 $$
 on $[0,2L]$.
@@ -963,9 +953,9 @@ of $f$ on $[0,L]$
  is the restriction
 to $[0,L]$ of the Fourier cosine series of
 $$
-f_4(x)=
+f_{4}(x)=
 \left\{\begin{array}{cl}
-f(x),&0\le x\le L,\\f(2L-x),&L< x\le 2L
+f(x),&0\le x\le L,\\f(2L-x),&L<x\le2L
 \end{array}\right.
 $$
 on  $[0,2L]$.

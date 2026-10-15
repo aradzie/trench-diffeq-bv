@@ -13,7 +13,7 @@ will deteriorate rather than improve.
 and more important reason is that in most applications of numerical
 methods to an initial value problem
 \begin{equation} \label{eq:3.2.1}
-y'=f(x,y),\quad y(x_0)=y_0,
+y'=f(x,y),\quad y(x_{0})=y_{0},
 \end{equation}
 the expensive part of the computation is the evaluation of $f$.
 Therefore we want methods that give good results for a given number
@@ -28,7 +28,7 @@ $$
 on $[0,1]$, with $h=1/12$, $1/24$, and $1/48$, respectively. Since
 each step in Euler's method requires one evaluation of $f$, the number
 of evaluations of $f$ in each of these attempts is $n=12$, $24$, and
-$48$, respectively. In each case we accept $y_n$ as an approximation
+$48$, respectively. In each case we accept $y_{n}$ as an approximation
 to $e$.  The second column of
 Table~\ref{table:3.2.1} shows the results. The first column of the table
 indicates
@@ -85,51 +85,51 @@ The
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Euler/}
 {\color{blue}\it improved Euler method\/} for solving the initial value
 problem (\ref{eq:3.2.1}) is based on approximating the integral curve of
-(\ref{eq:3.2.1}) at $(x_i,y(x_i))$ by the line through $(x_i,y(x_i))$ with
+(\ref{eq:3.2.1}) at $(x_{i},y(x_{i}))$ by the line through $(x_{i},y(x_{i}))$ with
 slope
 $$
-m_i={f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))\over2};
+m_{i}=\frac{f(x_{i},y(x_{i}))+f(x_{i+1},y(x_{i+1}))}{2};
 $$
-that is, $m_i$ is the average of the slopes of the tangents to the
-integral curve at the endpoints of $[x_i,x_{i+1}]$. The equation of
+that is, $m_{i}$ is the average of the slopes of the tangents to the
+integral curve at the endpoints of $[x_{i},x_{i+1}]$. The equation of
 the approximating line is therefore
 \begin{equation} \label{eq:3.2.2}
-y=y(x_i)+{f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))\over2}(x-x_i).
+y=y(x_{i})+\frac{f(x_{i},y(x_{i}))+f(x_{i+1},y(x_{i+1}))}{2}(x-x_{i}).
 \end{equation}
-Setting $x=x_{i+1}=x_i+h$ in (\ref{eq:3.2.2}) yields
+Setting $x=x_{i+1}=x_{i}+h$ in (\ref{eq:3.2.2}) yields
 \begin{equation} \label{eq:3.2.3}
-y_{i+1}=y(x_i)+{h\over2}\left(f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))\right)
+y_{i+1}=y(x_{i})+\frac{h}{2}\left(f(x_{i},y(x_{i}))+f(x_{i+1},y(x_{i+1}))\right)
 \end{equation}
 as an approximation to $y(x_{i+1})$. As in our derivation of Euler's
-method, we replace $y(x_i)$ (unknown if $i>0$) by its
-approximate value $y_i$; then (\ref{eq:3.2.3}) becomes
+method, we replace $y(x_{i})$ (unknown if $i>0$) by its
+approximate value $y_{i}$; then (\ref{eq:3.2.3}) becomes
 $$
-y_{i+1}=y_i+{h\over2}\left(f(x_i,y_i)+f(x_{i+1},y(x_{i+1})\right).
+y_{i+1}=y_{i}+\frac{h}{2}\left(f(x_{i},y_{i})+f(x_{i+1},y(x_{i+1})\right).
 $$
 However, this still won't work, because we don't know $y(x_{i+1})$,
 which appears on the right. We overcome this by replacing $y(x_{i+1})$
-by $y_i+hf(x_i,y_i)$, the value that the  Euler method would
+by $y_{i}+hf(x_{i},y_{i})$, the value that the  Euler method would
 assign to $y_{i+1}$. Thus,  the improved Euler method
-starts with the known value $y(x_0)=y_0$ and computes
-$y_1$, $y_2$, \dots, $y_n$ successively with the formula
+starts with the known value $y(x_{0})=y_{0}$ and computes
+$y_{1}$, $y_{2}$, \dots, $y_{n}$ successively with the formula
 \begin{equation} \label{eq:3.2.4}
-y_{i+1}=y_i+{h\over2}\left(f(x_i,y_i)+f(x_{i+1},y_i+hf(x_i,y_i))\right).
+y_{i+1}=y_{i}+\frac{h}{2}\left(f(x_{i},y_{i})+f(x_{i+1},y_{i}+hf(x_{i},y_{i}))\right).
 \end{equation}
 The computation indicated here can be conveniently organized as
-follows: given $y_i$, compute
+follows: given $y_{i}$, compute
 \begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+h,y_i+hk_{1i}\right),\\
-y_{i+1}&=&y_i+{h\over2}(k_{1i}+k_{2i}).
+k_{1i}&=&f(x_{i},y_{i}),\\
+k_{2i}&=&f\left(x_{i}+h,y_{i}+hk_{1i}\right),\\
+y_{i+1}&=&y_{i}+\frac{h}{2}(k_{1i}+k_{2i}).
 \end{eqnarray*}
 
 The improved Euler method requires two evaluations of $f(x,y)$ per
 step, while Euler's method requires only one. However, we'll see at
 the end of this section that if $f$ satisfies appropriate assumptions,
  the local truncation error with the improved Euler method is
-$O(h^3)$, rather than $O(h^2)$ as with Euler's method. Therefore
+$O(h^{3})$, rather than $O(h^{2})$ as with Euler's method. Therefore
 the global truncation error with the improved Euler method is
-$O(h^2)$;     however, we won't prove this.
+$O(h^{2})$;     however, we won't prove this.
 
 We note that the magnitude of the local truncation error in the
 improved Euler method and other methods discussed in this section is
@@ -145,7 +145,7 @@ the computational procedure indicated in the improved Euler method.
 Use the improved Euler method with $h=0.1$ to find approximate values
 of the solution of the initial value problem
 \begin{equation}\label{eq:3.2.5}
-y'+2y=x^3e^{-2x},\quad y(0)=1
+y'+2y=x^{3}e^{-2x},\quad y(0)=1
 \end{equation}
 at $x=0.1,0.2,0.3$.
 \end{example}
@@ -153,35 +153,35 @@ at $x=0.1,0.2,0.3$.
 \solution
 As in Example~\ref{example:3.1.1}, we rewrite (\ref{eq:3.2.5})  as
 $$
-y'=-2y+x^3e^{-2x},\quad y(0)=1,
+y'=-2y+x^{3}e^{-2x},\quad y(0)=1,
 $$
 which is of the form (\ref{eq:3.2.1}), with
 $$
-f(x,y)=-2y+x^3e^{-2x},\; x_0=0,\mbox{\; and}\; y_0=1.
+f(x,y)=-2y+x^{3}e^{-2x},\;x_{0}=0,\mbox{\; and}\;y_{0}=1.
 $$
 The improved Euler method yields
 
 \enlargethispage{.75in}
 \begin{eqnarray*}
-k_{10} & = & f(x_0,y_0)
-  = f(0,1)=-2,\\
-k_{20} & = & f(x_1,y_0+hk_{10})=f(.1,1+(.1)(-2))\\
- &=& f(.1,.8)=-2(.8)+(.1)^3e^{-.2}=-1.599181269,\\
-y_1&=&y_0+{h\over2}(k_{10}+k_{20}),\\
+k_{10}&=&f(x_{0},y_{0})
+  =f(0,1)=-2,\\
+k_{20}&=&f(x_{1},y_{0}+hk_{10})=f(.1,1+(.1)(-2))\\
+ &=&f(.1,.8)=-2(.8)+(.1)^{3}e^{-.2}=-1.599181269,\\
+y_{1}&=&y_{0}+\frac{h}{2}(k_{10}+k_{20}),\\
 &=&1+(.05)(-2-1.599181269)=.820040937,\\[4\jot]
-k_{11} & = & f(x_1,y_1)
-  = f(.1,.820040937)= -2(.820040937)+(.1)^3e^{-.2}=-1.639263142,\\
-k_{21} & = & f(x_2,y_1+hk_{11})=f(.2,.820040937+.1(-1.639263142)),\\
+k_{11}&=&f(x_{1},y_{1})
+  =f(.1,.820040937)=-2(.820040937)+(.1)^{3}e^{-.2}=-1.639263142,\\
+k_{21}&=&f(x_{2},y_{1}+hk_{11})=f(.2,.820040937+.1(-1.639263142)),\\
  &=&
-f(.2,.656114622)=-2(.656114622)+(.2)^3e^{-.4}=-1.306866684,\\
-y_2&=&y_1+{h\over2}(k_{11}+k_{21}),\\
+f(.2,.656114622)=-2(.656114622)+(.2)^{3}e^{-.4}=-1.306866684,\\
+y_{2}&=&y_{1}+\frac{h}{2}(k_{11}+k_{21}),\\
 &=&.820040937+(.05)(-1.639263142-1.306866684)=.672734445,\\[4\jot]
-k_{12} & = & f(x_2,y_2)
-  = f(.2,.672734445)= -2(.672734445)+(.2)^3e^{-.4}=-1.340106330,\\
-k_{22} & = & f(x_3,y_2+hk_{12})=f(.3,.672734445+.1(-1.340106330)),\\
+k_{12}&=&f(x_{2},y_{2})
+  =f(.2,.672734445)=-2(.672734445)+(.2)^{3}e^{-.4}=-1.340106330,\\
+k_{22}&=&f(x_{3},y_{2}+hk_{12})=f(.3,.672734445+.1(-1.340106330)),\\
  &=&
-f(.3,.538723812)=-2(.538723812)+(.3)^3e^{-.6}=-1.062629710,\\
-y_3&=&y_2+{h\over2}(k_{12}+k_{22})\\
+f(.3,.538723812)=-2(.538723812)+(.3)^{3}e^{-.6}=-1.062629710,\\
+y_{3}&=&y_{2}+\frac{h}{2}(k_{12}+k_{22})\\
 &=&.672734445+(.05)(-1.340106330-1.062629710)=.552597643.
 \end{eqnarray*}
 
@@ -190,14 +190,14 @@ Table~\ref{table:3.2.2} shows results of using the improved Euler method
 with step sizes $h=0.1$ and $h=0.05$ to find approximate values of the
 solution of the initial value problem
 $$
-y'+2y=x^3e^{-2x},\quad y(0)=1
+y'+2y=x^{3}e^{-2x},\quad y(0)=1
 $$
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. For comparison, it also shows
 the
 corresponding approximate values obtained with Euler's method in
 \ref{example:3.1.2}, and the values of the exact solution
 $$
-y={e^{-2x}\over4}(x^4+4).
+y=\frac{e^{-2x}}{4}(x^{4}+4).
 $$
 The results
 obtained by the improved Euler method with $h=0.1$ are better than
@@ -205,7 +205,7 @@ those obtained by Euler's method with $h=0.05$.
 \end{example}
 
 \begin{newtable} \label{table:3.2.2}
-Numerical solution of $y'+2y=x^3e^{-2x}$, $y(0)=1$, by Euler's method
+Numerical solution of $y'+2y=x^{3}e^{-2x}$, $y(0)=1$, by Euler's method
 and the improved Euler method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|r|}
@@ -238,7 +238,7 @@ and the improved Euler method.
 Table~\ref{table:3.2.3} shows analogous results for the nonlinear
 initial value problem
 $$
-y'=-2y^2+xy+x^2,\ y(0)=1.
+y'=-2y^{2}+xy+x^{2},\ y(0)=1.
 $$
 We applied Euler's  method to this problem in
 Example~\ref{example:3.1.3}.
@@ -246,7 +246,7 @@ Example~\ref{example:3.1.3}.
 
 \begin{newtable} \label{table:3.2.3}
 Numerical solution of
-$y'=-2y^2+xy+x^2$, $y(0)=1$,
+$y'=-2y^{2}+xy+x^{2}$, $y(0)=1$,
 by Euler's method and the improved Euler method.
 \begin{center}
 \begin{tabular}{|c|r|r|r|r|r|}
@@ -297,12 +297,12 @@ and applying the improved Euler method with $f(x,y)=1+2xy$ yields
 the results shown in Table~\ref{table:3.2.4}.
 
 \solutionpart{b}
-Since $y_1=e^{x^2}$ is a solution of the complementary equation
+Since $y_{1}=e^{x^{2}}$ is a solution of the complementary equation
 $y'-2xy=0$, we can  apply the improved Euler semilinear method to
 (\ref{eq:3.2.6}), with
 $$
-y=ue^{x^2}\mbox{\quad and \quad}
-u'=e^{-x^2},\quad u(0)=3.
+y=ue^{x^{2}}\mbox{\quad and \quad}
+u'=e^{-x^{2}},\quad u(0)=3.
 $$
 The results listed in Table~\ref{table:3.2.5} are clearly better than
 those obtained by the improved Euler method.
@@ -362,145 +362,144 @@ semilinear method.
 \end{newtable}
 
 \newpage
-\boxit{A Family of Methods with $O(h^3)$ Local Truncation Error}
+\boxit{A Family of Methods with $O(h^{3})$ Local Truncation Error}
 
 \noindent
-We'll now derive a class of methods with $O(h^3)$ local truncation
+We'll now derive a class of methods with $O(h^{3})$ local truncation
 error for solving (\ref{eq:3.2.1}). For simplicity, we
-assume that $f$, $f_x$, $f_y$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
+assume that $f$, $f_{x}$, $f_{y}$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
 continuous and bounded for all $(x,y)$. This implies that if $y$ is
 the solution of (\ref{eq:3.2.1} then $y''$ and $y'''$ are bounded
 (Exercise~\ref{exer:3.2.31}).
 
 We begin by approximating the integral curve of (\ref{eq:3.2.1}) at
-$(x_i,y(x_i))$ by the line through $(x_i,y(x_i))$ with slope
+$(x_{i},y(x_{i}))$ by the line through $(x_{i},y(x_{i}))$ with slope
 $$
-m_i=\sigma y'(x_i)+\rho y'(x_i+\theta h),
+m_{i}=\sigma y'(x_{i})+\rho y'(x_{i}+\theta h),
 $$
 where $\sigma$, $\rho$, and $\theta$ are constants that we'll soon
-specify;     however, we insist at the outset that $0<\theta\le 1$, so
+specify;     however, we insist at the outset that $0<\theta\le1$, so
 that
 $$
-x_i<x_i+\theta h\le x_{i+1}.
+x_{i}<x_{i}+\theta h\le x_{i+1}.
 $$
 The equation of the approximating line is
 \begin{equation} \label{eq:3.2.7}
 \begin{array}{rcl}
-y&=&y(x_i)+m_i(x-x_i)\\
-&=&y(x_i)+\left[\sigma y'(x_i)+\rho y'(x_i+\theta h)\right](x-x_i).
+y&=&y(x_{i})+m_{i}(x-x_{i})\\
+&=&y(x_{i})+\left[\sigma y'(x_{i})+\rho y'(x_{i}+\theta h)\right](x-x_{i}).
 \end{array}
 \end{equation}
-Setting $x=x_{i+1}=x_i+h$ in (\ref{eq:3.2.7}) yields
+Setting $x=x_{i+1}=x_{i}+h$ in (\ref{eq:3.2.7}) yields
 $$
-\hat y_{i+1}=y(x_i)+h\left[\sigma y'(x_i)+\rho y'(x_i+\theta h)\right]
+\hat{y}_{i+1}=y(x_{i})+h\left[\sigma y'(x_{i})+\rho y'(x_{i}+\theta h)\right]
 $$
 as an approximation to $y(x_{i+1})$.
 
 To determine $\sigma$, $\rho$, and $\theta$ so that the error
 \begin{equation} \label{eq:3.2.8}
 \begin{array}{rcl}
-E_i&=&y(x_{i+1})-\hat y_{i+1}\\
-&=&y(x_{i+1})-y(x_i)-h\left[\sigma y'(x_i)+\rho y'(x_i+\theta
+E_{i}&=&y(x_{i+1})-\hat{y}_{i+1}\\
+&=&y(x_{i+1})-y(x_{i})-h\left[\sigma y'(x_{i})+\rho y'(x_{i}+\theta
 h)\right]
 \end{array}
 \end{equation}
-in this approximation is $O(h^3)$, we begin by recalling from Taylor's
+in this approximation is $O(h^{3})$, we begin by recalling from Taylor's
 theorem that
 $$
-y(x_{i+1})=y(x_i)+hy'(x_i)+{h^2\over2}y''(x_i)+{h^3\over6}y'''(\hat
-x_i),
+y(x_{i+1})=y(x_{i})+hy'(x_{i})+\frac{h^{2}}{2}y''(x_{i})+\frac{h^{3}}{6}y'''(\hat{x}_{i}),
 $$
-where $\hat x_i$ is in $(x_i,x_{i+1})$. Since $y'''$ is bounded this
+where $\hat{x}_{i}$ is in $(x_{i},x_{i+1})$. Since $y'''$ is bounded this
 implies that
 $$
- y(x_{i+1})-y(x_i)-hy'(x_i)-{h^2\over2}y''(x_i)=O(h^3).
+ y(x_{i+1})-y(x_{i})-hy'(x_{i})-\frac{h^{2}}{2}y''(x_{i})=O(h^{3}).
 $$
-Comparing this with (\ref{eq:3.2.8}) shows that $E_i=O(h^3)$ if
+Comparing this with (\ref{eq:3.2.8}) shows that $E_{i}=O(h^{3})$ if
 \begin{equation} \label{eq:3.2.9}
-\sigma y'(x_i)+\rho y'(x_i+\theta h)=y'(x_i)+{h\over2}y''(x_i)
-+O(h^2).
+\sigma y'(x_{i})+\rho y'(x_{i}+\theta h)=y'(x_{i})+\frac{h}{2}y''(x_{i})
++O(h^{2}).
 \end{equation}
 However, applying Taylor's theorem to $y'$ shows that
 $$
-y'(x_i+\theta h)=y'(x_i)+\theta h y''(x_i)+{(\theta
-h)^2\over2}y'''(\overline x_i),
+y'(x_{i}+\theta h)=y'(x_{i})+\theta hy''(x_{i})+\frac{(\theta
+h)^{2}}{2}y'''(\overline{x}_{i}),
 $$
-where $\overline x_i$ is in $(x_i,x_i+\theta h)$. Since $y'''$ is
+where $\overline{x}_{i}$ is in $(x_{i},x_{i}+\theta h)$. Since $y'''$ is
 bounded, this implies that
 $$
-y'(x_i+\theta h)=y'(x_i)+\theta h y''(x_i)+O(h^2).
+y'(x_{i}+\theta h)=y'(x_{i})+\theta hy''(x_{i})+O(h^{2}).
 $$
 Substituting this into (\ref{eq:3.2.9}) and noting that the sum of
-two $O(h^2)$ terms is again $O(h^2)$ shows that
-$E_i=O(h^3)$ if
+two $O(h^{2})$ terms is again $O(h^{2})$ shows that
+$E_{i}=O(h^{3})$ if
 $$
-(\sigma+\rho)y'(x_i)+\rho\theta h y''(x_i)=
-y'(x_i)+{h\over2}y''(x_i),
+(\sigma+\rho)y'(x_{i})+\rho\theta hy''(x_{i})=
+y'(x_{i})+\frac{h}{2}y''(x_{i}),
 $$
 which is true if
 \begin{equation} \label{eq:3.2.10}
-\sigma+\rho=1 \mbox{\quad and \quad} \rho\theta={1\over2}.
+\sigma+\rho=1\mbox{\quad and \quad}\rho\theta=\frac{1}{2}.
 \end{equation}
 
 Since $y'=f(x,y)$, we can now conclude from (\ref{eq:3.2.8}) that
 \begin{equation} \label{eq:3.2.11}
-y(x_{i+1})=y(x_i)+h\left[\sigma f(x_i,y_i)+\rho f(x_i+\theta
-h,y(x_i+\theta h))\right]+O(h^3)
+y(x_{i+1})=y(x_{i})+h\left[\sigma f(x_{i},y_{i})+\rho f(x_{i}+\theta
+h,y(x_{i}+\theta h))\right]+O(h^{3})
 \end{equation}
 if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}). However,
-this formula would not be useful even if we knew $y(x_i)$ exactly (as
-we would for $i=0$), since we still wouldn't know $y(x_i+\theta h)$
+this formula would not be useful even if we knew $y(x_{i})$ exactly (as
+we would for $i=0$), since we still wouldn't know $y(x_{i}+\theta h)$
 exactly. To overcome this difficulty, we again use Taylor's theorem to
 write
 $$
-y(x_i+\theta h)=y(x_i)+\theta h y'(x_i)+{h^2\over2}y''(\tilde x_i),
+y(x_{i}+\theta h)=y(x_{i})+\theta hy'(x_{i})+\frac{h^{2}}{2}y''(\tilde{x}_{i}),
 $$
-where $\tilde x_i$ is in $(x_i,x_i+\theta h)$. Since
-$y'(x_i)=f(x_i,y(x_i))$ and $y''$ is bounded, this implies that
+where $\tilde{x}_{i}$ is in $(x_{i},x_{i}+\theta h)$. Since
+$y'(x_{i})=f(x_{i},y(x_{i}))$ and $y''$ is bounded, this implies that
 \begin{equation} \label{eq:3.2.12}
-|y(x_i+\theta h)-y(x_i)-\theta h f(x_i,y(x_i))|\le Kh^2
+|y(x_{i}+\theta h)-y(x_{i})-\theta hf(x_{i},y(x_{i}))|\le Kh^{2}
 \end{equation}
-for some constant $K$. Since $f_y$ is bounded, the mean value theorem
+for some constant $K$. Since $f_{y}$ is bounded, the mean value theorem
 implies that
 $$
-|f(x_i+\theta h,u)-f(x_i+\theta h,v)|\le M|u-v|
+|f(x_{i}+\theta h,u)-f(x_{i}+\theta h,v)|\le M|u-v|
 $$
 for some constant $M$. Letting
 $$
-u=y(x_i+\theta h)\mbox{\quad and \quad}
-v=y(x_i)+\theta h f(x_i,y(x_i))
+u=y(x_{i}+\theta h)\mbox{\quad and \quad}
+v=y(x_{i})+\theta hf(x_{i},y(x_{i}))
 $$
 and recalling (\ref{eq:3.2.12}) shows that
 $$
-f(x_i+\theta h,y(x_i+\theta h))=f(x_i+\theta h,y(x_i)+\theta h
-f(x_i,y(x_i)))+O(h^2).
+f(x_{i}+\theta h,y(x_{i}+\theta h))=f(x_{i}+\theta h,y(x_{i})+\theta h
+f(x_{i},y(x_{i})))+O(h^{2}).
 $$
 Substituting this into (\ref{eq:3.2.11})   yields
 \begin{eqnarray*}
-y(x_{i+1})&=&y(x_i)+h\left[\sigma f(x_i,y(x_i))+\right.\\&&\left.\rho
-f(x_i+\theta h,y(x_i)+\theta hf(x_i,y(x_i)))\right]+O(h^3).
+y(x_{i+1})&=&y(x_{i})+h\left[\sigma f(x_{i},y(x_{i}))+\right.\\&&\left.\rho
+f(x_{i}+\theta h,y(x_{i})+\theta hf(x_{i},y(x_{i})))\right]+O(h^{3}).
 \end{eqnarray*}
 This implies that the formula
 $$
-y_{i+1}=y_i+h\left[\sigma f(x_i,y_i)+\rho f(x_i+\theta
-h,y_i+\theta hf(x_i,y_i))\right]
+y_{i+1}=y_{i}+h\left[\sigma f(x_{i},y_{i})+\rho f(x_{i}+\theta
+h,y_{i}+\theta hf(x_{i},y_{i}))\right]
 $$
-has $O(h^3)$ local truncation error if $\sigma$, $\rho$, and $\theta$
+has $O(h^{3})$ local truncation error if $\sigma$, $\rho$, and $\theta$
 satisfy (\ref{eq:3.2.10}). Substituting $\sigma=1-\rho$ and
 $\theta=1/2\rho$ here yields
 \begin{equation} \label{eq:3.2.13}
-y_{i+1}=y_i+h\left[(1-\rho)f(x_i,y_i)+\rho
-f\left(x_i+{h\over2\rho},
-y_i+{h\over2\rho}f(x_i,y_i)\right)\right].
+y_{i+1}=y_{i}+h\left[(1-\rho)f(x_{i},y_{i})+\rho
+f\left(x_{i}+\frac{h}{2\rho},
+y_{i}+\frac{h}{2\rho}f(x_{i},y_{i})\right)\right].
 \end{equation}
 
 The computation indicated here can be conveniently organized as
-follows: given $y_i$, compute
+follows: given $y_{i}$, compute
 \begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+{h\over2\rho},
-y_i+{h\over2\rho}k_{1i}\right),\\
-y_{i+1}&=&y_i+h[(1-\rho)k_{1i}+\rho k_{2i}].
+k_{1i}&=&f(x_{i},y_{i}),\\
+k_{2i}&=&f\left(x_{i}+\frac{h}{2\rho},
+y_{i}+\frac{h}{2\rho}k_{1i}\right),\\
+y_{i+1}&=&y_{i}+h[(1-\rho)k_{1i}+\rho k_{2i}].
 \end{eqnarray*}
 
 Consistent with our requirement that $0<\theta<1$, we require that
@@ -509,27 +508,27 @@ Euler method (\ref{eq:3.2.4}). Letting $\rho=3/4$ yields
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Heun/}
 {\color{blue}\it Heun's method},
 $$
-y_{i+1}=y_i+h\left[{1\over4}f(x_i,y_i)+{3\over4}f\left(
-x_i+{2\over3}h,y_i+{2\over3}hf(x_i,y_i)\right)\right],
+y_{i+1}=y_{i}+h\left[\frac{1}{4}f(x_{i},y_{i})+\frac{3}{4}f\left(
+x_{i}+\frac{2}{3}h,y_{i}+\frac{2}{3}hf(x_{i},y_{i})\right)\right],
 $$
 which can be organized as
 \begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+{2h\over3},
-y_i+{2h\over3}k_{1i}\right),\\
-y_{i+1}&=&y_i+{h\over4}(k_{1i}+3k_{2i}).
+k_{1i}&=&f(x_{i},y_{i}),\\
+k_{2i}&=&f\left(x_{i}+\frac{2h}{3},
+y_{i}+\frac{2h}{3}k_{1i}\right),\\
+y_{i+1}&=&y_{i}+\frac{h}{4}(k_{1i}+3k_{2i}).
 \end{eqnarray*}
 Letting $\rho=1$ yields the {\color{blue}\it midpoint
 method\/},
 $$
-y_{i+1}=y_i+hf\left(x_i+{h\over2},y_i+{h\over2}f(x_i,y_i)\right),
+y_{i+1}=y_{i}+hf\left(x_{i}+\frac{h}{2},y_{i}+\frac{h}{2}f(x_{i},y_{i})\right),
 $$
 which can be organized as
 \begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+{h\over2},
-y_i+{h\over2}k_{1i}\right),\\
-y_{i+1}&=&y_i+hk_{2i}.
+k_{1i}&=&f(x_{i},y_{i}),\\
+k_{2i}&=&f\left(x_{i}+\frac{h}{2},
+y_{i}+\frac{h}{2}k_{1i}\right),\\
+y_{i+1}&=&y_{i}+hk_{2i}.
 \end{eqnarray*}
 
 Examples involving the midpoint method and Heun's method are given in
@@ -544,20 +543,20 @@ the corresponding results that you obtained in Section~3.1.
 \emph{In Exercises~\ref{exer:3.2.1}--\ref{exer:3.2.5} use the improved
 Euler method
 to find approximate values of the solution of the given initial value
-problem at the points $x_i=x_0+ih$, where $x_0$ is the point where
+problem at the points $x_{i}=x_{0}+ih$, where $x_{0}$ is the point where
 the initial condition is imposed and $i=1$, $2$, $3$.}
 
 \begin{exerciselist}
 \item\label{exer:3.2.1} \Cex
-$y'=2x^2+3y^2-2,\quad y(2)=1;\quad h=0.05$  \,
+$y'=2x^{2}+3y^{2}-2,\quad y(2)=1;\quad h=0.05$  \,
 \item\label{exer:3.2.2} \Cex
-$y'=y+\sqrt{x^2+y^2},\quad y(0)=1;\quad h=0.1$  \,
+$y'=y+\sqrt{x^{2}+y^{2}},\quad y(0)=1;\quad h=0.1$  \,
 \item\label{exer:3.2.3} \Cex
-$y'+3y=x^2-3xy+y^2,\quad y(0)=2;\quad h=0.05$  \,
+$y'+3y=x^{2}-3xy+y^{2},\quad y(0)=2;\quad h=0.05$  \,
 \item\label{exer:3.2.4} \Cex
-$y'=\dst{1+x\over1-y^2},\quad y(2)=3;\quad h=0.1$\
+$y'=\dst\frac{1+x}{1-y^{2}},\quad y(2)=3;\quad h=0.1$\
 \item\label{exer:3.2.5} \Cex
-$y'+x^2y=\sin xy,\quad y(1)=\pi;\quad h=0.2$
+$y'+x^{2}y=\sin xy,\quad y(1)=\pi;\quad h=0.2$
 
 \item\label{exer:3.2.6} \Cex
 Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
@@ -577,13 +576,13 @@ Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of the initial
 value problem
 $$
-y'+{2\over x}y={3\over x^3}+1,\quad y(1)=1
+y'+\frac{2}{x}y=\frac{3}{x^{3}}+1,\quad y(1)=1
 $$
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Compare these approximate
 values with
 the values of the exact solution
 $$
-y={1\over3x^2}(9\ln x+x^3+2)
+y=\frac{1}{3x^{2}}(9\ln x+x^{3}+2)
 $$
 which can be obtained by the method of Section~2.1. Present
 your results in a table like Table~\ref{table:3.2.2}.
@@ -593,13 +592,13 @@ Use the improved Euler method with step sizes $h=0.05$, $h=0.025$, and
 $h=0.0125$ to find approximate values of the solution of the initial
 value problem
 $$
-y'={y^2+xy-x^2\over x^2},\quad y(1)=2,
+y'=\frac{y^{2}+xy-x^{2}}{x^{2}},\quad y(1)=2,
 $$
 at $x=1.0$, $1.05$, $1.10$, $1.15$, \dots, $1.5$. Compare these approximate
 values
 with the values of the exact solution
 $$
-y={x(1+x^2/3)\over1-x^2/3}
+y=\frac{x(1+x^{2}/3)}{1-x^{2}/3}
 $$
 obtained in Example~\ref{example:2.4.3}. Present your results in a table
 like Table~\ref{table:3.2.2}.
@@ -607,11 +606,11 @@ like Table~\ref{table:3.2.2}.
 \item\label{exer:3.2.9} \Cex
 In Example~\ref{example:3.2.2} it was shown that
 $$
-y^5+y=x^2+x-4
+y^{5}+y=x^{2}+x-4
 $$
 is an implicit solution of  the initial value problem
 $$
-y'={2x+1\over5y^4+1},\quad y(2)=1.
+y'=\frac{2x+1}{5y^{4}+1},\quad y(2)=1.
 \eqno{\rm(A)}
 $$
 Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
@@ -621,18 +620,18 @@ form. To
 check the error in these approximate values, construct another table
 of values of the residual
 $$
-R(x,y)=y^5+y-x^2-x+4
+R(x,y)=y^{5}+y-x^{2}-x+4
 $$
 for each value of $(x,y)$ appearing in the first table.
 
 \item\label{exer:3.2.10} \Cex
 You can see from Example~\ref{example:2.5.1} that
 $$
-x^4y^3+x^2y^5+2xy=4
+x^{4}y^{3}+x^{2}y^{5}+2xy=4
 $$
 is an implicit solution of  the initial value problem
 $$
-y'=-{4x^3y^3+2xy^5+2y\over3x^4y^2+5x^2y^4+2x},\quad y(1)=1.
+y'=-\frac{4x^{3}y^{3}+2xy^{5}+2y}{3x^{4}y^{2}+5x^{2}y^{4}+2x},\quad y(1)=1.
 \eqno{\rm(A)}
 $$
 Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
@@ -642,7 +641,7 @@ tabular form. To
 check the error in these approximate values, construct another table
 of values of the residual
 $$
-R(x,y)=x^4y^3+x^2y^5+2xy-4
+R(x,y)=x^{4}y^{3}+x^{2}y^{5}+2xy-4
 $$
 for each value of $(x,y)$ appearing in the first table.
 
@@ -651,7 +650,7 @@ Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of the initial
 value problem
 $$
-(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1 \mbox{\
+(3y^{2}+4y)y'+2x+\cos x=0,\quad y(0)=1\mbox{\
 (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.13})}
 $$
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
@@ -661,7 +660,7 @@ Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of the initial
 value problem
 $$
-y'+{(y+1)(y-1)(y-2)\over x+1}=0, \quad y(1)=0
+y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0,\quad y(1)=0
 \mbox{\  (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.14})}
 $$
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$.
@@ -675,7 +674,7 @@ y'+3y=e^{-3x}(1-2x),\quad y(0)=2,
 $$
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
-values of the exact solution $y=e^{-3x}(2+x-x^2)$, which can be
+values of the exact solution $y=e^{-3x}(2+x-x^{2})$, which can be
 obtained by the method of Section~2.1. Do you notice
 anything special about the results? Explain.
 
@@ -688,31 +687,31 @@ value problem at 11 equally spaced points (including the
 endpoints) in the interval.}
 
 \item\label{exer:3.2.14} \Cex
-$y'-2y=\dst{1\over1+x^2},\quad y(2)=2$;  \quad
+$y'-2y=\dst\frac{1}{1+x^{2}},\quad y(2)=2$;  \quad
 $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.2.15} \Cex
-$y'+2xy=x^2,\quad y(0)=3$;\quad
+$y'+2xy=x^{2},\quad y(0)=3$;\quad
 $h=0.2,0.1,0.05$ on $[0,2]$
 \quad (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38})
 
 \item\label{exer:3.2.16} \Cex
-$\dst{y'+{1\over x}y={\sin x\over x^2},\quad y(1)=2}$, \quad
+$\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^{2}},\quad y(1)=2}$, \quad
 $h=0.2,0.1,0.05$ on $[1,3]$
 \quad (Exercise~2.1.\hspace*{-3pt}\ref{exer:2.1.39})
 
 \item\label{exer:3.2.17} \Cex
-$\dst{y'+y={e^{-x}\tan x\over x},\quad y(1)=0}$;\quad
+$\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0}$;\quad
 $h=0.05,0.025,0.0125$ on $[1,1.5]$\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40}),
 
 \item\label{exer:3.2.18} \Cex
-$\dst{y'+{2x\over 1+x^2}y={e^x\over (1+x^2)^2}, \quad y(0)=1}$;\;
+$\dst{y'+\frac{2x}{1+x^{2}}y=\frac{e^{x}}{(1+x^{2})^{2}},\quad y(0)=1}$;\;
 $h=0.2,0.1,0.05$ on $[0,2]$\quad
  (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.41})
 
 \item\label{exer:3.2.19} \Cex
-$xy'+(x+1)y=e^{x^2},\quad y(1)=2$;\;
+$xy'+(x+1)y=e^{x^{2}},\quad y(1)=2$;\;
 $h=0.05,0.025,0.0125$ on $[1,1.5]$\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.42})
 
@@ -723,15 +722,15 @@ the given initial value problem at 11 equally spaced points
 (including the endpoints) in the interval.}
 
 \item\label{exer:3.2.20} \Cex
-$y'+3y=xy^2(y+1),\quad y(0)=1$;\quad
+$y'+3y=xy^{2}(y+1),\quad y(0)=1$;\quad
 $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.2.21} \Cex
-$\dst{y'-4y={x\over y^2(y+1)},\quad y(0)=1}$;\quad
+$\dst{y'-4y=\frac{x}{y^{2}(y+1)},\quad y(0)=1}$;\quad
  $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.2.22} \Cex
-$\dst{y'+2y={x^2\over1+y^2},\quad y(2)=1}$;\quad
+$\dst{y'+2y=\frac{x^{2}}{1+y^{2}},\quad y(2)=1}$;\quad
  $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.2.23} \Cex
@@ -767,11 +766,11 @@ Do Exercise~\ref{exer:3.2.12} with ``improved Euler method''
 replaced by ``Heun's method.''
 
 \item\label{exer:3.2.31}
-Show that if $f$, $f_x$, $f_y$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
+Show that if $f$, $f_{x}$, $f_{y}$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
 continuous and bounded for all $(x,y)$ and $y$ is the solution of the
 initial value problem
 $$
-y'=f(x,y),\quad y(x_0)=y_0,
+y'=f(x,y),\quad y(x_{0})=y_{0},
 $$
 then $y''$ and $y'''$ are bounded.
 
@@ -781,7 +780,7 @@ then $y''$ and $y'''$ are bounded.
 \item % (a)
 Derive the quadrature formula
 $$
-\int_a^bf(x)\,dx\approx .5h(f(a)+f(b))+
+\int_{a}^{b}f(x)\,dx\approx.5h(f(a)+f(b))+
 h\sum_{i=1}^{n-1}f(a+ih)\mbox{\quad(where $h=(b-a)/n$)}
 \eqno{\rm(A)}
 $$
@@ -795,13 +794,13 @@ rule}. Draw a figure that justifies this terminology.
 \item % (c)
 \Lex
 For several choices of $a$, $b$, $A$,  and $B$,
- apply (A) to $f(x)=A+Bx$, with $n = 10,20,40,80,160,320$.
+ apply (A) to $f(x)=A+Bx$, with $n=10,20,40,80,160,320$.
 Compare your results with the exact answers
 and explain what you find.
 \item % (d)
 \Lex
 For several choices of $a$, $b$, $A$, $B$, and $C$,
- apply (A) to $f(x)=A+Bx+Cx^2$, with $n=10$, $20$, $40$, $80$, $160$,
+ apply (A) to $f(x)=A+Bx+Cx^{2}$, with $n=10$, $20$, $40$, $80$, $160$,
 $320$.
  Compare your results with the exact answers
 and explain what you find.

@@ -3,18 +3,18 @@
 \noindent
 In this section we consider eigenvalue problems of  the form
 \begin{equation} \label{eq:13.2.1}
-P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y+ \lambda R(x)y=0,\quad B_{1}(y)=0,\quad
+P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y+\lambda R(x)y=0,\quad B_{1}(y)=0,\quad
 B_{2}(y)=0,
 \end{equation}
 where
 $$
-B_{1}(y)=\alpha y(a)+\beta y'(a) \text{\quad and\quad}
+B_{1}(y)=\alpha y(a)+\beta y'(a)\text{\quad and\quad}
 B_{2}(y)=\rho y(b)+\delta y'(b).
 $$
 As in Section~13.1,  $\alpha$, $\beta$, $\rho$, and $\delta$
 are real numbers, with
 $$
-\alpha^{2}+\beta^{2}>0\text{\;    and\; \;  } \rho^{2}+\delta^{2}>0,
+\alpha^{2}+\beta^{2}>0\text{\;    and\; \;  }\rho^{2}+\delta^{2}>0,
 $$
 $P_{0}$, $P_{1}$, $P_{2}$, and $R$ are continuous, and $P_{0}$ and $R$
 are positive on $[a,b]$.
@@ -40,7 +40,7 @@ r^{2}+3r+2+\lambda=0,
 $$
 with zeros
 $$
-r_{1}=\frac{-3+\sqrt{1-4\lambda}}{2} \text{\quad   and \quad }
+r_{1}=\frac{-3+\sqrt{1-4\lambda}}{2}\text{\quad   and \quad }
 r_{2}=\frac{-3-\sqrt{1-4\lambda}}{2}.
 $$
 If $\lambda<1/4$ then  $r_{1}$ and $r_{2}$ are real and distinct, so the
@@ -68,13 +68,13 @@ $c_{2}=0$. Therefore $\lambda=1/4$  isn't  an eigenvalue of~\eqref{eq:13.2.2}.
 
 If $\lambda>1/4$ then
 $$
-r_{1}=-\frac{3}{2}+i\omega \text{\quad   and\quad }
+r_{1}=-\frac{3}{2}+i\omega\text{\quad   and\quad }
 r_{2}=-\frac{3}{2}-i\omega,
 $$
 with
 \begin{equation} \label{eq:13.2.3}
-\omega =\frac{\sqrt{4\lambda-1}}{2}
-\text{\quad  or, equivalently,\quad }  \lambda=\frac{1+4\omega^{2}}{4}.
+\omega=\frac{\sqrt{4\lambda-1}}{2}
+\text{\quad  or, equivalently,\quad }\lambda=\frac{1+4\omega^{2}}{4}.
 \end{equation}
 In this case the general solution of the differential equation in
 \eqref{eq:13.2.2} is
@@ -101,7 +101,7 @@ x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0.
 If  $\lambda=0$,  the differential equation in \eqref{eq:13.2.4}  reduces to
 $x(xy')'=0$, so $xy'=c_{1}$,
 $$
-y'=\frac{c_{1}}{x}, \text{\quad and\quad}  y=c_{1}\ln x+c_{2}.
+y'=\frac{c_{1}}{x},\text{\quad and\quad}y=c_{1}\ln x+c_{2}.
 $$
 The boundary condition $y(1)=0$ requires that $c_{2}=0$, so $y=c_{1}\ln x$.
 The boundary condition  $y(2)=0$ requires that $c_{1}\ln2=0$, so $c_{1}=0$.
@@ -122,7 +122,7 @@ y=c_{1}x^{k}+c_{2}x^{-k}.
 $$
 The boundary conditions require that
 \begin{eqnarray*}
-\phantom{2^{k}}c_{1}+\phantom{2^{-k}}c_{2}&=&0 \\
+\phantom{2^{k}}c_{1}+\phantom{2^{-k}}c_{2}&=&0\\
 2^{k}c_{1}+2^{-k}c_{2}&=&0.
 \end{eqnarray*}
 Since the determinant of this system  is $2^{-k}-2^{k}\ne0$,
@@ -131,7 +131,7 @@ $c_{1}=c_{2}=0$. Therefore \eqref{eq:13.2.4} has no negative eigenvalues.
 If $\lambda>0$ we write $\lambda=k^{2}$ with $k>0$. Then  \eqref{eq:13.2.4}
 becomes
 $$
-x^{2}y''+xy' +k^{2}y=0,
+x^{2}y''+xy'+k^{2}y=0,
 $$
 an Euler equation with indicial equation
 $$
@@ -143,7 +143,7 @@ y=c_{1}\cos(k\ln x)+c_{2}\sin(k\ln x).
 $$
  The boundary condition $y(1)=0$
 requires that $c_{1}=0$. Therefore $y=c_{2}\sin(k\ln x)$. This holds with
-$c_{2}\ne0$ if and only if $k=n\pi/\ln 2$, where $n$ is a positive integer.
+$c_{2}\ne0$ if and only if $k=n\pi/\ln2$, where $n$ is a positive integer.
 Hence, the eigenvalues of \eqref{eq:13.2.4} are $\lambda_{n}=(n\pi/\ln2)^{2}$,
 with associated eigenfunctions
 $$
@@ -276,7 +276,7 @@ or $y'$, but not both. If this isn't true then the eigenvalues can't in
 general be expressed exactly by simple formulas;     rather, approximate
 values
 must be obtained by numerical solution of equations derived by requiring
-the determinants of certain $2\times 2$ systems of homogeneous equations to
+the determinants of certain $2\times2$ systems of homogeneous equations to
 be zero. To apply the numerical methods effectively, graphical methods
 must be used to determine approximate locations of the zeros of these
 determinants. Then the zeros can be computed accurately by
@@ -285,7 +285,7 @@ numerical methods.
 \begin{example}  \label{example:13.2.5} \rm
 Solve the Sturm--Liouville problem
 \begin{equation} \label{eq:13.2.15}
-y''+\lambda y=0, \quad y(0)+y'(0)=0,\quad y(1)+3y'(1)=0.
+y''+\lambda y=0,\quad y(0)+y'(0)=0,\quad y(1)+3y'(1)=0.
 \end{equation}
 \end{example}
 
@@ -321,9 +321,9 @@ The determinant of this system is
 D_{N}(k)&=&
 \left|\begin{array}{cccccc}
 1&k\\
-\cosh k+3k\sinh k&\sinh k+3k \cosh k
-\end{array}\right|      \\
-&=& (1-3k^{2})\sinh k+2k \cosh k.
+\cosh k+3k\sinh k&\sinh k+3k\cosh k
+\end{array}\right|\\
+&=&(1-3k^{2})\sinh k+2k\cosh k.
 \end{eqnarray*}
 Therefore the  system \eqref{eq:13.2.17} has a nontrivial solution if and only
 if
@@ -341,7 +341,7 @@ of the two sides of \eqref{eq:13.2.18} on an interval to the right of the
 vertical asymptote, which is indicated by the dashed line. You can see that
 the two curves intersect near $k_{0}=1.2$, Given this estimate, you can use
 Newton's to compute $k_{0}$  more accurately. We computed $k_{0}\approx
-1.1219395$. Therefore $-k_{0}^{2}\approx -1.2587483$ is an eigenvalue of
+1.1219395$. Therefore $-k_{0}^{2}\approx-1.2587483$ is an eigenvalue of
 \eqref{eq:13.2.15}. From \eqref{eq:13.2.16} and the first equation in \eqref{eq:13.2.17},
 $$
 y_{0}=k_{0}\cosh k_{0}x-\sinh k_{0}x.
@@ -350,7 +350,7 @@ $$
 \begin{figure}[tbp]
   \centering\color{blue}
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig130201}
-\caption{$u=\tanh k$  and $u=-2k/(1-3k^2)$}
+\caption{$u=\tanh k$  and $u=-2k/(1-3k^{2})$}
   \label{figure:13.2.1}
 \end{figure}
 
@@ -358,7 +358,7 @@ If $\lambda>0$ we write
 $\lambda=k^{2}$ where $k>0$, and   differential equation in
 \eqref{eq:13.2.15} becomes $y''+k^{2}y=0$, with general solution
 \begin{equation} \label{eq:13.2.19}
-y= \cos kx + c_{2}\sin kx,
+y=\cos kx+c_{2}\sin kx,
 \end{equation}
 so
 $$
@@ -376,9 +376,9 @@ The determinant of this system is
 D_{P}(k)&=&
 \left|\begin{array}{cccccc}
 1&k\\
-\cos k-3k\sin k&\sin k+3k \cos k
-\end{array}\right|      \\
-&=& (1+3k^{2})\sin k+2k \cos k.
+\cos k-3k\sin k&\sin k+3k\cos k
+\end{array}\right|\\
+&=&(1+3k^{2})\sin k+2k\cos k.
 \end{eqnarray*}
 The system \eqref{eq:13.2.20}  has a nontrivial solution if and only if
 $D_{P}(k)=0$ or, equivalently,
@@ -394,16 +394,16 @@ approximation approaches zero as $n\to\infty$. Given this estimate, you can
 use Newton's method to compute $k_{n}$  more accurately. We computed
 \begin{eqnarray*}
 k_{1}&\approx&\phantom{1}2.9256856,\\
-k_{2}&\approx&\phantom{1} 6.1765914,\\
-k_{3}&\approx&\phantom{1} 9.3538959,\\
-k_{4}&\approx& 12.5132570.
+k_{2}&\approx&\phantom{1}6.1765914,\\
+k_{3}&\approx&\phantom{1}9.3538959,\\
+k_{4}&\approx&12.5132570.
 \end{eqnarray*}
 The estimates of the corresponding eigenvalues $\lambda_{n}=k_{n}^{2}$ are
 \begin{eqnarray*}
-\lambda_{1}&\approx&\phantom{15} 8.5596361,\\
-\lambda_{2}&\approx&\phantom{5} 38.1502809,\\
-\lambda_{3}&\approx&\phantom{5} 87.4953676,\\
-\lambda_{4}&\approx& 156.5815998.
+\lambda_{1}&\approx&\phantom{15}8.5596361,\\
+\lambda_{2}&\approx&\phantom{5}38.1502809,\\
+\lambda_{3}&\approx&\phantom{5}87.4953676,\\
+\lambda_{4}&\approx&156.5815998.
 \end{eqnarray*}
 From \eqref{eq:13.2.19}   and the first equation in \eqref{eq:13.2.20},
 $$
@@ -445,12 +445,12 @@ Integration by parts yields
 \begin{eqnarray*}
 \int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx&=&
 \int_{a}^{b}[u(x)(p(x)v'(x))'-v(x)(p(x)u'(x))']\,dx\\
-&=& p(x)[u(x)v'(x)-u'(x)v(x)]\bigg|_{a}^{b}\\
+&=&p(x)[u(x)v'(x)-u'(x)v(x)]\bigg|_{a}^{b}\\
 &&-\int_{a}^{b}p(x)[u'(x)v'(x)-u'(x)v'(x)]\,dx.
 \end{eqnarray*}
 Since the last integral equals zero,
 \begin{equation} \label{eq:13.2.22}
-\int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx =
+\int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx=
  p(x)[u(x)v'(x)-u'(x)v'(x)]\bigg|_{a}^{b}.
 \end{equation}
 By assumption, $B_{1}(u)=B_{1}(v)=0$ and $B_{2}(u)=B_{2}(v)=0$. Therefore
@@ -459,7 +459,7 @@ $$
 \alpha u(a)+\beta u'(a)&=0\\
 \alpha v(a)+\beta v'(a)&=0\\
 \end{aligned}
-\quad \text{\quad   and\quad}\quad
+\quad\text{\quad   and\quad}\quad
 \begin{gathered}
 \rho u(b)+\delta u'(b)=0\phantom{.}\\
 \rho v(b)+\delta v'(b)=0.
@@ -534,7 +534,7 @@ $$
 implies that  first integral in
 \eqref{eq:13.2.24} equals zero, so \eqref{eq:13.2.24} reduces to
 $$
-q\int_{a}^{b}r(x)[u^{2}(x)+v^{2}(x)]\,dx =0.
+q\int_{a}^{b}r(x)[u^{2}(x)+v^{2}(x)]\,dx=0.
 $$
 Since $r$ is positive on $[a,b]$  and $q\ne0$ by assumption, this implies
 that $u\equiv0$ and $v\equiv0$ on $[a,b]$. Therefore $y\equiv0$ on
@@ -566,7 +566,7 @@ completes the proof.
 
 If $u$  and $v$ are any integrable functions on $[a,b]$ and
 $$
-\int_{a}^{b} r(x)u(x)v(x)\,dx=0,
+\int_{a}^{b}r(x)u(x)v(x)\,dx=0,
 $$
 we say that $u$ and $v$ \emph{orthogonal on} $[a,b]$
  \emph{with respect to} $r=r(x)$.
@@ -595,14 +595,14 @@ $$
 $$
 and
 $$
-\lim_{n\to\infty} \lambda_{n}=\infty.
+\lim_{n\to\infty}\lambda_{n}=\infty.
 $$
 For each $n$,  if $y_{n}$ is an arbitrary $\lambda_{n}$-eigenfunction,
 then every $\lambda_{n}$-eigenfunction is a constant multiple of $y_{n}$.
 If $m\ne n$,   $y_{m}$ and $y_{n}$  are orthogonal $[a,b]$  with
 respect to  $r=r(x)$;    that is,
 \begin{equation} \label{eq:13.2.27}
-\int_{a}^{b} r(x)y_{m}(x)y_{n}(x)\,dx=0.
+\int_{a}^{b}r(x)y_{m}(x)y_{n}(x)\,dx=0.
 \end{equation}
 \end{theorem}
 
@@ -622,8 +622,7 @@ with associated eigenvectors $y_{1}$,  $y_{2}$, \dots, $y_{n}$, \dots.
  Suppose $f$  is piecewise smooth
 (Definition~\ref{thmtype:11.2.3}) on $[a,b]$.  For each $n$, let
 $$
-c_{n}=\frac{\dst{\int_{a}^{b}}r(x)f(x)y_{n}(x)\,dx}
-{\dst{\int_{a}^{b}}r(x)y_{n}^{2}(x)\,dx}.
+c_{n}=\frac{\dst{\int_{a}^{b}}r(x)f(x)y_{n}(x)\,dx}{\dst{\int_{a}^{b}}r(x)y_{n}^{2}(x)\,dx}.
 $$
 Then
 $$
@@ -659,7 +658,7 @@ equation)
 \item\label{exer:13.2.8}
 In Example~\ref{example:13.2.4} we found that the eigenvalue problem
 \begin{equation}
-x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0 \tag{A}
+x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0\tag{A}
 \end{equation}
 is equivalent to the Sturm-Liouville problem
 \begin{equation} \tag{B}
@@ -674,13 +673,13 @@ Conclude from this that the eigenvalues of (A) are all positive.
 \item\label{exer:13.2.9}
 Solve the eigenvalue problem
 $$
-y''+2y'+y+\lambda y=0,\quad y(0)=0, \quad y(1)=0.
+y''+2y'+y+\lambda y=0,\quad y(0)=0,\quad y(1)=0.
 $$
 
 \item\label{exer:13.2.10}
 Solve the eigenvalue problem
 $$
-y''+2y'+y+\lambda y=0,\quad y'(0)=0, \quad y'(1)=0.
+y''+2y'+y+\lambda y=0,\quad y'(0)=0,\quad y'(1)=0.
 $$
 
 \exercisetext{
@@ -689,11 +688,11 @@ In Exercises~\ref{exer:13.2.11}--\ref{exer:13.2.20}:
  associated eigenfunction.
 
 \part{b}  Compute the negative eigenvalues with  errors not greater than
-$5\times 10^{-8}$.  State the form of the associated eigenfunctions.
+$5\times10^{-8}$.  State the form of the associated eigenfunctions.
 
 \part{c}  Compute the first four positive eigenvalues with  errors not
 greater than
-$5\times 10^{-8.}$  State the form of the associated eigenfunctions.}
+$5\times10^{-8.}$  State the form of the associated eigenfunctions.}
 
  \item\label{exer:13.2.11} \Cex
 $y''+\lambda y=0$, \quad  $y(0)+2y'(0)=0$,\quad $y(2)=0$
@@ -730,12 +729,12 @@ Find the first five eigenvalues of  the boundary value problem
 $$
 y''+2y'+y+\lambda y=0,\quad y(0)=0,\quad y'(1)=0
 $$
-with errors not greater than $5\times 10^{-8}$. State the form of the
+with errors not greater than $5\times10^{-8}$. State the form of the
 associated eigenfunctions.
 
 \exercisetext{In Exercises~\ref{exer:13.2.22}--\ref{exer:13.2.24} take it as given
 that
-$\{xe^{kx},xe^{-kx}\}$ and $\{x\cos kx, x\sin kx\}$ are fundamental sets of
+$\{xe^{kx},xe^{-kx}\}$ and $\{x\cos kx,x\sin kx\}$ are fundamental sets of
 solutions of
 $$
 x^{2}y''-2xy'+2y-k^{2}x^{2}y=0
@@ -750,23 +749,23 @@ respectively.}
 Solve the eigenvalue problem  for
 
 $$
-x^{2}y''-2xy'+2y+\lambda x^{2}y=0, \quad y(1)=0,\quad y(2)=0.
+x^{2}y''-2xy'+2y+\lambda x^{2}y=0,\quad y(1)=0,\quad y(2)=0.
 $$
 
 \item\label{exer:13.2.23} \Cex
 Find the first five eigenvalues of
 $$
-x^{2}y''-2xy'+2y+\lambda x^{2}y=0, \quad y'(1)=0,\quad y(2)=0
+x^{2}y''-2xy'+2y+\lambda x^{2}y=0,\quad y'(1)=0,\quad y(2)=0
 $$
-with errors no greater than $5\times 10^{-8}$. State the form of the
+with errors no greater than $5\times10^{-8}$. State the form of the
 associated eigenfunctions.
 
 \item\label{exer:13.2.24}  \Cex
 Find the first five eigenvalues of
 $$
-x^{2}y''-2xy'+2y+\lambda x^{2}y=0, \quad y(1)=0,\quad y'(2)=0
+x^{2}y''-2xy'+2y+\lambda x^{2}y=0,\quad y(1)=0,\quad y'(2)=0
 $$
-with errors no greater than $5\times 10^{-8}$. State the form of the
+with errors no greater than $5\times10^{-8}$. State the form of the
 associated eigenfunctions.
 
 \item\label{exer:13.2.25}
@@ -804,7 +803,7 @@ where $\alpha\ne0$.
 \item\label{exer:13.2.27}\Lex
 Consider the Sturm-Liouville problem
 \begin{equation}   \tag{A}
-y''+\lambda y=0,\quad y(0)+\alpha y'(0)=0,\quad y(1)+(\alpha-1) y'(1)=0,
+y''+\lambda y=0,\quad y(0)+\alpha y'(0)=0,\quad y(1)+(\alpha-1)y'(1)=0,
 \end{equation}
 where $0<\alpha<1$.
 
@@ -815,14 +814,14 @@ and find an associated eigenfunction.
 and find the form of an associated eigenfunction.
 
 \part{c}   Give a graphical argument to show that (A) has infinitely many
-positive eigenvalues $\lambda_{1} < \lambda_{2}<\cdots
+positive eigenvalues $\lambda_{1}<\lambda_{2}<\cdots
 <\lambda_{n}<\cdots$, and state the form of the associated eigenfunctions.
 
 \exercisetext{
 Exercises~\ref{exer:13.2.28}--\ref{exer:13.2.30}  deal with the Sturm--Liouville
 problem
 \begin{equation} \tag{SL}
-y''+\lambda y=0,\quad \alpha y(0)+\beta y'(0),\quad
+y''+\lambda y=0,\quad\alpha y(0)+\beta y'(0),\quad
 \rho y(L)+\delta y'(L)=0,
 \end{equation}
 where $\alpha^{2}+\beta^{2}>0$  and  $\rho^{2}+\delta^{2}>0$.}
@@ -830,7 +829,7 @@ where $\alpha^{2}+\beta^{2}>0$  and  $\rho^{2}+\delta^{2}>0$.}
 \item\label{exer:13.2.28}
 Show that $\lambda=0$ is an eigenvalue of (SL)  if and only if
 $$
-\alpha(\rho L+\delta)-\beta\rho =0.
+\alpha(\rho L+\delta)-\beta\rho=0.
 $$
 
 \item\label{exer:13.2.29} \Lex
@@ -881,15 +880,14 @@ Now suppose $\alpha\delta-\beta\rho\ne0$. From
 Section~11.1,  if $\alpha\rho=0$ and $\beta\delta=0$,
 then (SL) has the eigenvalues
 $$
-\lambda_{n}=[(2n-1)\pi/2L]^{2},\quad  n=1,2,3, \dots
+\lambda_{n}=[(2n-1)\pi/2L]^{2},\quad  n=1,2,3,\dots
 $$
 (why?), so let's suppose  in addition that at least one of the products
 $\alpha\rho$ and $\beta\delta$ is nonzero.  Then we can rewrite (A)
 as
 \begin{equation} \tag{B}
 \tan kL=
-\frac{k(\beta\rho-\alpha\delta)}
-{\alpha\rho-\beta\delta k^{2}}.
+\frac{k(\beta\rho-\alpha\delta)}{\alpha\rho-\beta\delta k^{2}}.
 \end{equation}
 By graphing both sides of this equation on the same axes
 (there are several possibilities for the right side), convince yourself of
@@ -898,11 +896,11 @@ the following:
 \part{c} If $\beta\delta=0$, there's a positive integer $N$ such that (B)
 has one solution $k_{n}$ in each of the intervals
 \begin{equation} \tag{C}
-\left((2n-1)\pi/L, (2n+1)\pi/L)\right),\quad n=N,N+1,N+2,\dots,
+\left((2n-1)\pi/L,(2n+1)\pi/L)\right),\quad n=N,N+1,N+2,\dots,
 \end{equation}
 and either
 $$
-\lim_{n\to\infty}\left(k_{n}-\frac{(2n-1)\pi}{2L}\right) =0
+\lim_{n\to\infty}\left(k_{n}-\frac{(2n-1)\pi}{2L}\right)=0
 \text{\quad or\quad}
 \lim_{n\to\infty}\left(k_{n}-\frac{(2n+1)\pi}{2L}\right)=0.
 $$
@@ -938,10 +936,10 @@ but $\lambda=0$ isn't  an eigenvalue of Problems 1, 3, and 4.
 \item\label{exer:13.2.32} Show that the eigenvalues of the Sturm--Liouville
 problem
 $$
-(p(x)y')'+\lambda r(x)y=0,\quad \alpha y(a)+ \beta y'(a)=0,\quad
+(p(x)y')'+\lambda r(x)y=0,\quad\alpha y(a)+\beta y'(a)=0,\quad
 \rho y(b)+\delta y'(b)
 $$
-are all positive if $\alpha\beta\le 0$, \,  $\rho\delta\ge 0$, and
+are all positive if $\alpha\beta\le0$, \,  $\rho\delta\ge0$, and
 $(\alpha\beta)^{2}+(\rho\delta)^{2}>0$.
 
 \end{exerciselist}

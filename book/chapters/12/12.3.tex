@@ -4,7 +4,7 @@
 The temperature $u=u(x,y,t)$  in a two-dimensional plate
 satisfies the two-dimensional heat equation
 \begin{equation} \label{eq:12.3.1}
-u_t=a^2(u_{xx}+u_{yy}),
+u_{t}=a^{2}(u_{xx}+u_{yy}),
 \end{equation}
 where $(x,y)$ varies over the interior of the plate and
 $t>0$. To find a solution of \eqref{eq:12.3.1}, it's necessary
@@ -12,7 +12,7 @@ to specify the initial  temperature $u(x,y,0)$ and conditions that
 must be satisfied  on the boundary. However, as $t\to\infty$, the
 influence of the initial condition decays, so
 $$
-\lim_{t\to\infty}u_t(x,y,t)=0
+\lim_{t\to\infty}u_{t}(x,y,t)=0
 $$
 and the temperature approaches a steady state distribution $u=u(x,y)$
 that satisfies
@@ -67,17 +67,17 @@ The possible boundary conditions for this region can be written
 as
 $$
 \begin{array}{lcllll}
-(1-\alpha)u(x,0)&+&\alpha u_y(x,0)&=&f_0(x),  &0\le x\le
+(1-\alpha)u(x,0)&+&\alpha u_{y}(x,0)&=&f_{0}(x),&0\le x\le
 a,\\[2\jot]
-(1-\beta) u(x,b)&+&\beta u_y(x,b)&=&f_1(x), &0\le x\le a,\\[2\jot]
-(1-\gamma) u(0,y)&+&\gamma u_x(0,y)&=&g_0(y), &0\le y\le b,\\[2\jot]
-(1-\delta) u(a,y)&+&\delta u_x(a,y)&=&g_1(y), &0\le y\le b,
+(1-\beta)u(x,b)&+&\beta u_{y}(x,b)&=&f_{1}(x),&0\le x\le a,\\[2\jot]
+(1-\gamma)u(0,y)&+&\gamma u_{x}(0,y)&=&g_{0}(y),&0\le y\le b,\\[2\jot]
+(1-\delta)u(a,y)&+&\delta u_{x}(a,y)&=&g_{1}(y),&0\le y\le b,
 \end{array}
 $$
 where $\alpha$, $\beta$, $\gamma$, and $\delta$  can each be either
 $0$ or $1$;   thus, there are 16 possibilities.
 Let
-BVP$(\alpha,\beta,\gamma,\delta)(f_0,f_1,g_0,g_1)$
+BVP$(\alpha,\beta,\gamma,\delta)(f_{0},f_{1},g_{0},g_{1})$
 denote the problem of finding a solution of \eqref{eq:12.3.2} that
 satisfies these conditions.
 This is a Dirichlet problem if
@@ -113,22 +113,22 @@ The other 14 problems  are mixed.
 For given $(\alpha,\beta,\gamma,\delta)$, the sum of
 solutions of
 $$
-\mbox{BVP}(\alpha,\beta,\gamma,\delta)(f_0,0,0,0),\quad
-\mbox{BVP}(\alpha,\beta,\gamma,\delta)(0,f_1,0,0),
+\mbox{BVP}(\alpha,\beta,\gamma,\delta)(f_{0},0,0,0),\quad
+\mbox{BVP}(\alpha,\beta,\gamma,\delta)(0,f_{1},0,0),
 $$
 $$
-\mbox{BVP}(\alpha,\beta,\gamma,\delta)(0,0,g_0,0),
+\mbox{BVP}(\alpha,\beta,\gamma,\delta)(0,0,g_{0},0),
 \mbox{\quad and \quad}
-\mbox{BVP}(\alpha,\beta,\gamma,\delta)(0,0,0,g_1)
+\mbox{BVP}(\alpha,\beta,\gamma,\delta)(0,0,0,g_{1})
 $$
 is a solution of
 $$
-\mbox{BVP}(\alpha,\beta,\gamma,\delta)(f_0,f_1,g_0,g_1).
+\mbox{BVP}(\alpha,\beta,\gamma,\delta)(f_{0},f_{1},g_{0},g_{1}).
 $$
  Therefore we  concentrate
-on problems where only one of the functions $f_0$,
-$f_1$,
-$g_0$, $g_2$ isn't  identically zero. There are 64 (count them!)
+on problems where only one of the functions $f_{0}$,
+$f_{1}$,
+$g_{0}$, $g_{2}$ isn't  identically zero. There are 64 (count them!)
  problems of this form. Each has homogeneous
 boundary conditions on three sides of the rectangle, and a
 nonhomogeneous boundary condition on the fourth. We  use
@@ -145,7 +145,7 @@ all 64 cases, we'll restrict our attention in the text to
 just four.  Others are discussed in the exercises.
 
 If $v(x,y)=X(x)Y(y)$ then $$ v_{xx}+v_{yy}=X''Y+XY''=0 $$ for all
-$(x,y)$ if and only if $$ {X''\over X}=-{Y''\over Y}=k $$ for all
+$(x,y)$ if and only if $$ \frac{X''}{X}=-\frac{Y''}{Y}=k $$ for all
 $(x,y)$, where $k$ is a separation constant. This equation is
 equivalent to
 \begin{equation} \label{eq:12.3.3}
@@ -159,9 +159,9 @@ boundary conditions. We  illustrate this by examples.
 Define the formal solution of
 \begin{equation} \label{eq:12.3.4}
 \begin{array}{c}
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad  0<y<b,\\
-u(x,0)=f(x),\quad u(x,b)=0,\quad 0\le x\le a,\\
-u(0,y)=0,\quad u(a,y)=0,\quad 0\le y\le b
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b,\\
+u(x,0)=f(x),\quad u(x,b)=0,\quad0\le x\le a,\\
+u(0,y)=0,\quad u(a,y)=0,\quad0\le y\le b
 \end{array}
 \end{equation}
 (Figure~\ref{figure:12.3.4}).
@@ -187,74 +187,74 @@ and
 Y''-\lambda Y=0,\quad Y(b)=0.
 \end{equation}
  From Theorem~\ref{thmtype:11.1.2}, the eigenvalues of \eqref{eq:12.3.5}
-are $\lambda_n=n^2\pi^2/a^2$, with
+are $\lambda_{n}=n^{2}\pi^{2}/a^{2}$, with
 associated eigenfunctions
 $$
-X_n=\sin{n\pi x\over a}, \quad n=1,2,3,\dots.
+X_{n}=\sin\frac{n\pi x}{a},\quad n=1,2,3,\dots.
 $$
-Substituting $\lambda=n^2\pi^2/a^2$  into
+Substituting $\lambda=n^{2}\pi^{2}/a^{2}$  into
 \eqref{eq:12.3.6} yields
 $$
-Y''-(n^2\pi^2/a^2)Y=0,\quad Y(b)=0,
+Y''-(n^{2}\pi^{2}/a^{2})Y=0,\quad Y(b)=0,
 $$
 so we could take
 \begin{equation} \label{eq:12.3.7}
-Y_n=\sinh{n\pi(b-y)\over a};
+Y_{n}=\sinh\frac{n\pi(b-y)}{a};
 \end{equation}
 however, because of the nonhomogeneous Dirichlet  condition at $y=0$,
 it's better to require that
-$Y_n(0)=1$, which can be achieved by  dividing the right side
+$Y_{n}(0)=1$, which can be achieved by  dividing the right side
 of
 \eqref{eq:12.3.7} by its value at $y=0$;   thus, we take
 $$
-Y_n={\sinh n\pi(b-y)/a\over\sinh n\pi b/a}.
+Y_{n}=\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}.
 $$
 Then
 $$
-v_n(x,y)=X_n(x)Y_n(y)={\sinh n\pi(b-y)/a\over\sinh n\pi b/a}\sin{n\pi
-x\over a},
+v_{n}(x,y)=X_{n}(x)Y_{n}(y)=\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\sin\frac{n\pi
+x}{a},
 $$
-so $v_n(x,0)=\sin n\pi x/a$ and
- $v_n$ satisfies \eqref{eq:12.3.4} with $f(x)=\sin n\pi x/a$. More
+so $v_{n}(x,0)=\sin n\pi x/a$ and
+ $v_{n}$ satisfies \eqref{eq:12.3.4} with $f(x)=\sin n\pi x/a$. More
 generally,
- if $\alpha_1$, \dots, $\alpha_m$ are arbitrary constants
+ if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants
 then
 $$
-u_m(x,y)=\sum_{n=1}^m\alpha_n
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a}
+u_{m}(x,y)=\sum_{n=1}^{m}\alpha_{n}
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}
+\sin\frac{n\pi x}{a}
 $$
 satisfies \eqref{eq:12.3.4} with
 $$
-f(x)=\sum_{n=1}^m\alpha_n\sin{n\pi x\over L}.
+f(x)=\sum_{n=1}^{m}\alpha_{n}\sin\frac{n\pi x}{L}.
 $$
 Therefore, if $f$ is an arbitrary piecewise smooth function on
 $[0,a]$,  we define the formal solution of \eqref{eq:12.3.4} to be
 \begin{equation} \label{eq:12.3.8}
-u(x,y)=\sum_{n=1}^\infty \alpha_n
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},
+u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}
+\sin\frac{n\pi x}{a},
 \end{equation}
 where
 $$
-S(x)=\sum_{n=1}^\infty \alpha_n\sin{n\pi x\over a}
+S(x)=\sum_{n=1}^{\infty}\alpha_{n}\sin\frac{n\pi x}{a}
 $$
 is the Fourier sine series of $f$ on $[0,a]$; that is,
 $$
-\alpha_n={2\over a}\int_0^af(x)\sin{n\pi x\over a}\,dx,\quad
+\alpha_{n}=\frac{2}{a}\int_{0}^{a}f(x)\sin\frac{n\pi x}{a}\,dx,\quad
 n=1,2,3,\dots.
 \eqno{\bbox}
 $$
 
 If $y<b$ then
 \begin{equation} \label{eq:12.3.9}
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}\approx e^{-n\pi y/a}
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\approx e^{-n\pi y/a}
 \end{equation}
 for large $n$,
-so the series in \eqref{eq:12.3.8} converges if $0< y < b$;
+so the series in \eqref{eq:12.3.8} converges if $0<y<b$;
  moreover, since also
 $$
-{\cosh n\pi(b-y)/a\over\sinh n\pi b/a}\approx e^{-n\pi y/a}
+\frac{\cosh n\pi(b-y)/a}{\sinh n\pi b/a}\approx e^{-n\pi y/a}
 $$
 for large $n$, Theorem~\ref{thmtype:12.1.2}
  applied twice with
@@ -274,42 +274,40 @@ is continuous and piecewise smooth on $[0,L]$,
 and $f(0)=f(L)=0$.
 
 \begin{example}\label{example:12.3.2} \rm
-Solve \eqref{eq:12.3.4} with $f(x)=x(x^2-3ax+2a^2)$.
+Solve \eqref{eq:12.3.4} with $f(x)=x(x^{2}-3ax+2a^{2})$.
 \end{example}
 
 \solution  From Example~\ref{example:11.3.6},
 $$
-S(x)={12a^3\over\pi^3}\sum_{n=1}^\infty{1\over n^3}\sin{n\pi
-x\over a}.
+S(x)=\frac{12a^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{n^{3}}\sin\frac{n\pi
+x}{a}.
 $$
 Therefore
 \begin{equation} \label{eq:12.3.10}
-u(x,y)={12a^3\over\pi^3}\sum_{n=1}^\infty{\sinh n\pi(b-y)/a\over
-n^3\sinh n\pi b/a}
-\sin{n\pi x\over a}.
+u(x,y)=\frac{12a^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{\sinh n\pi(b-y)/a}{n^{3}\sinh n\pi b/a}
+\sin\frac{n\pi x}{a}.
 \end{equation}
 
 To compute approximate values of $u(x,y)$, we must use partial sums of
 the form
 $$
-u_m(x,y)={12a^3\over\pi^3}\sum_{n=1}^m{\sinh n\pi(b-y)/a\over
-n^3\sinh n\pi b/a}
-\sin{n\pi x\over a}.
+u_{m}(x,y)=\frac{12a^{3}}{\pi^{3}}\sum_{n=1}^{m}\frac{\sinh n\pi(b-y)/a}{n^{3}\sinh n\pi b/a}
+\sin\frac{n\pi x}{a}.
 $$
 Because of \eqref{eq:12.3.9}, small values of $m$
 provide  sufficient accuracy for most applications if $0<y<b$.
 Moreover, the
-$n^3$ in the denominator in \eqref{eq:12.3.10} ensures that this is also
+$n^{3}$ in the denominator in \eqref{eq:12.3.10} ensures that this is also
 true for $y=0$.
  For graphing purposes, we chose $a=2$, $b=1$,
 and $m=10$.
 Figure~\ref{figure:12.3.5}  shows the surface
 $$
-u=u(x,y),\quad 0\le x\le 2,\quad 0\le y\le1,
+u=u(x,y),\quad0\le x\le2,\quad0\le y\le1,
 $$
 while Figure~\ref{figure:12.3.6}  shows the curves
 $$
-u=u(x,0.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
+u=u(x,0.1k),\quad0\le x\le2,\quad k=0,1,\dots,10.
 $$
 
 \begin{figure}[H]
@@ -334,9 +332,9 @@ $$
 Define the formal solution of
 \begin{equation} \label{eq:12.3.11}
 \begin{array}{c}
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad  0<y<b,\\
-u(x,0)=0,\quad u_y(x,b)=f(x),\quad 0\le x\le a,\\
-u_x(0,y)=0,\quad u_x(a,y)=0,\quad 0\le y\le b
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b,\\
+u(x,0)=0,\quad u_{y}(x,b)=f(x),\quad0\le x\le a,\\
+u_{x}(0,y)=0,\quad u_{x}(a,y)=0,\quad0\le y\le b
 \end{array}
 \end{equation}
 (Figure~\ref{figure:12.3.7}).
@@ -363,69 +361,69 @@ Y''-\lambda Y=0,\quad Y(0)=0.
 \end{equation}
  From Theorem~\ref{thmtype:11.1.3}, the eigenvalues of \eqref{eq:12.3.12}
 are $\lambda=0$, with associated
-eigenfunction $X_0=1$, and $\lambda_n=n^2\pi^2/a^2$, with
+eigenfunction $X_{0}=1$, and $\lambda_{n}=n^{2}\pi^{2}/a^{2}$, with
 associated eigenfunctions
 $$
-X_n=\cos{n\pi x\over a}, \quad n=1,2,3,\dots.
+X_{n}=\cos\frac{n\pi x}{a},\quad n=1,2,3,\dots.
 $$
-Since $Y_0=y$ satisfies \eqref{eq:12.3.13} with $\lambda=0$,
-we take $v_0(x,y)=X_0(x)Y_0(y)= y$.
-Substituting $\lambda=n^2\pi^2/a^2$  into
+Since $Y_{0}=y$ satisfies \eqref{eq:12.3.13} with $\lambda=0$,
+we take $v_{0}(x,y)=X_{0}(x)Y_{0}(y)=y$.
+Substituting $\lambda=n^{2}\pi^{2}/a^{2}$  into
 \eqref{eq:12.3.13} yields
 $$
-Y''-(n^2\pi^2/a^2)Y=0,\quad Y(0)=0,
+Y''-(n^{2}\pi^{2}/a^{2})Y=0,\quad Y(0)=0,
 $$
 so we could take
 \begin{equation} \label{eq:12.3.14}
-Y_n=\sinh{n\pi y\over a}.
+Y_{n}=\sinh\frac{n\pi y}{a}.
 \end{equation}
 However, because of the nonhomogeneous Neumann condition at $y=b$, it's
 better to require that
-$Y_n'(b)=1$, which can be achieved by  dividing the right side
+$Y_{n}'(b)=1$, which can be achieved by  dividing the right side
 of
 \eqref{eq:12.3.14} by the value of its derivative  at $y=b$; thus,
 $$
-Y_n={a\sinh n\pi y/a\over n\pi\cosh n\pi b/a}.
+Y_{n}=\frac{a\sinh n\pi y/a}{n\pi\cosh n\pi b/a}.
 $$
 Then
 $$
-v_n(x,y)=X_n(x)Y_n(y)=
-{a\sinh n\pi y/a\over n\pi\cosh n\pi b/a}\cos{n\pi x\over a},
+v_{n}(x,y)=X_{n}(x)Y_{n}(y)=
+\frac{a\sinh n\pi y/a}{n\pi\cosh n\pi b/a}\cos\frac{n\pi x}{a},
 $$
 so
 $$
-{\partial v_n\over \partial y}(x,b)=\cos{n\pi x\over a}.
+\frac{\partial v_{n}}{\partial y}(x,b)=\cos\frac{n\pi x}{a}.
 $$
 Therefore
- $v_n$ satisfies \eqref{eq:12.3.11} with $f(x)=\cos n\pi x/a$. More
+ $v_{n}$ satisfies \eqref{eq:12.3.11} with $f(x)=\cos n\pi x/a$. More
 generally,
- if $\alpha_0$, \dots, $\alpha_m$ are arbitrary constants
+ if $\alpha_{0}$, \dots, $\alpha_{m}$ are arbitrary constants
 then
 $$
-u_m(x,y)=\alpha_0y+{a\over\pi}\sum_{n=1}^m\alpha_n
-{\sinh n\pi y/a\over n\cosh n\pi b/a}
-\cos{n\pi x\over a}
+u_{m}(x,y)=\alpha_{0}y+\frac{a}{\pi}\sum_{n=1}^{m}\alpha_{n}
+\frac{\sinh n\pi y/a}{n\cosh n\pi b/a}
+\cos\frac{n\pi x}{a}
 $$
 satisfies \eqref{eq:12.3.11} with
 $$
-f(x)=\alpha_0+\sum_{n=1}^m\alpha_n\cos{n\pi x\over L}.
+f(x)=\alpha_{0}+\sum_{n=1}^{m}\alpha_{n}\cos\frac{n\pi x}{L}.
 $$
 Therefore, if $f$ is an arbitrary piecewise smooth function on
 $[0,a]$  we define the formal solution of \eqref{eq:12.3.11} to be
 $$
-u(x,y)=\alpha_0y+{a\over\pi}\sum_{n=1}^\infty \alpha_n
-{\sinh n\pi y/a\over n\cosh n\pi b/a}
-\cos{n\pi x\over a},
+u(x,y)=\alpha_{0}y+\frac{a}{\pi}\sum_{n=1}^{\infty}\alpha_{n}
+\frac{\sinh n\pi y/a}{n\cosh n\pi b/a}
+\cos\frac{n\pi x}{a},
 $$
 where
 $$
-C(x)=\alpha_0+\sum_{n=1}^\infty \alpha_n\cos{n\pi x\over a}
+C(x)=\alpha_{0}+\sum_{n=1}^{\infty}\alpha_{n}\cos\frac{n\pi x}{a}
 $$
 is the Fourier cosine series of $f$ on $[0,a]$; that is,
 $$
-\alpha_0={1\over a}\int_0^af(x)\,dx
+\alpha_{0}=\frac{1}{a}\int_{0}^{a}f(x)\,dx
 \mbox{\quad and \quad}
-\alpha_n={2\over a}\int_0^af(x)\cos{n\pi x\over a}\,dx,\quad
+\alpha_{n}=\frac{2}{a}\int_{0}^{a}f(x)\cos\frac{n\pi x}{a}\,dx,\quad
 n=1,2,3,\dots.
 $$
 
@@ -435,24 +433,24 @@ Solve \eqref{eq:12.3.11} with $f(x)=x$.
 
 \solution From Example~\ref{example:11.3.1},
 $$
-C(x)=\dst{a\over2}-{4a\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
-\cos{(2n-1)\pi x\over a}.
+C(x)=\dst\frac{a}{2}-\frac{4a}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{2}}
+\cos\frac{(2n-1)\pi x}{a}.
 $$
 Therefore
 \begin{equation} \label{eq:12.3.15}
-u(x,y)=\dst{ay\over2}-{4a^2\over\pi^3}\sum_{n=1}^\infty
-{\sinh(2n-1)\pi y/a\over(2n-1)^3\cosh(2n-1)\pi b/a}
-\cos{(2n-1)\pi x\over a}.
+u(x,y)=\dst\frac{ay}{2}-\frac{4a^{2}}{\pi^{3}}\sum_{n=1}^{\infty}
+\frac{\sinh(2n-1)\pi y/a}{(2n-1)^{3}\cosh(2n-1)\pi b/a}
+\cos\frac{(2n-1)\pi x}{a}.
 \end{equation}
  For graphing purposes, we chose $a=2$, $b=1$,
 and retained the terms through $n=10$ in  \eqref{eq:12.3.15}.
 Figure~\ref{figure:12.3.8}  shows the surface
 $$
-u=u(x,y),\quad 0\le x\le 2,\quad 0\le y\le1,
+u=u(x,y),\quad0\le x\le2,\quad0\le y\le1,
 $$
 while Figure~\ref{figure:12.3.9}  shows the curves
 $$
-u=u(x,.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
+u=u(x,.1k),\quad0\le x\le2,\quad k=0,1,\dots,10.
 $$
 
 \begin{figure}[H]
@@ -477,9 +475,9 @@ $$
 Define the formal solution of
 \begin{equation} \label{eq:12.3.16}
 \begin{array}{c}
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad  0<y<b,\\
-u(x,0)=0,\quad u_y(x,b)=0,\quad 0\le x\le a,\\
-u(0,y)=g(y),\quad u_x(a,y)=0,\quad 0\le y\le b
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b,\\
+u(x,0)=0,\quad u_{y}(x,b)=0,\quad0\le x\le a,\\
+u(0,y)=g(y),\quad u_{x}(a,y)=0,\quad0\le y\le b
 \end{array}
 \end{equation}
 (Figure~\ref{figure:12.3.10}).
@@ -498,104 +496,104 @@ The boundary conditions in \eqref{eq:12.3.16} require
 $Y(0)=Y'(b)=X'(a)=0$; hence, we let $k=\lambda$ in
 \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation} \label{eq:12.3.17}
-X''-\lambda X=0,\quad \quad X'(a)=0
+X''-\lambda X=0,\quad\quad X'(a)=0
 \end{equation}
 and
 \begin{equation} \label{eq:12.3.18}
 Y''+\lambda Y=0,\quad Y(0)=0,\quad Y'(b)=0.
 \end{equation}
  From Theorem~\ref{thmtype:11.1.4}, the eigenvalues of \eqref{eq:12.3.18}
-are $\lambda_n=(2n-1)^2\pi^2/4b^2$, with
+are $\lambda_{n}=(2n-1)^{2}\pi^{2}/4b^{2}$, with
 associated eigenfunctions
 $$
-Y_n=\sin{(2n-1)\pi y\over2b}, \quad n=1,2,3,\dots.
+Y_{n}=\sin\frac{(2n-1)\pi y}{2b},\quad n=1,2,3,\dots.
 $$
-Substituting $\lambda=(2n-1)^2\pi^2/4b^2$  into
+Substituting $\lambda=(2n-1)^{2}\pi^{2}/4b^{2}$  into
 \eqref{eq:12.3.17} yields
 $$
-X''-((2n-1)^2\pi^2/4b^2)X=0,\quad X'(a)=0,
+X''-((2n-1)^{2}\pi^{2}/4b^{2})X=0,\quad X'(a)=0,
 $$
 so we could take
 \begin{equation} \label{eq:12.3.19}
-X_n=\cosh{(2n-1)\pi(x-a)\over 2b}.
+X_{n}=\cosh\frac{(2n-1)\pi(x-a)}{2b}.
 \end{equation}
 However, because of the nonhomogeneous Dirichlet condition at $x=0$, it's
 better to require that
-$X_n(0)=1$, which can be achieved by  dividing the right side
+$X_{n}(0)=1$, which can be achieved by  dividing the right side
 of
 \eqref{eq:12.3.19} by its  value  at $x=0$; thus,
 $$
-X_n=
-{\cosh(2n-1)\pi(x-a)/2b\over\cosh(2n-1)\pi a/2b}.
+X_{n}=
+\frac{\cosh(2n-1)\pi(x-a)/2b}{\cosh(2n-1)\pi a/2b}.
 $$
 Then
 $$
-v_n(x,y)=X_n(x)Y_n(y)=
-{\cosh(2n-1)\pi(x-a)/2b\over\cosh(2n-1)\pi a/2b}\sin{(2n-1)\pi
-y\over2b},
+v_{n}(x,y)=X_{n}(x)Y_{n}(y)=
+\frac{\cosh(2n-1)\pi(x-a)/2b}{\cosh(2n-1)\pi a/2b}\sin\frac{(2n-1)\pi
+y}{2b},
 $$
 so
 $$
-v_n(0,y)=\sin{(2n-1)\pi y\over2b}.
+v_{n}(0,y)=\sin\frac{(2n-1)\pi y}{2b}.
 $$
 Therefore
- $v_n$ satisfies \eqref{eq:12.3.16} with $g(y)=\sin(2n-1)\pi y/2b$. More
+ $v_{n}$ satisfies \eqref{eq:12.3.16} with $g(y)=\sin(2n-1)\pi y/2b$. More
 generally,
- if $\alpha_1$, \dots, $\alpha_m$ are arbitrary constants
+ if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants
 then
 $$
-u_m(x,y)=\sum_{n=1}^m \alpha_n
-{\cosh(2n-1)\pi(x-a)/2b\over\cosh(2n-1)\pi a/2b}\sin{(2n-1)\pi y\over 2b}
+u_{m}(x,y)=\sum_{n=1}^{m}\alpha_{n}
+\frac{\cosh(2n-1)\pi(x-a)/2b}{\cosh(2n-1)\pi a/2b}\sin\frac{(2n-1)\pi y}{2b}
 $$
 satisfies \eqref{eq:12.3.16} with
 $$
-g(y)=\sum_{n=1}^m \alpha_n\sin{(2n-1)\pi
-y\over2b}.
+g(y)=\sum_{n=1}^{m}\alpha_{n}\sin\frac{(2n-1)\pi
+y}{2b}.
 $$
 Thus, if $g$ is an arbitrary piecewise smooth function on
 $[0,b]$,  we define the formal solution of \eqref{eq:12.3.16} to be
 $$
-u(x,y)=\sum_{n=1}^\infty \alpha_n
-{\cosh(2n-1)\pi(x-a)/2b\over\cosh(2n-1)\pi a/2b}\sin{(2n-1)\pi y\over 2b},
+u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}
+\frac{\cosh(2n-1)\pi(x-a)/2b}{\cosh(2n-1)\pi a/2b}\sin\frac{(2n-1)\pi y}{2b},
 $$
 where
 $$
-S_M(x)=\sum_{n=1}^\infty \alpha_n\sin{(2n-1)\pi
-y\over2b}
+S_{M}(x)=\sum_{n=1}^{\infty}\alpha_{n}\sin\frac{(2n-1)\pi
+y}{2b}
 $$
  is the mixed Fourier sine series of $g$ on $[0,b]$;
 that is,
 $$
-\alpha_n={2\over b}\int_0^bg(y)\sin{(2n-1)\pi y\over2b}\,dy.
+\alpha_{n}=\frac{2}{b}\int_{0}^{b}g(y)\sin\frac{(2n-1)\pi y}{2b}\,dy.
 $$
 
 \begin{example}\label{example:12.3.6} \rm
-Solve \eqref{eq:12.3.16} with $g(y)=y(2y^2-9by+12b^2)$.
+Solve \eqref{eq:12.3.16} with $g(y)=y(2y^{2}-9by+12b^{2})$.
 \end{example}
 
 \solution  From Example~\ref{example:11.3.8},
 $$
-S_M(y)
-=\dst{96b^3\over\pi^3}\sum_{n=1}^\infty
-{1\over(2n-1)^3}\left[3+(-1)^n{4\over(2n-1)\pi}\right]\sin{(2n-1)\pi
-y\over2b}.
+S_{M}(y)
+=\dst\frac{96b^{3}}{\pi^{3}}\sum_{n=1}^{\infty}
+\frac{1}{(2n-1)^{3}}\left[3+(-1)^{n}\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
+y}{2b}.
 $$
 Therefore
 $$
 u(x,y)
-=\dst{96b^3\over\pi^3}\sum_{n=1}^\infty
-{\cosh(2n-1)\pi(x-a)/2b\over(2n-1)^3\cosh(2n-1)\pi a/2b}
-\left[3+(-1)^n{4\over(2n-1)\pi}\right]\sin{(2n-1)\pi
-y\over2b}.
+=\dst\frac{96b^{3}}{\pi^{3}}\sum_{n=1}^{\infty}
+\frac{\cosh(2n-1)\pi(x-a)/2b}{(2n-1)^{3}\cosh(2n-1)\pi a/2b}
+\left[3+(-1)^{n}\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
+y}{2b}.
 $$
 
 \begin{example}\label{example:12.3.7} \rm
 Define the formal solution of
 \begin{equation} \label{eq:12.3.20}
 \begin{array}{c}
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad  0<y<b,\\
-u_y(x,0)=0,\quad u(x,b)=0,\quad 0\le x\le a,\\
-u_x(0,y)=0,\quad u_x(a,y)=g(y),\quad 0\le y\le b
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b,\\
+u_{y}(x,0)=0,\quad u(x,b)=0,\quad0\le x\le a,\\
+u_{x}(0,y)=0,\quad u_{x}(a,y)=g(y),\quad0\le y\le b
 \end{array}
 \end{equation}
 (Figure~\ref{figure:12.3.11}).
@@ -614,75 +612,75 @@ The boundary conditions in \eqref{eq:12.3.20} require
 $Y'(0)=Y(b)=X'(0)=0$; hence, we let $k=\lambda$ in
 \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation} \label{eq:12.3.21}
-X''-\lambda X=0,\quad \quad X'(0)=0
+X''-\lambda X=0,\quad\quad X'(0)=0
 \end{equation}
 and
 \begin{equation} \label{eq:12.3.22}
 Y''+\lambda Y=0,\quad Y'(0)=0,\quad Y(b)=0.
 \end{equation}
  From Theorem~\ref{thmtype:11.1.4}, the eigenvalues of \eqref{eq:12.3.22}
-are $\lambda_n=(2n-1)^2\pi^2/4b^2$, with
+are $\lambda_{n}=(2n-1)^{2}\pi^{2}/4b^{2}$, with
 associated eigenfunctions
 $$
-Y_n=\cos{(2n-1)\pi y\over2b}, \quad n=1,2,3,\dots.
+Y_{n}=\cos\frac{(2n-1)\pi y}{2b},\quad n=1,2,3,\dots.
 $$
-Substituting $\lambda=(2n-1)^2\pi^2/4b^2$  into
+Substituting $\lambda=(2n-1)^{2}\pi^{2}/4b^{2}$  into
 \eqref{eq:12.3.21} yields
 $$
-X''-((2n-1)^2\pi^2/4b^2)X=0,\quad X'(0)=0,
+X''-((2n-1)^{2}\pi^{2}/4b^{2})X=0,\quad X'(0)=0,
 $$
 so we could take
 \begin{equation} \label{eq:12.3.23}
-X_n=\cosh{(2n-1)\pi x\over 2b}.
+X_{n}=\cosh\frac{(2n-1)\pi x}{2b}.
 \end{equation}
 However, because of the nonhomogeneous Neumann condition at $x=a$, it's
 better to require that
-$X_n'(a)=1$, which can be achieved by  dividing the right side
+$X_{n}'(a)=1$, which can be achieved by  dividing the right side
 of
 \eqref{eq:12.3.23} by the   value of its derivative  at $x=a$; thus,
 $$
-X_n=
-{2b\cosh(2n-1)\pi x/2b\over(2n-1)\pi\sinh(2n-1)\pi a/2b}.
+X_{n}=
+\frac{2b\cosh(2n-1)\pi x/2b}{(2n-1)\pi\sinh(2n-1)\pi a/2b}.
 $$
 Then
 $$
-v_n(x,y)=X_n(x)Y_n(y)=
-{2b\cosh(2n-1)\pi x/2b\over(2n-1)\pi\sinh(2n-1)\pi a/2b}\cos{(2n-1)\pi
-y\over2b},
+v_{n}(x,y)=X_{n}(x)Y_{n}(y)=
+\frac{2b\cosh(2n-1)\pi x/2b}{(2n-1)\pi\sinh(2n-1)\pi a/2b}\cos\frac{(2n-1)\pi
+y}{2b},
 $$
 so
 $$
-{\partial v_n\over\partial x}(a,y)=\cos{(2n-1)\pi y\over2b}.
+\frac{\partial v_{n}}{\partial x}(a,y)=\cos\frac{(2n-1)\pi y}{2b}.
 $$
 Therefore
- $v_n$ satisfies \eqref{eq:12.3.20} with $g(y)=\cos(2n-1)\pi y/2b$. More
+ $v_{n}$ satisfies \eqref{eq:12.3.20} with $g(y)=\cos(2n-1)\pi y/2b$. More
 generally,
- if $\alpha_1$, \dots, $\alpha_m$ are arbitrary constants
+ if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants
 then
 $$
-u_m(x,y)={2b\over\pi}\sum_{n=1}^m \alpha_n
-{\cosh(2n-1)\pi x/2b\over(2n-1)\sinh(2n-1)\pi a/2b}\cos{(2n-1)\pi y\over 2b}
+u_{m}(x,y)=\frac{2b}{\pi}\sum_{n=1}^{m}\alpha_{n}
+\frac{\cosh(2n-1)\pi x/2b}{(2n-1)\sinh(2n-1)\pi a/2b}\cos\frac{(2n-1)\pi y}{2b}
 $$
 satisfies \eqref{eq:12.3.20} with
 $$
-g(y)=\sum_{n=1}^\infty \alpha_n\cos{(2n-1)\pi
-y\over2b}.
+g(y)=\sum_{n=1}^{\infty}\alpha_{n}\cos\frac{(2n-1)\pi
+y}{2b}.
 $$
 Therefore, if $g$ is an arbitrary piecewise smooth function on
 $[0,b]$,  we define the formal solution of \eqref{eq:12.3.20} to be
 $$
-u(x,y)={2b\over\pi}\sum_{n=1}^\infty \alpha_n
-{\cosh(2n-1)\pi x/2b\over(2n-1)\sinh(2n-1)\pi a/2b}\cos{(2n-1)\pi y\over 2b},
+u(x,y)=\frac{2b}{\pi}\sum_{n=1}^{\infty}\alpha_{n}
+\frac{\cosh(2n-1)\pi x/2b}{(2n-1)\sinh(2n-1)\pi a/2b}\cos\frac{(2n-1)\pi y}{2b},
 $$
 where
 $$
-C_M(y)=\sum_{n=1}^\infty \alpha_n\cos{(2n-1)\pi
-y\over2b}
+C_{M}(y)=\sum_{n=1}^{\infty}\alpha_{n}\cos\frac{(2n-1)\pi
+y}{2b}
 $$
  is the mixed Fourier cosine series of $g$ on $[0,b]$;
 that is,
 $$
-\alpha_n={2\over b}\int_0^bg(y)\cos{(2n-1)\pi y\over2b}\,dy.
+\alpha_{n}=\frac{2}{b}\int_{0}^{b}g(y)\cos\frac{(2n-1)\pi y}{2b}\,dy.
 $$
 
 \begin{example}\label{example:12.3.8}    \rm
@@ -691,14 +689,13 @@ Solve \eqref{eq:12.3.20} with $g(y)=y-b$.
 
 \solution  From Example~\ref{example:11.3.3},
 $$
-C_M(y)=-{8b\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
-\cos{(2n-1)\pi y\over2b}.
+C_{M}(y)=-\frac{8b}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{2}}
+\cos\frac{(2n-1)\pi y}{2b}.
 $$
 Therefore
 $$
-u(x,y)=-{16b^2\over\pi^3}\sum_{n=1}^\infty{
-\cosh(2n-1)\pi x/2b\over(2n-1)^3\sinh(2n-1)\pi a/2b}
-\cos{(2n-1)\pi y\over2b}.
+u(x,y)=-\frac{16b^{2}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{\cosh(2n-1)\pi x/2b}{(2n-1)^{3}\sinh(2n-1)\pi a/2b}
+\cos\frac{(2n-1)\pi y}{2b}.
 \eqno{\bbox}
 $$
 
@@ -716,8 +713,8 @@ a nonhomogeneous  Dirichlet or Neumann condition at $y=0$. An
 example of such a problem is
 \begin{equation} \label{eq:12.3.24}
 \begin{array}{c}
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad  y>0,\\
-u(x,0)=f(x),\quad 0\le x\le a,\\
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad  y>0,\\
+u(x,0)=f(x),\quad0\le x\le a,\\
 u(0,y)=0,\quad u(a,y)=0,\quad y>0,
 \end{array}
 \end{equation}
@@ -731,10 +728,10 @@ u(0,y)=0,\quad u(a,y)=0,\quad y>0,
 
 The boundary conditions in this problem are not sufficient to
 determine
-$u$, for if $u_0=u_0(x,y)$ is a solution
+$u$, for if $u_{0}=u_{0}(x,y)$ is a solution
 and $K$ is a constant then
 $$
-u_1(x,y)=u_0(x,y)+K\sin{\pi x\over a}\sinh{\pi y\over a}.
+u_{1}(x,y)=u_{0}(x,y)+K\sin\frac{\pi x}{a}\sinh\frac{\pi y}{a}.
 $$
 is also a solution. (Verify.) However, if we also require ---
 on physical grounds --- that the solution remain bounded
@@ -749,30 +746,30 @@ Define the bounded formal solution of
 \solution Proceeding as in the solution of Example~\ref{example:12.3.1},
 we find that the building block functions are of the form
 $$
-v_n(x,y)=Y_n(y)\sin{n\pi x\over a},
+v_{n}(x,y)=Y_{n}(y)\sin\frac{n\pi x}{a},
 $$
 where
 $$
-Y_n''-(n^2\pi^2/a^2)Y_n=0.
+Y_{n}''-(n^{2}\pi^{2}/a^{2})Y_{n}=0.
 $$
 Therefore
 $$
-Y_n=c_1e^{n\pi y/a}+c_2e^{-n\pi y/a}
+Y_{n}=c_{1}e^{n\pi y/a}+c_{2}e^{-n\pi y/a}
 $$
-where $c_1$ and $c_2$ are constants.
+where $c_{1}$ and $c_{2}$ are constants.
 Although the boundary conditions in \eqref{eq:12.3.24}  don't restrict
-$c_1$, and $c_2$, we must set $c_1=0$ to ensure that $Y_n$ is bounded.
-Letting $c_2=1$ yields
+$c_{1}$, and $c_{2}$, we must set $c_{1}=0$ to ensure that $Y_{n}$ is bounded.
+Letting $c_{2}=1$ yields
 $$
-v_n(x,y)=e^{-n\pi y/a}\sin{n\pi x\over a},
+v_{n}(x,y)=e^{-n\pi y/a}\sin\frac{n\pi x}{a},
 $$
 and we define the bounded formal solution of \eqref{eq:12.3.24} to be
 $$
-u(x,y)=\sum_{n=1}^\infty b_ne^{-n\pi y/a}\sin{n\pi x\over a},
+u(x,y)=\sum_{n=1}^{\infty}b_{n}e^{-n\pi y/a}\sin\frac{n\pi x}{a},
 $$
 where
 $$
-S(x)=\sum_{n=1}^\infty b_n\sin{n\pi x\over a}
+S(x)=\sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{a}
 $$
 is the Fourier sine series of $f$ on $[0,a]$.
 \bbox
@@ -791,94 +788,94 @@ $u=u(x,y)$, $0\le x\le a$, $0\le y\le b$.
 \begin{exerciselist}
 
 \item\label{exer:12.3.1}
-$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1$,\\
-$u(x,0)=x(1-x),\quad u(x,1)=0,\quad 0\le x\le 1$,\\
-$u(0,y)=0,\quad u(1,y)=0,\quad 0\le y\le 1$
+$u_{xx}+u_{yy}=0,\quad0<x<1,\quad0<y<1$,\\
+$u(x,0)=x(1-x),\quad u(x,1)=0,\quad0\le x\le1$,\\
+$u(0,y)=0,\quad u(1,y)=0,\quad0\le y\le1$
 
 \item\label{exer:12.3.2}
-$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<3$,\\
-$u(x,0)=x^2(2-x),\quad u(x,3)=0,\quad 0\le x\le 2$,\\
-$u(0,y)=0,\quad u(2,y)=0,\quad 0\le y\le 3$
+$u_{xx}+u_{yy}=0,\quad0<x<2,\quad0<y<3$,\\
+$u(x,0)=x^{2}(2-x),\quad u(x,3)=0,\quad0\le x\le2$,\\
+$u(0,y)=0,\quad u(2,y)=0,\quad0\le y\le3$
 
 \item\label{exer:12.3.3}  \Cex
-$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2$,\\
+$u_{xx}+u_{yy}=0,\quad0<x<2,\quad0<y<2$,\\
 $u(x,0)=
 \left\{\begin{array}{cl}
-x,& 0\le x\le 1,\\
+x,&0\le x\le1,\\
 2-x,&1\le x\le2,
 \end{array}\right.
-\quad u(x,2)=0,\quad 0\le x\le 2$,\\
-$u(0,y)=0,\quad u(2,y)=0,\quad 0\le y\le 2$
+\quad u(x,2)=0,\quad0\le x\le2$,\\
+$u(0,y)=0,\quad u(2,y)=0,\quad0\le y\le2$
 
 \item\label{exer:12.3.4}
-$u_{xx}+u_{yy}=0,\quad 0<x<\pi,\quad  0<y<1$,\\
-$u(x,0)=x\sin x,\quad u(x,\pi)=0,\quad 0\le x\le \pi$,\\
-$u(0,y)=0,\quad u(\pi,y)=0,\quad 0\le y\le 1$
+$u_{xx}+u_{yy}=0,\quad0<x<\pi,\quad0<y<1$,\\
+$u(x,0)=x\sin x,\quad u(x,\pi)=0,\quad0\le x\le\pi$,\\
+$u(0,y)=0,\quad u(\pi,y)=0,\quad0\le y\le1$
 
 \item\label{exer:12.3.5}
-$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<2$,\\
-$u(x,0)=0,\quad u_y(x,2)=x^2,\quad 0\le x\le 3$,\\
-$u_x(0,y)=0,\quad u_x(3,y)=0,\quad 0\le y\le 2$
+$u_{xx}+u_{yy}=0,\quad0<x<3,\quad0<y<2$,\\
+$u(x,0)=0,\quad u_{y}(x,2)=x^{2},\quad0\le x\le3$,\\
+$u_{x}(0,y)=0,\quad u_{x}(3,y)=0,\quad0\le y\le2$
 
 \item\label{exer:12.3.6}
-$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<2$,\\
-$u(x,0)=0,\quad u_y(x,2)=1-x,\quad 0\le x\le 1$,\\
-$u_x(0,y)=0,\quad u_x(1,y)=0,\quad 0\le y\le 2$
+$u_{xx}+u_{yy}=0,\quad0<x<1,\quad0<y<2$,\\
+$u(x,0)=0,\quad u_{y}(x,2)=1-x,\quad0\le x\le1$,\\
+$u_{x}(0,y)=0,\quad u_{x}(1,y)=0,\quad0\le y\le2$
 
 \item\label{exer:12.3.7}
-$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2$,\\
-$u(x,0)=0,\quad u_y(x,2)=x^2-4,\quad 0\le x\le 2$,\\
-$u_x(0,y)=0,\quad u_x(2,y)=0,\quad 0\le y\le 2$
+$u_{xx}+u_{yy}=0,\quad0<x<2,\quad0<y<2$,\\
+$u(x,0)=0,\quad u_{y}(x,2)=x^{2}-4,\quad0\le x\le2$,\\
+$u_{x}(0,y)=0,\quad u_{x}(2,y)=0,\quad0\le y\le2$
 
 \item\label{exer:12.3.8}
-$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1$,\\
-$u(x,0)=0,\quad u_y(x,1)=(x-1)^2,\quad 0\le x\le 1$,\\
-$u_x(0,y)=0,\quad u_x(1,y)=0,\quad 0\le y\le 1$
+$u_{xx}+u_{yy}=0,\quad0<x<1,\quad0<y<1$,\\
+$u(x,0)=0,\quad u_{y}(x,1)=(x-1)^{2},\quad0\le x\le1$,\\
+$u_{x}(0,y)=0,\quad u_{x}(1,y)=0,\quad0\le y\le1$
 
 \item\label{exer:12.3.9}   \Cex
-$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<2$,\\
-$u(x,0)=0,\quad u_y(x,2)=0,\quad 0\le x\le 3$,\\
-$u(0,y)=y(4-y),\quad u_x(3,y)=0,\quad 0\le y\le 2$
+$u_{xx}+u_{yy}=0,\quad0<x<3,\quad0<y<2$,\\
+$u(x,0)=0,\quad u_{y}(x,2)=0,\quad0\le x\le3$,\\
+$u(0,y)=y(4-y),\quad u_{x}(3,y)=0,\quad0\le y\le2$
 
 \item\label{exer:12.3.10}
-$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<1$,\\
-$u(x,0)=0,\quad u_y(x,1)=0,\quad 0\le x\le 2$,\\
-$u(0,y)=y^2(3-2y),\quad u_x(2,y)=0,\quad 0\le y\le 1$
+$u_{xx}+u_{yy}=0,\quad0<x<2,\quad0<y<1$,\\
+$u(x,0)=0,\quad u_{y}(x,1)=0,\quad0\le x\le2$,\\
+$u(0,y)=y^{2}(3-2y),\quad u_{x}(2,y)=0,\quad0\le y\le1$
 
 \item\label{exer:12.3.11}
-$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2$,\\
-$u(x,0)=0,\quad u_y(x,2)=0,\quad 0\le x\le 2$,\\
-$u(0,y)=(y-2)^3+8,\quad u_x(2,y)=0,\quad 0\le y\le 2$
+$u_{xx}+u_{yy}=0,\quad0<x<2,\quad0<y<2$,\\
+$u(x,0)=0,\quad u_{y}(x,2)=0,\quad0\le x\le2$,\\
+$u(0,y)=(y-2)^{3}+8,\quad u_{x}(2,y)=0,\quad0\le y\le2$
 
 \item\label{exer:12.3.12}
-$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<1$,\\
-$u(x,0)=0,\quad u_y(x,1)=0,\quad 0\le x\le 3$,\\
-$u(0,y)=y(2y^2-9y+12),\quad u_x(3,y)=0,\quad 0\le y\le 1$
+$u_{xx}+u_{yy}=0,\quad0<x<3,\quad0<y<1$,\\
+$u(x,0)=0,\quad u_{y}(x,1)=0,\quad0\le x\le3$,\\
+$u(0,y)=y(2y^{2}-9y+12),\quad u_{x}(3,y)=0,\quad0\le y\le1$
 
 \item\label{exer:12.3.13}  \Cex
-$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<\pi$,\\
-$u_y(x,0)=0,\quad u(x,\pi)=0,\quad 0\le x\le 1$,\\
-$u_x(0,y)=0,\quad u_x(1,y)=\sin y,\quad 0\le y\le \pi$
+$u_{xx}+u_{yy}=0,\quad0<x<1,\quad0<y<\pi$,\\
+$u_{y}(x,0)=0,\quad u(x,\pi)=0,\quad0\le x\le1$,\\
+$u_{x}(0,y)=0,\quad u_{x}(1,y)=\sin y,\quad0\le y\le\pi$
 
 \item\label{exer:12.3.14}
-$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<3$,\\
-$u_y(x,0)=0,\quad u(x,3)=0,\quad 0\le x\le 2$,\\
-$u_x(0,y)=0,\quad u_x(2,y)=y(3-y),\quad 0\le y\le 3$
+$u_{xx}+u_{yy}=0,\quad0<x<2,\quad0<y<3$,\\
+$u_{y}(x,0)=0,\quad u(x,3)=0,\quad0\le x\le2$,\\
+$u_{x}(0,y)=0,\quad u_{x}(2,y)=y(3-y),\quad0\le y\le3$
 
 \item\label{exer:12.3.15}
-$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<\pi$,\\
-$u_y(x,0)=0,\quad u(x,\pi)=0,\quad 0\le x\le 1$,\\
-$u_x(0,y)=0,\quad u_x(1,y)=\pi^2-y^2,\quad 0\le y\le \pi$
+$u_{xx}+u_{yy}=0,\quad0<x<1,\quad0<y<\pi$,\\
+$u_{y}(x,0)=0,\quad u(x,\pi)=0,\quad0\le x\le1$,\\
+$u_{x}(0,y)=0,\quad u_{x}(1,y)=\pi^{2}-y^{2},\quad0\le y\le\pi$
 
 \item\label{exer:12.3.16}
-$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1$,\\
-$u_y(x,0)=0,\quad u(x,1)=0,\quad 0\le x\le 1$,\\
-$u_x(0,y)=0,\quad u_x(1,y)=1-y^3,\quad 0\le y\le 1$
+$u_{xx}+u_{yy}=0,\quad0<x<1,\quad0<y<1$,\\
+$u_{y}(x,0)=0,\quad u(x,1)=0,\quad0\le x\le1$,\\
+$u_{x}(0,y)=0,\quad u_{x}(1,y)=1-y^{3},\quad0\le y\le1$
 
 \exercisetext{In
 Exercises~\ref{exer:12.3.17}-\ref{exer:12.3.28} define the formal solution of
 $$
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad 0<y<b
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b
 $$
 that satisfies the given boundary conditions for general $a$, $b$,
 and $f$ or $g$.
@@ -889,120 +886,120 @@ Where indicated by \Cex, graph the surface
 $u=u(x,y)$, $0\le x\le a$, $0\le y\le b$.}
 
 \item\label{exer:12.3.17}  \Cex
-$u(x,0)=0,\quad u(x,b)=f(x),\quad 0<x<a,\\
-u(0,y)=0,\quad u(a,y)=0,\quad 0<y<b$  \\
+$u(x,0)=0,\quad u(x,b)=f(x),\quad0<x<a,\\
+u(0,y)=0,\quad u(a,y)=0,\quad0<y<b$  \\
 $a=3$,\quad $b=2$,\quad $f(x)=x(3-x)$
 
 \item\label{exer:12.3.18}
-$u(x,0)=f(x),\quad u(x,b)=0,\quad 0<x<a,\\
-u_x(0,y)=0,\quad u_x(a,y)=0,\quad 0<y<b$  \\
-$a=2$,\quad $b=1$,\quad $f(x)=x^2(x-2)^2$
+$u(x,0)=f(x),\quad u(x,b)=0,\quad0<x<a,\\
+u_{x}(0,y)=0,\quad u_{x}(a,y)=0,\quad0<y<b$  \\
+$a=2$,\quad $b=1$,\quad $f(x)=x^{2}(x-2)^{2}$
 
 \item\label{exer:12.3.19}
-$u(x,0)=f(x),\quad u(x,b)=0,\quad 0<x<a,\\
-u_x(0,y)=0,\quad u(a,y)=0,\quad 0<y<b$  \\
-$a=1$,\quad $b=2$,\quad $f(x)=3x^3-4x^2+1$
+$u(x,0)=f(x),\quad u(x,b)=0,\quad0<x<a,\\
+u_{x}(0,y)=0,\quad u(a,y)=0,\quad0<y<b$  \\
+$a=1$,\quad $b=2$,\quad $f(x)=3x^{3}-4x^{2}+1$
 
 \item\label{exer:12.3.20}
-$u(x,0)=f(x),\quad u(x,b)=0,\quad 0<x<a,\\
-u(0,y)=0,\quad u_x(a,y)=0,\quad 0<y<b$  \\
+$u(x,0)=f(x),\quad u(x,b)=0,\quad0<x<a,\\
+u(0,y)=0,\quad u_{x}(a,y)=0,\quad0<y<b$  \\
 $a=3$,\quad $b=2$,\quad $f(x)=x(6-x)$
 
 \item\label{exer:12.3.21}
-$u(x,0)=f(x),\quad u_y(x,b)=0,\quad 0<x<a,\\
-u(0,y)=0,\quad u(a,y)=0,\quad 0<y<b$  \\
-$a=\pi$,\quad $b=2$,\quad $f(x)=x(\pi^2-x^2)$
+$u(x,0)=f(x),\quad u_{y}(x,b)=0,\quad0<x<a,\\
+u(0,y)=0,\quad u(a,y)=0,\quad0<y<b$  \\
+$a=\pi$,\quad $b=2$,\quad $f(x)=x(\pi^{2}-x^{2})$
 
 \item\label{exer:12.3.22}
-$u_y(x,0)=0,\quad u(x,b)=f(x),\quad 0<x<a,\\
-u_x(0,y)=0,\quad u_x(a,y)=0,\quad 0<y<b$  \\
-$a=\pi$,\quad $b=1$,\quad $f(x)=x^2(x-\pi)^2$
+$u_{y}(x,0)=0,\quad u(x,b)=f(x),\quad0<x<a,\\
+u_{x}(0,y)=0,\quad u_{x}(a,y)=0,\quad0<y<b$  \\
+$a=\pi$,\quad $b=1$,\quad $f(x)=x^{2}(x-\pi)^{2}$
 
 \item\label{exer:12.3.23} \Cex
-$u_y(x,0)=f(x),\quad u(x,b)=0,\quad 0<x<a,\\
-u(0,y)=0,\quad u(a,y)=0,\quad 0<y<b$  \\
+$u_{y}(x,0)=f(x),\quad u(x,b)=0,\quad0<x<a,\\
+u(0,y)=0,\quad u(a,y)=0,\quad0<y<b$  \\
 $a=\pi$,\quad  $b=1$,\quad
 $f(x)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{\pi\over2},\\\pi-x,&{\pi\over2}\le x\le \pi
+x,&0\le x\le\frac{\pi}{2},\\\pi-x,&\frac{\pi}{2}\le x\le\pi
 \end{array}\right.$
 
 \item\label{exer:12.3.24}
-$u(x,0)=0,\quad u(x,b)=0,\quad 0<x<a,\\
-u_x(0,y)=0,\quad u(a,y)=g(y),\quad 0<y<b$  \\
-$a=1$,\quad $b=1$,\quad $g(y)=y(y^3-2y^2+1)$
+$u(x,0)=0,\quad u(x,b)=0,\quad0<x<a,\\
+u_{x}(0,y)=0,\quad u(a,y)=g(y),\quad0<y<b$  \\
+$a=1$,\quad $b=1$,\quad $g(y)=y(y^{3}-2y^{2}+1)$
 
 \item\label{exer:12.3.25} \Cex
-$u_y(x,0)=0,\quad u(x,b)=0,\quad 0<x<a,\\
-u_x(0,y)=0,\quad u(a,y)=g(y),\quad 0<y<b$  \\
-$a=2$,\quad $b=2$,\quad $g(y)=4-y^2$
+$u_{y}(x,0)=0,\quad u(x,b)=0,\quad0<x<a,\\
+u_{x}(0,y)=0,\quad u(a,y)=g(y),\quad0<y<b$  \\
+$a=2$,\quad $b=2$,\quad $g(y)=4-y^{2}$
 
 \item\label{exer:12.3.26}
-$u(x,0)=0,\quad u(x,b)=0,\quad 0<x<a,\\
-u_x(0,y)=0,\quad u_x(a,y)=g(y),\quad 0<y<b$  \\
+$u(x,0)=0,\quad u(x,b)=0,\quad0<x<a,\\
+u_{x}(0,y)=0,\quad u_{x}(a,y)=g(y),\quad0<y<b$  \\
 $a=1$, $b=4$,
 $g(y)=
 \left\{\begin{array}{cl}
-y,&0\le y\le2,\\4-y,&2\le y\le 4
+y,&0\le y\le2,\\4-y,&2\le y\le4
 \end{array}\right.$
 
 \item\label{exer:12.3.27}
-$u(x,0)=0,\quad u_y(x,b)=0,\quad 0<x<a,\\
-u_x(0,y)=g(y),\quad u_x(a,y)=0,\quad 0<y<b$  \\
-$a=1$,\quad  $b=\pi$,\quad $g(y)=y^2(3\pi-2y)$
+$u(x,0)=0,\quad u_{y}(x,b)=0,\quad0<x<a,\\
+u_{x}(0,y)=g(y),\quad u_{x}(a,y)=0,\quad0<y<b$  \\
+$a=1$,\quad  $b=\pi$,\quad $g(y)=y^{2}(3\pi-2y)$
 
 \item\label{exer:12.3.28}
-$u_y(x,0)=0,\quad u_y(x,b)=0,\quad 0<x<a,\\
-u_x(0,y)=g(y),\quad u(a,y)=0,\quad 0<y<b$  \\
+$u_{y}(x,0)=0,\quad u_{y}(x,b)=0,\quad0<x<a,\\
+u_{x}(0,y)=g(y),\quad u(a,y)=0,\quad0<y<b$  \\
 $a=2$,\quad $b=\pi$,\quad $g(y)=y$
 
 \exercisetext{In
 Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} define the bounded formal
 solution of
 $$
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad y>0
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad y>0
 $$
 that satisfies the given boundary conditions for general $a$ and $f$.
 Then solve the boundary value problem for the specified  $a$
 and  $f$.}
 
 \item\label{exer:12.3.29}
-$u(x,0)=f(x),\quad 0<x<a$,\quad\\
-$u_x(0,y)=0,\quad u_x(a,y)=0,\quad y>0$  \\
-$a=\pi$   $f(x)=x^2(3\pi-2x)$
+$u(x,0)=f(x),\quad0<x<a$,\quad\\
+$u_{x}(0,y)=0,\quad u_{x}(a,y)=0,\quad y>0$  \\
+$a=\pi$   $f(x)=x^{2}(3\pi-2x)$
 
 \item\label{exer:12.3.30}
-$u(x,0)=f(x),\quad 0<x<a$,\\
-$u_x(0,y)=0,\quad u(a,y)=0,\quad y>0$  \\
-$a=3$,\quad $f(x)=9-x^2$
+$u(x,0)=f(x),\quad0<x<a$,\\
+$u_{x}(0,y)=0,\quad u(a,y)=0,\quad y>0$  \\
+$a=3$,\quad $f(x)=9-x^{2}$
 
 \item\label{exer:12.3.31}
-$u(x,0)=f(x),\quad 0<x<a$,\quad\\
-$u(0,y)=0,\quad u_x(a,y)=0,\quad y>0$  \\
+$u(x,0)=f(x),\quad0<x<a$,\quad\\
+$u(0,y)=0,\quad u_{x}(a,y)=0,\quad y>0$  \\
 $a=\pi$,\quad $f(x)=x(2\pi-x)$
 
 \item\label{exer:12.3.32}
-$u_y(x,0)=f(x),\quad 0<x<a$,\\
+$u_{y}(x,0)=f(x),\quad0<x<a$,\\
 $u(0,y)=0,\quad u(a,y)=0,\quad y>0$  \\
-$a=\pi$,\quad $f(x)=x^2(\pi-x)$
+$a=\pi$,\quad $f(x)=x^{2}(\pi-x)$
 
 \item\label{exer:12.3.33}
-$u_y(x,0)=f(x),\quad 0<x<a$, \\
-$u_x(0,y)=0,\quad u(a,y)=0,\quad y>0$  \\
+$u_{y}(x,0)=f(x),\quad0<x<a$, \\
+$u_{x}(0,y)=0,\quad u(a,y)=0,\quad y>0$  \\
 $a=7$,\quad $f(x)=x(7-x)$
 
 \item\label{exer:12.3.34}
-$u_y(x,0)=f(x),\quad 0<x<a$,\\
-$u(0,y)=0,\quad u_x(a,y)=0,\quad y>0$  \\
+$u_{y}(x,0)=f(x),\quad0<x<a$,\\
+$u(0,y)=0,\quad u_{x}(a,y)=0,\quad y>0$  \\
 $a=5$,\quad $f(x)=x(5-x)$
 
 \item\label{exer:12.3.35}
 Define the formal solution of the Dirichlet problem
 $$
 \begin{array}{c}
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad  0<y<b,\\
-u(x,0)=f_0(x),\quad u(x,b)=f_1(x),\quad 0\le x\le a,\\
-u(0,y)=g_0(y),\quad u(a,y)=g_1(y),\quad 0\le y\le b
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b,\\
+u(x,0)=f_{0}(x),\quad u(x,b)=f_{1}(x),\quad0\le x\le a,\\
+u(0,y)=g_{0}(y),\quad u(a,y)=g_{1}(y),\quad0\le y\le b
 \end{array}
 $$
 
@@ -1010,37 +1007,37 @@ $$
 Show that the  Neumann Problem
 $$
 \begin{array}{c}
-u_{xx}+u_{yy}=0,\quad 0<x<a,\quad  0<y<b,\\
-u_y(x,0)=f_0(x),\quad u_y(x,b)=f_1(x),\quad 0\le x\le a,\\
-u_x(0,y)=g_0(y),\quad u_x(a,y)=g_1(y),\quad 0\le y\le b
+u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b,\\
+u_{y}(x,0)=f_{0}(x),\quad u_{y}(x,b)=f_{1}(x),\quad0\le x\le a,\\
+u_{x}(0,y)=g_{0}(y),\quad u_{x}(a,y)=g_{1}(y),\quad0\le y\le b
 \end{array}
 $$
 has no solution unless
 $$
-\int_0^af_0(x)\,dx=
-\int_0^af_1(x)\,dx=
-\int_0^bg_0(y)\,dy=
-\int_0^bg_1(y)\,dy=0.
+\int_{0}^{a}f_{0}(x)\,dx=
+\int_{0}^{a}f_{1}(x)\,dx=
+\int_{0}^{b}g_{0}(y)\,dy=
+\int_{0}^{b}g_{1}(y)\,dy=0.
 $$
 In this case it has infinitely many formal solutions.
 Find  them.
 
 \item\label{exer:12.3.37}
 In this exercise
-take it as given that the infinite series $\sum_{n=1}^\infty
-n^pe^{-qn}$ converges for all $p$ if $q>0$, and, where appropriate,
+take it as given that the infinite series $\sum_{n=1}^{\infty}
+n^{p}e^{-qn}$ converges for all $p$ if $q>0$, and, where appropriate,
 use the comparison test for absolute convergence of an infinite
 series.
 
 Let
 $$
-u(x,y)=\sum_{n=1}^\infty \alpha_n
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},
+u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}
+\sin\frac{n\pi x}{a},
 $$
 where
 $$
-\alpha_n={2\over a}\int_0^a f(x)\sin{n\pi x\over a}\,dx
+\alpha_{n}=\frac{2}{a}\int_{0}^{a}f(x)\sin\frac{n\pi x}{a}\,dx
 $$
 and $f$ is piecewise smooth on $[0,a]$.
 
@@ -1048,12 +1045,12 @@ and $f$ is piecewise smooth on $[0,a]$.
 \item % (a)
 Verify the approximations
 $$
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}\approx e^{-n\pi y/a},\quad y<b,
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\approx e^{-n\pi y/a},\quad y<b,
 \eqno{\rm(A)}
 $$
 and
 $$
-{\cosh n\pi(b-y)/a\over\sinh n\pi b/a}\approx e^{-n\pi y/a},\quad y<b
+\frac{\cosh n\pi(b-y)/a}{\sinh n\pi b/a}\approx e^{-n\pi y/a},\quad y<b
 \eqno{\rm(B)}
 $$
 for large $n$.
@@ -1065,39 +1062,39 @@ For fixed $y$ in $(0,b)$,
 use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$
  to show that
 $$
-u_x(x,y)={\pi\over a}\sum_{n=1}^\infty n\alpha_n
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\cos{n\pi x\over a},\quad -\infty<x< \infty.
+u_{x}(x,y)=\frac{\pi}{a}\sum_{n=1}^{\infty}n\alpha_{n}
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}
+\cos\frac{n\pi x}{a},\quad-\infty<x<\infty.
 $$
 \item % (d)
 Starting from the result of \part{b},
 use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$
  to show that, for a fixed $y$ in $(0,b)$,
 $$
-u_{xx}(x,y)=-{\pi^2\over a^2}\sum_{n=1}^\infty n^2\alpha_n
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},\quad -\infty<x< \infty.
+u_{xx}(x,y)=-\frac{\pi^{2}}{a^{2}}\sum_{n=1}^{\infty}n^{2}\alpha_{n}
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}
+\sin\frac{n\pi x}{a},\quad-\infty<x<\infty.
 $$
 \item % (e)
 For fixed but arbitrary $x$,
 use (B) and Theorem~\ref{thmtype:12.1.2} with $z=y$
  to show that
 $$
-u_y(x,y)=-{\pi\over a}\sum_{n=1}^\infty n\alpha_n
-{\cosh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a}
+u_{y}(x,y)=-\frac{\pi}{a}\sum_{n=1}^{\infty}n\alpha_{n}
+\frac{\cosh n\pi(b-y)/a}{\sinh n\pi b/a}
+\sin\frac{n\pi x}{a}
 $$
-if $0<y_0<y<b$, where $y_0$ is an  arbitrary
+if $0<y_{0}<y<b$, where $y_{0}$ is an  arbitrary
 number in $(0,b)$.
- Then argue that since $y_0$ can be chosen arbitrarily small,
+ Then argue that since $y_{0}$ can be chosen arbitrarily small,
 the conclusion holds for all $y$ in $(0,b)$.
 \item % (f)
 Starting from the result of \part{e}, use (A) and
 Theorem~\ref{thmtype:12.1.2} to show that
 $$
-u_{yy}(x,y)={\pi^2\over a^2}\sum_{n=1}^\infty n^2\alpha_n
-{\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},\quad 0<y<b.
+u_{yy}(x,y)=\frac{\pi^{2}}{a^{2}}\sum_{n=1}^{\infty}n^{2}\alpha_{n}
+\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}
+\sin\frac{n\pi x}{a},\quad0<y<b.
 $$
 \item % (g)
 Conclude that $u$ satisfies Laplace's equation for all $(x,y)$

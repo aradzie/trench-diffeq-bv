@@ -2,688 +2,515 @@
 
 \noindent
 In this section we consider the constant coefficient equation
-\begin{equation} \label{eq:5.4.1}
-ay''+by'+cy=e^{\alpha x}G(x),
+\begin{equation}
+  \label{eq:5.4.1}ay''+by'+cy=e^{\alpha x}G(x),
 \end{equation}
 where $\alpha$ is a constant and $G$ is a polynomial.
 
-From Theorem~\ref{thmtype:5.3.2}, the general solution of (\ref{eq:5.4.1})
-is
-$y=y_{p}+c_{1}y_{1}+c_{2}y_{2}$, where $y_{p}$ is a particular solution of
-(\ref{eq:5.4.1}) and $\{y_{1},y_{2}\}$ is a fundamental set of
-solutions of the complementary equation
-$$
-ay''+by'+cy=0.
-$$
-In Section~5.2 we showed how to find $\{y_{1},y_{2}\}$. In this
-section we'll show how to find $y_{p}$. The procedure that we'll use
-is called {\color{blue}\it the method of undetermined coefficients\/}.
+From Theorem~\ref{thmtype:5.3.2}, the general solution of (\ref{eq:5.4.1}) is $y=y_{p}+c_{1}y_{1}+c_{2}y_{2}$, where $y_{p}$ is a particular solution of (\ref{eq:5.4.1}) and $\{y_{1},y_{2}\}$ is a fundamental set of solutions of the complementary equation
+\[
+  ay''+by'+cy=0.
+\]
+In Section~5.2 we showed how to find $\{y_{1},y_{2}\}$. In this section we'll show how to find $y_{p}$. The procedure that we'll use is called {\color{blue}\it the method of undetermined coefficients\/}.
 
-Our first example is similar to
-Exercises~\ref{exer:5.3.16}--\ref{exer:5.3.21}.
+Our first example is similar to Exercises~\ref{exer:5.3.16}--\ref{exer:5.3.21}.
 
-\begin{example}\label{example:5.4.1} \rm
-Find a particular solution of
-\begin{equation} \label{eq:5.4.2}
-y''-7y'+12y=4e^{2x}.
-\end{equation}
-Then find the general solution.
+\begin{example}
+  \label{example:5.4.1} \rm Find a particular solution of
+  \begin{equation}
+    \label{eq:5.4.2}y''-7y'+12y=4e^{2x}.
+  \end{equation}
+  Then find the general solution.
 \end{example}
 
-\solution
-Substituting $y_{p}=Ae^{2x}$ for $y$ in (\ref{eq:5.4.2}) will produce a
-constant multiple of $Ae^{2x}$ on the left side of (\ref{eq:5.4.2}), so it
-may be possible to choose $A$ so that $y_{p}$ is a solution of
-(\ref{eq:5.4.2}). Let's try it;   if $y_{p}=Ae^{2x}$ then
-$$
-y_{p}''-7y_{p}'+12y_{p}=4Ae^{2x}-14Ae^{2x}+12Ae^{2x}=2Ae^{2x}=4e^{2x}
-$$
-if $A=2$. Therefore $y_{p}=2e^{2x}$ is a particular solution of
-(\ref{eq:5.4.2}). To find the general solution, we note that the
-characteristic polynomial of the complementary equation
-\begin{equation} \label{eq:5.4.3}
-y''-7y'+12y=0
+\solution Substituting $y_{p}=Ae^{2x}$ for $y$ in (\ref{eq:5.4.2}) will produce a constant multiple of $Ae^{2x}$ on the left side of (\ref{eq:5.4.2}), so it may be possible to choose $A$ so that $y_{p}$ is a solution of (\ref{eq:5.4.2}). Let's try it; if $y_{p}=Ae^{2x}$ then
+\[
+  y_{p}''-7y_{p}'+12y_{p}=4Ae^{2x}-14Ae^{2x}+12Ae^{2x}=2Ae^{2x}=4e^{2x}
+\]
+if $A=2$. Therefore $y_{p}=2e^{2x}$ is a particular solution of (\ref{eq:5.4.2}). To find the general solution, we note that the characteristic polynomial of the complementary equation
+\begin{equation}
+  \label{eq:5.4.3}y''-7y'+12y=0
 \end{equation}
-is $p(r)=r^{2}-7r+12=(r-3)(r-4)$, so $\{e^{3x},e^{4x}\}$ is a
-fundamental set of solutions of (\ref{eq:5.4.3}). Therefore the general
-solution of (\ref{eq:5.4.2}) is
-$$
- y=2e^{2x}+c_{1}e^{3x}+c_{2}e^{4x}.
-$$
+is $p(r)=r^{2}-7r+12=(r-3)(r-4)$, so $\{e^{3x},e^{4x}\}$ is a fundamental set of solutions of (\ref{eq:5.4.3}). Therefore the general solution of (\ref{eq:5.4.2}) is
+\[
+  y=2e^{2x}+c_{1}e^{3x}+c_{2}e^{4x}.
+\]
 
-\begin{example}\label{example:5.4.2} \rm
-Find a particular solution of
-\begin{equation} \label{eq:5.4.4}
-y''-7y'+12y=5e^{4x}.
-\end{equation}
-Then find the general solution.
+\begin{example}
+  \label{example:5.4.2} \rm Find a particular solution of
+  \begin{equation}
+    \label{eq:5.4.4}y''-7y'+12y=5e^{4x}.
+  \end{equation}
+  Then find the general solution.
 \end{example}
 
-\solution
-Fresh from our success in finding a particular solution of
-(\ref{eq:5.4.2}) --- where we chose $y_{p}=Ae^{2x}$ because the right side
-of
-(\ref{eq:5.4.2}) is a constant multiple of $e^{2x}$ --- it may seem
-reasonable to try $y_{p}=Ae^{4x}$ as a particular solution of
-(\ref{eq:5.4.4}). However, this won't work, since we saw in
-Example~\ref{example:5.4.1} that $e^{4x}$ is a solution of the
-complementary equation (\ref{eq:5.4.3}), so substituting $y_{p}=Ae^{4x}$
-into the left side of (\ref{eq:5.4.4}) produces zero on the left, no
-matter how we choose$A$. To discover a suitable form for $y_{p}$,
-we use the same approach that we used in Section~5.2 to find a
-second solution of
-$$
-ay''+by'+cy=0
-$$
-in the case where the characteristic equation has a repeated real
-root: we look for solutions of (\ref{eq:5.4.4}) in the form $y=ue^{4x}$,
-where $u$ is a function to be determined. Substituting
-\begin{equation} \label{eq:5.4.5}
-y=ue^{4x},\quad
-y'=u'e^{4x}+4ue^{4x},\mbox{\quad and \quad}
-y''=u''e^{4x}+8u'e^{4x}+16ue^{4x}
+\solution Fresh from our success in finding a particular solution of (\ref{eq:5.4.2}) --- where we chose $y_{p}=Ae^{2x}$ because the right side of (\ref{eq:5.4.2}) is a constant multiple of $e^{2x}$ --- it may seem reasonable to try $y_{p}=Ae^{4x}$ as a particular solution of (\ref{eq:5.4.4}). However, this won't work, since we saw in Example~\ref{example:5.4.1} that $e^{4x}$ is a solution of the complementary equation (\ref{eq:5.4.3}), so substituting $y_{p}=Ae^{4x}$ into the left side of (\ref{eq:5.4.4}) produces zero on the left, no matter how we choose$A$. To discover a suitable form for $y_{p}$, we use the same approach that we used in Section~5.2 to find a second solution of
+\[
+  ay''+by'+cy=0
+\]
+in the case where the characteristic equation has a repeated real root: we look for solutions of (\ref{eq:5.4.4}) in the form $y=ue^{4x}$, where $u$ is a function to be determined. Substituting
+\begin{equation}
+  \label{eq:5.4.5}y=ue^{4x},\quad y'=u'e^{4x}+4ue^{4x},\mbox{\quad and \quad}y''=u''e^{4x}+8u'e^{4x}+16ue^{4x}
 \end{equation}
 into (\ref{eq:5.4.4}) and canceling the common factor $e^{4x}$ yields
-$$
-(u''+8u'+16u)-7(u'+4u)+12u=5,
-$$
+\[
+  (u''+8u'+16u)-7(u'+4u)+12u=5,
+\]
 or
-$$
-u''+u'=5.
-$$
-By inspection we  see that $u_{p}=5x$ is a particular solution of
-this equation, so $y_{p}=5xe^{4x}$ is a particular solution of
-(\ref{eq:5.4.4}). Therefore
-$$
-y=5xe^{4x}+c_{1}e^{3x}+c_{2}e^{4x}
-$$
+\[
+  u''+u'=5.
+\]
+By inspection we see that $u_{p}=5x$ is a particular solution of this equation, so $y_{p}=5xe^{4x}$ is a particular solution of (\ref{eq:5.4.4}). Therefore
+\[
+  y=5xe^{4x}+c_{1}e^{3x}+c_{2}e^{4x}
+\]
 is the general solution.
 
-\begin{example}\label{example:5.4.3} \rm
-Find a particular solution of
-\begin{equation} \label{eq:5.4.6}
-y''-8y'+16y=2e^{4x}.
-\end{equation}
+\begin{example}
+  \label{example:5.4.3} \rm Find a particular solution of
+  \begin{equation}
+    \label{eq:5.4.6}y''-8y'+16y=2e^{4x}.
+  \end{equation}
 \end{example}
 
-\solution
-Since the characteristic polynomial of the complementary equation
-\begin{equation} \label{eq:5.4.7}
-y''-8y'+16y=0
+\solution Since the characteristic polynomial of the complementary equation
+\begin{equation}
+  \label{eq:5.4.7}y''-8y'+16y=0
 \end{equation}
-is $p(r)=r^{2}-8r+16=(r-4)^{2}$, both $y_{1}=e^{4x}$ and $y_{2}=xe^{4x}$ are
-solutions of (\ref{eq:5.4.7}). Therefore (\ref{eq:5.4.6}) does not have a
-solution of the form $y_{p}=Ae^{4x}$ or $y_{p}=Axe^{4x}$. As in
-Example~\ref{example:5.4.2}, we look for solutions of (\ref{eq:5.4.6}) in the
-form $y=ue^{4x}$, where $u$ is a function to be determined.
-Substituting from (\ref{eq:5.4.5}) into (\ref{eq:5.4.6}) and canceling the
-common factor $e^{4x}$ yields
-$$
-(u''+8u'+16u)-8(u'+4u)+16u=2,
-$$
+is $p(r)=r^{2}-8r+16=(r-4)^{2}$, both $y_{1}=e^{4x}$ and $y_{2}=xe^{4x}$ are solutions of (\ref{eq:5.4.7}). Therefore (\ref{eq:5.4.6}) does not have a solution of the form $y_{p}=Ae^{4x}$ or $y_{p}=Axe^{4x}$. As in Example~\ref{example:5.4.2}, we look for solutions of (\ref{eq:5.4.6}) in the form $y=ue^{4x}$, where $u$ is a function to be determined. Substituting from (\ref{eq:5.4.5}) into (\ref{eq:5.4.6}) and canceling the common factor $e^{4x}$ yields
+\[
+  (u''+8u'+16u)-8(u'+4u)+16u=2,
+\]
 or
-$$
-u''=2.
-$$
-Integrating twice and taking the constants of integration to be zero
-shows that $u_{p}=x^{2}$ is a particular solution of this equation, so
-$y_{p}=x^{2}e^{4x}$ is a particular solution of (\ref{eq:5.4.4}). Therefore
-$$
-y=e^{4x}(x^{2}+c_{1}+c_{2}x)
-$$
+\[
+  u''=2.
+\]
+Integrating twice and taking the constants of integration to be zero shows that $u_{p}=x^{2}$ is a particular solution of this equation, so $y_{p}=x^{2}e^{4x}$ is a particular solution of (\ref{eq:5.4.4}). Therefore
+\[
+  y=e^{4x}(x^{2}+c_{1}+c_{2}x)
+\]
 is the general solution. \bbox
 
-The preceding examples illustrate the following facts concerning
-the form of a particular solution $y_{p}$
-of a constant coefficient equation
-$$
-ay''+by'+cy=ke^{\alpha x},
-$$
+The preceding examples illustrate the following facts concerning the form of a particular solution $y_{p}$ of a constant coefficient equation
+\[
+  ay''+by'+cy=ke^{\alpha x},
+\]
 where $k$ is a nonzero constant:
 
 \medskip
 
 \begin{alist}
-\item % (a)
-If $e^{\alpha x}$ isn't  a solution of the complementary
-equation
-\begin{equation} \label{eq:5.4.8}
-ay''+by'+cy=0,
-\end{equation}
-then  $y_{p}=Ae^{\alpha x}$, where $A$ is a constant. (See
-Example~\ref{example:5.4.1}).
-\item % (b)
-If $e^{\alpha x}$ is a solution of (\ref{eq:5.4.8}) but $xe^{\alpha x}$
-is not, then  $y_{p}=Axe^{\alpha x}$,  where $A$ is a constant.
-(See Example~\ref{example:5.4.2}.)
-\item % (c)
-If both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of (\ref{eq:5.4.8}),
-then  $y_{p}=Ax^{2}e^{\alpha x}$,  where $A$ is a constant.
-(See Example~\ref{example:5.4.3}.)
+  \item % (a)
+  If $e^{\alpha x}$ isn't a solution of the complementary equation
+  \begin{equation}
+    \label{eq:5.4.8}ay''+by'+cy=0,
+  \end{equation}
+  then $y_{p}=Ae^{\alpha x}$, where $A$ is a constant. (See Example~\ref{example:5.4.1}).
+
+  \item % (b)
+  If $e^{\alpha x}$ is a solution of (\ref{eq:5.4.8}) but $xe^{\alpha x}$ is not, then $y_{p}=Axe^{\alpha x}$, where $A$ is a constant. (See Example~\ref{example:5.4.2}.)
+
+  \item % (c)
+  If both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of (\ref{eq:5.4.8}), then $y_{p}=Ax^{2}e^{\alpha x}$, where $A$ is a constant. (See Example~\ref{example:5.4.3}.)
 \end{alist}
-See Exercise~\ref{exer:5.4.30}  for the proofs of these facts.
+See Exercise~\ref{exer:5.4.30} for the proofs of these facts.
 
-In all three cases you can just substitute the appropriate form for
-$y_{p}$ and its derivatives directly into
-$$
-ay_{p}''+by_{p}'+cy_{p}=ke^{\alpha x},
-$$
-and solve for the constant $A$, as we did in
-Example~\ref{example:5.4.1}.
- (See Exercises~\ref{exer:5.4.31}--\ref{exer:5.4.33}.)
-However, if the equation is
-$$
-ay''+by'+cy=ke^{\alpha x}G(x),
-$$
-where $G$ is a polynomial of degree greater than zero, we recommend
-that you use the substitution $y=ue^{\alpha x}$ as we did in
-Examples~\ref{example:5.4.2} and \ref{example:5.4.3}. The equation for $u$
-will turn out to be
-\begin{equation} \label{eq:5.4.9}
-au''+p'(\alpha)u'+p(\alpha)u=G(x),
+In all three cases you can just substitute the appropriate form for $y_{p}$ and its derivatives directly into
+\[
+  ay_{p}''+by_{p}'+cy_{p}=ke^{\alpha x},
+\]
+and solve for the constant $A$, as we did in Example~\ref{example:5.4.1}. (See Exercises~\ref{exer:5.4.31}--\ref{exer:5.4.33}.) However, if the equation is
+\[
+  ay''+by'+cy=ke^{\alpha x}G(x),
+\]
+where $G$ is a polynomial of degree greater than zero, we recommend that you use the substitution $y=ue^{\alpha x}$ as we did in Examples~\ref{example:5.4.2} and \ref{example:5.4.3}. The equation for $u$ will turn out to be
+\begin{equation}
+  \label{eq:5.4.9}au''+p'(\alpha)u'+p(\alpha)u=G(x),
 \end{equation}
-where $p(r)=ar^{2}+br+c$ is the characteristic polynomial of the
-complementary equation and $p'(r)=2ar+b$ (Exercise~\ref{exer:5.4.30});
-however, you shouldn't memorize this since it's easy to derive the
-equation for $u$ in any particular case. Note, however, that if
-$e^{\alpha x}$ is a solution of the complementary equation then
-$p(\alpha)=0$, so (\ref{eq:5.4.9}) reduces to
-$$
-au''+p'(\alpha)u'=G(x),
-$$
-while if both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of the
-complementary equation then $p(r)=a(r-\alpha)^{2}$ and
-$p'(r)=2a(r-\alpha)$, so $p(\alpha)=p'(\alpha)=0$ and (\ref{eq:5.4.9})
-reduces to
-$$
-au''=G(x).
-$$
+where $p(r)=ar^{2}+br+c$ is the characteristic polynomial of the complementary equation and $p'(r)=2ar+b$ (Exercise~\ref{exer:5.4.30}); however, you shouldn't memorize this since it's easy to derive the equation for $u$ in any particular case. Note, however, that if $e^{\alpha x}$ is a solution of the complementary equation then $p(\alpha)=0$, so (\ref{eq:5.4.9}) reduces to
+\[
+  au''+p'(\alpha)u'=G(x),
+\]
+while if both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of the complementary equation then $p(r)=a(r-\alpha)^{2}$ and $p'(r)=2a(r-\alpha)$, so $p(\alpha)=p'(\alpha)=0$ and (\ref{eq:5.4.9}) reduces to
+\[
+  au''=G(x).
+\]
 
-\begin{example}\label{example:5.4.4} \rm
-Find a particular solution of
-\begin{equation} \label{eq:5.4.10}
-y''-3y'+2y=e^{3x}(-1+2x+x^{2}).
-\end{equation}
+\begin{example}
+  \label{example:5.4.4} \rm Find a particular solution of
+  \begin{equation}
+    \label{eq:5.4.10}y''-3y'+2y=e^{3x}(-1+2x+x^{2}).
+  \end{equation}
 \end{example}
 
-\solution
-Substituting
-$$
-y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }
-y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
-$$
-into (\ref{eq:5.4.10}) and  canceling $e^{3x}$  yields
-$$
-(u''+6u'+9u)-3(u'+3u)+2u=-1+2x+x^{2},
-$$
+\solution Substituting
+\[
+  y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
+\]
+into (\ref{eq:5.4.10}) and canceling $e^{3x}$ yields
+\[
+  (u''+6u'+9u)-3(u'+3u)+2u=-1+2x+x^{2},
+\]
 or
-\begin{equation} \label{eq:5.4.11}
-u''+3u'+2u=-1+2x+x^{2}.
+\begin{equation}
+  \label{eq:5.4.11}u''+3u'+2u=-1+2x+x^{2}.
 \end{equation}
-As in Example~\ref{exer:5.3.2}, in order to guess a form for a particular
-solution of
-(\ref{eq:5.4.11}), we note that substituting a second degree polynomial
-$u_{p}=A+Bx+Cx^{2}$ for $u$ in the left side of (\ref{eq:5.4.11}) produces
-another second degree polynomial with coefficients that depend upon
-$A$, $B$, and $C$;   thus,
-$$
-\mbox{ if \quad}u_{p}=A+Bx+Cx^{2}\mbox{\quad then \quad}
-u_{p}'=B+2Cx\mbox{\quad and \quad}u_{p}''=2C.
-$$
-If $u_{p}$ is to satisfy (\ref{eq:5.4.11}),  we must have
+As in Example~\ref{exer:5.3.2}, in order to guess a form for a particular solution of (\ref{eq:5.4.11}), we note that substituting a second degree polynomial $u_{p}=A+Bx+Cx^{2}$ for $u$ in the left side of (\ref{eq:5.4.11}) produces another second degree polynomial with coefficients that depend upon $A$, $B$, and $C$; thus,
+\[
+  \mbox{ if \quad}u_{p}=A+Bx+Cx^{2}\mbox{\quad then \quad}u_{p}'=B+2Cx\mbox{\quad and \quad}u_{p}''=2C.
+\]
+If $u_{p}$ is to satisfy (\ref{eq:5.4.11}), we must have
 \begin{eqnarray*}
-u_{p}''+3u_{p}'+2u_{p}&=&2C+3(B+2Cx)+2(A+Bx+Cx^{2})\\
-&=&(2C+3B+2A)+(6C+2B)x+2Cx^{2}=-1+2x+x^{2}.
+  u_{p}''+3u_{p}'+2u_{p} & = & 2C+3(B+2Cx)+2(A+Bx+Cx^{2}) \\
+                         & = & (2C+3B+2A)+(6C+2B)x+2Cx^{2}=-1+2x+x^{2}.
 \end{eqnarray*}
-Equating  coefficients of like powers of $x$ on the two sides of the
-last equality yields
-$$
-\begin{array}{rcr}
-2C&=&1\phantom{.}\\
-2B+6C&=&2\phantom{.}\\
-2A+3B+2C&=&-1.
-\end{array}
-$$
-Solving these equations for $C$, $B$, and $A$ (in that order) yields
- $C=1/2$, $B=-1/2$, $A=-1/4$.  Therefore
-$$
-u_{p}=-\frac{1}{4}(1+2x-2x^{2})
-$$
-is a particular solution of  (\ref{eq:5.4.11}), and
-$$
-y_{p}=u_{p}e^{3x}=-\frac{e^{3x}}{4}(1+2x-2x^{2})
-$$
-is a particular solution of  (\ref{eq:5.4.10}).
+Equating coefficients of like powers of $x$ on the two sides of the last equality yields
+\[
+  \begin{array}{rcr}
+    2C       & = & 1\phantom{.} \\
+    2B+6C    & = & 2\phantom{.} \\
+    2A+3B+2C & = & -1.
+  \end{array}
+\]
+Solving these equations for $C$, $B$, and $A$ (in that order) yields $C=1/2$, $B=-1/2$, $A=-1/4$. Therefore
+\[
+  u_{p}=-\frac{1}{4}(1+2x-2x^{2})
+\]
+is a particular solution of (\ref{eq:5.4.11}), and
+\[
+  y_{p}=u_{p}e^{3x}=-\frac{e^{3x}}{4}(1+2x-2x^{2})
+\]
+is a particular solution of (\ref{eq:5.4.10}).
 
-\begin{example}\label{example:5.4.5} \rm
- Find a particular solution of
-\begin{equation} \label{eq:5.4.12}
-y''-4y'+3y=e^{3x}(6+8x+12x^{2}).
-\end{equation}
+\begin{example}
+  \label{example:5.4.5} \rm Find a particular solution of
+  \begin{equation}
+    \label{eq:5.4.12}y''-4y'+3y=e^{3x}(6+8x+12x^{2}).
+  \end{equation}
 \end{example}
 
-\solution
-Substituting
-$$
-y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }
-y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
-$$
-into (\ref{eq:5.4.12}) and  canceling $e^{3x}$  yields
-$$
-(u''+6u'+9u)-4(u'+3u)+3u=6+8x+12x^{2},
-$$
+\solution Substituting
+\[
+  y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
+\]
+into (\ref{eq:5.4.12}) and canceling $e^{3x}$ yields
+\[
+  (u''+6u'+9u)-4(u'+3u)+3u=6+8x+12x^{2},
+\]
 or
-\begin{equation} \label{eq:5.4.13}
-u''+2u'=6+8x+12x^{2}.
+\begin{equation}
+  \label{eq:5.4.13}u''+2u'=6+8x+12x^{2}.
 \end{equation}
-There's no $u$ term in this equation, since $e^{3x}$ is a solution of
-the complementary equation for (\ref{eq:5.4.12}). (See
-Exercise~\ref{exer:5.4.30}.) Therefore (\ref{eq:5.4.13}) does not have a
-particular solution of the form $u_{p}=A+Bx+Cx^{2}$ that we used
-successfully in Example~\ref{example:5.4.4}, since with this choice of
-$u_{p}$,
-$$
-u_{p}''+2u_{p}'=2C+(B+2Cx)
-$$
-can't contain the last term ($12x^{2}$) on the right side of
-(\ref{eq:5.4.13}). Instead, let's try $u_{p}=Ax+Bx^{2}+Cx^{3}$ on the grounds
-that
-$$
-u_{p}'=A+2Bx+3Cx^{2}\mbox{\quad and \quad}
-u_{p}''=2B+6Cx
-$$
-together contain all the powers of $x$ that appear on the right side
-of (\ref{eq:5.4.13}).
+There's no $u$ term in this equation, since $e^{3x}$ is a solution of the complementary equation for (\ref{eq:5.4.12}). (See Exercise~\ref{exer:5.4.30}.) Therefore (\ref{eq:5.4.13}) does not have a particular solution of the form $u_{p}=A+Bx+Cx^{2}$ that we used successfully in Example~\ref{example:5.4.4}, since with this choice of $u_{p}$,
+\[
+  u_{p}''+2u_{p}'=2C+(B+2Cx)
+\]
+can't contain the last term ($12x^{2}$) on the right side of (\ref{eq:5.4.13}). Instead, let's try $u_{p}=Ax+Bx^{2}+Cx^{3}$ on the grounds that
+\[
+  u_{p}'=A+2Bx+3Cx^{2}\mbox{\quad and \quad}u_{p}''=2B+6Cx
+\]
+together contain all the powers of $x$ that appear on the right side of (\ref{eq:5.4.13}).
 
-Substituting these expressions in place of $u'$ and $u''$  in
-(\ref{eq:5.4.13}) yields
-$$
-(2B+6Cx)+2(A+2Bx+3Cx^{2})=(2B+2A)+(6C+4B)x+6Cx^{2}=6+8x+12x^{2}.
-$$
-Comparing coefficients of like powers of $x$ on the two sides of the
-last equality shows that $u_{p}$ satisfies (\ref{eq:5.4.13}) if
-$$
-\begin{array}{rcr}
-6C&=&12\phantom{.}\\
-4B+6C&=&8\phantom{.}\\
-2A+2B\phantom{+6u_{2}}&=&6.
-\end{array}
-$$
-Solving these equations successively yields $C=2$, $B=-1$, and $A=4$.
-Therefore
-$$
-u_{p}=x(4-x+2x^{2})
-$$
-is a particular solution of  (\ref{eq:5.4.13}),
-and
-$$
-y_{p}=u_{p}e^{3x}=xe^{3x}(4-x+2x^{2})
-$$
-is a particular solution of  (\ref{eq:5.4.12}).
+Substituting these expressions in place of $u'$ and $u''$ in (\ref{eq:5.4.13}) yields
+\[
+  (2B+6Cx)+2(A+2Bx+3Cx^{2})=(2B+2A)+(6C+4B)x+6Cx^{2}=6+8x+12x^{2}.
+\]
+Comparing coefficients of like powers of $x$ on the two sides of the last equality shows that $u_{p}$ satisfies (\ref{eq:5.4.13}) if
+\[
+  \begin{array}{rcr}
+    6C                     & = & 12\phantom{.} \\
+    4B+6C                  & = & 8\phantom{.}  \\
+    2A+2B\phantom{+6u_{2}} & = & 6.
+  \end{array}
+\]
+Solving these equations successively yields $C=2$, $B=-1$, and $A=4$. Therefore
+\[
+  u_{p}=x(4-x+2x^{2})
+\]
+is a particular solution of (\ref{eq:5.4.13}), and
+\[
+  y_{p}=u_{p}e^{3x}=xe^{3x}(4-x+2x^{2})
+\]
+is a particular solution of (\ref{eq:5.4.12}).
 
-\begin{example}\label{example:5.4.6} \rm
-Find a particular solution of
-\begin{equation} \label{eq:5.4.14}
-4y''+4y'+y=e^{-x/2}(-8+48x+144x^{2}).
-\end{equation}
+\begin{example}
+  \label{example:5.4.6} \rm Find a particular solution of
+  \begin{equation}
+    \label{eq:5.4.14}4y''+4y'+y=e^{-x/2}(-8+48x+144x^{2}).
+  \end{equation}
 \end{example}
 
-\solution  Substituting
-$$
-y=ue^{-x/2},\quad  y'=u'e^{-x/2}-\frac{1}{2}ue^{-x/2},\mbox{\quad and
-\quad}y''=u''e^{-x/2}-u'e^{-x/2}+\frac{1}{4}ue^{-x/2}
-$$
-into (\ref{eq:5.4.14}) and  canceling $e^{-x/2}$  yields
-$$
-4\left(u''-u'+\frac{u}{4}\right)+4\left(u'-\frac{u}{2}\right)+u=4u''=-8+48x+144x^{2},
-$$
+\solution Substituting
+\[
+  y=ue^{-x/2},\quad y'=u'e^{-x/2}-\frac{1}{2}ue^{-x/2},\mbox{\quad and \quad}y''=u''e^{-x/2}-u'e^{-x/2}+\frac{1}{4}ue^{-x/2}
+\]
+into (\ref{eq:5.4.14}) and canceling $e^{-x/2}$ yields
+\[
+  4\left(u''-u'+\frac{u}{4}\right)+4\left(u'-\frac{u}{2}\right)+u=4u''=-8+48x+144x^{2},
+\]
 or
-\begin{equation} \label{eq:5.4.15}
-u''=-2+12x+36x^{2},
+\begin{equation}
+  \label{eq:5.4.15}u''=-2+12x+36x^{2},
 \end{equation}
-which does not contain $u$ or $u'$ because $e^{-x/2}$ and $xe^{-x/2}$
-are both solutions of the complementary equation. (See
-Exercise~\ref{exer:5.4.30}.) To obtain a particular solution of
-(\ref{eq:5.4.15}) we integrate twice, taking the constants of integration
-to be zero;   thus,
-$$
-u_{p}'=-2x+6x^{2}+12x^{3}\mbox{\quad and \quad}
-u_{p}=-x^{2}+2x^{3}+3x^{4}=x^{2}(-1+2x+3x^{2}).
-$$
+which does not contain $u$ or $u'$ because $e^{-x/2}$ and $xe^{-x/2}$ are both solutions of the complementary equation. (See Exercise~\ref{exer:5.4.30}.) To obtain a particular solution of (\ref{eq:5.4.15}) we integrate twice, taking the constants of integration to be zero; thus,
+\[
+  u_{p}'=-2x+6x^{2}+12x^{3}\mbox{\quad and \quad}u_{p}=-x^{2}+2x^{3}+3x^{4}=x^{2}(-1+2x+3x^{2}).
+\]
 Therefore
-$$
-y_{p}=u_{p}e^{-x/2}=x^{2}e^{-x/2}(-1+2x+3x^{2})
-$$
-is a particular solution of  (\ref{eq:5.4.14}).
+\[
+  y_{p}=u_{p}e^{-x/2}=x^{2}e^{-x/2}(-1+2x+3x^{2})
+\]
+is a particular solution of (\ref{eq:5.4.14}).
 
 \boxit{Summary}
 
 \noindent
-The preceding examples illustrate the following facts concerning
- particular solutions of a constant coefficient equation of the form
-$$
-ay''+by'+cy=e^{\alpha x}G(x),
-$$
+The preceding examples illustrate the following facts concerning particular solutions of a constant coefficient equation of the form
+\[
+  ay''+by'+cy=e^{\alpha x}G(x),
+\]
 where $G$ is a polynomial (see Exercise~\ref{exer:5.4.30}):
 \begin{alist}
-\item % (a)
-If $e^{\alpha x}$ isn't  a solution of the complementary
-equation
-\begin{equation} \label{eq:5.4.16}
-ay''+by'+cy=0,
-\end{equation}
-then  $y_{p}=e^{\alpha x}Q(x)$,
- where $Q$ is a polynomial of the same degree as $G$.
-(See Example~\ref{example:5.4.4}).
-\item % (b)
-If $e^{\alpha x}$ is a solution of (\ref{eq:5.4.16}) but $xe^{\alpha x}$
-is not, then  $y_{p}=xe^{\alpha x}Q(x)$,
- where $Q$ is a polynomial of the same degree as $G$.
-(See Example~\ref{example:5.4.5}.)
-\item % (c)
-If both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of (\ref{eq:5.4.16}),
-then  $y_{p}=x^{2}e^{\alpha x}Q(x)$,
- where $Q$ is a polynomial of the same degree as $G$.
-(See Example~\ref{example:5.4.6}.)
+  \item % (a)
+  If $e^{\alpha x}$ isn't a solution of the complementary equation
+  \begin{equation}
+    \label{eq:5.4.16}ay''+by'+cy=0,
+  \end{equation}
+  then $y_{p}=e^{\alpha x}Q(x)$, where $Q$ is a polynomial of the same degree as $G$. (See Example~\ref{example:5.4.4}).
+
+  \item % (b)
+  If $e^{\alpha x}$ is a solution of (\ref{eq:5.4.16}) but $xe^{\alpha x}$ is not, then $y_{p}=xe^{\alpha x}Q(x)$, where $Q$ is a polynomial of the same degree as $G$. (See Example~\ref{example:5.4.5}.)
+
+  \item % (c)
+  If both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of (\ref{eq:5.4.16}), then $y_{p}=x^{2}e^{\alpha x}Q(x)$, where $Q$ is a polynomial of the same degree as $G$. (See Example~\ref{example:5.4.6}.)
 \end{alist}
 
-In all three cases, you can just substitute the appropriate form for
-$y_{p}$ and its derivatives directly into
-$$
-ay_{p}''+by_{p}'+cy_{p}=e^{\alpha x}G(x),
-$$
-and solve for the coefficients of the polynomial $Q$. However, if you
-try this you will see that the computations are more tedious than
-those that you encounter by making the substitution $y=ue^{\alpha x}$
-and finding a particular solution of the resulting equation for $u$.
-(See Exercises~\ref{exer:5.4.34}-\ref{exer:5.4.36}.) In Case~\part{a}
-the equation for $u$ will be of the form
-$$
-au''+p'(\alpha)u'+p(\alpha)u=G(x),
-$$
-with a particular solution of the form $u_{p}=Q(x)$, a polynomial of the
-same degree as $G$, whose coefficients can be found by the method used
-in Example~\ref{example:5.4.4}. In Case~\part{b}  the equation for
-$u$ will be of the form
-$$
-au''+p'(\alpha)u'=G(x)
-$$
-(no $u$ term on the left), with a particular solution of the form
-$u_{p}=xQ(x)$, where $Q$ is a polynomial of the same degree as $G$ whose
-coefficients can be found by the method used in
-Example~\ref{example:5.4.5}. In Case~\part{c}  the equation for $u$
-will be of the form
-$$
-au''=G(x)
-$$
-with a particular solution of the form $u_{p}=x^{2}Q(x)$ that can be
-obtained by integrating $G(x)/a$ twice and taking the constants of
-integration to be zero, as in Example~\ref{example:5.4.6}.
+In all three cases, you can just substitute the appropriate form for $y_{p}$ and its derivatives directly into
+\[
+  ay_{p}''+by_{p}'+cy_{p}=e^{\alpha x}G(x),
+\]
+and solve for the coefficients of the polynomial $Q$. However, if you try this you will see that the computations are more tedious than those that you encounter by making the substitution $y=ue^{\alpha x}$ and finding a particular solution of the resulting equation for $u$. (See Exercises~\ref{exer:5.4.34}-\ref{exer:5.4.36}.) In Case~\part{a} the equation for $u$ will be of the form
+\[
+  au''+p'(\alpha)u'+p(\alpha)u=G(x),
+\]
+with a particular solution of the form $u_{p}=Q(x)$, a polynomial of the same degree as $G$, whose coefficients can be found by the method used in Example~\ref{example:5.4.4}. In Case~\part{b} the equation for $u$ will be of the form
+\[
+  au''+p'(\alpha)u'=G(x)
+\]
+(no $u$ term on the left), with a particular solution of the form $u_{p}=xQ(x)$, where $Q$ is a polynomial of the same degree as $G$ whose coefficients can be found by the method used in Example~\ref{example:5.4.5}. In Case~\part{c} the equation for $u$ will be of the form
+\[
+  au''=G(x)
+\]
+with a particular solution of the form $u_{p}=x^{2}Q(x)$ that can be obtained by integrating $G(x)/a$ twice and taking the constants of integration to be zero, as in Example~\ref{example:5.4.6}.
 
 \boxit{Using the Principle of Superposition}
 
 \noindent
-The next example shows how to combine the method of undetermined
-coefficients and Theorem~\ref{thmtype:5.3.3}, the principle of
-superposition.
+The next example shows how to combine the method of undetermined coefficients and Theorem~\ref{thmtype:5.3.3}, the principle of superposition.
 
-\begin{example}\label{example:5.4.7} \rm
-Find a particular solution of
-\begin{equation} \label{eq:5.4.17}
-y''-7y'+12y=4e^{2x}+5e^{4x}.
-\end{equation}
+\begin{example}
+  \label{example:5.4.7} \rm Find a particular solution of
+  \begin{equation}
+    \label{eq:5.4.17}y''-7y'+12y=4e^{2x}+5e^{4x}.
+  \end{equation}
 \end{example}
 
-\solution
-In Example~\ref{example:5.4.1} we found that $y_{p_{1}}=2e^{2x}$
-is a particular solution of
-$$
-y''-7y'+12y=4e^{2x},
-$$
-and in Example~\ref{example:5.4.2} we found that $y_{p_{2}}=5xe^{4x}$
-is a particular solution of
-$$
-y''-7y'+12y=5e^{4x}.
-$$
-Therefore the principle of superposition implies that
-$y_{p}=2e^{2x}+5xe^{4x}$ is a particular solution of (\ref{eq:5.4.17}).
+\solution In Example~\ref{example:5.4.1} we found that $y_{p_{1}}=2e^{2x}$ is a particular solution of
+\[
+  y''-7y'+12y=4e^{2x},
+\]
+and in Example~\ref{example:5.4.2} we found that $y_{p_{2}}=5xe^{4x}$ is a particular solution of
+\[
+  y''-7y'+12y=5e^{4x}.
+\]
+Therefore the principle of superposition implies that $y_{p}=2e^{2x}+5xe^{4x}$ is a particular solution of (\ref{eq:5.4.17}).
 
-\exercises
-In Exercises \ref{exer:5.4.1}--\ref{exer:5.4.14} find a particular
-solution.
+\exercises In Exercises \ref{exer:5.4.1}--\ref{exer:5.4.14} find a particular solution.
 
 \begin{exerciselist}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.1} $y''-3y'+2y=e^{3x}(1+x)$ & \vspace*{10pt}
+    \item\label{exer:5.4.2} $y''-6y'+5y=e^{-3x}(35-8x)$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.1} $y''-3y'+2y=e^{3x}(1+x)$
-&\vspace*{10pt}  \item\label{exer:5.4.2} $y''-6y'+5y=e^{-3x}(35-8x)$
-\end{tabular}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.3} $y''-2y'-3y=e^{x}(-8+3x)$ &
+    \item\label{exer:5.4.4} $y''+2y'+y=e^{2x}(-7-15x+9x^{2})$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.3} $y''-2y'-3y=e^{x}(-8+3x)$
-&  \item\label{exer:5.4.4} $y''+2y'+y=e^{2x}(-7-15x+9x^{2})$
-\end{tabular}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.5} $y''+4y=e^{-x}(7-4x+5x^{2})$ &
+    \item\label{exer:5.4.6} $y''-y'-2y=e^{x}(9+2x-4x^{2})$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.5} $y''+4y=e^{-x}(7-4x+5x^{2})$
-&  \item\label{exer:5.4.6} $y''-y'-2y=e^{x}(9+2x-4x^{2})$
-\end{tabular}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.7} $y''-4y'-5y=-6xe^{-x}$ &
+    \item\label{exer:5.4.8} $y''-3y'+2y=e^{x}(3-4x)$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.7} $y''-4y'-5y=-6xe^{-x}$
-&  \item\label{exer:5.4.8} $y''-3y'+2y=e^{x}(3-4x)$
-\end{tabular}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.9} $y''+y'-12y=e^{3x}(-6+7x)$ &
+    \item\label{exer:5.4.10} $2y''-3y'-2y=e^{2x}(-6+10x)$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.9} $y''+y'-12y=e^{3x}(-6+7x)$
-&  \item\label{exer:5.4.10} $2y''-3y'-2y=e^{2x}(-6+10x)$
-\end{tabular}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.11} $y''+2y'+y=e^{-x}(2+3x)$ &
+    \item\label{exer:5.4.12} $y''-2y'+y=e^{x}(1-6x)$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.11} $y''+2y'+y=e^{-x}(2+3x)$ &
-\item\label{exer:5.4.12} $y''-2y'+y=e^{x}(1-6x)$
-\end{tabular}
+  \item\label{exer:5.4.13} $y''-4y'+4y=e^{2x}(1-3x+6x^{2})$
 
-\item\label{exer:5.4.13} $y''-4y'+4y=e^{2x}(1-3x+6x^{2})$
+  \item\label{exer:5.4.14} $9y''+6y'+y=e^{-x/3}(2-4x+4x^{2})$
 
-\item\label{exer:5.4.14} $9y''+6y'+y=e^{-x/3}(2-4x+4x^{2})$
+  \exercisetext{In Exercises \ref{exer:5.4.15}--\ref{exer:5.4.19} find the general solution.}
 
-\exercisetext{In Exercises \ref{exer:5.4.15}--\ref{exer:5.4.19} find the general
-solution.}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.15} $y''-3y'+2y=e^{3x}(1+x)$ & \vspace*{10pt}
+    \item\label{exer:5.4.16} $y''-6y'+8y=e^{x}(11-6x)$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.15} $y''-3y'+2y=e^{3x}(1+x)$ &
-\vspace*{10pt}\item\label{exer:5.4.16} $y''-6y'+8y=e^{x}(11-6x)$
-\end{tabular}
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \item\label{exer:5.4.17} $y''+6y'+9y=e^{2x}(3-5x)$ &
+    \item\label{exer:5.4.18} $y''+2y'-3y=-16xe^{x}$
+  \end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.17} $ y''+6y'+9y=e^{2x}(3-5x)$ &
-\item\label{exer:5.4.18} $y''+2y'-3y=-16xe^{x}$
-\end{tabular}
+  \item\label{exer:5.4.19} $y''-2y'+y=e^{x}(2-12x)$
 
-\item\label{exer:5.4.19} $y''-2y'+y=e^{x}(2-12x)$
+  \newpage
+  \exercisetext{In Exercises \ref{exer:5.4.20}--\ref{exer:5.4.23} solve the initial value problem and plot the solution.}
 
-\newpage
-\exercisetext{In Exercises \ref{exer:5.4.20}--\ref{exer:5.4.23} solve the
-initial value problem and plot the solution.}
+  \item\label{exer:5.4.20} \CGex $y''-4y'-5y=9e^{2x}(1+x),\quad y(0)=0,\quad y'(0)=-10$
 
-\item\label{exer:5.4.20} \CGex $y''-4y'-5y=9e^{2x}(1+x),\quad  y(0)=0,\quad y'(0)=-10$
-\item\label{exer:5.4.21} \CGex $y''+3y'-4y=e^{2x}(7+6x),\quad  y(0)=2,\quad y'(0)=8$
-\item\label{exer:5.4.22} \CGex $y''+4y'+3y=-e^{-x}(2+8x),\quad  y(0)=1,\quad y'(0)=2$
-\item\label{exer:5.4.23} \CGex $y''-3y'-10y=7e^{-2x},\quad  y(0)=1,\quad y'(0)=-17$
+  \item\label{exer:5.4.21} \CGex $y''+3y'-4y=e^{2x}(7+6x),\quad y(0)=2,\quad y'(0)=8$
 
-\exercisetext{In Exercises~\ref{exer:5.4.24}--\ref{exer:5.4.29} use
-the principle of superposition to find a particular solution.}
+  \item\label{exer:5.4.22} \CGex $y''+4y'+3y=-e^{-x}(2+8x),\quad y(0)=1,\quad y'(0)=2$
 
-\item\label{exer:5.4.24} $y''+y'+y=xe^{x}+e^{-x}(1+2x)$
-\item\label{exer:5.4.25} $y''-7y'+12y=-e^{x}(17-42x)-e^{3x}$
-\item\label{exer:5.4.26} $y''-8y'+16y=6xe^{4x}+2+16x+16x^{2}$
-\item\label{exer:5.4.27} $y''-3y'+2y=-e^{2x}(3+4x)-e^{x}$
-\item\label{exer:5.4.28} $y''-2y'+2y=e^{x}(1+x)+e^{-x}(2-8x+5x^{2})$
-\item\label{exer:5.4.29}
-$y''+y=e^{-x}(2-4x+2x^{2})+e^{3x}(8-12x-10x^{2})$
+  \item\label{exer:5.4.23} \CGex $y''-3y'-10y=7e^{-2x},\quad y(0)=1,\quad y'(0)=-17$
 
-\item\label{exer:5.4.30}
-\begin{alist}
- \item % (a)
-Prove that  $y$ is a solution of the constant coefficient equation
-$$
-ay''+by'+cy=e^{\alpha x}G(x)
-\eqno{\rm(A)}
-$$
-if and only if $y=ue^{\alpha x}$, where $u$ satisfies
-$$
-au''+p'(\alpha)u'+p(\alpha)u=G(x)
-\eqno{\rm(B)}
-$$
-and   $p(r)=ar^{2}+br+c$ is the characteristic polynomial of
-the complementary equation
-$$
-ay''+by'+cy=0.
-$$
+  \exercisetext{In Exercises~\ref{exer:5.4.24}--\ref{exer:5.4.29} use the principle of superposition to find a particular solution.}
 
-For the rest of this exercise, let $G$ be
- a polynomial. Give the requested proofs for the case where
-$$
-G(x)=g_{0}+g_{1}x+g_{2}x^{2}+g_{3}x^{3}.
-$$
+  \item\label{exer:5.4.24} $y''+y'+y=xe^{x}+e^{-x}(1+2x)$
 
-\item % (b)
-Prove that if $e^{\alpha x}$ isn't  a solution of the complementary
-equation then (B) has a particular solution of the
-form $u_{p}=A(x)$, where $A$ is a polynomial of the same degree as $G$,
-as in Example~\ref{example:5.4.4}. Conclude that (A) has
-a particular solution of the form $y_{p}=e^{\alpha x}A(x)$.
+  \item\label{exer:5.4.25} $y''-7y'+12y=-e^{x}(17-42x)-e^{3x}$
 
-\item % (c)
-Show that if $e^{\alpha x}$ is a solution of the complementary
-equation and $xe^{\alpha x}$ isn't , then (B) has a
-particular solution of the form $u_{p}=xA(x)$, where $A$ is a polynomial
-of the same degree as $G$, as in Example~\ref{example:5.4.5}. Conclude
-that (A) has a particular solution of the form
-$y_{p}=xe^{\alpha x}A(x)$.
+  \item\label{exer:5.4.26} $y''-8y'+16y=6xe^{4x}+2+16x+16x^{2}$
 
-\item % (d)
-Show that if $e^{\alpha x}$ and $xe^{\alpha x}$ are both solutions of
-the complementary equation then (B) has a
-particular solution of the form $u_{p}=x^{2}A(x)$, where $A$ is a
-polynomial of the same degree as $G$, and $x^{2}A(x)$ can be obtained by
-integrating $G/a$ twice, taking the constants of integration to be
-zero, as in Example~\ref{example:5.4.6}. Conclude that
-(A) has a particular solution of the form
-$y_{p}=x^{2}e^{\alpha x}A(x)$.
-\end{alist}
+  \item\label{exer:5.4.27} $y''-3y'+2y=-e^{2x}(3+4x)-e^{x}$
 
-\exercisetext{Exercises~\ref{exer:5.4.31}--\ref{exer:5.4.36}
-treat the equations considered in
-Examples~\ref{example:5.4.1}--\ref{example:5.4.6}. Substitute the suggested
-form of $y_{p}$ into the equation and equate the resulting coefficients
-of like functions on the two sides of the resulting equation to derive
-a set of simultaneous equations for the coefficients in $y_{p}$. Then
-solve for the coefficients to obtain $y_{p}$. Compare the work you've
-done with the work required to obtain the same results in
-Examples~\ref{example:5.4.1}--\ref{example:5.4.6}.}
+  \item\label{exer:5.4.28} $y''-2y'+2y=e^{x}(1+x)+e^{-x}(2-8x+5x^{2})$
 
-\item\label{exer:5.4.31}
-Compare with Example~\ref{example:5.4.1}:
-$$
-y''-7y'+12y=4e^{2x};\quad y_{p}=Ae^{2x}
-$$
+  \item\label{exer:5.4.29} $y''+y=e^{-x}(2-4x+2x^{2})+e^{3x}(8-12x-10x^{2})$
 
-\item\label{exer:5.4.32}
-Compare with Example~\ref{example:5.4.2}:
-$$
-y''-7y'+12y=5e^{4x};\quad y_{p}=Axe^{4x}
-$$
+  \item\label{exer:5.4.30}
+  \begin{alist}
+    \item % (a)
+    Prove that $y$ is a solution of the constant coefficient equation
+    \[
+      ay''+by'+cy=e^{\alpha x}G(x) \eqno{\rm(A)}
+    \]
+    if and only if $y=ue^{\alpha x}$, where $u$ satisfies
+    \[
+      au''+p'(\alpha)u'+p(\alpha)u=G(x) \eqno{\rm(B)}
+    \]
+    and $p(r)=ar^{2}+br+c$ is the characteristic polynomial of the complementary equation
+    \[
+      ay''+by'+cy=0.
+    \]
 
-\item\label{exer:5.4.33}
-Compare with Example~\ref{example:5.4.3}.
-$$
-y''-8y'+16y=2e^{4x};\quad y_{p}=Ax^{2}e^{4x}
-$$
+    For the rest of this exercise, let $G$ be a polynomial. Give the requested proofs for the case where
+    \[
+      G(x)=g_{0}+g_{1}x+g_{2}x^{2}+g_{3}x^{3}.
+    \]
 
-\item\label{exer:5.4.34}
-Compare with Example~\ref{example:5.4.4}:
-$$
-y''-3y'+2y=e^{3x}(-1+2x+x^{2}),\quad y_{p}=e^{3x}(A+Bx+Cx^{2})
-$$
+    \item % (b)
+    Prove that if $e^{\alpha x}$ isn't a solution of the complementary equation then (B) has a particular solution of the form $u_{p}=A(x)$, where $A$ is a polynomial of the same degree as $G$, as in Example~\ref{example:5.4.4}. Conclude that (A) has a particular solution of the form $y_{p}=e^{\alpha x}A(x)$.
 
-\item\label{exer:5.4.35}
-Compare with Example~\ref{example:5.4.5}:
-$$
-y''-4y'+3y=e^{3x}(6+8x+12x^{2}),\quad y_{p}=e^{3x}(Ax+Bx^{2}+Cx^{3})
-$$
+    \item % (c)
+    Show that if $e^{\alpha x}$ is a solution of the complementary equation and $xe^{\alpha x}$ isn't , then (B) has a particular solution of the form $u_{p}=xA(x)$, where $A$ is a polynomial of the same degree as $G$, as in Example~\ref{example:5.4.5}. Conclude that (A) has a particular solution of the form $y_{p}=xe^{\alpha x}A(x)$.
 
-\item\label{exer:5.4.36}
-Compare with Example~\ref{example:5.4.6}:
-$$
-4y''+4y'+y=e^{-x/2}(-8+48x+144x^{2}),\quad y_{p}=e^{-x/2}(Ax^{2}+Bx^{3}+Cx^{4})
-$$
+    \item % (d)
+    Show that if $e^{\alpha x}$ and $xe^{\alpha x}$ are both solutions of the complementary equation then (B) has a particular solution of the form $u_{p}=x^{2}A(x)$, where $A$ is a polynomial of the same degree as $G$, and $x^{2}A(x)$ can be obtained by integrating $G/a$ twice, taking the constants of integration to be zero, as in Example~\ref{example:5.4.6}. Conclude that (A) has a particular solution of the form $y_{p}=x^{2}e^{\alpha x}A(x)$.
+  \end{alist}
 
-\item\label{exer:5.4.37}
-Write $y=ue^{\alpha x}$ to find the general
-solution.
+  \exercisetext{Exercises~\ref{exer:5.4.31}--\ref{exer:5.4.36} treat the equations considered in Examples~\ref{example:5.4.1}--\ref{example:5.4.6}. Substitute the suggested form of $y_{p}$ into the equation and equate the resulting coefficients of like functions on the two sides of the resulting equation to derive a set of simultaneous equations for the coefficients in $y_{p}$. Then solve for the coefficients to obtain $y_{p}$. Compare the work you've done with the work required to obtain the same results in Examples~\ref{example:5.4.1}--\ref{example:5.4.6}.}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $y''+2y'+y=\dst\frac{e^{-x}}{\sqrt{x}}$ &
-\part{b} $y''+6y'+9y=e^{-3x}\ln x$\\
-\part{c} $y''-4y'+4y=\dst\frac{e^{2x}}{1+x}$ &
-\part{d} $4y''+4y'+y=\dst{4e^{-x/2}\left(\frac{1}{x}+x\right)}$
-\end{tabular}
+  \item\label{exer:5.4.31} Compare with Example~\ref{example:5.4.1}:
+  \[
+    y''-7y'+12y=4e^{2x};\quad y_{p}=Ae^{2x}
+  \]
 
-\item\label{exer:5.4.38}
-Suppose $\alpha\ne0$ and $k$ is a positive integer. In most
-calculus books integrals like $\int x^{k}e^{\alpha x}\,dx$ are
-evaluated by integrating by parts $k$ times. This exercise presents
-another method. Let
-$$
-y=\int e^{\alpha x}P(x)\,dx
-$$
-with
-$$
-P(x)=p_{0}+p_{1}x+\cdots+p_{k}x^{k},\mbox{\quad (where $p_k\ne0$)}.
-$$
-\begin{alist}
-\item %  (a)
-Show that $y=e^{\alpha x}u$, where
-$$
-u'+\alpha u=P(x).
-\eqno{\rm(A)}
-$$
-\item % (b)
-Show that  (A) has a particular solution of the form
-$$
-u_{p}=A_{0}+A_{1}x+\cdots+A_{k}x^{k},
-$$
-where $A_{k}$, $A_{k-1}$, \dots, $A_{0}$ can be computed successively
-by equating coefficients of $x^{k},x^{k-1},\dots,1$ on both sides of the
-equation
-$$
-u_{p}'+\alpha u_{p}=P(x).
-$$
-\item % (c)
-Conclude that
-$$
-\int e^{\alpha x}P(x)\,dx=\left(A_{0}+A_{1}x+\cdots+A_{k}x^{k}\right)e^{\alpha x}
-+c,
-$$
-where $c$ is a constant of integration.
-\end{alist}
+  \item\label{exer:5.4.32} Compare with Example~\ref{example:5.4.2}:
+  \[
+    y''-7y'+12y=5e^{4x};\quad y_{p}=Axe^{4x}
+  \]
 
-\item\label{exer:5.4.39}
-Use the method of Exercise~\ref{exer:5.4.38} to evaluate the integral.
+  \item\label{exer:5.4.33} Compare with Example~\ref{example:5.4.3}.
+  \[
+    y''-8y'+16y=2e^{4x};\quad y_{p}=Ax^{2}e^{4x}
+  \]
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \part{a} $  \int e^{x}(4+x)\,dx$
-&  \part{b} $\int e^{-x}(-1+x^{2})\,dx$\\[10pt]
- \part{c} $\int x^{3}e^{-2x}\,dx$
-&  \part{d} $\int e^{x}(1+x)^{2}\,dx$\\[10pt]
- \part{e} $\int e^{3x}(-14+30x+27x^{2})\,dx$
-&  \part{f} $\int e^{-x}(1+6x^{2}-14x^{3}+3x^{4})\,dx$
-\end{tabular}
+  \item\label{exer:5.4.34} Compare with Example~\ref{example:5.4.4}:
+  \[
+    y''-3y'+2y=e^{3x}(-1+2x+x^{2}),\quad y_{p}=e^{3x}(A+Bx+Cx^{2})
+  \]
 
-\item\label{exer:5.4.40}
-Use the method suggested in Exercise~\ref{exer:5.4.38} to
-evaluate $\int x^{k}e^{\alpha x}\,dx$, where $k$ is an arbitrary
-positive integer and $\alpha\ne0$.
+  \item\label{exer:5.4.35} Compare with Example~\ref{example:5.4.5}:
+  \[
+    y''-4y'+3y=e^{3x}(6+8x+12x^{2}),\quad y_{p}=e^{3x}(Ax+Bx^{2}+Cx^{3})
+  \]
+
+  \item\label{exer:5.4.36} Compare with Example~\ref{example:5.4.6}:
+  \[
+    4y''+4y'+y=e^{-x/2}(-8+48x+144x^{2}),\quad y_{p}=e^{-x/2}(Ax^{2}+Bx^{3}+Cx^{4})
+  \]
+
+  \item\label{exer:5.4.37} Write $y=ue^{\alpha x}$ to find the general solution.
+
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \part{a} $y''+2y'+y=\dst\frac{e^{-x}}{\sqrt{x}}$ & \part{b} $y''+6y'+9y=e^{-3x}\ln x$                              \\
+    \part{c} $y''-4y'+4y=\dst\frac{e^{2x}}{1+x}$     & \part{d} $4y''+4y'+y=\dst{4e^{-x/2}\left(\frac{1}{x}+x\right)}$
+  \end{tabular}
+
+  \item\label{exer:5.4.38} Suppose $\alpha\ne0$ and $k$ is a positive integer. In most calculus books integrals like $\int x^{k}e^{\alpha x}\,dx$ are evaluated by integrating by parts $k$ times. This exercise presents another method. Let
+  \[
+    y=\int e^{\alpha x}P(x)\,dx
+  \]
+  with
+  \[
+    P(x)=p_{0}+p_{1}x+\cdots+p_{k}x^{k},\mbox{\quad (where $p_{k}\ne0$)}.
+  \]
+  \begin{alist}
+    \item % (a)
+    Show that $y=e^{\alpha x}u$, where
+    \[
+      u'+\alpha u=P(x). \eqno{\rm(A)}
+    \]
+
+    \item % (b)
+    Show that (A) has a particular solution of the form
+    \[
+      u_{p}=A_{0}+A_{1}x+\cdots+A_{k}x^{k},
+    \]
+    where $A_{k}$, $A_{k-1}$, \dots, $A_{0}$ can be computed successively by equating coefficients of $x^{k},x^{k-1},\dots,1$ on both sides of the equation
+    \[
+      u_{p}'+\alpha u_{p}=P(x).
+    \]
+
+    \item % (c)
+    Conclude that
+    \[
+      \int e^{\alpha x}P(x)\,dx=\left(A_{0}+A_{1}x+\cdots+A_{k}x^{k}\right)e^{\alpha x}+c,
+    \]
+    where $c$ is a constant of integration.
+  \end{alist}
+
+  \item\label{exer:5.4.39} Use the method of Exercise~\ref{exer:5.4.38} to evaluate the integral.
+
+  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+    \part{a} $\int e^{x}(4+x)\,dx$              & \part{b} $\int e^{-x}(-1+x^{2})\,dx$                \\[10pt]
+    \part{c} $\int x^{3}e^{-2x}\,dx$            & \part{d} $\int e^{x}(1+x)^{2}\,dx$                  \\[10pt]
+    \part{e} $\int e^{3x}(-14+30x+27x^{2})\,dx$ & \part{f} $\int e^{-x}(1+6x^{2}-14x^{3}+3x^{4})\,dx$
+  \end{tabular}
+
+  \item\label{exer:5.4.40} Use the method suggested in Exercise~\ref{exer:5.4.38} to evaluate $\int x^{k}e^{\alpha x}\,dx$, where $k$ is an arbitrary positive integer and $\alpha\ne0$.
 \end{exerciselist}

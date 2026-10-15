@@ -2,609 +2,516 @@
 
 \noindent
 We'll now consider initial value problems of the form
-\begin{equation}\label{eq:8.5.1}
- ay''+by'+cy=f(t),\quad  y(0)=k_{0},\quad y'(0)=k_{1},
+\begin{equation}
+  \label{eq:8.5.1}ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1},
 \end{equation}
-where $a$, $b$, and $c$ are constants ($a\ne0$) and $f$ is piecewise
-continuous on $[0,\infty)$. Problems of this kind occur in situations
-where the input to a physical system undergoes instantaneous changes,
-as when a switch is turned on or off or the forces acting on the
-system change abruptly.
+where $a$, $b$, and $c$ are constants ($a\ne0$) and $f$ is piecewise continuous on $[0,\infty)$. Problems of this kind occur in situations where the input to a physical system undergoes instantaneous changes, as when a switch is turned on or off or the forces acting on the system change abruptly.
 
-It can be shown (Exercises~\ref{exer:8.5.23} and \ref{exer:8.5.24}) that the
-differential equation in \eqref{eq:8.5.1} has no solutions on
-an open interval that contains a jump discontinuity of $f$. Therefore we
-must define what we mean by a solution of \eqref{eq:8.5.1} on $[0,\infty)$
-in the case where $f$ has jump discontinuities. The next theorem
-motivates our definition. We omit the proof.
+It can be shown (Exercises~\ref{exer:8.5.23} and \ref{exer:8.5.24}) that the differential equation in \eqref{eq:8.5.1} has no solutions on an open interval that contains a jump discontinuity of $f$. Therefore we must define what we mean by a solution of \eqref{eq:8.5.1} on $[0,\infty)$ in the case where $f$ has jump discontinuities. The next theorem motivates our definition. We omit the proof.
 
-\begin{theorem}\color{blue}\label{thmtype:8.5.1}
-Suppose $a$, $b$, and $c$ are constants $(a\ne0)$, and $f$ is
-piecewise  continuous on $[0,\infty)$. with jump discontinuities
-at $t_{1}$, \dots, $t_{n}$, where
-$$
-0<t_{1}<\cdots<t_{n}.
-$$
- Let $k_{0}$ and $k_{1}$ be arbitrary real numbers. Then there
-is a unique function $y$ defined on $[0,\infty)$ with these
-properties:
-\begin{alist}
-\item % (a)
- $y(0)=k_{0}$ and  $y'(0)=k_{1}$.
-\item % (b)
- $y$ and $y'$  are continuous on $[0,\infty)$.
-\item % (c)
-$y''$ is defined
-on every open subinterval of $[0,\infty)$ that does not contain any of the
-points $t_{1}$, \dots, $t_{n}$, and
-$$
-ay''+by'+cy=f(t)
-$$
-on every such subinterval.
-\item % (d)
-$y''$ has limits from the right and left at $t_{1}$, \dots, $t_{n}$.
-\end{alist}
+\begin{theorem}
+  \color{blue}
+  \label{thmtype:8.5.1} Suppose $a$, $b$, and $c$ are constants $(a\ne0)$, and $f$ is piecewise continuous on $[0,\infty)$. with jump discontinuities at $t_{1}$, \dots, $t_{n}$, where
+  \[
+    0<t_{1}<\cdots<t_{n}.
+  \]
+  Let $k_{0}$ and $k_{1}$ be arbitrary real numbers. Then there is a unique function $y$ defined on $[0,\infty)$ with these properties:
+  \begin{alist}
+    \item % (a)
+    $y(0)=k_{0}$ and $y'(0)=k_{1}$.
+
+    \item % (b)
+    $y$ and $y'$ are continuous on $[0,\infty)$.
+
+    \item % (c)
+    $y''$ is defined on every open subinterval of $[0,\infty)$ that does not contain any of the points $t_{1}$, \dots, $t_{n}$, and
+    \[
+      ay''+by'+cy=f(t)
+    \]
+    on every such subinterval.
+
+    \item % (d)
+    $y''$ has limits from the right and left at $t_{1}$, \dots, $t_{n}$.
+  \end{alist}
 \end{theorem}
 
-We define the function $y$  of Theorem~\ref{thmtype:8.5.1}  to be the
-solution of the initial value problem \eqref{eq:8.5.1}.
+We define the function $y$ of Theorem~\ref{thmtype:8.5.1} to be the solution of the initial value problem \eqref{eq:8.5.1}.
 
 We begin by considering initial value problems of the form
-\begin{equation}\label{eq:8.5.2}
-ay''+by'+cy=\left\{\begin{array}{cl}f_{0}(t),&0\le
-t<t_{1},\\[1\jot]f_{1}(t),&t\ge t_{1},
-\end{array}\right.\quad y(0)=k_{0},\quad y'(0)=k_{1},
+\begin{equation}
+  \label{eq:8.5.2}ay''+by'+cy=\left\{
+  \begin{array}{cl}
+    f_{0}(t), & 0\le t<t_{1}, \\[1\jot]
+    f_{1}(t), & t\ge t_{1},
+  \end{array}\right.\quad y(0)=k_{0},\quad y'(0)=k_{1},
 \end{equation}
 where the forcing function has a single jump discontinuity at $t_{1}$.
 
-We can solve \eqref{eq:8.5.2} by  the these steps:
+We can solve \eqref{eq:8.5.2} by the these steps:
 \begin{description}
-\item{\bf Step 1.} Find the solution $y_{0}$ of  the initial value problem
-$$
-ay''+by'+cy=f_{0}(t),\quad  y(0)=k_{0},\quad y'(0)=k_{1}.
-$$
-\item{\bf Step 2.} Compute $c_{0}=y_{0}(t_{1})$ and $c_{1}=y_{0}'(t_{1})$.
-\item{\bf Step 3.} Find the solution $y_{1}$ of  the initial value problem
-$$
-ay''+by'+cy=f_{1}(t),\quad  y(t_{1})=c_{0},\quad y'(t_{1})=c_{1}.
-$$
-\item{\bf Step 4.} Obtain the solution $y$ of  \eqref{eq:8.5.2} as
-$$
-y=\left\{\begin{array}{cl}y_{0}(t),&0\le t<t_{1}\\[1\jot]y_{1}(t),&t\ge t_{1}.
-\end{array}\right.
-$$
+  \item {\bf Step 1.} Find the solution $y_{0}$ of the initial value problem
+    \[
+      ay''+by'+cy=f_{0}(t),\quad y(0)=k_{0},\quad y'(0)=k_{1}.
+    \]
+
+  \item {\bf Step 2.} Compute $c_{0}=y_{0}(t_{1})$ and $c_{1}=y_{0}'(t_{1})$.
+
+  \item {\bf Step 3.} Find the solution $y_{1}$ of the initial value problem
+    \[
+      ay''+by'+cy=f_{1}(t),\quad y(t_{1})=c_{0},\quad y'(t_{1})=c_{1}.
+    \]
+
+  \item {\bf Step 4.} Obtain the solution $y$ of \eqref{eq:8.5.2} as
+    \[
+      y=\left\{
+      \begin{array}{cl}
+        y_{0}(t), & 0\le t<t_{1} \\[1\jot]
+        y_{1}(t), & t\ge t_{1}.
+      \end{array}\right.
+    \]
 \end{description}
 
-It is shown  in  Exercise~\ref{exer:8.5.23} that $y'$  exists and is
-continuous at $t_{1}$. The next example illustrates this procedure.
+It is shown in Exercise~\ref{exer:8.5.23} that $y'$ exists and is continuous at $t_{1}$. The next example illustrates this procedure.
 
-\begin{example}\label{example:8.5.1}\rm
-Solve the initial value problem
-\begin{equation}\label{eq:8.5.3}
-y''+y=f(t),
-\quad   y(0)=2,\;y'(0)=-1,
-\end{equation}
-where
-$$
-f(t)=\left\{\begin{array}{rl}
-1,&0\le t<\displaystyle\frac{\pi}{2},\\[2\jot]
--1,&t\ge\displaystyle{\frac{\pi}{2}}.
-\end{array}\right.
-$$
+\begin{example}
+  \label{example:8.5.1}\rm Solve the initial value problem
+  \begin{equation}
+    \label{eq:8.5.3}y''+y=f(t), \quad y(0)=2,\;y'(0)=-1,
+  \end{equation}
+  where
+  \[
+    f(t)=\left\{
+    \begin{array}{rl}
+      1,  & 0\le t<\displaystyle\frac{\pi}{2}, \\[2\jot]
+      -1, & t\ge\displaystyle{\frac{\pi}{2}}.
+    \end{array}\right.
+  \]
 \end{example}
 
-\solution
-The  initial value problem in Step 1 is
-$$
-y''+y=1,\quad   y(0)=2,\quad y'(0)=-1.
-$$
+\solution The initial value problem in Step 1 is
+\[
+  y''+y=1,\quad y(0)=2,\quad y'(0)=-1.
+\]
 We leave it to you to verify that its solution is
-$$
-y_{0}=1+\cos t-\sin t.
-$$
-Doing Step 2 yields
- $y_{0}(\pi/2)=0$ and $y_{0}'(\pi/2)=-1$,
-so the second initial value problem is
-$$
-y''+y=-1,\quad  y\left(\frac{\pi}{2}\right)=0,\;y'\left(\frac{\pi}{2}\right)=-1.
-$$
-We leave it to you to verify that the solution of this problem
-is
-$$
-y_{1}=-1+\cos t+\sin t.
-$$
+\[
+  y_{0}=1+\cos t-\sin t.
+\]
+Doing Step 2 yields $y_{0}(\pi/2)=0$ and $y_{0}'(\pi/2)=-1$, so the second initial value problem is
+\[
+  y''+y=-1,\quad y\left(\frac{\pi}{2}\right)=0,\;y'\left(\frac{\pi}{2}\right)=-1.
+\]
+We leave it to you to verify that the solution of this problem is
+\[
+  y_{1}=-1+\cos t+\sin t.
+\]
 Hence, the solution of \eqref{eq:8.5.3} is
-\begin{equation}\label{eq:8.5.4}
-y=\left\{\begin{array}{rl}
-1+\cos t-\sin t,&0\le t<\displaystyle{\frac{\pi}{2}},
-\\[2\jot]
--1+\cos t+\sin t,&t\ge\displaystyle{\frac{\pi}{2}}
-\end{array}\right.
+\begin{equation}
+  \label{eq:8.5.4}y=\left\{
+  \begin{array}{rl}
+    1+\cos t-\sin t,  & 0\le t<\displaystyle{\frac{\pi}{2}}, \\[2\jot]
+    -1+\cos t+\sin t, & t\ge\displaystyle{\frac{\pi}{2}}
+  \end{array}\right.
 \end{equation}
 (Figure:8.5.1).
 
-                    \begin{figure}[tbp]
-  \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig080501}
-  \caption{ Graph of \eqref{eq:8.5.4}}
+\begin{figure}[tbp]
+  \centering
+  \color{blue}
+  \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig080501}
+  \caption{Graph of \eqref{eq:8.5.4}}
   \label{figure:8.5.1}
 \end{figure}
 
-If $f_{0}$ and $f_{1}$ are defined on $[0,\infty)$, we can rewrite
-\eqref{eq:8.5.2} as
-$$
-ay''+by'+cy=f_{0}(t)+u(t-t_{1})\left(f_{1}(t)-f_{0}(t)\right),\quad  y(0)=k_{0},\quad y'(0)=k_{1},
-$$
-and apply the method of Laplace transforms. We'll now solve
-the problem considered in Example~\ref{example:8.5.1} by this method.
+If $f_{0}$ and $f_{1}$ are defined on $[0,\infty)$, we can rewrite \eqref{eq:8.5.2} as
+\[
+  ay''+by'+cy=f_{0}(t)+u(t-t_{1})\left(f_{1}(t)-f_{0}(t)\right),\quad y(0)=k_{0},\quad y'(0)=k_{1},
+\]
+and apply the method of Laplace transforms. We'll now solve the problem considered in Example~\ref{example:8.5.1} by this method.
 
-\begin{example}\label{example:8.5.2}\rm
-\space Use the Laplace transform to solve the initial value problem
-\begin{equation}\label{eq:8.5.5}
-y''+y=f(t),\quad   y(0)=2,\;y'(0)=-1,
-\end{equation}
-where
-$$
-f(t)=\left\{\begin{array}{cl}
-\phantom{-}1,&0\le t<\dst{\frac{\pi}{2}},\\
--1,&t\ge\dst{\frac{\pi}{2}}.
-\end{array}\right.
-$$
+\begin{example}
+  \label{example:8.5.2}\rm \space Use the Laplace transform to solve the initial value problem
+  \begin{equation}
+    \label{eq:8.5.5}y''+y=f(t),\quad y(0)=2,\;y'(0)=-1,
+  \end{equation}
+  where
+  \[
+    f(t)=\left\{
+    \begin{array}{cl}
+      \phantom{-}1, & 0\le t<\dst{\frac{\pi}{2}}, \\
+      -1,           & t\ge\dst{\frac{\pi}{2}}.
+    \end{array}\right.
+  \]
 \end{example}
 
 \solution Here
-$$
-f(t)=1-2u\left(t-\frac{\pi}{2}\right),
-$$
+\[
+  f(t)=1-2u\left(t-\frac{\pi}{2}\right),
+\]
 so Theorem~\ref{thmtype:8.4.1} (with $g(t)=1$) implies that
-$$
-{\cal L}(f)=\frac{1-2e^{-{\pi s/2}}}{s}.
-$$
-Therefore, transforming  \eqref{eq:8.5.5} yields
-$$
-(s^{2}+1)Y(s)=\frac{1-2e^{-{\pi s/2}}}{s}-1+2s,
-$$
- so
-\begin{equation}\label{eq:8.5.6}
-Y(s)=(1-2e^{-{\pi s/2}})G(s)+\frac{2s-1}{s^{2}+1},
+\[
+  {\cal L}(f)=\frac{1-2e^{-{\pi s/2}}}{s}.
+\]
+Therefore, transforming \eqref{eq:8.5.5} yields
+\[
+  (s^{2}+1)Y(s)=\frac{1-2e^{-{\pi s/2}}}{s}-1+2s,
+\]
+so
+\begin{equation}
+  \label{eq:8.5.6}Y(s)=(1-2e^{-{\pi s/2}})G(s)+\frac{2s-1}{s^{2}+1},
 \end{equation}
 with
-$$
-G(s)=\frac{1}{s(s^{2}+1)}.
-$$
-The  form for the partial fraction expansion of $G$ is
-\begin{equation}\label{eq:8.5.7}
-\frac{1}{s(s^{2}+1)}=\frac{A}{s}+\frac{Bs+C}{s^{2}+1}.
+\[
+  G(s)=\frac{1}{s(s^{2}+1)}.
+\]
+The form for the partial fraction expansion of $G$ is
+\begin{equation}
+  \label{eq:8.5.7}\frac{1}{s(s^{2}+1)}=\frac{A}{s}+\frac{Bs+C}{s^{2}+1}.
 \end{equation}
 Multiplying through by $s(s^{2}+1)$ yields
-$$
-A(s^{2}+1)+(Bs+C)s=1,
-$$
+\[
+  A(s^{2}+1)+(Bs+C)s=1,
+\]
 or
-$$
-(A+B)s^{2}+Cs+A=1.
-$$
-Equating coefficients of like powers of $s$ on the two sides of this
-equation shows that $A=1$, $B=-A=-1$ and $C=0$. Hence, from
-\eqref{eq:8.5.7},
-$$
-G(s)=\frac{1}{s}-\frac{s}{s^{2}+1}.
-$$
+\[
+  (A+B)s^{2}+Cs+A=1.
+\]
+Equating coefficients of like powers of $s$ on the two sides of this equation shows that $A=1$, $B=-A=-1$ and $C=0$. Hence, from \eqref{eq:8.5.7},
+\[
+  G(s)=\frac{1}{s}-\frac{s}{s^{2}+1}.
+\]
 Therefore
-$$
-g(t)=1-\cos t.
-$$
-From this,  \eqref{eq:8.5.6}, and
-Theorem~\ref{thmtype:8.4.2},
-$$
-y=1-\cos t-2u\left(t-\frac{\pi}{2}\right)\left(1-\cos\left(t-\frac{\pi}{2}\right)\right)+2\cos t-\sin t.
-$$
+\[
+  g(t)=1-\cos t.
+\]
+From this, \eqref{eq:8.5.6}, and Theorem~\ref{thmtype:8.4.2},
+\[
+  y=1-\cos t-2u\left(t-\frac{\pi}{2}\right)\left(1-\cos\left(t-\frac{\pi}{2}\right)\right)+2\cos t-\sin t.
+\]
 Simplifying this (recalling that $\cos(t-\pi/2)=\sin t$) yields
-$$
-y=1+\cos t-\sin t-2u\left(t-\frac{\pi}{2}\right)(1-\sin t),
-$$
+\[
+  y=1+\cos t-\sin t-2u\left(t-\frac{\pi}{2}\right)(1-\sin t),
+\]
 or
-$$
-y=\left\{\begin{array}{cl}
-\phantom{-}1+\cos t-\sin t,&0\le t<\dst{\frac{\pi}{2}},\\
--1+\cos t+\sin t,&t\ge\dst{\frac{\pi}{2}},
-\end{array}\right.
-$$
+\[
+  y=\left\{
+  \begin{array}{cl}
+    \phantom{-}1+\cos t-\sin t, & 0\le t<\dst{\frac{\pi}{2}}, \\
+    -1+\cos t+\sin t,           & t\ge\dst{\frac{\pi}{2}},
+  \end{array}\right.
+\]
 which is the result obtained in Example~\ref{example:8.5.1}.
 
 \medskip
 \color{blue}
-\remark{It isn't obvious that using the Laplace transform to solve
-\eqref{eq:8.5.2} as we did in Example~\ref{example:8.5.2} yields a function
-$y$ with the properties stated in Theorem~\ref{thmtype:8.5.1}; that is,
-such that $y$ and $y'$ are continuous on $[0,\infty)$ and $y''$ has
-limits from the right and left at $t_{1}$. However, this is
-true if  $f_{0}$ and $f_{1}$ are continuous and of exponential order on
-$[0,\infty)$. A proof  is sketched in
-Exercises~8.6.~\hspace*{-3pt}\ref{exer:8.6.11}--8.6.\hspace*{-3pt}\ref{exer:8.6.13}.}
+\remark{It isn't obvious that using the Laplace transform to solve \eqref{eq:8.5.2} as we did in Example~\ref{example:8.5.2} yields a function $y$ with the properties stated in Theorem~\ref{thmtype:8.5.1}; that is, such that $y$ and $y'$ are continuous on $[0,\infty)$ and $y''$ has limits from the right and left at $t_{1}$. However, this is true if $f_{0}$ and $f_{1}$ are continuous and of exponential order on $[0,\infty)$. A proof is sketched in Exercises~8.6.~\hspace*{-3pt}\ref{exer:8.6.11}--8.6.\hspace*{-3pt}\ref{exer:8.6.13}.}
 \color{black}
 
-\begin{example}\label{example:8.5.3}\rm
-\space Solve the initial value problem
-\begin{equation}\label{eq:8.5.8}
-y''-y=f(t),\quad   y(0)=-1,\;y'(0)=2,
-\end{equation}
-where
-$$
-f(t)=\left\{\begin{array}{cl}
-t,&0\le t<1,\\
-1,&t\ge1.
-\end{array}\right.
-$$
+\begin{example}
+  \label{example:8.5.3}\rm \space Solve the initial value problem
+  \begin{equation}
+    \label{eq:8.5.8}y''-y=f(t),\quad y(0)=-1,\;y'(0)=2,
+  \end{equation}
+  where
+  \[
+    f(t)=\left\{
+    \begin{array}{cl}
+      t, & 0\le t<1, \\
+      1, & t\ge1.
+    \end{array}\right.
+  \]
 \end{example}
 
-\solution  Here
-$$
-f(t)=t-u(t-1)(t-1),
-$$
+\solution Here
+\[
+  f(t)=t-u(t-1)(t-1),
+\]
 so
 \begin{eqnarray*}
-{\cal L}(f)&=&{\cal L}(t)-{\cal L}\left(u(t-1)(t-1)\right)\\[1\jot]
-&=&{\cal L}(t)-e^{-s}{\cal L}(t)\mbox{ (from
-Theorem~\ref{thmtype:8.4.1})}\\[1\jot]
-&=&\frac{1}{s^{2}}-\frac{e^{-s}}{s^{2}}.
+  {\cal L}(f) & = & {\cal L}(t)-{\cal L}\left(u(t-1)(t-1)\right)                            \\[1\jot]
+              & = & {\cal L}(t)-e^{-s}{\cal L}(t)\mbox{ (from Theorem~\ref{thmtype:8.4.1})} \\[1\jot]
+              & = & \frac{1}{s^{2}}-\frac{e^{-s}}{s^{2}}.
 \end{eqnarray*}
-Since transforming  \eqref{eq:8.5.8} yields
-$$
-(s^{2}-1)Y(s)={\cal L}(f)+2-s,
-$$
+Since transforming \eqref{eq:8.5.8} yields
+\[
+  (s^{2}-1)Y(s)={\cal L}(f)+2-s,
+\]
 we see that
-\begin{equation}\label{eq:8.5.9}
-Y(s)=(1-e^{-s})H(s)+\frac{2-s}{s^{2}-1},
+\begin{equation}
+  \label{eq:8.5.9}Y(s)=(1-e^{-s})H(s)+\frac{2-s}{s^{2}-1},
 \end{equation}
 where
-$$
-H(s)=\frac{1}{s^{2}(s^{2}-1)}=\frac{1}{s^{2}-1}-\frac{1}{s^{2}};
-$$
- therefore
-\begin{equation}\label{eq:8.5.10}
-h(t)=\sinh t-t.
+\[
+  H(s)=\frac{1}{s^{2}(s^{2}-1)}=\frac{1}{s^{2}-1}-\frac{1}{s^{2}};
+\]
+therefore
+\begin{equation}
+  \label{eq:8.5.10}h(t)=\sinh t-t.
 \end{equation}
 Since
-$$
-{\cal L}^{-1}\left(\frac{2-s}{s^{2}-1}\right)=2\sinh t-\cosh t,
-$$
-we conclude from  \eqref{eq:8.5.9},  \eqref{eq:8.5.10}, and
-Theorem~\ref{thmtype:8.4.1} that
-$$
-y=\sinh t-t-u(t-1)\left(\sinh(t-1)-t+1\right)+2\sinh t-
-\cosh t,
-$$
+\[
+  {\cal L}^{-1}\left(\frac{2-s}{s^{2}-1}\right)=2\sinh t-\cosh t,
+\]
+we conclude from \eqref{eq:8.5.9}, \eqref{eq:8.5.10}, and Theorem~\ref{thmtype:8.4.1} that
+\[
+  y=\sinh t-t-u(t-1)\left(\sinh(t-1)-t+1\right)+2\sinh t- \cosh t,
+\]
 or
-\begin{equation}\label{eq:8.5.11}
-y=3\sinh t-\cosh t-t-u(t-1)\left(\sinh(t-1)-t+1\right)
+\begin{equation}
+  \label{eq:8.5.11}y=3\sinh t-\cosh t-t-u(t-1)\left(\sinh(t-1)-t+1\right)
 \end{equation}
-We leave it to you to verify that $y$  and $y'$ are continuous and
-$y''$ has limits from the right and left at
-$t_{1}=1$.
+We leave it to you to verify that $y$ and $y'$ are continuous and $y''$ has limits from the right and left at $t_{1}=1$.
 
-\begin{example}\label{example:8.5.4}\rm
- Solve the initial value problem
-\begin{equation}\label{eq:8.5.12}
-y''+y=f(t),\quad   y(0)=0,\;y'(0)=0,
-\end{equation}
-where
-$$
-f(t)=\left\{\begin{array}{cl}
- 0,&0\le t<\dst{\frac{\pi}{4}},\\[2\jot]
-\cos2t,&\dst{\frac{\pi}{4}}\le t<\pi,\\[2\jot]
- 0,&t\ge\pi.
-\end{array}\right.
-$$
+\begin{example}
+  \label{example:8.5.4}\rm Solve the initial value problem
+  \begin{equation}
+    \label{eq:8.5.12}y''+y=f(t),\quad y(0)=0,\;y'(0)=0,
+  \end{equation}
+  where
+  \[
+    f(t)=\left\{
+    \begin{array}{cl}
+      0,      & 0\le t<\dst{\frac{\pi}{4}},   \\[2\jot]
+      \cos2t, & \dst{\frac{\pi}{4}}\le t<\pi, \\[2\jot]
+      0,      & t\ge\pi.
+    \end{array}\right.
+  \]
 \end{example}
 
-\solution  Here
-$$
-f(t)=u(t-\pi/4)\cos2t-u(t-\pi)\cos2t,
-$$
+\solution Here
+\[
+  f(t)=u(t-\pi/4)\cos2t-u(t-\pi)\cos2t,
+\]
 so
 \begin{eqnarray*}
-{\cal L}(f)&=&{\cal L}\left(u(t-\pi/4)\cos2t\right)-{\cal L}\left(
-u(t-\pi)\cos2t\right)\\[1\jot]
-&=&e^{-{\pi s/4}}{\cal L}\left(\cos2(t+\pi/4)\right)-e^{-\pi s}
-{\cal L}\left(\cos2(t+\pi)\right)\\[1\jot]
-&=&-e^{-{\pi s/4}}{\cal L}(\sin2t)-e^{-\pi s}
-{\cal L}(\cos2t)\\[1\jot]
-&=&-\frac{2e^{-{\pi s/4}}}{s^{2}+4}-\frac{se^{-\pi s}}{s^{2}+4}.
+  {\cal L}(f) & = & {\cal L}\left(u(t-\pi/4)\cos2t\right)-{\cal L}\left(u(t-\pi)\cos2t\right)                     \\[1\jot]
+              & = & e^{-{\pi s/4}}{\cal L}\left(\cos2(t+\pi/4)\right)-e^{-\pi s}{\cal L}\left(\cos2(t+\pi)\right) \\[1\jot]
+              & = & -e^{-{\pi s/4}}{\cal L}(\sin2t)-e^{-\pi s}{\cal L}(\cos2t)                                    \\[1\jot]
+              & = & -\frac{2e^{-{\pi s/4}}}{s^{2}+4}-\frac{se^{-\pi s}}{s^{2}+4}.
 \end{eqnarray*}
-Since transforming  \eqref{eq:8.5.12} yields
-$$
-(s^{2}+1)Y(s)={\cal L}(f),
-$$
+Since transforming \eqref{eq:8.5.12} yields
+\[
+  (s^{2}+1)Y(s)={\cal L}(f),
+\]
 we see that
-\begin{equation}\label{eq:8.5.13}
-Y(s)=e^{-{\pi s/4}}H_{1}(s)+e^{-\pi s}H_{2}(s),
+\begin{equation}
+  \label{eq:8.5.13}Y(s)=e^{-{\pi s/4}}H_{1}(s)+e^{-\pi s}H_{2}(s),
 \end{equation}
 where
-\begin{equation}\label{eq:8.5.14}
-H_{1}(s)=-\frac{2}{(s^{2}+1)(s^{2}+4)}\quad\mbox{ and }\quad H_{2}(s)=-\frac{s}{(s^{2}+1)(s^{2}+4)}.
+\begin{equation}
+  \label{eq:8.5.14}H_{1}(s)=-\frac{2}{(s^{2}+1)(s^{2}+4)}\quad\mbox{ and }\quad H_{2}(s)=-\frac{s}{(s^{2}+1)(s^{2}+4)}.
 \end{equation}
 To simplify the required partial fraction expansions, we first write
-$$
-\frac{1}{(x+1)(x+4)}=\frac{1}{3}\left[\frac{1}{x+1}-\frac{1}{x+4}\right].
-$$
-Setting $x=s^{2}$ and substituting the result in  \eqref{eq:8.5.14} yields
-$$
-H_{1}(s)=-\frac{2}{3}\left[\frac{1}{s^{2}+1}-\frac{1}{s^{2}+4}\right]
-\quad\mbox{ and }\quad
-H_{2}(s)=-\frac{1}{3}\left[\frac{s}{s^{2}+1}-\frac{s}{s^{2}+4}\right].
-$$
+\[
+  \frac{1}{(x+1)(x+4)}=\frac{1}{3}\left[\frac{1}{x+1}-\frac{1}{x+4}\right].
+\]
+Setting $x=s^{2}$ and substituting the result in \eqref{eq:8.5.14} yields
+\[
+  H_{1}(s)=-\frac{2}{3}\left[\frac{1}{s^{2}+1}-\frac{1}{s^{2}+4}\right] \quad\mbox{ and }\quad H_{2}(s)=-\frac{1}{3}\left[\frac{s}{s^{2}+1}-\frac{s}{s^{2}+4}\right].
+\]
 The inverse transforms are
-$$
-h_{1}(t)=-\frac{2}{3}\sin t+\frac{1}{3}\sin2t
-\quad\mbox{ and }\;
-h_{2}(t)=-\frac{1}{3}\cos t+\frac{1}{3}\cos2t.
-$$
-From  \eqref{eq:8.5.13} and Theorem~8.4.2,
-\begin{equation}\label{eq:8.5.15}
-y=u\left(t-\frac{\pi}{4}\right)h_{1}\left(t-\frac{\pi}{4}\right)+
-u(t-\pi)h_{2}(t-\pi).
+\[
+  h_{1}(t)=-\frac{2}{3}\sin t+\frac{1}{3}\sin2t \quad\mbox{ and }\; h_{2}(t)=-\frac{1}{3}\cos t+\frac{1}{3}\cos2t.
+\]
+From \eqref{eq:8.5.13} and Theorem~8.4.2,
+\begin{equation}
+  \label{eq:8.5.15}y=u\left(t-\frac{\pi}{4}\right)h_{1}\left(t-\frac{\pi}{4}\right)+ u(t-\pi)h_{2}(t-\pi).
 \end{equation}
 Since
 \begin{eqnarray*}
-h_{1}\left(t-\frac{\pi}{4}\right)&=&-\frac{2}{3}\sin\left(t-\frac{\pi}{4}\right)+\frac{1}{3}\sin2\left(t-\frac{\pi}{4}\right)\\
-&=&-\frac{\sqrt{2}}{3}(\sin t-\cos t)-\frac{1}{3}\cos2t
+  h_{1}\left(t-\frac{\pi}{4}\right) & = & -\frac{2}{3}\sin\left(t-\frac{\pi}{4}\right)+\frac{1}{3}\sin2\left(t-\frac{\pi}{4}\right) \\
+                                    & = & -\frac{\sqrt{2}}{3}(\sin t-\cos t)-\frac{1}{3}\cos2t
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-h_{2}(t-\pi)&=&-\frac{1}{3}\cos(t-\pi)+\frac{1}{3}\cos2(t-\pi)\\
-&=&\frac{1}{3}\cos t+\frac{1}{3}\cos2t,
+  h_{2}(t-\pi) & = & -\frac{1}{3}\cos(t-\pi)+\frac{1}{3}\cos2(t-\pi) \\
+               & = & \frac{1}{3}\cos t+\frac{1}{3}\cos2t,
 \end{eqnarray*}
- \eqref{eq:8.5.15} can be rewritten as
-$$
-y=-\frac{1}{3}u\left(t-\frac{\pi}{4}\right)\left(\sqrt{2}(\sin
-t-\cos t)+\cos2t\right)
-+\frac{1}{3}u(t-\pi)(\cos t+\cos2t)
-$$
+\eqref{eq:8.5.15} can be rewritten as
+\[
+  y=-\frac{1}{3}u\left(t-\frac{\pi}{4}\right)\left(\sqrt{2}(\sin t-\cos t)+\cos2t\right) +\frac{1}{3}u(t-\pi)(\cos t+\cos2t)
+\]
 or
-\begin{equation}\label{eq:8.5.16}
-y=\left\{\begin{array}{cl}
-0,&0\le t<\dst{\frac{\pi}{4}},\\[2\jot]
--\dst{\frac{\sqrt{2}}{3}}(\sin t-\cos t)-\dst{\frac{1}{3}}\cos2t,&\dst\frac{\pi}{4}\le t<\pi,\\[2\jot]
--\dst{\frac{\sqrt{2}}{3}}\sin t+
-\dst{\frac{1+\sqrt{2}}{3}}\cos t,&t\ge\pi.
-\end{array}\right.
+\begin{equation}
+  \label{eq:8.5.16}y=\left\{
+  \begin{array}{cl}
+    0,                                                                 & 0\le t<\dst{\frac{\pi}{4}}, \\[2\jot]
+    -\dst{\frac{\sqrt{2}}{3}}(\sin t-\cos t)-\dst{\frac{1}{3}}\cos2t,  & \dst\frac{\pi}{4}\le t<\pi, \\[2\jot]
+    -\dst{\frac{\sqrt{2}}{3}}\sin t+ \dst{\frac{1+\sqrt{2}}{3}}\cos t, & t\ge\pi.
+  \end{array}\right.
 \end{equation}
-We leave it to you to verify that $y$ and $y'$ are continuous and
-$y''$ has limits from the right and left at $t_{1}=\pi/4$ and $t_{2}=\pi$
-(Figure~\ref{figure:8.5.2}).
+We leave it to you to verify that $y$ and $y'$ are continuous and $y''$ has limits from the right and left at $t_{1}=\pi/4$ and $t_{2}=\pi$ (Figure~\ref{figure:8.5.2}).
 
 \begin{figure}[tbp]
-  \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig080502}
-  \caption{ Graph of \eqref{eq:8.5.16}}
+  \centering
+  \color{blue}
+  \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig080502}
+  \caption{Graph of \eqref{eq:8.5.16}}
   \label{figure:8.5.2}
 \end{figure}
 
 \exercises
-\noindent In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace
-transform to solve the initial value problem.
-Where indicated by\\ \CGex, graph the solution.
+\noindent
+In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace transform to solve the initial value problem. Where indicated by\\ \CGex, graph the solution.
 
 \begin{exerciselist}
+  \item\label{exer:8.5.1} $\dst{y''+y=\left\{\begin{array}{cl}3,&0\le t<\pi,\\[2\jot]0,&t\ge\pi,\end{array}\right.\qquad y(0)=0,\quad y'(0)=0}$
 
-\item\label{exer:8.5.1} $\dst{y''+y=\left\{\begin{array}{cl}3,&0\le
-t<\pi,\\[2\jot]0,&t\ge\pi,\end{array}\right.\qquad y(0)=0,\quad  y'(0)=0}$
+  \item\label{exer:8.5.2} $\dst{y''+y=\left\{\begin{array}{cl}3,&0\le t<4,\\;2t-5,&t>4,\end{array}\right.\qquad y(0)=1,\quad y'(0)=0}$
 
-\item\label{exer:8.5.2} $\dst{y''+y=\left\{\begin{array}{cl}3,&0\le
-t<4,\\;2t-5,&t>4,\end{array}\right.\qquad y(0)=1,\quad y'(0)=0}$
+  \item\label{exer:8.5.3} $\dst{y''-2y'=\left\{\begin{array}{cl}4,&0\le t<1,\\[2\jot]6,&t\ge1,\end{array}\right.\qquad y(0)=-6,\quad y'(0)=1}$
 
-\item\label{exer:8.5.3} $\dst{y''-2y'=\left\{\begin{array}{cl}4,&0\le
-t<1,\\[2\jot]6,&t\ge1,\end{array}\right.\qquad y(0)=-6,\quad y'(0)=1}$
+  \item\label{exer:8.5.4} $\dst{y''-y=\left\{\begin{array}{cl}e^{2t},&0\le t<2,\\[2\jot]1,&t\ge2,\end{array}\right.\qquad y(0)=3,\quad y'(0)=-1 }$
 
-\item\label{exer:8.5.4} $\dst{y''-y=\left\{\begin{array}{cl}e^{2t},&0\le
-t<2,\\[2\jot]1,&t\ge2,\end{array}\right.\qquad y(0)=3,\quad y'(0)=-1
-}$
+  \item\label{exer:8.5.5} $\dst{y''-3y'+2y=\left\{\begin{array}{rl}0,&0\le t<1,\\[2\jot]1,&1\le t<2,\\[2\jot]-1,&t\ge2,\end{array}\right.\qquad y(0)=-3,\quad y'(0)=1}$
 
-\item\label{exer:8.5.5} $\dst{y''-3y'+2y=\left\{\begin{array}{rl}0,&0\le
-t<1,\\[2\jot]1,&1\le t<2,\\[2\jot]-1,&t\ge2,
-\end{array}\right.\qquad y(0)=-3,\quad y'(0)=1}$
+  \item\label{exer:8.5.6} \CGex $\dst{y''+4y=\left\{\begin{array}{cl}|\sin t|,&0\le t<2\pi,\\[2\jot]0,&t\ge2\pi,\end{array}\right.\qquad y(0)=-3,\quad y'(0)=1}$
 
-\item\label{exer:8.5.6} \CGex $\dst{y''+4y=\left\{\begin{array}{cl}|\sin
-t|,&0\le t<2\pi,\\[2\jot]0,&t\ge2\pi,\end{array}\right.\qquad
-y(0)=-3,\quad y'(0)=1}$
+  \item\label{exer:8.5.7} $\dst{y''-5y'+4y=\left\{\begin{array}{rl}1,&0\le t<1\\[2\jot]-1,&1\le t<2,\\[2\jot]0,&t\ge2,\end{array}\right.\qquad y(0)=3,\quad y'(0)=-5}$
 
-\item\label{exer:8.5.7} $\dst{y''-5y'+4y=\left\{\begin{array}{rl}1,&0\le
-t<1\\[2\jot]-1,&1\le t<2,\\[2\jot]0,&t\ge2,\end{array}\right.\qquad
-y(0)=3,\quad y'(0)=-5}$
+  \item\label{exer:8.5.8} $\dst{y''+9y=\left\{\begin{array}{cl}\cos t,&0\le t<\dst{\frac{3\pi}{2}},\\[2\jot]\sin t,&t\ge\dst{\frac{3\pi}{2}},\end{array}\right.\qquad y(0)=0,\;y'(0)=0}$
 
-\item\label{exer:8.5.8} $\dst{y''+9y=\left\{\begin{array}{cl}\cos
-t,&0\le t<\dst{\frac{3\pi}{2}},\\[2\jot]\sin
-t,&t\ge\dst{\frac{3\pi}{2}},\end{array}\right.\qquad y(0)=0,\;y'(0)=0}$
+  \item\label{exer:8.5.9} \CGex $\dst{y''+4y=\left\{\begin{array}{cl}t,&0\le t<\dst\frac{\pi}{2},\\[2\jot]\pi,&t\ge\dst{\frac{\pi}{2}},\end{array}\right.\quad y(0)=0,\quad y'(0)=0}$
 
-\item\label{exer:8.5.9} \CGex $\dst{y''+4y=\left\{\begin{array}{cl}t,&0\le
-t<\dst\frac{\pi}{2},\\[2\jot]\pi,&t\ge\dst{\frac{\pi}{2}},
-\end{array}\right.\quad y(0)=0,\quad y'(0)=0}$
+  \item\label{exer:8.5.10} $\dst{y''+y=\left\{\begin{array}{cl}\phantom{-}t,&0\le t<\pi, \\[2\jot]-t,&t\ge\pi,\end{array}\right.\;y(0)=0,\;y'(0)=0}$
 
-\item\label{exer:8.5.10}
-$\dst{y''+y=\left\{\begin{array}{cl}\phantom{-}t,&0\le t<\pi,
-\\[2\jot]-t,&t\ge\pi,\end{array}\right.\;y(0)=0,\;y'(0)=0}$
+  \item\label{exer:8.5.11} $\dst{y''-3y'+2y=\left\{\begin{array}{cl}0,&0\le t<2,\\2t-4,&t\ge2,\end{array}\right.,\quad y(0)=0,\quad y'(0)=0}$
 
-\item\label{exer:8.5.11} $\dst{y''-3y'+2y=\left\{\begin{array}{cl}0,&0\le
-t<2,\\2t-4,&t\ge2,\end{array}\right.,\quad y(0)=0,\quad y'(0)=0}$
+  \item\label{exer:8.5.12} $\dst{y''+y=\left\{\begin{array}{cl}t,&0\le t<2\pi,\\-2t,&t\ge2\pi,\end{array}\right.\quad y(0)=1,\quad y'(0)=2}$
 
-\item\label{exer:8.5.12} $\dst{y''+y=\left\{\begin{array}{cl}t,&0\le
-t<2\pi,\\-2t,&t\ge2\pi,\end{array}\right.\quad y(0)=1,\quad y'(0)=2}$
+  \item\label{exer:8.5.13} \CGex $\dst{y''+3y'+2y=\left\{\begin{array}{cl}\phantom{-}1,&0\le t<2,\\-1,&t\ge2,\end{array}\right.\;y(0)=0,\;y'(0)=0}$
 
-\item\label{exer:8.5.13} \CGex
-$\dst{y''+3y'+2y=\left\{\begin{array}{cl}\phantom{-}1,&0\le
-t<2,\\-1,&t\ge2,\end{array}\right.\;y(0)=0,\;y'(0)=0}$
+  \item\label{exer:8.5.14} $\dst{y''-4y'+3y=\left\{\begin{array}{cl}-1,&0\le t<1,\\\phantom{-}1,&t\ge1,\end{array}\right.\;y(0)=0,\;y'(0)=0}$
 
-\item\label{exer:8.5.14} $\dst{y''-4y'+3y=\left\{\begin{array}{cl}-1,&0\le
-t<1,\\\phantom{-}1,&t\ge1,\end{array}\right.\;y(0)=0,\;y'(0)=0}$
+  \item\label{exer:8.5.15} $\dst{y''+2y'+y=\left\{\begin{array}{cl}e^{t},&0\le t<1,\\e^{t}-1,&t\ge1,\end{array}\right.\;y(0)=3,\; y'(0)=-1}$
 
-\item\label{exer:8.5.15} $\dst{y''+2y'+y=\left\{\begin{array}{cl}
-e^{t},&0\le t<1,\\e^{t}-1,&t\ge1,\end{array}\right.\;y(0)=3,\;
-y'(0)=-1}$
+  \item\label{exer:8.5.16} $\dst{y''+2y'+y=\left\{\begin{array}{cl}4e^{t},&0\le t<1,\\0,&t\ge1,\end{array}\right.\;y(0)=0,\; y'(0)=0}$
 
-\item\label{exer:8.5.16}
- $\dst{y''+2y'+y=\left\{\begin{array}{cl}
-4e^{t},&0\le t<1,\\0,&t\ge1,\end{array}\right.\;y(0)=0,\;
-y'(0)=0}$
+  \item\label{exer:8.5.17} $\dst{y''+3y'+2y=\left\{\begin{array}{cl}e^{-t},&0\le t<1,\\0,&t\ge1,\end{array}\right.\;y(0)=1,\;y'(0)=-1}$
 
-\item\label{exer:8.5.17} $\dst{y''+3y'+2y=\left\{\begin{array}{cl}
-e^{-t},&0\le t<1,\\0,&t\ge1,\end{array}\right.\;y(0)=1,\;y'(0)=-1}$
+  \item\label{exer:8.5.18} $\dst{y''-4y'+4y=\left\{\begin{array}{rl}e^{2t},&0\le t<2,\\-e^{2t},&t\ge2,\end{array}\right.\;y(0)=0,\; y'(0)=-1}$
 
-\item\label{exer:8.5.18} $\dst{y''-4y'+4y=\left\{\begin{array}{rl}
-e^{2t},&0\le t<2,\\-e^{2t},&t\ge2,\end{array}\right.\;y(0)=0,\;
-y'(0)=-1}$
+  \item\label{exer:8.5.19} \CGex $\dst{y''=\left\{\begin{array}{cl}t^{2},&0\le t<1,\\-t,&1\le t<2,\\t+1,&t\ge2,\end{array}\right.\;y(0)=1,\; y'(0)=0}$
 
-\item\label{exer:8.5.19} \CGex $\dst{y''=\left\{\begin{array}{cl}t^{2},&0\le
-t<1,\\-t,&1\le t<2,\\t+1,&t\ge2,\end{array}\right.\;y(0)=1,\;
-y'(0)=0}$
+  \item\label{exer:8.5.20} $\dst{y''+2y'+2y=\left\{\begin{array}{rl}1,&0\le t<2\pi,\\t,&2\pi\le t<3\pi,\\-1,&t\ge3\pi,\end{array}\right.\; y(0)=2,\quad y'(0)=-1}$
 
-\item\label{exer:8.5.20} $\dst{y''+2y'+2y=\left\{\begin{array}{rl}1,&0\le
-t<2\pi,\\t,&2\pi\le t<3\pi,\\-1,&t\ge3\pi,\end{array}\right.\;
-y(0)=2,\quad y'(0)=-1}$
+  \item\label{exer:8.5.21} Solve the initial value problem
+  \[
+    y''=f(t),\quad y(0)=0,\quad y'(0)=0,
+  \]
+  where
+  \[
+    f(t)=m+1,\quad m\le t<m+1,\quad m=0,1,2,\dots.
+  \]
 
-\item\label{exer:8.5.21} Solve the initial value problem $$ y''=f(t),\quad
-y(0)=0,\quad  y'(0)=0, $$ where $$ f(t)=m+1,\quad m\le t<m+1,\quad
-m=0,1,2,\dots. $$
+  \item\label{exer:8.5.22} Solve the given initial value problem and find a formula that does not involve step functions and represents $y$ on each interval of continuity of $f$.
+  \begin{alist}
+    \item % (a)
+    $y''+y=f(t),\quad y(0)=0,\quad y'(0)=0$;
 
-\item\label{exer:8.5.22} Solve the given initial value problem and find a
-formula that does not involve step functions and represents $y$ on
-each interval of continuity of $f$.
-\begin{alist}
-\item % (a)
-$y''+y=f(t),\quad  y(0)=0,\quad  y'(0)=0$;
+    $f(t)=m+1,\quad m\pi\le t<(m+1)\pi,\quad m=0,1,2,\dots$.
 
-$f(t)=m+1,\quad  m\pi\le t<(m+1)\pi,\quad m=0,1,2,\dots$.
+    \item % (b)
+    $y''+y=f(t),\quad y(0)=0,\quad y'(0)=0$;
 
-\item % (b)
-$y''+y=f(t),\quad  y(0)=0,\quad y'(0)=0$;
+    $f(t)=(m+1)t,\quad2m\pi\le t<2(m+1)\pi,\quad m=0,1,2,\dots$ \hint{You'll need the formula}
+    \[
+      1+2+\cdots+m=\frac{m(m+1)}{2}.
+    \]
 
-$f(t)=(m+1)t,\quad2m\pi\le t<2(m+1)\pi,\quad m=0,1,2,\dots$
-\hint{You'll need the formula}
-$$
-1+2+\cdots+m=\frac{m(m+1)}{2}.
-$$
+    \item % (c)
+    $y''+y=f(t),\quad y(0)=0,\quad y'(0)=0$;
 
-\item % (c)
-$y''+y=f(t),\quad  y(0)=0,\quad  y'(0)=0$;
+    $f(t)=(-1)^{m},\quad m\pi\le t<(m+1)\pi,\quad m=0,1,2,\dots$.
 
-$f(t)=(-1)^{m},\quad  m\pi\le t<(m+1)\pi,\quad m=0,1,2,\dots$.
+    \item % (d)
+    $y''-y=f(t),\quad y(0)=0,\quad y'(0)=0$;
 
-\item % (d)
-$y''-y=f(t),\quad  y(0)=0,\quad  y'(0)=0$;
+    $f(t)=m+1,\quad m\le t<(m+1),\quad m=0,1,2,\dots$.
 
-$f(t)=m+1,\quad  m\le t<(m+1),\quad m=0,1,2,\dots$.
+    \hint{You will need the formula \[1+r+\cdots+r^{m}=\frac{1-r^{m+1}}{1-r}\;(r\ne1).\]}
 
-\hint{You will need the formula
-$$
-1+r+\cdots+r^{m}=\frac{1-r^{m+1}}{1-r}\;(r\ne1).
-$$}
+    \item % (d)
+    $y''+2y'+2y=f(t),\quad y(0)=0,\quad y'(0)=0$;
 
-\item % (d)
-$y''+2y'+2y=f(t),\quad  y(0)=0,\quad  y'(0)=0$;
+    $f(t)=(m+1)(\sin t+2\cos t),\quad2m\pi\le t<2(m+1)\pi,\quad m=0,1,2,\dots$.
 
-$f(t)=(m+1)(\sin t+2\cos t),\quad2m\pi\le t<2(m+1)\pi,\quad
-m=0,1,2,\dots$.
+    (See the hint in \part{d}.)
 
-(See the hint in \part{d}.)
+    \item % (f)
+    $y''-3y'+2y=f(t),\quad y(0)=0,\quad y'(0)=0$;
 
-\item % (f)
-$y''-3y'+2y=f(t),\quad  y(0)=0,\quad y'(0)=0$;
+    $f(t)=m+1,\quad m\le t<m+1,\quad m=0,1,2,\dots$.
 
-$f(t)=m+1,\quad  m\le t<m+1,\quad m=0,1,2,\dots$.
+    (See the hints in \part{b} and \part{d}.)
+  \end{alist}
 
- (See the hints in \part{b} and \part{d}.)
-\end{alist}
+  \item\label{exer:8.5.23}
+  \begin{alist}
+    \item % (a)
+    Let $g$ be continuous on $(\alpha,\beta)$ and differentiable on the $(\alpha,t_{0})$ and $(t_{0},\beta)$. Suppose $A=\lim_{t\to t_{0}-}g'(t)$ and $B=\lim_{t\to t_{0}+}g'(t)$ both exist. Use the mean value theorem to show that
+    \[
+      \lim_{t\to t_{0}-}\frac{g(t)-g(t_{0})}{t-t_{0}}=A\quad\mbox{ and }\quad \lim_{t\to t_{0}+}\frac{g(t)-g(t_{0})}{t-t_{0}}=B.
+    \]
 
-\item\label{exer:8.5.23}
-\begin{alist}
-\item % (a)
-Let $g$ be  continuous on  $(\alpha,\beta)$
- and differentiable on the  $(\alpha,t_{0})$
-and $(t_{0},\beta)$. Suppose $A=\lim_{t\to t_{0}-}g'(t)$
-and $B=\lim_{t\to t_{0}+}g'(t)$ both exist. Use the mean value theorem
-to show that
-$$
-\lim_{t\to t_{0}-}\frac{g(t)-g(t_{0})}{t-t_{0}}=A\quad\mbox{ and }\quad
-\lim_{t\to t_{0}+}\frac{g(t)-g(t_{0})}{t-t_{0}}=B.
-$$
-\item % (b)
-Conclude from \part{a} that $g'(t_{0})$ exists and $g'$ is continuous at
-$t_{0}$ if $A=B$.
+    \item % (b)
+    Conclude from \part{a} that $g'(t_{0})$ exists and $g'$ is continuous at $t_{0}$ if $A=B$.
 
-\item % (c)
-Conclude from \part{a}
- that if $g$  is differentiable on $(\alpha,\beta)$ then
-$g'$ can't have a jump discontinuity on $(\alpha,\beta)$.
-\end{alist}
+    \item % (c)
+    Conclude from \part{a} that if $g$ is differentiable on $(\alpha,\beta)$ then $g'$ can't have a jump discontinuity on $(\alpha,\beta)$.
+  \end{alist}
 
-\item\label{exer:8.5.24}
-\begin{alist}
-\item % (a)
-Let $a$, $b$, and $c$ be constants, with $a\ne0$. Let $f$ be piecewise
-continuous on an interval $(\alpha,\beta)$, with a single jump
-discontinuity at a point $t_{0}$ in $(\alpha,\beta)$. Suppose $y$
-and $y'$ are continuous on $(\alpha,\beta)$ and $y''$ on
-$(\alpha,t_{0})$ and $(t_{0},\beta)$. Suppose  also that
-$$
-ay''+by'+cy=f(t)
-\eqno{\rm(A)}
-$$
-on $(\alpha,t_{0})$ and $(t_{0},\beta)$.
-Show that
-$$
-y''(t_{0}+)-y''(t_{0}-)=\frac{f(t_{0}+)-f(t_{0}-)}{a}\ne0.
-$$
-\item % (b)
-Use \part{a}  and Exercise~\ref{exer:8.5.23}\part{c} to show that
-(A)
-does not  have  solutions on any interval $(\alpha,\beta)$ that contains
-a jump discontinuity of $f$.
-\end{alist}
+  \item\label{exer:8.5.24}
+  \begin{alist}
+    \item % (a)
+    Let $a$, $b$, and $c$ be constants, with $a\ne0$. Let $f$ be piecewise continuous on an interval $(\alpha,\beta)$, with a single jump discontinuity at a point $t_{0}$ in $(\alpha,\beta)$. Suppose $y$ and $y'$ are continuous on $(\alpha,\beta)$ and $y''$ on $(\alpha,t_{0})$ and $(t_{0},\beta)$. Suppose also that
+    \[
+      ay''+by'+cy=f(t) \eqno{\rm(A)}
+    \]
+    on $(\alpha,t_{0})$ and $(t_{0},\beta)$. Show that
+    \[
+      y''(t_{0}+)-y''(t_{0}-)=\frac{f(t_{0}+)-f(t_{0}-)}{a}\ne0.
+    \]
 
-\item\label{exer:8.5.25}
-Suppose $P_{0}$, $P_{1}$, and $P_{2}$ are continuous and $P_{0}$
-has no zeros on an open interval $(a,b)$, and  that $F$
-has a jump discontinuity at a point $t_{0}$ in $(a,b)$.
-Show that the differential equation
-$$
-P_{0}(t)y''+P_{1}(t)y'+P_{2}(t)y=F(t)
-$$
-has no solutions on $(a,b)$.\hint{Generalize the result of
-Exercise~\ref{exer:8.5.24} and use Exercise~\ref{exer:8.5.23}\part{c}.}
+    \item % (b)
+    Use \part{a} and Exercise~\ref{exer:8.5.23}\part{c} to show that (A) does not have solutions on any interval $(\alpha,\beta)$ that contains a jump discontinuity of $f$.
+  \end{alist}
 
-\item\label{exer:8.5.26}
-Let $0=t_{0}<t_{1}<\cdots<t_{n}$. Suppose $f_{m}$ is continuous
-on $[t_{m},\infty)$ for $m=1,\dots,n$.
- Let
-$$
-f(t)=
-\left\{\begin{array}{cl}
-f_{m}(t),&t_{m}\le t<t_{m+1},\quad m=1,\dots,n-1,\\
-f_{n}(t),&t\ge t_{n}.
-\end{array}\right.
-$$
-Show that the
-solution of
-$$
-ay''+by'+cy=f(t),\quad  y(0)=k_{0},\quad y'(0)=k_{1},
-$$
-as defined following  Theorem~8.5.1, is given by
-$$
-y=\left\{\begin{array}{cl}
- z_{0}(t),&0\le t<t_{1},\\[1\jot]
-z_{0}(t)+z_{1}(t),&t_{1}\le t<t_{2},\\
-&\vdots\\
-z_{0}+\cdots+z_{n-1}(t),&t_{n-1}\le t<t_{n},\\[1\jot]
-z_{0}+\cdots+z_{n}(t),&t\ge t_{n},
-\end{array}\right.
-$$
-where $z_{0}$ is the solution of
-$$
-az''+bz'+cz=f_{0}(t),\quad  z(0)=k_{0},\quad  z'(0)=k_{1}
-$$
-and $z_{m}$ is the solution of
-$$
-az''+bz'+cz=f_{m}(t)-f_{m-1}(t),\quad  z(t_{m})=0,\quad z'(t_{m})=0
-$$
-for $m=1,\dots,n$.
+  \item\label{exer:8.5.25} Suppose $P_{0}$, $P_{1}$, and $P_{2}$ are continuous and $P_{0}$ has no zeros on an open interval $(a,b)$, and that $F$ has a jump discontinuity at a point $t_{0}$ in $(a,b)$. Show that the differential equation
+  \[
+    P_{0}(t)y''+P_{1}(t)y'+P_{2}(t)y=F(t)
+  \]
+  has no solutions on $(a,b)$.\hint{Generalize the result of Exercise~\ref{exer:8.5.24} and use Exercise~\ref{exer:8.5.23}\part{c}.}
+
+  \item\label{exer:8.5.26} Let $0=t_{0}<t_{1}<\cdots<t_{n}$. Suppose $f_{m}$ is continuous on $[t_{m},\infty)$ for $m=1,\dots,n$. Let
+  \[
+    f(t)= \left\{
+    \begin{array}{cl}
+      f_{m}(t), & t_{m}\le t<t_{m+1},\quad m=1,\dots,n-1, \\
+      f_{n}(t), & t\ge t_{n}.
+    \end{array}\right.
+  \]
+  Show that the solution of
+  \[
+    ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1},
+  \]
+  as defined following Theorem~8.5.1, is given by
+  \[
+    y=\left\{
+    \begin{array}{cl}
+      z_{0}(t),                & 0\le t<t_{1},       \\[1\jot]
+      z_{0}(t)+z_{1}(t),       & t_{1}\le t<t_{2},   \\
+                               & \vdots              \\
+      z_{0}+\cdots+z_{n-1}(t), & t_{n-1}\le t<t_{n}, \\[1\jot]
+      z_{0}+\cdots+z_{n}(t),   & t\ge t_{n},
+    \end{array}\right.
+  \]
+  where $z_{0}$ is the solution of
+  \[
+    az''+bz'+cz=f_{0}(t),\quad z(0)=k_{0},\quad z'(0)=k_{1}
+  \]
+  and $z_{m}$ is the solution of
+  \[
+    az''+bz'+cz=f_{m}(t)-f_{m-1}(t),\quad z(t_{m})=0,\quad z'(t_{m})=0
+  \]
+  for $m=1,\dots,n$.
 \end{exerciselist}

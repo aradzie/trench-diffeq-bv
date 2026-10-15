@@ -2,597 +2,419 @@
 
 \noindent
 In this section we continue to find series solutions
-$$
-y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
-$$
-of  initial value problems
-\begin{equation} \label{eq:7.3.1}
-P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0,\quad y(x_{0})=a_{0},\quad y'(x_{0})=a_{1},
+\[
+  y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
+\]
+of initial value problems
+\begin{equation}
+  \label{eq:7.3.1}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0,\quad y(x_{0})=a_{0},\quad y'(x_{0})=a_{1},
 \end{equation}
-where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials and $P_{0}(x_{0})\ne0$,
-so $x_{0}$ is an ordinary point of \eqref{eq:7.3.1}.  However, here we
-consider  cases where the differential equation in \eqref{eq:7.3.1}
-is not of the form
-$$
-\left(1+\alpha(x-x_{0})^{2}\right)y''+\beta(x-x_{0})y'+\gamma y=0,
-$$
-so Theorem~\ref{thmtype:7.2.2} does not apply, and the computation of the
-coefficients $\{a_{n}\}$ is more complicated. For the equations
-considered here it's difficult or impossible to obtain an explicit
-formula for $a_{n}$ in terms of $n$. Nevertheless, we can calculate as
-many coefficients as we wish. The next three examples illustrate
-this.
+where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials and $P_{0}(x_{0})\ne0$, so $x_{0}$ is an ordinary point of \eqref{eq:7.3.1}. However, here we consider cases where the differential equation in \eqref{eq:7.3.1} is not of the form
+\[
+  \left(1+\alpha(x-x_{0})^{2}\right)y''+\beta(x-x_{0})y'+\gamma y=0,
+\]
+so Theorem~\ref{thmtype:7.2.2} does not apply, and the computation of the coefficients $\{a_{n}\}$ is more complicated. For the equations considered here it's difficult or impossible to obtain an explicit formula for $a_{n}$ in terms of $n$. Nevertheless, we can calculate as many coefficients as we wish. The next three examples illustrate this.
 
-\begin{example}\label{example:7.3.1} \rm
-Find the coefficients $a_{0}$, \dots, $a_{7}$ in the  series solution
-$y=\sum^{\infty}_{n=0}
-a_{n}x^{n}$  of the initial value problem
-\begin{equation} \label{eq:7.3.2}
-(1+x+2x^{2})y''+(1+7x)y'+2y=0,\quad y(0)=-1,\quad y'(0)=-2.
-\end{equation}
+\begin{example}
+  \label{example:7.3.1} \rm Find the coefficients $a_{0}$, \dots, $a_{7}$ in the series solution $y=\sum^{\infty}_{n=0}a_{n}x^{n}$ of the initial value problem
+  \begin{equation}
+    \label{eq:7.3.2}(1+x+2x^{2})y''+(1+7x)y'+2y=0,\quad y(0)=-1,\quad y'(0)=-2.
+  \end{equation}
 \end{example}
 
-\solution
-Here
-$$
-Ly=(1+x+2x^{2})y''+(1+7x)y'+2y.
-$$
-The zeros $(-1\pm i\sqrt{7})/4$ of $P_{0}(x)=1+x+2x^{2}$ have absolute value
-$1/\sqrt{2}$, so Theorem~\ref{thmtype:7.2.2} implies that the series
-solution
-converges to the solution of \eqref{eq:7.3.2} on $(-1/\sqrt{2},1/\sqrt{2})$.
-Since
-$$
-y=\sum^{\infty}_{n=0}a_{n}x^{n},\quad y'=\sum^{\infty}_{n=1}n
-a_{n}x^{n-1}\quad\mbox{ and }\quad  y''=\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2},
-$$
+\solution Here
+\[
+  Ly=(1+x+2x^{2})y''+(1+7x)y'+2y.
+\]
+The zeros $(-1\pm i\sqrt{7})/4$ of $P_{0}(x)=1+x+2x^{2}$ have absolute value $1/\sqrt{2}$, so Theorem~\ref{thmtype:7.2.2} implies that the series solution converges to the solution of \eqref{eq:7.3.2} on $(-1/\sqrt{2},1/\sqrt{2})$. Since
+\[
+  y=\sum^{\infty}_{n=0}a_{n}x^{n},\quad y'=\sum^{\infty}_{n=1}n a_{n}x^{n-1}\quad\mbox{ and }\quad y''=\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2},
+\]
 \begin{eqnarray*}
-Ly&=&\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2}+\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-1}
-+2\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n}\\[10pt]
-&&+\sum^{\infty}_{n=1}na_{n}x^{n-1}+7\sum^{\infty}_{n=1}na_{n}x^{n}+2\sum^{\infty}_{n=0}
-a_{n}x^{n}.
+  Ly & = & \sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2}+\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-1}+2\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n} \\[10pt]
+     &   & +\sum^{\infty}_{n=1}na_{n}x^{n-1}+7\sum^{\infty}_{n=1}na_{n}x^{n}+2\sum^{\infty}_{n=0}a_{n}x^{n}.
 \end{eqnarray*}
-Shifting indices so  the general term in each
-series is a constant multiple of $x^{n}$ yields
+Shifting indices so the general term in each series is a constant multiple of $x^{n}$ yields
 \begin{eqnarray*}
-Ly&=&\sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}x^{n}+\sum^{\infty}_{n=0}(n+1)na_{n+1}x^{n}
-+2\sum^{\infty}_{n=0}n(n-1)a_{n}x^{n}\\[10pt]
-&&+\sum^{\infty}_{n=0}(n+1)a_{n+1}x^{n}+7\sum^{\infty}_{n=0}na_{n}x^{n}+
-2\sum^{\infty}_{n=0}a_{n}x^{n}
-=\sum^{\infty}_{n=0}b_{n}x^{n},
+  Ly & = & \sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}x^{n}+\sum^{\infty}_{n=0}(n+1)na_{n+1}x^{n}+2\sum^{\infty}_{n=0}n(n-1)a_{n}x^{n} \\[10pt]
+     &   & +\sum^{\infty}_{n=0}(n+1)a_{n+1}x^{n}+7\sum^{\infty}_{n=0}na_{n}x^{n}+2\sum^{\infty}_{n=0}a_{n}x^{n}=\sum^{\infty}_{n=0}b_{n}x^{n},
 \end{eqnarray*}
 where
-$$
-b_{n}=(n+2)(n+1)a_{n+2}+(n+1)^{2}a_{n+1}+(n+2)(2n+1)a_{n}.
-$$
-Therefore $y=\sum^{\infty}_{n=0}a_{n}x^{n}$ is a solution of $Ly=0$
-if and only if
-\begin{equation} \label{eq:7.3.3}
-a_{n+2}=-\frac{n+1}{n+2}\,a_{n+1}-\frac{2n+1}{n+1}\,a_{n},\,n\ge0.
+\[
+  b_{n}=(n+2)(n+1)a_{n+2}+(n+1)^{2}a_{n+1}+(n+2)(2n+1)a_{n}.
+\]
+Therefore $y=\sum^{\infty}_{n=0}a_{n}x^{n}$ is a solution of $Ly=0$ if and only if
+\begin{equation}
+  \label{eq:7.3.3}a_{n+2}=-\frac{n+1}{n+2}\,a_{n+1}-\frac{2n+1}{n+1}\,a_{n},\,n\ge0.
 \end{equation}
-From the initial conditions in \eqref{eq:7.3.2}, $a_{0}=y(0)=-1$ and
-$a_{1}=y'(0)=-2$.
-Setting $n=0$  in \eqref{eq:7.3.3} yields
-$$
-a_{2}=-\frac{1}{2}a_{1}-a_{0}=-\frac{1}{2}(-2)-(-1)=2.
-$$
-Setting $n=1$  in \eqref{eq:7.3.3} yields
-$$
-a_{3}=-\frac{2}{3}a_{2}-\frac{3}{2}a_{1}=-\frac{2}{3}(2)-\frac{3}{2}(-2)=\frac{5}{3}.
-$$
-We leave it to you to compute $a_{4}$, $a_{5}$, $a_{6}$, $a_{7}$ from \eqref{eq:7.3.3} and
-show that
-$$
-y=-1-2x+2x^{2}+\frac{5}{3}x^{3}-\frac{55}{12}x^{4}+\frac{3}{4}x^{5}+\frac{61}{8}x^{6}-
-\frac{443}{56}x^{7}+\cdots.
-$$
-We also leave it to you (Exercise~\ref{exer:7.3.13}) to verify numerically
-that the Taylor polynomials $T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}$ converge
-to the solution of \eqref{eq:7.3.2}
-on $(-1/\sqrt{2},1/\sqrt{2})$.
+From the initial conditions in \eqref{eq:7.3.2}, $a_{0}=y(0)=-1$ and $a_{1}=y'(0)=-2$. Setting $n=0$ in \eqref{eq:7.3.3} yields
+\[
+  a_{2}=-\frac{1}{2}a_{1}-a_{0}=-\frac{1}{2}(-2)-(-1)=2.
+\]
+Setting $n=1$ in \eqref{eq:7.3.3} yields
+\[
+  a_{3}=-\frac{2}{3}a_{2}-\frac{3}{2}a_{1}=-\frac{2}{3}(2)-\frac{3}{2}(-2)=\frac{5}{3}.
+\]
+We leave it to you to compute $a_{4}$, $a_{5}$, $a_{6}$, $a_{7}$ from \eqref{eq:7.3.3} and show that
+\[
+  y=-1-2x+2x^{2}+\frac{5}{3}x^{3}-\frac{55}{12}x^{4}+\frac{3}{4}x^{5}+\frac{61}{8}x^{6}- \frac{443}{56}x^{7}+\cdots.
+\]
+We also leave it to you (Exercise~\ref{exer:7.3.13}) to verify numerically that the Taylor polynomials $T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}$ converge to the solution of \eqref{eq:7.3.2} on $(-1/\sqrt{2},1/\sqrt{2})$.
 
-\begin{example}\label{example:7.3.2} \rm
-Find  the coefficients $a_{0}$, \dots, $a_{5}$ in the series
-solution
-$$
-y=\sum^{\infty}_{n=0}a_{n}(x+1)^{n}
-$$
- of the initial value problem
-\begin{equation} \label{eq:7.3.4}
-(3+x)y''+(1+2x)y'-(2-x)y=0,\quad y(-1)=2,\quad y'(-1)=-3.
-\end{equation}
+\begin{example}
+  \label{example:7.3.2} \rm Find the coefficients $a_{0}$, \dots, $a_{5}$ in the series solution
+  \[
+    y=\sum^{\infty}_{n=0}a_{n}(x+1)^{n}
+  \]
+  of the initial value problem
+  \begin{equation}
+    \label{eq:7.3.4}(3+x)y''+(1+2x)y'-(2-x)y=0,\quad y(-1)=2,\quad y'(-1)=-3.
+  \end{equation}
 \end{example}
 
-\solution
-Since the desired series is in powers of $x+1$ we rewrite
-the differential equation in \eqref{eq:7.3.4} as $Ly=0$, with
-$$
-Ly=\left(2+(x+1)\right)y''-\left(1-2(x+1)\right)y'-\left(3-(x+1)\right)y.
-$$
+\solution Since the desired series is in powers of $x+1$ we rewrite the differential equation in \eqref{eq:7.3.4} as $Ly=0$, with
+\[
+  Ly=\left(2+(x+1)\right)y''-\left(1-2(x+1)\right)y'-\left(3-(x+1)\right)y.
+\]
 Since
-$$
-y=\sum^{\infty}_{n=0}a_{n}(x+1)^{n},\quad y'=\sum^{\infty}_{n=1}n
-a_{n}(x+1)^{n-1}\quad\mbox{ and }\quad
-y''=\sum^{\infty}_{n=2}n(n-1)a_{n}(x+1)^{n-2},
-$$
+\[
+  y=\sum^{\infty}_{n=0}a_{n}(x+1)^{n},\quad y'=\sum^{\infty}_{n=1}n a_{n}(x+1)^{n-1}\quad\mbox{ and }\quad y''=\sum^{\infty}_{n=2}n(n-1)a_{n}(x+1)^{n-2},
+\]
 \begin{eqnarray*}
-Ly&=&2\sum^{\infty}_{n=2}n(n-1)a_{n}(x+1)^{n-2}+\sum^{\infty}_{n=2}n(n-1)a_{n}(x+1)^{n-1}
-\\&&-\sum^{\infty}_{n=1}na_{n}(x+1)^{n-1}+2\sum^{\infty}_{n=1}na_{n}(x+1)^{n}\\[2\jot]
-&&-3\sum^{\infty}_{n=0}a_{n}(x+1)^{n}+\sum_{n=0}^{\infty}a_{n}(x+1)^{n+1}.
+  Ly & = & 2\sum^{\infty}_{n=2}n(n-1)a_{n}(x+1)^{n-2}+\sum^{\infty}_{n=2}n(n-1)a_{n}(x+1)^{n-1} \\
+     &   & -\sum^{\infty}_{n=1}na_{n}(x+1)^{n-1}+2\sum^{\infty}_{n=1}na_{n}(x+1)^{n}            \\[2\jot]
+     &   & -3\sum^{\infty}_{n=0}a_{n}(x+1)^{n}+\sum_{n=0}^{\infty}a_{n}(x+1)^{n+1}.
 \end{eqnarray*}
-Shifting indices so that  the general term in each
-series is a constant multiple of $(x+1)^{n}$ yields
+Shifting indices so that the general term in each series is a constant multiple of $(x+1)^{n}$ yields
 \begin{eqnarray*}
-Ly&=&2\sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}(x+1)^{n}+\sum^{\infty}_{n=0}(n+1)na_{n+1}
-(x+1)^{n}\\[10pt]&&-\sum^{\infty}_{n=0}(n+1)a_{n+1}(x+1)^{n}
-+\sum^{\infty}_{n=0}(2n-3)a_{n}(x+1)^{n}+\sum^{\infty}_{n=1}a_{n-1}(x+1)^{n}\\[10pt]
-&=&\sum^{\infty}_{n=0}b_{n}(x+1)^{n},
+  Ly & = & 2\sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}(x+1)^{n}+\sum^{\infty}_{n=0}(n+1)na_{n+1}(x+1)^{n}                              \\[10pt]
+     &   & -\sum^{\infty}_{n=0}(n+1)a_{n+1}(x+1)^{n}+\sum^{\infty}_{n=0}(2n-3)a_{n}(x+1)^{n}+\sum^{\infty}_{n=1}a_{n-1}(x+1)^{n} \\[10pt]
+     & = & \sum^{\infty}_{n=0}b_{n}(x+1)^{n},
 \end{eqnarray*}
 where
-$$
-b_{0}=4a_{2}-a_{1}-3a_{0}
-$$
+\[
+  b_{0}=4a_{2}-a_{1}-3a_{0}
+\]
 and
-$$
-b_{n}=2(n+2)(n+1)a_{n+2}+(n^{2}-1)a_{n+1}+(2n-3)a_{n}+a_{n-1},\quad n\ge1.
-$$
-Therefore $y=\sum^{\infty}_{n=0}a_{n}(x+1)^{n}$ is a solution of $Ly=0$
-if and only if
-\begin{equation} \label{eq:7.3.5}
-a_{2}=\frac{1}{4}(a_{1}+3a_{0})
+\[
+  b_{n}=2(n+2)(n+1)a_{n+2}+(n^{2}-1)a_{n+1}+(2n-3)a_{n}+a_{n-1},\quad n\ge1.
+\]
+Therefore $y=\sum^{\infty}_{n=0}a_{n}(x+1)^{n}$ is a solution of $Ly=0$ if and only if
+\begin{equation}
+  \label{eq:7.3.5}a_{2}=\frac{1}{4}(a_{1}+3a_{0})
 \end{equation}
 and
-\begin{equation} \label{eq:7.3.6}
-a_{n+2}=-\frac{1}{2(n+2)(n+1)}\left[(n^{2}-1)a_{n+1}+(2n-3)a_{n}+a_{n-1}\right],
-\quad n\ge1.
+\begin{equation}
+  \label{eq:7.3.6}a_{n+2}=-\frac{1}{2(n+2)(n+1)}\left[(n^{2}-1)a_{n+1}+(2n-3)a_{n}+a_{n-1}\right], \quad n\ge1.
 \end{equation}
-From the initial conditions in \eqref{eq:7.3.4}, $a_{0}=y(-1)=2$ and
-$a_{1}=y'(-1)=-3$. We leave it to you to  compute $a_{2}$, \dots, $a_{5}$
-with  \eqref{eq:7.3.5} and \eqref{eq:7.3.6} and show that
-the solution of \eqref{eq:7.3.4} is
-$$
-y=-2-3(x+1)+\frac{3}{4}(x+1)^{2}-\frac{5}{12}(x+1)^{3}+\frac{7}{48}(x+1)^{4}
--\frac{1}{60}(x+1)^{5}+\cdots.
-$$
-We also leave it to you (Exercise~\ref{exer:7.3.14}) to verify numerically
-that the Taylor polynomials $T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}$ converge to
-the solution of \eqref{eq:7.3.4}  on the interval of
-convergence of the power series solution.
+From the initial conditions in \eqref{eq:7.3.4}, $a_{0}=y(-1)=2$ and $a_{1}=y'(-1)=-3$. We leave it to you to compute $a_{2}$, \dots, $a_{5}$ with \eqref{eq:7.3.5} and \eqref{eq:7.3.6} and show that the solution of \eqref{eq:7.3.4} is
+\[
+  y=-2-3(x+1)+\frac{3}{4}(x+1)^{2}-\frac{5}{12}(x+1)^{3}+\frac{7}{48}(x+1)^{4}-\frac{1}{60}(x+1)^{5}+\cdots.
+\]
+We also leave it to you (Exercise~\ref{exer:7.3.14}) to verify numerically that the Taylor polynomials $T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}$ converge to the solution of \eqref{eq:7.3.4} on the interval of convergence of the power series solution.
 
-\begin{example}\label{example:7.3.3} \rm
-Find the coefficients $a_{0}$, \dots, $a_{5}$ in the series
-solution $y=\sum^{\infty}_{n=0}
-a_{n}x^{n}$   of the initial value problem
-\begin{equation} \label{eq:7.3.7}
-y''+3xy'+(4+2x^{2})y=0,\quad y(0)=2,\quad y'(0)=-3.
-\end{equation}
+\begin{example}
+  \label{example:7.3.3} \rm Find the coefficients $a_{0}$, \dots, $a_{5}$ in the series solution $y=\sum^{\infty}_{n=0}a_{n}x^{n}$ of the initial value problem
+  \begin{equation}
+    \label{eq:7.3.7}y''+3xy'+(4+2x^{2})y=0,\quad y(0)=2,\quad y'(0)=-3.
+  \end{equation}
 \end{example}
 
-\solution
-Here
-$$
-Ly=y''+3xy'+(4+2x^{2})y.
-$$
+\solution Here
+\[
+  Ly=y''+3xy'+(4+2x^{2})y.
+\]
 Since
-$$
-y=\sum^{\infty}_{n=0}a_{n}x^{n},\quad y'=\sum^{\infty}_{n=1}n
-a_{n}x^{n-1},\quad\mbox{ and }\quad
-y''=\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2},
-$$
+\[
+  y=\sum^{\infty}_{n=0}a_{n}x^{n},\quad y'=\sum^{\infty}_{n=1}n a_{n}x^{n-1},\quad\mbox{ and }\quad y''=\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2},
+\]
 \begin{eqnarray*}
-Ly&=&\sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2}
-+3\sum^{\infty}_{n=1}na_{n}x^{n}+4\sum^{\infty}_{n=0}a_{n}x^{n}+2\sum^{\infty}_{n=0}
-a_{n}x^{n+2}.
+  Ly & = & \sum^{\infty}_{n=2}n(n-1)a_{n}x^{n-2}+3\sum^{\infty}_{n=1}na_{n}x^{n}+4\sum^{\infty}_{n=0}a_{n}x^{n}+2\sum^{\infty}_{n=0}a_{n}x^{n+2}.
 \end{eqnarray*}
-Shifting indices so  that the general term in each
-series is a constant multiple of $x^{n}$ yields
-$$
-Ly=\sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}x^{n}+\sum^{\infty}_{n=0}(3n+4)a_{n}x^{n}
-+2\sum^{\infty}_{n=2}a_{n-2}x^{n}=\sum_{n=0}^{\infty}b_{n}x^{n}
-$$
+Shifting indices so that the general term in each series is a constant multiple of $x^{n}$ yields
+\[
+  Ly=\sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}x^{n}+\sum^{\infty}_{n=0}(3n+4)a_{n}x^{n}+2\sum^{\infty}_{n=2}a_{n-2}x^{n}=\sum_{n=0}^{\infty}b_{n}x^{n}
+\]
 where
-$$
-b_{0}=2a_{2}+4a_{0},\quad b_{1}=6a_{3}+7a_{1},
-$$
+\[
+  b_{0}=2a_{2}+4a_{0},\quad b_{1}=6a_{3}+7a_{1},
+\]
 and
-$$
-b_{n}=(n+2)(n+1)a_{n+2}+(3n+4)a_{n}+2a_{n-2},\quad n\ge2.
-$$
-Therefore $y=\sum^{\infty}_{n=0}a_{n}x^{n}$ is a solution of $Ly=0$
-if and only if
-\begin{equation} \label{eq:7.3.8}
-a_{2}=-2a_{0},\quad a_{3}=-\frac{7}{6}a_{1},
+\[
+  b_{n}=(n+2)(n+1)a_{n+2}+(3n+4)a_{n}+2a_{n-2},\quad n\ge2.
+\]
+Therefore $y=\sum^{\infty}_{n=0}a_{n}x^{n}$ is a solution of $Ly=0$ if and only if
+\begin{equation}
+  \label{eq:7.3.8}a_{2}=-2a_{0},\quad a_{3}=-\frac{7}{6}a_{1},
 \end{equation}
 and
-\begin{equation} \label{eq:7.3.9}
-a_{n+2}=-\frac{1}{(n+2)(n+1)}\left[(3n+4)a_{n}+2a_{n-2}\right],\quad n\ge2.
+\begin{equation}
+  \label{eq:7.3.9}a_{n+2}=-\frac{1}{(n+2)(n+1)}\left[(3n+4)a_{n}+2a_{n-2}\right],\quad n\ge2.
 \end{equation}
-From the initial conditions in \eqref{eq:7.3.7}, $a_{0}=y(0)=2$ and
-$a_{1}=y'(0)=-3$. We leave it to you to compute $a_{2}$, \dots, $a_{5}$ with
- \eqref{eq:7.3.8} and \eqref{eq:7.3.9} and show that the solution of
-\eqref{eq:7.3.7} is
-$$
-y=2-3x-4x^{2}+\frac{7}{2}x^{3}+3x^{4}-\frac{79}{40}x^{5}+\cdots.
-$$
-We also leave it to you (Exercise~\ref{exer:7.3.15}) to verify numerically
-that the Taylor polynomials $T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}$ converge to
-the solution of \eqref{eq:7.3.9}  on the interval of
-convergence of the power series solution.
+From the initial conditions in \eqref{eq:7.3.7}, $a_{0}=y(0)=2$ and $a_{1}=y'(0)=-3$. We leave it to you to compute $a_{2}$, \dots, $a_{5}$ with \eqref{eq:7.3.8} and \eqref{eq:7.3.9} and show that the solution of \eqref{eq:7.3.7} is
+\[
+  y=2-3x-4x^{2}+\frac{7}{2}x^{3}+3x^{4}-\frac{79}{40}x^{5}+\cdots.
+\]
+We also leave it to you (Exercise~\ref{exer:7.3.15}) to verify numerically that the Taylor polynomials $T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}$ converge to the solution of \eqref{eq:7.3.9} on the interval of convergence of the power series solution.
 
-\exercises
- In Exercises~\ref{exer:7.3.1}--\ref{exer:7.3.12}  find  the coefficients
-$a_{0}$,\dots, $a_{N}$ for $N$ at least $7$ in the series solution
-$y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial value problem.
+\exercises In Exercises~\ref{exer:7.3.1}--\ref{exer:7.3.12} find the coefficients $a_{0}$,\dots, $a_{N}$ for $N$ at least $7$ in the series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial value problem.
 
 \begin{exerciselist}
+  \item\label{exer:7.3.1} \Cex $(1+3x)y''+xy'+2y=0,\quad y(0)=2,\quad y'(0)=-3$
 
-\item\label{exer:7.3.1} \Cex
-$(1+3x)y''+xy'+2y=0,\quad y(0)=2,\quad y'(0)=-3$
+  \item\label{exer:7.3.2} \Cex $(1+x+2x^{2})y''+(2+8x)y'+4y=0,\quad y(0)=-1,\quad y'(0)=2$
 
-\item\label{exer:7.3.2} \Cex
-$(1+x+2x^{2})y''+(2+8x)y'+4y=0,\quad y(0)=-1,\quad y'(0)=2$
+  \item\label{exer:7.3.3} \Cex $(1-2x^{2})y''+(2-6x)y'-2y=0,\quad y(0)=1,\quad y'(0)=0$
 
-\item\label{exer:7.3.3} \Cex
-$(1-2x^{2})y''+(2-6x)y'-2y=0,\quad y(0)=1,\quad y'(0)=0$
+  \item\label{exer:7.3.4} \Cex $(1+x+3x^{2})y''+(2+15x)y'+12y=0,\quad y(0)=0,\quad y'(0)=1$
 
-\item\label{exer:7.3.4} \Cex
-$(1+x+3x^{2})y''+(2+15x)y'+12y=0,\quad y(0)=0,\quad y'(0)=1$
+  \item\label{exer:7.3.5} \Cex $(2+x)y''+(1+x)y'+3y=0,\quad y(0)=4,\quad y'(0)=3$
 
-\item\label{exer:7.3.5} \Cex
-$(2+x)y''+(1+x)y'+3y=0,\quad y(0)=4,\quad y'(0)=3$
+  \item\label{exer:7.3.6} \Cex $(3+3x+x^{2})y''+(6+4x)y'+2y=0,\quad y(0)=7,\quad y'(0)=3$
 
-\item\label{exer:7.3.6} \Cex
-$(3+3x+x^{2})y''+(6+4x)y'+2y=0,\quad y(0)=7,\quad y'(0)=3$
+  \item\label{exer:7.3.7} \Cex $(4+x)y''+(2+x)y'+2y=0,\quad y(0)=2,\quad y'(0)=5$
 
-\item\label{exer:7.3.7} \Cex
-$(4+x)y''+(2+x)y'+2y=0,\quad y(0)=2,\quad y'(0)=5$
+  \item\label{exer:7.3.8} \Cex $(2-3x+2x^{2})y''-(4-6x)y'+2y=0,\quad y(1)=1,\quad y'(1)=-1$
 
-\item\label{exer:7.3.8} \Cex
-$(2-3x+2x^{2})y''-(4-6x)y'+2y=0,\quad y(1)=1,\quad y'(1)=-1$
+  \item\label{exer:7.3.9} \Cex $(3x+2x^{2})y''+10(1+x)y'+8y=0,\quad y(-1)=1,\quad y'(-1)=-1$
 
-\item\label{exer:7.3.9} \Cex
-$(3x+2x^{2})y''+10(1+x)y'+8y=0,\quad y(-1)=1,\quad y'(-1)=-1$
+  \item\label{exer:7.3.10} \Cex $(1-x+x^{2})y''-(1-4x)y'+2y=0,\quad y(1)=2,\quad y'(1)=-1$
 
-\item\label{exer:7.3.10} \Cex
-$(1-x+x^{2})y''-(1-4x)y'+2y=0,\quad y(1)=2,\quad y'(1)=-1$
+  \item\label{exer:7.3.11} \Cex $(2+x)y''+(2+x)y'+y=0,\quad y(-1)=-2,\quad y'(-1)=3$
 
-\item\label{exer:7.3.11} \Cex
-$(2+x)y''+(2+x)y'+y=0,\quad y(-1)=-2,\quad y'(-1)=3$
+  \item\label{exer:7.3.12} \Cex $x^{2}y''-(6-7x)y'+8y=0,\quad y(1)=1,\quad y'(1)=-2$
 
-\item\label{exer:7.3.12} \Cex
-$x^{2}y''-(6-7x)y'+8y=0,\quad y(1)=1,\quad y'(1)=-2$
+  \item\label{exer:7.3.13} \Lex Do the following experiment for various choices of real numbers $a_{0}$, $a_{1}$, and $r$, with $0<r<1/\sqrt{2}$.
+  \begin{alist}
+    \item % (a)
+    Use differential equations software to solve the initial value problem
+    \[
+      (1+x+2x^{2})y''+(1+7x)y'+2y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}, \eqno{\rm(A)}
+    \]
+    numerically on $(-r,r)$. (See Example~\ref{example:7.3.1}.)
 
-\item\label{exer:7.3.13} \Lex
-Do the following experiment for various choices of
-real numbers  $a_{0}$, $a_{1}$, and $r$, with $0<r<1/\sqrt{2}$.
-\begin{alist}
-\item % (a)
-Use  differential equations software  to solve the initial
-value problem
-$$
-(1+x+2x^{2})y''+(1+7x)y'+2y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1},
-\eqno{\rm(A)}
-$$
-numerically on $(-r,r)$. (See Example~\ref{example:7.3.1}.)
-\item % (b)
-For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series
-solution
-$y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A), and graph
-$$
-T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
-$$
-and the solution obtained in \part{a} on $(-r,r)$.
-Continue increasing $N$ until there's no perceptible
-difference between the two graphs.
-\end{alist}
+    \item % (b)
+    For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A), and graph
+    \[
+      T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
+    \]
+    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no perceptible difference between the two graphs.
+  \end{alist}
 
-\item\label{exer:7.3.14} \Lex
-Do the following experiment for various choices of
-real numbers  $a_{0}$, $a_{1}$, and $r$, with $0<r<2$.
-\begin{alist}
-\item % (a)
-Use  differential equations software  to solve the initial
-value problem
-$$
-(3+x)y''+(1+2x)y'-(2-x)y=0,\quad y(-1)=a_{0},\quad y'(-1)=a_{1},
-\eqno{\rm(A)}
-$$
-numerically on $(-1-r,-1+r)$.  (See Example~\ref{example:7.3.2}. Why this
-interval?)
-\item % (b)
-For $N=2$, $3$, $4$, \dots, compute $a_{2},\dots,a_{N}$ in the power series
-solution
-$$
-y=\sum_{n=0}^{\infty}a_{n}(x+1)^{n}
-$$
- of (A), and graph
-$$
-T_{N}(x)=\sum_{n=0}^{N}a_{n}(x+1)^{n}
-$$
-and the solution obtained in \part{a} on $(-1-r,-1+r)$.
-Continue increasing $N$ until there's no perceptible
-difference between the two graphs.
-\end{alist}
+  \item\label{exer:7.3.14} \Lex Do the following experiment for various choices of real numbers $a_{0}$, $a_{1}$, and $r$, with $0<r<2$.
+  \begin{alist}
+    \item % (a)
+    Use differential equations software to solve the initial value problem
+    \[
+      (3+x)y''+(1+2x)y'-(2-x)y=0,\quad y(-1)=a_{0},\quad y'(-1)=a_{1}, \eqno{\rm(A)}
+    \]
+    numerically on $(-1-r,-1+r)$. (See Example~\ref{example:7.3.2}. Why this interval?)
 
-\item\label{exer:7.3.15} \Lex
-Do the following experiment for several choices of $a_{0}$,
- $a_{1}$, and $r$, with $r>0$.
-\begin{alist}
-\item % (a)
-Use  differential equations software to solve the initial
-value problem
-$$
-y''+3xy'+(4+2x^{2})y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1},
-\eqno{\rm(A)}
-$$
-numerically on $(-r,r)$. (See Example~\ref{example:7.3.3}.)
-\item % (b)
-Find the coefficients $a_{0}$, $a_{1}$, \dots, $a_{N}$
-in the power series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A), and
-graph
-$$
-T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
-$$
-and the solution obtained in \part{a} on $(-r,r)$.
-Continue increasing $N$ until there's no perceptible
-difference between the two graphs.
-\end{alist}
+    \item % (b)
+    For $N=2$, $3$, $4$, \dots, compute $a_{2},\dots,a_{N}$ in the power series solution
+    \[
+      y=\sum_{n=0}^{\infty}a_{n}(x+1)^{n}
+    \]
+    of (A), and graph
+    \[
+      T_{N}(x)=\sum_{n=0}^{N}a_{n}(x+1)^{n}
+    \]
+    and the solution obtained in \part{a} on $(-1-r,-1+r)$. Continue increasing $N$ until there's no perceptible difference between the two graphs.
+  \end{alist}
 
-\newpage
-\item\label{exer:7.3.16} \Lex
-Do the following experiment for several choices of $a_{0}$
-and $a_{1}$.
-\begin{alist}
-\item % (a)
-Use differential equations software  to solve the initial
-value problem
-$$
-(1-x)y''-(2-x)y'+y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1},
-\eqno{\rm(A)}
-$$
-numerically on $(-r,r)$.
-\item % (b)
-Find the coefficients $a_{0}$, $a_{1}$, \dots, $a_{N}$
-in the power series solution $y=\sum_{n=0}^{N}a_{n}x^{n}$ of (A), and graph
-$$
-T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
-$$
-and the solution obtained in \part{a} on $(-r,r)$.
-Continue increasing $N$ until there's no perceptible
-difference between the two graphs. What happens as you let $r\to1$?
-\end{alist}
+  \item\label{exer:7.3.15} \Lex Do the following experiment for several choices of $a_{0}$, $a_{1}$, and $r$, with $r>0$.
+  \begin{alist}
+    \item % (a)
+    Use differential equations software to solve the initial value problem
+    \[
+      y''+3xy'+(4+2x^{2})y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}, \eqno{\rm(A)}
+    \]
+    numerically on $(-r,r)$. (See Example~\ref{example:7.3.3}.)
 
-\item\label{exer:7.3.17} \Lex
-Follow the directions of Exercise~\ref{exer:7.3.16} for the
-initial value problem
-$$
-(1+x)y''+3y'+32y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}.
-$$
+    \item % (b)
+    Find the coefficients $a_{0}$, $a_{1}$, \dots, $a_{N}$ in the power series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A), and graph
+    \[
+      T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
+    \]
+    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no perceptible difference between the two graphs.
+  \end{alist}
 
-\item\label{exer:7.3.18} \Lex
-Follow the directions of Exercise~\ref{exer:7.3.16} for the initial
-value problem
-$$
-(1+x^{2})y''+y'+2y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}.
-$$
+  \newpage
 
-\exercisetext{In Exercises~\ref{exer:7.3.19}--\ref{exer:7.3.28} find
-the coefficients  $a_{0}$, \dots, $a_{N}$  for $N$ at least $7$
-in the series solution
-$$
-y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
-$$
-of the
-initial value problem. Take $x_{0}$ to be the point where the initial
-conditions are imposed.}
+  \item\label{exer:7.3.16} \Lex Do the following experiment for several choices of $a_{0}$ and $a_{1}$.
+  \begin{alist}
+    \item % (a)
+    Use differential equations software to solve the initial value problem
+    \[
+      (1-x)y''-(2-x)y'+y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}, \eqno{\rm(A)}
+    \]
+    numerically on $(-r,r)$.
 
-\item\label{exer:7.3.19} \Cex
-$(2+4x)y''-4y'-(6+4x)y=0,\quad y(0)=2,\quad y'(0)=-7$
+    \item % (b)
+    Find the coefficients $a_{0}$, $a_{1}$, \dots, $a_{N}$ in the power series solution $y=\sum_{n=0}^{N}a_{n}x^{n}$ of (A), and graph
+    \[
+      T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
+    \]
+    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no perceptible difference between the two graphs. What happens as you let $r\to1$?
+  \end{alist}
 
-\item\label{exer:7.3.20} \Cex
-$(1+2x)y''-(1-2x)y'-(3-2x)y=0,\quad y(1)=1,\quad y'(1)=-2$
+  \item\label{exer:7.3.17} \Lex Follow the directions of Exercise~\ref{exer:7.3.16} for the initial value problem
+  \[
+    (1+x)y''+3y'+32y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}.
+  \]
 
-\item\label{exer:7.3.21} \Cex
-$(5+2x)y''-y'+(5+x)y=0,\quad y(-2)=2,\quad y'(-2)=-1$
+  \item\label{exer:7.3.18} \Lex Follow the directions of Exercise~\ref{exer:7.3.16} for the initial value problem
+  \[
+    (1+x^{2})y''+y'+2y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}.
+  \]
 
-\item\label{exer:7.3.22} \Cex
-$(4+x)y''-(4+2x)y'+(6+x)y=0,\quad y(-3)=2,\quad y'(-3)=-2$
+  \exercisetext{In Exercises~\ref{exer:7.3.19}--\ref{exer:7.3.28} find the coefficients $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the series solution \[y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}\] of the initial value problem. Take $x_{0}$ to be the point where the initial conditions are imposed.}
 
-\item\label{exer:7.3.23} \Cex
-$(2+3x)y''-xy'+2xy=0,\quad y(0)=-1,\quad y'(0)=2$
+  \item\label{exer:7.3.19} \Cex $(2+4x)y''-4y'-(6+4x)y=0,\quad y(0)=2,\quad y'(0)=-7$
 
-\item\label{exer:7.3.24} \Cex
-$(3+2x)y''+3y'-xy=0,\quad y(-1)=2,\quad y'(-1)=-3$
+  \item\label{exer:7.3.20} \Cex $(1+2x)y''-(1-2x)y'-(3-2x)y=0,\quad y(1)=1,\quad y'(1)=-2$
 
-\item\label{exer:7.3.25} \Cex
-$(3+2x)y''-3y'-(2+x)y=0,\quad y(-2)=-2,\quad y'(-2)=3$
+  \item\label{exer:7.3.21} \Cex $(5+2x)y''-y'+(5+x)y=0,\quad y(-2)=2,\quad y'(-2)=-1$
 
-\item\label{exer:7.3.26} \Cex
-$(10-2x)y''+(1+x)y=0,\quad y(2)=2,\quad y'(2)=-4$
+  \item\label{exer:7.3.22} \Cex $(4+x)y''-(4+2x)y'+(6+x)y=0,\quad y(-3)=2,\quad y'(-3)=-2$
 
-\item\label{exer:7.3.27} \Cex
-$(7+x)y''+(8+2x)y'+(5+x)y=0,\quad y(-4)=1,\quad y'(-4)=2$
+  \item\label{exer:7.3.23} \Cex $(2+3x)y''-xy'+2xy=0,\quad y(0)=-1,\quad y'(0)=2$
 
-\item\label{exer:7.3.28} \Cex
-$(6+4x)y''+(1+2x)y=0,\quad y(-1)=-1,\quad y'(-1)=2$
+  \item\label{exer:7.3.24} \Cex $(3+2x)y''+3y'-xy=0,\quad y(-1)=2,\quad y'(-1)=-3$
 
-\item\label{exer:7.3.29}
-Show that the coefficients in the power series in $x$  for the general
-solution of
-$$
-(1+\alpha x+\beta x^{2})y''+(\gamma+\delta x)y'+\epsilon y=0
-$$
-satisfy the recurrence relation
-$$
-a_{n+2}=-\frac{\gamma+\alpha n}{n+2}\,a_{n+1}-\frac{\beta n(n-1)+\delta
-n+\epsilon}{(n+2)(n+1)}\,a_{n}.
-$$
+  \item\label{exer:7.3.25} \Cex $(3+2x)y''-3y'-(2+x)y=0,\quad y(-2)=-2,\quad y'(-2)=3$
 
-\newpage
-\item\label{exer:7.3.30}
-\begin{alist}
-\item % (a)
-Let $\alpha$  and $\beta$  be constants, with $\beta\ne0$. Show that
-$y=\sum_{n=0}^{\infty}a_{n}x^{n}$
-is a solution of
-$$
-(1+\alpha x+\beta x^{2})y''+(2\alpha+4\beta x)y'+2\beta y=0
-\eqno{\rm(A)}
-$$
-if and only if
-$$
- a_{n+2}+\alpha a_{n+1}+\beta a_{n}=0,\quad n\ge0.
-\eqno{\rm(B)}
-$$
-An equation of this form is called a {\color{blue}\it second order homogeneous linear
-difference equation\/}. The polynomial $p(r)=r^{2}+\alpha r+\beta$ is called the
-{\color{blue}\it characteristic polynomial\/} of (B).
-If $r_{1}$
-and $r_{2}$ are the zeros of $p$, then $1/r_{1}$ and $1/r_{2}$ are the
-zeros of
-$$
-P_{0}(x)=1+\alpha x+\beta x^{2}.
-$$
-\item % (b)
-Suppose  $p(r)=(r-r_{1})(r-r_{2})$ where $r_{1}$ and $r_{2}$ are real
-and distinct, and
-let $\rho$ be the smaller of the two numbers $\{1/|r_{1}|,1/|r_{2}|\}$. Show
-that if  $c_{1}$  and $c_{2}$ are constants then the sequence
-$$
-a_{n}=c_{1}r_{1}^{n}+c_{2}r_{2}^{n},\quad n\ge0
-$$
-satisfies (B). Conclude from this that any function of the form
-$$
-y=\sum_{n=0}^{\infty}(c_{1}r_{1}^{n}+c_{2}r_{2}^{n})x^{n}
-$$
-is a solution of (A) on $(-\rho,\rho)$.
-\item % (c)
-Use \part{b}  and the formula for the sum of a geometric series to show
-that
-the functions
-$$
-y_{1}=\frac{1}{1-r_{1}x}\quad\mbox{ and }\quad y_{2}=\frac{1}{1-r_{2}x}
-$$
-form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
-\item % (d)
-Show that $\{y_{1},y_{2}\}$ is
-a fundamental set of solutions of (A) on any interval that
-doesn't contain either $1/r_{1}$ or $1/r_{2}$.
-\item % (e)
-Suppose  $p(r)=(r-r_{1})^{2}$, and let $\rho=1/|r_{1}|$.
-Show that if   $c_{1}$  and $c_{2}$ are constants then the sequence
-$$
-a_{n}=(c_{1}+c_{2}n)r_{1}^{n},\quad n\ge0
-$$
-satisfies (B). Conclude from this that any function of the form
-$$
-y=\sum_{n=0}^{\infty}(c_{1}+c_{2}n)r_{1}^{n}x^{n}
-$$
-is a solution of (A) on $(-\rho,\rho)$.
-\item % (f)
-Use (e)  and the formula for the sum of a geometric series to show
-that the functions
-$$
-y_{1}=\frac{1}{1-r_{1}x}\quad\mbox{ and }\quad y_{2}=\frac{x}{(1-r_{1}x)^{2}}
-$$
-form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
-\item % (g)
-Show that $\{y_{1},y_{2}\}$ is
- a fundamental set of solutions of (A) on any interval that
-does not contain $1/r_{1}$.
-\end{alist}
+  \item\label{exer:7.3.26} \Cex $(10-2x)y''+(1+x)y=0,\quad y(2)=2,\quad y'(2)=-4$
 
-\item\label{exer:7.3.31}
-Use the results of Exercise~\ref{exer:7.3.30} to find the general solution
-of the given equation on any interval on which polynomial multiplying
-$y''$ has no zeros.
+  \item\label{exer:7.3.27} \Cex $(7+x)y''+(8+2x)y'+(5+x)y=0,\quad y(-4)=1,\quad y'(-4)=2$
 
-{\bf (a)}  $(1+3x+2x^{2})y''+(6+8x)y'+4y=0$
+  \item\label{exer:7.3.28} \Cex $(6+4x)y''+(1+2x)y=0,\quad y(-1)=-1,\quad y'(-1)=2$
 
-{\bf (b)} $(1-5x+6x^{2})y''-(10-24x)y'+12y=0$
+  \item\label{exer:7.3.29} Show that the coefficients in the power series in $x$ for the general solution of
+  \[
+    (1+\alpha x+\beta x^{2})y''+(\gamma+\delta x)y'+\epsilon y=0
+  \]
+  satisfy the recurrence relation
+  \[
+    a_{n+2}=-\frac{\gamma+\alpha n}{n+2}\,a_{n+1}-\frac{\beta n(n-1)+\delta n+\epsilon}{(n+2)(n+1)}\,a_{n}.
+  \]
 
-{\bf (c)} $(1-4x+4x^{2})y''-(8-16x)y'+8y=0$
+  \newpage
 
-{\bf (d)} $(4+4x+x^{2})y''+(8+4x)y'+2y=0$
+  \item\label{exer:7.3.30}
+  \begin{alist}
+    \item % (a)
+    Let $\alpha$ and $\beta$ be constants, with $\beta\ne0$. Show that $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ is a solution of
+    \[
+      (1+\alpha x+\beta x^{2})y''+(2\alpha+4\beta x)y'+2\beta y=0 \eqno{\rm(A)}
+    \]
+    if and only if
+    \[
+      a_{n+2}+\alpha a_{n+1}+\beta a_{n}=0,\quad n\ge0. \eqno{\rm(B)}
+    \]
+    An equation of this form is called a {\color{blue}\it second order homogeneous linear difference equation\/}. The polynomial $p(r)=r^{2}+\alpha r+\beta$ is called the {\color{blue}\it characteristic polynomial\/} of (B). If $r_{1}$ and $r_{2}$ are the zeros of $p$, then $1/r_{1}$ and $1/r_{2}$ are the zeros of
+    \[
+      P_{0}(x)=1+\alpha x+\beta x^{2}.
+    \]
 
-{\bf (e)} $(4+8x+3x^{2})y''+(16+12x)y'+6y=0$
+    \item % (b)
+    Suppose $p(r)=(r-r_{1})(r-r_{2})$ where $r_{1}$ and $r_{2}$ are real and distinct, and let $\rho$ be the smaller of the two numbers $\{1/|r_{1}|,1/|r_{2}|\}$. Show that if $c_{1}$ and $c_{2}$ are constants then the sequence
+    \[
+      a_{n}=c_{1}r_{1}^{n}+c_{2}r_{2}^{n},\quad n\ge0
+    \]
+    satisfies (B). Conclude from this that any function of the form
+    \[
+      y=\sum_{n=0}^{\infty}(c_{1}r_{1}^{n}+c_{2}r_{2}^{n})x^{n}
+    \]
+    is a solution of (A) on $(-\rho,\rho)$.
 
-\exercisetext{In Exercises~\ref{exer:7.3.32}--\ref{exer:7.3.38}  find
-the coefficients  $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the series
-solution
-$y=\sum_{n=0}^{\infty}a_{n}x^{n}$
- of the initial value problem.}
+    \item % (c)
+    Use \part{b} and the formula for the sum of a geometric series to show that the functions
+    \[
+      y_{1}=\frac{1}{1-r_{1}x}\quad\mbox{ and }\quad y_{2}=\frac{1}{1-r_{2}x}
+    \]
+    form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
 
-\item\label{exer:7.3.32} \Cex
-$y''+2xy'+(3+2x^{2})y=0,\quad y(0)=1,\quad y'(0)=-2$
+    \item % (d)
+    Show that $\{y_{1},y_{2}\}$ is a fundamental set of solutions of (A) on any interval that doesn't contain either $1/r_{1}$ or $1/r_{2}$.
 
-\item\label{exer:7.3.33} \Cex
-$y''-3xy'+(5+2x^{2})y=0,\quad y(0)=1,\quad y'(0)=-2$
+    \item % (e)
+    Suppose $p(r)=(r-r_{1})^{2}$, and let $\rho=1/|r_{1}|$. Show that if $c_{1}$ and $c_{2}$ are constants then the sequence
+    \[
+      a_{n}=(c_{1}+c_{2}n)r_{1}^{n},\quad n\ge0
+    \]
+    satisfies (B). Conclude from this that any function of the form
+    \[
+      y=\sum_{n=0}^{\infty}(c_{1}+c_{2}n)r_{1}^{n}x^{n}
+    \]
+    is a solution of (A) on $(-\rho,\rho)$.
 
-\item\label{exer:7.3.34} \Cex
-$y''+5xy'-(3-x^{2})y=0,\quad y(0)=6,\quad y'(0)=-2$
+    \item % (f)
+    Use (e) and the formula for the sum of a geometric series to show that the functions
+    \[
+      y_{1}=\frac{1}{1-r_{1}x}\quad\mbox{ and }\quad y_{2}=\frac{x}{(1-r_{1}x)^{2}}
+    \]
+    form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
 
-\item\label{exer:7.3.35} \Cex
-$y''-2xy'-(2+3x^{2})y=0,\quad y(0)=2,\quad y'(0)=-5$
+    \item % (g)
+    Show that $\{y_{1},y_{2}\}$ is a fundamental set of solutions of (A) on any interval that does not contain $1/r_{1}$.
+  \end{alist}
 
-\item\label{exer:7.3.36} \Cex
-$y''-3xy'+(2+4x^{2})y=0,\quad y(0)=3,\quad y'(0)=6$
+  \item\label{exer:7.3.31} Use the results of Exercise~\ref{exer:7.3.30} to find the general solution of the given equation on any interval on which polynomial multiplying $y''$ has no zeros.
 
-\item\label{exer:7.3.37} \Cex
-$2y''+5xy'+(4+2x^{2})y=0,\quad y(0)=3,\quad y'(0)=-2$
+  {\bf (a)} $(1+3x+2x^{2})y''+(6+8x)y'+4y=0$
 
-\item\label{exer:7.3.38} \Cex
-$3y''+2xy'+(4-x^{2})y=0,\quad y(0)=-2,\quad y'(0)=3$
+  {\bf (b)} $(1-5x+6x^{2})y''-(10-24x)y'+12y=0$
 
-\item\label{exer:7.3.39}
-  Find power series in $x$ for the solutions $y_{1}$
- and $y_{2}$ of
-$$
-y''+4xy'+(2+4x^{2})y=0
-$$
-such that $y_{1}(0)=1$,\;  $y'_{1}(0)=0$,\;  $y_{2}(0)=0$,\;
- $y'_{2}(0)=1$, and identify $y_{1}$  and $y_{2}$ in terms of familiar elementary
-functions.
+  {\bf (c)} $(1-4x+4x^{2})y''-(8-16x)y'+8y=0$
 
-\exercisetext{In Exercises~\ref{exer:7.3.40}--\ref{exer:7.3.49} find
-the coefficients  $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$
-in the series solution
-$$
-y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
-$$
-of the initial value problem. Take $x_{0}$ to be the point where the
-initial conditions are imposed.}
+  {\bf (d)} $(4+4x+x^{2})y''+(8+4x)y'+2y=0$
 
-\item\label{exer:7.3.40} \Cex
-$(1+x)y''+x^{2}y'+(1+2x)y=0,\quad y(0)-2,\quad y'(0)=3$
+  {\bf (e)} $(4+8x+3x^{2})y''+(16+12x)y'+6y=0$
 
-\item\label{exer:7.3.41} \Cex
-$y''+(1+2x+x^{2})y'+2y=0,\quad y(0)=2,\quad y'(0)=3$
+  \exercisetext{In Exercises~\ref{exer:7.3.32}--\ref{exer:7.3.38} find the coefficients $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial value problem.}
 
-\item\label{exer:7.3.42} \Cex
-$(1+x^{2})y''+(2+x^{2})y'+xy=0,\quad y(0)=-3,\quad y'(0)=5$
+  \item\label{exer:7.3.32} \Cex $y''+2xy'+(3+2x^{2})y=0,\quad y(0)=1,\quad y'(0)=-2$
 
-\item\label{exer:7.3.43} \Cex
-$(1+x)y''+(1-3x+2x^{2})y'-(x-4)y=0,\quad y(1)=-2,\quad y'(1)=3$
+  \item\label{exer:7.3.33} \Cex $y''-3xy'+(5+2x^{2})y=0,\quad y(0)=1,\quad y'(0)=-2$
 
-\item\label{exer:7.3.44} \Cex
-$y''+(13+12x+3x^{2})y'+(5+2x),\quad y(-2)=2,\quad y'(-2)=-3$
+  \item\label{exer:7.3.34} \Cex $y''+5xy'-(3-x^{2})y=0,\quad y(0)=6,\quad y'(0)=-2$
 
-\item\label{exer:7.3.45} \Cex
-$(1+2x+3x^{2})y''+(2-x^{2})y'+(1+x)y=0,\quad y(0)=1,\quad y'(0)=-2$
+  \item\label{exer:7.3.35} \Cex $y''-2xy'-(2+3x^{2})y=0,\quad y(0)=2,\quad y'(0)=-5$
 
-\item\label{exer:7.3.46} \Cex
-$(3+4x+x^{2})y''-(5+4x-x^{2})y'-(2+x)y=0,\quad y(-2)=2,\quad y'(-2)=-1$
+  \item\label{exer:7.3.36} \Cex $y''-3xy'+(2+4x^{2})y=0,\quad y(0)=3,\quad y'(0)=6$
 
-\item\label{exer:7.3.47} \Cex
-$(1+2x+x^{2})y''+(1-x)y=0,\quad y(0)=2,\quad y'(0)=-1$
+  \item\label{exer:7.3.37} \Cex $2y''+5xy'+(4+2x^{2})y=0,\quad y(0)=3,\quad y'(0)=-2$
 
-\enlargethispage{1in}
+  \item\label{exer:7.3.38} \Cex $3y''+2xy'+(4-x^{2})y=0,\quad y(0)=-2,\quad y'(0)=3$
 
-\item\label{exer:7.3.48} \Cex
-$(x-2x^{2})y''+(1+3x-x^{2})y'+(2+x)y=0,\quad y(1)=1,\quad y'(1)=0$
+  \item\label{exer:7.3.39} Find power series in $x$ for the solutions $y_{1}$ and $y_{2}$ of
+  \[
+    y''+4xy'+(2+4x^{2})y=0
+  \]
+  such that $y_{1}(0)=1$,\; $y'_{1}(0)=0$,\; $y_{2}(0)=0$,\; $y'_{2}(0)=1$, and identify $y_{1}$ and $y_{2}$ in terms of familiar elementary functions.
 
-\item\label{exer:7.3.49} \Cex
-$(16-11x+2x^{2})y''+(10-6x+x^{2})y'-(2-x)y,\quad y(3)=1,\quad y'(3)=-2$
+  \exercisetext{In Exercises~\ref{exer:7.3.40}--\ref{exer:7.3.49} find the coefficients $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the series solution \[y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}\] of the initial value problem. Take $x_{0}$ to be the point where the initial conditions are imposed.}
 
+  \item\label{exer:7.3.40} \Cex $(1+x)y''+x^{2}y'+(1+2x)y=0,\quad y(0)-2,\quad y'(0)=3$
+
+  \item\label{exer:7.3.41} \Cex $y''+(1+2x+x^{2})y'+2y=0,\quad y(0)=2,\quad y'(0)=3$
+
+  \item\label{exer:7.3.42} \Cex $(1+x^{2})y''+(2+x^{2})y'+xy=0,\quad y(0)=-3,\quad y'(0)=5$
+
+  \item\label{exer:7.3.43} \Cex $(1+x)y''+(1-3x+2x^{2})y'-(x-4)y=0,\quad y(1)=-2,\quad y'(1)=3$
+
+  \item\label{exer:7.3.44} \Cex $y''+(13+12x+3x^{2})y'+(5+2x),\quad y(-2)=2,\quad y'(-2)=-3$
+
+  \item\label{exer:7.3.45} \Cex $(1+2x+3x^{2})y''+(2-x^{2})y'+(1+x)y=0,\quad y(0)=1,\quad y'(0)=-2$
+
+  \item\label{exer:7.3.46} \Cex $(3+4x+x^{2})y''-(5+4x-x^{2})y'-(2+x)y=0,\quad y(-2)=2,\quad y'(-2)=-1$
+
+  \item\label{exer:7.3.47} \Cex $(1+2x+x^{2})y''+(1-x)y=0,\quad y(0)=2,\quad y'(0)=-1$
+
+  \enlargethispage{1in}
+
+  \item\label{exer:7.3.48} \Cex $(x-2x^{2})y''+(1+3x-x^{2})y'+(2+x)y=0,\quad y(1)=1,\quad y'(1)=0$
+
+  \item\label{exer:7.3.49} \Cex $(16-11x+2x^{2})y''+(10-6x+x^{2})y'-(2-x)y,\quad y(3)=1,\quad y'(3)=-2$
 \end{exerciselist}

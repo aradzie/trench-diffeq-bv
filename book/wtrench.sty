@@ -17,23 +17,6 @@
    \vrule height1.3ex\hskip0.8ex\vrule}\hrule
   }}\par}
 
-\newcommand{\markonleft}[1] {\hspace*{1em}{\rm Chapter \thechapter}
-{#1 }\hfill}
-
-\newcommand{\markonright}[1]
-{\hfill{{\rm Section \thesection} #1
-}\hspace*{1em}}
-
-\newcommand{\newsection}[3]{
-\setcounter{section}{#1}
-\label{sectionstart:\thesection}
-\setcounter{theorem}{0}
-\setcounter{example}{0}
-\setcounter{figure}{0}
-\setcounter{equation}{0}
-\markboth{\markonleft{#2}}{\markonright{#3}}
-\vskip7pt}
-
 \newcommand{\hint}[1]{{\sc Hint}:\ {\it #1}}
 \newcommand{\note}[1]{({\sc Note}:\ #1)}
 
@@ -71,21 +54,12 @@
 \mbox{#1}\vspace*{-9\jot}}\nonumber\\}
 %this command comes after a \newline command (\\)
 
-\newcommand{\sectiontitle}[1]{\noindent{\color{red}\bf\thesection\small\bf\  #1}
-\vskip15pt}
-
-\newcommand{\chaptertitle}[1]{\vspace*{2.2pc}\begin{center}{\Huge\bf
-CHAPTER~\thechapter}\\\bigskip{\Huge\bf
-#1}\vskip4.8pc\label{sectionstart:\thesection}\end{center}}
-
-%\newcommand{\exercises}{
-%\bigskip{\centerline{\color{red}\large\bf\thesection\
-%Exercises}}\noindent\mbox{}\hrulefill\mbox{}\label{exerstart:\thesection}\vskip6pt\noindent}
-
-
-\newcommand{\exercises}{
-\bigskip{\centerline{\color{red}\large\bf\thesection\
-Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\thesection}\vskip6pt\noindent}
+\newcommand{\exercises}{%
+  \phantomsection
+  \addcontentsline{toc}{subsection}{Exercises}%
+  \label{exerstart:\thesection}%
+  \subsection*{Exercises}%
+  \noindent}
 
 \newcounter{exercise}
 \newenvironment{exerciselist}{\begin{list}{\bf
@@ -124,7 +98,7 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
                 \fi
                 \columnseprule \z@
                 \columnsep 35\p@
-\twocolumn[\@makeschapterhead{\vspace*{18pt}\centerline{\Huge\bf Index}\vspace*{26pt}}]%
+\twocolumn[\@makeschapterhead{Index}]%
                 \thispagestyle{plain}\parindent\z@
                 \parskip\z@ \@plus .3\p@\relax
                 \let\item\@idxitem}

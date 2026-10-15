@@ -1,7 +1,8 @@
 \section{Variation of Parameters}
 
 \noindent
-In this section we give a method called {\color{blue}\it variation of parameters\/} for finding a particular solution of
+In this section we give a method called {\color{blue}\it variation of parameters\/} for finding a
+particular solution of
 \begin{equation}
   \label{eq:5.7.1}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=F(x)
 \end{equation}
@@ -9,26 +10,43 @@ if we know a fundamental set $\{y_{1},y_{2}\}$ of solutions of the complementary
 \begin{equation}
   \label{eq:5.7.2}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0.
 \end{equation}
-Having found a particular solution $y_{p}$ by this method, we can write the general solution of \eqref{eq:5.7.1} as
+Having found a particular solution $y_{p}$ by this method, we can write the general solution of
+\eqref{eq:5.7.1} as
 \[
   y=y_{p}+c_{1}y_{1}+c_{2}y_{2}.
 \]
 
-Since we need only one nontrivial solution of \eqref{eq:5.7.2} to find the general solution of \eqref{eq:5.7.1} by reduction of order, it's natural to ask why we're interested in variation of parameters, which requires two linearly independent solutions of \eqref{eq:5.7.2} to achieve the same goal. Here's the answer:
+Since we need only one nontrivial solution of \eqref{eq:5.7.2} to find the general solution of
+\eqref{eq:5.7.1} by reduction of order, it's natural to ask why we're interested in variation of
+parameters, which requires two linearly independent solutions of \eqref{eq:5.7.2} to achieve the
+same goal. Here's the answer:
 
 \begin{itemize}
-  \item If we already know two linearly independent solutions of \eqref{eq:5.7.2} then variation of parameters will probably be simpler than reduction of order.
+  \item If we already know two linearly independent solutions of \eqref{eq:5.7.2} then variation of
+        parameters will probably be simpler than reduction of order.
 
-  \item Variation of parameters generalizes naturally to a method for finding particular solutions of higher order linear equations (Section~9.4) and linear systems of equations (Section~10.7), while reduction of order doesn't.
+  \item Variation of parameters generalizes naturally to a method for finding particular solutions
+        of higher order linear equations (Section~9.4) and linear systems of equations
+        (Section~10.7), while reduction of order doesn't.
 
-  \item Variation of parameters is a powerful theoretical tool used by researchers in differential equations. Although a detailed discussion of this is beyond the scope of this book, you can get an idea of what it means from Exercises~\ref{exer:5.7.37}--\ref{exer:5.7.39}.
+  \item Variation of parameters is a powerful theoretical tool used by researchers in differential
+        equations. Although a detailed discussion of this is beyond the scope of this book, you can
+        get an idea of what it means from Exercises~\ref{exer:5.7.37}--\ref{exer:5.7.39}.
 \end{itemize}
 
-We'll now derive the method. As usual, we consider solutions of \eqref{eq:5.7.1} and \eqref{eq:5.7.2} on an interval $(a,b)$ where $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are continuous and $P_{0}$ has no zeros. Suppose that $\{y_{1},y_{2}\}$ is a fundamental set of solutions of the complementary equation \eqref{eq:5.7.2}. We look for a particular solution of \eqref{eq:5.7.1} in the form
+We'll now derive the method. As usual, we consider solutions of \eqref{eq:5.7.1} and
+\eqref{eq:5.7.2} on an interval $(a,b)$ where $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are continuous and
+$P_{0}$ has no zeros. Suppose that $\{y_{1},y_{2}\}$ is a fundamental set of solutions of the
+complementary equation \eqref{eq:5.7.2}. We look for a particular solution of \eqref{eq:5.7.1} in
+the form
 \begin{equation}
   \label{eq:5.7.3}y_{p}=u_{1}y_{1}+u_{2}y_{2}
 \end{equation}
-where $u_{1}$ and $u_{2}$ are functions to be determined so that $y_{p}$ satisfies \eqref{eq:5.7.1}. You may not think this is a good idea, since there are now two unknown functions to be determined, rather than one. However, since $u_{1}$ and $u_{2}$ have to satisfy only one condition (that $y_{p}$ is a solution of \eqref{eq:5.7.1}), we can impose a second condition that produces a convenient simplification, as follows.
+where $u_{1}$ and $u_{2}$ are functions to be determined so that $y_{p}$ satisfies \eqref{eq:5.7.1}.
+You may not think this is a good idea, since there are now two unknown functions to be determined,
+rather than one. However, since $u_{1}$ and $u_{2}$ have to satisfy only one condition (that $y_{p}$
+is a solution of \eqref{eq:5.7.1}), we can impose a second condition that produces a convenient
+simplification, as follows.
 
 Differentiating \eqref{eq:5.7.3} yields
 \begin{equation}
@@ -42,15 +60,20 @@ Then \eqref{eq:5.7.4} becomes
 \begin{equation}
   y_{p}'=u_{1}y_{1}'+u_{2}y_{2}';\label{eq:5.7.6}
 \end{equation}
-that is, \eqref{eq:5.7.5} permits us to differentiate $y_{p}$ (once!) as if $u_{1}$ and $u_{2}$ are constants. Differentiating \eqref{eq:5.7.4} yields
+that is, \eqref{eq:5.7.5} permits us to differentiate $y_{p}$ (once!) as if $u_{1}$ and $u_{2}$ are
+constants. Differentiating \eqref{eq:5.7.4} yields
 \begin{equation}
   \label{eq:5.7.7}y_{p}''=u_{1}y''_{1}+u_{2}y''_{2}+u_{1}'y_{1}'+u_{2}'y_{2}'.
 \end{equation}
-(There are no terms involving $u_{1}''$ and $u_{2}''$ here, as there would be if we hadn't required \eqref{eq:5.7.5}.) Substituting \eqref{eq:5.7.3}, \eqref{eq:5.7.6}, and \eqref{eq:5.7.7} into \eqref{eq:5.7.1} and collecting the coefficients of $u_{1}$ and $u_{2}$ yields
+(There are no terms involving $u_{1}''$ and $u_{2}''$ here, as there would be if we hadn't required
+\eqref{eq:5.7.5}.) Substituting \eqref{eq:5.7.3}, \eqref{eq:5.7.6}, and \eqref{eq:5.7.7} into
+\eqref{eq:5.7.1} and collecting the coefficients of $u_{1}$ and $u_{2}$ yields
 \[
   u_{1}(P_{0}y''_{1}+P_{1}y_{1}'+P_{2}y_{1})+u_{2}(P_{0}y''_{2}+P_{1}y_{2}'+P_{2}y_{2}) +P_{0}(u_{1}'y_{1}'+u_{2}'y_{2}')=F.
 \]
-As in the derivation of the method of reduction of order, the coefficients of $u_{1}$ and $u_{2}$ here are both zero because $y_{1}$ and $y_{2}$ satisfy the complementary equation. Hence, we can rewrite the last equation as
+As in the derivation of the method of reduction of order, the coefficients of $u_{1}$ and $u_{2}$
+here are both zero because $y_{1}$ and $y_{2}$ satisfy the complementary equation. Hence, we can
+rewrite the last equation as
 \begin{equation}
   \label{eq:5.7.8}P_{0}(u_{1}'y_{1}'+u_{2}'y_{2}')=F.
 \end{equation}
@@ -64,7 +87,10 @@ Therefore $y_{p}$ in \eqref{eq:5.7.3} satisfies \eqref{eq:5.7.1} if
 \end{equation}
 where the first equation is the same as \eqref{eq:5.7.5} and the second is from \eqref{eq:5.7.8}.
 
-We'll now show that you can always solve \eqref{eq:5.7.9} for $u_{1}'$ and $u_{2}'$. (The method that we use here will always work, but simpler methods usually work when you're dealing with specific equations.) To obtain $u_{1}'$, multiply the first equation in \eqref{eq:5.7.9} by $y_{2}'$ and the second equation by $y_{2}$. This yields
+We'll now show that you can always solve \eqref{eq:5.7.9} for $u_{1}'$ and $u_{2}'$. (The method
+that we use here will always work, but simpler methods usually work when you're dealing with
+specific equations.) To obtain $u_{1}'$, multiply the first equation in \eqref{eq:5.7.9} by $y_{2}'$
+and the second equation by $y_{2}$. This yields
 \begin{eqnarray*}
   u_{1}'y_{1}y_{2}'+u_{2}'y_{2}y_{2}' & = & 0 \\
   u_{1}'y_{1}'y_{2}+u_{2}'y_{2}'y_{2} & = & \frac{Fy_{2}}{P_{0}}.
@@ -73,7 +99,9 @@ Subtracting the second equation from the first yields
 \begin{equation}
   \label{eq:5.7.10}u_{1}'(y_{1}y_{2}'-y_{1}'y_{2})=-\frac{Fy_{2}}{P_{0}}.
 \end{equation}
-Since $\{y_{1},y_{2}\}$ is a fundamental set of solutions of \eqref{eq:5.7.2} on $(a,b)$, Theorem~\ref{thmtype:5.1.6} implies that the Wronskian $y_{1}y_{2}'-y_{1}'y_{2}$ has no zeros on $(a,b)$. Therefore we can solve \eqref{eq:5.7.10} for $u_{1}'$, to obtain
+Since $\{y_{1},y_{2}\}$ is a fundamental set of solutions of \eqref{eq:5.7.2} on $(a,b)$,
+Theorem~\ref{thmtype:5.1.6} implies that the Wronskian $y_{1}y_{2}'-y_{1}'y_{2}$ has no zeros on
+$(a,b)$. Therefore we can solve \eqref{eq:5.7.10} for $u_{1}'$, to obtain
 \begin{equation}
   \label{eq:5.7.11}u_{1}'=-\frac{Fy_{2}}{P_{0}(y_{1}y_{2}'-y_{1}'y_{2})}.
 \end{equation}
@@ -82,9 +110,12 @@ We leave it to you to start from \eqref{eq:5.7.9} and show by a similar argument
   \label{eq:5.7.12}u_{2}'=\frac{Fy_{1}}{P_{0}(y_{1}y_{2}'-y_{1}'y_{2})}.
 \end{equation}
 
-We can now obtain $u_{1}$ and $u_{2}$ by integrating $u_{1}'$ and $u_{2}'$. The constants of integration can be taken to be zero, since any choice of $u_{1}$ and $u_{2}$ in \eqref{eq:5.7.3} will suffice.
+We can now obtain $u_{1}$ and $u_{2}$ by integrating $u_{1}'$ and $u_{2}'$. The constants of
+integration can be taken to be zero, since any choice of $u_{1}$ and $u_{2}$ in \eqref{eq:5.7.3}
+will suffice.
 
-You should not memorize \eqref{eq:5.7.11} and \eqref{eq:5.7.12}. On the other hand, you don't want to rederive the whole procedure for every specific problem. We recommend the a compromise:
+You should not memorize \eqref{eq:5.7.11} and \eqref{eq:5.7.12}. On the other hand, you don't want
+to rederive the whole procedure for every specific problem. We recommend the a compromise:
 \begin{alist}
   \item % (a)
   Write
@@ -108,7 +139,8 @@ You should not memorize \eqref{eq:5.7.11} and \eqref{eq:5.7.12}. On the other ha
   Solve \eqref{eq:5.7.14} for $u_{1}'$ and $u_{2}'$ by any convenient method.
 
   \item % (d)
-  Obtain $u_{1}$ and $u_{2}$ by integrating $u_{1}'$ and $u_{2}'$, taking the constants of integration to be zero.
+  Obtain $u_{1}$ and $u_{2}$ by integrating $u_{1}'$ and $u_{2}'$, taking the constants of
+  integration to be zero.
 
   \item % (e)
   Substitute $u_{1}$ and $u_{2}$ into \eqref{eq:5.7.13} to obtain $y_{p}$.
@@ -135,7 +167,9 @@ where
   u_{1}'x+\phantom{2}u_{2}'x^{2}           & = & 0 \\
   u_{1}'\phantom{x}+2u_{2}'x\phantom{^{2}} & = & \frac{x^{9/2}}{x^{2}}=x^{5/2}.
 \end{eqnarray*}
-From the first equation, $u_{1}'=-u_{2}'x$. Substituting this into the second equation yields $u_{2}'x=x^{5/2}$, so $u_{2}'=x^{3/2}$ and therefore $u_{1}'=-u_{2}'x=-x^{5/2}$. Integrating and taking the constants of integration to be zero yields
+From the first equation, $u_{1}'=-u_{2}'x$. Substituting this into the second equation yields
+$u_{2}'x=x^{5/2}$, so $u_{2}'=x^{3/2}$ and therefore $u_{1}'=-u_{2}'x=-x^{5/2}$. Integrating and
+taking the constants of integration to be zero yields
 \[
   u_{1}=-\frac{2}{7}x^{7/2}\mbox{\quad and \quad}u_{2}=\frac{2}{5}x^{5/2}.
 \]
@@ -169,7 +203,9 @@ where
   u_{1}'x+u_{2}'e^{x}           & = & 0 \\
   u_{1}'\phantom{x}+u_{2}'e^{x} & = & \frac{(x-1)^{2}}{x-1}=x-1.
 \end{eqnarray*}
-Subtracting the first equation from the second yields $-u_{1}'(x-1)=x-1$, so $u_{1}'=-1$. From this and the first equation, $u_{2}'=-xe^{-x}u_{1}'=xe^{-x}$. Integrating and taking the constants of integration to be zero yields
+Subtracting the first equation from the second yields $-u_{1}'(x-1)=x-1$, so $u_{1}'=-1$. From this
+and the first equation, $u_{2}'=-xe^{-x}u_{1}'=xe^{-x}$. Integrating and taking the constants of
+integration to be zero yields
 \[
   u_{1}=-x\mbox{\quad and \quad}u_{2}=-(x+1)e^{-x}.
 \]
@@ -181,12 +217,24 @@ so the general solution of \eqref{eq:5.7.16} is
 \begin{equation}
   \label{eq:5.7.17}y=y_{p}+c_{1}x+c_{2}e^{x}=-x^{2}-x-1+c_{1}x+c_{2}e^{x}=-x^{2}-1+(c_{1}-1)x+c_{2}e^{x}.
 \end{equation}
-However, since $c_{1}$ is an arbitrary constant, so is $c_{1}-1$; therefore, we improve the appearance of this result by renaming the constant and writing the general solution as
+However, since $c_{1}$ is an arbitrary constant, so is $c_{1}-1$; therefore, we improve the
+appearance of this result by renaming the constant and writing the general solution as
 \begin{equation}
   \label{eq:5.7.18}y=-x^{2}-1+c_{1}x+c_{2}e^{x}.\bbox
 \end{equation}
 
-There's nothing {\color{blue}\it wrong\/} with leaving the general solution of \eqref{eq:5.7.16} in the form \eqref{eq:5.7.17}; however, we think you'll agree that \eqref{eq:5.7.18} is preferable. We can also view the transition from \eqref{eq:5.7.17} to \eqref{eq:5.7.18} differently. In this example the particular solution $y_{p}=-x^{2}-x-1$ contained the term $-x$, which satisfies the complementary equation. We can drop this term and redefine $y_{p}=-x^{2}-1$, since $-x^{2}-x-1$ is a solution of \eqref{eq:5.7.16} and $x$ is a solution of the complementary equation; hence, $-x^{2}-1=(-x^{2}-x-1)+x$ is also a solution of \eqref{eq:5.7.16}. In general, it's always legitimate to drop linear combinations of $\{y_{1},y_{2}\}$ from particular solutions obtained by variation of parameters. (See Exercise~\ref{exer:5.7.36} for a general discussion of this question.) We'll do this in the following examples and in the answers to exercises that ask for a particular solution. Therefore, don't be concerned if your answer to such an exercise differs from ours only by a solution of the complementary equation.
+There's nothing {\color{blue}\it wrong\/} with leaving the general solution of \eqref{eq:5.7.16} in
+the form \eqref{eq:5.7.17}; however, we think you'll agree that \eqref{eq:5.7.18} is preferable. We
+can also view the transition from \eqref{eq:5.7.17} to \eqref{eq:5.7.18} differently. In this
+example the particular solution $y_{p}=-x^{2}-x-1$ contained the term $-x$, which satisfies the
+complementary equation. We can drop this term and redefine $y_{p}=-x^{2}-1$, since $-x^{2}-x-1$ is a
+solution of \eqref{eq:5.7.16} and $x$ is a solution of the complementary equation; hence,
+$-x^{2}-1=(-x^{2}-x-1)+x$ is also a solution of \eqref{eq:5.7.16}. In general, it's always
+legitimate to drop linear combinations of $\{y_{1},y_{2}\}$ from particular solutions obtained by
+variation of parameters. (See Exercise~\ref{exer:5.7.36} for a general discussion of this question.)
+We'll do this in the following examples and in the answers to exercises that ask for a particular
+solution. Therefore, don't be concerned if your answer to such an exercise differs from ours only by
+a solution of the complementary equation.
 
 \begin{example}
   \label{example:5.7.3} \rm Find a particular solution of
@@ -202,7 +250,8 @@ The characteristic polynomial of the complementary equation
 \begin{equation}
   \label{eq:5.7.20}y''+3y'+2y=0
 \end{equation}
-is $p(r)=r^{2}+3r+2=(r+1)(r+2)$, so $y_{1}=e^{-x}$ and $y_{2}=e^{-2x}$ form a fundamental set of solutions of \eqref{eq:5.7.20}. We look for a particular solution of \eqref{eq:5.7.19} in the form
+is $p(r)=r^{2}+3r+2=(r+1)(r+2)$, so $y_{1}=e^{-x}$ and $y_{2}=e^{-2x}$ form a fundamental set of
+solutions of \eqref{eq:5.7.20}. We look for a particular solution of \eqref{eq:5.7.19} in the form
 \[
   y_{p}=u_{1}e^{-x}+u_{2}e^{-2x},
 \]
@@ -219,7 +268,8 @@ From the first equation,
 \[
   u_{1}'=-u_{2}'e^{-x}=\frac{e^{x}}{1+e^{x}}.
 \]
-Integrating by means of the substitution $v=e^{x}$ and taking the constants of integration to be zero yields
+Integrating by means of the substitution $v=e^{x}$ and taking the constants of integration to be
+zero yields
 \[
   u_{1}=\int\frac{e^{x}}{1+e^{x}}\,dx=\int\frac{dv}{1+v}=\ln(1+v)=\ln(1+e^{x})
 \]
@@ -316,12 +366,14 @@ Differentiating this yields
 \[
   y'=\frac{2}{x^{2}-1}-\frac{2\ln(x+1)}{(x-1)^{2}}-\frac{c_{1}}{(x-1)^{2}}-\frac{c_{2}}{(x+1)^{2}}.
 \]
-Setting $x=0$ in the last two equations and imposing the initial conditions $y(0)=-1$ and $y'(0)=-5$ yields the system
+Setting $x=0$ in the last two equations and imposing the initial conditions $y(0)=-1$ and $y'(0)=-5$
+yields the system
 \begin{eqnarray*}
   -c_{1}+c_{2}   & = & -1\phantom{.} \\
   -2-c_{1}-c_{2} & = & -5.
 \end{eqnarray*}
-The solution of this system is $c_{1}=2$, $c_{2}=1$. Substituting these into \eqref{eq:5.7.24} yields
+The solution of this system is $c_{1}=2$, $c_{2}=1$. Substituting these into \eqref{eq:5.7.24}
+yields
 \begin{eqnarray*}
   y & = & \frac{2\ln(x+1)}{x-1}+\frac{2}{x-1}+\frac{1}{x+1} \\
     & = & \frac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^{2}-1}
@@ -339,9 +391,20 @@ as the solution of \eqref{eq:5.7.21}. Figure~\ref{figure:5.7.1} is a graph of th
 \boxit{Comparison of Methods}
 
 \noindent
-We've now considered three methods for solving nonhomogeneous linear equations: undetermined coefficients, reduction of order, and variation of parameters. It's natural to ask which method is best for a given problem. The method of undetermined coefficients should be used for constant coefficient equations with forcing functions that are linear combinations of polynomials multiplied by functions of the form $e^{\alpha x}$, $e^{\lambda x}\cos\omega x$, or $e^{\lambda x}\sin\omega x$. Although the other two methods can be used to solve such problems, they will be more difficult except in the most trivial cases, because of the integrations involved.
+We've now considered three methods for solving nonhomogeneous linear equations: undetermined
+coefficients, reduction of order, and variation of parameters. It's natural to ask which method is
+best for a given problem. The method of undetermined coefficients should be used for constant
+coefficient equations with forcing functions that are linear combinations of polynomials multiplied
+by functions of the form $e^{\alpha x}$, $e^{\lambda x}\cos\omega x$, or
+$e^{\lambda x}\sin\omega x$. Although the other two methods can be used to solve such problems, they
+will be more difficult except in the most trivial cases, because of the integrations involved.
 
-If the equation isn't a constant coefficient equation or the forcing function isn't of the form just specified, the method of undetermined coefficients does not apply and the choice is necessarily between the other two methods. The case could be made that reduction of order is better because it requires only one solution of the complementary equation while variation of parameters requires two. However, variation of parameters will probably be easier if you already know a fundamental set of solutions of the complementary equation.
+If the equation isn't a constant coefficient equation or the forcing function isn't of the form just
+specified, the method of undetermined coefficients does not apply and the choice is necessarily
+between the other two methods. The case could be made that reduction of order is better because it
+requires only one solution of the complementary equation while variation of parameters requires two.
+However, variation of parameters will probably be easier if you already know a fundamental set of
+solutions of the complementary equation.
 
 \exercises In Exercises~\ref{exer:5.7.1}--\ref{exer:5.7.6} use variation of parameters to find a particular solution.
 
@@ -362,57 +425,75 @@ If the equation isn't a constant coefficient equation or the forcing function is
   \end{tabular}
   \newpage
 
-  \exercisetext{In Exercises \ref{exer:5.7.7}--\ref{exer:5.7.29} use variation of parameters to find a particular solution, given the solutions $y_{1}$, $y_{2}$ of the complementary equation.}
+  \exercisetext{In Exercises \ref{exer:5.7.7}--\ref{exer:5.7.29} use variation of parameters to find
+  a particular solution, given the solutions $y_{1}$, $y_{2}$ of the complementary equation.}
 
   \item\label{exer:5.7.7} $x^{2}y''+xy'-y=2x^{2}+2;\quad y_{1}=x, \quad y_{2}=\dst\frac{1}{x}$
 
-  \item\label{exer:5.7.8} $\dst{xy''+(2-2x)y'+(x-2)y=e^{2x};\quad y_{1}=e^{x}, \quad y_{2}=\frac{e^{x}}{x}}$
+  \item\label{exer:5.7.8}
+        $\dst{xy''+(2-2x)y'+(x-2)y=e^{2x};\quad y_{1}=e^{x}, \quad y_{2}=\frac{e^{x}}{x}}$
 
   \item\label{exer:5.7.9} $4x^{2}y''+(4x-8x^{2})y'+(4x^{2}-4x-1)y=4x^{1/2}e^{x},\quad x>0$;
   \newline
   $y_{1}=x^{1/2}e^{x},\;y_{2}=x^{-1/2}e^{x}$
 
-  \item\label{exer:5.7.10} $y''+4xy'+(4x^{2}+2)y=4e^{-x(x+2)};\quad y_{1}=e^{-x^{2}}, \quad y_{2}=xe^{-x^{2}}$
+  \item\label{exer:5.7.10}
+        $y''+4xy'+(4x^{2}+2)y=4e^{-x(x+2)};\quad y_{1}=e^{-x^{2}}, \quad y_{2}=xe^{-x^{2}}$
 
   \item\label{exer:5.7.11} $x^{2}y''-4xy'+6y=x^{5/2},\,x>0;\quad y_{1}=x^{2},\;y_{2}=x^{3}$
 
   \item\label{exer:5.7.12} $x^{2}y''-3xy'+3y=2x^{4}\sin x;\quad y_{1}=x,\;y_{2}=x^{3}$
 
-  \item\label{exer:5.7.13} $(2x+1)y''-2y'-(2x+3)y=(2x+1)^{2}e^{-x};\quad y_{1}=e^{-x}, \quad y_{2}=xe^{x}$
+  \item\label{exer:5.7.13}
+        $(2x+1)y''-2y'-(2x+3)y=(2x+1)^{2}e^{-x};\quad y_{1}=e^{-x}, \quad y_{2}=xe^{x}$
 
-  \item\label{exer:5.7.14} $4xy''+2y'+y=\sin\sqrt{x};\quad y_{1}=\cos\sqrt{x}, \quad y_{2}=\sin\sqrt{x}$
+  \item\label{exer:5.7.14}
+        $4xy''+2y'+y=\sin\sqrt{x};\quad y_{1}=\cos\sqrt{x}, \quad y_{2}=\sin\sqrt{x}$
 
-  \item\label{exer:5.7.15} $xy''-(2x+2)y'+(x+2)y=6x^{3}e^{x};\quad y_{1}=e^{x},\quad y_{2}=x^{3}e^{x}$
+  \item\label{exer:5.7.15}
+        $xy''-(2x+2)y'+(x+2)y=6x^{3}e^{x};\quad y_{1}=e^{x},\quad y_{2}=x^{3}e^{x}$
 
-  \item\label{exer:5.7.16} $x^{2}y''-(2a-1)xy'+a^{2}y=x^{a+1};\quad y_{1}=x^{a}, \quad y_{2}=x^{a}\ln x$
+  \item\label{exer:5.7.16}
+        $x^{2}y''-(2a-1)xy'+a^{2}y=x^{a+1};\quad y_{1}=x^{a}, \quad y_{2}=x^{a}\ln x$
 
-  \item\label{exer:5.7.17} $x^{2}y''-2xy'+(x^{2}+2)y=x^{3}\cos x;\quad y_{1}=x\cos x, \quad y_{2}=x\sin x$
+  \item\label{exer:5.7.17}
+        $x^{2}y''-2xy'+(x^{2}+2)y=x^{3}\cos x;\quad y_{1}=x\cos x, \quad y_{2}=x\sin x$
 
   \item\label{exer:5.7.18} $xy''-y'-4x^{3}y=8x^{5};\quad y_{1}=e^{x^{2}},\;y_{2}=e^{-x^{2}}$
 
-  \item\label{exer:5.7.19} $(\sin x)y''+(2\sin x-\cos x)y'+(\sin x-\cos x)y=e^{-x};\quad y_{1}=e^{-x},\quad y_{2}=e^{-x}\cos x$
+  \item\label{exer:5.7.19}
+        $(\sin x)y''+(2\sin x-\cos x)y'+(\sin x-\cos x)y=e^{-x};\quad y_{1}=e^{-x},\quad y_{2}=e^{-x}\cos x$
 
-  \item\label{exer:5.7.20} $4x^{2}y''-4xy'+(3-16x^{2})y=8x^{5/2};\quad y_{1}=\sqrt{x}e^{2x},\;y_{2}=\sqrt{x}e^{-2x}$
+  \item\label{exer:5.7.20}
+        $4x^{2}y''-4xy'+(3-16x^{2})y=8x^{5/2};\quad y_{1}=\sqrt{x}e^{2x},\;y_{2}=\sqrt{x}e^{-2x}$
 
-  \item\label{exer:5.7.21} $4x^{2}y''-4xy'+(4x^{2}+3)y=x^{7/2};\quad y_{1}=\sqrt{x}\sin x,\; y_{2}=\sqrt{x}\cos x$
+  \item\label{exer:5.7.21}
+        $4x^{2}y''-4xy'+(4x^{2}+3)y=x^{7/2};\quad y_{1}=\sqrt{x}\sin x,\; y_{2}=\sqrt{x}\cos x$
 
   \item\label{exer:5.7.22} $x^{2}y''-2xy'-(x^{2}-2)y=3x^{4};\quad y_{1}=xe^{x},\;y_{2}=xe^{-x}$
 
-  \item\label{exer:5.7.23} $x^{2}y''-2x(x+1)y'+(x^{2}+2x+2)y=x^{3}e^{x};\quad y_{1}=xe^{x},\quad y_{2}=x^{2}e^{x}$
+  \item\label{exer:5.7.23}
+        $x^{2}y''-2x(x+1)y'+(x^{2}+2x+2)y=x^{3}e^{x};\quad y_{1}=xe^{x},\quad y_{2}=x^{2}e^{x}$
 
   \item\label{exer:5.7.24} $x^{2}y''-xy'-3y=x^{3/2};\quad y_{1}=1/x,\quad y_{2}=x^{3}$
 
-  \item\label{exer:5.7.25} $x^{2}y''-x(x+4)y'+2(x+3)y=x^{4}e^{x};\quad y_{1}=x^{2},\quad y_{2}=x^{2}e^{x}$
+  \item\label{exer:5.7.25}
+        $x^{2}y''-x(x+4)y'+2(x+3)y=x^{4}e^{x};\quad y_{1}=x^{2},\quad y_{2}=x^{2}e^{x}$
 
-  \item\label{exer:5.7.26} $x^{2}y''-2x(x+2)y'+(x^{2}+4x+6)y=2xe^{x};\quad y_{1}=x^{2}e^{x},\quad y_{2}=x^{3}e^{x}$
+  \item\label{exer:5.7.26}
+        $x^{2}y''-2x(x+2)y'+(x^{2}+4x+6)y=2xe^{x};\quad y_{1}=x^{2}e^{x},\quad y_{2}=x^{3}e^{x}$
 
-  \item\label{exer:5.7.27} $x^{2}y''-4xy'+(x^{2}+6)y=x^{4};\quad y_{1}=x^{2}\cos x,\quad y_{2}=x^{2}\sin x$
+  \item\label{exer:5.7.27}
+        $x^{2}y''-4xy'+(x^{2}+6)y=x^{4};\quad y_{1}=x^{2}\cos x,\quad y_{2}=x^{2}\sin x$
 
   \item\label{exer:5.7.28} $(x-1)y''-xy'+y=2(x-1)^{2}e^{x};\quad y_{1}=x,\quad y_{2}=e^{x}$
 
-  \item\label{exer:5.7.29} $4x^{2}y''-4x(x+1)y'+(2x+3)y=x^{5/2}e^{x};\quad y_{1}=\sqrt{x},\quad y_{2}=\sqrt{x}e^{x}$
+  \item\label{exer:5.7.29}
+        $4x^{2}y''-4x(x+1)y'+(2x+3)y=x^{5/2}e^{x};\quad y_{1}=\sqrt{x},\quad y_{2}=\sqrt{x}e^{x}$
 
-  \exercisetext{In Exercises \ref{exer:5.7.30}--\ref{exer:5.7.32} use variation of parameters to solve the initial value problem, given $y_{1}$, $y_{2}$ are solutions of the complementary equation.}
+  \exercisetext{In Exercises \ref{exer:5.7.30}--\ref{exer:5.7.32} use variation of parameters to
+  solve the initial value problem, given $y_{1}$, $y_{2}$ are solutions of the complementary
+  equation.}
 
   \item\label{exer:5.7.30} $(3x-1)y''-(3x+2)y'-(6x-8)y=(3x-1)^{2}e^{2x},\quad y(0)=1,\; y'(0)=2$;
 
@@ -422,17 +503,22 @@ If the equation isn't a constant coefficient equation or the forcing function is
 
   $y_{1}=x-1$,\; $y_{2}=x^{2}-1$
 
-  \item\label{exer:5.7.32} $(x-1)^{2}y''-(x^{2}-1)y'+(x+1)y=(x-1)^{3}e^{x},\quad y(0)=4,\quad y'(0)=-6$;
+  \item\label{exer:5.7.32}
+        $(x-1)^{2}y''-(x^{2}-1)y'+(x+1)y=(x-1)^{3}e^{x},\quad y(0)=4,\quad y'(0)=-6$;
 
   $y_{1}=(x-1)e^{x},\quad y_{2}=x-1$
 
   \newpage
 
-  \exercisetext{In Exercises \ref{exer:5.7.33}--\ref{exer:5.7.35} use variation of parameters to solve the initial value problem and graph the solution, given that $y_{1}$, $y_{2}$ are solutions of the complementary equation.}
+  \exercisetext{In Exercises \ref{exer:5.7.33}--\ref{exer:5.7.35} use variation of parameters to
+  solve the initial value problem and graph the solution, given that $y_{1}$, $y_{2}$ are solutions
+  of the complementary equation.}
 
-  \item\label{exer:5.7.33} \CGex $\dst{(x^{2}-1)y''+4xy'+2y=2x,\quad y(0)=0,\;y'(0) =-2;\quad y_{1}=\frac{1}{x-1},\;y_{2}=\frac{1}{x+1}}$
+  \item\label{exer:5.7.33} \CGex
+        $\dst{(x^{2}-1)y''+4xy'+2y=2x,\quad y(0)=0,\;y'(0) =-2;\quad y_{1}=\frac{1}{x-1},\;y_{2}=\frac{1}{x+1}}$
 
-  \item\label{exer:5.7.34} \CGex $\dst{x^{2}y''+2xy'-2y=-2x^{2},\quad y(1)=1,\;y'(1)= -1;\quad y_{1}=x,\;y_{2}=\frac{1}{x^{2}}}$
+  \item\label{exer:5.7.34} \CGex
+        $\dst{x^{2}y''+2xy'-2y=-2x^{2},\quad y(1)=1,\;y'(1)= -1;\quad y_{1}=x,\;y_{2}=\frac{1}{x^{2}}}$
 
   \item\label{exer:5.7.35} \CGex $(x+1)(2x+3)y''+2(x+2)y'-2y=(2x+3)^{2},\quad y(0)=0,\quad y'(0)=0$;
   \newline
@@ -452,7 +538,8 @@ If the equation isn't a constant coefficient equation or the forcing function is
   \]
   Show that $\overline{y}$ is also a solution of (A).
 
-  \item\label{exer:5.7.37} Suppose $p$, $q$, and $f$ are continuous on $(a,b)$ and let $x_{0}$ be in $(a,b)$. Let $y_{1}$ and $y_{2}$ be the solutions of
+  \item\label{exer:5.7.37} Suppose $p$, $q$, and $f$ are continuous on $(a,b)$ and let $x_{0}$ be in
+        $(a,b)$. Let $y_{1}$ and $y_{2}$ be the solutions of
   \[
     y''+p(x)y'+q(x)y=0
   \]
@@ -471,7 +558,8 @@ If the equation isn't a constant coefficient equation or the forcing function is
            &   & \dst\qquad+\int^{x}_{x_{0}}\left(y_{1}(t)y_{2}(x)- y_{1}(x)y_{2}(t)\right) f(t)\exp\left(\int^{t}_{x_{0}}p(s)\,ds\right)\,dt.
     \end{array}
   \]
-  \hint{Use Abel's formula for the Wronskian of $\{y_{1},y_{2}\}$, and integrate $u_{1}'$ and $u_{2}'$ from $x_{0}$ to $x$.} Show also that
+  \hint{Use Abel's formula for the Wronskian of $\{y_{1},y_{2}\}$, and integrate $u_{1}'$ and
+  $u_{2}'$ from $x_{0}$ to $x$.} Show also that
   \[
     \begin{array}{rcl}
       y'(x) & = & k_{0}y_{1}'(x)+k_{1}y_{2}'(x)                                                                                                  \\[2\jot]
@@ -479,12 +567,14 @@ If the equation isn't a constant coefficient equation or the forcing function is
     \end{array}
   \]
 
-  \item\label{exer:5.7.38} Suppose $f$ is continuous on an open interval that contains $x_{0}=0$. Use variation of parameters to find a formula for the solution of the initial value problem
+  \item\label{exer:5.7.38} Suppose $f$ is continuous on an open interval that contains $x_{0}=0$.
+        Use variation of parameters to find a formula for the solution of the initial value problem
   \[
     y''-y=f(x),\quad y(0)=k_{0},\quad y'(0)=k_{1}.
   \]
 
-  \item\label{exer:5.7.39} Suppose $f$ is continuous on $(a,\infty)$, where $a<0$, so $x_{0}=0$ is in $(a,\infty)$.
+  \item\label{exer:5.7.39} Suppose $f$ is continuous on $(a,\infty)$, where $a<0$, so $x_{0}=0$ is
+        in $(a,\infty)$.
 
   \begin{alist}
     \item % (a)
@@ -495,7 +585,8 @@ If the equation isn't a constant coefficient equation or the forcing function is
     \hint{You will need the addition formulas for the sine and cosine: \begin{eqnarray*}\sin(A+B)&=&\sin A\cos B+\cos A\sin B\\ \cos(A+B)&=&\cos A\cos B-\sin A\sin B.\end{eqnarray*}}
   \end{alist}
 
-  For the rest of this exercise assume that the improper integral $\int_{0}^{\infty}f(t)\,dt$ is absolutely convergent.
+  For the rest of this exercise assume that the improper integral $\int_{0}^{\infty}f(t)\,dt$ is
+  absolutely convergent.
 
   \begin{alist}
     [start=2]
@@ -517,9 +608,11 @@ If the equation isn't a constant coefficient equation or the forcing function is
     \[
       A_{0}=k_{0}-\int_{0}^{\infty}f(t)\sin t\,dt\mbox{\quad and \quad}A_{1}=k_{1}+\int_{0}^{\infty}f(t)\cos t\,dt.
     \]
-    \hint{Recall from calculus that if $\int_{0}^{\infty}f(t)\,dt$ converges absolutely, then $\lim_{x\to\infty}\int_{x}^{\infty}|f(t)|\,dt~=~0$.}
+    \hint{Recall from calculus that if $\int_{0}^{\infty}f(t)\,dt$ converges absolutely, then
+    $\lim_{x\to\infty}\int_{x}^{\infty}|f(t)|\,dt~=~0$.}
 
     \item % (c)
-    Show that if $A_{0}$ and $A_{1}$ are arbitrary constants, then there's a unique solution of $y''+y=f(x)$ on $(a,\infty)$ that satisfies (B) and (C).
+    Show that if $A_{0}$ and $A_{1}$ are arbitrary constants, then there's a unique solution of
+    $y''+y=f(x)$ on $(a,\infty)$ that satisfies (B) and (C).
   \end{alist}
 \end{exerciselist}

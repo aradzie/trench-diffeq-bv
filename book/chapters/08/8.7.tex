@@ -1,18 +1,34 @@
 \section{Constant Coefficient Equations with Impulses}
 
 \noindent
-So far in this chapter, we've considered initial value problems for the constant coefficient equation
+So far in this chapter, we've considered initial value problems for the constant coefficient
+equation
 \[
   ay''+by'+cy=f(t),
 \]
-where $f$ is continuous or piecewise continuous on $[0,\infty)$. In this section we consider initial value problems where $f$ represents a force that's very large for a short time and zero otherwise. We say that such forces are {\color{blue}\it impulsive\/}. Impulsive forces occur, for example, when two objects collide. Since it isn't feasible to represent such forces as continuous or piecewise continuous functions, we must construct a different mathematical model to deal with them.
+where $f$ is continuous or piecewise continuous on $[0,\infty)$. In this section we consider initial
+value problems where $f$ represents a force that's very large for a short time and zero otherwise.
+We say that such forces are {\color{blue}\it impulsive\/}. Impulsive forces occur, for example, when
+two objects collide. Since it isn't feasible to represent such forces as continuous or piecewise
+continuous functions, we must construct a different mathematical model to deal with them.
 
-If $f$ is an integrable function and $f(t)=0$ for $t$ outside of the interval $[t_{0},t_{0}+h]$, then $\int_{t_{0}}^{t_{0}+h}f(t)\,dt$ is called the {\color{blue}\it total impulse\/} of $f$. We're interested in the idealized situation where $h$ is so small that the total impulse can be assumed to be applied instantaneously at $t=t_{0}$. We say in this case that $f$ is an {\color{blue}\it impulse function\/}. In particular, we denote by $\delta(t-t_{0})$ the impulse function with total impulse equal to one, applied at $t=t_{0}$. (The impulse function $\delta(t)$ obtained by setting $t_{0}=0$ is the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Dirac/}{\color{blue}
-\it Dirac $\delta$ function\/}.) It must be understood, however, that $\delta(t-t_{0})$ isn't a function in the standard sense, since our ``definition'' implies that $\delta(t-t_{0})=0$ if $t\ne t_{0}$, while
+If $f$ is an integrable function and $f(t)=0$ for $t$ outside of the interval $[t_{0},t_{0}+h]$,
+then $\int_{t_{0}}^{t_{0}+h}f(t)\,dt$ is called the {\color{blue}\it total impulse\/} of $f$. We're
+interested in the idealized situation where $h$ is so small that the total impulse can be assumed to
+be applied instantaneously at $t=t_{0}$. We say in this case that $f$ is an {\color{blue}\it impulse
+function\/}. In particular, we denote by $\delta(t-t_{0})$ the impulse function with total impulse
+equal to one, applied at $t=t_{0}$. (The impulse function $\delta(t)$ obtained by setting $t_{0}=0$
+is the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Dirac/}{\color{blue}
+\it Dirac $\delta$ function\/}.) It must be understood, however, that $\delta(t-t_{0})$ isn't a
+function in the standard sense, since our ``definition'' implies that $\delta(t-t_{0})=0$ if
+$t\ne t_{0}$, while
 \[
   \int_{t_{0}}^{t_{0}}\delta(t-t_{0})\,dt=1.
 \]
-From calculus we know that no function can have these properties; nevertheless, there's a branch of mathematics known as the {\color{blue}\it theory of distributions\/} where the definition can be made rigorous. Since the theory of distributions is beyond the scope of this book, we'll take an intuitive approach to impulse functions.
+From calculus we know that no function can have these properties; nevertheless, there's a branch of
+mathematics known as the {\color{blue}\it theory of distributions\/} where the definition can be
+made rigorous. Since the theory of distributions is beyond the scope of this book, we'll take an
+intuitive approach to impulse functions.
 
 Our first task is to define what we mean by the solution of the initial value problem
 \[
@@ -22,7 +38,8 @@ where $t_{0}$ is a fixed nonnegative number. The next theorem will motivate our 
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:8.7.1} Suppose $t_{0}\ge0$. For each positive number $h$, let $y_{h}$ be the solution of the initial value problem
+  \label{thmtype:8.7.1} Suppose $t_{0}\ge0$. For each positive number $h$, let $y_{h}$ be the
+  solution of the initial value problem
   \begin{equation}
     \label{eq:8.7.1}ay_{h}''+by_{h}'+cy_{h}=f_{h}(t),\quad y_{h}(0)=0,\quad y_{h}'(0)=0,
   \end{equation}
@@ -35,7 +52,8 @@ where $t_{0}$ is a fixed nonnegative number. The next theorem will motivate our 
       0,   & t\ge t_{0}+h,
     \end{array}\right.
   \end{equation}
-  so $f_{h}$ has unit total impulse equal to the area of the shaded rectangle in Figure~\ref{figure:8.7.1}. Then
+  so $f_{h}$ has unit total impulse equal to the area of the shaded rectangle in
+  Figure~\ref{figure:8.7.1}. Then
   \begin{equation}
     \label{eq:8.7.3}\lim_{h\to0+}y_{h}(t)=u(t-t_{0})w(t-t_{0}),
   \end{equation}
@@ -103,11 +121,14 @@ Therefore
 \begin{equation}
   \label{eq:8.7.9}|y_{h}(t)-w(t-t_{0})|\le \frac{1}{h}\int_{t_{0}}^{t_{0}+h}|w(t-\tau)-w(t-t_{0})|\,d\tau.
 \end{equation}
-Now let $M_{h}$ be the maximum value of $|w(t-\tau)-w(t-t_{0})|$ as $\tau$ varies over the interval $[t_{0},t_{0}+h]$. (Remember that $t$ and $t_{0}$ are fixed.) Then \eqref{eq:8.7.8} and \eqref{eq:8.7.9} imply that
+Now let $M_{h}$ be the maximum value of $|w(t-\tau)-w(t-t_{0})|$ as $\tau$ varies over the interval
+$[t_{0},t_{0}+h]$. (Remember that $t$ and $t_{0}$ are fixed.) Then \eqref{eq:8.7.8} and
+\eqref{eq:8.7.9} imply that
 \begin{equation}
   \label{eq:8.7.10}|y_{h}(t)-w(t-t_{0})|\le \frac{1}{h}M_{h}\int_{t_{0}}^{t_{0}+h}\,d\tau=M_{h}.
 \end{equation}
-But $\lim_{h\to0+}M_{h}=0$, since $w$ is continuous. Therefore \eqref{eq:8.7.10} implies \eqref{eq:8.7.6}. This and \eqref{eq:8.7.5} imply \eqref{eq:8.7.3}. \bbox
+But $\lim_{h\to0+}M_{h}=0$, since $w$ is continuous. Therefore \eqref{eq:8.7.10} implies
+\eqref{eq:8.7.6}. This and \eqref{eq:8.7.5} imply \eqref{eq:8.7.3}. \bbox
 
 Theorem~\ref{thmtype:8.7.1} motivates the next definition.
 
@@ -127,19 +148,27 @@ Theorem~\ref{thmtype:8.7.1} motivates the next definition.
   \]
 \end{definition}
 
-In physical applications where the input $f$ and the output $y$ of a device are related by the differential equation
+In physical applications where the input $f$ and the output $y$ of a device are related by the
+differential equation
 \[
   ay''+by'+cy=f(t),
 \]
-$w$ is called the {\color{blue}\it impulse response\/} of the device. Note that $w$ is the solution of the initial value problem
+$w$ is called the {\color{blue}\it impulse response\/} of the device. Note that $w$ is the solution
+of the initial value problem
 \begin{equation}
   \label{eq:8.7.12}aw''+bw'+cw=0,\quad w(0)=0,\quad w'(0)=1/a,
 \end{equation}
-as can be seen by using the Laplace transform to solve this problem. (Verify.) On the other hand, we can solve \eqref{eq:8.7.12} by the methods of Section~5.2 and show that $w$ is defined on $(-\infty,\infty)$ by
+as can be seen by using the Laplace transform to solve this problem. (Verify.) On the other hand, we
+can solve \eqref{eq:8.7.12} by the methods of Section~5.2 and show that $w$ is defined on
+$(-\infty,\infty)$ by
 \begin{equation}
   \label{eq:8.7.13}w=\frac{e^{r_{2}t}-e^{r_{1}t}}{a(r_{2}-r_{1})},\quad w=\frac{1}{a}te^{r_{1}t},\mbox{\quad or \quad}w=\frac{1}{a\omega}e^{\lambda t}\sin\omega t,
 \end{equation}
-depending upon whether the polynomial $p(r)=ar^{2}+br+c$ has distinct real zeros $r_{1}$ and $r_{2}$, a repeated zero $r_{1}$, or complex conjugate zeros $\lambda\pm i\omega$. (In most physical applications, the zeros of the characteristic polynomial have negative real parts, so $\lim_{t\to\infty}w(t)=0$.) This means that $y=u(t-t_{0})w(t-t_{0})$ is defined on $(-\infty,\infty)$ and has the following properties:
+depending upon whether the polynomial $p(r)=ar^{2}+br+c$ has distinct real zeros $r_{1}$ and
+$r_{2}$, a repeated zero $r_{1}$, or complex conjugate zeros $\lambda\pm i\omega$. (In most physical
+applications, the zeros of the characteristic polynomial have negative real parts, so
+$\lim_{t\to\infty}w(t)=0$.) This means that $y=u(t-t_{0})w(t-t_{0})$ is defined on
+$(-\infty,\infty)$ and has the following properties:
 \[
   y(t)=0,\quad t<t_{0},
 \]
@@ -150,13 +179,26 @@ and
 \begin{equation}
   \label{eq:8.7.14}y'_{-}(t_{0})=0,\quad y'_{+}(t_{0})=1/a
 \end{equation}
-(remember that $y'_{-}(t_{0})$ and $y'_{+}(t_{0})$ are derivatives from the right and left, respectively) and $y'(t_{0})$ does not exist. Thus, even though we defined $y=u(t-t_{0})w(t-t_{0})$ to be the solution of \eqref{eq:8.7.11}, this function {\color{blue}\it doesn't satisfy\/} the differential equation in \eqref{eq:8.7.11} {\color{blue}\it at\/} $t_{0}$, since it isn't differentiable there; in fact \eqref{eq:8.7.14} indicates that an impulse causes a jump discontinuity in velocity. (To see that this is reasonable, think of what happens when you hit a ball with a bat.) This means that the initial value problem \eqref{eq:8.7.11} doesn't make sense if $t_{0}=0$, since $y'(0)$ doesn't exist in this case. However $y=u(t)w(t)$ can be defined to be the solution of the modified initial value problem
+(remember that $y'_{-}(t_{0})$ and $y'_{+}(t_{0})$ are derivatives from the right and left,
+respectively) and $y'(t_{0})$ does not exist. Thus, even though we defined $y=u(t-t_{0})w(t-t_{0})$
+to be the solution of \eqref{eq:8.7.11}, this function {\color{blue}\it doesn't satisfy\/} the
+differential equation in \eqref{eq:8.7.11} {\color{blue}\it at\/} $t_{0}$, since it isn't
+differentiable there; in fact \eqref{eq:8.7.14} indicates that an impulse causes a jump
+discontinuity in velocity. (To see that this is reasonable, think of what happens when you hit a
+ball with a bat.) This means that the initial value problem \eqref{eq:8.7.11} doesn't make sense if
+$t_{0}=0$, since $y'(0)$ doesn't exist in this case. However $y=u(t)w(t)$ can be defined to be the
+solution of the modified initial value problem
 \[
   ay''+by'+cy=\delta(t),\quad y(0)=0,\quad y'_{-}(0)=0,
 \]
-where the condition on the derivative at $t=0$ has been replaced by a condition on the derivative from the left.
+where the condition on the derivative at $t=0$ has been replaced by a condition on the derivative
+from the left.
 
-Figure~\ref{figure:8.7.2} illustrates Theorem~\ref{thmtype:8.7.1} for the case where the impulse response $w$ is the first expression in \eqref{eq:8.7.13} and $r_{1}$ and $r_{2}$ are distinct and both negative. The solid curve in the figure is the graph of $w$. The dashed curves are solutions of \eqref{eq:8.7.1} for various values of $h$. As $h$ decreases the graph of $y_{h}$ moves to the left toward the graph of $w$.
+Figure~\ref{figure:8.7.2} illustrates Theorem~\ref{thmtype:8.7.1} for the case where the impulse
+response $w$ is the first expression in \eqref{eq:8.7.13} and $r_{1}$ and $r_{2}$ are distinct and
+both negative. The solid curve in the figure is the graph of $w$. The dashed curves are solutions of
+\eqref{eq:8.7.1} for various values of $h$. As $h$ decreases the graph of $y_{h}$ moves to the left
+toward the graph of $w$.
 
 \begin{figure}[tbp]
   \centering
@@ -182,7 +224,9 @@ so Definition~\ref{thmtype:8.7.2} yields
 \[
   y=u(t-t_{0})(t-t_{0})e^{-(t-t_{0})}
 \]
-as the solution of \eqref{eq:8.7.15} if $t_{0}>0$. If $t_{0}=0$, then \eqref{eq:8.7.15} doesn't have a solution; however, $y=u(t)te^{-t}$ (which we would usually write simply as $y=te^{-t}$) is the solution of the modified initial value problem
+as the solution of \eqref{eq:8.7.15} if $t_{0}>0$. If $t_{0}=0$, then \eqref{eq:8.7.15} doesn't have
+a solution; however, $y=u(t)te^{-t}$ (which we would usually write simply as $y=te^{-t}$) is the
+solution of the modified initial value problem
 \[
   y''-2y'+y=\delta(t),\quad y(0)=0,\quad y_{-}'(0)=0.
 \]
@@ -201,7 +245,8 @@ Definition~\ref{thmtype:8.7.2} and the principle of superposition motivate the n
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:8.7.3} \rm Suppose $\alpha$ is a nonzero constant and $f$ is piecewise continuous on $[0,\infty)$. If $t_{0}>0$, then the solution of the initial value problem
+  \label{thmtype:8.7.3} \rm Suppose $\alpha$ is a nonzero constant and $f$ is piecewise continuous
+  on $[0,\infty)$. If $t_{0}>0$, then the solution of the initial value problem
   \[
     ay''+by'+cy=f(t)+\alpha\delta(t-t_{0}),\quad y(0)=k_{0},\quad y'(0)=k_{1}
   \]
@@ -213,7 +258,8 @@ Definition~\ref{thmtype:8.7.2} and the principle of superposition motivate the n
   \[
     ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1}.
   \]
-  This definition also applies if $t_{0}=0$, provided that the initial condition $y'(0)=k_{1}$ is replaced by $y_{-}'(0)=k_{1}$.
+  This definition also applies if $t_{0}=0$, provided that the initial condition $y'(0)=k_{1}$ is
+  replaced by $y_{-}'(0)=k_{1}$.
 \end{definition}
 
 \begin{example}
@@ -262,7 +308,8 @@ the solution of \eqref{eq:8.7.16} is
   \end{minipage}
 \end{figure}
 
-Definition~\ref{thmtype:8.7.3} can be extended in the obvious way to cover the case where the forcing function contains more than one impulse.
+Definition~\ref{thmtype:8.7.3} can be extended in the obvious way to cover the case where the
+forcing function contains more than one impulse.
 \begin{example}
   \label{example:8.7.3} \rm Solve the initial value problem
   \begin{equation}
@@ -331,11 +378,14 @@ or
 
   \item\label{exer:8.7.14} $2y''-3y'-2y=1+\delta(t-2),\quad y(0)=-1,\quad y'(0)=2$
 
-  \item\label{exer:8.7.15} $4y''-4y'+5y=4\sin t-4\cos t+\delta(t-\pi/2)-\delta(t-\pi),\quad y(0)=1,\quad y'(0)=1$
+  \item\label{exer:8.7.15}
+        $4y''-4y'+5y=4\sin t-4\cos t+\delta(t-\pi/2)-\delta(t-\pi),\quad y(0)=1,\quad y'(0)=1$
 
-  \item\label{exer:8.7.16} $y''+y=\cos2t+2\delta(t-\pi/2)-3\delta(t-\pi),\quad y(0)=0,\quad y'(0)=-1$
+  \item\label{exer:8.7.16}
+        $y''+y=\cos2t+2\delta(t-\pi/2)-3\delta(t-\pi),\quad y(0)=0,\quad y'(0)=-1$
 
-  \item\label{exer:8.7.17} \CGex $y''-y=4e^{-t}-5\delta(t-1)+3\delta(t-2),\quad y(0)=0,\quad y'(0)=0$
+  \item\label{exer:8.7.17} \CGex
+        $y''-y=4e^{-t}-5\delta(t-1)+3\delta(t-2),\quad y(0)=0,\quad y'(0)=0$
 
   \item\label{exer:8.7.18} $y''+2y'+y=e^{t}-\delta(t-1)+2\delta(t-2),\quad y(0)=0,\quad y'(0)=-1$
 
@@ -343,7 +393,8 @@ or
 
   $f(t)=\dst{\left\{\begin{array}{cl}\sin2t,&0\le t<\pi,\\[5pt]0,&t\ge\pi.\end{array}\right.}$
 
-  \item\label{exer:8.7.20} $y''+4y=f(t)+\delta(t-\pi)-3\delta(t-3\pi/2),\quad y(0)=1,\quad y'(0)=-1$, \text{and}
+  \item\label{exer:8.7.20}
+        $y''+4y=f(t)+\delta(t-\pi)-3\delta(t-3\pi/2),\quad y(0)=1,\quad y'(0)=-1$, \text{and}
 
   $f(t)=\dst{\left\{\begin{array}{cl}1,&0\le t<\pi/2,\\[5pt]2,&t\ge \pi/2\end{array}\right.}$
 
@@ -367,7 +418,8 @@ or
 
   \item\label{exer:8.7.29}
 
-  Recall from Section~6.2 that the displacement of an object of mass $m$ in a spring--mass system in free damped oscillation is
+  Recall from Section~6.2 that the displacement of an object of mass $m$ in a spring--mass system in
+  free damped oscillation is
   \[
     my''+cy'+ky=0,\quad y(0)=y_{0},\quad y'(0)=v_{0},
   \]
@@ -375,9 +427,12 @@ or
   \[
     y=Re^{-ct/2m}\cos(\omega_{1}t-\phi)
   \]
-  if the motion is underdamped. Suppose $y(\tau)=0$. Find the impulse that would have to be applied to the object at $t=\tau$ to put it in equilibrium.
+  if the motion is underdamped. Suppose $y(\tau)=0$. Find the impulse that would have to be applied
+  to the object at $t=\tau$ to put it in equilibrium.
 
-  \item\label{exer:8.7.30} Solve the initial value problem. Find a formula that does not involve step functions and represents $y$ on each subinterval of $[0,\infty)$ on which the forcing function is zero.
+  \item\label{exer:8.7.30} Solve the initial value problem. Find a formula that does not involve
+        step functions and represents $y$ on each subinterval of $[0,\infty)$ on which the forcing
+        function is zero.
 
   {\bf (a)} $\dst{y''-y=\sum_{k=1}^{\infty}\delta(t-k),\quad y(0)=0,\quad y'(0)=1}$
 

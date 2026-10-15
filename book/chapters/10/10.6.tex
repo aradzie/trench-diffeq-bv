@@ -1,13 +1,18 @@
 \section{Constant Coefficient Homogeneous Systems III}
 
 \noindent
-We now consider the system ${\bf y}'=A{\bf y}$, where $A$ has a complex eigenvalue $\lambda=\alpha+i\beta$ with $\beta\ne0$. We continue to assume that $A$ has real entries, so the characteristic polynomial of $A$ has real coefficients. This implies that $\overline{\lambda}=\alpha-i\beta$ is also an eigenvalue of $A$.
+We now consider the system ${\bf y}'=A{\bf y}$, where $A$ has a complex eigenvalue
+$\lambda=\alpha+i\beta$ with $\beta\ne0$. We continue to assume that $A$ has real entries, so the
+characteristic polynomial of $A$ has real coefficients. This implies that
+$\overline{\lambda}=\alpha-i\beta$ is also an eigenvalue of $A$.
 
-An eigenvector ${\bf x}$ of $A$ associated with $\lambda=\alpha+i\beta$ will have complex entries, so we'll write
+An eigenvector ${\bf x}$ of $A$ associated with $\lambda=\alpha+i\beta$ will have complex entries,
+so we'll write
 \[
   {\bf x}={\bf u}+i{\bf v}
 \]
-where ${\bf u}$ and ${\bf v}$ have real entries; that is, ${\bf u}$ and ${\bf v}$ are the real and imaginary parts of ${\bf x}$. Since $A{\bf x}=\lambda{\bf x}$,
+where ${\bf u}$ and ${\bf v}$ have real entries; that is, ${\bf u}$ and ${\bf v}$ are the real and
+imaginary parts of ${\bf x}$. Since $A{\bf x}=\lambda{\bf x}$,
 \begin{equation}
   \label{eq:10.6.1}A({\bf u}+i{\bf v})=(\alpha+i\beta)({\bf u}+i{\bf v}).
 \end{equation}
@@ -15,7 +20,11 @@ Taking complex conjugates here and recalling that $A$ has real entries yields
 \[
   A({\bf u}-i{\bf v})=(\alpha-i\beta)({\bf u}-i{\bf v}),
 \]
-which shows that ${\bf x}={\bf u}-i{\bf v}$ is an eigenvector associated with $\overline{\lambda}=\alpha-i\beta$. The complex conjugate eigenvalues $\lambda$ and $\overline{\lambda}$ can be separately associated with linearly independent solutions ${\bf y}'=A{\bf y}$; however, we won't pursue this approach, since solutions obtained in this way turn out to be complex--valued. Instead, we'll obtain solutions of ${\bf y}'=A{\bf y}$ in the form
+which shows that ${\bf x}={\bf u}-i{\bf v}$ is an eigenvector associated with
+$\overline{\lambda}=\alpha-i\beta$. The complex conjugate eigenvalues $\lambda$ and
+$\overline{\lambda}$ can be separately associated with linearly independent solutions
+${\bf y}'=A{\bf y}$; however, we won't pursue this approach, since solutions obtained in this way
+turn out to be complex--valued. Instead, we'll obtain solutions of ${\bf y}'=A{\bf y}$ in the form
 \begin{equation}
   \label{eq:10.6.2}{\bf y}=f_{1}{\bf u}+f_{2}{\bf v}
 \end{equation}
@@ -23,7 +32,10 @@ where $f_{1}$ and $f_{2}$ are real--valued scalar functions. The next theorem sh
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:10.6.1} Let $A$ be an $n\times n$ matrix with real entries. Let $\lambda=\alpha+i\beta$ {\rm(}$\beta\ne0${\rm}) be a complex eigenvalue of $A$ and let ${\bf x}={\bf u}+i{\bf v}$ be an associated eigenvector, where ${\bf u}$ and ${\bf v}$ have real components. Then ${\bf u}$ and ${\bf v}$ are both nonzero and
+  \label{thmtype:10.6.1} Let $A$ be an $n\times n$ matrix with real entries. Let
+  $\lambda=\alpha+i\beta$ {\rm(}$\beta\ne0${\rm}) be a complex eigenvalue of $A$ and let
+  ${\bf x}={\bf u}+i{\bf v}$ be an associated eigenvector, where ${\bf u}$ and ${\bf v}$ have real
+  components. Then ${\bf u}$ and ${\bf v}$ are both nonzero and
   \[
     {\bf y}_{1}=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t) \mbox{\quad and\quad}{\bf y}_{2}=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t),
   \]
@@ -38,7 +50,8 @@ where $f_{1}$ and $f_{2}$ are real--valued scalar functions. The next theorem sh
 \begin{equation}
   \label{eq:10.6.4}f_{1}'{\bf u}+f_{2}'{\bf v}=f_{1}A{\bf u}+f_{2}A{\bf v}.
 \end{equation}
-Carrying out the multiplication indicated on the right side of \eqref{eq:10.6.1} and collecting the real and imaginary parts of the result yields
+Carrying out the multiplication indicated on the right side of \eqref{eq:10.6.1} and collecting the
+real and imaginary parts of the result yields
 \[
   A({\bf u}+i{\bf v})=(\alpha{\bf u}-\beta{\bf v})+i(\alpha{\bf v}+\beta{\bf u}).
 \]
@@ -49,7 +62,8 @@ Equating real and imaginary parts on the two sides of this equation yields
     A{\bf v} & = & \alpha{\bf v}+\beta{\bf u}.
   \end{array}
 \]
-We leave it to you (Exercise~\ref{exer:10.6.25}) to show from this that ${\bf u}$ and ${\bf v}$ are both nonzero. Substituting from these equations into \eqref{eq:10.6.4} yields
+We leave it to you (Exercise~\ref{exer:10.6.25}) to show from this that ${\bf u}$ and ${\bf v}$ are
+both nonzero. Substituting from these equations into \eqref{eq:10.6.4} yields
 \begin{eqnarray*}
   f_{1}'{\bf u}+f_{2}'{\bf v} & = & f_{1}(\alpha{\bf u}-\beta{\bf v})+f_{2}(\alpha{\bf v}+\beta{\bf u}) \\
                               & = & (\alpha f_{1}+\beta f_{2}){\bf u}+(-\beta f_{1}+\alpha f_{2}){\bf v}.
@@ -66,7 +80,8 @@ This is true if
     f_{2}'-\alpha f_{2} & = & -\beta f_{1}.
   \end{array}
 \]
-If we let $f_{1}=g_{1}e^{\alpha t}$ and $f_{2}=g_{2}e^{\alpha t}$, where $g_{1}$ and $g_{2}$ are to be determined, then the last two equations become
+If we let $f_{1}=g_{1}e^{\alpha t}$ and $f_{2}=g_{2}e^{\alpha t}$, where $g_{1}$ and $g_{2}$ are to
+be determined, then the last two equations become
 \[
   \begin{array}{rcr}
     g_{1}' & = & \beta g_{2}\phantom{.} \\
@@ -102,7 +117,11 @@ Substituting these into \eqref{eq:10.6.2} shows that
             & = & c_{1}e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t) +c_{2}e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t)
   \end{array}
 \end{equation}
-is a solution of ${\bf y}'=A{\bf y}$ for any choice of the constants $c_{1}$ and $c_{2}$. In particular, by first taking $c_{1}=1$ and $c_{2}=0$ and then taking $c_{1}=0$ and $c_{2}=1$, we see that ${\bf y}_{1}$ and ${\bf y}_{2}$ are solutions of ${\bf y}'=A{\bf y}$. We leave it to you to verify that they are, respectively, the real and imaginary parts of \eqref{eq:10.6.3} (Exercise~\ref{exer:10.6.26}), and that they are linearly independent (Exercise~\ref{exer:10.6.27}).
+is a solution of ${\bf y}'=A{\bf y}$ for any choice of the constants $c_{1}$ and $c_{2}$. In
+particular, by first taking $c_{1}=1$ and $c_{2}=0$ and then taking $c_{1}=0$ and $c_{2}=1$, we see
+that ${\bf y}_{1}$ and ${\bf y}_{2}$ are solutions of ${\bf y}'=A{\bf y}$. We leave it to you to
+verify that they are, respectively, the real and imaginary parts of \eqref{eq:10.6.3}
+(Exercise~\ref{exer:10.6.26}), and that they are linearly independent (Exercise~\ref{exer:10.6.27}).
 
 \begin{example}
   \label{example:10.6.1} \rm Find the general solution of
@@ -119,7 +138,8 @@ is a solution of ${\bf y}'=A{\bf y}$ for any choice of the constants $c_{1}$ and
     5         & -2-\lambda
   \end{array}\right|=(\lambda-1)^{2}+16.
 \]
-Hence, $\lambda=1+4i$ is an eigenvalue of $A$. The associated eigenvectors satisfy $\left(A-\left(1+4i\right)I\right){\bf x}={\bf 0}$. The augmented matrix of this system is
+Hence, $\lambda=1+4i$ is an eigenvalue of $A$. The associated eigenvectors satisfy
+$\left(A-\left(1+4i\right)I\right){\bf x}={\bf 0}$. The augmented matrix of this system is
 \[
   \left[
   \begin{array}{cccr}
@@ -163,7 +183,8 @@ are
     5\sin 4t
   \end{array}\right],
 \]
-which are linearly independent solutions of \eqref{eq:10.6.6}. The general solution of \eqref{eq:10.6.6} is
+which are linearly independent solutions of \eqref{eq:10.6.6}. The general solution of
+\eqref{eq:10.6.6} is
 \[
   {\bf y}= c_{1}e^{t}\left[
   \begin{array}{c}
@@ -191,7 +212,8 @@ which are linearly independent solutions of \eqref{eq:10.6.6}. The general solut
     -6          & 16-\lambda
   \end{array}\right|=(\lambda-1)^{2}+9.
 \]
-Hence, $\lambda=1+3i$ is an eigenvalue of $A$. The associated eigenvectors satisfy $\left(A-(1+3i)I\right){\bf x}={\bf0}$. The augmented matrix of this system is
+Hence, $\lambda=1+3i$ is an eigenvalue of $A$. The associated eigenvectors satisfy
+$\left(A-(1+3i)I\right){\bf x}={\bf0}$. The augmented matrix of this system is
 \[
   \left[
   \begin{array}{cccr}
@@ -235,7 +257,8 @@ are
     2\sin 3t
   \end{array}\right],
 \]
-which are linearly independent solutions of \eqref{eq:10.6.7}. The general solution of \eqref{eq:10.6.7} is
+which are linearly independent solutions of \eqref{eq:10.6.7}. The general solution of
+\eqref{eq:10.6.7} is
 \[
   {\bf y}=c_{1}e^{t}\left[
   \begin{array}{c}
@@ -264,7 +287,8 @@ which are linearly independent solutions of \eqref{eq:10.6.7}. The general solut
     \phantom{-}1 & 0         & -\lambda
   \end{array}\right|=-(\lambda-2)(\lambda^{2}+1).
 \]
-Hence, the eigenvalues of $A$ are $\lambda_{1}=2$, $\lambda_{2}=i$, and $\lambda_{3}=-i$. The augmented matrix of $(A-2I){\bf x=0}$ is
+Hence, the eigenvalues of $A$ are $\lambda_{1}=2$, $\lambda_{2}=i$, and $\lambda_{3}=-i$. The
+augmented matrix of $(A-2I){\bf x=0}$ is
 \[
   \left[
   \begin{array}{rrrcr}
@@ -343,7 +367,8 @@ are
     \sin t
   \end{array}\right],
 \]
-which are solutions of \eqref{eq:10.6.8}. Since the Wronskian of $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ at $t=0$ is
+which are solutions of \eqref{eq:10.6.8}. Since the Wronskian of
+$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ at $t=0$ is
 \[
   \left|
   \begin{array}{rrr}
@@ -352,7 +377,8 @@ which are solutions of \eqref{eq:10.6.8}. Since the Wronskian of $\{{\bf y}_{1},
     1 & 1  & 0
   \end{array}\right|=1,
 \]
-$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions of \eqref{eq:10.6.8}. The general solution of \eqref{eq:10.6.8} is
+$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions of \eqref{eq:10.6.8}.
+The general solution of \eqref{eq:10.6.8} is
 \[
   {\bf y}=c_{1}\threecol221e^{2t}+c_{2}\left[
   \begin{array}{c}
@@ -383,7 +409,8 @@ $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions of \
     1         & -1        & 2-\lambda
   \end{array}\right|= -(\lambda-2)\left((\lambda-2)^{2}+4\right).
 \]
-Hence, the eigenvalues of $A$ are $\lambda_{1}=2$, $\lambda_{2}=2+2i$, and $\lambda_{3}=2-2i$. The augmented matrix of $(A-2I){\bf x=0}$ is
+Hence, the eigenvalues of $A$ are $\lambda_{1}=2$, $\lambda_{2}=2+2i$, and $\lambda_{3}=2-2i$. The
+augmented matrix of $(A-2I){\bf x=0}$ is
 \[
   \left[
   \begin{array}{rrrcr}
@@ -451,7 +478,8 @@ are
     \sin 2t
   \end{array}\right],
 \]
-which are solutions of \eqref{eq:10.6.9}. Since the Wronskian of $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ at $t=0$ is
+which are solutions of \eqref{eq:10.6.9}. Since the Wronskian of
+$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ at $t=0$ is
 \[
   \left|
   \begin{array}{rrr}
@@ -460,7 +488,8 @@ which are solutions of \eqref{eq:10.6.9}. Since the Wronskian of $\{{\bf y}_{1},
     1  & 1 & 0
   \end{array}\right|=-2,
 \]
-$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions of \eqref{eq:10.6.9}. The general solution of \eqref{eq:10.6.9} is
+$\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions of \eqref{eq:10.6.9}.
+The general solution of \eqref{eq:10.6.9} is
 \[
   {\bf y}=c_{1}\threecol{-1}{-1}1e^{2t}+ c_{2}e^{2t}\left[
   \begin{array}{r}
@@ -494,7 +523,14 @@ under the assumptions of this section; that is, when the matrix
     a_{21} & a_{22}
   \end{array}\right]
 \]
-has a complex eigenvalue $\lambda=\alpha+i\beta$ {\rm(}$\beta\ne0${\rm}) and ${\bf x}={\bf u}+i{\bf v}$ is an associated eigenvector, where ${\bf u}$ and ${\bf v}$ have real components. To describe the trajectories accurately it's necessary to introduce a new rectangular coordinate system in the $y_{1}$-$y_{2}$ plane. This raises a point that hasn't come up before: It is always possible to choose ${\bf x}$ so that $({\bf u},{\bf v})=0$. A special effort is required to do this, since not every eigenvector has this property. However, if we know an eigenvector that doesn't, we can multiply it by a suitable complex constant to obtain one that does. To see this, note that if ${\bf x}$ is a $\lambda$-eigenvector of $A$ and $k$ is an arbitrary real number, then
+has a complex eigenvalue $\lambda=\alpha+i\beta$ {\rm(}$\beta\ne0${\rm}) and
+${\bf x}={\bf u}+i{\bf v}$ is an associated eigenvector, where ${\bf u}$ and ${\bf v}$ have real
+components. To describe the trajectories accurately it's necessary to introduce a new rectangular
+coordinate system in the $y_{1}$-$y_{2}$ plane. This raises a point that hasn't come up before: It
+is always possible to choose ${\bf x}$ so that $({\bf u},{\bf v})=0$. A special effort is required
+to do this, since not every eigenvector has this property. However, if we know an eigenvector that
+doesn't, we can multiply it by a suitable complex constant to obtain one that does. To see this,
+note that if ${\bf x}$ is a $\lambda$-eigenvector of $A$ and $k$ is an arbitrary real number, then
 \[
   {\bf x}_{1}=(1+ik){\bf x}=(1+ik)({\bf u}+i{\bf v}) =({\bf u}-k{\bf v})+i({\bf v}+k{\bf u})
 \]
@@ -514,18 +550,22 @@ Therefore $({\bf u}_{1},{\bf v}_{1})=0$ if
 \begin{equation}
   \label{eq:10.6.12}({\bf u},{\bf v})k^{2}+(\|{\bf v}\|^{2}-\|{\bf u}\|^{2})k-({\bf u},{\bf v})=0.
 \end{equation}
-If $({\bf u},{\bf v})\ne0$ we can use the quadratic formula to find two real values of $k$ such that $({\bf u}_{1},{\bf v}_{1})=0$ (Exercise~\ref{exer:10.6.28}).
+If $({\bf u},{\bf v})\ne0$ we can use the quadratic formula to find two real values of $k$ such that
+$({\bf u}_{1},{\bf v}_{1})=0$ (Exercise~\ref{exer:10.6.28}).
 
 \begin{example}
   \label{example:10.6.5} \rm In Example~\ref{example:10.6.1} we found the eigenvector
   \[
     {\bf x}=\ctwocol{3+4i}5=\twocol35+i\twocol40
   \]
-  for the matrix of the system \eqref{eq:10.6.6}. Here ${\bf u}=\dst{\twocol35}$ and ${\bf v}=\twocol40$ are not orthogonal, since $({\bf u},{\bf v})=12$. Since $\|{\bf v}\|^{2}-\|{\bf u}\|^{2}=-18$, \eqref{eq:10.6.12} is equivalent to
+  for the matrix of the system \eqref{eq:10.6.6}. Here ${\bf u}=\dst{\twocol35}$ and
+  ${\bf v}=\twocol40$ are not orthogonal, since $({\bf u},{\bf v})=12$. Since
+  $\|{\bf v}\|^{2}-\|{\bf u}\|^{2}=-18$, \eqref{eq:10.6.12} is equivalent to
   \[
     2k^{2}-3k-2=0.
   \]
-  The zeros of this equation are $k_{1}=2$ and $k_{2}=-1/2$. Letting $k=2$ in \eqref{eq:10.6.11} yields
+  The zeros of this equation are $k_{1}=2$ and $k_{2}=-1/2$. Letting $k=2$ in \eqref{eq:10.6.11}
+  yields
   \[
     {\bf u}_{1}={\bf u}-2{\bf v}=\twocol{-5}{\phantom{-}5}\mbox{\quad and \quad}{\bf v}_{1}={\bf v}+2{\bf u}=\twocol{10}{10},
   \]
@@ -536,15 +576,22 @@ If $({\bf u},{\bf v})\ne0$ we can use the quadratic formula to find two real val
   and again $({\bf u}_{1},{\bf v}_{1})=0$. \bbox
 \end{example}
 
-(The numbers don't always work out as nicely as in this example. You'll need a calculator or computer to do Exercises~\ref{exer:10.6.29}-\ref{exer:10.6.40}.)
+(The numbers don't always work out as nicely as in this example. You'll need a calculator or
+computer to do Exercises~\ref{exer:10.6.29}-\ref{exer:10.6.40}.)
 
-Henceforth, we'll assume that $({\bf u},{\bf v})=0$. Let ${\bf U}$ and ${\bf V}$ be unit vectors in the directions of ${\bf u}$ and ${\bf v}$, respectively; that is, ${\bf U}={\bf u}/\|{\bf u}\|$ and ${\bf V}={\bf v}/\|{\bf v}\|$. The new rectangular coordinate system will have the same origin as the $y_{1}$-$y_{2}$ system. The coordinates of a point in this system will be denoted by $(z_{1},z_{2})$, where $z_{1}$ and $z_{2}$ are the displacements in the directions of ${\bf U}$ and ${\bf V}$, respectively.
+Henceforth, we'll assume that $({\bf u},{\bf v})=0$. Let ${\bf U}$ and ${\bf V}$ be unit vectors in
+the directions of ${\bf u}$ and ${\bf v}$, respectively; that is, ${\bf U}={\bf u}/\|{\bf u}\|$ and
+${\bf V}={\bf v}/\|{\bf v}\|$. The new rectangular coordinate system will have the same origin as
+the $y_{1}$-$y_{2}$ system. The coordinates of a point in this system will be denoted by
+$(z_{1},z_{2})$, where $z_{1}$ and $z_{2}$ are the displacements in the directions of ${\bf U}$ and
+${\bf V}$, respectively.
 
 From \eqref{eq:10.6.5}, the solutions of \eqref{eq:10.6.10} are given by
 \begin{equation}
   \label{eq:10.6.13}{\bf y}=e^{\alpha t}\left[(c_{1}\cos\beta t+c_{2}\sin\beta t){\bf u}+(-c_{1}\sin\beta t+c_{2}\cos\beta t){\bf v}\right].
 \end{equation}
-For convenience, let's call the curve traversed by $e^{-\alpha t}{\bf y}(t)$ a {\color{blue}\it shadow trajectory\/} of \eqref{eq:10.6.10}. Multiplying \eqref{eq:10.6.13} by $e^{-\alpha t}$ yields
+For convenience, let's call the curve traversed by $e^{-\alpha t}{\bf y}(t)$ a {\color{blue}\it
+shadow trajectory\/} of \eqref{eq:10.6.10}. Multiplying \eqref{eq:10.6.13} by $e^{-\alpha t}$ yields
 \[
   e^{-\alpha t}{\bf y}(t)=z_{1}(t){\bf U}+z_{2}(t){\bf V},
 \]
@@ -557,11 +604,14 @@ Therefore
 \[
   \frac{(z_{1}(t))^{2}}{\|{\bf u}\|^{2}}+\frac{(z_{2}(t))^{2}}{\|{\bf v}\|^{2}}=c_{1}^{2}+c_{2}^{2}
 \]
-(verify!), which means that the shadow trajectories of \eqref{eq:10.6.10} are ellipses centered at the origin, with axes of symmetry parallel to ${\bf U}$ and ${\bf V}$. Since
+(verify!), which means that the shadow trajectories of \eqref{eq:10.6.10} are ellipses centered at
+the origin, with axes of symmetry parallel to ${\bf U}$ and ${\bf V}$. Since
 \[
   z_{1}'=\frac{\beta\|{\bf u}\|}{\|{\bf v}\|}z_{2}\mbox{\quad and \quad}z_{2}'=-\frac{\beta\|{\bf v}\|}{\|{\bf u}\|}z_{1},
 \]
-the vector from the origin to a point on the shadow ellipse rotates in the same direction that ${\bf V}$ would have to be rotated by $\pi/2$ radians to bring it into coincidence with ${\bf U}$ (Figures~\ref{figure:10.6.1} and \ref{figure:10.6.2}).
+the vector from the origin to a point on the shadow ellipse rotates in the same direction that
+${\bf V}$ would have to be rotated by $\pi/2$ radians to bring it into coincidence with ${\bf U}$
+(Figures~\ref{figure:10.6.1} and \ref{figure:10.6.2}).
 
 \enlargethispage{3in}
 \begin{figure}[H]
@@ -582,20 +632,27 @@ the vector from the origin to a point on the shadow ellipse rotates in the same 
   \end{minipage}
 \end{figure}
 
-If $\alpha=0$, then any trajectory of \eqref{eq:10.6.10} is a shadow trajectory of \eqref{eq:10.6.10}; therefore, if $\lambda$ is purely imaginary, then the trajectories of \eqref{eq:10.6.10} are ellipses traversed periodically as indicated in Figures~\ref{figure:10.6.1} and \ref{figure:10.6.2}.
+If $\alpha=0$, then any trajectory of \eqref{eq:10.6.10} is a shadow trajectory of
+\eqref{eq:10.6.10}; therefore, if $\lambda$ is purely imaginary, then the trajectories of
+\eqref{eq:10.6.10} are ellipses traversed periodically as indicated in Figures~\ref{figure:10.6.1}
+and \ref{figure:10.6.2}.
 
 If $\alpha>0$, then
 \[
   \lim_{t\to\infty}\|{\bf y}(t)\|=\infty\mbox{\quad and \quad}\lim_{t\to-\infty}{\bf y}(t)=0,
 \]
-so the trajectory spirals away from the origin as $t$ varies from $-\infty$ to $\infty$. The direction of the spiral depends upon the relative orientation of ${\bf U}$ and ${\bf V}$, as shown in Figures~\ref{figure:10.6.3} and \ref{figure:10.6.4}.
+so the trajectory spirals away from the origin as $t$ varies from $-\infty$ to $\infty$. The
+direction of the spiral depends upon the relative orientation of ${\bf U}$ and ${\bf V}$, as shown
+in Figures~\ref{figure:10.6.3} and \ref{figure:10.6.4}.
 
 If $\alpha<0$, then
 \[
   \lim_{t\to-\infty}\|{\bf y}(t)\|=\infty\mbox{\quad and \quad}\lim_{t\to\infty}{\bf y}(t)=0,
 \]
 \enlargethispage{2in}
-so the trajectory spirals toward the origin as $t$ varies from $-\infty$ to $\infty$. Again, the direction of the spiral depends upon the relative orientation of ${\bf U}$ and ${\bf V}$, as shown in Figures~\ref{figure:10.6.5} and \ref{figure:10.6.6}.
+so the trajectory spirals toward the origin as $t$ varies from $-\infty$ to $\infty$. Again, the
+direction of the spiral depends upon the relative orientation of ${\bf U}$ and ${\bf V}$, as shown
+in Figures~\ref{figure:10.6.5} and \ref{figure:10.6.6}.
 \newpage
 
 \begin{figure}[H]
@@ -677,25 +734,35 @@ so the trajectory spirals toward the origin as $t$ varies from $-\infty$ to $\in
     \item\label{exer:10.6.16} $\dst{{\bf y}'=\threebythree12{-2}02{-1}100{\bf y}'}$
   \end{tabular}
 
-  \exercisetext{In Exercises~\ref{exer:10.6.17}--\ref{exer:10.6.24} solve the initial value problem.}
+  \exercisetext{In Exercises~\ref{exer:10.6.17}--\ref{exer:10.6.24} solve the initial value
+  problem.}
 
   \item\label{exer:10.6.17} $\dst{{\bf y}'=\twobytwo4{-6}3{-2}{\bf y},\quad{\bf y}(0)=\twocol52}$
 
   \item\label{exer:10.6.18} $\dst{{\bf y}'=\twobytwo7{15}{-3}1{\bf y},\quad{\bf y}(0)=\twocol51}$
 
-  \item\label{exer:10.6.19} $\dst{{\bf y}'=\twobytwo7{-15}3{-5}{\bf y},\quad{\bf y}(0)=\twocol{17}7}$
+  \item\label{exer:10.6.19}
+        $\dst{{\bf y}'=\twobytwo7{-15}3{-5}{\bf y},\quad{\bf y}(0)=\twocol{17}7}$
 
-  \item\label{exer:10.6.20} $\dst{{\bf y}'=\frac{1}{6}\twobytwo4{-2}52{\bf y},\quad{\bf y}(0)=\twocol1{-1}}$
+  \item\label{exer:10.6.20}
+        $\dst{{\bf y}'=\frac{1}{6}\twobytwo4{-2}52{\bf y},\quad{\bf y}(0)=\twocol1{-1}}$
 
-  \item\label{exer:10.6.21} $\dst{{\bf y}'=\threebythree52{-1}{-3}22132{\bf y},\quad{\bf y}(0)=\threecol406}$
+  \item\label{exer:10.6.21}
+        $\dst{{\bf y}'=\threebythree52{-1}{-3}22132{\bf y},\quad{\bf y}(0)=\threecol406}$
 
-  \item\label{exer:10.6.22} $\dst{{\bf y}'=\threebythree4408{10}{-20}23{-2}{\bf y},\quad{\bf y}(0)=\threecol865}$
+  \item\label{exer:10.6.22}
+        $\dst{{\bf y}'=\threebythree4408{10}{-20}23{-2}{\bf y},\quad{\bf y}(0)=\threecol865}$
 
-  \item\label{exer:10.6.23} $\dst{{\bf y}'=\threebythree1{15}{-15}{-6}{18}{-22}{-3}{11}{-15}{\bf y},\quad{\bf y}(0)=\threecol{15}{17}{10}}$
+  \item\label{exer:10.6.23}
+        $\dst{{\bf y}'=\threebythree1{15}{-15}{-6}{18}{-22}{-3}{11}{-15}{\bf y},\quad{\bf y}(0)=\threecol{15}{17}{10}}$
 
-  \item\label{exer:10.6.24} $\dst{{\bf y}'=\threebythree4{-4}4{-10}3{15}2{-3}1{\bf y},\quad {\bf y}(0)=\threecol{16}{14}6}$
+  \item\label{exer:10.6.24}
+        $\dst{{\bf y}'=\threebythree4{-4}4{-10}3{15}2{-3}1{\bf y},\quad {\bf y}(0)=\threecol{16}{14}6}$
 
-  \item\label{exer:10.6.25} Suppose an $n\times n$ matrix $A$ with real entries has a complex eigenvalue $\lambda=\alpha+i\beta$ ($\beta\ne0$) with associated eigenvector ${\bf x}={\bf u}+i{\bf v}$, where ${\bf u}$ and ${\bf v}$ have real components. Show that ${\bf u}$ and ${\bf v}$ are both nonzero.
+  \item\label{exer:10.6.25} Suppose an $n\times n$ matrix $A$ with real entries has a complex
+        eigenvalue $\lambda=\alpha+i\beta$ ($\beta\ne0$) with associated eigenvector
+        ${\bf x}={\bf u}+i{\bf v}$, where ${\bf u}$ and ${\bf v}$ have real components. Show that
+        ${\bf u}$ and ${\bf v}$ are both nonzero.
 
   \item\label{exer:10.6.26} Verify that
   \[
@@ -706,13 +773,18 @@ so the trajectory spirals toward the origin as $t$ varies from $-\infty$ to $\in
     e^{\alpha t}(\cos\beta t+i\sin\beta t)({\bf u}+i{\bf v}).
   \]
 
-  \item\label{exer:10.6.27} Show that if the vectors ${\bf u}$ and ${\bf v}$ are not both ${\bf 0}$ and $\beta\ne0$ then the vector functions
+  \item\label{exer:10.6.27} Show that if the vectors ${\bf u}$ and ${\bf v}$ are not both ${\bf 0}$
+        and $\beta\ne0$ then the vector functions
   \[
     {\bf y}_{1}=e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)\quad \mbox{ and }\quad{\bf y}_{2}=e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t)
   \]
-  are linearly independent on every interval. \hint{There are two cases to consider: {\rm(i)} $\{{\bf u},{\bf v}\}$ linearly independent, and {\rm(ii)} $\{{\bf u},{\bf v}\}$ linearly dependent. In either case, exploit the linear independence of $\{\cos\beta t,\sin\beta t\}$ on every interval.}
+  are linearly independent on every interval. \hint{There are two cases to consider: {\rm(i)}
+  $\{{\bf u},{\bf v}\}$ linearly independent, and {\rm(ii)} $\{{\bf u},{\bf v}\}$ linearly
+  dependent. In either case, exploit the linear independence of $\{\cos\beta t,\sin\beta t\}$ on
+  every interval.}
 
-  \item\label{exer:10.6.28} Suppose ${\bf u}=\dst{\twocol{u_{1}}{u_{2}}}$ and ${\bf v}=\dst{\twocol{v_{1}}{v_{2}}}$ are not orthogonal; that is, $({\bf u},{\bf v})\ne0$.
+  \item\label{exer:10.6.28} Suppose ${\bf u}=\dst{\twocol{u_{1}}{u_{2}}}$ and
+        ${\bf v}=\dst{\twocol{v_{1}}{v_{2}}}$ are not orthogonal; that is, $({\bf u},{\bf v})\ne0$.
   \begin{alist}
     \item % (a)
     Show that the quadratic equation
@@ -722,16 +794,25 @@ so the trajectory spirals toward the origin as $t$ varies from $-\infty$ to $\in
     has a positive root $k_{1}$ and a negative root $k_{2}=-1/k_{1}$.
 
     \item % (b)
-    Let ${\bf u}_{1}^{(1)}={\bf u}-k_{1}{\bf v}$, ${\bf v}_{1}^{(1)}={\bf v}+k_{1}{\bf u}$, ${\bf u}_{1}^{(2)}={\bf u}-k_{2}{\bf v}$, and ${\bf v}_{1}^{(2)}={\bf v}+k_{2}{\bf u}$, so that $({\bf u}_{1}^{(1)},{\bf v}_{1}^{(1)})=({\bf u}_{1}^{(2)},{\bf v}_{1}^{(2)})=0$, from the discussion given above. Show that
+    Let ${\bf u}_{1}^{(1)}={\bf u}-k_{1}{\bf v}$, ${\bf v}_{1}^{(1)}={\bf v}+k_{1}{\bf u}$,
+    ${\bf u}_{1}^{(2)}={\bf u}-k_{2}{\bf v}$, and ${\bf v}_{1}^{(2)}={\bf v}+k_{2}{\bf u}$, so that
+    $({\bf u}_{1}^{(1)},{\bf v}_{1}^{(1)})=({\bf u}_{1}^{(2)},{\bf v}_{1}^{(2)})=0$, from the
+    discussion given above. Show that
     \[
       {\bf u}_{1}^{(2)}=\frac{{\bf v}_{1}^{(1)}}{k_{1}}\mbox{\quad and \quad}{\bf v}_{1}^{(2)}=-\frac{{\bf u}_{1}^{(1)}}{k_{1}}.
     \]
 
     \item % (c)
-    Let ${\bf U}_{1}$, ${\bf V}_{1}$, ${\bf U}_{2}$, and ${\bf V}_{2}$ be unit vectors in the directions of ${\bf u}_{1}^{(1)}$, ${\bf v}_{1}^{(1)}$, ${\bf u}_{1}^{(2)}$, and ${\bf v}_{1}^{(2)}$, respectively. Conclude from \part{a} that ${\bf U}_{2}={\bf V}_{1}$ and ${\bf V}_{2}=-{\bf U}_{1}$, and that therefore the counterclockwise angles from ${\bf U}_{1}$ to ${\bf V}_{1}$ and from ${\bf U}_{2}$ to ${\bf V}_{2}$ are both $\pi/2$ or both $-\pi/2$.
+    Let ${\bf U}_{1}$, ${\bf V}_{1}$, ${\bf U}_{2}$, and ${\bf V}_{2}$ be unit vectors in the
+    directions of ${\bf u}_{1}^{(1)}$, ${\bf v}_{1}^{(1)}$, ${\bf u}_{1}^{(2)}$, and
+    ${\bf v}_{1}^{(2)}$, respectively. Conclude from \part{a} that ${\bf U}_{2}={\bf V}_{1}$ and
+    ${\bf V}_{2}=-{\bf U}_{1}$, and that therefore the counterclockwise angles from ${\bf U}_{1}$ to
+    ${\bf V}_{1}$ and from ${\bf U}_{2}$ to ${\bf V}_{2}$ are both $\pi/2$ or both $-\pi/2$.
   \end{alist}
 
-  \exercisetext{In Exercises~\ref{exer:10.6.29}-\ref{exer:10.6.32} find vectors ${\bf U}$ and ${\bf V}$ parallel to the axes of symmetry of the trajectories, and plot some typical trajectories.}
+  \exercisetext{In Exercises~\ref{exer:10.6.29}-\ref{exer:10.6.32} find vectors ${\bf U}$ and
+  ${\bf V}$ parallel to the axes of symmetry of the trajectories, and plot some typical
+  trajectories.}
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \item\label{exer:10.6.29} \CGex\, $\dst{{\bf y}'=\twobytwo3{-5}5{-3}{\bf y}}$ &
@@ -743,7 +824,9 @@ so the trajectory spirals toward the origin as $t$ varies from $-\infty$ to $\in
     \item\label{exer:10.6.32} \CGex\, $\dst{{\bf y}'=\twobytwo{-3}{-15}33{\bf y}}$
   \end{tabular}
 
-  \exercisetext{In Exercises~\ref{exer:10.6.33}-\ref{exer:10.6.40} find vectors ${\bf U}$ and ${\bf V}$ parallel to the axes of symmetry of the shadow trajectories, and plot a typical trajectory.}
+  \exercisetext{In Exercises~\ref{exer:10.6.33}-\ref{exer:10.6.40} find vectors ${\bf U}$ and
+  ${\bf V}$ parallel to the axes of symmetry of the shadow trajectories, and plot a typical
+  trajectory.}
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \item\label{exer:10.6.33} \CGex\, $\dst{{\bf y}'=\twobytwo{-5}6{-12}7{\bf y}}$ &

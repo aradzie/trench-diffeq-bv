@@ -1,15 +1,22 @@
 \section{The Method of Frobenius II}
 
 \noindent
-In this section we discuss a method for finding two linearly independent Frobenius solutions of a homogeneous linear second order equation near a regular singular point in the case where the indicial equation has a repeated real root. As in the preceding section, we consider equations that can be written as
+In this section we discuss a method for finding two linearly independent Frobenius solutions of a
+homogeneous linear second order equation near a regular singular point in the case where the
+indicial equation has a repeated real root. As in the preceding section, we consider equations that
+can be written as
 \begin{equation}
   \label{eq:7.6.1}x^{2}(\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2})y''+x(\beta_{0}+\beta_{1}x+\beta_{2}x^{2})y' +(\gamma_{0}+\gamma_{1}x+\gamma_{2}x^{2})y=0
 \end{equation}
-where $\alpha_{0}\ne0$. We assume that the indicial equation $p_{0}(r)=0$ has a repeated real root $r_{1}$. In this case Theorem~\ref{thmtype:7.5.3} implies that \eqref{eq:7.6.1} has one solution of the form
+where $\alpha_{0}\ne0$. We assume that the indicial equation $p_{0}(r)=0$ has a repeated real root
+$r_{1}$. In this case Theorem~\ref{thmtype:7.5.3} implies that \eqref{eq:7.6.1} has one solution of
+the form
 \[
   y_{1}=x^{r_{1}}\sum_{n=0}^{\infty}a_{n}x^{n},
 \]
-but does not provide a second solution $y_{2}$ such that $\{y_{1},y_{2}\}$ is a fundamental set of solutions. The following extension of Theorem~\ref{thmtype:7.5.2} provides a way to find a second solution.
+but does not provide a second solution $y_{2}$ such that $\{y_{1},y_{2}\}$ is a fundamental set of
+solutions. The following extension of Theorem~\ref{thmtype:7.5.2} provides a way to find a second
+solution.
 
 \begin{theorem}
   \color{blue}
@@ -21,7 +28,8 @@ but does not provide a second solution $y_{2}$ such that $\{y_{1},y_{2}\}$ is a 
   \begin{eqnarray*}
     p_{0}(r)&=&\alpha_{0}r(r-1)+\beta_{0}r+\gamma_{0},\\[5pt] p_{1}(r)&=&\alpha_{1}r(r-1)+\beta_{1}r+\gamma_{1},\\[5pt] p_{2}(r)&=&\alpha_{2}r(r-1)+\beta_{2}r+\gamma_{2}.\\
   \end{eqnarray*}
-  Suppose $r$ is a real number such that $p_{0}(n+r)$ is nonzero for all positive integers $n$, and define
+  Suppose $r$ is a real number such that $p_{0}(n+r)$ is nonzero for all positive integers $n$, and
+  define
   \[
     \begin{array}{ccl}
       a_{0}(r) & = & 1,                                                                                 \\
@@ -47,7 +55,8 @@ but does not provide a second solution $y_{2}$ such that $\{y_{1},y_{2}\}$ is a 
   \end{equation}
 \end{theorem}
 
-\proof Theorem~\ref{thmtype:7.5.2} implies \eqref{eq:7.6.4}. Differentiating formally with respect to $r$ in \eqref{eq:7.6.3} yields
+\proof Theorem~\ref{thmtype:7.5.2} implies \eqref{eq:7.6.4}. Differentiating formally with respect
+to $r$ in \eqref{eq:7.6.3} yields
 \begin{eqnarray*}
   {\frac{\partial y}{\partial r}}(x,r) & = & \dst{\frac{\partial}{\partial r}(x^{r})\sum_{n=0}^{\infty}a_{n}(r)x^{n}+x^{r}\sum_{n=1}^{\infty}a_{n}'(r)x^{n}} \\[10pt]
                                        & = & \dst{x^{r}\ln x\sum_{n=0}^{\infty}a_{n}(r)x^{n}+x^{r}\sum_{n=1}^{\infty}a_{n}'(r)x^{n}}                         \\[10pt]
@@ -55,7 +64,9 @@ but does not provide a second solution $y_{2}$ such that $\{y_{1},y_{2}\}$ is a 
 \end{eqnarray*}
 which proves \eqref{eq:7.6.5}.
 
-To prove that $\partial y(x,r)/\partial r$ satisfies \eqref{eq:7.6.6}, we view $y$ in \eqref{eq:7.6.2} as a function $y=y(x,r)$ of two variables, where the prime indicates partial differentiation with respect to $x$; thus,
+To prove that $\partial y(x,r)/\partial r$ satisfies \eqref{eq:7.6.6}, we view $y$ in
+\eqref{eq:7.6.2} as a function $y=y(x,r)$ of two variables, where the prime indicates partial
+differentiation with respect to $x$; thus,
 \[
   y'=y'(x,r)=\frac{\partial y}{\partial x}(x,r)\mbox{\quad and \quad}y''=y''(x,r)=\frac{\partial^{2}y}{\partial x^{2}}(x,r).
 \]
@@ -85,7 +96,8 @@ which is equivalent to \eqref{eq:7.6.6}.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:7.6.2} Let $L$ be as in Theorem~{\rm\ref{thmtype:7.6.1}} and suppose the indicial equation $p_{0}(r)=0$ has a repeated real root $r_{1}$. Then
+  \label{thmtype:7.6.2} Let $L$ be as in Theorem~{\rm\ref{thmtype:7.6.1}} and suppose the indicial
+  equation $p_{0}(r)=0$ has a repeated real root $r_{1}$. Then
   \[
     y_{1}(x)=y(x,r_{1})=x^{r_{1}}\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}
   \]
@@ -104,7 +116,8 @@ so
 \[
   p_{0}(n+r_{1})=\alpha_{0}n^{2},
 \]
-which is nonzero if $n>0$. Therefore the assumptions of Theorem~\ref{thmtype:7.6.1} hold with $r=r_{1}$, and \eqref{eq:7.6.4} implies that $Ly_{1}=p_{0}(r_{1})x^{r_{1}}=0$. Since
+which is nonzero if $n>0$. Therefore the assumptions of Theorem~\ref{thmtype:7.6.1} hold with
+$r=r_{1}$, and \eqref{eq:7.6.4} implies that $Ly_{1}=p_{0}(r_{1})x^{r_{1}}=0$. Since
 \[
   p_{0}'(r)=2\alpha(r-r_{1})
 \]
@@ -112,14 +125,16 @@ it follows that $p_{0}'(r_{1})=0$, so \eqref{eq:7.6.6} implies that
 \[
   Ly_{2}=p_{0}'(r_{1})x^{r_{1}}+x^{r_{1}}p_{0}(r_{1})\ln x=0.
 \]
-This proves that $y_{1}$ and $y_{2}$ are both solutions of $Ly=0$. We leave the proof that $\{y_{1},y_{2}\}$ is a fundamental set as an exercise (Exercise~\ref{exer:7.6.53}).
+This proves that $y_{1}$ and $y_{2}$ are both solutions of $Ly=0$. We leave the proof that
+$\{y_{1},y_{2}\}$ is a fundamental set as an exercise (Exercise~\ref{exer:7.6.53}).
 
 \begin{example}
   \label{example:7.6.1} \rm Find a fundamental set of solutions of
   \begin{equation}
     \label{eq:7.6.9}x^{2}(1-2x+x^{2})y''-x(3+x)y'+(4+x)y=0.
   \end{equation}
-  Compute just the terms involving $x^{n+r_{1}}$, where $0\le n\le4$ and $r_{1}$ is the root of the indicial equation.
+  Compute just the terms involving $x^{n+r_{1}}$, where $0\le n\le4$ and $r_{1}$ is the root of the
+  indicial equation.
 \end{example}
 
 \solution For the given equation, the polynomials defined in Theorem~\ref{thmtype:7.6.1} are
@@ -130,11 +145,13 @@ This proves that $y_{1}$ and $y_{2}$ are both solutions of $Ly=0$. We leave the 
     p_{2}(r) & = & r(r-1).
   \end{array}
 \]
-Since $r_{1}=2$ is a repeated root of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2} implies that
+Since $r_{1}=2$ is a repeated root of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2}
+implies that
 \begin{equation}
   \label{eq:7.6.10}y_{1}=x^{2}\sum_{n=0}^{\infty}a_{n}(2)x^{n}\quad\mbox{ and }\quad y_{2}=y_{1}\ln x+x^{2}\sum_{n=1}^{\infty}a_{n}'(2)x^{n}
 \end{equation}
-form a fundamental set of Frobenius solutions of \eqref{eq:7.6.9}. To find the coefficients in these series, we use the recurrence formulas from Theorem~\ref{thmtype:7.6.1}:
+form a fundamental set of Frobenius solutions of \eqref{eq:7.6.9}. To find the coefficients in these
+series, we use the recurrence formulas from Theorem~\ref{thmtype:7.6.1}:
 \begin{equation}
   \label{eq:7.6.11}
   \begin{array}{ccl}
@@ -189,7 +206,12 @@ and
   y_{2}=y_{1}\ln x -x^{3}\left(3+\frac{29}{2}x+\frac{859}{18}x^{2}+\frac{4693}{36}x^{3}+\cdots\right).\bbox
 \]
 
-Since the recurrence formula \eqref{eq:7.6.11} involves three terms, it's not possible to obtain a simple explicit formula for the coefficients in the Frobenius solutions of \eqref{eq:7.6.9}. However, as we saw in the preceding sections, the recurrence formula for $\{a_{n}(r)\}$ involves only two terms if either $\alpha_{1}=\beta_{1}=\gamma_{1}=0$ or $\alpha_{2}=\beta_{2}=\gamma_{2}=0$ in \eqref{eq:7.6.1}. In this case, it's often possible to find explicit formulas for the coefficients. The next two examples illustrate this.
+Since the recurrence formula \eqref{eq:7.6.11} involves three terms, it's not possible to obtain a
+simple explicit formula for the coefficients in the Frobenius solutions of \eqref{eq:7.6.9}.
+However, as we saw in the preceding sections, the recurrence formula for $\{a_{n}(r)\}$ involves
+only two terms if either $\alpha_{1}=\beta_{1}=\gamma_{1}=0$ or $\alpha_{2}=\beta_{2}=\gamma_{2}=0$
+in \eqref{eq:7.6.1}. In this case, it's often possible to find explicit formulas for the
+coefficients. The next two examples illustrate this.
 
 \begin{example}
   \label{example:7.6.2} \rm Find a fundamental set of Frobenius solutions of
@@ -207,7 +229,8 @@ Since the recurrence formula \eqref{eq:7.6.11} involves three terms, it's not po
     p_{2}(r) & = & 0.
   \end{array}
 \]
-Since $r_{1}=1/2$ is a repeated zero of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2} implies that
+Since $r_{1}=1/2$ is a repeated zero of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2}
+implies that
 \begin{equation}
   \label{eq:7.6.16}y_{1}=x^{1/2}\sum_{n=0}^{\infty}a_{n}(1/2)x^{n}
 \end{equation}
@@ -215,7 +238,8 @@ and
 \begin{equation}
   \label{eq:7.6.17}y_{2}=y_{1}\ln x+x^{1/2}\sum_{n=1}^{\infty}a_{n}'(1/2)x^{n}
 \end{equation}
-form a fundamental set of Frobenius solutions of \eqref{eq:7.6.15}. Since $p_{2}\equiv0$, the recurrence formulas in Theorem~\ref{thmtype:7.6.1} reduce to
+form a fundamental set of Frobenius solutions of \eqref{eq:7.6.15}. Since $p_{2}\equiv0$, the
+recurrence formulas in Theorem~\ref{thmtype:7.6.1} reduce to
 \[
   \begin{array}{ccl}
     a_{0}(r) & = & 1,                                                   \\
@@ -241,7 +265,8 @@ Substituting this into \eqref{eq:7.6.16} yields
   y_{1}=x^{1/2}\sum_{n=0}^{\infty}\frac{(-1)^{n}\prod_{j=1}^{n}(2j+1)}{4^{n}n!}x^{n}.
 \]
 
-To obtain $y_{2}$ in \eqref{eq:7.6.17}, we must compute $a_{n}'(1/2)$ for $n=1$, $2$,\dots. We'll do this by logarithmic differentiation. From \eqref{eq:7.6.18},
+To obtain $y_{2}$ in \eqref{eq:7.6.17}, we must compute $a_{n}'(1/2)$ for $n=1$, $2$,\dots. We'll do
+this by logarithmic differentiation. From \eqref{eq:7.6.18},
 \[
   |a_{n}(r)|=\prod_{j=1}^{n}\frac{|j+r|}{|2j+2r-1|},\quad n\ge1.
 \]
@@ -290,7 +315,8 @@ Therefore, from \eqref{eq:7.6.17},
     p_{2}(r) & = & -r(r-1)-4r-2 & = & -(r+1)(r+2).
   \end{array}
 \]
-As in Section~7.5, since $p_{1}\equiv0$, the recurrence formulas of Theorem~\ref{thmtype:7.6.1} imply that $a_{n}(r)=0$ if $n$ is odd, and
+As in Section~7.5, since $p_{1}\equiv0$, the recurrence formulas of Theorem~\ref{thmtype:7.6.1}
+imply that $a_{n}(r)=0$ if $n$ is odd, and
 \[
   \begin{array}{ccl}
     a_{0}(r)  & = & 1,                                                  \\
@@ -299,7 +325,8 @@ As in Section~7.5, since $p_{1}\equiv0$, the recurrence formulas of Theorem~\ref
               & = & \dst\frac{2m+r}{2(2m+r-1)}a_{2m-2}(r),\quad m\ge1.
   \end{array}
 \]
-Since $r_{1}=1$ is a repeated root of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2} implies that
+Since $r_{1}=1$ is a repeated root of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2}
+implies that
 \begin{equation}
   \label{eq:7.6.22}y_{1}=x\sum_{m=0}^{\infty}a_{2m}(1)x^{2m}
 \end{equation}
@@ -320,7 +347,8 @@ and substituting this into \eqref{eq:7.6.22} yields
   y_{1}=x\sum_{m=0}^{\infty}\frac{\prod_{j=1}^{m}(2j+1)}{4^{m}m!}x^{2m}.
 \]
 
-To obtain $y_{2}$ in \eqref{eq:7.6.23}, we must compute $a_{2m}'(1)$ for $m=1$, $2$, \dots. Again we use logarithmic differentiation. From \eqref{eq:7.6.24},
+To obtain $y_{2}$ in \eqref{eq:7.6.23}, we must compute $a_{2m}'(1)$ for $m=1$, $2$, \dots. Again we
+use logarithmic differentiation. From \eqref{eq:7.6.24},
 \[
   |a_{2m}(r)|=\frac{1}{2^{m}}\prod_{j=1}^{m}\frac{|2j+r|}{|2j+r-1|}.
 \]
@@ -353,7 +381,9 @@ Substituting this into \eqref{eq:7.6.23} yields
   y_{2}=y_{1}\ln x-\frac{x}{2}\sum_{m=1}^{\infty}\frac{\prod_{j=1}^{m}(2j+1)}{4^{m}m!}\left(\sum_{j=1}^{m}\frac{1}{j(2j+1)}\right)x^{2m}.\bbox
 \]
 
-If the solution $y_{1}=y(x,r_{1})$ of $Ly=0$ reduces to a finite sum, then there's a difficulty in using logarithmic differentiation to obtain the coefficients $\{a_{n}'(r_{1})\}$ in the second solution. The next example illustrates this difficulty and shows how to overcome it.
+If the solution $y_{1}=y(x,r_{1})$ of $Ly=0$ reduces to a finite sum, then there's a difficulty in
+using logarithmic differentiation to obtain the coefficients $\{a_{n}'(r_{1})\}$ in the second
+solution. The next example illustrates this difficulty and shows how to overcome it.
 
 \begin{example}
   \label{example:7.6.4} \rm Find a fundamental set of Frobenius solutions of
@@ -371,7 +401,8 @@ If the solution $y_{1}=y(x,r_{1})$ of $Ly=0$ reduces to a finite sum, then there
     p_{2}(r) & = & 0.
   \end{array}
 \]
-Since $r_{1}=3$ is a repeated zero of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2} implies that
+Since $r_{1}=3$ is a repeated zero of the indicial polynomial $p_{0}$, Theorem~\ref{thmtype:7.6.2}
+implies that
 \begin{equation}
   \label{eq:7.6.28}y_{1}=x^{3}\sum_{n=0}^{\infty}a_{n}(3)x^{n}
 \end{equation}
@@ -379,7 +410,8 @@ and
 \begin{equation}
   \label{eq:7.6.29}y_{2}=y_{1}\ln x+x^{3}\sum_{n=1}^{\infty}a_{n}'(3)x^{n}
 \end{equation}
-are linearly independent Frobenius solutions of \eqref{eq:7.6.27}. To find the coefficients in \eqref{eq:7.6.28} we use the recurrence formulas
+are linearly independent Frobenius solutions of \eqref{eq:7.6.27}. To find the coefficients in
+\eqref{eq:7.6.28} we use the recurrence formulas
 \[
   \begin{array}{ccl}
     a_{0}(r) & = & 1,                                                    \\
@@ -395,12 +427,14 @@ Setting $r=3$ here yields
 \[
   a_{n}(3)=(-1)^{n}\prod_{j=1}^{n}\frac{j-2}{j^{2}},
 \]
-so $a_{1}(3)=1$ and $a_{n}(3)=0$ if $n\ge2$. Substituting these coefficients into \eqref{eq:7.6.28} yields
+so $a_{1}(3)=1$ and $a_{n}(3)=0$ if $n\ge2$. Substituting these coefficients into \eqref{eq:7.6.28}
+yields
 \[
   y_{1}=x^{3}(1+x).
 \]
 
-To obtain $y_{2}$ in \eqref{eq:7.6.29} we must compute $a_{n}'(3)$ for $n=1$, $2$, \dots. Let's first try logarithmic differentiation. From \eqref{eq:7.6.30},
+To obtain $y_{2}$ in \eqref{eq:7.6.29} we must compute $a_{n}'(3)$ for $n=1$, $2$, \dots. Let's
+first try logarithmic differentiation. From \eqref{eq:7.6.30},
 \[
   |a_{n}(r)|=\prod_{j=1}^{n}\frac{|j+r-5|}{|j+r-3|^{2}},\quad n\ge1,
 \]
@@ -416,7 +450,9 @@ Therefore
 \begin{equation}
   \label{eq:7.6.31}a'_{n}(r)=a_{n}(r)\sum^{n}_{j=1}\left(\frac{1}{j+r-5}-\frac{2}{j+r-3}\right).
 \end{equation}
-However, we can't simply set $r=3$ here if $n\ge2$, since the bracketed expression in the sum corresponding to $j=2$ contains the term $1/(r-3)$. In fact, since $a_{n}(3)=0$ for $n\ge2$, the formula \eqref{eq:7.6.31} for $a_{n}'(r)$ is actually an indeterminate form at $r=3$.
+However, we can't simply set $r=3$ here if $n\ge2$, since the bracketed expression in the sum
+corresponding to $j=2$ contains the term $1/(r-3)$. In fact, since $a_{n}(3)=0$ for $n\ge2$, the
+formula \eqref{eq:7.6.31} for $a_{n}'(r)$ is actually an indeterminate form at $r=3$.
 
 We overcome this difficulty as follows. From \eqref{eq:7.6.30} with $n=1$,
 \[
@@ -476,7 +512,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 
   \item\label{exer:7.6.11} \Cex $9x^{2}(1+x)y''+3x(5+11x-x^{2})y'+(1+16x-7x^{2})y=0$
 
-  \exercisetext{In Exercises~\ref{exer:7.6.12}--\ref{exer:7.6.22} find a fundamental set of Frobenius solutions. Give explicit formulas for the coefficients.}
+  \exercisetext{In Exercises~\ref{exer:7.6.12}--\ref{exer:7.6.22} find a fundamental set of
+  Frobenius solutions. Give explicit formulas for the coefficients.}
 
   \item\label{exer:7.6.12} $4x^{2}y''+(1+4x)y=0$
 
@@ -500,7 +537,10 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 
   \item\label{exer:7.6.22} $2x^{2}(1+x)y''-x(6-x)y'+(8-x)y=0$
 
-  \exercisetext{In Exercises~\ref{exer:7.6.23}--\ref{exer:7.6.27} find a fundamental set of Frobenius solutions. Compute the terms involving $x^{n+r_{1}}$, where $0\le n\le N$ ($N$ at least $7$) and $r_{1}$ is the root of the indicial equation. Optionally, write a computer program to implement the applicable recurrence formulas and take $N>7$.}
+  \exercisetext{In Exercises~\ref{exer:7.6.23}--\ref{exer:7.6.27} find a fundamental set of
+  Frobenius solutions. Compute the terms involving $x^{n+r_{1}}$, where $0\le n\le N$ ($N$ at least
+  $7$) and $r_{1}$ is the root of the indicial equation. Optionally, write a computer program to
+  implement the applicable recurrence formulas and take $N>7$.}
 
   \item\label{exer:7.6.23} \Cex $x^{2}(1+2x)y''+x(5+9x)y'+(4+3x)y=0$
 
@@ -512,7 +552,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 
   \item\label{exer:7.6.27} \Cex $x^{2}(1-x)y''+x(7+x)y'+(9-x)y=0$
 
-  \exercisetext{In Exercises~\ref{exer:7.6.28}--\ref{exer:7.6.38} find a fundamental set of Frobenius solutions. Give explicit formulas for the coefficients.}
+  \exercisetext{In Exercises~\ref{exer:7.6.28}--\ref{exer:7.6.38} find a fundamental set of
+  Frobenius solutions. Give explicit formulas for the coefficients.}
 
   \item\label{exer:7.6.28} $x^{2}y''-x(1-x^{2})y'+(1+x^{2})y=0$
 
@@ -536,7 +577,10 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 
   \item\label{exer:7.6.38} $x^{2}(1+2x^{2})y''+x(3+7x^{2})y'+(1-3x^{2})y=0$
 
-  \exercisetext{In Exercises~\ref{exer:7.6.39}--\ref{exer:7.6.43} find a fundamental set of Frobenius solutions. Compute the terms involving $x^{2m+r_{1}}$, where $0\le m\le M$ ($M$ at least $3$) and $r_{1}$ is the root of the indicial equation. Optionally, write a computer program to implement the applicable recurrence formulas and take $M>3$.}
+  \exercisetext{In Exercises~\ref{exer:7.6.39}--\ref{exer:7.6.43} find a fundamental set of
+  Frobenius solutions. Compute the terms involving $x^{2m+r_{1}}$, where $0\le m\le M$ ($M$ at least
+  $3$) and $r_{1}$ is the root of the indicial equation. Optionally, write a computer program to
+  implement the applicable recurrence formulas and take $M>3$.}
 
   \item\label{exer:7.6.39} \Cex $x^{2}(1+x^{2})y''+x(3+8x^{2})y'+(1+12x^{2})y$
 
@@ -548,7 +592,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 
   \item\label{exer:7.6.43} \Cex $x^{2}(1+x^{2})y''+x(3+7x^{2})y'+(1+8x^{2})y=0$
 
-  \exercisetext{In Exercises~\ref{exer:7.6.44}--\ref{exer:7.6.52} find a fundamental set of Frobenius solutions. Give explicit formulas for the coefficients.}
+  \exercisetext{In Exercises~\ref{exer:7.6.44}--\ref{exer:7.6.52} find a fundamental set of
+  Frobenius solutions. Give explicit formulas for the coefficients.}
 
   \item\label{exer:7.6.44} $x^{2}(1-2x)y''+3xy'+(1+4x)y=0$
 
@@ -568,7 +613,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 
   \item\label{exer:7.6.52} $4x^{2}y''+2x(4-x^{2})y'+(1+7x^{2})y=0$
 
-  \item\label{exer:7.6.53} Under the assumptions of Theorem~\ref{thmtype:7.6.2}, suppose the power series
+  \item\label{exer:7.6.53} Under the assumptions of Theorem~\ref{thmtype:7.6.2}, suppose the power
+        series
   \[
     \sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}\quad\mbox{ and }\quad \sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}
   \]
@@ -579,7 +625,11 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
     \[
       y_{1}=x^{r_{1}}\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}\quad\mbox{ and }\quad y_{2}=y_{1}\ln x+x^{r_{1}}\sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}
     \]
-    are linearly independent on $(0,\rho)$. \hint{Show that if $c_{1}$ and $c_{2}$ are constants such that $c_{1}y_{1}+c_{2}y_{2}\equiv0$ on $(0,\rho)$, then \[(c_{1}+c_{2}\ln x)\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}+ c_{2}\sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}=0,\quad0<x<\rho.\] Then let $x\to0+$ to conclude that $c_{2}=0$.}
+    are linearly independent on $(0,\rho)$. \hint{Show that if $c_{1}$ and $c_{2}$ are constants
+    such that $c_{1}y_{1}+c_{2}y_{2}\equiv0$ on $(0,\rho)$, then \[(c_{1}+c_{2}\ln
+    x)\sum_{n=0}^{\infty}a_{n}(r_{1})x^{n}+
+    c_{2}\sum_{n=1}^{\infty}a_{n}'(r_{1})x^{n}=0,\quad0<x<\rho.\] Then let $x\to0+$ to conclude that
+    $c_{2}=0$.}
 
     \item % (b)
     Use the result of \part{a} to complete the proof of Theorem~\ref{thmtype:7.6.2}.
@@ -593,7 +643,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
   \[
     p_{0}(r)=\alpha_{0}r(r-1)+\beta_{0}r+\gamma_{0}\quad\mbox{ and }\quad p_{1}(r)=\alpha_{1}r(r-1)+\beta_{1}r+\gamma_{1}.
   \]
-  Theorem~\ref{thmtype:7.6.1} and Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.55}\part{a} imply that if
+  Theorem~\ref{thmtype:7.6.1} and Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.55}\part{a} imply that
+  if
   \[
     y(x,r)=x^{r}\sum_{n=0}^{\infty}a_{n}(r)x^{n}
   \]
@@ -605,7 +656,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
   \[
     Ly(x,r)=p_{0}(r)x^{r}.
   \]
-  Now suppose $p_{0}(r)=\alpha_{0}(r-r_{1})^{2}$ and $p_{1}(k+r_{1})\ne0$ if $k$ is a nonnegative integer.
+  Now suppose $p_{0}(r)=\alpha_{0}(r-r_{1})^{2}$ and $p_{1}(k+r_{1})\ne0$ if $k$ is a nonnegative
+  integer.
   \begin{alist}
     \item % (a)
     Show that $Ly=0$ has the solution
@@ -698,9 +750,11 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
   is
   \href{https://mathshistory.st-andrews.ac.uk/Biographies/Bessel/}{\color{blue}
   \it Bessel's equation of order zero.\/}
-  (See Exercise~\ref{exer:7.5.53}.) Find two linearly independent Frobenius solutions of this equation.
+  (See Exercise~\ref{exer:7.5.53}.) Find two linearly independent Frobenius solutions of this
+  equation.
 
-  \item\label{exer:7.6.57} Suppose the assumptions of Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.53} hold, except that
+  \item\label{exer:7.6.57} Suppose the assumptions of Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.53}
+        hold, except that
   \[
     p_{0}(r)=\alpha_{0}(r-r_{1})^{2}.
   \]
@@ -714,7 +768,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
   \]
   on any interval $(0,\rho)$ on which $\alpha_{0}+\alpha_{1}x+\alpha_{2}x^{2}$ has no zeros.
 
-  \exercisetext{In Exercises~\ref{exer:7.6.58}--\ref{exer:7.6.65} use the method suggested by Exercise~\ref{exer:7.6.57} to find the general solution on some interval $(0,\rho)$.}
+  \exercisetext{In Exercises~\ref{exer:7.6.58}--\ref{exer:7.6.65} use the method suggested by
+  Exercise~\ref{exer:7.6.57} to find the general solution on some interval $(0,\rho)$.}
 
   \item\label{exer:7.6.58} $4x^{2}(1+x)y''+8x^{2}y'+(1+x)y=0$
 
@@ -735,7 +790,8 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
   \item\label{exer:7.6.66}
   \begin{alist}
     \item % (a)
-    Let $L$ and $y(x,r)$ be as in Exercises~\ref{exer:7.5.57} and \ref{exer:7.5.58}. Extend Theorem~\ref{thmtype:7.6.1} by showing that
+    Let $L$ and $y(x,r)$ be as in Exercises~\ref{exer:7.5.57} and \ref{exer:7.5.58}. Extend
+    Theorem~\ref{thmtype:7.6.1} by showing that
     \[
       L\left(\frac{\partial y}{\partial r}(x,r)\right)=p'_{0}(r)x^{r}+x^{r}p_{0}(r)\ln x.
     \]

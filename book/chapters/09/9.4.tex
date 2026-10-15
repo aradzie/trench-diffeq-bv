@@ -12,17 +12,22 @@ is normal on an interval $(a,b)$. We'll abbreviate this equation as $Ly=F$, wher
 \[
   Ly=P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y.
 \]
-When we speak of solutions of this equation and its complementary equation $Ly=0$, we mean solutions on $(a,b)$. We'll show how to use the method of variation of parameters to find a particular solution of $Ly=F$, provided that we know a fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of $Ly=0$.
+When we speak of solutions of this equation and its complementary equation $Ly=0$, we mean solutions
+on $(a,b)$. We'll show how to use the method of variation of parameters to find a particular
+solution of $Ly=F$, provided that we know a fundamental set of solutions
+$\{y_{1},y_{2},\dots,y_{n}\}$ of $Ly=0$.
 
 We seek a particular solution of $Ly=F$ in the form
 \begin{equation}
   \label{eq:9.4.2}y_{p}=u_{1}y_{1}+u_{2}y_{2}+\cdots+u_{n}y_{n}
 \end{equation}
-where $\{y_{1},y_{2},\dots,y_{n}\}$ is a known fundamental set of solutions of the complementary equation
+where $\{y_{1},y_{2},\dots,y_{n}\}$ is a known fundamental set of solutions of the complementary
+equation
 \[
   P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=0
 \]
-and $u_{1}$, $u_{2}$, \dots, $u_{n}$ are functions to be determined. We begin by imposing the following $n-1$ conditions on $u_{1},u_{2},\dots,u_{n}$:
+and $u_{1}$, $u_{2}$, \dots, $u_{n}$ are functions to be determined. We begin by imposing the
+following $n-1$ conditions on $u_{1},u_{2},\dots,u_{n}$:
 \begin{equation}
   \label{eq:9.4.3}
   \begin{array}{rcl}
@@ -36,7 +41,9 @@ These conditions lead to simple formulas for the first $n-1$ derivatives of $y_{
 \begin{equation}
   \label{eq:9.4.4}y^{(r)}_{p}=u_{1}y^{(r)}_{1}+u_{2}y_{2}^{(r)}\cdots+u_{n}y^{(r)}_{n},\ 0 \le r\le n-1.
 \end{equation}
-These formulas are easy to remember, since they look as though we obtained them by differentiating \eqref{eq:9.4.2} $n-1$ times while treating $u_{1}$, $u_{2}$, \dots, $u_{n}$ as constants. To see that \eqref{eq:9.4.3} implies \eqref{eq:9.4.4}, we first differentiate \eqref{eq:9.4.2} to obtain
+These formulas are easy to remember, since they look as though we obtained them by differentiating
+\eqref{eq:9.4.2} $n-1$ times while treating $u_{1}$, $u_{2}$, \dots, $u_{n}$ as constants. To see
+that \eqref{eq:9.4.3} implies \eqref{eq:9.4.4}, we first differentiate \eqref{eq:9.4.2} to obtain
 \[
   y_{p}'=u_{1}y_{1}'+u_{2}y_{2}'+\cdots+u_{n}y_{n}'+u_{1}'y_{1}+u_{2}'y_{2}+\cdots+u_{n}'y_{n},
 \]
@@ -110,18 +117,26 @@ which can be written in matrix form as
     F/P_{0}
   \end{array}\right].
 \end{equation}
-The determinant of this system is the Wronskian $W$ of the fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$, which has no zeros on $(a,b)$, by Theorem~\ref{thmtype:9.1.4}. Solving \eqref{eq:9.4.5} by Cramer's rule yields
+The determinant of this system is the Wronskian $W$ of the fundamental set of solutions
+$\{y_{1},y_{2},\dots,y_{n}\}$, which has no zeros on $(a,b)$, by Theorem~\ref{thmtype:9.1.4}.
+Solving \eqref{eq:9.4.5} by Cramer's rule yields
 \begin{equation}
   \label{eq:9.4.6}u'_{j}=(-1)^{n-j}\frac{FW_{j}}{P_{0}W},\quad1\le j\le n,
 \end{equation}
-where $W_{j}$ is the Wronskian of the set of functions obtained by deleting $y_{j}$ from $\{y_{1},y_{2},\dots,y_{n}\}$ and keeping the remaining functions in the same order. Equivalently, $W_{j}$ is the determinant obtained by deleting the last row and $j$-th column of $W$.
+where $W_{j}$ is the Wronskian of the set of functions obtained by deleting $y_{j}$ from
+$\{y_{1},y_{2},\dots,y_{n}\}$ and keeping the remaining functions in the same order. Equivalently,
+$W_{j}$ is the determinant obtained by deleting the last row and $j$-th column of $W$.
 
-Having obtained $u_{1}'$, $u_{2}'$, \dots, $u_{n}'$, we can integrate to obtain $u_{1},\,u_{2},\dots,u_{n}$. As in Section~5.7, we take the constants of integration to be zero, and we drop any linear combination of $\{y_{1},y_{2},\dots,y_{n}\}$ that may appear in $y_{p}$.
+Having obtained $u_{1}'$, $u_{2}'$, \dots, $u_{n}'$, we can integrate to obtain
+$u_{1},\,u_{2},\dots,u_{n}$. As in Section~5.7, we take the constants of integration to be zero, and
+we drop any linear combination of $\{y_{1},y_{2},\dots,y_{n}\}$ that may appear in $y_{p}$.
 
 \medskip
 
 \color{blue}
-\remark{ For efficiency, it's best to compute $W_{1}$, $W_{2}$, \dots, $W_{n}$ first, and then compute $W$ by expanding in cofactors of the last row; thus, \[W=\sum_{j=1}^{n}(-1)^{n-j}y_{j}^{(n-1)}W_{j}.\]}
+\remark{ For efficiency, it's best to compute $W_{1}$, $W_{2}$, \dots, $W_{n}$ first, and then
+compute $W$ by expanding in cofactors of the last row;
+thus, \[W=\sum_{j=1}^{n}(-1)^{n-j}y_{j}^{(n-1)}W_{j}.\]}
 \color{black}
 
 \boxit{Third Order Equations}
@@ -162,7 +177,8 @@ and \eqref{eq:9.4.6} becomes
   \begin{equation}
     \label{eq:9.4.8}xy'''-y''-xy'+y=8x^{2}e^{x},
   \end{equation}
-  given that $y_{1}=x$, $y_{2}=e^{x}$, and $y_{3}=e^{-x}$ form a fundamental set of solutions of the complementary equation. Then find the general solution of \eqref{eq:9.4.8}.
+  given that $y_{1}=x$, $y_{2}=e^{x}$, and $y_{3}=e^{-x}$ form a fundamental set of solutions of the
+  complementary equation. Then find the general solution of \eqref{eq:9.4.8}.
 \end{example}
 
 \solution We seek a particular solution of \eqref{eq:9.4.8} of the form
@@ -278,7 +294,9 @@ and \eqref{eq:9.4.6} becomes
   \begin{equation}
     \label{eq:9.4.10}x^{4}y^{(4)}+6x^{3}y'''+2x^{2}y''-4xy'+4y=12x^{2},
   \end{equation}
-  given that $y_{1}=x$, $y_{2}=x^{2}$, $y_{3}=1/x$ and $y_{4}=1/x^{2}$ form a fundamental set of solutions of the complementary equation. Then find the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
+  given that $y_{1}=x$, $y_{2}=x^{2}$, $y_{3}=1/x$ and $y_{4}=1/x^{2}$ form a fundamental set of
+  solutions of the complementary equation. Then find the general solution of \eqref{eq:9.4.10} on
+  $(-\infty,0)$ and $(0,\infty)$.
 \end{example}
 
 \solution We seek a particular solution of \eqref{eq:9.4.10} of the form
@@ -359,28 +377,36 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
 \exercises In Exercises~\ref{exer:9.4.1}--\ref{exer:9.4.21} find a particular solution, given the fundamental set of solutions of the complementary equation.
 
 \begin{exerciselist}
-  \item\label{exer:9.4.1} $x^{3}y'''-x^{2}(x+3)y''+2x(x+3)y'-2(x+3)y=-4x^{4}$;\quad $\{x,\,x^{2},\,xe^{x}\}$
+  \item\label{exer:9.4.1} $x^{3}y'''-x^{2}(x+3)y''+2x(x+3)y'-2(x+3)y=-4x^{4}$;\quad
+        $\{x,\,x^{2},\,xe^{x}\}$
   \newpage
 
-  \item\label{exer:9.4.2} $y'''+6xy''+(6+12x^{2})y'+(12x+8x^{3})y=x^{1/2}e^{-x^{2}}$;\quad $\{e^{-x^{2}},\,xe^{-x^{2}},\,x^{2}e^{-x^{2}}\}$
+  \item\label{exer:9.4.2} $y'''+6xy''+(6+12x^{2})y'+(12x+8x^{3})y=x^{1/2}e^{-x^{2}}$;\quad
+        $\{e^{-x^{2}},\,xe^{-x^{2}},\,x^{2}e^{-x^{2}}\}$
 
   \item\label{exer:9.4.3} $x^{3}y'''-3x^{2}y''+6xy'-6y=2x$; \quad $\{x,x^{2},x^{3}\}$
 
   \item\label{exer:9.4.4} $x^{2}y'''+2xy''-(x^{2}+2)y'=2x^{2}$;\quad $\{1,\,e^{x}/x,\,e^{-x}/x\}$
 
-  \item\label{exer:9.4.5} $x^{3}y'''-3x^{2}(x+1)y''+3x(x^{2}+2x+2)y'-(x^{3}+3x^{2}+6x+6)y=x^{4}e^{-3x}$;\quad
+  \item\label{exer:9.4.5}
+        $x^{3}y'''-3x^{2}(x+1)y''+3x(x^{2}+2x+2)y'-(x^{3}+3x^{2}+6x+6)y=x^{4}e^{-3x}$;\quad
 
   $\{xe^{x},\,x^{2}e^{x},\,x^{3}e^{x}\}$
 
-  \item\label{exer:9.4.6} $x(x^{2}-2)y'''+(x^{2}-6)y''+x(2-x^{2})y'+(6-x^{2})y=2(x^{2}-2)^{2}$; \quad $\{e^{x},\,e^{-x},\,1/x\}$
+  \item\label{exer:9.4.6} $x(x^{2}-2)y'''+(x^{2}-6)y''+x(2-x^{2})y'+(6-x^{2})y=2(x^{2}-2)^{2}$;
+        \quad $\{e^{x},\,e^{-x},\,1/x\}$
 
-  \item\label{exer:9.4.7} $xy'''-(x-3)y''-(x+2)y'+(x-1)y=-4e^{-x}$; \quad $\{e^{x},\,e^{x}/x,\,e^{-x}/x\}$
+  \item\label{exer:9.4.7} $xy'''-(x-3)y''-(x+2)y'+(x-1)y=-4e^{-x}$; \quad
+        $\{e^{x},\,e^{x}/x,\,e^{-x}/x\}$
 
-  \item\label{exer:9.4.8} $4x^{3}y'''+4x^{2}y''-5xy'+2y=30x^{2}$; \quad $\{\sqrt{x},\,1/\sqrt{x},\,x^{2}\}$
+  \item\label{exer:9.4.8} $4x^{3}y'''+4x^{2}y''-5xy'+2y=30x^{2}$; \quad
+        $\{\sqrt{x},\,1/\sqrt{x},\,x^{2}\}$
 
-  \item\label{exer:9.4.9} $x(x^{2}-1)y'''+(5x^{2}+1)y''+2xy'-2y=12x^{2}$; \quad $\{x,\,1/(x-1),\,1/(x+1)\}$
+  \item\label{exer:9.4.9} $x(x^{2}-1)y'''+(5x^{2}+1)y''+2xy'-2y=12x^{2}$; \quad
+        $\{x,\,1/(x-1),\,1/(x+1)\}$
 
-  \item\label{exer:9.4.10} $x(1-x)y'''+(x^{2}-3x+3)y''+xy'-y=2(x-1)^{2}$; \quad $\{x,\,1/x,e^{x}/x\}$
+  \item\label{exer:9.4.10} $x(1-x)y'''+(x^{2}-3x+3)y''+xy'-y=2(x-1)^{2}$; \quad
+        $\{x,\,1/x,e^{x}/x\}$
 
   \item\label{exer:9.4.11} $x^{3}y'''+x^{2}y''-2xy'+2y=x^{2}$; \quad $\{x,\,x^{2},\,1/x\}$
 
@@ -388,66 +414,93 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
 
   \item\label{exer:9.4.13} $xy^{(4)}+4y'''=6\ln|x|$; \quad $\{1,\,x,\,x^{2},\,1/x\}$
 
-  \item\label{exer:9.4.14} $16x^{4}y^{(4)}+96x^{3}y'''+72x^{2}y''-24xy'+9y=96x^{5/2}$; \quad $\{\sqrt{x},\,1/\sqrt{x},\,x^{3/2},\,x^{-3/2}\}$
+  \item\label{exer:9.4.14} $16x^{4}y^{(4)}+96x^{3}y'''+72x^{2}y''-24xy'+9y=96x^{5/2}$; \quad
+        $\{\sqrt{x},\,1/\sqrt{x},\,x^{3/2},\,x^{-3/2}\}$
 
-  \item\label{exer:9.4.15} $x(x^{2}-6)y^{(4)}+2(x^{2}-12)y'''+x(6-x^{2})y''+2(12-x^{2})y'=2(x^{2}-6)^{2}$; \quad
+  \item\label{exer:9.4.15}
+        $x(x^{2}-6)y^{(4)}+2(x^{2}-12)y'''+x(6-x^{2})y''+2(12-x^{2})y'=2(x^{2}-6)^{2}$; \quad
 
   $\{1,\,1/x,\,e^{x},\,e^{-x}\}$
 
-  \item\label{exer:9.4.16} $x^{4}y^{(4)}-4x^{3}y'''+12x^{2}y''-24xy'+24y=x^{4}$; \quad $\{x,\,x^{2},\,x^{3},\,x^{4}\}$
+  \item\label{exer:9.4.16} $x^{4}y^{(4)}-4x^{3}y'''+12x^{2}y''-24xy'+24y=x^{4}$; \quad
+        $\{x,\,x^{2},\,x^{3},\,x^{4}\}$
 
-  \item\label{exer:9.4.17} $x^{4}y^{(4)}-4x^{3}y'''+2x^{2}(6-x^{2})y''+4x(x^{2}-6)y'+(x^{4}-4x^{2}+24)y=4x^{5}e^{x}$; \quad
+  \item\label{exer:9.4.17}
+        $x^{4}y^{(4)}-4x^{3}y'''+2x^{2}(6-x^{2})y''+4x(x^{2}-6)y'+(x^{4}-4x^{2}+24)y=4x^{5}e^{x}$;
+        \quad
 
   $\{xe^{x},\,x^{2}e^{x},\,xe^{-x},\,x^{2}e^{-x}\}$
 
-  \item\label{exer:9.4.18} $x^{4}y^{(4)}+6x^{3}y'''+2x^{2}y''-4xy'+4y=12x^{2}$; \quad $\{x,x^{2},1/x,1/x^{2}\}$
+  \item\label{exer:9.4.18} $x^{4}y^{(4)}+6x^{3}y'''+2x^{2}y''-4xy'+4y=12x^{2}$; \quad
+        $\{x,x^{2},1/x,1/x^{2}\}$
 
-  \item\label{exer:9.4.19} $xy^{(4)}+4y'''-2xy''-4y'+xy=4e^{x}$; \quad $\{e^{x},\,e^{-x},\,e^{x}/x,\,e^{-x}/x\}$
+  \item\label{exer:9.4.19} $xy^{(4)}+4y'''-2xy''-4y'+xy=4e^{x}$; \quad
+        $\{e^{x},\,e^{-x},\,e^{x}/x,\,e^{-x}/x\}$
 
-  \item\label{exer:9.4.20} $xy^{(4)}+(4-6x)y'''+(13x-18)y''+(26-12x)y'+(4x-12)y=3e^{x}$; \quad $\{e^{x},\,e^{2x},\,e^{x}/x,\,e^{2x}/x\}$
+  \item\label{exer:9.4.20} $xy^{(4)}+(4-6x)y'''+(13x-18)y''+(26-12x)y'+(4x-12)y=3e^{x}$; \quad
+        $\{e^{x},\,e^{2x},\,e^{x}/x,\,e^{2x}/x\}$
 
-  \item\label{exer:9.4.21} $x^{4}y^{(4)}-4x^{3}y'''+x^{2}(12-x^{2})y''+2x(x^{2}-12)y'+2(12-x^{2})y=2x^{5}$; $\{x,\,x^{2},\,xe^{x},\,xe^{-x}\}$
+  \item\label{exer:9.4.21}
+        $x^{4}y^{(4)}-4x^{3}y'''+x^{2}(12-x^{2})y''+2x(x^{2}-12)y'+2(12-x^{2})y=2x^{5}$;
+        $\{x,\,x^{2},\,xe^{x},\,xe^{-x}\}$
 
-  \exercisetext{In Exercises~\ref{exer:9.4.22}--\ref{exer:9.4.33} solve the initial value problem, given the fundamental set of solutions of the complementary equation. Where indicated by \CGex, graph the solution.}
+  \exercisetext{In Exercises~\ref{exer:9.4.22}--\ref{exer:9.4.33} solve the initial value problem,
+  given the fundamental set of solutions of the complementary equation. Where indicated by \CGex,
+  graph the solution.}
 
-  \item\label{exer:9.4.22} \CGex $x^{3}y'''-2x^{2}y''+3xy'-3y=4x,\quad y(1)=4,\quad y'(1)=4, \quad y''(1)=2$; \quad $\{x,\,x^{3},\,x\ln x\}$
+  \item\label{exer:9.4.22} \CGex
+        $x^{3}y'''-2x^{2}y''+3xy'-3y=4x,\quad y(1)=4,\quad y'(1)=4, \quad y''(1)=2$; \quad
+        $\{x,\,x^{3},\,x\ln x\}$
 
-  \item\label{exer:9.4.23} $x^{3}y'''-5x^{2}y''+14xy'-18y=x^{3},\quad y(1)=0,\quad y'(1)=1,\quad y''(1)=7$; \quad $\{x^{2},\,x^{3},\,x^{3}\ln x\}$
+  \item\label{exer:9.4.23}
+        $x^{3}y'''-5x^{2}y''+14xy'-18y=x^{3},\quad y(1)=0,\quad y'(1)=1,\quad y''(1)=7$; \quad
+        $\{x^{2},\,x^{3},\,x^{3}\ln x\}$
 
   \item\label{exer:9.4.24} $\dst{(5-6x)y'''+(12x-4)y''+(6x-23)y'+(22-12x)y=-(6x-5)^{2}e^{x}}$
 
   $\dst{y(0)=-4,\quad y'(0)=-\frac{3}{2},\quad y''(0)=-19}$;\quad $\{e^{x},\,e^{2x},\,xe^{-x}\}$
 
-  \item\label{exer:9.4.25} $x^{3}y'''-6x^{2}y''+16xy'-16y=9x^{4},\quad y(1)=2,\quad y'(1)=1,\quad y''(1)=5$;
+  \item\label{exer:9.4.25}
+        $x^{3}y'''-6x^{2}y''+16xy'-16y=9x^{4},\quad y(1)=2,\quad y'(1)=1,\quad y''(1)=5$;
 
   $\{x,\,x^{4},\,x^{4}\ln|x|\}$
 
-  \item\label{exer:9.4.26} \CGex $(x^{2}-2x+2)y'''-x^{2}y''+2xy'-2y=(x^{2}-2x+2)^{2},\quad y(0)=0,\quad y'(0)=5$,
+  \item\label{exer:9.4.26} \CGex
+        $(x^{2}-2x+2)y'''-x^{2}y''+2xy'-2y=(x^{2}-2x+2)^{2},\quad y(0)=0,\quad y'(0)=5$,
 
   $y''(0)=0$;\quad $\{x,\,x^{2},\,e^{x}\}$
 
-  \item\label{exer:9.4.27} $x^{3}y'''+x^{2}y''-2xy'+2y=x(x+1),\quad y(-1)=-6,\quad y'(-1)=\dst\frac{43}{6},\quad y''(-1)= -\dst\frac{5}{2}$;\quad
+  \item\label{exer:9.4.27}
+        $x^{3}y'''+x^{2}y''-2xy'+2y=x(x+1),\quad y(-1)=-6,\quad y'(-1)=\dst\frac{43}{6},\quad y''(-1)= -\dst\frac{5}{2}$;\quad
 
   $\{x,\,x^{2},\,1/x\}$
   \newpage
 
-  \item\label{exer:9.4.28} $(3x-1)y'''-(12x-1)y''+9(x+1)y'-9y=2e^{x}(3x-1)^{2},\quad y(0)=\dst\frac{3}{4}$,
+  \item\label{exer:9.4.28}
+        $(3x-1)y'''-(12x-1)y''+9(x+1)y'-9y=2e^{x}(3x-1)^{2},\quad y(0)=\dst\frac{3}{4}$,
 
   $y'(0)=\dst\frac{5}{4},\quad y''(0)=\dst\frac{1}{4}$;\quad $\{x+1,\,e^{x},\,e^{3x}\}$
 
-  \item\label{exer:9.4.29} \CGex $(x^{2}-2)y'''-2xy''+(2-x^{2})y'+2xy=2(x^{2}-2)^{2},\quad y(0)=1,\quad y'(0)=-5$,
+  \item\label{exer:9.4.29} \CGex
+        $(x^{2}-2)y'''-2xy''+(2-x^{2})y'+2xy=2(x^{2}-2)^{2},\quad y(0)=1,\quad y'(0)=-5$,
 
   $y''(0)=5$;\quad $\{x^{2},\,e^{x},\,e^{-x}\}$
 
-  \item\label{exer:9.4.30} \CGex $x^{4}y^{(4)}+3x^{3}y'''-x^{2}y''+2xy'-2y=9x^{2},\quad y(1)=-7,\quad y'(1)= -11,\quad y''(1)=-5$,\; $y'''(1)=6;\quad\{x,\,x^{2},\,1/x,\,x\ln x\}$
+  \item\label{exer:9.4.30} \CGex
+        $x^{4}y^{(4)}+3x^{3}y'''-x^{2}y''+2xy'-2y=9x^{2},\quad y(1)=-7,\quad y'(1)= -11,\quad y''(1)=-5$,\;
+        $y'''(1)=6;\quad\{x,\,x^{2},\,1/x,\,x\ln x\}$
 
-  \item\label{exer:9.4.31} $(2x-1)y^{(4)}-4xy'''+(5-2x)y''+4xy'-4y=6(2x-1)^{2},\quad y(0)=\dst\frac{55}{4}, \quad y'(0)=0$,
+  \item\label{exer:9.4.31}
+        $(2x-1)y^{(4)}-4xy'''+(5-2x)y''+4xy'-4y=6(2x-1)^{2},\quad y(0)=\dst\frac{55}{4}, \quad y'(0)=0$,
 
   $y''(0)=13,\quad y'''(0)=1$;\quad $\{x,\,e^{x},\,e^{-x},\,e^{2x}\}$
 
-  \item\label{exer:9.4.32} $4x^{4}y^{(4)}+24x^{3}y'''+23x^{2}y''-xy'+y=6x$,\quad $y(1)=2,\quad y'(1)=0,\quad y''(1)=4,\quad y'''(1)=-\dst\frac{37}{4}$; \quad $\{x,\sqrt{x},1/x,1/\sqrt{x}\}$
+  \item\label{exer:9.4.32} $4x^{4}y^{(4)}+24x^{3}y'''+23x^{2}y''-xy'+y=6x$,\quad
+        $y(1)=2,\quad y'(1)=0,\quad y''(1)=4,\quad y'''(1)=-\dst\frac{37}{4}$; \quad
+        $\{x,\sqrt{x},1/x,1/\sqrt{x}\}$
 
-  \item\label{exer:9.4.33} $x^{4}y^{{(4)}}+5x^{3}y'''-3x^{2}y''-6xy'+6y=40x^{3}, \quad y(-1)=-1,\;y'(-1)=-7$,
+  \item\label{exer:9.4.33}
+        $x^{4}y^{{(4)}}+5x^{3}y'''-3x^{2}y''-6xy'+6y=40x^{3}, \quad y(-1)=-1,\;y'(-1)=-7$,
 
   $y''(-1)=-1,\quad y'''(-1)=-31$;\quad $\{x,\,x^{3},\,1/x,\,1/x^{2}\}$
 
@@ -455,7 +508,10 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
   \[
     P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=F(x) \eqno{\rm(A)}
   \]
-  is normal on an interval $(a,b)$. Let $\{y_{1},y_{2},\dots,y_{n}\}$ be a fundamental set of solutions of its complementary equation on $(a,b)$, let $W$ be the Wronskian of $\{y_{1},y_{2},\dots,y_{n}\}$, and let $W_{j}$ be the determinant obtained by deleting the last row and the $j$-th column of $W$. Suppose $x_{0}$ is in $(a,b)$, let
+  is normal on an interval $(a,b)$. Let $\{y_{1},y_{2},\dots,y_{n}\}$ be a fundamental set of
+  solutions of its complementary equation on $(a,b)$, let $W$ be the Wronskian of
+  $\{y_{1},y_{2},\dots,y_{n}\}$, and let $W_{j}$ be the determinant obtained by deleting the last
+  row and the $j$-th column of $W$. Suppose $x_{0}$ is in $(a,b)$, let
   \[
     u_{j}(x)=(-1)^{(n-j)}\int_{x_{0}}^{x}\frac{F(t)W_{j}(t)}{P_{0}(t)W(t)}\,dt, \quad1\le j\le n,
   \]
@@ -473,7 +529,8 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
     \[
       y_{p}^{(n)}=u_{1}y_{1}^{(n)}+u_{2}y_{2}^{(n)}+\cdots+u_{n}y_{n}^{(n)}+\frac{F}{P_{0}}.
     \]
-    \hint{See the derivation of the method of variation of parameters at the beginning of the section.}
+    \hint{See the derivation of the method of variation of parameters at the beginning of the
+    section.}
 
     \item % (b)
     Show that $y_{p}$ is the solution of the initial value problem
@@ -537,7 +594,10 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
     \]
   \end{alist}
 
-  \exercisetext{In Exercises~\ref{exer:9.4.35}--\ref{exer:9.4.42} use the method suggested by Exercise~\ref{exer:9.4.34} to find a particular solution in the form $y_{p}=\int_{x_{0}}^{x}G(x,t)F(t)\,dt$, given the indicated fundamental set of solutions. Assume that $x$ and $x_{0}$ are in an interval on which the equation is normal.}
+  \exercisetext{In Exercises~\ref{exer:9.4.35}--\ref{exer:9.4.42} use the method suggested by
+  Exercise~\ref{exer:9.4.34} to find a particular solution in the form
+  $y_{p}=\int_{x_{0}}^{x}G(x,t)F(t)\,dt$, given the indicated fundamental set of solutions. Assume
+  that $x$ and $x_{0}$ are in an interval on which the equation is normal.}
 
   \item\label{exer:9.4.35} $y'''+2y'-y'-2y=F(x);\quad\{e^{x},\,e^{-x},e^{-2x}\}$
 
@@ -551,7 +611,8 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
 
   \item\label{exer:9.4.40} $xy^{(4)}+4y'''=F(x);\quad\{1,\,x,\,x^{2},\,1/x\}$
 
-  \item\label{exer:9.4.41} $x^{4}y^{(4)}+6x^{3}y'''+2x^{2}y''-4xy'+4y=F(x)$;\quad $\{x,x^{2},1/x,1/x^{2}\}$
+  \item\label{exer:9.4.41} $x^{4}y^{(4)}+6x^{3}y'''+2x^{2}y''-4xy'+4y=F(x)$;\quad
+        $\{x,x^{2},1/x,1/x^{2}\}$
 
   \item\label{exer:9.4.42} $xy^{(4)}-y'''-4xy'+4y'=F(x);\quad\{1,\,x^{2},\,e^{2x},e^{-2x}\}$
 \end{exerciselist}

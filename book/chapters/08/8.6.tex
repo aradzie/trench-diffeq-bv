@@ -1,7 +1,9 @@
 \section{Convolution}
 
 \noindent
-In this section we consider the problem of finding the inverse Laplace transform of a product $H(s)=F(s)G(s)$, where $F$ and $G$ are the Laplace transforms of known functions $f$ and $g$. To motivate our interest in this problem, consider the initial value problem
+In this section we consider the problem of finding the inverse Laplace transform of a product
+$H(s)=F(s)G(s)$, where $F$ and $G$ are the Laplace transforms of known functions $f$ and $g$. To
+motivate our interest in this problem, consider the initial value problem
 \[
   ay''+by'+cy=f(t),\quad y(0)=0,\quad y'(0)=0.
 \]
@@ -18,13 +20,18 @@ where
   G(s)=\frac{1}{as^{2}+bs+c}.
 \]
 
-Until now we haven't been interested in the factorization indicated in \eqref{eq:8.6.1}, since we dealt only with differential equations with specific forcing functions. Hence, we could simply do the indicated multiplication in \eqref{eq:8.6.1} and use the table of Laplace transforms to find $y={\cal L}^{-1}(Y)$. However, this isn't possible if we want a {\color{blue}\it formula} for $y$ in terms of $f$, which may be unspecified.
+Until now we haven't been interested in the factorization indicated in \eqref{eq:8.6.1}, since we
+dealt only with differential equations with specific forcing functions. Hence, we could simply do
+the indicated multiplication in \eqref{eq:8.6.1} and use the table of Laplace transforms to find
+$y={\cal L}^{-1}(Y)$. However, this isn't possible if we want a {\color{blue}\it formula} for $y$ in
+terms of $f$, which may be unspecified.
 
 To motivate the formula for ${\cal L}^{-1}(FG)$, consider the initial value problem
 \begin{equation}
   \label{eq:8.6.2}y'-ay=f(t),\quad y(0)=0,
 \end{equation}
-which we first solve without using the Laplace transform. The solution of the differential equation in \eqref{eq:8.6.2} is of the form $y=ue^{at}$ where
+which we first solve without using the Laplace transform. The solution of the differential equation
+in \eqref{eq:8.6.2} is of the form $y=ue^{at}$ where
 \[
   u'=e^{-at}f(t).
 \]
@@ -37,7 +44,8 @@ Therefore
   \label{eq:8.6.3}y(t)=e^{at}\int_{0}^{t}e^{-a\tau}f(\tau)\,d\tau=\int_{0}^{t}e^{a(t-\tau)}f(\tau)\,d\tau.
 \end{equation}
 
-Now we'll use the Laplace transform to solve \eqref{eq:8.6.2} and compare the result to \eqref{eq:8.6.3}. Taking Laplace transforms in \eqref{eq:8.6.2} yields
+Now we'll use the Laplace transform to solve \eqref{eq:8.6.2} and compare the result to
+\eqref{eq:8.6.3}. Taking Laplace transforms in \eqref{eq:8.6.2} yields
 \[
   (s-a)Y(s)=F(s),
 \]
@@ -71,7 +79,8 @@ This motivates the next definition.
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:8.6.1} \rm The {\color{blue}\it convolution\/} $f*g$ of two functions $f$ and $g$ is defined by
+  \label{thmtype:8.6.1} \rm The {\color{blue}\it convolution\/} $f*g$ of two functions $f$ and $g$
+  is defined by
   \[
     (f*g)(t)=\int_{0}^{t}f(\tau)g(t-\tau)\,d\tau.
   \]
@@ -82,7 +91,8 @@ It can be shown (Exercise~\ref{exer:8.6.6}) that $f\ast g=g\ast f$; that is,
   \int_{0}^{t}f(t-\tau)g(\tau)\,d\tau=\int_{0}^{t}f(\tau)g(t-\tau)\,d\tau.
 \]
 
-Eqn.~\eqref{eq:8.6.5} shows that ${\cal L}^{-1}(FG)=f*g$ in the special case where $g(t)=e^{at}$. This next theorem states that this is true in general.
+Eqn.~\eqref{eq:8.6.5} shows that ${\cal L}^{-1}(FG)=f*g$ in the special case where $g(t)=e^{at}$.
+This next theorem states that this is true in general.
 
 \begin{theorem}
   \color{blue}
@@ -92,11 +102,14 @@ Eqn.~\eqref{eq:8.6.5} shows that ${\cal L}^{-1}(FG)=f*g$ in the special case whe
   \]
 \end{theorem}
 
-A complete proof of the convolution theorem is beyond the scope of this book. However, we'll assume that $f\ast g$ has a Laplace transform and verify the conclusion of the theorem in a purely computational way. By the definition of the Laplace transform,
+A complete proof of the convolution theorem is beyond the scope of this book. However, we'll assume
+that $f\ast g$ has a Laplace transform and verify the conclusion of the theorem in a purely
+computational way. By the definition of the Laplace transform,
 \[
   {\cal L}(f\ast g)=\int_{0}^{\infty}e^{-st}(f\ast g)(t)\,dt=\int_{0}^{\infty}e^{-st}\int_{0}^{t}f(\tau)g(t-\tau)\,d\tau\,dt.
 \]
-This iterated integral equals a double integral over the region shown in Figure~\ref{figure:8.6.1}. Reversing the order of integration yields
+This iterated integral equals a double integral over the region shown in Figure~\ref{figure:8.6.1}.
+Reversing the order of integration yields
 \begin{equation}
   \label{eq:8.6.6}{\cal L}(f*g)=\int_{0}^{\infty}f(\tau)\int^{\infty}_{\tau}e^{-st}g(t-\tau)\, dt \,d\tau.
 \end{equation}
@@ -151,7 +164,9 @@ it follows that
 \boxit{A Formula for the Solution of an Initial Value Problem}
 
 \noindent
-The convolution theorem provides a formula for the solution of an initial value problem for a linear constant coefficient second order equation with an unspecified. The next three examples illustrate this.
+The convolution theorem provides a formula for the solution of an initial value problem for a linear
+constant coefficient second order equation with an unspecified. The next three examples illustrate
+this.
 
 \begin{example}
   \label{example:8.6.2}\rm Find a formula for the solution of the initial value problem
@@ -254,7 +269,9 @@ Therefore the solution of \eqref{eq:8.6.9} is
 \boxit{Evaluating Convolution Integrals}
 
 \noindent
-We'll say that an integral of the form $\int_{0}^{t}u(\tau)v(t-\tau)\,d\tau$ is a {\color{blue}\it convolution integral\/}. The convolution theorem provides a convenient way to evaluate convolution integrals.
+We'll say that an integral of the form $\int_{0}^{t}u(\tau)v(t-\tau)\,d\tau$ is a {\color{blue}\it
+convolution integral\/}. The convolution theorem provides a convenient way to evaluate convolution
+integrals.
 
 \begin{example}
   \label{example:8.6.5}\rm Evaluate the convolution integral
@@ -263,7 +280,9 @@ We'll say that an integral of the form $\int_{0}^{t}u(\tau)v(t-\tau)\,d\tau$ is 
   \]
 \end{example}
 
-\solution We could evaluate this integral by expanding $(t-\tau)^{5}$ in powers of $\tau$ and then integrating. However, the convolution theorem provides an easier way. The integral is the convolution of $f(t)=t^{5}$ and $g(t)=t^{7}$. Since
+\solution We could evaluate this integral by expanding $(t-\tau)^{5}$ in powers of $\tau$ and then
+integrating. However, the convolution theorem provides an easier way. The integral is the
+convolution of $f(t)=t^{5}$ and $g(t)=t^{7}$. Since
 \[
   t^{5}\leftrightarrow\frac{5!}{s^{6}}\quad\mbox{ and }\quad t^{7}\leftrightarrow\frac{7!}{s^{8}},
 \]
@@ -281,7 +300,8 @@ Hence,
 \]
 
 \begin{example}
-  \label{example:8.6.6}\rm Use the convolution theorem and a partial fraction expansion to evaluate the convolution integral
+  \label{example:8.6.6}\rm Use the convolution theorem and a partial fraction expansion to evaluate
+  the convolution integral
   \[
     h(t)=\int_{0}^{t}\sin a(t-\tau)\cos b\tau\,d\tau\quad(|a|\ne|b|).
   \]
@@ -313,7 +333,9 @@ An equation of the form
 \end{equation}
 is a
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Volterra/}{\color{blue}
-\it Volterra integral equation}. Here $f$ and $k$ are given functions and $y$ is unknown. Since the integral on the right is a convolution integral, the convolution theorem provides a convenient formula for solving \eqref{eq:8.6.11}. Taking Laplace transforms in \eqref{eq:8.6.11} yields
+\it Volterra integral equation}. Here $f$ and $k$ are given functions and $y$ is unknown. Since the
+integral on the right is a convolution integral, the convolution theorem provides a convenient
+formula for solving \eqref{eq:8.6.11}. Taking Laplace transforms in \eqref{eq:8.6.11} yields
 \[
   Y(s)=F(s)+K(s)Y(s),
 \]
@@ -350,11 +372,14 @@ The next theorem presents a formula for the solution of the general initial valu
 \[
   ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1},
 \]
-where we assume for simplicity that $f$ is continuous on $[0,\infty)$ and that ${\cal L}(f)$ exists. In Exercises~\ref{exer:8.6.11}--\ref{exer:8.6.14} it's shown that the formula is valid under much weaker conditions on $f$.
+where we assume for simplicity that $f$ is continuous on $[0,\infty)$ and that ${\cal L}(f)$ exists.
+In Exercises~\ref{exer:8.6.11}--\ref{exer:8.6.14} it's shown that the formula is valid under much
+weaker conditions on $f$.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:8.6.3} Suppose $f$ is continuous on $[0,\infty)$ and has a Laplace transform. Then the solution of the initial value problem
+  \label{thmtype:8.6.3} Suppose $f$ is continuous on $[0,\infty)$ and has a Laplace transform. Then
+  the solution of the initial value problem
   \begin{equation}
     \label{eq:8.6.13}ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1},
   \end{equation}
@@ -417,7 +442,8 @@ Substituting this into \eqref{eq:8.6.18} yields
 \[
   Y(s)=k_{0}Y_{1}(s)+k_{1}Y_{2}(s)+\frac{1}{a}Y_{2}(s)F(s).
 \]
-Taking inverse transforms and invoking the convolution theorem yields \eqref{eq:8.6.14}. Finally, \eqref{eq:8.6.19} and \eqref{eq:8.6.21} imply \eqref{eq:8.6.17}.\bbox
+Taking inverse transforms and invoking the convolution theorem yields \eqref{eq:8.6.14}. Finally,
+\eqref{eq:8.6.19} and \eqref{eq:8.6.21} imply \eqref{eq:8.6.17}.\bbox
 
 It is useful to note from \eqref{eq:8.6.14} that $y$ is of the form
 \[
@@ -431,15 +457,23 @@ depends on the initial conditions and is independent of the forcing function, wh
 \[
   h(t)=\int_{0}^{t}w(\tau)f(t-\tau)\, d\tau
 \]
-depends on the forcing function and is independent of the initial conditions. If the zeros of the characteristic polynomial
+depends on the forcing function and is independent of the initial conditions. If the zeros of the
+characteristic polynomial
 \[
   p(s)=as^{2}+bs+c
 \]
-of the complementary equation have negative real parts, then $y_{1}$ and $y_{2}$ both approach zero as $t\to\infty$, so $\lim_{t\to\infty}v(t)=0$ for any choice of initial conditions. Moreover, the value of $h(t)$ is essentially independent of the values of $f(t-\tau)$ for large $\tau$, since $\lim_{\tau\to\infty}w(\tau)=0$. In this case we say that $v$ and $h$ are {\color{blue}\it transient\/} and {\color{blue}\it steady state components\/}, respectively, of the solution $y$ of \eqref{eq:8.6.13}. These definitions apply to the initial value problem of Example~\ref{example:8.6.4}, where the zeros of
+of the complementary equation have negative real parts, then $y_{1}$ and $y_{2}$ both approach zero
+as $t\to\infty$, so $\lim_{t\to\infty}v(t)=0$ for any choice of initial conditions. Moreover, the
+value of $h(t)$ is essentially independent of the values of $f(t-\tau)$ for large $\tau$, since
+$\lim_{\tau\to\infty}w(\tau)=0$. In this case we say that $v$ and $h$ are {\color{blue}\it
+transient\/} and {\color{blue}\it steady state components\/}, respectively, of the solution $y$ of
+\eqref{eq:8.6.13}. These definitions apply to the initial value problem of
+Example~\ref{example:8.6.4}, where the zeros of
 \[
   p(s)=s^{2}+2s+2=(s+1)^{2}+1
 \]
-are $-1\pm i$. From \eqref{eq:8.6.10}, we see that the solution of the general initial value problem of Example~\ref{example:8.6.4} is $y=v+h$, where
+are $-1\pm i$. From \eqref{eq:8.6.10}, we see that the solution of the general initial value problem
+of Example~\ref{example:8.6.4} is $y=v+h$, where
 \[
   v(t)=e^{-t}\left((k_{1}+k_{0})\sin t+k_{0}\cos t\right)
 \]
@@ -447,9 +481,13 @@ is the transient component of the solution and
 \[
   h(t)=\int_{0}^{t}f(t-\tau)e^{-\tau}\sin\tau\,d\tau
 \]
-is the steady state component. The definitions don't apply to the initial value problems considered in Examples~\ref{example:8.6.2} and \ref{example:8.6.3}, since the zeros of the characteristic polynomials in these two examples don't have negative real parts.
+is the steady state component. The definitions don't apply to the initial value problems considered
+in Examples~\ref{example:8.6.2} and \ref{example:8.6.3}, since the zeros of the characteristic
+polynomials in these two examples don't have negative real parts.
 
-In physical applications where the input $f$ and the output $y$ of a device are related by \eqref{eq:8.6.13}, the zeros of the characteristic polynomial usually do have negative real parts. Then $W={\cal L}(w)$ is called the {\color{blue}\it transfer function\; } of the device. Since
+In physical applications where the input $f$ and the output $y$ of a device are related by
+\eqref{eq:8.6.13}, the zeros of the characteristic polynomial usually do have negative real parts.
+Then $W={\cal L}(w)$ is called the {\color{blue}\it transfer function\; } of the device. Since
 \[
   H(s)=W(s)F(s),
 \]
@@ -463,9 +501,13 @@ Because of the form of
 \[
   h(t)=\int_{0}^{t}w(\tau)f(t-\tau)\,d\tau,
 \]
-$w$ is sometimes called the {\color{blue}\it weighting function} of the device, since it assigns weights to past values of the input $f$. It is also called the {\color{blue}\it impulse response} of the device, for reasons discussed in the next section.
+$w$ is sometimes called the {\color{blue}\it weighting function} of the device, since it assigns
+weights to past values of the input $f$. It is also called the {\color{blue}\it impulse response} of
+the device, for reasons discussed in the next section.
 
-Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}--\ref{exer:8.6.10} for the three possible cases where the zeros of $p(s)$ are real and distinct, real and repeated, or complex conjugates, respectively.
+Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}--\ref{exer:8.6.10}
+for the three possible cases where the zeros of $p(s)$ are real and distinct, real and repeated, or
+complex conjugates, respectively.
 
 \exercises
 
@@ -607,12 +649,14 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
   \]
   by introducing the new variable of integration $x=t-\tau$ in the first integral.
 
-  \item\label{exer:8.6.7} Use the convolution theorem to show that if $f(t)\leftrightarrow F(s)$ then
+  \item\label{exer:8.6.7} Use the convolution theorem to show that if $f(t)\leftrightarrow F(s)$
+        then
   \[
     \int_{0}^{t}f(\tau)\,d\tau\leftrightarrow\frac{F(s)}{s}.
   \]
 
-  \item\label{exer:8.6.8} Show that if $p(s)=as^{2}+bs+c$ has distinct real zeros $r_{1}$ and $r_{2}$ then the solution of
+  \item\label{exer:8.6.8} Show that if $p(s)=as^{2}+bs+c$ has distinct real zeros $r_{1}$ and
+        $r_{2}$ then the solution of
   \[
     ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1}
   \]
@@ -622,7 +666,8 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
          &   & +\frac{1}{a(r_{2}-r_{1})}\int_{0}^{t}(e^{r_{2}\tau}-e^{r_{1}\tau})f(t-\tau)\,d\tau.
   \end{eqnarray*}
 
-  \item\label{exer:8.6.9} Show that if $p(s)=as^{2}+bs+c$ has a repeated real zero $r_{1}$ then the solution of
+  \item\label{exer:8.6.9} Show that if $p(s)=as^{2}+bs+c$ has a repeated real zero $r_{1}$ then the
+        solution of
   \[
     ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1}
   \]
@@ -631,7 +676,8 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
     y(t)=\;k_{0}(1-r_{1}t)e^{r_{1}t}+k_{1}te^{r_{1}t}+\frac{1}{a}\int_{0}^{t}\tau e^{r_{1}\tau}f(t-\tau)\,d\tau.
   \]
 
-  \item\label{exer:8.6.10} Show that if $p(s)=as^{2}+bs+c$ has complex conjugate zeros $\lambda\pm i\omega$ then the solution of
+  \item\label{exer:8.6.10} Show that if $p(s)=as^{2}+bs+c$ has complex conjugate zeros
+        $\lambda\pm i\omega$ then the solution of
   \[
     ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1}
   \]
@@ -659,13 +705,16 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
       h(t)=\int_{0}^{t}w(t-\tau)f(\tau)\,d\tau.
     \]
     Use \href{https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/}{\color{blue}
-    \it Leibniz's rule} for differentiating an integral with respect to a parameter to show that $h$ is the solution of
+    \it Leibniz's rule} for differentiating an integral with respect to a parameter to show that $h$
+    is the solution of
     \[
       ah''+bh'+ch=f,\quad h(0)=0,\quad h'(0)=0.
     \]
 
     \item % (c)
-    Show that the function $y$ in Eqn.~\eqref{eq:8.6.14} is the solution of Eqn.~\eqref{eq:8.6.13} provided that $f$ is continuous on $[0,\infty)$; thus, it's not necessary to assume that $f$ has a Laplace transform.
+    Show that the function $y$ in Eqn.~\eqref{eq:8.6.14} is the solution of Eqn.~\eqref{eq:8.6.13}
+    provided that $f$ is continuous on $[0,\infty)$; thus, it's not necessary to assume that $f$ has
+    a Laplace transform.
   \end{alist}
 
   \item\label{exer:8.6.12} Consider the initial value problem
@@ -680,7 +729,8 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
       f_{1}(t), & t\ge t_{1}.
     \end{array}\right.
   \]
-  Assume that $f_{0}$ is continuous and of exponential order on $[0,\infty)$ and $f_{1}$ is continuous and of exponential order on $[t_{1},\infty)$. Let
+  Assume that $f_{0}$ is continuous and of exponential order on $[0,\infty)$ and $f_{1}$ is
+  continuous and of exponential order on $[t_{1},\infty)$. Let
   \[
     p(s)=as^{2}+bs+c.
   \]
@@ -693,14 +743,16 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
     where $g(t)=f_{1}(t+t_{1})-f_{0}(t+t_{1})$.
 
     \item % (b)
-    Let $w$ be as in Exercise~\ref{exer:8.6.11}. Use Theorem~\ref{thmtype:8.4.2} and the convolution theorem to show that the solution of (A) is
+    Let $w$ be as in Exercise~\ref{exer:8.6.11}. Use Theorem~\ref{thmtype:8.4.2} and the convolution
+    theorem to show that the solution of (A) is
     \[
       y(t)=\int_{0}^{t}w(t-\tau)f_{0}(\tau)\,d\tau+u(t-t_{1})\int_{0}^{t-t_{1}}w(t-t_{1}-\tau)g(\tau)\,d\tau
     \]
     for $t>0$.
 
     \item % (c)
-    Henceforth, assume only that $f_{0}$ is continuous on $[0,\infty)$ and $f_{1}$ is continuous on $[t_{1},\infty)$. Use Exercise~\ref{exer:8.6.11} \part{a} and \part{b} to show that
+    Henceforth, assume only that $f_{0}$ is continuous on $[0,\infty)$ and $f_{1}$ is continuous on
+    $[t_{1},\infty)$. Use Exercise~\ref{exer:8.6.11} \part{a} and \part{b} to show that
     \[
       y'(t)=\int_{0}^{t}w'(t-\tau)f_{0}(\tau)\,d\tau+u(t-t_{1})\int_{0}^{t-t_{1}}w'(t-t_{1}-\tau)g(\tau)\,d\tau
     \]
@@ -708,7 +760,8 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
     \[
       y''(t)=\frac{f(t)}{a}+\int_{0}^{t}w''(t-\tau)f_{0}(\tau)\,d\tau+u(t-t_{1})\int_{0}^{t-t_{1}}w''(t-t_{1}-\tau)g(\tau)\,d\tau
     \]
-    for $0<t<t_{1}$ and $t>t_{1}$. Also, show $y$ satisfies the differential equation in (A) on$(0,t_{1})$ and $(t_{1},\infty)$.
+    for $0<t<t_{1}$ and $t>t_{1}$. Also, show $y$ satisfies the differential equation in (A)
+    on$(0,t_{1})$ and $(t_{1},\infty)$.
 
     \item % (d)
     Show that $y$ and $y'$ are continuous on $[0,\infty)$.
@@ -738,7 +791,10 @@ Formula \eqref{eq:8.6.14} is given in more detail in Exercises~\ref{exer:8.6.8}-
     y(t)=\int_{0}^{t}w(t-\tau)f_{0}(\tau)\,d\tau+\sum_{m=1}^{k}u(t-t_{m}) \int_{0}^{t-t_{m}}w(t-t_{m}-\tau)g_{m}(\tau)\,d\tau.
   \]
 
-  \item\label{exer:8.6.14} Let $\{t_{m}\}_{m=0}^{\infty}$ be a sequence of points such that $t_{0}=0$, $t_{m+1}>t_{m}$, and $\lim_{m\to\infty}t_{m}=\infty$. For each nonnegative integer $m$ let $f_{m}$ be continuous on $[t_{m},\infty)$, and let $f$ be defined on $[0,\infty)$ by
+  \item\label{exer:8.6.14} Let $\{t_{m}\}_{m=0}^{\infty}$ be a sequence of points such that
+        $t_{0}=0$, $t_{m+1}>t_{m}$, and $\lim_{m\to\infty}t_{m}=\infty$. For each nonnegative
+        integer $m$ let $f_{m}$ be continuous on $[t_{m},\infty)$, and let $f$ be defined on
+        $[0,\infty)$ by
   \[
     f(t)=f_{m}(t),\quad t_{m}\le t<t_{m+1}\quad m=0,1,2\dots.
   \]

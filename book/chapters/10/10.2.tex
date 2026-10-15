@@ -25,9 +25,13 @@ where
 \[
   {\bf y}=\col yn,\quad A(t)=\matfunc ann,\mbox{\quad and \quad}{\bf f}(t)=\colfunc fn.
 \]
-We call $A$ the {\color{blue}\it coefficient matrix\/} of \eqref{eq:10.2.2} and ${\bf f}$ the {\color{blue}\it forcing function\/}. We'll say that $A$ and ${\bf f}$ are {\color{blue}\it continuous\/} if their entries are continuous. If ${\bf f}={\bf0}$, then \eqref{eq:10.2.2} is {\color{blue}\it homogeneous\/}; otherwise, \eqref{eq:10.2.2} is {\color{blue}\it nonhomogeneous\/}.
+We call $A$ the {\color{blue}\it coefficient matrix\/} of \eqref{eq:10.2.2} and ${\bf f}$ the
+{\color{blue}\it forcing function\/}. We'll say that $A$ and ${\bf f}$ are {\color{blue}\it
+continuous\/} if their entries are continuous. If ${\bf f}={\bf0}$, then \eqref{eq:10.2.2} is
+{\color{blue}\it homogeneous\/}; otherwise, \eqref{eq:10.2.2} is {\color{blue}\it nonhomogeneous\/}.
 
-An initial value problem for \eqref{eq:10.2.2} consists of finding a solution of \eqref{eq:10.2.2} that equals a given constant vector
+An initial value problem for \eqref{eq:10.2.2} consists of finding a solution of \eqref{eq:10.2.2}
+that equals a given constant vector
 \[
   {\bf k}=\col kn.
 \]
@@ -36,11 +40,14 @@ at some initial point $t_{0}$. We write this initial value problem as
   {\bf y}'=A(t){\bf y}+{\bf f}(t),\quad{\bf y}(t_{0})={\bf k}.
 \]
 
-The next theorem gives sufficient conditions for the existence of solutions of initial value problems for \eqref{eq:10.2.2}. We omit the proof.
+The next theorem gives sufficient conditions for the existence of solutions of initial value
+problems for \eqref{eq:10.2.2}. We omit the proof.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:10.2.1} Suppose the coefficient matrix $A$ and the forcing function ${\bf f}$ are continuous on $(a,b)$, let $t_{0}$ be in $(a,b)$, and let ${\bf k}$ be an arbitrary constant $n$-vector. Then the initial value problem
+  \label{thmtype:10.2.1} Suppose the coefficient matrix $A$ and the forcing function ${\bf f}$ are
+  continuous on $(a,b)$, let $t_{0}$ be in $(a,b)$, and let ${\bf k}$ be an arbitrary constant
+  $n$-vector. Then the initial value problem
   \[
     {\bf y}'=A(t){\bf y}+{\bf f}(t),\quad{\bf y}(t_{0})={\bf k}
   \]
@@ -60,7 +67,8 @@ The next theorem gives sufficient conditions for the existence of solutions of i
         y_{2}' & = & 2y_{1}+\phantom{2}y_{2}+\phantom{2}e^{4t}
       \end{array}
     \end{equation}
-    in matrix form and conclude from Theorem~\ref{thmtype:10.2.1} that every initial value problem for \eqref{eq:10.2.3} has a unique solution on $(-\infty,\infty)$.
+    in matrix form and conclude from Theorem~\ref{thmtype:10.2.1} that every initial value problem
+    for \eqref{eq:10.2.3} has a unique solution on $(-\infty,\infty)$.
 
     \item % (b)
     Verify that
@@ -85,7 +93,8 @@ An initial value problem for \eqref{eq:10.2.3} can be written as
 \[
   {\bf y}'=\twobytwo1221{\bf y}+\twocol21e^{4t},\quad y(t_{0})=\twocol{k_{1}}{k_{2}}.
 \]
-Since the coefficient matrix and the forcing function are both continuous on $(-\infty,\infty)$, Theorem~\ref{thmtype:10.2.1} implies that this problem has a unique solution on $(-\infty,\infty)$.
+Since the coefficient matrix and the forcing function are both continuous on $(-\infty,\infty)$,
+Theorem~\ref{thmtype:10.2.1} implies that this problem has a unique solution on $(-\infty,\infty)$.
 
 \solutionpart{b} If ${\bf y}$ is given by \eqref{eq:10.2.4}, then
 \begin{eqnarray*}
@@ -110,14 +119,20 @@ Solving this system yields $c_{1}=1$, $c_{2}=-2$, so
 is the solution of \eqref{eq:10.2.5}.
 
 \color{blue}
-\remark{The theory of $n\times n$ linear systems of differential equations is analogous to the theory of the scalar $n$-th order equation \begin{equation}\label{eq:10.2.6}P_{0}(t)y^{(n)}+P_{1}(t)y^{(n-1)}+\cdots+P_{n}(t)y=F(t),\end{equation} as developed in Sections~9.1. For example, by rewriting \eqref{eq:10.2.6} as an equivalent linear system it can be shown that Theorem~\ref{thmtype:10.2.1} implies Theorem~\ref{thmtype:9.1.1} (Exercise~\ref{exer:10.2.12}).}
+\remark{The theory of $n\times n$ linear systems of differential equations is analogous to the
+theory of the scalar $n$-th order
+equation \begin{equation}\label{eq:10.2.6}P_{0}(t)y^{(n)}+P_{1}(t)y^{(n-1)}+\cdots+P_{n}(t)y=F(t),\end{equation}
+as developed in Sections~9.1. For example, by rewriting \eqref{eq:10.2.6} as an equivalent linear
+system it can be shown that Theorem~\ref{thmtype:10.2.1} implies Theorem~\ref{thmtype:9.1.1}
+(Exercise~\ref{exer:10.2.12}).}
 \color{black}
 
 \newpage
 \exercises
 
 \begin{exerciselist}
-  \item\label{exer:10.2.1} Rewrite the system in matrix form and verify that the given vector function satisfies the system for any choice of the constants $c_{1}$ and $c_{2}$.
+  \item\label{exer:10.2.1} Rewrite the system in matrix form and verify that the given vector
+        function satisfies the system for any choice of the constants $c_{1}$ and $c_{2}$.
 
   \begin{alist}
     \item % (a)
@@ -145,7 +160,8 @@ is the solution of \eqref{eq:10.2.5}.
     \end{array}\quad{\bf y}=c_{1}\twocol11e^{3t}+c_{2}\twocol1{-1}e^{t}$
   \end{alist}
 
-  \item\label{exer:10.2.2} Rewrite the system in matrix form and verify that the given vector function satisfies the system for any choice of the constants $c_{1}$, $c_{2}$, and $c_{3}$.
+  \item\label{exer:10.2.2} Rewrite the system in matrix form and verify that the given vector
+        function satisfies the system for any choice of the constants $c_{1}$, $c_{2}$, and $c_{3}$.
 
   \begin{alist}
     \item % (a)
@@ -185,7 +201,8 @@ is the solution of \eqref{eq:10.2.5}.
     ${\bf y}=c_{1}\threecol101e^{2t}+c_{2}\threecol1{-1}1e^{3t}+c_{3}\threecol1{-3}7e^{-t}$
   \end{alist}
 
-  \item\label{exer:10.2.3} Rewrite the initial value problem in matrix form and verify that the given vector function is a solution.
+  \item\label{exer:10.2.3} Rewrite the initial value problem in matrix form and verify that the
+        given vector function is a solution.
 
   \begin{alist}
     \item % (a)
@@ -209,7 +226,8 @@ is the solution of \eqref{eq:10.2.5}.
     \end{array}$ \quad ${\bf y}=3\twocol1{-1}e^{2t}+3\twocol3{-1}e^{4t}$
   \end{alist}
 
-  \item\label{exer:10.2.4} Rewrite the initial value problem in matrix form and verify that the given vector function is a solution.
+  \item\label{exer:10.2.4} Rewrite the initial value problem in matrix form and verify that the
+        given vector function is a solution.
 
   \begin{alist}
     \item % (a)
@@ -241,7 +259,8 @@ is the solution of \eqref{eq:10.2.5}.
     ${\bf y}=\threecol1{-1}1e^{8t}+\threecol0{-1}1e^{3t}+\threecol1{-2}1e^{t}$
   \end{alist}
 
-  \item\label{exer:10.2.5} Rewrite the system in matrix form and verify that the given vector function satisfies the system for any choice of the constants $c_{1}$ and $c_{2}$.
+  \item\label{exer:10.2.5} Rewrite the system in matrix form and verify that the given vector
+        function satisfies the system for any choice of the constants $c_{1}$ and $c_{2}$.
 
   \begin{alist}
     \item % (a)
@@ -306,19 +325,22 @@ is the solution of \eqref{eq:10.2.5}.
   \[
     {\bf y'}=A(t){\bf y}+{\bf f}(t),
   \]
-  and show that $A$ and ${\bf f}$ are continuous on an interval $(a,b)$ if and only if (A) is normal on $(a,b)$.
+  and show that $A$ and ${\bf f}$ are continuous on an interval $(a,b)$ if and only if (A) is normal
+  on $(a,b)$.
 
   \item\label{exer:10.2.7} A matrix function
   \[
     Q(t)=\matfunc qrs
   \]
-  is said to be {\color{blue}\it differentiable\/} if its entries $\{q_{ij}\}$ are differentiable. Then the {\color{blue}\it derivative\/} $Q'$ is defined by
+  is said to be {\color{blue}\it differentiable\/} if its entries $\{q_{ij}\}$ are differentiable.
+  Then the {\color{blue}\it derivative\/} $Q'$ is defined by
   \[
     Q'(t)=\matfunc{q'}rs.
   \]
   \begin{alist}
     \item % (a)
-    Prove: If $P$ and $Q$ are differentiable matrices such that $P+Q$ is defined and if $c_{1}$ and $c_{2}$ are constants, then
+    Prove: If $P$ and $Q$ are differentiable matrices such that $P+Q$ is defined and if $c_{1}$ and
+    $c_{2}$ are constants, then
     \[
       (c_{1}P+c_{2}Q)'=c_{1}P'+c_{2}Q'.
     \]
@@ -402,10 +424,12 @@ is the solution of \eqref{eq:10.2.5}.
     Find a formula for the derivative of $Y^{n}$, where $n$ is any positive integer.
 
     \item % (c)
-    State how the results obtained in \part{a} and \part{b} are analogous to results from calculus concerning scalar functions.
+    State how the results obtained in \part{a} and \part{b} are analogous to results from calculus
+    concerning scalar functions.
   \end{alist}
 
-  \item\label{exer:10.2.11} It can be shown that if $Y$ is a differentiable and invertible square matrix function, then $Y^{-1}$ is differentiable.
+  \item\label{exer:10.2.11} It can be shown that if $Y$ is a differentiable and invertible square
+        matrix function, then $Y^{-1}$ is differentiable.
 
   \begin{alist}
     \item % (a)
@@ -415,10 +439,17 @@ is the solution of \eqref{eq:10.2.5}.
     Find the derivative of $Y^{-n}=\left(Y^{-1}\right)^{n}$, where $n$ is a positive integer.
 
     \item % (c)
-    State how the results obtained in \part{a} and \part{b} are analogous to results from calculus concerning scalar functions.
+    State how the results obtained in \part{a} and \part{b} are analogous to results from calculus
+    concerning scalar functions.
   \end{alist}
 
-  \item\label{exer:10.2.12} Show that Theorem~\ref{thmtype:10.2.1} implies Theorem~\ref{thmtype:9.1.1}. \hint{Write the scalar equation \[P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=F(x)\] as an $n\times n$ system of linear equations.}
+  \item\label{exer:10.2.12} Show that Theorem~\ref{thmtype:10.2.1} implies
+        Theorem~\ref{thmtype:9.1.1}. \hint{Write the scalar
+        equation \[P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=F(x)\] as an $n\times n$
+        system of linear equations.}
 
-  \item\label{exer:10.2.13} Suppose ${\bf y}$ is a solution of the $n\times n$ system ${\bf y}'=A(t){\bf y}$ on $(a,b)$, and that the $n\times n$ matrix $P$ is invertible and differentiable on $(a,b)$. Find a matrix $B$ such that the function ${\bf x}=P{\bf y}$ is a solution of ${\bf x}'=B{\bf x}$ on $(a,b)$.
+  \item\label{exer:10.2.13} Suppose ${\bf y}$ is a solution of the $n\times n$ system
+        ${\bf y}'=A(t){\bf y}$ on $(a,b)$, and that the $n\times n$ matrix $P$ is invertible and
+        differentiable on $(a,b)$. Find a matrix $B$ such that the function ${\bf x}=P{\bf y}$ is a
+        solution of ${\bf x}'=B{\bf x}$ on $(a,b)$.
 \end{exerciselist}

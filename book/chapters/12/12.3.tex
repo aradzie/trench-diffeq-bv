@@ -5,7 +5,10 @@ The temperature $u=u(x,y,t)$ in a two-dimensional plate satisfies the two-dimens
 \begin{equation}
   \label{eq:12.3.1}u_{t}=a^{2}(u_{xx}+u_{yy}),
 \end{equation}
-where $(x,y)$ varies over the interior of the plate and $t>0$. To find a solution of \eqref{eq:12.3.1}, it's necessary to specify the initial temperature $u(x,y,0)$ and conditions that must be satisfied on the boundary. However, as $t\to\infty$, the influence of the initial condition decays, so
+where $(x,y)$ varies over the interior of the plate and $t>0$. To find a solution of
+\eqref{eq:12.3.1}, it's necessary to specify the initial temperature $u(x,y,0)$ and conditions that
+must be satisfied on the boundary. However, as $t\to\infty$, the influence of the initial condition
+decays, so
 \[
   \lim_{t\to\infty}u_{t}(x,y,t)=0
 \]
@@ -15,15 +18,26 @@ and the temperature approaches a steady state distribution $u=u(x,y)$ that satis
 \end{equation}
 This is
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/}{\color{blue}
-\it Laplace's equation\/}. This equation also arises in applications to fluid mechanics and potential theory; in fact, it is also called {\color{blue}\it the potential equation\/}. We seek solutions of \eqref{eq:12.3.2} in a region $R$ that satisfy specified conditions -- called {\color{blue}\it boundary conditions\/} -- on the boundary of $R$. For example, we may require $u$ to assume prescribed values on the boundary. This is called a
+\it Laplace's equation\/}. This equation also arises in applications to fluid mechanics and
+potential theory; in fact, it is also called {\color{blue}\it the potential equation\/}. We seek
+solutions of \eqref{eq:12.3.2} in a region $R$ that satisfy specified conditions -- called
+{\color{blue}\it boundary conditions\/} -- on the boundary of $R$. For example, we may require $u$
+to assume prescribed values on the boundary. This is called a
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Dirichlet/}{\color{blue}
-\it Dirichlet condition}, and the problem is called a \href{https://mathshistory.st-andrews.ac.uk/Biographies/Dirichlet/}{\color{blue}
-\it Dirichlet problem\/}. Or, we may require the normal derivative of $u$ at each point $(x,y)$ on the boundary to assume prescribed values. This is called a
+\it Dirichlet condition}, and the problem is called a
+\href{https://mathshistory.st-andrews.ac.uk/Biographies/Dirichlet/}{\color{blue}
+\it Dirichlet problem\/}. Or, we may require the normal derivative of $u$ at each point $(x,y)$ on
+the boundary to assume prescribed values. This is called a
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Neumann_Carl/}{\color{blue}
-\it Neumann condition}, and the problem is called a \href{https://mathshistory.st-andrews.ac.uk/Biographies/Neumann_Carl/}{\color{blue}
-\it Neumann problem\/}. In some problems we impose Dirichlet conditions on part of the boundary and Neumann conditions on the rest. Then we say that the boundary conditions and the problem are {\color{blue}\it mixed\/}.
+\it Neumann condition}, and the problem is called a
+\href{https://mathshistory.st-andrews.ac.uk/Biographies/Neumann_Carl/}{\color{blue}
+\it Neumann problem\/}. In some problems we impose Dirichlet conditions on part of the boundary and
+Neumann conditions on the rest. Then we say that the boundary conditions and the problem are
+{\color{blue}\it mixed\/}.
 
-Solving boundary value problems for \eqref{eq:12.3.2} over general regions is beyond the scope of this book, so we consider only very simple regions. We begin by considering the rectangular region shown in Figure~\ref{figure:12.3.1}.
+Solving boundary value problems for \eqref{eq:12.3.2} over general regions is beyond the scope of
+this book, so we consider only very simple regions. We begin by considering the rectangular region
+shown in Figure~\ref{figure:12.3.1}.
 
 \begin{figure}[tbp]
   \centering
@@ -42,7 +56,10 @@ The possible boundary conditions for this region can be written as
     (1-\delta)u(a,y) & + & \delta u_{x}(a,y) & = & g_{1}(y), & 0\le y\le b,
   \end{array}
 \]
-where $\alpha$, $\beta$, $\gamma$, and $\delta$ can each be either $0$ or $1$; thus, there are 16 possibilities. Let BVP$(\alpha,\beta,\gamma,\delta)(f_{0},f_{1},g_{0},g_{1})$ denote the problem of finding a solution of \eqref{eq:12.3.2} that satisfies these conditions. This is a Dirichlet problem if
+where $\alpha$, $\beta$, $\gamma$, and $\delta$ can each be either $0$ or $1$; thus, there are 16
+possibilities. Let BVP$(\alpha,\beta,\gamma,\delta)(f_{0},f_{1},g_{0},g_{1})$ denote the problem of
+finding a solution of \eqref{eq:12.3.2} that satisfies these conditions. This is a Dirichlet problem
+if
 \[
   \alpha=\beta=\gamma=\delta=0
 \]
@@ -81,7 +98,15 @@ is a solution of
 \[
   \mbox{BVP}(\alpha,\beta,\gamma,\delta)(f_{0},f_{1},g_{0},g_{1}).
 \]
-Therefore we concentrate on problems where only one of the functions $f_{0}$, $f_{1}$, $g_{0}$, $g_{2}$ isn't identically zero. There are 64 (count them!) problems of this form. Each has homogeneous boundary conditions on three sides of the rectangle, and a nonhomogeneous boundary condition on the fourth. We use separation of variables to find infinitely many functions that satisfy Laplace's equation and the three homogeneous boundary conditions in the open rectangle. We then use these solutions as building blocks to construct a formal solution of Laplace's equation that also satisfies the nonhomogeneous boundary condition. Since it's not feasible to consider all 64 cases, we'll restrict our attention in the text to just four. Others are discussed in the exercises.
+Therefore we concentrate on problems where only one of the functions $f_{0}$, $f_{1}$, $g_{0}$,
+$g_{2}$ isn't identically zero. There are 64 (count them!) problems of this form. Each has
+homogeneous boundary conditions on three sides of the rectangle, and a nonhomogeneous boundary
+condition on the fourth. We use separation of variables to find infinitely many functions that
+satisfy Laplace's equation and the three homogeneous boundary conditions in the open rectangle. We
+then use these solutions as building blocks to construct a formal solution of Laplace's equation
+that also satisfies the nonhomogeneous boundary condition. Since it's not feasible to consider all
+64 cases, we'll restrict our attention in the text to just four. Others are discussed in the
+exercises.
 
 If $v(x,y)=X(x)Y(y)$ then
 \[
@@ -118,7 +143,8 @@ From here, the strategy depends upon the boundary conditions. We illustrate this
   \label{figure:12.3.4}
 \end{figure}
 
-\solution The boundary conditions in \eqref{eq:12.3.4} require products $v(x,y)=X(x)Y(y)$ such that $X(0)=X(a)=Y(b)=0$; hence, we let $k=-\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
+\solution The boundary conditions in \eqref{eq:12.3.4} require products $v(x,y)=X(x)Y(y)$ such that
+$X(0)=X(a)=Y(b)=0$; hence, we let $k=-\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation}
   \label{eq:12.3.5}X''+\lambda X=0,\quad X(0)=0,\quad X(a)=0
 \end{equation}
@@ -126,7 +152,8 @@ and
 \begin{equation}
   \label{eq:12.3.6}Y''-\lambda Y=0,\quad Y(b)=0.
 \end{equation}
-From Theorem~\ref{thmtype:11.1.2}, the eigenvalues of \eqref{eq:12.3.5} are $\lambda_{n}=n^{2}\pi^{2}/a^{2}$, with associated eigenfunctions
+From Theorem~\ref{thmtype:11.1.2}, the eigenvalues of \eqref{eq:12.3.5} are
+$\lambda_{n}=n^{2}\pi^{2}/a^{2}$, with associated eigenfunctions
 \[
   X_{n}=\sin\frac{n\pi x}{a},\quad n=1,2,3,\dots.
 \]
@@ -138,7 +165,9 @@ so we could take
 \begin{equation}
   \label{eq:12.3.7}Y_{n}=\sinh\frac{n\pi(b-y)}{a};
 \end{equation}
-however, because of the nonhomogeneous Dirichlet condition at $y=0$, it's better to require that $Y_{n}(0)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.7} by its value at $y=0$; thus, we take
+however, because of the nonhomogeneous Dirichlet condition at $y=0$, it's better to require that
+$Y_{n}(0)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.7} by its value at
+$y=0$; thus, we take
 \[
   Y_{n}=\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}.
 \]
@@ -146,7 +175,8 @@ Then
 \[
   v_{n}(x,y)=X_{n}(x)Y_{n}(y)=\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\sin\frac{n\pi x}{a},
 \]
-so $v_{n}(x,0)=\sin n\pi x/a$ and $v_{n}$ satisfies \eqref{eq:12.3.4} with $f(x)=\sin n\pi x/a$. More generally, if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants then
+so $v_{n}(x,0)=\sin n\pi x/a$ and $v_{n}$ satisfies \eqref{eq:12.3.4} with $f(x)=\sin n\pi x/a$.
+More generally, if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants then
 \[
   u_{m}(x,y)=\sum_{n=1}^{m}\alpha_{n}\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\sin\frac{n\pi x}{a}
 \]
@@ -154,7 +184,8 @@ satisfies \eqref{eq:12.3.4} with
 \[
   f(x)=\sum_{n=1}^{m}\alpha_{n}\sin\frac{n\pi x}{L}.
 \]
-Therefore, if $f$ is an arbitrary piecewise smooth function on $[0,a]$, we define the formal solution of \eqref{eq:12.3.4} to be
+Therefore, if $f$ is an arbitrary piecewise smooth function on $[0,a]$, we define the formal
+solution of \eqref{eq:12.3.4} to be
 \begin{equation}
   \label{eq:12.3.8}u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\sin\frac{n\pi x}{a},
 \end{equation}
@@ -175,7 +206,14 @@ for large $n$, so the series in \eqref{eq:12.3.8} converges if $0<y<b$; moreover
 \[
   \frac{\cosh n\pi(b-y)/a}{\sinh n\pi b/a}\approx e^{-n\pi y/a}
 \]
-for large $n$, Theorem~\ref{thmtype:12.1.2} applied twice with $z=x$ and twice with $z=t$, shows that $u_{xx}$ and $u_{yy}$ can be obtained by differentiating $u$ term by term if $0<y<b$. (Exercise~\ref{exer:12.3.37}). Therefore $u$ satisfies Laplace's equation in the interior of the rectangle in Figure~\ref{figure:12.3.4}. Moreover, the series in \eqref{eq:12.3.8} also converges on the boundary of the rectangle, and satisfies the three homogeneous boundary conditions in \eqref{eq:12.3.4}. Therefore, since $u(x,0)=S(x)$ for $0\le x\le L$, $u$ is an actual solution of \eqref{eq:12.3.5} if and only if $S(x)=f(x)$ for $0\le x\le a$. From Theorem~\ref{thmtype:11.3.2}, this is true if $f$ is continuous and piecewise smooth on $[0,L]$, and $f(0)=f(L)=0$.
+for large $n$, Theorem~\ref{thmtype:12.1.2} applied twice with $z=x$ and twice with $z=t$, shows
+that $u_{xx}$ and $u_{yy}$ can be obtained by differentiating $u$ term by term if $0<y<b$.
+(Exercise~\ref{exer:12.3.37}). Therefore $u$ satisfies Laplace's equation in the interior of the
+rectangle in Figure~\ref{figure:12.3.4}. Moreover, the series in \eqref{eq:12.3.8} also converges on
+the boundary of the rectangle, and satisfies the three homogeneous boundary conditions in
+\eqref{eq:12.3.4}. Therefore, since $u(x,0)=S(x)$ for $0\le x\le L$, $u$ is an actual solution of
+\eqref{eq:12.3.5} if and only if $S(x)=f(x)$ for $0\le x\le a$. From Theorem~\ref{thmtype:11.3.2},
+this is true if $f$ is continuous and piecewise smooth on $[0,L]$, and $f(0)=f(L)=0$.
 
 \begin{example}
   \label{example:12.3.2} \rm Solve \eqref{eq:12.3.4} with $f(x)=x(x^{2}-3ax+2a^{2})$.
@@ -194,7 +232,10 @@ To compute approximate values of $u(x,y)$, we must use partial sums of the form
 \[
   u_{m}(x,y)=\frac{12a^{3}}{\pi^{3}}\sum_{n=1}^{m}\frac{\sinh n\pi(b-y)/a}{n^{3}\sinh n\pi b/a}\sin\frac{n\pi x}{a}.
 \]
-Because of \eqref{eq:12.3.9}, small values of $m$ provide sufficient accuracy for most applications if $0<y<b$. Moreover, the $n^{3}$ in the denominator in \eqref{eq:12.3.10} ensures that this is also true for $y=0$. For graphing purposes, we chose $a=2$, $b=1$, and $m=10$. Figure~\ref{figure:12.3.5} shows the surface
+Because of \eqref{eq:12.3.9}, small values of $m$ provide sufficient accuracy for most applications
+if $0<y<b$. Moreover, the $n^{3}$ in the denominator in \eqref{eq:12.3.10} ensures that this is also
+true for $y=0$. For graphing purposes, we chose $a=2$, $b=1$, and $m=10$. Figure~\ref{figure:12.3.5}
+shows the surface
 \[
   u=u(x,y),\quad0\le x\le2,\quad0\le y\le1,
 \]
@@ -242,7 +283,9 @@ while Figure~\ref{figure:12.3.6} shows the curves
   \label{figure:12.3.7}
 \end{figure}
 
-\solution The boundary conditions in \eqref{eq:12.3.11} require products $v(x,y)=X(x)Y(y)$ such that $X'(0)=X'(a)=Y(0)=0$; hence, we let $k=-\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
+\solution The boundary conditions in \eqref{eq:12.3.11} require products $v(x,y)=X(x)Y(y)$ such that
+$X'(0)=X'(a)=Y(0)=0$; hence, we let $k=-\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must
+satisfy
 \begin{equation}
   \label{eq:12.3.12}X''+\lambda X=0,\quad X'(0)=0,\quad X'(a)=0
 \end{equation}
@@ -250,11 +293,15 @@ and
 \begin{equation}
   \label{eq:12.3.13}Y''-\lambda Y=0,\quad Y(0)=0.
 \end{equation}
-From Theorem~\ref{thmtype:11.1.3}, the eigenvalues of \eqref{eq:12.3.12} are $\lambda=0$, with associated eigenfunction $X_{0}=1$, and $\lambda_{n}=n^{2}\pi^{2}/a^{2}$, with associated eigenfunctions
+From Theorem~\ref{thmtype:11.1.3}, the eigenvalues of \eqref{eq:12.3.12} are $\lambda=0$, with
+associated eigenfunction $X_{0}=1$, and $\lambda_{n}=n^{2}\pi^{2}/a^{2}$, with associated
+eigenfunctions
 \[
   X_{n}=\cos\frac{n\pi x}{a},\quad n=1,2,3,\dots.
 \]
-Since $Y_{0}=y$ satisfies \eqref{eq:12.3.13} with $\lambda=0$, we take $v_{0}(x,y)=X_{0}(x)Y_{0}(y)=y$. Substituting $\lambda=n^{2}\pi^{2}/a^{2}$ into \eqref{eq:12.3.13} yields
+Since $Y_{0}=y$ satisfies \eqref{eq:12.3.13} with $\lambda=0$, we take
+$v_{0}(x,y)=X_{0}(x)Y_{0}(y)=y$. Substituting $\lambda=n^{2}\pi^{2}/a^{2}$ into \eqref{eq:12.3.13}
+yields
 \[
   Y''-(n^{2}\pi^{2}/a^{2})Y=0,\quad Y(0)=0,
 \]
@@ -262,7 +309,9 @@ so we could take
 \begin{equation}
   \label{eq:12.3.14}Y_{n}=\sinh\frac{n\pi y}{a}.
 \end{equation}
-However, because of the nonhomogeneous Neumann condition at $y=b$, it's better to require that $Y_{n}'(b)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.14} by the value of its derivative at $y=b$; thus,
+However, because of the nonhomogeneous Neumann condition at $y=b$, it's better to require that
+$Y_{n}'(b)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.14} by the value
+of its derivative at $y=b$; thus,
 \[
   Y_{n}=\frac{a\sinh n\pi y/a}{n\pi\cosh n\pi b/a}.
 \]
@@ -274,7 +323,8 @@ so
 \[
   \frac{\partial v_{n}}{\partial y}(x,b)=\cos\frac{n\pi x}{a}.
 \]
-Therefore $v_{n}$ satisfies \eqref{eq:12.3.11} with $f(x)=\cos n\pi x/a$. More generally, if $\alpha_{0}$, \dots, $\alpha_{m}$ are arbitrary constants then
+Therefore $v_{n}$ satisfies \eqref{eq:12.3.11} with $f(x)=\cos n\pi x/a$. More generally, if
+$\alpha_{0}$, \dots, $\alpha_{m}$ are arbitrary constants then
 \[
   u_{m}(x,y)=\alpha_{0}y+\frac{a}{\pi}\sum_{n=1}^{m}\alpha_{n}\frac{\sinh n\pi y/a}{n\cosh n\pi b/a}\cos\frac{n\pi x}{a}
 \]
@@ -282,7 +332,8 @@ satisfies \eqref{eq:12.3.11} with
 \[
   f(x)=\alpha_{0}+\sum_{n=1}^{m}\alpha_{n}\cos\frac{n\pi x}{L}.
 \]
-Therefore, if $f$ is an arbitrary piecewise smooth function on $[0,a]$ we define the formal solution of \eqref{eq:12.3.11} to be
+Therefore, if $f$ is an arbitrary piecewise smooth function on $[0,a]$ we define the formal solution
+of \eqref{eq:12.3.11} to be
 \[
   u(x,y)=\alpha_{0}y+\frac{a}{\pi}\sum_{n=1}^{\infty}\alpha_{n}\frac{\sinh n\pi y/a}{n\cosh n\pi b/a}\cos\frac{n\pi x}{a},
 \]
@@ -307,7 +358,8 @@ Therefore
 \begin{equation}
   \label{eq:12.3.15}u(x,y)=\dst\frac{ay}{2}-\frac{4a^{2}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{\sinh(2n-1)\pi y/a}{(2n-1)^{3}\cosh(2n-1)\pi b/a}\cos\frac{(2n-1)\pi x}{a}.
 \end{equation}
-For graphing purposes, we chose $a=2$, $b=1$, and retained the terms through $n=10$ in \eqref{eq:12.3.15}. Figure~\ref{figure:12.3.8} shows the surface
+For graphing purposes, we chose $a=2$, $b=1$, and retained the terms through $n=10$ in
+\eqref{eq:12.3.15}. Figure~\ref{figure:12.3.8} shows the surface
 \[
   u=u(x,y),\quad0\le x\le2,\quad0\le y\le1,
 \]
@@ -355,7 +407,8 @@ while Figure~\ref{figure:12.3.9} shows the curves
   \label{figure:12.3.10}
 \end{figure}
 
-\solution The boundary conditions in \eqref{eq:12.3.16} require products $v(x,y)=X(x)Y(y)$ such that $Y(0)=Y'(b)=X'(a)=0$; hence, we let $k=\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
+\solution The boundary conditions in \eqref{eq:12.3.16} require products $v(x,y)=X(x)Y(y)$ such that
+$Y(0)=Y'(b)=X'(a)=0$; hence, we let $k=\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation}
   \label{eq:12.3.17}X''-\lambda X=0,\quad\quad X'(a)=0
 \end{equation}
@@ -363,7 +416,8 @@ and
 \begin{equation}
   \label{eq:12.3.18}Y''+\lambda Y=0,\quad Y(0)=0,\quad Y'(b)=0.
 \end{equation}
-From Theorem~\ref{thmtype:11.1.4}, the eigenvalues of \eqref{eq:12.3.18} are $\lambda_{n}=(2n-1)^{2}\pi^{2}/4b^{2}$, with associated eigenfunctions
+From Theorem~\ref{thmtype:11.1.4}, the eigenvalues of \eqref{eq:12.3.18} are
+$\lambda_{n}=(2n-1)^{2}\pi^{2}/4b^{2}$, with associated eigenfunctions
 \[
   Y_{n}=\sin\frac{(2n-1)\pi y}{2b},\quad n=1,2,3,\dots.
 \]
@@ -375,7 +429,9 @@ so we could take
 \begin{equation}
   \label{eq:12.3.19}X_{n}=\cosh\frac{(2n-1)\pi(x-a)}{2b}.
 \end{equation}
-However, because of the nonhomogeneous Dirichlet condition at $x=0$, it's better to require that $X_{n}(0)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.19} by its value at $x=0$; thus,
+However, because of the nonhomogeneous Dirichlet condition at $x=0$, it's better to require that
+$X_{n}(0)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.19} by its value at
+$x=0$; thus,
 \[
   X_{n}= \frac{\cosh(2n-1)\pi(x-a)/2b}{\cosh(2n-1)\pi a/2b}.
 \]
@@ -387,7 +443,8 @@ so
 \[
   v_{n}(0,y)=\sin\frac{(2n-1)\pi y}{2b}.
 \]
-Therefore $v_{n}$ satisfies \eqref{eq:12.3.16} with $g(y)=\sin(2n-1)\pi y/2b$. More generally, if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants then
+Therefore $v_{n}$ satisfies \eqref{eq:12.3.16} with $g(y)=\sin(2n-1)\pi y/2b$. More generally, if
+$\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants then
 \[
   u_{m}(x,y)=\sum_{n=1}^{m}\alpha_{n}\frac{\cosh(2n-1)\pi(x-a)/2b}{\cosh(2n-1)\pi a/2b}\sin\frac{(2n-1)\pi y}{2b}
 \]
@@ -395,7 +452,8 @@ satisfies \eqref{eq:12.3.16} with
 \[
   g(y)=\sum_{n=1}^{m}\alpha_{n}\sin\frac{(2n-1)\pi y}{2b}.
 \]
-Thus, if $g$ is an arbitrary piecewise smooth function on $[0,b]$, we define the formal solution of \eqref{eq:12.3.16} to be
+Thus, if $g$ is an arbitrary piecewise smooth function on $[0,b]$, we define the formal solution of
+\eqref{eq:12.3.16} to be
 \[
   u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}\frac{\cosh(2n-1)\pi(x-a)/2b}{\cosh(2n-1)\pi a/2b}\sin\frac{(2n-1)\pi y}{2b},
 \]
@@ -442,7 +500,8 @@ Therefore
   \label{figure:12.3.11}
 \end{figure}
 
-\solution The boundary conditions in \eqref{eq:12.3.20} require products $v(x,y)=X(x)Y(y)$ such that $Y'(0)=Y(b)=X'(0)=0$; hence, we let $k=\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
+\solution The boundary conditions in \eqref{eq:12.3.20} require products $v(x,y)=X(x)Y(y)$ such that
+$Y'(0)=Y(b)=X'(0)=0$; hence, we let $k=\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation}
   \label{eq:12.3.21}X''-\lambda X=0,\quad\quad X'(0)=0
 \end{equation}
@@ -450,7 +509,8 @@ and
 \begin{equation}
   \label{eq:12.3.22}Y''+\lambda Y=0,\quad Y'(0)=0,\quad Y(b)=0.
 \end{equation}
-From Theorem~\ref{thmtype:11.1.4}, the eigenvalues of \eqref{eq:12.3.22} are $\lambda_{n}=(2n-1)^{2}\pi^{2}/4b^{2}$, with associated eigenfunctions
+From Theorem~\ref{thmtype:11.1.4}, the eigenvalues of \eqref{eq:12.3.22} are
+$\lambda_{n}=(2n-1)^{2}\pi^{2}/4b^{2}$, with associated eigenfunctions
 \[
   Y_{n}=\cos\frac{(2n-1)\pi y}{2b},\quad n=1,2,3,\dots.
 \]
@@ -462,7 +522,9 @@ so we could take
 \begin{equation}
   \label{eq:12.3.23}X_{n}=\cosh\frac{(2n-1)\pi x}{2b}.
 \end{equation}
-However, because of the nonhomogeneous Neumann condition at $x=a$, it's better to require that $X_{n}'(a)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.23} by the value of its derivative at $x=a$; thus,
+However, because of the nonhomogeneous Neumann condition at $x=a$, it's better to require that
+$X_{n}'(a)=1$, which can be achieved by dividing the right side of \eqref{eq:12.3.23} by the value
+of its derivative at $x=a$; thus,
 \[
   X_{n}= \frac{2b\cosh(2n-1)\pi x/2b}{(2n-1)\pi\sinh(2n-1)\pi a/2b}.
 \]
@@ -474,7 +536,8 @@ so
 \[
   \frac{\partial v_{n}}{\partial x}(a,y)=\cos\frac{(2n-1)\pi y}{2b}.
 \]
-Therefore $v_{n}$ satisfies \eqref{eq:12.3.20} with $g(y)=\cos(2n-1)\pi y/2b$. More generally, if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants then
+Therefore $v_{n}$ satisfies \eqref{eq:12.3.20} with $g(y)=\cos(2n-1)\pi y/2b$. More generally, if
+$\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants then
 \[
   u_{m}(x,y)=\frac{2b}{\pi}\sum_{n=1}^{m}\alpha_{n}\frac{\cosh(2n-1)\pi x/2b}{(2n-1)\sinh(2n-1)\pi a/2b}\cos\frac{(2n-1)\pi y}{2b}
 \]
@@ -482,7 +545,8 @@ satisfies \eqref{eq:12.3.20} with
 \[
   g(y)=\sum_{n=1}^{\infty}\alpha_{n}\cos\frac{(2n-1)\pi y}{2b}.
 \]
-Therefore, if $g$ is an arbitrary piecewise smooth function on $[0,b]$, we define the formal solution of \eqref{eq:12.3.20} to be
+Therefore, if $g$ is an arbitrary piecewise smooth function on $[0,b]$, we define the formal
+solution of \eqref{eq:12.3.20} to be
 \[
   u(x,y)=\frac{2b}{\pi}\sum_{n=1}^{\infty}\alpha_{n}\frac{\cosh(2n-1)\pi x/2b}{(2n-1)\sinh(2n-1)\pi a/2b}\cos\frac{(2n-1)\pi y}{2b},
 \]
@@ -515,7 +579,8 @@ We now seek solutions of Laplace's equation on the semi-infinite strip
 \[
   S:\{0<x<a,\quad y>0\}
 \]
-(Figure~\ref{figure:12.3.12}) that satisfy homogeneous boundary conditions at $x=0$ and $x=a$, and a nonhomogeneous Dirichlet or Neumann condition at $y=0$. An example of such a problem is
+(Figure~\ref{figure:12.3.12}) that satisfy homogeneous boundary conditions at $x=0$ and $x=a$, and a
+nonhomogeneous Dirichlet or Neumann condition at $y=0$. An example of such a problem is
 \begin{equation}
   \label{eq:12.3.24}
   \begin{array}{c}
@@ -533,17 +598,20 @@ We now seek solutions of Laplace's equation on the semi-infinite strip
   \label{figure:12.3.12}
 \end{figure}
 
-The boundary conditions in this problem are not sufficient to determine $u$, for if $u_{0}=u_{0}(x,y)$ is a solution and $K$ is a constant then
+The boundary conditions in this problem are not sufficient to determine $u$, for if
+$u_{0}=u_{0}(x,y)$ is a solution and $K$ is a constant then
 \[
   u_{1}(x,y)=u_{0}(x,y)+K\sin\frac{\pi x}{a}\sinh\frac{\pi y}{a}.
 \]
-is also a solution. (Verify.) However, if we also require --- on physical grounds --- that the solution remain bounded for all $(x,y)$ in $S$ then $K=0$ and this difficulty is eliminated.
+is also a solution. (Verify.) However, if we also require --- on physical grounds --- that the
+solution remain bounded for all $(x,y)$ in $S$ then $K=0$ and this difficulty is eliminated.
 
 \begin{example}
   \label{example:12.3.9} \rm Define the bounded formal solution of \eqref{eq:12.3.24}.
 \end{example}
 
-\solution Proceeding as in the solution of Example~\ref{example:12.3.1}, we find that the building block functions are of the form
+\solution Proceeding as in the solution of Example~\ref{example:12.3.1}, we find that the building
+block functions are of the form
 \[
   v_{n}(x,y)=Y_{n}(y)\sin\frac{n\pi x}{a},
 \]
@@ -555,7 +623,9 @@ Therefore
 \[
   Y_{n}=c_{1}e^{n\pi y/a}+c_{2}e^{-n\pi y/a}
 \]
-where $c_{1}$ and $c_{2}$ are constants. Although the boundary conditions in \eqref{eq:12.3.24} don't restrict $c_{1}$, and $c_{2}$, we must set $c_{1}=0$ to ensure that $Y_{n}$ is bounded. Letting $c_{2}=1$ yields
+where $c_{1}$ and $c_{2}$ are constants. Although the boundary conditions in \eqref{eq:12.3.24}
+don't restrict $c_{1}$, and $c_{2}$, we must set $c_{1}=0$ to ensure that $Y_{n}$ is bounded.
+Letting $c_{2}=1$ yields
 \[
   v_{n}(x,y)=e^{-n\pi y/a}\sin\frac{n\pi x}{a},
 \]
@@ -569,7 +639,8 @@ where
 \]
 is the Fourier sine series of $f$ on $[0,a]$. \bbox
 
-See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value problems on a semi-infinite strip.
+See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value problems on a
+semi-infinite strip.
 
 \exercises In Exercises~\ref{exer:12.3.1}-\ref{exer:12.3.16} apply the definition developed in Example~1 to solve the boundary value problem. (Use Theorem~\ref{thmtype:11.3.5} where it applies.) Where indicated by \Cex, graph the surface $u=u(x,y)$, $0\le x\le a$, $0\le y\le b$.
 
@@ -610,7 +681,11 @@ See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value pro
 
   \item\label{exer:12.3.16} $u_{xx}+u_{yy}=0,\quad0<x<1,\quad0<y<1$,\\ $u_{y}(x,0)=0,\quad u(x,1)=0,\quad0\le x\le1$,\\ $u_{x}(0,y)=0,\quad u_{x}(1,y)=1-y^{3},\quad0\le y\le1$
 
-  \exercisetext{In Exercises~\ref{exer:12.3.17}-\ref{exer:12.3.28} define the formal solution of \[u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b\] that satisfies the given boundary conditions for general $a$, $b$, and $f$ or $g$. Then solve the boundary value problem for the specified $a$, $b$, and $f$ or $g$. (Use Theorem~\ref{thmtype:11.3.5} where it applies.) Where indicated by \Cex, graph the surface $u=u(x,y)$, $0\le x\le a$, $0\le y\le b$.}
+  \exercisetext{In Exercises~\ref{exer:12.3.17}-\ref{exer:12.3.28} define the formal solution
+  of \[u_{xx}+u_{yy}=0,\quad0<x<a,\quad0<y<b\] that satisfies the given boundary conditions for
+  general $a$, $b$, and $f$ or $g$. Then solve the boundary value problem for the specified $a$,
+  $b$, and $f$ or $g$. (Use Theorem~\ref{thmtype:11.3.5} where it applies.) Where indicated by \Cex,
+  graph the surface $u=u(x,y)$, $0\le x\le a$, $0\le y\le b$.}
 
   \item\label{exer:12.3.17} \Cex $u(x,0)=0,\quad u(x,b)=f(x),\quad0<x<a,\\ u(0,y)=0,\quad u(a,y)=0,\quad0<y<b$ \\ $a=3$,\quad $b=2$,\quad $f(x)=x(3-x)$
 
@@ -644,7 +719,9 @@ See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value pro
 
   \item\label{exer:12.3.28} $u_{y}(x,0)=0,\quad u_{y}(x,b)=0,\quad0<x<a,\\ u_{x}(0,y)=g(y),\quad u(a,y)=0,\quad0<y<b$ \\ $a=2$,\quad $b=\pi$,\quad $g(y)=y$
 
-  \exercisetext{In Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} define the bounded formal solution of \[u_{xx}+u_{yy}=0,\quad0<x<a,\quad y>0\] that satisfies the given boundary conditions for general $a$ and $f$. Then solve the boundary value problem for the specified $a$ and $f$.}
+  \exercisetext{In Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} define the bounded formal
+  solution of \[u_{xx}+u_{yy}=0,\quad0<x<a,\quad y>0\] that satisfies the given boundary conditions
+  for general $a$ and $f$. Then solve the boundary value problem for the specified $a$ and $f$.}
 
   \item\label{exer:12.3.29} $u(x,0)=f(x),\quad0<x<a$,\quad\\ $u_{x}(0,y)=0,\quad u_{x}(a,y)=0,\quad y>0$ \\ $a=\pi$ $f(x)=x^{2}(3\pi-2x)$
 
@@ -681,7 +758,9 @@ See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value pro
   \]
   In this case it has infinitely many formal solutions. Find them.
 
-  \item\label{exer:12.3.37} In this exercise take it as given that the infinite series $\sum_{n=1}^{\infty}n^{p}e^{-qn}$ converges for all $p$ if $q>0$, and, where appropriate, use the comparison test for absolute convergence of an infinite series.
+  \item\label{exer:12.3.37} In this exercise take it as given that the infinite series
+        $\sum_{n=1}^{\infty}n^{p}e^{-qn}$ converges for all $p$ if $q>0$, and, where appropriate,
+        use the comparison test for absolute convergence of an infinite series.
 
   Let
   \[
@@ -715,7 +794,8 @@ See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value pro
     \]
 
     \item % (d)
-    Starting from the result of \part{b}, use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$ to show that, for a fixed $y$ in $(0,b)$,
+    Starting from the result of \part{b}, use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$ to
+    show that, for a fixed $y$ in $(0,b)$,
     \[
       u_{xx}(x,y)=-\frac{\pi^{2}}{a^{2}}\sum_{n=1}^{\infty}n^{2}\alpha_{n}\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\sin\frac{n\pi x}{a},\quad-\infty<x<\infty.
     \]
@@ -725,7 +805,8 @@ See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value pro
     \[
       u_{y}(x,y)=-\frac{\pi}{a}\sum_{n=1}^{\infty}n\alpha_{n}\frac{\cosh n\pi(b-y)/a}{\sinh n\pi b/a}\sin\frac{n\pi x}{a}
     \]
-    if $0<y_{0}<y<b$, where $y_{0}$ is an arbitrary number in $(0,b)$. Then argue that since $y_{0}$ can be chosen arbitrarily small, the conclusion holds for all $y$ in $(0,b)$.
+    if $0<y_{0}<y<b$, where $y_{0}$ is an arbitrary number in $(0,b)$. Then argue that since $y_{0}$
+    can be chosen arbitrarily small, the conclusion holds for all $y$ in $(0,b)$.
 
     \item % (f)
     Starting from the result of \part{e}, use (A) and Theorem~\ref{thmtype:12.1.2} to show that
@@ -737,5 +818,6 @@ See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value pro
     Conclude that $u$ satisfies Laplace's equation for all $(x,y)$ such that $0<y<b$.
   \end{alist}
 
-  By repeatedly applying the arguments in \part{c}--\part{f}, it can be shown that $u$ can be differentiated term by term any number of times with respect to $x$ and/or $y$ if $0<y<b$.
+  By repeatedly applying the arguments in \part{c}--\part{f}, it can be shown that $u$ can be
+  differentiated term by term any number of times with respect to $x$ and/or $y$ if $0<y<b$.
 \end{exerciselist}

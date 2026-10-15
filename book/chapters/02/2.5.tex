@@ -13,7 +13,11 @@ where $x$ is the independent variable and $y$ is the dependent variable, or as
 \begin{equation}
   \label{eq:2.5.3}M(x,y)\,\frac{dx}{dy}+N(x,y)=0,
 \end{equation}
-where $y$ is the independent variable and $x$ is the dependent variable. Since the solutions of \eqref{eq:2.5.2} and \eqref{eq:2.5.3} will often have to be left in implicit, form we'll say that $F(x,y)=c$ is an implicit solution of \eqref{eq:2.5.1} if every differentiable function $y=y(x)$ that satisfies $F(x,y)=c$ is a solution of \eqref{eq:2.5.2} and every differentiable function $x=x(y)$ that satisfies $F(x,y)=c$ is a solution of \eqref{eq:2.5.3}.
+where $y$ is the independent variable and $x$ is the dependent variable. Since the solutions of
+\eqref{eq:2.5.2} and \eqref{eq:2.5.3} will often have to be left in implicit, form we'll say that
+$F(x,y)=c$ is an implicit solution of \eqref{eq:2.5.1} if every differentiable function $y=y(x)$
+that satisfies $F(x,y)=c$ is a solution of \eqref{eq:2.5.2} and every differentiable function
+$x=x(y)$ that satisfies $F(x,y)=c$ is a solution of \eqref{eq:2.5.3}.
 
 Here are some examples:
 
@@ -43,7 +47,9 @@ Note that a separable equation can be written as \eqref{eq:2.5.1} as
   M(x)\,dx+N(y)\,dy=0.
 \]
 
-We'll develop a method for solving \eqref{eq:2.5.1} under appropriate assumptions on $M$ and $N$. This method is an extension of the method of separation of variables (Exercise~\ref{exer:2.5.41}). Before stating it we consider an example.
+We'll develop a method for solving \eqref{eq:2.5.1} under appropriate assumptions on $M$ and $N$.
+This method is an extension of the method of separation of variables (Exercise~\ref{exer:2.5.41}).
+Before stating it we consider an example.
 
 \begin{example}
   \label{example:2.5.1} \rm Show that
@@ -56,17 +62,22 @@ We'll develop a method for solving \eqref{eq:2.5.1} under appropriate assumption
   \end{equation}
 \end{example}
 
-\solution Regarding $y$ as a function of $x$ and differentiating \eqref{eq:2.5.4} implicitly with respect to $x$ yields
+\solution Regarding $y$ as a function of $x$ and differentiating \eqref{eq:2.5.4} implicitly with
+respect to $x$ yields
 \[
   (4x^{3}y^{3}+2xy^{5}+2y)+(3x^{4}y^{2}+5x^{2}y^{4}+2x)\,\frac{dy}{dx}=0.
 \]
-Similarly, regarding $x$ as a function of $y$ and differentiating \eqref{eq:2.5.4} implicitly with respect to $y$ yields
+Similarly, regarding $x$ as a function of $y$ and differentiating \eqref{eq:2.5.4} implicitly with
+respect to $y$ yields
 \[
   (4x^{3}y^{3}+2xy^{5}+2y)\frac{dx}{dy}+(3x^{4}y^{2}+5x^{2}y^{4}+2x)=0.
 \]
-Therefore \eqref{eq:2.5.4} is an implicit solution of \eqref{eq:2.5.5} in either of its two possible interpretations. \bbox
+Therefore \eqref{eq:2.5.4} is an implicit solution of \eqref{eq:2.5.5} in either of its two possible
+interpretations. \bbox
 
-You may think this example is pointless, since concocting a differential equation that has a given implicit solution isn't particularly interesting. However, it illustrates the next important theorem, which we'll prove by using implicit differentiation, as in Example~\ref{example:2.5.1}.
+You may think this example is pointless, since concocting a differential equation that has a given
+implicit solution isn't particularly interesting. However, it illustrates the next important
+theorem, which we'll prove by using implicit differentiation, as in Example~\ref{example:2.5.1}.
 
 \begin{theorem}
   \color{blue}
@@ -80,49 +91,63 @@ You may think this example is pointless, since concocting a differential equatio
   \end{equation}
 \end{theorem}
 
-\proof Regarding $y$ as a function of $x$ and differentiating \eqref{eq:2.5.6} implicitly with respect to $x$ yields
+\proof Regarding $y$ as a function of $x$ and differentiating \eqref{eq:2.5.6} implicitly with
+respect to $x$ yields
 \[
   F_{x}(x,y)+F_{y}(x,y)\,\frac{dy}{dx}=0.
 \]
-On the other hand, regarding $x$ as a function of $y$ and differentiating \eqref{eq:2.5.6} implicitly with respect to $y$ yields
+On the other hand, regarding $x$ as a function of $y$ and differentiating \eqref{eq:2.5.6}
+implicitly with respect to $y$ yields
 \[
   F_{x}(x,y)\,\frac{dx}{dy}+F_{y}(x,y)=0.
 \]
-Thus, \eqref{eq:2.5.6} is an implicit solution of \eqref{eq:2.5.7} in either of its two possible interpretations. \bbox
+Thus, \eqref{eq:2.5.6} is an implicit solution of \eqref{eq:2.5.7} in either of its two possible
+interpretations. \bbox
 
 We'll say that the equation
 \begin{equation}
   \label{eq:2.5.8}M(x,y)\,dx+N(x,y)\,dy=0
 \end{equation}
-is {\color{blue}\it exact} on an open rectangle $R$ if there's a function $F=F(x,y)$ such $F_{x}$ and $F_{y}$ are continuous, and
+is {\color{blue}\it exact} on an open rectangle $R$ if there's a function $F=F(x,y)$ such $F_{x}$
+and $F_{y}$ are continuous, and
 \begin{equation}
   \label{eq:2.5.9}F_{x}(x,y)=M(x,y)\mbox{\quad and \quad}F_{y}(x,y)=N(x,y)
 \end{equation}
-for all $(x,y)$ in $R$. This usage of ``exact'' is related to its usage in calculus, where the expression
+for all $(x,y)$ in $R$. This usage of ``exact'' is related to its usage in calculus, where the
+expression
 \[
   F_{x}(x,y)\,dx+F_{y}(x,y)\,dy
 \]
-(obtained by substituting \eqref{eq:2.5.9} into the left side of \eqref{eq:2.5.8}) is the {\color{blue}\it exact differential of\/} $F$.
+(obtained by substituting \eqref{eq:2.5.9} into the left side of \eqref{eq:2.5.8}) is the
+{\color{blue}\it exact differential of\/} $F$.
 
-Example~\ref{example:2.5.1} shows that it's easy to solve \eqref{eq:2.5.8} if it's exact {\color{blue}\it and} we know a function $F$ that satisfies \eqref{eq:2.5.9}. The important questions are:
+Example~\ref{example:2.5.1} shows that it's easy to solve \eqref{eq:2.5.8} if it's exact
+{\color{blue}\it and} we know a function $F$ that satisfies \eqref{eq:2.5.9}. The important
+questions are:
 
 {\sc Question 1.} Given an equation \eqref{eq:2.5.8}, how can we determine whether it's exact?
 
-{\sc Question 2.} If \eqref{eq:2.5.8} is exact, how do we find a function $F$ satisfying \eqref{eq:2.5.9}?
+{\sc Question 2.} If \eqref{eq:2.5.8} is exact, how do we find a function $F$ satisfying
+\eqref{eq:2.5.9}?
 
-To discover the answer to Question~1, assume that there's a function $F$ that satisfies \eqref{eq:2.5.9} on some open rectangle $R$, and in addition that $F$ has continuous mixed partial derivatives $F_{xy}$ and $F_{yx}$. Then a theorem from calculus implies that
+To discover the answer to Question~1, assume that there's a function $F$ that satisfies
+\eqref{eq:2.5.9} on some open rectangle $R$, and in addition that $F$ has continuous mixed partial
+derivatives $F_{xy}$ and $F_{yx}$. Then a theorem from calculus implies that
 \begin{equation}
   \label{eq:2.5.10}F_{xy}=F_{yx}.
 \end{equation}
-If $F_{x}=M$ and $F_{y}=N$, differentiating the first of these equations with respect to $y$ and the second with respect to $x$ yields
+If $F_{x}=M$ and $F_{y}=N$, differentiating the first of these equations with respect to $y$ and the
+second with respect to $x$ yields
 \begin{equation}
   \label{eq:2.5.11}F_{xy}=M_{y}\mbox{\quad and \quad}F_{yx}=N_{x}.
 \end{equation}
-From \eqref{eq:2.5.10} and \eqref{eq:2.5.11}, we conclude that a necessary condition for exactness is that $M_{y}=N_{x}$. This motivates the next theorem, which we state without proof.
+From \eqref{eq:2.5.10} and \eqref{eq:2.5.11}, we conclude that a necessary condition for exactness
+is that $M_{y}=N_{x}$. This motivates the next theorem, which we state without proof.
 
 \begin{theorem}
   \color{blue}
-  $[$The Exactness Condition$]$\label{thmtype:2.5.2} \space Suppose $M$ and $N$ are continuous and have continuous partial derivatives $M_{y}$ and $N_{x}$ on an open rectangle $R$. Then
+  $[$The Exactness Condition$]$\label{thmtype:2.5.2} \space Suppose $M$ and $N$ are continuous and
+  have continuous partial derivatives $M_{y}$ and $N_{x}$ on an open rectangle $R$. Then
   \[
     M(x,y)\,dx+N(x,y)\,dy=0
   \]
@@ -133,7 +158,10 @@ From \eqref{eq:2.5.10} and \eqref{eq:2.5.11}, we conclude that a necessary condi
   for all $(x,y)$ in $R$..
 \end{theorem}
 
-To help you remember the exactness condition, observe that the coefficients of $dx$ and $dy$ are differentiated in \eqref{eq:2.5.12} with respect to the ``opposite'' variables; that is, the coefficient of $dx$ is differentiated with respect to $y$, while the coefficient of $dy$ is differentiated with respect to $x$.
+To help you remember the exactness condition, observe that the coefficients of $dx$ and $dy$ are
+differentiated in \eqref{eq:2.5.12} with respect to the ``opposite'' variables; that is, the
+coefficient of $dx$ is differentiated with respect to $y$, while the coefficient of $dy$ is
+differentiated with respect to $x$.
 
 \begin{example}
   \label{example:2.5.2} \rm Show that the equation
@@ -151,9 +179,11 @@ so
 \[
   M_{y}(x,y)=3x^{2}\mbox{\quad and \quad}N_{x}(x,y)=12x^{2}.
 \]
-Therefore $M_{y}=N_{x}$ on the line $x=0$, but not on any open rectangle, so there's no function $F$ such that $F_{x}(x,y)=M(x,y)$ and $F_{y}(x,y)=N(x,y)$ for all $(x,y)$ on any open rectangle. \bbox
+Therefore $M_{y}=N_{x}$ on the line $x=0$, but not on any open rectangle, so there's no function $F$
+such that $F_{x}(x,y)=M(x,y)$ and $F_{y}(x,y)=N(x,y)$ for all $(x,y)$ on any open rectangle. \bbox
 
-The next example illustrates two possible methods for finding a function $F$ that satisfies the condition $F_{x}=M$ and $F_{y}=N$ if $M\,dx+N\,dy=0$ is exact.
+The next example illustrates two possible methods for finding a function $F$ that satisfies the
+condition $F_{x}=M$ and $F_{y}=N$ if $M\,dx+N\,dy=0$ is exact.
 
 \begin{example}
   \label{example:2.5.3} \rm Solve
@@ -182,7 +212,11 @@ for all $(x,y)$. To find $F$, we integrate \eqref{eq:2.5.14} with respect to $x$
 \begin{equation}
   \label{eq:2.5.16}F(x,y)=x^{4}y^{3}+x^{3}+\phi(y),
 \end{equation}
-where $\phi(y)$ is the ``constant'' of integration. (Here $\phi$ is ``constant'' in that it's independent of $x$, the variable of integration.) If $\phi$ is any differentiable function of $y$ then $F$ satisfies \eqref{eq:2.5.14}. To determine $\phi$ so that $F$ also satisfies \eqref{eq:2.5.15}, assume that $\phi$ is differentiable and differentiate $F$ with respect to $y$. This yields
+where $\phi(y)$ is the ``constant'' of integration. (Here $\phi$ is ``constant'' in that it's
+independent of $x$, the variable of integration.) If $\phi$ is any differentiable function of $y$
+then $F$ satisfies \eqref{eq:2.5.14}. To determine $\phi$ so that $F$ also satisfies
+\eqref{eq:2.5.15}, assume that $\phi$ is differentiable and differentiate $F$ with respect to $y$.
+This yields
 \[
   F_{y}(x,y)=3x^{4}y^{2}+\phi'(y).
 \]
@@ -190,7 +224,9 @@ Comparing this with \eqref{eq:2.5.15} shows that
 \[
   \phi'(y)=6y^{2}.
 \]
-We integrate this with respect to $y$ and take the constant of integration to be zero because we're interested only in finding {\color{blue}\it some} $F$ that satisfies \eqref{eq:2.5.14} and \eqref{eq:2.5.15}. This yields
+We integrate this with respect to $y$ and take the constant of integration to be zero because we're
+interested only in finding {\color{blue}\it some} $F$ that satisfies \eqref{eq:2.5.14} and
+\eqref{eq:2.5.15}. This yields
 \[
   \phi(y)=2y^{3}.
 \]
@@ -207,11 +243,13 @@ is an implicit solution of \eqref{eq:2.5.13}. Solving this for $y$ yields the ex
   y=\left(\frac{c-x^{3}}{2+x^{4}}\right)^{1/3}.
 \]
 
-\solution{(Method 2)} Instead of first integrating \eqref{eq:2.5.14} with respect to $x$, we could begin by integrating \eqref{eq:2.5.15} with respect to $y$ to obtain
+\solution{(Method 2)} Instead of first integrating \eqref{eq:2.5.14} with respect to $x$, we could
+begin by integrating \eqref{eq:2.5.15} with respect to $y$ to obtain
 \begin{equation}
   \label{eq:2.5.18}F(x,y)=x^{4}y^{3}+2y^{3}+\psi(x),
 \end{equation}
-where $\psi$ is an arbitrary function of $x$. To determine $\psi$, we assume that $\psi$ is differentiable and differentiate $F$ with respect to $x$, which yields
+where $\psi$ is an arbitrary function of $x$. To determine $\psi$, we assume that $\psi$ is
+differentiable and differentiate $F$ with respect to $x$, which yields
 \[
   F_{x}(x,y)=4x^{3}y^{3}+\psi'(x).
 \]
@@ -235,7 +273,8 @@ Figure~\ref{figure:2.5.1} shows a direction field and some integral curves of \e
   \label{figure:2.5.1}
 \end{figure}
 
-Here's a summary of the procedure used in Method 1 of this example. You should summarize procedure used in Method~2.
+Here's a summary of the procedure used in Method 1 of this example. You should summarize procedure
+used in Method~2.
 
 \smallskip
 \color{blue}
@@ -256,7 +295,8 @@ Here's a summary of the procedure used in Method 1 of this example. You should s
     \begin{equation}
       \label{eq:2.5.20}F(x,y)=G(x,y)+\phi(y),
     \end{equation}
-    where $G$ is an antiderivative of $M$ with respect to $x$, and $\phi$ is an unknown function of $y$.
+    where $G$ is an antiderivative of $M$ with respect to $x$, and $\phi$ is an unknown function of
+    $y$.
 
   \item {\bf Step 3.} Differentiate \eqref{eq:2.5.20} with respect to $y$ to obtain
     \[
@@ -268,15 +308,21 @@ Here's a summary of the procedure used in Method 1 of this example. You should s
       \frac{\partial G(x,y)}{\partial y}+\phi'(y)=N(x,y),\mbox{\quad so \quad }\phi'(y)=N(x,y)-\frac{\partial G(x,y)}{\partial y}.
     \]
 
-  \item {\bf Step 5.} Integrate $\phi'$ with respect to $y$, taking the constant of integration to be zero, and substitute the result in \eqref{eq:2.5.20} to obtain $F(x,y)$.
+  \item {\bf Step 5.} Integrate $\phi'$ with respect to $y$, taking the constant of integration to
+        be zero, and substitute the result in \eqref{eq:2.5.20} to obtain $F(x,y)$.
 
-  \item {\bf Step 6.} Set $F(x,y)=c$ to obtain an implicit solution of \eqref{eq:2.5.19}. If possible, solve for $y$ explicitly as a function of $x$.
+  \item {\bf Step 6.} Set $F(x,y)=c$ to obtain an implicit solution of \eqref{eq:2.5.19}. If
+        possible, solve for $y$ explicitly as a function of $x$.
 \end{description}
 \color{black}
 
-It's a common mistake to omit Step 6. However, it's important to include this step, since $F$ isn't itself a solution of \eqref{eq:2.5.19}.
+It's a common mistake to omit Step 6. However, it's important to include this step, since $F$ isn't
+itself a solution of \eqref{eq:2.5.19}.
 
-Many equations can be conveniently solved by either of the two methods used in Example~\ref{example:2.5.3}. However, sometimes the integration required in one approach is more difficult than in the other. In such cases we choose the approach that requires the easier integration.
+Many equations can be conveniently solved by either of the two methods used in
+Example~\ref{example:2.5.3}. However, sometimes the integration required in one approach is more
+difficult than in the other. In such cases we choose the approach that requires the easier
+integration.
 
 \begin{example}
   \label{example:2.5.4} \rm Solve the equation
@@ -285,7 +331,8 @@ Many equations can be conveniently solved by either of the two methods used in E
   \end{equation}
 \end{example}
 
-\solution We leave it to you to check that $M_{y}=N_{x}$ on any open rectangle where $\tan x$ and $\sec x$ are defined. Here we must find a function $F$ such that
+\solution We leave it to you to check that $M_{y}=N_{x}$ on any open rectangle where $\tan x$ and
+$\sec x$ are defined. Here we must find a function $F$ such that
 \begin{equation}
   \label{eq:2.5.22}F_{x}(x,y)=ye^{xy}\tan x+e^{xy}\sec^{2}x
 \end{equation}
@@ -293,7 +340,8 @@ and
 \begin{equation}
   \label{eq:2.5.23}F_{y}(x,y)=xe^{xy}\tan x.
 \end{equation}
-It's difficult to integrate \eqref{eq:2.5.22} with respect to $x$, but easy to integrate \eqref{eq:2.5.23} with respect to $y$. This yields
+It's difficult to integrate \eqref{eq:2.5.22} with respect to $x$, but easy to integrate
+\eqref{eq:2.5.23} with respect to $y$. This yields
 \begin{equation}
   \label{eq:2.5.24}F(x,y)=e^{xy}\tan x+\psi(x).
 \end{equation}
@@ -301,24 +349,28 @@ Differentiating this with respect to $x$ yields
 \[
   F_{x}(x,y)=ye^{xy}\tan x+e^{xy}\sec^{2}x+\psi'(x).
 \]
-Comparing this with \eqref{eq:2.5.22} shows that $\psi'(x)=0$. Hence, $\psi$ is a constant, which we can take to be zero in \eqref{eq:2.5.24}, and
+Comparing this with \eqref{eq:2.5.22} shows that $\psi'(x)=0$. Hence, $\psi$ is a constant, which we
+can take to be zero in \eqref{eq:2.5.24}, and
 \[
   e^{xy}\tan x=c
 \]
 is an implicit solution of \eqref{eq:2.5.21}. \bbox
 
-Attempting to apply our procedure to an equation that isn't exact will lead to failure in Step 4, since the function
+Attempting to apply our procedure to an equation that isn't exact will lead to failure in Step 4,
+since the function
 \[
   N-\frac{\partial G}{\partial y}
 \]
-won't be independent of $x$ if $M_{y}\ne N_{x}$ (Exercise~\ref{exer:2.5.31}), and therefore can't be the derivative of a function of $y$ alone. Here's an example that illustrates this.
+won't be independent of $x$ if $M_{y}\ne N_{x}$ (Exercise~\ref{exer:2.5.31}), and therefore can't be
+the derivative of a function of $y$ alone. Here's an example that illustrates this.
 
 \begin{example}
   \label{example:2.5.5} \rm Verify that the equation
   \begin{equation}
     \label{eq:2.5.25}3x^{2}y^{2}\,dx+6x^{3}y\,dy=0
   \end{equation}
-  is not exact, and show that the procedure for solving exact equations fails when applied to \eqref{eq:2.5.25}.
+  is not exact, and show that the procedure for solving exact equations fails when applied to
+  \eqref{eq:2.5.25}.
 \end{example}
 
 \solution Here
@@ -375,15 +427,18 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
 
   \item\label{exer:2.5.10} $(2x^{2}+8xy+y^{2})\,dx+(2x^{2}+xy^{3}/3)\,dy=0$
 
-  \item\label{exer:2.5.11} $\dst{\left(\frac{1}{x}+2x\right)\,dx+ \left(\frac{1}{y}+2y\right)\,dy=0}$
+  \item\label{exer:2.5.11}
+        $\dst{\left(\frac{1}{x}+2x\right)\,dx+ \left(\frac{1}{y}+2y\right)\,dy=0}$
 
   \item\label{exer:2.5.12} $(y\sin xy+xy^{2}\cos xy)\,dx+(x\sin xy+xy^{2}\cos xy)\,dy=0$
 
-  \item\label{exer:2.5.13} $\dst{\frac{x\,dx}{(x^{2}+y^{2})^{3/2}}+\frac{y\,dy}{(x^{2}+y^{2})^{3/2}}=0}$
+  \item\label{exer:2.5.13}
+        $\dst{\frac{x\,dx}{(x^{2}+y^{2})^{3/2}}+\frac{y\,dy}{(x^{2}+y^{2})^{3/2}}=0}$
 
   \item\label{exer:2.5.14} $\left(e^{x}(x^{2}y^{2}+2xy^{2})+6x\right)\,dx+(2x^{2}ye^{x}+2)\,dy=0$
 
-  \item\label{exer:2.5.15} $\left(x^{2}e^{x^{2}+y}(2x^{2}+3)+4x\right)\,dx+(x^{3}e^{x^{2}+y}-12y^{2})\,dy=0$
+  \item\label{exer:2.5.15}
+        $\left(x^{2}e^{x^{2}+y}(2x^{2}+3)+4x\right)\,dx+(x^{3}e^{x^{2}+y}-12y^{2})\,dy=0$
 
   \item\label{exer:2.5.16} $\left(e^{xy}(x^{4}y+4x^{3})+3y\right)\,dx+(x^{5}e^{xy}+3x)\,dy=0$
 
@@ -393,7 +448,8 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
 
   \item\label{exer:2.5.18} $(4x^{3}y^{2}-6x^{2}y-2x-3)\,dx+(2x^{4}y-2x^{3})\,dy=0,\quad y(1)=3$
 
-  \item\label{exer:2.5.19} $(-4y\cos x+4\sin x\cos x+\sec^{2}x)\,dx+ (4y-4\sin x)\,dy=0,\quad y(\pi/4)=0$
+  \item\label{exer:2.5.19}
+        $(-4y\cos x+4\sin x\cos x+\sec^{2}x)\,dx+ (4y-4\sin x)\,dy=0,\quad y(\pi/4)=0$
 
   \item\label{exer:2.5.20} $(y^{3}-1)e^{x}\,dx+3y^{2}(e^{x}+1)\,dy=0,\quad y(0)=0$
 
@@ -419,13 +475,15 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
     \{-2\le x\le2,-1\le y\le1\}.
   \]
 
-  \item\label{exer:2.5.25} \CGex Plot a direction field and some integral curves for the exact equation
+  \item\label{exer:2.5.25} \CGex Plot a direction field and some integral curves for the exact
+        equation
   \[
     (x^{3}y^{4}+x)\,dx+(x^{4}y^{3}+y)\,dy=0
   \]
   on the rectangle $\{-1\le x\le1,-1\le y\le1\}$. (See Exercise~\ref{exer:2.5.37}\part{a}).
 
-  \item\label{exer:2.5.26} \CGex Plot a direction field and some integral curves for the exact equation
+  \item\label{exer:2.5.26} \CGex Plot a direction field and some integral curves for the exact
+        equation
   \[
     (3x^{2}+2y)\,dx+(2y+2x)\,dy=0
   \]
@@ -441,14 +499,16 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
     implicitly.
 
     \item % (b)
-    For what choices of $(x_{0},y_{0})$ does Theorem~\ref{thmtype:2.3.1} imply that the initial value problem
+    For what choices of $(x_{0},y_{0})$ does Theorem~\ref{thmtype:2.3.1} imply that the initial
+    value problem
     \[
       (x^{3}y^{4}+2x)\,dx+(x^{4}y^{3}+3y)\,dy=0,\quad y(x_{0})=y_{0}, \eqno{\rm(B)}
     \]
     has a unique solution on an open interval $(a,b)$ that contains $x_{0}$?
 
     \item % (b)
-    Plot a direction field and some integral curves for (A) on a rectangular region centered at the origin. What is the interval of validity of the solution of (B)?
+    Plot a direction field and some integral curves for (A) on a rectangular region centered at the
+    origin. What is the interval of validity of the solution of (B)?
   \end{alist}
 
   \item\label{exer:2.5.28} \Lex
@@ -461,14 +521,18 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
     implicitly.
 
     \item % (b)
-    For what choices of $(x_{0},y_{0})$ does Theorem~\ref{thmtype:2.3.1} imply that the initial value problem
+    For what choices of $(x_{0},y_{0})$ does Theorem~\ref{thmtype:2.3.1} imply that the initial
+    value problem
     \[
       (x^{2}+y^{2})\,dx+2xy\,dy=0,\quad y(x_{0})=y_{0}, \eqno{\rm(B)}
     \]
     has a unique solution $y=y(x)$ on some open interval $(a,b)$ that contains $x_{0}$?
 
     \item % (c)
-    Plot a direction field and some integral curves for (A). From the plot determine, the interval $(a,b)$ of \part{b}, the monotonicity properties (if any) of the solution of (B), and $\lim_{x\to a+}y(x)$ and $\lim_{x\to b-}y(x)$. \hint{Your answers will depend upon which quadrant contains $(x_{0},y_{0})$.}
+    Plot a direction field and some integral curves for (A). From the plot determine, the interval
+    $(a,b)$ of \part{b}, the monotonicity properties (if any) of the solution of (B), and
+    $\lim_{x\to a+}y(x)$ and $\lim_{x\to b-}y(x)$. \hint{Your answers will depend upon which
+    quadrant contains $(x_{0},y_{0})$.}
   \end{alist}
 
   \item\label{exer:2.5.29} Find all functions $M$ such that the equation is exact.
@@ -495,7 +559,8 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
     $(x\sin x+y\sin y)\,dx+N(x,y)\,dy=0$
   \end{alist}
 
-  \item\label{exer:2.5.31} Suppose $M$, $N$, and their partial derivatives are continuous on an open rectangle $R$, and $G$ is an antiderivative of $M$ with respect to $x$; that is,
+  \item\label{exer:2.5.31} Suppose $M$, $N$, and their partial derivatives are continuous on an open
+        rectangle $R$, and $G$ is an antiderivative of $M$ with respect to $x$; that is,
   \[
     \frac{\partial G}{\partial x}=M.
   \]
@@ -505,24 +570,29 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
   \]
   is not independent of $x$.
 
-  \item\label{exer:2.5.32} Prove: If the equations $M_{1}\,dx+N_{1}\,dy=0$ and $M_{2}\, dx+N_{2}\,dy=0$ are exact on an open rectangle $R$, so is the equation
+  \item\label{exer:2.5.32} Prove: If the equations $M_{1}\,dx+N_{1}\,dy=0$ and
+        $M_{2}\, dx+N_{2}\,dy=0$ are exact on an open rectangle $R$, so is the equation
   \[
     (M_{1}+M_{2})\,dx+(N_{1}+N_{2})\,dy=0.
   \]
 
-  \item\label{exer:2.5.33} Find conditions on the constants $A$, $B$, $C$, and $D$ such that the equation
+  \item\label{exer:2.5.33} Find conditions on the constants $A$, $B$, $C$, and $D$ such that the
+        equation
   \[
     (Ax+By)\,dx+(Cx+Dy)\,dy=0
   \]
   is exact.
 
-  \item\label{exer:2.5.34} Find conditions on the constants $A$, $B$, $C$, $D$, $E$, and $F$ such that the equation
+  \item\label{exer:2.5.34} Find conditions on the constants $A$, $B$, $C$, $D$, $E$, and $F$ such
+        that the equation
   \[
     (Ax^{2}+Bxy+Cy^{2})\,dx+(Dx^{2}+Exy+Fy^{2})\,dy=0
   \]
   is exact.
 
-  \item\label{exer:2.5.35} Suppose $M$ and $N$ are continuous and have continuous partial derivatives $M_{y}$ and $N_{x}$ that satisfy the exactness condition $M_{y}=N_{x}$ on an open rectangle $R$. Show that if $(x,y)$ is in $R$ and
+  \item\label{exer:2.5.35} Suppose $M$ and $N$ are continuous and have continuous partial
+        derivatives $M_{y}$ and $N_{x}$ that satisfy the exactness condition $M_{y}=N_{x}$ on an
+        open rectangle $R$. Show that if $(x,y)$ is in $R$ and
   \[
     F(x,y)=\int^{x}_{x_{0}}M(s,y_{0})\,ds+\int^{y}_{y_{0}}N(x,t)\,dt,
   \]
@@ -533,7 +603,8 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
     F(x,y)=\int^{y}_{y_{0}}N(x_{0},s)\,ds+\int^{x}_{x_{0}}M(t,y)\,dt.
   \]
 
-  \item\label{exer:2.5.37} Use the method suggested by Exercise~\ref{exer:2.5.35}, with $(x_{0},y_{0})=(0,0)$, to solve the these exact equations:
+  \item\label{exer:2.5.37} Use the method suggested by Exercise~\ref{exer:2.5.35}, with
+        $(x_{0},y_{0})=(0,0)$, to solve the these exact equations:
   \begin{alist}
     \item % (a)
     $(x^{3}y^{4}+x)\,dx+(x^{4}y^{3}+y)\,dy=0$
@@ -568,13 +639,22 @@ This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the
   \[
     M(x,y)\,dx+N(x,y)\,dy=0. \eqno{\rm(B)}
   \]
-  Show that applying the method of this section to (B) yields the same solutions that would be obtained by applying the method of separation of variables to~(A)
+  Show that applying the method of this section to (B) yields the same solutions that would be
+  obtained by applying the method of separation of variables to~(A)
 
-  \item\label{exer:2.5.42} Suppose all second partial derivatives of $M=M(x,y)$ and $N=N(x,y)$ are continuous and $M\,dx+N\,dy=0$ and $-N\,dx+M\,dy=0$ are exact on an open rectangle $R$. Show that $M_{xx}+M_{yy}=N_{xx}+N_{yy}=0$ on $R$.
+  \item\label{exer:2.5.42} Suppose all second partial derivatives of $M=M(x,y)$ and $N=N(x,y)$ are
+        continuous and $M\,dx+N\,dy=0$ and $-N\,dx+M\,dy=0$ are exact on an open rectangle $R$. Show
+        that $M_{xx}+M_{yy}=N_{xx}+N_{yy}=0$ on $R$.
 
-  \item\label{exer:2.5.43} Suppose all second partial derivatives of $F=F(x,y)$ are continuous and $F_{xx}+F_{yy}=0$ on an open rectangle $R$. (A function with these properties is said to be {\color{blue}\it harmonic\/}; see also Exercise~\ref{exer:2.5.42}.) Show that $-F_{y}\,dx+F_{x}\,dy=0$ is exact on $R$, and therefore there's a function $G$ such that $G_{x}=-F_{y}$ and $G_{y}=F_{x}$ in $R$. (A function $G$ with this property is said to be a {\color{blue}\it harmonic conjugate\/} of $F$.)
+  \item\label{exer:2.5.43} Suppose all second partial derivatives of $F=F(x,y)$ are continuous and
+        $F_{xx}+F_{yy}=0$ on an open rectangle $R$. (A function with these properties is said to be
+        {\color{blue}\it harmonic\/}; see also Exercise~\ref{exer:2.5.42}.) Show that
+        $-F_{y}\,dx+F_{x}\,dy=0$ is exact on $R$, and therefore there's a function $G$ such that
+        $G_{x}=-F_{y}$ and $G_{y}=F_{x}$ in $R$. (A function $G$ with this property is said to be a
+        {\color{blue}\it harmonic conjugate\/} of $F$.)
 
-  \item\label{exer:2.5.44} Verify that the following functions are harmonic, and find all their harmonic conjugates. (See Exercise~\ref{exer:2.5.43}.)
+  \item\label{exer:2.5.44} Verify that the following functions are harmonic, and find all their
+        harmonic conjugates. (See Exercise~\ref{exer:2.5.43}.)
 
   \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}p{112pt}}
     {\bf (a)}\  $x^{2}-y^{2}$   & {\bf (b)}\  $e^{x}\cos y$   & {\bf (c)}\  $x^{3}-3xy^{2}$ \\

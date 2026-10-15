@@ -5,17 +5,25 @@ We'll now consider initial value problems of the form
 \begin{equation}
   \label{eq:8.5.1}ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1},
 \end{equation}
-where $a$, $b$, and $c$ are constants ($a\ne0$) and $f$ is piecewise continuous on $[0,\infty)$. Problems of this kind occur in situations where the input to a physical system undergoes instantaneous changes, as when a switch is turned on or off or the forces acting on the system change abruptly.
+where $a$, $b$, and $c$ are constants ($a\ne0$) and $f$ is piecewise continuous on $[0,\infty)$.
+Problems of this kind occur in situations where the input to a physical system undergoes
+instantaneous changes, as when a switch is turned on or off or the forces acting on the system
+change abruptly.
 
-It can be shown (Exercises~\ref{exer:8.5.23} and \ref{exer:8.5.24}) that the differential equation in \eqref{eq:8.5.1} has no solutions on an open interval that contains a jump discontinuity of $f$. Therefore we must define what we mean by a solution of \eqref{eq:8.5.1} on $[0,\infty)$ in the case where $f$ has jump discontinuities. The next theorem motivates our definition. We omit the proof.
+It can be shown (Exercises~\ref{exer:8.5.23} and \ref{exer:8.5.24}) that the differential equation
+in \eqref{eq:8.5.1} has no solutions on an open interval that contains a jump discontinuity of $f$.
+Therefore we must define what we mean by a solution of \eqref{eq:8.5.1} on $[0,\infty)$ in the case
+where $f$ has jump discontinuities. The next theorem motivates our definition. We omit the proof.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:8.5.1} Suppose $a$, $b$, and $c$ are constants $(a\ne0)$, and $f$ is piecewise continuous on $[0,\infty)$. with jump discontinuities at $t_{1}$, \dots, $t_{n}$, where
+  \label{thmtype:8.5.1} Suppose $a$, $b$, and $c$ are constants $(a\ne0)$, and $f$ is piecewise
+  continuous on $[0,\infty)$. with jump discontinuities at $t_{1}$, \dots, $t_{n}$, where
   \[
     0<t_{1}<\cdots<t_{n}.
   \]
-  Let $k_{0}$ and $k_{1}$ be arbitrary real numbers. Then there is a unique function $y$ defined on $[0,\infty)$ with these properties:
+  Let $k_{0}$ and $k_{1}$ be arbitrary real numbers. Then there is a unique function $y$ defined on
+  $[0,\infty)$ with these properties:
   \begin{alist}
     \item % (a)
     $y(0)=k_{0}$ and $y'(0)=k_{1}$.
@@ -24,7 +32,8 @@ It can be shown (Exercises~\ref{exer:8.5.23} and \ref{exer:8.5.24}) that the dif
     $y$ and $y'$ are continuous on $[0,\infty)$.
 
     \item % (c)
-    $y''$ is defined on every open subinterval of $[0,\infty)$ that does not contain any of the points $t_{1}$, \dots, $t_{n}$, and
+    $y''$ is defined on every open subinterval of $[0,\infty)$ that does not contain any of the
+    points $t_{1}$, \dots, $t_{n}$, and
     \[
       ay''+by'+cy=f(t)
     \]
@@ -35,7 +44,8 @@ It can be shown (Exercises~\ref{exer:8.5.23} and \ref{exer:8.5.24}) that the dif
   \end{alist}
 \end{theorem}
 
-We define the function $y$ of Theorem~\ref{thmtype:8.5.1} to be the solution of the initial value problem \eqref{eq:8.5.1}.
+We define the function $y$ of Theorem~\ref{thmtype:8.5.1} to be the solution of the initial value
+problem \eqref{eq:8.5.1}.
 
 We begin by considering initial value problems of the form
 \begin{equation}
@@ -71,7 +81,8 @@ We can solve \eqref{eq:8.5.2} by the these steps:
     \]
 \end{description}
 
-It is shown in Exercise~\ref{exer:8.5.23} that $y'$ exists and is continuous at $t_{1}$. The next example illustrates this procedure.
+It is shown in Exercise~\ref{exer:8.5.23} that $y'$ exists and is continuous at $t_{1}$. The next
+example illustrates this procedure.
 
 \begin{example}
   \label{example:8.5.1}\rm Solve the initial value problem
@@ -126,7 +137,8 @@ If $f_{0}$ and $f_{1}$ are defined on $[0,\infty)$, we can rewrite \eqref{eq:8.5
 \[
   ay''+by'+cy=f_{0}(t)+u(t-t_{1})\left(f_{1}(t)-f_{0}(t)\right),\quad y(0)=k_{0},\quad y'(0)=k_{1},
 \]
-and apply the method of Laplace transforms. We'll now solve the problem considered in Example~\ref{example:8.5.1} by this method.
+and apply the method of Laplace transforms. We'll now solve the problem considered in
+Example~\ref{example:8.5.1} by this method.
 
 \begin{example}
   \label{example:8.5.2}\rm \space Use the Laplace transform to solve the initial value problem
@@ -175,7 +187,8 @@ or
 \[
   (A+B)s^{2}+Cs+A=1.
 \]
-Equating coefficients of like powers of $s$ on the two sides of this equation shows that $A=1$, $B=-A=-1$ and $C=0$. Hence, from \eqref{eq:8.5.7},
+Equating coefficients of like powers of $s$ on the two sides of this equation shows that $A=1$,
+$B=-A=-1$ and $C=0$. Hence, from \eqref{eq:8.5.7},
 \[
   G(s)=\frac{1}{s}-\frac{s}{s^{2}+1}.
 \]
@@ -203,7 +216,12 @@ which is the result obtained in Example~\ref{example:8.5.1}.
 
 \medskip
 \color{blue}
-\remark{It isn't obvious that using the Laplace transform to solve \eqref{eq:8.5.2} as we did in Example~\ref{example:8.5.2} yields a function $y$ with the properties stated in Theorem~\ref{thmtype:8.5.1}; that is, such that $y$ and $y'$ are continuous on $[0,\infty)$ and $y''$ has limits from the right and left at $t_{1}$. However, this is true if $f_{0}$ and $f_{1}$ are continuous and of exponential order on $[0,\infty)$. A proof is sketched in Exercises~8.6.~\hspace*{-3pt}\ref{exer:8.6.11}--8.6.\hspace*{-3pt}\ref{exer:8.6.13}.}
+\remark{It isn't obvious that using the Laplace transform to solve \eqref{eq:8.5.2} as we did in
+Example~\ref{example:8.5.2} yields a function $y$ with the properties stated in
+Theorem~\ref{thmtype:8.5.1}; that is, such that $y$ and $y'$ are continuous on $[0,\infty)$ and
+$y''$ has limits from the right and left at $t_{1}$. However, this is true if $f_{0}$ and $f_{1}$
+are continuous and of exponential order on $[0,\infty)$. A proof is sketched in
+Exercises~8.6.~\hspace*{-3pt}\ref{exer:8.6.11}--8.6.\hspace*{-3pt}\ref{exer:8.6.13}.}
 \color{black}
 
 \begin{example}
@@ -259,7 +277,8 @@ or
 \begin{equation}
   \label{eq:8.5.11}y=3\sinh t-\cosh t-t-u(t-1)\left(\sinh(t-1)-t+1\right)
 \end{equation}
-We leave it to you to verify that $y$ and $y'$ are continuous and $y''$ has limits from the right and left at $t_{1}=1$.
+We leave it to you to verify that $y$ and $y'$ are continuous and $y''$ has limits from the right
+and left at $t_{1}=1$.
 
 \begin{example}
   \label{example:8.5.4}\rm Solve the initial value problem
@@ -339,7 +358,8 @@ or
     -\dst{\frac{\sqrt{2}}{3}}\sin t+ \dst{\frac{1+\sqrt{2}}{3}}\cos t, & t\ge\pi.
   \end{array}\right.
 \end{equation}
-We leave it to you to verify that $y$ and $y'$ are continuous and $y''$ has limits from the right and left at $t_{1}=\pi/4$ and $t_{2}=\pi$ (Figure~\ref{figure:8.5.2}).
+We leave it to you to verify that $y$ and $y'$ are continuous and $y''$ has limits from the right
+and left at $t_{1}=\pi/4$ and $t_{2}=\pi$ (Figure~\ref{figure:8.5.2}).
 
 \begin{figure}[tbp]
   \centering
@@ -403,7 +423,8 @@ In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace transform to so
     f(t)=m+1,\quad m\le t<m+1,\quad m=0,1,2,\dots.
   \]
 
-  \item\label{exer:8.5.22} Solve the given initial value problem and find a formula that does not involve step functions and represents $y$ on each interval of continuity of $f$.
+  \item\label{exer:8.5.22} Solve the given initial value problem and find a formula that does not
+        involve step functions and represents $y$ on each interval of continuity of $f$.
   \begin{alist}
     \item % (a)
     $y''+y=f(t),\quad y(0)=0,\quad y'(0)=0$;
@@ -448,7 +469,9 @@ In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace transform to so
   \item\label{exer:8.5.23}
   \begin{alist}
     \item % (a)
-    Let $g$ be continuous on $(\alpha,\beta)$ and differentiable on the $(\alpha,t_{0})$ and $(t_{0},\beta)$. Suppose $A=\lim_{t\to t_{0}-}g'(t)$ and $B=\lim_{t\to t_{0}+}g'(t)$ both exist. Use the mean value theorem to show that
+    Let $g$ be continuous on $(\alpha,\beta)$ and differentiable on the $(\alpha,t_{0})$ and
+    $(t_{0},\beta)$. Suppose $A=\lim_{t\to t_{0}-}g'(t)$ and $B=\lim_{t\to t_{0}+}g'(t)$ both exist.
+    Use the mean value theorem to show that
     \[
       \lim_{t\to t_{0}-}\frac{g(t)-g(t_{0})}{t-t_{0}}=A\quad\mbox{ and }\quad \lim_{t\to t_{0}+}\frac{g(t)-g(t_{0})}{t-t_{0}}=B.
     \]
@@ -457,13 +480,17 @@ In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace transform to so
     Conclude from \part{a} that $g'(t_{0})$ exists and $g'$ is continuous at $t_{0}$ if $A=B$.
 
     \item % (c)
-    Conclude from \part{a} that if $g$ is differentiable on $(\alpha,\beta)$ then $g'$ can't have a jump discontinuity on $(\alpha,\beta)$.
+    Conclude from \part{a} that if $g$ is differentiable on $(\alpha,\beta)$ then $g'$ can't have a
+    jump discontinuity on $(\alpha,\beta)$.
   \end{alist}
 
   \item\label{exer:8.5.24}
   \begin{alist}
     \item % (a)
-    Let $a$, $b$, and $c$ be constants, with $a\ne0$. Let $f$ be piecewise continuous on an interval $(\alpha,\beta)$, with a single jump discontinuity at a point $t_{0}$ in $(\alpha,\beta)$. Suppose $y$ and $y'$ are continuous on $(\alpha,\beta)$ and $y''$ on $(\alpha,t_{0})$ and $(t_{0},\beta)$. Suppose also that
+    Let $a$, $b$, and $c$ be constants, with $a\ne0$. Let $f$ be piecewise continuous on an interval
+    $(\alpha,\beta)$, with a single jump discontinuity at a point $t_{0}$ in $(\alpha,\beta)$.
+    Suppose $y$ and $y'$ are continuous on $(\alpha,\beta)$ and $y''$ on $(\alpha,t_{0})$ and
+    $(t_{0},\beta)$. Suppose also that
     \[
       ay''+by'+cy=f(t) \eqno{\rm(A)}
     \]
@@ -473,16 +500,21 @@ In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace transform to so
     \]
 
     \item % (b)
-    Use \part{a} and Exercise~\ref{exer:8.5.23}\part{c} to show that (A) does not have solutions on any interval $(\alpha,\beta)$ that contains a jump discontinuity of $f$.
+    Use \part{a} and Exercise~\ref{exer:8.5.23}\part{c} to show that (A) does not have solutions on
+    any interval $(\alpha,\beta)$ that contains a jump discontinuity of $f$.
   \end{alist}
 
-  \item\label{exer:8.5.25} Suppose $P_{0}$, $P_{1}$, and $P_{2}$ are continuous and $P_{0}$ has no zeros on an open interval $(a,b)$, and that $F$ has a jump discontinuity at a point $t_{0}$ in $(a,b)$. Show that the differential equation
+  \item\label{exer:8.5.25} Suppose $P_{0}$, $P_{1}$, and $P_{2}$ are continuous and $P_{0}$ has no
+        zeros on an open interval $(a,b)$, and that $F$ has a jump discontinuity at a point $t_{0}$
+        in $(a,b)$. Show that the differential equation
   \[
     P_{0}(t)y''+P_{1}(t)y'+P_{2}(t)y=F(t)
   \]
-  has no solutions on $(a,b)$.\hint{Generalize the result of Exercise~\ref{exer:8.5.24} and use Exercise~\ref{exer:8.5.23}\part{c}.}
+  has no solutions on $(a,b)$.\hint{Generalize the result of Exercise~\ref{exer:8.5.24} and use
+  Exercise~\ref{exer:8.5.23}\part{c}.}
 
-  \item\label{exer:8.5.26} Let $0=t_{0}<t_{1}<\cdots<t_{n}$. Suppose $f_{m}$ is continuous on $[t_{m},\infty)$ for $m=1,\dots,n$. Let
+  \item\label{exer:8.5.26} Let $0=t_{0}<t_{1}<\cdots<t_{n}$. Suppose $f_{m}$ is continuous on
+        $[t_{m},\infty)$ for $m=1,\dots,n$. Let
   \[
     f(t)= \left\{
     \begin{array}{cl}

@@ -1,29 +1,51 @@
 \section{Basic Theory of Homogeneous Linear Systems}
 
 \noindent
-In this section we consider homogeneous linear systems ${\bf y}'= A(t){\bf y}$, where $A=A(t)$ is a continuous $n\times n$ matrix function on an interval $(a,b)$. The theory of linear homogeneous systems has much in common with the theory of linear homogeneous scalar equations, which we considered in Sections~2.1, 5.1, and 9.1.
+In this section we consider homogeneous linear systems ${\bf y}'= A(t){\bf y}$, where $A=A(t)$ is a
+continuous $n\times n$ matrix function on an interval $(a,b)$. The theory of linear homogeneous
+systems has much in common with the theory of linear homogeneous scalar equations, which we
+considered in Sections~2.1, 5.1, and 9.1.
 
-Whenever we refer to solutions of ${\bf y}'=A(t){\bf y}$ we'll mean solutions on $(a,b)$. Since ${\bf y}\equiv{\bf0}$ is obviously a solution of ${\bf y}'=A(t){\bf y}$, we call it the {\color{blue}\it trivial\/} solution. Any other solution is {\color{blue}\it nontrivial\/}.
+Whenever we refer to solutions of ${\bf y}'=A(t){\bf y}$ we'll mean solutions on $(a,b)$. Since
+${\bf y}\equiv{\bf0}$ is obviously a solution of ${\bf y}'=A(t){\bf y}$, we call it the
+{\color{blue}\it trivial\/} solution. Any other solution is {\color{blue}\it nontrivial\/}.
 
-If ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ are vector functions defined on an interval $(a,b)$ and $c_{1}$, $c_{2}$, \dots, $c_{n}$ are constants, then
+If ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ are vector functions defined on an interval
+$(a,b)$ and $c_{1}$, $c_{2}$, \dots, $c_{n}$ are constants, then
 \begin{equation}
   \label{eq:10.3.1}{\bf y}=c_{1}{\bf y}_{1}+c_{2}{\bf y}_{2}+\cdots+c_{n}{\bf y}_{n}
 \end{equation}
-is a {\color{blue}\it linear combination of\/} ${\bf y}_{1}$, ${\bf y}_{2}$, \ldots,${\bf y}_{n}$. It's easy show that if ${\bf y}_{1}$, ${\bf y}_{2}$, \dots,${\bf y}_{n}$ are solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$, then so is any linear combination of ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ (Exercise~\ref{exer:10.3.1}). We say that $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is a {\color{blue}\it fundamental set of solutions of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$ on if every solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$ can be written as a linear combination of ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$, as in \eqref{eq:10.3.1}. In this case we say that \eqref{eq:10.3.1} is the {\color{blue}\it general solution of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$.
+is a {\color{blue}\it linear combination of\/} ${\bf y}_{1}$, ${\bf y}_{2}$, \ldots,${\bf y}_{n}$.
+It's easy show that if ${\bf y}_{1}$, ${\bf y}_{2}$, \dots,${\bf y}_{n}$ are solutions of
+${\bf y}'=A(t){\bf y}$ on $(a,b)$, then so is any linear combination of ${\bf y}_{1}$,
+${\bf y}_{2}$, \dots, ${\bf y}_{n}$ (Exercise~\ref{exer:10.3.1}). We say that
+$\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is a {\color{blue}\it fundamental set of solutions
+of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$ on if every solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$
+can be written as a linear combination of ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$, as in
+\eqref{eq:10.3.1}. In this case we say that \eqref{eq:10.3.1} is the {\color{blue}\it general
+solution of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$.
 
-It can be shown that if $A$ is continuous on $(a,b)$ then ${\bf y}'=A(t){\bf y}$ has infinitely many fundamental sets of solutions on $(a,b)$ (Exercises~\ref{exer:10.3.15} and \ref{exer:10.3.16}). The next definition will help to characterize fundamental sets of solutions of ${\bf y}'=A(t){\bf y}$.
+It can be shown that if $A$ is continuous on $(a,b)$ then ${\bf y}'=A(t){\bf y}$ has infinitely many
+fundamental sets of solutions on $(a,b)$ (Exercises~\ref{exer:10.3.15} and \ref{exer:10.3.16}). The
+next definition will help to characterize fundamental sets of solutions of ${\bf y}'=A(t){\bf y}$.
 
-We say that a set $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ of $n$-vector functions is {\color{blue}\it linearly independent\/} on $(a,b)$ if the only constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ such that
+We say that a set $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ of $n$-vector functions is
+{\color{blue}\it linearly independent\/} on $(a,b)$ if the only constants $c_{1}$, $c_{2}$, \dots,
+$c_{n}$ such that
 \begin{equation}
   \label{eq:10.3.2}c_{1}{\bf y}_{1}(t)+c_{2}{\bf y}_{2}(t)+\cdots+c_{n}{\bf y}_{n}(t)=0,\quad a<t<b,
 \end{equation}
-are $c_{1}=c_{2}=\cdots=c_{n}=0$. If \eqref{eq:10.3.2} holds for some set of constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ that are not all zero, then $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is {\color{blue}\it linearly dependent\/} on $(a,b)$
+are $c_{1}=c_{2}=\cdots=c_{n}=0$. If \eqref{eq:10.3.2} holds for some set of constants $c_{1}$,
+$c_{2}$, \dots, $c_{n}$ that are not all zero, then $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$
+is {\color{blue}\it linearly dependent\/} on $(a,b)$
 
 The next theorem is analogous to Theorems~\ref{thmtype:5.1.3} and \ref{thmtype:9.1.2}.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:10.3.1} Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$. Then a set $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ of $n$ solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$ is a fundamental set if and only if it's linearly independent on $(a,b)$.
+  \label{thmtype:10.3.1} Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$. Then a
+  set $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ of $n$ solutions of ${\bf y}'=A(t){\bf y}$ on
+  $(a,b)$ is a fundamental set if and only if it's linearly independent on $(a,b)$.
 \end{theorem}
 
 \begin{example}
@@ -115,7 +137,12 @@ Expanding the determinant of this system in cofactors of the entries of the firs
 \end{eqnarray*}
 Since this determinant is never zero, $c_{1}=c_{2}=c_{3}=0$. \bbox
 
-We can use the method in Example~\ref{example:10.3.1} to test $n$ solutions $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ of any $n\times n$ system ${\bf y}'=A(t){\bf y}$ for linear independence on an interval $(a,b)$ on which $A$ is continuous. To explain this (and for other purposes later), it's useful to write a linear combination of ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ in a different way. We first write the vector functions in terms of their components as
+We can use the method in Example~\ref{example:10.3.1} to test $n$ solutions
+$\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ of any $n\times n$ system ${\bf y}'=A(t){\bf y}$ for
+linear independence on an interval $(a,b)$ on which $A$ is continuous. To explain this (and for
+other purposes later), it's useful to write a linear combination of ${\bf y}_{1}$, ${\bf y}_{2}$,
+\dots, ${\bf y}_{n}$ in a different way. We first write the vector functions in terms of their
+components as
 \[
   {\bf y}_{1}=\left[
   \begin{array}{c}
@@ -215,11 +242,18 @@ The determinant of $Y$,
 is called the
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Wronski/}{\color{blue}
 \it Wronskian\/}
-of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$. It can be shown (Exercises~\ref{exer:10.3.2} and \ref{exer:10.3.3}) that this definition is analogous to definitions of the Wronskian of scalar functions given in Sections~5.1 and 9.1. The next theorem is analogous to Theorems~\ref{thmtype:5.1.4} and \ref{thmtype:9.1.3}. The proof is sketched in Exercise~\ref{exer:10.3.4} for $n=2$ and in Exercise~\ref{exer:10.3.5} for general~$n$.
+of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$. It can be shown (Exercises~\ref{exer:10.3.2} and
+\ref{exer:10.3.3}) that this definition is analogous to definitions of the Wronskian of scalar
+functions given in Sections~5.1 and 9.1. The next theorem is analogous to
+Theorems~\ref{thmtype:5.1.4} and \ref{thmtype:9.1.3}. The proof is sketched in
+Exercise~\ref{exer:10.3.4} for $n=2$ and in Exercise~\ref{exer:10.3.5} for general~$n$.
 
 \begin{theorem}
   \color{blue}
-  $[$Abel's Formula$]$ \label{thmtype:10.3.2} Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$, let ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ be solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$, and let $t_{0}$ be in $(a,b)$. Then the Wronskian of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is given by
+  $[$Abel's Formula$]$ \label{thmtype:10.3.2} Suppose the $n\times n$ matrix $A=A(t)$ is continuous
+  on $(a,b)$, let ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ be solutions of
+  ${\bf y}'=A(t){\bf y}$ on $(a,b)$, and let $t_{0}$ be in $(a,b)$. Then the Wronskian of
+  $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is given by
   \begin{equation}
     \label{eq:10.3.6}W(t)=W(t_{0})\exp\left( \int^{t}_{t_{0}}\big[a_{11}(s)+a_{22}(s)+\cdots+a_{nn}(s)]\, ds\right),\quad a<t<b.
   \end{equation}
@@ -227,33 +261,48 @@ of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$. It can be shown (Exercises~\
 \end{theorem}
 
 \color{blue}
-\remark{ The sum of the diagonal entries of a square matrix $A$ is called the {\color{blue}\it trace\/} of $A$, denoted by tr$(A)$. Thus, for an $n\times n$ matrix $A$, \[\mbox{tr}(A)=a_{11}+a_{22}+\cdots+a_{nn},\] and \eqref{eq:10.3.6} can be written as \[W(t)=W(t_{0})\exp\left( \int^{t}_{t_{0}}\mbox{tr}(A(s))\, ds\right),\quad a<t<b.\]}
+\remark{ The sum of the diagonal entries of a square matrix $A$ is called the {\color{blue}\it
+trace\/} of $A$, denoted by tr$(A)$. Thus, for an $n\times n$ matrix
+$A$, \[\mbox{tr}(A)=a_{11}+a_{22}+\cdots+a_{nn},\] and \eqref{eq:10.3.6} can be written
+as \[W(t)=W(t_{0})\exp\left( \int^{t}_{t_{0}}\mbox{tr}(A(s))\, ds\right),\quad a<t<b.\]}
 \color{black}
 
 The next theorem is analogous to Theorems~\ref{thmtype:5.1.6} and \ref{thmtype:9.1.4}.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:10.3.3} Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$ and let ${\bf y}_{1}$, ${\bf y}_{2}$, \dots,${\bf y}_{n}$ be solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$. Then the following statements are equivalent; that is, they are either all true or all false:
+  \label{thmtype:10.3.3} Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$ and let
+  ${\bf y}_{1}$, ${\bf y}_{2}$, \dots,${\bf y}_{n}$ be solutions of ${\bf y}'=A(t){\bf y}$ on
+  $(a,b)$. Then the following statements are equivalent; that is, they are either all true or all
+  false:
   \begin{alist}
     \item % (a)
-    The general solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$ is ${\bf y}=c_{1}{\bf y}_{1}+c_{2}{\bf y}_{2}+\cdots+c_{n}{\bf y}_{n}$, where $c_{1}$, $c_{2}$, \dots, $c_{n}$ are arbitrary constants.
+    The general solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$ is
+    ${\bf y}=c_{1}{\bf y}_{1}+c_{2}{\bf y}_{2}+\cdots+c_{n}{\bf y}_{n}$, where $c_{1}$, $c_{2}$,
+    \dots, $c_{n}$ are arbitrary constants.
 
     \item % (b)
-    $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is a fundamental set of solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
+    $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is a fundamental set of solutions of
+    ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
 
     \item % (c)
     $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is linearly independent on $(a,b)$.
 
     \item % (d)
-    The Wronskian of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is nonzero at some point in $(a,b)$.
+    The Wronskian of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is nonzero at some point in
+    $(a,b)$.
 
     \item % (e)
-    The Wronskian of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is nonzero at all points in $(a,b)$.
+    The Wronskian of $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is nonzero at all points in
+    $(a,b)$.
   \end{alist}
 \end{theorem}
 
-We say that $Y$ in \eqref{eq:10.3.4} is a {\color{blue}\it fundamental matrix\/} for ${\bf y}'=A(t){\bf y}$ if any (and therefore all) of the statements ({\bf a})-({\bf e}) of Theorem~\ref{thmtype:10.3.2} are true for the columns of $Y$. In this case, \eqref{eq:10.3.3} implies that the general solution of ${\bf y}'=A(t){\bf y}$ can be written as ${\bf y}=Y{\bf c}$, where ${\bf c}$ is an arbitrary constant $n$-vector.
+We say that $Y$ in \eqref{eq:10.3.4} is a {\color{blue}\it fundamental matrix\/} for
+${\bf y}'=A(t){\bf y}$ if any (and therefore all) of the statements ({\bf a})-({\bf e}) of
+Theorem~\ref{thmtype:10.3.2} are true for the columns of $Y$. In this case, \eqref{eq:10.3.3}
+implies that the general solution of ${\bf y}'=A(t){\bf y}$ can be written as ${\bf y}=Y{\bf c}$,
+where ${\bf c}$ is an arbitrary constant $n$-vector.
 
 \begin{example}
   \label{example:10.3.2} \rm The vector functions
@@ -267,7 +316,8 @@ We say that $Y$ in \eqref{eq:10.3.4} is a {\color{blue}\it fundamental matrix\/}
   on $(-\infty,\infty)$. (Verify.)
   \begin{alist}
     \item % (a)
-    Compute the Wronskian of $\{{\bf y}_{1},{\bf y}_{2}\}$ directly from the definition \eqref{eq:10.3.5}
+    Compute the Wronskian of $\{{\bf y}_{1},{\bf y}_{2}\}$ directly from the definition
+    \eqref{eq:10.3.5}
 
     \item % (b)
     Verify Abel's formula \eqref{eq:10.3.6} for the Wronskian of $\{{\bf y}_{1},{\bf y}_{2}\}$.
@@ -310,7 +360,8 @@ so tr$(A)=-4+5=1$. If $t_{0}$ is an arbitrary real number then \eqref{eq:10.3.6}
 \]
 which is consistent with \eqref{eq:10.3.9}.
 
-\solutionpart{c} Since $W(t)\ne0$, Theorem~\ref{thmtype:10.3.3} implies that $\{{\bf y}_{1},{\bf y}_{2}\}$ is a fundamental set of solutions of \eqref{eq:10.3.7} and
+\solutionpart{c} Since $W(t)\ne0$, Theorem~\ref{thmtype:10.3.3} implies that
+$\{{\bf y}_{1},{\bf y}_{2}\}$ is a fundamental set of solutions of \eqref{eq:10.3.7} and
 \[
   Y=\left[
   \begin{array}{cc}
@@ -318,7 +369,8 @@ which is consistent with \eqref{eq:10.3.9}.
     2e^{2t} & \hfill e^{-t}
   \end{array}\right]
 \]
-is a fundamental matrix for \eqref{eq:10.3.7}. Therefore the general solution of \eqref{eq:10.3.7} is
+is a fundamental matrix for \eqref{eq:10.3.7}. Therefore the general solution of \eqref{eq:10.3.7}
+is
 \begin{equation}
   \label{eq:10.3.10}{\bf y}=c_{1}{\bf y}_{1}+c_{2}{\bf y}_{2}= c_{1}\twocol{-e^{2t}}{2e^{2t}}+c_{2}\twocol{-e^{-t}}{e^{-t}}=\left[
   \begin{array}{cc}
@@ -331,7 +383,8 @@ is a fundamental matrix for \eqref{eq:10.3.7}. Therefore the general solution of
   \end{array}\right].
 \end{equation}
 
-\solutionpart{d} Setting $t=0$ in \eqref{eq:10.3.10} and imposing the initial condition in \eqref{eq:10.3.8} yields
+\solutionpart{d} Setting $t=0$ in \eqref{eq:10.3.10} and imposing the initial condition in
+\eqref{eq:10.3.8} yields
 \[
   c_{1}\left[
   \begin{array}{r}
@@ -352,7 +405,8 @@ Thus,
   -c_{1}-c_{2} & = & \phantom{-}4 \\
   2c_{1}+c_{2} & = & -5.
 \end{eqnarray*}
-The solution of this system is $c_{1}=-1$, $c_{2}=-3$. Substituting these values into \eqref{eq:10.3.10} yields
+The solution of this system is $c_{1}=-1$, $c_{2}=-3$. Substituting these values into
+\eqref{eq:10.3.10} yields
 \[
   {\bf y}=-\left[
   \begin{array}{c}
@@ -375,9 +429,13 @@ as the solution of \eqref{eq:10.3.8}.
 \exercises
 
 \begin{exerciselist}
-  \item\label{exer:10.3.1} Prove: If ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ are solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$, then any linear combination of ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ is also a solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
+  \item\label{exer:10.3.1} Prove: If ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ are
+        solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$, then any linear combination of
+        ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ is also a solution of
+        ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
 
-  \item\label{exer:10.3.2} In Section~5.1 the Wronskian of two solutions $y_{1}$ and $y_{2}$ of the scalar second order equation
+  \item\label{exer:10.3.2} In Section~5.1 the Wronskian of two solutions $y_{1}$ and $y_{2}$ of the
+        scalar second order equation
   \[
     P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0 \eqno{\rm(A)}
   \]
@@ -391,7 +449,8 @@ as the solution of \eqref{eq:10.3.8}.
   \]
   \begin{alist}
     \item % (a)
-    Rewrite (A) as a system of first order equations and show that $W$ is the Wronskian (as defined in this section) of two solutions of this system.
+    Rewrite (A) as a system of first order equations and show that $W$ is the Wronskian (as defined
+    in this section) of two solutions of this system.
 
     \item % (b)
     Apply Eqn.~\eqref{eq:10.3.6} to the system derived in \part{a}, and show that
@@ -401,7 +460,8 @@ as the solution of \eqref{eq:10.3.8}.
     which is the form of Abel's formula given in Theorem~9.1.3.
   \end{alist}
 
-  \item\label{exer:10.3.3} In Section~9.1 the Wronskian of $n$ solutions $y_{1}$, $y_{2}$, \dots, $y_{n}$ of the $n-$th order equation
+  \item\label{exer:10.3.3} In Section~9.1 the Wronskian of $n$ solutions $y_{1}$, $y_{2}$, \dots,
+        $y_{n}$ of the $n-$th order equation
   \[
     P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=0 \eqno{\rm(A)}
   \]
@@ -417,7 +477,8 @@ as the solution of \eqref{eq:10.3.8}.
   \]
   \begin{alist}
     \item % (a)
-    Rewrite (A) as a system of first order equations and show that $W$ is the Wronskian (as defined in this section) of $n$ solutions of this system.
+    Rewrite (A) as a system of first order equations and show that $W$ is the Wronskian (as defined
+    in this section) of $n$ solutions of this system.
 
     \item % (b)
     Apply Eqn.~\eqref{eq:10.3.6} to the system derived in \part{a}, and show that
@@ -512,7 +573,8 @@ as the solution of \eqref{eq:10.3.8}.
     \[
       W'=W_{1}+W_{2}+\cdots+W_{n},
     \]
-    where, for $1\le m\le n$, the $i$th row of $W_{m}$ is $r_{i}$ if $i\ne m$, and $r'_{m}$ if $i=m$.
+    where, for $1\le m\le n$, the $i$th row of $W_{m}$ is $r_{i}$ if $i\ne m$, and $r'_{m}$ if
+    $i=m$.
 
     \item % (b)
     Use the equation $Y'=AY$ and the definition of matrix multiplication to show that
@@ -537,7 +599,9 @@ as the solution of \eqref{eq:10.3.8}.
     \]
   \end{alist}
 
-  \item\label{exer:10.3.6} Suppose the $n\times n$ matrix $A$ is continuous on $(a,b)$ and $t_{0}$ is a point in $(a,b)$. Let $Y$ be a fundamental matrix for ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
+  \item\label{exer:10.3.6} Suppose the $n\times n$ matrix $A$ is continuous on $(a,b)$ and $t_{0}$
+        is a point in $(a,b)$. Let $Y$ be a fundamental matrix for ${\bf y}'=A(t){\bf y}$ on
+        $(a,b)$.
   \begin{alist}
     \item % (a)
     Show that $Y(t_{0})$ is invertible.
@@ -571,7 +635,8 @@ as the solution of \eqref{eq:10.3.8}.
   \]
   \begin{alist}
     \item % (a)
-    Verify that $\{{\bf y}_{1},{\bf y}_{2}\}$ is a fundamental set of solutions for ${\bf y}'=A{\bf y}$.
+    Verify that $\{{\bf y}_{1},{\bf y}_{2}\}$ is a fundamental set of solutions for
+    ${\bf y}'=A{\bf y}$.
 
     \item % (b)
     Solve the initial value problem
@@ -580,7 +645,8 @@ as the solution of \eqref{eq:10.3.8}.
     \]
 
     \item % (c)
-    Use the result of Exercise~\ref{exer:10.3.6}\part{b} to find a formula for the solution of (A) for an arbitrary initial vector ${\bf k}$.
+    Use the result of Exercise~\ref{exer:10.3.6}\part{b} to find a formula for the solution of (A)
+    for an arbitrary initial vector ${\bf k}$.
   \end{alist}
 
   \item\label{exer:10.3.8} Repeat Exercise~\ref{exer:10.3.7} with
@@ -663,7 +729,8 @@ as the solution of \eqref{eq:10.3.8}.
 
   \begin{alist}
     \item % (a)
-    Verify that $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions for ${\bf y}'=A{\bf y}$.
+    Verify that $\{{\bf y}_{1},{\bf y}_{2},{\bf y}_{3}\}$ is a fundamental set of solutions for
+    ${\bf y}'=A{\bf y}$.
 
     \item % (b)
     Solve the initial value problem
@@ -672,7 +739,8 @@ as the solution of \eqref{eq:10.3.8}.
     \]
 
     \item % (c)
-    Use the result of Exercise~\ref{exer:10.3.6}\part{b} to find a formula for the solution of (A) for an arbitrary initial vector ${\bf k}$.
+    Use the result of Exercise~\ref{exer:10.3.6}\part{b} to find a formula for the solution of (A)
+    for an arbitrary initial vector ${\bf k}$.
   \end{alist}
 
   \item\label{exer:10.3.12} Repeat Exercise~\ref{exer:10.3.11} with
@@ -727,19 +795,25 @@ as the solution of \eqref{eq:10.3.8}.
     \end{array}\right].
   \end{eqnarray*}
 
-  \item\label{exer:10.3.14} Suppose $Y$ and $Z$ are fundamental matrices for the $n\times n$ system ${\bf y}'=A(t){\bf y}$. Then some of the four matrices $YZ^{-1}$, $Y^{-1}Z$, $Z^{-1}Y$, $ZY^{-1}$ are necessarily constant. Identify them and prove that they are constant.
+  \item\label{exer:10.3.14} Suppose $Y$ and $Z$ are fundamental matrices for the $n\times n$ system
+        ${\bf y}'=A(t){\bf y}$. Then some of the four matrices $YZ^{-1}$, $Y^{-1}Z$, $Z^{-1}Y$,
+        $ZY^{-1}$ are necessarily constant. Identify them and prove that they are constant.
 
-  \item\label{exer:10.3.15} Suppose the columns of an $n\times n$ matrix $Y$ are solutions of the $n\times n$ system ${\bf y}'=A{\bf y}$ and $C$ is an $n\times n$ constant matrix.
+  \item\label{exer:10.3.15} Suppose the columns of an $n\times n$ matrix $Y$ are solutions of the
+        $n\times n$ system ${\bf y}'=A{\bf y}$ and $C$ is an $n\times n$ constant matrix.
 
   \begin{alist}
     \item % (a)
     Show that the matrix $Z=YC$ satisfies the differential equation $Z'=AZ$.
 
     \item % (b)
-    Show that $Z$ is a fundamental matrix for ${\bf y}'=A(t){\bf y}$ if and only if $C$ is invertible and $Y$ is a fundamental matrix for ${\bf y}'=A(t){\bf y}$.
+    Show that $Z$ is a fundamental matrix for ${\bf y}'=A(t){\bf y}$ if and only if $C$ is
+    invertible and $Y$ is a fundamental matrix for ${\bf y}'=A(t){\bf y}$.
   \end{alist}
 
-  \item\label{exer:10.3.16} Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$ and $t_{0}$ is in $(a,b)$. For $i=1$, $2$, \dots, $n$, let ${\bf y}_{i}$ be the solution of the initial value problem ${\bf y}_{i}'=A(t){\bf y}_{i},\;{\bf y}_{i}(t_{0})={\bf e}_{i}$, where
+  \item\label{exer:10.3.16} Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$ and
+        $t_{0}$ is in $(a,b)$. For $i=1$, $2$, \dots, $n$, let ${\bf y}_{i}$ be the solution of the
+        initial value problem ${\bf y}_{i}'=A(t){\bf y}_{i},\;{\bf y}_{i}(t_{0})={\bf e}_{i}$, where
   \[
     {\bf e}_{1}=\left[
     \begin{array}{c}
@@ -765,25 +839,35 @@ as the solution of \eqref{eq:10.3.8}.
 
   \begin{alist}
     \item % (a)
-    Show that$\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is a fundamental set of solutions of ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
+    Show that$\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is a fundamental set of solutions of
+    ${\bf y}'=A(t){\bf y}$ on $(a,b)$.
 
     \item % (b)
-    Conclude from \part{a} and Exercise~\ref{exer:10.3.15} that ${\bf y}'= A(t){\bf y}$ has infinitely many fundamental sets of solutions on $(a,b)$.
+    Conclude from \part{a} and Exercise~\ref{exer:10.3.15} that ${\bf y}'= A(t){\bf y}$ has
+    infinitely many fundamental sets of solutions on $(a,b)$.
   \end{alist}
 
-  \item\label{exer:10.3.17} Show that $Y$ is a fundamental matrix for the system ${\bf y}'=A(t){\bf y}$ if and only if $Y^{-1}$ is a fundamental matrix for ${\bf y}'=- A^{T}(t){\bf y}$, where $A^{T}$ denotes the transpose of $A$. \hint{See Exercise \ref{exer:10.2.11}.}
+  \item\label{exer:10.3.17} Show that $Y$ is a fundamental matrix for the system
+        ${\bf y}'=A(t){\bf y}$ if and only if $Y^{-1}$ is a fundamental matrix for
+        ${\bf y}'=- A^{T}(t){\bf y}$, where $A^{T}$ denotes the transpose of $A$. \hint{See Exercise
+        \ref{exer:10.2.11}.}
 
   \enlargethispage{1in}
 
-  \item\label{exer:10.3.18} Let $Z$ be the fundamental matrix for the constant coefficient system ${\bf y}'=A{\bf y}$ such that $Z(0)=I$.
+  \item\label{exer:10.3.18} Let $Z$ be the fundamental matrix for the constant coefficient system
+        ${\bf y}'=A{\bf y}$ such that $Z(0)=I$.
   \begin{alist}
     \item % (a)
-    Show that $Z(t)Z(s)=Z(t+s)$ for all $s$ and $t$. \hint{For fixed $s$ let $\Gamma_{1}(t)=Z(t)Z(s)$ and $\Gamma_{2}(t)=Z(t+s)$. Show that $\Gamma_{1}$ and $\Gamma_{2}$ are both solutions of the matrix initial value problem $\Gamma'=A\Gamma,\quad\Gamma(0)=Z(s)$. Then conclude from Theorem~\ref{thmtype:10.2.1} that $\Gamma_{1}=\Gamma_{2}$.}
+    Show that $Z(t)Z(s)=Z(t+s)$ for all $s$ and $t$. \hint{For fixed $s$ let
+    $\Gamma_{1}(t)=Z(t)Z(s)$ and $\Gamma_{2}(t)=Z(t+s)$. Show that $\Gamma_{1}$ and $\Gamma_{2}$ are
+    both solutions of the matrix initial value problem $\Gamma'=A\Gamma,\quad\Gamma(0)=Z(s)$. Then
+    conclude from Theorem~\ref{thmtype:10.2.1} that $\Gamma_{1}=\Gamma_{2}$.}
 
     \item % (b)
     Show that $(Z(t))^{-1}=Z(-t)$.
 
     \item % (c)
-    The matrix $Z$ defined above is sometimes denoted by $e^{tA}$. Discuss the motivation for this notation.
+    The matrix $Z$ defined above is sometimes denoted by $e^{tA}$. Discuss the motivation for this
+    notation.
   \end{alist}
 \end{exerciselist}

@@ -1,29 +1,38 @@
 \section{Introduction to Linear Higher Order Equations}
 
 \noindent
-An $n$th order differential equation is said to be {\color{blue}\it linear} if it can be written in the form
+An $n$th order differential equation is said to be {\color{blue}\it linear} if it can be written in
+the form
 \begin{equation}
   \label{eq:9.1.1}y^{(n)}+p_{1}(x)y^{(n-1)}+\cdots+p_{n}(x)y=f(x).
 \end{equation}
-We considered equations of this form with $n=1$ in Section~2.1 and with $n=2$ in Chapter~5. In this chapter $n$ is an arbitrary positive integer.
+We considered equations of this form with $n=1$ in Section~2.1 and with $n=2$ in Chapter~5. In this
+chapter $n$ is an arbitrary positive integer.
 
-In this section we sketch the general theory of linear $n$th order equations. Since this theory has already been discussed for $n=2$ in Sections~5.1\; and 5.3, we'll omit proofs.
+In this section we sketch the general theory of linear $n$th order equations. Since this theory has
+already been discussed for $n=2$ in Sections~5.1\; and 5.3, we'll omit proofs.
 
 For convenience, we consider linear differential equations written as
 \begin{equation}
   \label{eq:9.1.2}P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=F(x),
 \end{equation}
-which can be rewritten as \eqref{eq:9.1.1} on any interval on which $P_{0}$ has no zeros, with $p_{1}=P_{1}/P_{0}$, \dots, $p_{n}=P_{n}/P_{0}$ and $f=F/P_{0}$. For simplicity, throughout this chapter we'll abbreviate the left side of \eqref{eq:9.1.2} by $Ly$; that is,
+which can be rewritten as \eqref{eq:9.1.1} on any interval on which $P_{0}$ has no zeros, with
+$p_{1}=P_{1}/P_{0}$, \dots, $p_{n}=P_{n}/P_{0}$ and $f=F/P_{0}$. For simplicity, throughout this
+chapter we'll abbreviate the left side of \eqref{eq:9.1.2} by $Ly$; that is,
 \[
   Ly=P_{0}y^{(n)}+P_{1}y^{(n-1)}+\cdots+P_{n}y.
 \]
-We say that the equation $Ly=F$ is {\color{blue}\it normal\/} on $(a,b)$ if $P_{0}$, $P_{1}$, \dots, $P_{n}$ and $F$ are continuous on $(a,b)$ and $P_{0}$ has no zeros on $(a,b)$. If this is so then $Ly=F$ can be written as \eqref{eq:9.1.1} with $p_{1}$, \dots, $p_{n}$ and $f$ continuous on $(a,b)$.
+We say that the equation $Ly=F$ is {\color{blue}\it normal\/} on $(a,b)$ if $P_{0}$, $P_{1}$, \dots,
+$P_{n}$ and $F$ are continuous on $(a,b)$ and $P_{0}$ has no zeros on $(a,b)$. If this is so then
+$Ly=F$ can be written as \eqref{eq:9.1.1} with $p_{1}$, \dots, $p_{n}$ and $f$ continuous on
+$(a,b)$.
 
 The next theorem is analogous to Theorem~\ref{thmtype:5.3.1}.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:9.1.1} Suppose $Ly=F$ is normal on $(a,b)$, let $x_{0}$ be a point in $(a,b)$, and let $k_{0}$, $k_{1}$, \dots, $k_{n-1}$ be arbitrary real numbers. Then the initial value problem
+  \label{thmtype:9.1.1} Suppose $Ly=F$ is normal on $(a,b)$, let $x_{0}$ be a point in $(a,b)$, and
+  let $k_{0}$, $k_{1}$, \dots, $k_{n-1}$ be arbitrary real numbers. Then the initial value problem
   \[
     Ly=F,\quad y(x_{0})=k_{0},\quad y'(x_{0})=k_{1},\dots,\quad y^{(n-1)}(x_{0})=k_{n-1}
   \]
@@ -33,27 +42,43 @@ The next theorem is analogous to Theorem~\ref{thmtype:5.3.1}.
 \boxit{Homogeneous Equations}
 
 \noindent
-Eqn.~\eqref{eq:9.1.2} is said to be {\color{blue}\it homogeneous} if $F\equiv0$ and {\color{blue}\it nonhomogeneous} otherwise. Since $y\equiv0$ is obviously a solution of $Ly=0$, we call it the {\color{blue}\it trivial} solution. Any other solution is {\color{blue}\it nontrivial}.
+Eqn.~\eqref{eq:9.1.2} is said to be {\color{blue}\it homogeneous} if $F\equiv0$ and {\color{blue}\it
+nonhomogeneous} otherwise. Since $y\equiv0$ is obviously a solution of $Ly=0$, we call it the
+{\color{blue}\it trivial} solution. Any other solution is {\color{blue}\it nontrivial}.
 
-If $y_{1}$, $y_{2}$, \dots, $y_{n}$ are defined on $(a,b)$ and $c_{1}$, $c_{2}$, \dots, $c_{n}$ are constants, then
+If $y_{1}$, $y_{2}$, \dots, $y_{n}$ are defined on $(a,b)$ and $c_{1}$, $c_{2}$, \dots, $c_{n}$ are
+constants, then
 \begin{equation}
   \label{eq:9.1.3}y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}
 \end{equation}
-is a {\color{blue}\it linear combination\/} of $\{y_{1},y_{2}\dots,y_{n}\}$. It's easy to show that if $y_{1}$, $y_{2}$, \dots, $y_{n}$ are solutions of $Ly=0$ on $(a,b)$, then so is any linear combination of $\{y_{1},y_{2},\dots,y_{n}\}$. (See the proof of Theorem~\ref{thmtype:5.1.2}.) We say that $\{y_{1},y_{2},\dots,y_{n}\}$ is a {\color{blue}\it fundamental set of solutions of $Ly=0$ on\/} $(a,b)$ if every solution of $Ly=0$ on $(a,b)$ can be written as a linear combination of $\{y_{1},y_{2},\dots,y_{n}\}$, as in \eqref{eq:9.1.3}. In this case we say that \eqref{eq:9.1.3} is the {\color{blue}\it general solution of $Ly=0$ on $(a,b)$\/}.
+is a {\color{blue}\it linear combination\/} of $\{y_{1},y_{2}\dots,y_{n}\}$. It's easy to show that
+if $y_{1}$, $y_{2}$, \dots, $y_{n}$ are solutions of $Ly=0$ on $(a,b)$, then so is any linear
+combination of $\{y_{1},y_{2},\dots,y_{n}\}$. (See the proof of Theorem~\ref{thmtype:5.1.2}.) We say
+that $\{y_{1},y_{2},\dots,y_{n}\}$ is a {\color{blue}\it fundamental set of solutions of $Ly=0$
+on\/} $(a,b)$ if every solution of $Ly=0$ on $(a,b)$ can be written as a linear combination of
+$\{y_{1},y_{2},\dots,y_{n}\}$, as in \eqref{eq:9.1.3}. In this case we say that \eqref{eq:9.1.3} is
+the {\color{blue}\it general solution of $Ly=0$ on $(a,b)$\/}.
 
-It can be shown (Exercises~\ref{exer:9.1.14} and \ref{exer:9.1.15}) that if the equation $Ly=0$ is normal on $(a,b)$ then it has infinitely many fundamental sets of solutions on $(a,b)$. The next definition will help to identify fundamental sets of solutions of $Ly=0$.
+It can be shown (Exercises~\ref{exer:9.1.14} and \ref{exer:9.1.15}) that if the equation $Ly=0$ is
+normal on $(a,b)$ then it has infinitely many fundamental sets of solutions on $(a,b)$. The next
+definition will help to identify fundamental sets of solutions of $Ly=0$.
 
-We say that $\{y_{1},y_{2},\dots,y_{n}\}$ is {\color{blue}\it linearly independent\/} on $(a,b)$ if the only constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ such that
+We say that $\{y_{1},y_{2},\dots,y_{n}\}$ is {\color{blue}\it linearly independent\/} on $(a,b)$ if
+the only constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ such that
 \begin{equation}
   \label{eq:9.1.4}c_{1}y_{1}(x)+c_{2}y_{2}(x)+\cdots+c_{n}y_{n}(x)=0,\quad a<x<b,
 \end{equation}
-are $c_{1}=c_{2}=\cdots=c_{n}=0$. If \eqref{eq:9.1.4} holds for some set of constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ that are not all zero, then $\{y_{1},y_{2},\dots,y_{n}\}$ is {\color{blue}\it linearly dependent\/} on $(a,b)$
+are $c_{1}=c_{2}=\cdots=c_{n}=0$. If \eqref{eq:9.1.4} holds for some set of constants $c_{1}$,
+$c_{2}$, \dots, $c_{n}$ that are not all zero, then $\{y_{1},y_{2},\dots,y_{n}\}$ is
+{\color{blue}\it linearly dependent\/} on $(a,b)$
 
 The next theorem is analogous to Theorem~\ref{thmtype:5.1.3}.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:9.1.2} If $Ly=0$ is normal on $(a,b)$, then a set $\{y_{1},y_{2},\dots,y_{n}\}$ of $n$ solutions of $Ly=0$ on $(a,b)$ is a fundamental set if and only if it's linearly independent on $(a,b)$.
+  \label{thmtype:9.1.2} If $Ly=0$ is normal on $(a,b)$, then a set $\{y_{1},y_{2},\dots,y_{n}\}$ of
+  $n$ solutions of $Ly=0$ on $(a,b)$ is a fundamental set if and only if it's linearly independent
+  on $(a,b)$.
 \end{theorem}
 
 \begin{example}
@@ -61,14 +86,18 @@ The next theorem is analogous to Theorem~\ref{thmtype:5.1.3}.
   \begin{equation}
     \label{eq:9.1.5}x^{3}y'''-x^{2}y''-2xy'+6y=0
   \end{equation}
-  is normal and has the solutions $y_{1}=x^{2}$, $y_{2}=x^{3}$, and $y_{3}=1/x$ on $(-\infty,0)$ and $(0,\infty)$. Show that $\{y_{1},y_{2},y_{3}\}$ is linearly independent on $(-\infty,0)$ and $(0,\infty)$. Then find the general solution of \eqref{eq:9.1.5} on $(-\infty,0)$ and $(0,\infty)$.
+  is normal and has the solutions $y_{1}=x^{2}$, $y_{2}=x^{3}$, and $y_{3}=1/x$ on $(-\infty,0)$ and
+  $(0,\infty)$. Show that $\{y_{1},y_{2},y_{3}\}$ is linearly independent on $(-\infty,0)$ and
+  $(0,\infty)$. Then find the general solution of \eqref{eq:9.1.5} on $(-\infty,0)$ and
+  $(0,\infty)$.
 \end{example}
 
 \solution Suppose
 \begin{equation}
   \label{eq:9.1.6}c_{1}x^{2}+c_{2}x^{3}+\frac{c_{3}}{x}=0
 \end{equation}
-on $(0,\infty)$. We must show that $c_{1}=c_{2}=c_{3}=0$. Differentiating \eqref{eq:9.1.6} twice yields the system
+on $(0,\infty)$. We must show that $c_{1}=c_{2}=c_{3}=0$. Differentiating \eqref{eq:9.1.6} twice
+yields the system
 \begin{equation}
   \label{eq:9.1.7}
   \begin{array}{rcl}
@@ -86,7 +115,10 @@ If \eqref{eq:9.1.7} holds for all $x$ in $(0,\infty)$, then it certainly holds a
     2c_{1}+6c_{2}+2c_{3}                               & = & 0.
   \end{array}
 \end{equation}
-By solving this system directly, you can verify that it has only the trivial solution $c_{1}=c_{2}=c_{3}=0$; however, for our purposes it's more useful to recall from linear algebra that a homogeneous linear system of $n$ equations in $n$ unknowns has only the trivial solution if its determinant is nonzero. Since the determinant of \eqref{eq:9.1.8} is
+By solving this system directly, you can verify that it has only the trivial solution
+$c_{1}=c_{2}=c_{3}=0$; however, for our purposes it's more useful to recall from linear algebra that
+a homogeneous linear system of $n$ equations in $n$ unknowns has only the trivial solution if its
+determinant is nonzero. Since the determinant of \eqref{eq:9.1.8} is
 \[
   \left|
   \begin{array}{rrr}
@@ -100,11 +132,14 @@ By solving this system directly, you can verify that it has only the trivial sol
     2 & 4 & 0
   \end{array}\right|=12,
 \]
-it follows that \eqref{eq:9.1.8} has only the trivial solution, so $\{y_{1},y_{2},y_{3}\}$ is linearly independent on $(0,\infty)$. Now Theorem~\ref{thmtype:9.1.2} implies that
+it follows that \eqref{eq:9.1.8} has only the trivial solution, so $\{y_{1},y_{2},y_{3}\}$ is
+linearly independent on $(0,\infty)$. Now Theorem~\ref{thmtype:9.1.2} implies that
 \[
   y=c_{1}x^{2}+c_{2}x^{3}+\frac{c_{3}}{x}
 \]
-is the general solution of \eqref{eq:9.1.5} on $(0,\infty)$. To see that this is also true on $(-\infty,0)$, assume that \eqref{eq:9.1.6} holds on $(-\infty,0)$. Setting $x=-1$ in \eqref{eq:9.1.7} yields
+is the general solution of \eqref{eq:9.1.5} on $(0,\infty)$. To see that this is also true on
+$(-\infty,0)$, assume that \eqref{eq:9.1.6} holds on $(-\infty,0)$. Setting $x=-1$ in
+\eqref{eq:9.1.7} yields
 \begin{eqnarray*}
   \phantom{-2}c_{1}-\phantom{3}c_{2}-\phantom{2}c_{3} & = & 0 \\
   -2c_{1}+3c_{2}-\phantom{2}c_{3}                     & = & 0 \\
@@ -124,21 +159,25 @@ Since the determinant of this system is
     2  & -4 & 0
   \end{array}\right|=-12,
 \]
-it follows that $c_{1}=c_{2}=c_{3}=0$; that is, $\{y_{1},y_{2},y_{3}\}$ is linearly independent on $(-\infty,0)$.
+it follows that $c_{1}=c_{2}=c_{3}=0$; that is, $\{y_{1},y_{2},y_{3}\}$ is linearly independent on
+$(-\infty,0)$.
 
 \begin{example}
   \label{example:9.1.2}\rm The equation
   \begin{equation}
     \label{eq:9.1.9}y^{(4)}+y'''-7y''-y'+6y=0
   \end{equation}
-  is normal and has the solutions $y_{1}=e^{x}$, $y_{2}=e^{-x}$, $y_{3}=e^{2x}$, and $y_{4}=e^{-3x}$ on $(-\infty,\infty)$. (Verify.) Show that $\{y_{1},y_{2},y_{3},y_{4}\}$ is linearly independent on $(-\infty,\infty)$. Then find the general solution of \eqref{eq:9.1.9}.
+  is normal and has the solutions $y_{1}=e^{x}$, $y_{2}=e^{-x}$, $y_{3}=e^{2x}$, and $y_{4}=e^{-3x}$
+  on $(-\infty,\infty)$. (Verify.) Show that $\{y_{1},y_{2},y_{3},y_{4}\}$ is linearly independent
+  on $(-\infty,\infty)$. Then find the general solution of \eqref{eq:9.1.9}.
 \end{example}
 
 \solution Suppose $c_{1}$, $c_{2}$, $c_{3}$, and $c_{4}$ are constants such that
 \begin{equation}
   \label{eq:9.1.10}c_{1}e^{x}+c_{2}e^{-x}+c_{3}e^{2x}+c_{4}e^{-3x}=0
 \end{equation}
-for all $x$. We must show that $c_{1}=c_{2}=c_{3}=c_{4}=0$. Differentiating \eqref{eq:9.1.10} three times yields the system
+for all $x$. We must show that $c_{1}=c_{2}=c_{3}=c_{4}=0$. Differentiating \eqref{eq:9.1.10} three
+times yields the system
 \begin{equation}
   \label{eq:9.1.11}
   \begin{array}{rcl}
@@ -165,7 +204,8 @@ The determinant of this system is
                                                                                         & = & \left|\begin{array}{rrr}-2&1&-4\\0&3&8 \\0&6&-24\end{array}\right|= -2\left|\begin{array}{rr}3&8\\6&-24\end{array}\right|=240,
   \end{array}
 \end{equation}
-so the system has only the trivial solution $c_{1}=c_{2}=c_{3}=c_{4}=0$. Now Theorem~\ref{thmtype:9.1.2} implies that
+so the system has only the trivial solution $c_{1}=c_{2}=c_{3}=c_{4}=0$. Now
+Theorem~\ref{thmtype:9.1.2} implies that
 \[
   y=c_{1}e^{x}+c_{2}e^{-x}+c_{3}e^{2x}+c_{4}e^{-3x}
 \]
@@ -174,7 +214,10 @@ is the general solution of \eqref{eq:9.1.9}.
 \boxit{The Wronskian}
 
 \noindent
-We can use the method used in Examples~\ref{example:9.1.1} and \ref{example:9.1.2} to test $n$ solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of any $n$th order equation $Ly=0$ for linear independence on an interval $(a,b)$ on which the equation is normal. Thus, if $c_{1}$, $c_{2}$ ,\dots, $c_{n}$ are constants such that
+We can use the method used in Examples~\ref{example:9.1.1} and \ref{example:9.1.2} to test $n$
+solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of any $n$th order equation $Ly=0$ for linear independence
+on an interval $(a,b)$ on which the equation is normal. Thus, if $c_{1}$, $c_{2}$ ,\dots, $c_{n}$
+are constants such that
 \[
   c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}=0,\quad a<x<b,
 \]
@@ -201,13 +244,16 @@ for $c_{1}$, $c_{2}$, \dots, $c_{n}$. For a fixed $x$, the determinant of this s
 We call this determinant the
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Wronski/}{\color{blue}
 \it Wronskian\/}
-of $\{y_{1},y_{2},\dots,y_{n}\}$. If $W(x)\ne0$ for some $x$ in $(a,b)$ then the system \eqref{eq:9.1.13} has only the trivial solution $c_{1}=c_{2}=\cdots=c_{n}=0$, and Theorem~\ref{thmtype:9.1.2} implies that
+of $\{y_{1},y_{2},\dots,y_{n}\}$. If $W(x)\ne0$ for some $x$ in $(a,b)$ then the system
+\eqref{eq:9.1.13} has only the trivial solution $c_{1}=c_{2}=\cdots=c_{n}=0$, and
+Theorem~\ref{thmtype:9.1.2} implies that
 \[
   y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}
 \]
 is the general solution of $Ly=0$ on $(a,b)$.
 
-The next theorem generalizes Theorem~\ref{thmtype:5.1.4}. The proof is sketched in (Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.20}).
+The next theorem generalizes Theorem~\ref{thmtype:5.1.4}. The proof is sketched in
+(Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.20}).
 
 \begin{theorem}
   \color{blue}
@@ -215,21 +261,26 @@ The next theorem generalizes Theorem~\ref{thmtype:5.1.4}. The proof is sketched 
   \begin{equation}
     \label{eq:9.1.14}P_{0}(x)y^{(n)}+P_{1}(x)y^{n-1}+\cdots+P_{n}(x)y=0
   \end{equation}
-  is normal on $(a,b)$, let $y_{1}$, $y_{2}$, \dots, $y_{n}$ be solutions of \eqref{eq:9.1.14} on $(a,b)$, and let $x_{0}$ be in $(a,b)$. Then the Wronskian of $\{y_{1},y_{2},\dots,y_{n}\}$ is given by
+  is normal on $(a,b)$, let $y_{1}$, $y_{2}$, \dots, $y_{n}$ be solutions of \eqref{eq:9.1.14} on
+  $(a,b)$, and let $x_{0}$ be in $(a,b)$. Then the Wronskian of $\{y_{1},y_{2},\dots,y_{n}\}$ is
+  given by
   \begin{equation}
     \label{eq:9.1.15}W(x)=W(x_{0})\exp\left\{-\int^{x}_{x_{0}}\frac{P_{1}(t)}{P_{0}(t)}\, dt\right\},\quad a<x<b.
   \end{equation}
   Therefore, either $W$ has no zeros in $(a,b)$ or $W\equiv0$ on $(a,b)$.
 \end{theorem}
 
-Formula \eqref{eq:9.1.15} is \href{https://mathshistory.st-andrews.ac.uk/Biographies/Abel/}{\color{blue}
+Formula \eqref{eq:9.1.15} is
+\href{https://mathshistory.st-andrews.ac.uk/Biographies/Abel/}{\color{blue}
 \it Abel's formula\/}.
 
 The next theorem is analogous to Theorem~\ref{thmtype:5.1.6}..
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:9.1.4} Suppose $Ly=0$ is normal on $(a,b)$ and let $y_{1}$, $y_{2}$, \dots, $y_{n}$ be $n$ solutions of $Ly=0$ on $(a,b)$. Then the following statements are equivalent; that is, they are either all true or all false:
+  \label{thmtype:9.1.4} Suppose $Ly=0$ is normal on $(a,b)$ and let $y_{1}$, $y_{2}$, \dots, $y_{n}$
+  be $n$ solutions of $Ly=0$ on $(a,b)$. Then the following statements are equivalent; that is, they
+  are either all true or all false:
   \begin{alist}
     \item % (a)
     The general solution of $Ly=0$ on $(a,b)$ is $y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n}$.
@@ -249,11 +300,13 @@ The next theorem is analogous to Theorem~\ref{thmtype:5.1.6}..
 \end{theorem}
 
 \begin{example}
-  \label{example:9.1.3} \rm In Example~\ref{example:9.1.1} we saw that the solutions $y_{1}=x^{2}$, $y_{2}=x^{3}$, and $y_{3}=1/x$ of
+  \label{example:9.1.3} \rm In Example~\ref{example:9.1.1} we saw that the solutions $y_{1}=x^{2}$,
+  $y_{2}=x^{3}$, and $y_{3}=1/x$ of
   \[
     x^{3}y'''-x^{2}y''-2xy'+6y=0
   \]
-  are linearly independent on $(-\infty,0)$ and $(0,\infty)$. Calculate the Wronskian of $\{y_{1},y_{2},y_{3}\}$.
+  are linearly independent on $(-\infty,0)$ and $(0,\infty)$. Calculate the Wronskian of
+  $\{y_{1},y_{2},y_{3}\}$.
 \end{example}
 
 \solution If $x\ne0$, then
@@ -271,7 +324,8 @@ The next theorem is analogous to Theorem~\ref{thmtype:5.1.6}..
     1 & 3x           & \phantom{-}\dst\frac{1}{x^{3}}
   \end{array}\right|,
 \]
-where we factored $x^{2}$, $x$, and $2$ out of the first, second, and third rows of $W(x)$, respectively. Adding the second row of the last determinant to the first and third rows yields
+where we factored $x^{2}$, $x$, and $2$ out of the first, second, and third rows of $W(x)$,
+respectively. Adding the second row of the last determinant to the first and third rows yields
 \[
   W(x)=2x^{3}\left|
   \begin{array}{ccc}
@@ -287,11 +341,13 @@ where we factored $x^{2}$, $x$, and $2$ out of the first, second, and third rows
 Therefore $W(x)\ne0$ on $(-\infty,0)$ and $(0,\infty)$.
 
 \begin{example}
-  \label{example:9.1.4} \rm In Example~\ref{example:9.1.2} we saw that the solutions $y_{1}=e^{x}$, $y_{2}=e^{-x}$, $y_{3}=e^{2x}$, and $y_{4}=e^{-3x}$ of
+  \label{example:9.1.4} \rm In Example~\ref{example:9.1.2} we saw that the solutions $y_{1}=e^{x}$,
+  $y_{2}=e^{-x}$, $y_{3}=e^{2x}$, and $y_{4}=e^{-3x}$ of
   \[
     y^{(4)}+y'''-7y''-y'+6y=0
   \]
-  are linearly independent on every open interval. Calculate the Wronskian of $\{y_{1},y_{2},y_{3},y_{4}\}$.
+  are linearly independent on every open interval. Calculate the Wronskian of
+  $\{y_{1},y_{2},y_{3},y_{4}\}$.
 \end{example}
 
 \solution For all $x$,
@@ -317,19 +373,24 @@ Factoring the exponential common factor from each row yields
 from \eqref{eq:9.1.12}.
 
 \color{blue}
-\remark{Under the assumptions of Theorem~\ref{thmtype:9.1.4}, it isn't necessary to obtain a formula for $W(x)$. Just evaluate $W(x)$ at a convenient point in $(a,b)$, as we did in Examples~\ref{example:9.1.1} and \ref{example:9.1.2}.}
+\remark{Under the assumptions of Theorem~\ref{thmtype:9.1.4}, it isn't necessary to obtain a formula
+for $W(x)$. Just evaluate $W(x)$ at a convenient point in $(a,b)$, as we did in
+Examples~\ref{example:9.1.1} and \ref{example:9.1.2}.}
 \color{black}
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:9.1.5} Suppose $c$ is in $(a,b)$ and $\alpha_{1}$, $\alpha_{2}$, \dots, are real numbers, not all zero. Under the assumptions of Theorem~\ref{thmtype:10.3.3}, suppose $y_{1}$ and $y_{2}$ are solutions of \eqref{eq:5.1.35} such that
+  \label{thmtype:9.1.5} Suppose $c$ is in $(a,b)$ and $\alpha_{1}$, $\alpha_{2}$, \dots, are real
+  numbers, not all zero. Under the assumptions of Theorem~\ref{thmtype:10.3.3}, suppose $y_{1}$ and
+  $y_{2}$ are solutions of \eqref{eq:5.1.35} such that
   \begin{equation}
     \label{eq:9.1.16}\alpha y_{i}(c)+y_{i}'(c)+\cdots+y_{i}^{(n-1)}(c)=0,\quad1\le i\le n.
   \end{equation}
   Then $\{y_{1},y_{2},\dots y_{n}\}$ isn't linearly independent on $(a,b)$.
 \end{theorem}
 
-\proof Since $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{n}$ are not all zero, \eqref{eq:9.1.14} implies that
+\proof Since $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{n}$ are not all zero, \eqref{eq:9.1.14}
+implies that
 \[
   \left|
   \begin{array}{ccccccc}
@@ -356,11 +417,16 @@ and Theorem~\ref{thmtype:9.1.4} implies the stated conclusion.
 \boxit{General Solution of a Nonhomogeneous Equation}
 
 \noindent
-The next theorem is analogous to Theorem~\ref{thmtype:5.3.2}. It shows how to find the general solution of $Ly=F$ if we know a particular solution of $Ly=F$ and a fundamental set of solutions of the {\color{blue}\it complementary equation\/} $Ly=0$.
+The next theorem is analogous to Theorem~\ref{thmtype:5.3.2}. It shows how to find the general
+solution of $Ly=F$ if we know a particular solution of $Ly=F$ and a fundamental set of solutions of
+the {\color{blue}\it complementary equation\/} $Ly=0$.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:9.1.6} Suppose $Ly=F$ is normal on $(a,b)$. Let $y_{p}$ be a particular solution of $Ly=F$ on $(a,b)$, and let $\{y_{1},y_{2},\dots,y_{n}\}$ be a fundamental set of solutions of the complementary equation $Ly=0$ on $(a,b)$. Then $y$ is a solution of $Ly=F$ on $(a,b)$ if and only if
+  \label{thmtype:9.1.6} Suppose $Ly=F$ is normal on $(a,b)$. Let $y_{p}$ be a particular solution of
+  $Ly=F$ on $(a,b)$, and let $\{y_{1},y_{2},\dots,y_{n}\}$ be a fundamental set of solutions of the
+  complementary equation $Ly=0$ on $(a,b)$. Then $y$ is a solution of $Ly=F$ on $(a,b)$ if and only
+  if
   \[
     y=y_{p}+c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n},
   \]
@@ -371,7 +437,8 @@ The next theorem is analogous to Theorem~\ref{thmtype:5.3.2}.
 
 \begin{theorem}
   \color{blue}
-  $[$The Principle of Superposition$]$\label{thmtype:9.1.7} Suppose for each $i=1$, $2$, \dots, $r$, the function $y_{p_{i}}$ is a particular solution of $Ly=F_{i}$ on $(a,b)$. Then
+  $[$The Principle of Superposition$]$\label{thmtype:9.1.7} Suppose for each $i=1$, $2$, \dots, $r$,
+  the function $y_{p_{i}}$ is a particular solution of $Ly=F_{i}$ on $(a,b)$. Then
   \[
     y_{p}=y_{p_{1}}+y_{p_{2}}+\cdots+y_{p_{r}}
   \]
@@ -382,18 +449,22 @@ The next theorem is analogous to Theorem~\ref{thmtype:5.3.2}.
   on $(a,b)$.
 \end{theorem}
 
-We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the rest of this chapter.
+We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the rest of this
+chapter.
 
 \exercises
 
 \begin{exerciselist}
-  \item\label{exer:9.1.1} Verify that the given function is the solution of the initial value problem.
+  \item\label{exer:9.1.1} Verify that the given function is the solution of the initial value
+        problem.
 
 \part{a} $x^{3}y'''-3x^{2}y''+6xy'-6y=-\dst\frac{24}{x},\quad y(-1)=0$, $y'(-1)=0,\quad y''(-1)=0$;
 
   \hspace*{15pt}$\dst{y=-6x-8x^{2}-3x^{3}+\frac{1}{x}}$
 
-\part{b} $\dst{y'''-\frac{1}{x}y''-y'+\frac{1}{x}y=\frac{x^{2}-4}{x^{4}},\quad y(1)=\frac{3}{2},\quad y'(1)=\frac{1}{2}}$, $y''(1)=1$;
+\part{b}
+$\dst{y'''-\frac{1}{x}y''-y'+\frac{1}{x}y=\frac{x^{2}-4}{x^{4}},\quad y(1)=\frac{3}{2},\quad y'(1)=\frac{1}{2}}$,
+$y''(1)=1$;
 
   \hspace*{15pt} $y=x+\dst\frac{1}{2x}$
 
@@ -427,7 +498,8 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
   \]
   \hint{See Example~\ref{example:9.1.2}.}
 
-  \item\label{exer:9.1.4} Find solutions $y_{1}$, $y_{2}$, \dots, $y_{n}$ of the equation $y^{(n)}=0$ that satisfy the initial conditions
+  \item\label{exer:9.1.4} Find solutions $y_{1}$, $y_{2}$, \dots, $y_{n}$ of the equation
+        $y^{(n)}=0$ that satisfy the initial conditions
   \[
     y_{i}^{(j)}(x_{0})=\left\{
     \begin{array}{cl}
@@ -466,7 +538,9 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
     \]
   \end{alist}
 
-  \item\label{exer:9.1.6} Verify that the given functions are solutions of the given equation, and show that they form a fundamental set of solutions of the equation on any interval on which the equation is normal.
+  \item\label{exer:9.1.6} Verify that the given functions are solutions of the given equation, and
+        show that they form a fundamental set of solutions of the equation on any interval on which
+        the equation is normal.
 
 \part{a} $y'''+y''-y'-y=0;\quad\{e^{x},\,e^{-x},\,xe^{-x}\}$
 
@@ -538,13 +612,16 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
 
 \part{k} $\{e^{2x},\,e^{-2x},\,1,\,x^{2}\}$
 
-  \item\label{exer:9.1.11} Suppose $Ly=0$ is normal on $(a,b)$ and $x_{0}$ is in $(a,b)$. Use Theorem~\ref{thmtype:9.1.1} to show that $y\equiv0$ is the only solution of the initial value problem
+  \item\label{exer:9.1.11} Suppose $Ly=0$ is normal on $(a,b)$ and $x_{0}$ is in $(a,b)$. Use
+        Theorem~\ref{thmtype:9.1.1} to show that $y\equiv0$ is the only solution of the initial
+        value problem
   \[
     Ly=0,\quad y(x_{0})=0,\quad y'(x_{0})=0,\dots,y^{(n-1)}(x_{0})=0,
   \]
   on $(a,b)$.
 
-  \item\label{exer:9.1.12} Prove: If $y_{1}$, $y_{2}$, \dots, $y_{n}$ are solutions of $Ly=0$ and the functions
+  \item\label{exer:9.1.12} Prove: If $y_{1}$, $y_{2}$, \dots, $y_{n}$ are solutions of $Ly=0$ and
+        the functions
   \[
     z_{i}=\sum^{n}_{j=1}a_{ij}y_{j},\quad1\le i\le n,
   \]
@@ -554,9 +631,11 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
   \[
     y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{k}y_{k}+y_{p}
   \]
-  is a solution of a linear equation $Ly=F$ for every choice of the constants $c_{1}$, $c_{2}$ ,\dots, $c_{k}$, then $Ly_{i}=0$ for $1\le i\le k$.
+  is a solution of a linear equation $Ly=F$ for every choice of the constants $c_{1}$, $c_{2}$
+  ,\dots, $c_{k}$, then $Ly_{i}=0$ for $1\le i\le k$.
 
-  \item\label{exer:9.1.14} Suppose $Ly=0$ is normal on $(a,b)$ and let $x_{0}$ be in $(a,b)$. For $1\le i\le n$, let $y_{i}$ be the solution of the initial value problem
+  \item\label{exer:9.1.14} Suppose $Ly=0$ is normal on $(a,b)$ and let $x_{0}$ be in $(a,b)$. For
+        $1\le i\le n$, let $y_{i}$ be the solution of the initial value problem
   \[
     Ly_{i}=0,\quad y_{i}^{(j)}(x_{0})= \left\{
     \begin{array}{cl}
@@ -564,13 +643,15 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
       1, & j=i-1,
     \end{array}\right.1\le i\le n,
   \]
-  where $x_{0}$ is an arbitrary point in $(a,b)$. Show that any solution of $Ly=0$ on $(a,b)$, can be written as
+  where $x_{0}$ is an arbitrary point in $(a,b)$. Show that any solution of $Ly=0$ on $(a,b)$, can
+  be written as
   \[
     y=c_{1}y_{1}+c_{2}y_{2}+\cdots+c_{n}y_{n},
   \]
   with $c_{j}=y^{(j-1)}(x_{0})$.
 
-  \item\label{exer:9.1.15} Suppose $\{y_{1},y_{2},\dots,y_{n}\}$ is a fundamental set of solutions of
+  \item\label{exer:9.1.15} Suppose $\{y_{1},y_{2},\dots,y_{n}\}$ is a fundamental set of solutions
+        of
   \[
     \dst P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=0
   \]
@@ -583,7 +664,8 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
       z_{n}           & =a_{n1}y_{1}+a_{n2}y_{2}+\cdots+a_{nn}y_{n},
     \end{array}
   \]
-  where the $\{a_{ij}\}$ are constants. Show that $\{z_{1},z_{2},\dots, z_{n}\}$ is a fundamental set of solutions of (A) if and only if the determinant
+  where the $\{a_{ij}\}$ are constants. Show that $\{z_{1},z_{2},\dots, z_{n}\}$ is a fundamental
+  set of solutions of (A) if and only if the determinant
   \[
     \left|
     \begin{array}{cccc}
@@ -593,9 +675,12 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
       a_{n1} & a_{n2} & \cdots & a_{nn}
     \end{array}\right|
   \]
-  is nonzero.\hint{The determinant of a product of $n\times n$ matrices equals the product of the determinants.}
+  is nonzero.\hint{The determinant of a product of $n\times n$ matrices equals the product of the
+  determinants.}
 
-  \item\label{exer:9.1.16} Show that $\{y_{1},y_{2},\dots,y_{n}\}$ is linearly dependent on $(a,b)$ if and only if at least one of the functions $y_{1}$, $y_{2}$, \dots, $y_{n}$ can be written as a linear combination of the others on $(a,b)$.
+  \item\label{exer:9.1.16} Show that $\{y_{1},y_{2},\dots,y_{n}\}$ is linearly dependent on $(a,b)$
+        if and only if at least one of the functions $y_{1}$, $y_{2}$, \dots, $y_{n}$ can be written
+        as a linear combination of the others on $(a,b)$.
 
   \exercisetext{Take the following as a hint in Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.19}:
 
@@ -635,7 +720,8 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
   \]
   where $F_{i}$ is the determinant obtained by differentiating the $i$th row of $F$.
 
-  \item\label{exer:9.1.19} Use Exercise~\ref{exer:9.1.18} to show that if $W$ is the Wronskian of the $n$-times differentiable functions $y_{1}$, $y_{2}$, \dots, $y_{n}$, then
+  \item\label{exer:9.1.19} Use Exercise~\ref{exer:9.1.18} to show that if $W$ is the Wronskian of
+        the $n$-times differentiable functions $y_{1}$, $y_{2}$, \dots, $y_{n}$, then
   \[
     W'= \left|
     \begin{array}{cccc}
@@ -647,17 +733,21 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
     \end{array}\right|.
   \]
 
-  \item\label{exer:9.1.20} Use Exercises~\ref{exer:9.1.17} and \ref{exer:9.1.19} to show that if $W$ is the Wronskian of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of the normal equation
+  \item\label{exer:9.1.20} Use Exercises~\ref{exer:9.1.17} and \ref{exer:9.1.19} to show that if $W$
+        is the Wronskian of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of the normal equation
   \[
     P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=0, \eqno{\rm(A)}
   \]
-  then $W'=-P_{1}W/P_{0}$. Derive Abel's formula (Eqn.~\eqref{eq:9.1.15}) from this. \hint{Use (A) to write $y^{(n)}$ in terms of $y,y',\dots,y^{(n-1)}$.}
+  then $W'=-P_{1}W/P_{0}$. Derive Abel's formula (Eqn.~\eqref{eq:9.1.15}) from this. \hint{Use (A)
+  to write $y^{(n)}$ in terms of $y,y',\dots,y^{(n-1)}$.}
 
   \item\label{exer:9.1.21} Prove Theorem~\ref{thmtype:9.1.6}.
 
   \item\label{exer:9.1.22} Prove Theorem~\ref{thmtype:9.1.7}.
 
-  \item\label{exer:9.1.23} Show that if the Wronskian of the $n$-times continuously differentiable functions $\{y_{1},y_{2},\dots,y_{n}\}$ has no zeros in $(a,b)$, then the differential equation obtained by expanding the determinant
+  \item\label{exer:9.1.23} Show that if the Wronskian of the $n$-times continuously differentiable
+        functions $\{y_{1},y_{2},\dots,y_{n}\}$ has no zeros in $(a,b)$, then the differential
+        equation obtained by expanding the determinant
   \[
     \left|
     \begin{array}{ccccc}
@@ -667,9 +757,12 @@ We'll apply Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7} throughout the 
       y^{(n)} & y_{1}^{(n)} & y_{2}^{(n)} & \cdots & y_{n}^{(n)}
     \end{array}\right|=0,
   \]
-  in cofactors of its first column is normal and has $\{y_{1},y_{2},\dots,y_{n}\}$ as a fundamental set of solutions on $(a,b)$.
+  in cofactors of its first column is normal and has $\{y_{1},y_{2},\dots,y_{n}\}$ as a fundamental
+  set of solutions on $(a,b)$.
 
-  \item\label{exer:9.1.24} Use the method suggested by Exercise~\ref{exer:9.1.23} to find a linear homogeneous equation such that the given set of functions is a fundamental set of solutions on intervals on which the Wronskian of the set has no zeros.
+  \item\label{exer:9.1.24} Use the method suggested by Exercise~\ref{exer:9.1.23} to find a linear
+        homogeneous equation such that the given set of functions is a fundamental set of solutions
+        on intervals on which the Wronskian of the set has no zeros.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \part{a} $\{x,\,x^{2}-1,\,x^{2}+1\}$ & \part{b} $\{e^{x},\,e^{-x},\,x\}$

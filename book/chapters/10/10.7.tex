@@ -5,13 +5,22 @@ We now consider the nonhomogeneous linear system
 \[
   {\bf y}'=A(t){\bf y}+{\bf f}(t),
 \]
-where $A$ is an $n\times n$ matrix function and ${\bf f}$ is an $n$-vector forcing function. Associated with this system is the {\color{blue}\it complementary system\/} ${\bf y}'=A(t){\bf y}$.
+where $A$ is an $n\times n$ matrix function and ${\bf f}$ is an $n$-vector forcing function.
+Associated with this system is the {\color{blue}\it complementary system\/} ${\bf y}'=A(t){\bf y}$.
 
-The next theorem is analogous to Theorems~\ref{thmtype:5.3.2} and \ref{thmtype:9.1.5}. It shows how to find the general solution of ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ if we know a particular solution of ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ and a fundamental set of solutions of the complementary system. We leave the proof as an exercise (Exercise~\ref{exer:10.7.21}).
+The next theorem is analogous to Theorems~\ref{thmtype:5.3.2} and \ref{thmtype:9.1.5}. It shows how
+to find the general solution of ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ if we know a particular solution
+of ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ and a fundamental set of solutions of the complementary system.
+We leave the proof as an exercise (Exercise~\ref{exer:10.7.21}).
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:10.7.1} Suppose the $n\times n$ matrix function $A$ and the $n$-vector function ${\bf f}$ are continuous on $(a,b)$. Let ${\bf y}_{p}$ be a particular solution of ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ on $(a,b)$, and let $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ be a fundamental set of solutions of the complementary equation ${\bf y}'=A(t){\bf y}$ on $(a,b)$. Then ${\bf y}$ is a solution of ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ on $(a,b)$ if and only if
+  \label{thmtype:10.7.1} Suppose the $n\times n$ matrix function $A$ and the $n$-vector function
+  ${\bf f}$ are continuous on $(a,b)$. Let ${\bf y}_{p}$ be a particular solution of
+  ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ on $(a,b)$, and let
+  $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ be a fundamental set of solutions of the
+  complementary equation ${\bf y}'=A(t){\bf y}$ on $(a,b)$. Then ${\bf y}$ is a solution of
+  ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ on $(a,b)$ if and only if
   \[
     {\bf y}={\bf y}_{p}+c_{1}{\bf y}_{1}+c_{2}{\bf y}_{2}+\cdots+c_{n}{\bf y}_{n},
   \]
@@ -21,7 +30,11 @@ The next theorem is analogous to Theorems~\ref{thmtype:5.3.2} and \ref{thmtype:9
 \boxit{Finding a Particular Solution of a Nonhomogeneous System}
 
 \noindent
-We now discuss an extension of the method of variation of parameters to linear nonhomogeneous systems. This method will produce a particular solution of a nonhomogeneous system ${\bf y}'=A(t){\bf y}+{\bf f}(t)$ provided that we know a fundamental matrix for the complementary system. To derive the method, suppose $Y$ is a fundamental matrix for the complementary system; that is,
+We now discuss an extension of the method of variation of parameters to linear nonhomogeneous
+systems. This method will produce a particular solution of a nonhomogeneous system
+${\bf y}'=A(t){\bf y}+{\bf f}(t)$ provided that we know a fundamental matrix for the complementary
+system. To derive the method, suppose $Y$ is a fundamental matrix for the complementary system; that
+is,
 \[
   Y=\left[
   \begin{array}{cccc}
@@ -53,7 +66,8 @@ where
     y_{nn}
   \end{array}\right]
 \]
-is a fundamental set of solutions of the complementary system. In Section~10.3 we saw that $Y'=A(t)Y$. We seek a particular solution of
+is a fundamental set of solutions of the complementary system. In Section~10.3 we saw that
+$Y'=A(t)Y$. We seek a particular solution of
 \begin{equation}
   \label{eq:10.7.1}{\bf y}'=A(t){\bf y}+{\bf f}(t)
 \end{equation}
@@ -67,13 +81,17 @@ where ${\bf u}$ is to be determined. Differentiating \eqref{eq:10.7.2} yields
                & = & AY{\bf u}+Y{\bf u}'\mbox{ (since $Y'=AY$)} \\
                & = & A{\bf y}_{p}+Y{\bf u}'\mbox{ (since $Y{\bf u}={\bf y}_{p}$)}.
 \end{eqnarray*}
-Comparing this with \eqref{eq:10.7.1} shows that ${\bf y}_{p}=Y{\bf u}$ is a solution of \eqref{eq:10.7.1} if and only if
+Comparing this with \eqref{eq:10.7.1} shows that ${\bf y}_{p}=Y{\bf u}$ is a solution of
+\eqref{eq:10.7.1} if and only if
 \[
   Y{\bf u}'={\bf f}.
 \]
-Thus, we can find a particular solution ${\bf y}_{p}$ by solving this equation for ${\bf u}'$, integrating to obtain ${\bf u}$, and computing $Y{\bf u}$. We can take all constants of integration to be zero, since any particular solution will suffice.
+Thus, we can find a particular solution ${\bf y}_{p}$ by solving this equation for ${\bf u}'$,
+integrating to obtain ${\bf u}$, and computing $Y{\bf u}$. We can take all constants of integration
+to be zero, since any particular solution will suffice.
 
-Exercise~\ref{exer:10.7.22} sketches a proof that this method is analogous to the method of variation of parameters discussed in Sections~5.7 and 9.4 for scalar linear equations.
+Exercise~\ref{exer:10.7.22} sketches a proof that this method is analogous to the method of
+variation of parameters discussed in Sections~5.7 and 9.4 for scalar linear equations.
 
 \begin{example}
   \label{example:10.7.1} \rm \mbox{}
@@ -127,7 +145,8 @@ are linearly independent solutions of \eqref{eq:10.7.4}. Therefore
     e^{3t} & -e^{-t}
   \end{array}\right]
 \]
-is a fundamental matrix for \eqref{eq:10.7.4}. We seek a particular solution ${\bf y}_{p}=Y{\bf u}$ of \eqref{eq:10.7.3}, where $Y{\bf u}'={\bf f}$; that is,
+is a fundamental matrix for \eqref{eq:10.7.4}. We seek a particular solution ${\bf y}_{p}=Y{\bf u}$
+of \eqref{eq:10.7.3}, where $Y{\bf u}'={\bf f}$; that is,
 \[
   \left[
   \begin{array}{rr}
@@ -225,7 +244,11 @@ Writing \eqref{eq:10.7.5} in terms of coordinates yields
 \end{eqnarray*}
 so our result is consistent with Example~\ref{example:10.2.1}. \bbox.
 
-If $A$ isn't a constant matrix, it's usually difficult to find a fundamental set of solutions for the system ${\bf y}'=A(t){\bf y}$. It is beyond the scope of this text to discuss methods for doing this. Therefore, in the following examples and in the exercises involving systems with variable coefficient matrices we'll provide fundamental matrices for the complementary systems without explaining how they were obtained.
+If $A$ isn't a constant matrix, it's usually difficult to find a fundamental set of solutions for
+the system ${\bf y}'=A(t){\bf y}$. It is beyond the scope of this text to discuss methods for doing
+this. Therefore, in the following examples and in the exercises involving systems with variable
+coefficient matrices we'll provide fundamental matrices for the complementary systems without
+explaining how they were obtained.
 
 \begin{example}
   \label{example:10.7.2} \rm Find a particular solution of
@@ -247,7 +270,8 @@ If $A$ isn't a constant matrix, it's usually difficult to find a fundamental set
   is a fundamental matrix for the complementary system.
 \end{example}
 
-\solution We seek a particular solution ${\bf y}_{p}=Y{\bf u}$ of \eqref{eq:10.7.6} where $Y{\bf u}'={\bf f}$; that is,
+\solution We seek a particular solution ${\bf y}_{p}=Y{\bf u}$ of \eqref{eq:10.7.6} where
+$Y{\bf u}'={\bf f}$; that is,
 \[
   \left[
   \begin{array}{cc}
@@ -324,7 +348,8 @@ is a particular solution of \eqref{eq:10.7.6}.
   is a fundamental matrix for the complementary system on $(-\infty,0)$ and $(0,\infty)$.
 \end{example}
 
-\solution We seek a particular solution ${\bf y}_{p}=Y{\bf u}$ of \eqref{eq:10.7.7} where $Y{\bf u}'={\bf f}$; that is,
+\solution We seek a particular solution ${\bf y}_{p}=Y{\bf u}$ of \eqref{eq:10.7.7} where
+$Y{\bf u}'={\bf f}$; that is,
 \[
   \left[
   \begin{array}{cc}
@@ -442,7 +467,8 @@ are linearly independent solutions of \eqref{eq:10.7.9}. Therefore
     1 & 0     & e^{t}
   \end{array}\right]
 \]
-is a fundamental matrix for \eqref{eq:10.7.9}. We seek a particular solution ${\bf y}_{p}=Y{\bf u}$ of \eqref{eq:10.7.8}, where $Y{\bf u}'={\bf f}$; that is,
+is a fundamental matrix for \eqref{eq:10.7.9}. We seek a particular solution ${\bf y}_{p}=Y{\bf u}$
+of \eqref{eq:10.7.8}, where $Y{\bf u}'={\bf f}$; that is,
 \[
   \left[
   \begin{array}{ccc}
@@ -566,7 +592,8 @@ where ${\bf c}$ is an arbitrary constant vector.
   is a fundamental matrix for the complementary system.
 \end{example}
 
-\solution We seek a particular solution of \eqref{eq:10.7.10} in the form ${\bf y}_{p}=Y{\bf u}$, where $Y{\bf u}'={\bf f}$; that is,
+\solution We seek a particular solution of \eqref{eq:10.7.10} in the form ${\bf y}_{p}=Y{\bf u}$,
+where $Y{\bf u}'={\bf f}$; that is,
 \[
   \left[
   \begin{array}{ccc}
@@ -663,7 +690,8 @@ is a particular solution of \eqref{eq:10.7.10}.
 
   \item\label{exer:10.7.10}$\dst{{\bf y}'=\frac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf y}+\left[\begin{array}{cc}e^{t}\\e^{t}\\e^{t}\end{array}\right]}$
 
-  \exercisetext{In Exercises~\ref{exer:10.7.11}--\ref{exer:10.7.20} find a particular solution, given that $Y$ is a fundamental matrix for the complementary system.}
+  \exercisetext{In Exercises~\ref{exer:10.7.11}--\ref{exer:10.7.20} find a particular solution,
+  given that $Y$ is a fundamental matrix for the complementary system.}
 
   \item\label{exer:10.7.11} $\dst{{\bf y}'=\frac{1}{t}\left[\begin{array}{rc}1&t\\-t&1\end{array}\right]{\bf y} +t\left[\begin{array}{cc}\cos t\\\sin t\end{array}\right];\quad Y=t\left[\begin{array}{rc}\cos t&\sin t\\-\sin t&\cos t\end{array}\right]}$
 
@@ -700,7 +728,8 @@ is a particular solution of \eqref{eq:10.7.10}.
     \]
 
     \item % (b)
-    Suppose (A) is normal on an interval $(a,b)$ and $\{y_{1},y_{2},\dots,y_{n}\}$ is a fundamental set of solutions of
+    Suppose (A) is normal on an interval $(a,b)$ and $\{y_{1},y_{2},\dots,y_{n}\}$ is a fundamental
+    set of solutions of
     \[
       P_{0}(t)y^{(n)}+P_{1}(t)y^{(n-1)}+\cdots+P_{n}(t)y=0 \eqno{\rm(C)}
     \]
@@ -725,7 +754,8 @@ is a particular solution of \eqref{eq:10.7.10}.
     is a solution of (D).
 
     \item % (c)
-    Let $y_{p}=u_{1}y_{1}+u_{1}y_{2}+\cdots+u_{n}y_{n}$ be a particular solution of (A), obtained by the method of variation of parameters for scalar equations as given in Section~9.4, and define
+    Let $y_{p}=u_{1}y_{1}+u_{1}y_{2}+\cdots+u_{n}y_{n}$ be a particular solution of (A), obtained by
+    the method of variation of parameters for scalar equations as given in Section~9.4, and define
     \[
       {\bf u}=\left[
       \begin{array}{c}
@@ -738,10 +768,16 @@ is a particular solution of \eqref{eq:10.7.10}.
     Show that ${\bf y}_{p}=Y{\bf u}$ is a solution of (B).
 
     \item % (d)
-    Let ${\bf y}_{p}=Y{\bf u}$ be a particular solution of (B), obtained by the method of variation of parameters for systems as given in this section. Show that $y_{p}=u_{1}y_{1}+u_{1}y_{2}+\cdots+u_{n}y_{n}$ is a solution of (A).
+    Let ${\bf y}_{p}=Y{\bf u}$ be a particular solution of (B), obtained by the method of variation
+    of parameters for systems as given in this section. Show that
+    $y_{p}=u_{1}y_{1}+u_{1}y_{2}+\cdots+u_{n}y_{n}$ is a solution of (A).
   \end{alist}
 
-  \item\label{exer:10.7.23} Suppose the $n\times n$ matrix function $A$ and the $n$--vector function ${\bf f}$ are continuous on $(a,b)$. Let $t_{0}$ be in $(a,b)$, let ${\bf k}$ be an arbitrary constant vector, and let $Y$ be a fundamental matrix for the homogeneous system ${\bf y}'=A(t){\bf y}$. Use variation of parameters to show that the solution of the initial value problem
+  \item\label{exer:10.7.23} Suppose the $n\times n$ matrix function $A$ and the $n$--vector function
+        ${\bf f}$ are continuous on $(a,b)$. Let $t_{0}$ be in $(a,b)$, let ${\bf k}$ be an
+        arbitrary constant vector, and let $Y$ be a fundamental matrix for the homogeneous system
+        ${\bf y}'=A(t){\bf y}$. Use variation of parameters to show that the solution of the initial
+        value problem
   \[
     {\bf y}'=A(t){\bf y}+{\bf f}(t),\quad{\bf y}(t_{0})={\bf k}
   \]

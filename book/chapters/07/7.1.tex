@@ -1,7 +1,12 @@
 \section{Review of Power Series}
 
 \noindent
-Many applications give rise to differential equations with solutions that can't be expressed in terms of elementary functions such as polynomials, rational functions, exponential and logarithmic functions, and trigonometric functions. The solutions of some of the most important of these equations can be expressed in terms of power series. We'll study such equations in this chapter. In this section we review relevant properties of power series. We'll omit proofs, which can be found in any standard calculus text.
+Many applications give rise to differential equations with solutions that can't be expressed in
+terms of elementary functions such as polynomials, rational functions, exponential and logarithmic
+functions, and trigonometric functions. The solutions of some of the most important of these
+equations can be expressed in terms of power series. We'll study such equations in this chapter. In
+this section we review relevant properties of power series. We'll omit proofs, which can be found in
+any standard calculus text.
 
 \begin{definition}
   \color{blue}
@@ -9,14 +14,19 @@ Many applications give rise to differential equations with solutions that can't 
   \begin{equation}
     \label{eq:7.1.1}\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n},
   \end{equation}
-  where $x_{0}$ and $a_{0}$, $a_{1}$, \dots, $a_{n}$, \dots are constants, is called a {\color{blue}\it power series in\/} $x-x_{0}$. We say that the power series \eqref{eq:7.1.1} {\color{blue}\it converges\/} for a given $x$ if the limit
+  where $x_{0}$ and $a_{0}$, $a_{1}$, \dots, $a_{n}$, \dots are constants, is called a
+  {\color{blue}\it power series in\/} $x-x_{0}$. We say that the power series \eqref{eq:7.1.1}
+  {\color{blue}\it converges\/} for a given $x$ if the limit
   \[
     \lim_{N\to\infty}\sum_{n=0}^{N}a_{n}(x-x_{0})^{n}
   \]
   exists; otherwise, we say that the power series {\color{blue}\it diverges\/} for the given $x$.
 \end{definition}
 
-A power series in $x-x_{0}$ must converge if $x=x_{0}$, since the positive powers of $x-x_{0}$ are all zero in this case. This may be the only value of $x$ for which the power series converges. However, the next theorem shows that if the power series converges for some $x\ne x_{0}$ then the set of all values of $x$ for which it converges forms an interval.
+A power series in $x-x_{0}$ must converge if $x=x_{0}$, since the positive powers of $x-x_{0}$ are
+all zero in this case. This may be the only value of $x$ for which the power series converges.
+However, the next theorem shows that if the power series converges for some $x\ne x_{0}$ then the
+set of all values of $x$ for which it converges forms an interval.
 
 \begin{theorem}
   \color{blue}
@@ -33,23 +43,36 @@ A power series in $x-x_{0}$ must converge if $x=x_{0}$, since the positive power
     The power series converges for all values of $x$.
 
     \item % (iii)
-    There's a positive number $R$ such that the power series converges if $|x-x_{0}|<R$ and diverges if $|x-x_{0}|>R$.
+    There's a positive number $R$ such that the power series converges if $|x-x_{0}|<R$ and diverges
+    if $|x-x_{0}|>R$.
   \end{rmlist}
 \end{theorem}
 
-In case~(iii) we say that $R$ is the {\color{blue}\it radius of convergence\/} of the power series. For convenience, we include the other two cases in this definition by defining $R=0$ in case~(i) and $R=\infty$ in case~(ii). We define the {\color{blue}\it open interval of convergence\/} of $\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ to be
+In case~(iii) we say that $R$ is the {\color{blue}\it radius of convergence\/} of the power series.
+For convenience, we include the other two cases in this definition by defining $R=0$ in case~(i) and
+$R=\infty$ in case~(ii). We define the {\color{blue}\it open interval of convergence\/} of
+$\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ to be
 \[
   (x_{0}-R,x_{0}+R)\quad\mbox{ if }\quad0<R<\infty,\quad\mbox{ or }\quad(-\infty,\infty)\quad\mbox{ if }\quad R=\infty.
 \]
-If $R$ is finite, no general statement can be made concerning convergence at the endpoints $x=x_{0}\pm R$ of the open interval of convergence; the series may converge at one or both points, or diverge at both.
+If $R$ is finite, no general statement can be made concerning convergence at the endpoints
+$x=x_{0}\pm R$ of the open interval of convergence; the series may converge at one or both points,
+or diverge at both.
 
-Recall from calculus that a series of constants $\sum_{n=0}^{\infty}\alpha_{n}$ is said to {\color{blue}\it converge absolutely\/} if the series of absolute values $\sum_{n=0}^{\infty}|\alpha_{n}|$ converges. It can be shown that a power series $\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ with a positive radius of convergence $R$ converges absolutely in its open interval of convergence; that is, the series
+Recall from calculus that a series of constants $\sum_{n=0}^{\infty}\alpha_{n}$ is said to
+{\color{blue}\it converge absolutely\/} if the series of absolute values
+$\sum_{n=0}^{\infty}|\alpha_{n}|$ converges. It can be shown that a power series
+$\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ with a positive radius of convergence $R$ converges
+absolutely in its open interval of convergence; that is, the series
 \[
   \sum_{n=0}^{\infty}|a_{n}||x-x_{0}|^{n}
 \]
-of absolute values converges if $|x-x_{0}|<R$. However, if $R<\infty$, the series may fail to converge absolutely at an endpoint $x_{0}\pm R$, even if it converges there.
+of absolute values converges if $|x-x_{0}|<R$. However, if $R<\infty$, the series may fail to
+converge absolutely at an endpoint $x_{0}\pm R$, even if it converges there.
 
-The next theorem provides a useful method for determining the radius of convergence of a power series. It's derived in calculus by applying the ratio test to the corresponding series of absolute values. For related theorems see Exercises~\ref{exer:7.1.2} and \ref{exer:7.1.4}.
+The next theorem provides a useful method for determining the radius of convergence of a power
+series. It's derived in calculus by applying the ratio test to the corresponding series of absolute
+values. For related theorems see Exercises~\ref{exer:7.1.2} and \ref{exer:7.1.4}.
 
 \begin{theorem}
   \color{blue}
@@ -57,7 +80,8 @@ The next theorem provides a useful method for determining the radius of converge
   \[
     \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_{n}}\right|=L,
   \]
-  where $0\le L\le\infty$. Then the radius of convergence of $\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ is $R=1/L$, which should be interpreted to mean that $R=0$ if $L=\infty$, or $R=\infty$ if $L=0$.
+  where $0\le L\le\infty$. Then the radius of convergence of $\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$
+  is $R=1/L$, which should be interpreted to mean that $R=0$ if $L=\infty$, or $R=\infty$ if $L=0$.
 \end{theorem}
 
 \begin{example}
@@ -95,10 +119,13 @@ $x_{0}$ is defined by
 \[
   \sum_{n=0}^{\infty}\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n}.
 \]
-In the special case where $x_{0}=0$, this series is also called the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Maclaurin/}{\color{blue}
+In the special case where $x_{0}=0$, this series is also called the
+\href{https://mathshistory.st-andrews.ac.uk/Biographies/Maclaurin/}{\color{blue}
 \it Maclaurin series of\/} $f$.
 
-Taylor series for most of the common elementary functions converge to the functions on their open intervals of convergence. For example, you are probably familiar with the following Maclaurin series:
+Taylor series for most of the common elementary functions converge to the functions on their open
+intervals of convergence. For example, you are probably familiar with the following Maclaurin
+series:
 \begin{eqnarray}
   e^x&=&\sum_{n=0}^\infty {\frac{x^{n}}{n!}},\quad -\infty<x<\infty,\label{eq:7.1.2}\\ \sin x&=&\sum_{n=0}^\infty(-1)^n \frac{x^{2n+1}}{(2n+1)!},\quad -\infty<x<\infty, \label{eq:7.1.3}\\ %dummy \eqref{eq:7.1.3}
   \cos x&=&\sum_{n=0}^\infty(-1)^n \frac{x^{2n}}{(2n)!},\quad -\infty<x<\infty, \label{eq:7.1.4}\\ %dummy \eqref{eq:7.1.4}
@@ -112,9 +139,14 @@ A power series with a positive radius of convergence defines a function
 \[
   f(x)=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
 \]
-on its open interval of convergence. We say that the series {\color{blue}\it represents\/} $f$ on the open interval of convergence. A function $f$ represented by a power series may be a familiar elementary function as in \eqref{eq:7.1.2}--\eqref{eq:7.1.5}; however, it often happens that $f$ isn't a familiar function, so the series actually {\color{blue}\it defines\/} $f$.
+on its open interval of convergence. We say that the series {\color{blue}\it represents\/} $f$ on
+the open interval of convergence. A function $f$ represented by a power series may be a familiar
+elementary function as in \eqref{eq:7.1.2}--\eqref{eq:7.1.5}; however, it often happens that $f$
+isn't a familiar function, so the series actually {\color{blue}\it defines\/} $f$.
 
-The next theorem shows that a function represented by a power series has derivatives of all orders on the open interval of convergence of the power series, and provides power series representations of the derivatives.
+The next theorem shows that a function represented by a power series has derivatives of all orders
+on the open interval of convergence of the power series, and provides power series representations
+of the derivatives.
 
 \begin{theorem}
   \color{blue}
@@ -122,7 +154,9 @@ The next theorem shows that a function represented by a power series has derivat
   \[
     f(x)=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
   \]
-  with positive radius of convergence $R$ has derivatives of all orders in its open interval of convergence, and successive derivatives can be obtained by repeatedly differentiating term by term; that is,
+  with positive radius of convergence $R$ has derivatives of all orders in its open interval of
+  convergence, and successive derivatives can be obtained by repeatedly differentiating term by
+  term; that is,
   \begin{eqnarray}
     f'(x)      & =      & \dst{\sum_{n=1}^{\infty}na_{n}(x-x_{0})^{n-1}}\label{eq:7.1.6},      \\[10pt]
     f''(x)     & =      & \dst{\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}},\label{eq:7.1.7} \\
@@ -147,7 +181,9 @@ The next theorem shows that a function represented by a power series has derivat
 \boxit{Uniqueness of Power Series}
 
 \noindent
-The next theorem shows that if $f$ is {\color{blue}\it defined\/} by a power series in $x-x_{0}$ with a positive radius of convergence, then the power series is the Taylor series of $f$ about $x_{0}$.
+The next theorem shows that if $f$ is {\color{blue}\it defined\/} by a power series in $x-x_{0}$
+with a positive radius of convergence, then the power series is the Taylor series of $f$ about
+$x_{0}$.
 
 \begin{theorem}
   \color{blue}
@@ -172,7 +208,8 @@ This implies that
 \]
 Except for notation, this is the same as \eqref{eq:7.1.9}.
 
-The next theorem lists two important properties of power series that follow from Theorem~\ref{thmtype:7.1.5}.
+The next theorem lists two important properties of power series that follow from
+Theorem~\ref{thmtype:7.1.5}.
 
 \begin{theorem}
   \color{blue}
@@ -184,18 +221,21 @@ The next theorem lists two important properties of power series that follow from
     \[
       \sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}=\sum_{n=0}^{\infty}b_{n}(x-x_{0})^{n}
     \]
-    for all $x$ in an open interval that contains $x_{0}$, then $a_{n}=b_{n}$ for $n=0$, $1$, $2$, \dots.
+    for all $x$ in an open interval that contains $x_{0}$, then $a_{n}=b_{n}$ for $n=0$, $1$, $2$,
+    \dots.
 
     \item % (b)
     If
     \[
       \sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}=0
     \]
-    for all $x$ in an open interval that contains $x_{0}$, then $a_{n}=0$ for $n=0$, $1$, $2$, \dots.
+    for all $x$ in an open interval that contains $x_{0}$, then $a_{n}=0$ for $n=0$, $1$, $2$,
+    \dots.
   \end{alist}
 \end{theorem}
 
-To obtain \part{a} we observe that the two series represent the same function $f$ on the open interval; hence, Theorem~\ref{thmtype:7.1.5} implies that
+To obtain \part{a} we observe that the two series represent the same function $f$ on the open
+interval; hence, Theorem~\ref{thmtype:7.1.5} implies that
 \[
   a_{n}=b_{n}=\frac{f^{(n)}(x_{0})}{n!},\quad n=0,1,2,\dots.
 \]
@@ -209,19 +249,26 @@ If $f$ has $N$ derivatives at a point $x_{0}$, we say that
   T_{N}(x)=\sum_{n=0}^{N}\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n}
 \]
 is the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/}{\color{blue}
-\it $N$-th Taylor polynomial of $f$ about $x_{0}$\/}. This definition and Theorem~\ref{thmtype:7.1.5} imply that if
+\it $N$-th Taylor polynomial of $f$ about $x_{0}$\/}. This definition and
+Theorem~\ref{thmtype:7.1.5} imply that if
 \[
   f(x)=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n},
 \]
-where the power series has a positive radius of convergence, then the Taylor polynomials of $f$ about $x_{0}$ are given by
+where the power series has a positive radius of convergence, then the Taylor polynomials of $f$
+about $x_{0}$ are given by
 \[
   T_{N}(x)=\sum_{n=0}^{N}a_{n}(x-x_{0})^{n}.
 \]
-In numerical applications, we use the Taylor polynomials to approximate $f$ on subintervals of the open interval of convergence of the power series. For example, \eqref{eq:7.1.2} implies that the Taylor polynomial $T_{N}$ of $f(x)=e^{x}$ is
+In numerical applications, we use the Taylor polynomials to approximate $f$ on subintervals of the
+open interval of convergence of the power series. For example, \eqref{eq:7.1.2} implies that the
+Taylor polynomial $T_{N}$ of $f(x)=e^{x}$ is
 \[
   T_{N}(x)=\sum_{n=0}^{N}\frac{x^{n}}{n!}.
 \]
-The solid curve in Figure~\ref{figure:7.1.1} is the graph of $y=e^{x}$ on the interval $[0,5]$. The dotted curves in Figure~\ref{figure:7.1.1} are the graphs of the Taylor polynomials $T_{1}$, \dots, $T_{6}$ of $y=e^{x}$ about $x_{0}=0$. From this figure, we conclude that the accuracy of the approximation of $y=e^{x}$ by its Taylor polynomial $T_{N}$ improves as $N$ increases.
+The solid curve in Figure~\ref{figure:7.1.1} is the graph of $y=e^{x}$ on the interval $[0,5]$. The
+dotted curves in Figure~\ref{figure:7.1.1} are the graphs of the Taylor polynomials $T_{1}$, \dots,
+$T_{6}$ of $y=e^{x}$ about $x_{0}=0$. From this figure, we conclude that the accuracy of the
+approximation of $y=e^{x}$ by its Taylor polynomial $T_{N}$ improves as $N$ increases.
 
 \begin{figure}[tbp]
   \centering
@@ -234,34 +281,52 @@ The solid curve in Figure~\ref{figure:7.1.1} is the graph of $y=e^{x}$ on the in
 \boxit{Shifting the Summation Index}
 
 \noindent
-In Definition~\ref{thmtype:7.1.1} of a power series in $x-x_{0}$, the $n$-th term is a constant multiple of $(x-x_{0})^{n}$. This isn't true in \eqref{eq:7.1.6}, \eqref{eq:7.1.7}, and \eqref{eq:7.1.8}, where the general terms are constant multiples of $(x-x_{0})^{n-1}$, $(x-x_{0})^{n-2}$, and $(x-x_{0})^{n-k}$, respectively. However, these series can all be rewritten so that their $n$-th terms are constant multiples of $(x-x_{0})^{n}$. For example, letting $n=k+1$ in the series in \eqref{eq:7.1.6} yields
+In Definition~\ref{thmtype:7.1.1} of a power series in $x-x_{0}$, the $n$-th term is a constant
+multiple of $(x-x_{0})^{n}$. This isn't true in \eqref{eq:7.1.6}, \eqref{eq:7.1.7}, and
+\eqref{eq:7.1.8}, where the general terms are constant multiples of $(x-x_{0})^{n-1}$,
+$(x-x_{0})^{n-2}$, and $(x-x_{0})^{n-k}$, respectively. However, these series can all be rewritten
+so that their $n$-th terms are constant multiples of $(x-x_{0})^{n}$. For example, letting $n=k+1$
+in the series in \eqref{eq:7.1.6} yields
 \begin{equation}
   \label{eq:7.1.10}f'(x)=\sum_{k=0}^{\infty}(k+1)a_{k+1}(x-x_{0})^{k},
 \end{equation}
-where we start the new summation index $k$ from zero so that the first term in \eqref{eq:7.1.10} (obtained by setting $k=0$) is the same as the first term in \eqref{eq:7.1.6} (obtained by setting $n=1$). However, the sum of a series is independent of the symbol used to denote the summation index, just as the value of a definite integral is independent of the symbol used to denote the variable of integration. Therefore we can replace $k$ by $n$ in \eqref{eq:7.1.10} to obtain
+where we start the new summation index $k$ from zero so that the first term in \eqref{eq:7.1.10}
+(obtained by setting $k=0$) is the same as the first term in \eqref{eq:7.1.6} (obtained by setting
+$n=1$). However, the sum of a series is independent of the symbol used to denote the summation
+index, just as the value of a definite integral is independent of the symbol used to denote the
+variable of integration. Therefore we can replace $k$ by $n$ in \eqref{eq:7.1.10} to obtain
 \begin{equation}
   \label{eq:7.1.11}f'(x)=\sum_{n=0}^{\infty}(n+1)a_{n+1}(x-x_{0})^{n},
 \end{equation}
 where the general term is a constant multiple of $(x-x_{0})^{n}$.
 
-It isn't really necessary to introduce the intermediate summation index $k$. We can obtain \eqref{eq:7.1.11} directly from \eqref{eq:7.1.6} by replacing $n$ by $n+1$ in the general term of \eqref{eq:7.1.6} and subtracting $1$ from the lower limit of \eqref{eq:7.1.6}. More generally, we use the following procedure for shifting indices.
+It isn't really necessary to introduce the intermediate summation index $k$. We can obtain
+\eqref{eq:7.1.11} directly from \eqref{eq:7.1.6} by replacing $n$ by $n+1$ in the general term of
+\eqref{eq:7.1.6} and subtracting $1$ from the lower limit of \eqref{eq:7.1.6}. More generally, we
+use the following procedure for shifting indices.
 
 \bigbox{%\figspace{-25pt}
-\begin{center}{\bf Shifting the Summation Index in a Power Series}\end{center} For any integer $k$, the power series \[\sum_{n=n_{0}}^{\infty}b_{n}(x-x_{0})^{n-k}\] can be rewritten as \[\sum_{n=n_{0}-k}^{\infty}b_{n+k}(x-x_{0})^{n};\] that is, replacing $n$ by $n+k$ in the general term and subtracting $k$ from the lower limit of summation leaves the series unchanged.}
+\begin{center}{\bf Shifting the Summation Index in a Power Series}\end{center} For any integer $k$,
+the power series \[\sum_{n=n_{0}}^{\infty}b_{n}(x-x_{0})^{n-k}\] can be rewritten
+as \[\sum_{n=n_{0}-k}^{\infty}b_{n+k}(x-x_{0})^{n};\] that is, replacing $n$ by $n+k$ in the general
+term and subtracting $k$ from the lower limit of summation leaves the series unchanged.}
 
 \begin{example}
-  \label{example:7.1.3} \rm Rewrite the following power series from \eqref{eq:7.1.7} and \eqref{eq:7.1.8} so that the general term in each is a constant multiple of $(x-x_{0})^{n}$:
+  \label{example:7.1.3} \rm Rewrite the following power series from \eqref{eq:7.1.7} and
+  \eqref{eq:7.1.8} so that the general term in each is a constant multiple of $(x-x_{0})^{n}$:
   \[
     \mbox{\bf (a)}\; \sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}\quad\mbox{\bf (b)}\; \sum_{n=k}^{\infty}n(n-1)\cdots(n-k+1)a_{n}(x-x_{0})^{n-k}.
   \]
 \end{example}
 
-\solutionpart{a} Replacing $n$ by $n+2$ in the general term and subtracting $2$ from the lower limit of summation yields
+\solutionpart{a} Replacing $n$ by $n+2$ in the general term and subtracting $2$ from the lower limit
+of summation yields
 \[
   \sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}= \sum_{n=0}^{\infty}(n+2)(n+1)a_{n+2}(x-x_{0})^{n}.
 \]
 
-\solutionpart{b} Replacing $n$ by $n+k$ in the general term and subtracting $k$ from the lower limit of summation yields
+\solutionpart{b} Replacing $n$ by $n+k$ in the general term and subtracting $k$ from the lower limit
+of summation yields
 \[
   \sum_{n=k}^{\infty}n(n-1)\cdots(n-k+1)a_{n}(x-x_{0})^{n-k}= \sum_{n=0}^{\infty}(n+k)(n+k-1)\cdots(n+1)a_{n+k}(x-x_{0})^{n}.
 \]
@@ -271,7 +336,8 @@ It isn't really necessary to introduce the intermediate summation index $k$. We 
   \[
     f(x)=\sum_{n=0}^{\infty}a_{n}x^{n},
   \]
-  write the function $xf''$ as a power series in which the general term is a constant multiple of~$x^{n}$.
+  write the function $xf''$ as a power series in which the general term is a constant multiple
+  of~$x^{n}$.
 \end{example}
 
 \solution From Theorem~\ref{thmtype:7.1.4} with $x_{0}=0$,
@@ -282,7 +348,8 @@ Therefore
 \[
   xf''(x)=\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-1}.
 \]
-Replacing $n$ by $n+1$ in the general term and subtracting $1$ from the lower limit of summation yields
+Replacing $n$ by $n+1$ in the general term and subtracting $1$ from the lower limit of summation
+yields
 \[
   xf''(x)=\sum_{n=1}^{\infty}(n+1)na_{n+1}x^{n}.
 \]
@@ -290,12 +357,14 @@ We can also write this as
 \[
   xf''(x)=\sum_{n=0}^{\infty}(n+1)na_{n+1}x^{n},
 \]
-since the first term in this last series is zero. (We'll see later that sometimes it's useful to include zero terms at the beginning of a series.)
+since the first term in this last series is zero. (We'll see later that sometimes it's useful to
+include zero terms at the beginning of a series.)
 
 \boxit{Linear Combinations of Power Series}
 
 \noindent
-If a power series is multiplied by a constant, then the constant can be placed inside the summation; that is,
+If a power series is multiplied by a constant, then the constant can be placed inside the summation;
+that is,
 \[
   c\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}=\sum_{n=0}^{\infty}ca_{n}(x-x_{0})^{n}.
 \]
@@ -303,17 +372,21 @@ Two power series
 \[
   f(x)=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}\quad\mbox{ and }\quad g(x)=\sum_{n=0}^{\infty}b_{n}(x-x_{0})^{n}
 \]
-with positive radii of convergence can be added term by term at points common to their open intervals of convergence; thus, if the first series converges for $|x-x_{0}|<R_{1}$ and the second converges for $|x-x_{0}|<R_{2}$, then
+with positive radii of convergence can be added term by term at points common to their open
+intervals of convergence; thus, if the first series converges for $|x-x_{0}|<R_{1}$ and the second
+converges for $|x-x_{0}|<R_{2}$, then
 \[
   f(x)+g(x)=\sum_{n=0}^{\infty}(a_{n}+b_{n})(x-x_{0})^{n}
 \]
-for $|x-x_{0}|<R$, where $R$ is the smaller of $R_{1}$ and $R_{2}$. More generally, linear combinations of power series can be formed term by term; for example,
+for $|x-x_{0}|<R$, where $R$ is the smaller of $R_{1}$ and $R_{2}$. More generally, linear
+combinations of power series can be formed term by term; for example,
 \[
   c_{1}f(x)+c_{2}f(x)=\sum_{n=0}^{\infty}(c_{1}a_{n}+c_{2}b_{n})(x-x_{0})^{n}.
 \]
 
 \begin{example}
-  \label{example:7.1.5} \rm Find the Maclaurin series for $\cosh x$ as a linear combination of the Maclaurin series for $e^{x}$ and $e^{-x}$.
+  \label{example:7.1.5} \rm Find the Maclaurin series for $\cosh x$ as a linear combination of the
+  Maclaurin series for $e^{x}$ and $e^{-x}$.
 \end{example}
 
 \solution By definition,
@@ -340,7 +413,8 @@ we can rewrite \eqref{eq:7.1.12} more simply as
 \[
   \cosh x=\sum_{m=0}^{\infty}\frac{x^{2m}}{(2m)!}.
 \]
-This result is valid on $(-\infty,\infty)$, since this is the open interval of convergence of the Maclaurin series for $e^{x}$ and $e^{-x}$.
+This result is valid on $(-\infty,\infty)$, since this is the open interval of convergence of the
+Maclaurin series for $e^{x}$ and $e^{-x}$.
 
 \begin{example}
   \label{example:7.1.6} \rm Suppose
@@ -357,7 +431,8 @@ This result is valid on $(-\infty,\infty)$, since this is the open interval of c
     as a power series in $x$ on $I$.
 
     \item % (b)
-    Use the result of \part{a} to find necessary and sufficient conditions on the coefficients $\{a_{n}\}$ for $y$ to be a solution of the homogeneous equation
+    Use the result of \part{a} to find necessary and sufficient conditions on the coefficients
+    $\{a_{n}\}$ for $y$ to be a solution of the homogeneous equation
     \begin{equation}
       \label{eq:7.1.13}(2-x)y''+2y=0
     \end{equation}
@@ -377,7 +452,8 @@ Therefore
                 & = & \dst{\sum_{n=2}^{\infty}2n(n-1)a_{n}x^{n-2} -\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-1} +\sum_{n=0}^{\infty}2a_{n}x^{n}}.
   \end{array}
 \end{equation}
-To combine the three series we shift indices in the first two to make their general terms constant multiples of $x^{n}$; thus,
+To combine the three series we shift indices in the first two to make their general terms constant
+multiples of $x^{n}$; thus,
 \begin{equation}
   \label{eq:7.1.15}\sum_{n=2}^{\infty}2n(n-1)a_{n}x^{n-2}=\sum_{n=0}^{\infty}2(n+2)(n+1)a_{n+2}x^{n}
 \end{equation}
@@ -385,7 +461,8 @@ and
 \begin{equation}
   \label{eq:7.1.16}\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-1}=\sum_{n=1}^{\infty}(n+1)na_{n+1}x^{n}=\sum_{n=0}^{\infty}(n+1)na_{n+1}x^{n},
 \end{equation}
-where we added a zero term in the last series so that when we substitute from \eqref{eq:7.1.15} and \eqref{eq:7.1.16} into \eqref{eq:7.1.14} all three series will start with $n=0$; thus,
+where we added a zero term in the last series so that when we substitute from \eqref{eq:7.1.15} and
+\eqref{eq:7.1.16} into \eqref{eq:7.1.14} all three series will start with $n=0$; thus,
 \begin{equation}
   \label{eq:7.1.17}(2-x)y''+2y=\sum_{n=0}^{\infty}[2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_{n}]x^{n}.
 \end{equation}
@@ -394,7 +471,8 @@ where we added a zero term in the last series so that when we substitute from \e
 \begin{equation}
   \label{eq:7.1.18}2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_{n}=0,\quad n=0,1,2,\dots.
 \end{equation}
-Conversely, Theorem~\ref{thmtype:7.1.6}~\part{b} implies that if $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ satisfies \eqref{eq:7.1.13} on $I$, then \eqref{eq:7.1.18} holds.
+Conversely, Theorem~\ref{thmtype:7.1.6}~\part{b} implies that if $y=\sum_{n=0}^{\infty}a_{n}x^{n}$
+satisfies \eqref{eq:7.1.13} on $I$, then \eqref{eq:7.1.18} holds.
 
 \begin{example}
   \label{example:7.1.7} \rm Suppose
@@ -408,7 +486,8 @@ Conversely, Theorem~\ref{thmtype:7.1.6}~\part{b} implies that if $y=\sum_{n=0}^{
   as a power series in $x-1$ on $I$.
 \end{example}
 
-\solution Since we want a power series in $x-1$, we rewrite the coefficient of $y''$ in \eqref{eq:7.1.19} as $1+x=2+(x-1)$, so \eqref{eq:7.1.19} becomes
+\solution Since we want a power series in $x-1$, we rewrite the coefficient of $y''$ in
+\eqref{eq:7.1.19} as $1+x=2+(x-1)$, so \eqref{eq:7.1.19} becomes
 \[
   2y''+(x-1)y''+2(x-1)^{2}y'+3y.
 \]
@@ -423,13 +502,15 @@ Therefore
   2(x-1)^{2}y' & = & \sum_{n=1}^{\infty}2na_{n}(x-1)^{n+1},      \\
   3y           & = & \sum_{n=0}^{\infty}3a_{n}(x-1)^{n}.
 \end{eqnarray*}
-Before adding these four series we shift indices in the first three so that their general terms become constant multiples of $(x-1)^{n}$. This yields
+Before adding these four series we shift indices in the first three so that their general terms
+become constant multiples of $(x-1)^{n}$. This yields
 \begin{eqnarray}
   2y ''&=&\sum_{n=0}^\infty 2(n+2)(n+1)a_{n+2}(x-1)^n,\label{eq:7.1.20}\\ (x-1)y''&=&\sum_{n=0}^\infty (n+1)na_{n+1}(x-1)^n, \label{eq:7.1.21}\\ 2(x-1)^2y'&=&\sum_{n=1}^\infty 2(n-1)a_{n-1}(x-1)^n,\label{eq:7.1.22}\\
   %dummy \eqref{eq:7.1.22}
   3y&=&\sum_{n=0}^\infty 3a_n (x-1)^n, \label{eq:7.1.23}
 \end{eqnarray}
-where we added initial zero terms to the series in \eqref{eq:7.1.21} and \eqref{eq:7.1.22}. Adding \eqref{eq:7.1.20}--\eqref{eq:7.1.23} yields
+where we added initial zero terms to the series in \eqref{eq:7.1.21} and \eqref{eq:7.1.22}. Adding
+\eqref{eq:7.1.20}--\eqref{eq:7.1.23} yields
 \begin{eqnarray*}
   (1+x)y''+2(x-1)^{2}y'+3y & = & 2y''+(x-1)y''+2(x-1)^{2}y'+3y \\[5pt]
                            & = & \sum_{n=0}^{\infty}b_{n}(x-1)^{n},
@@ -439,11 +520,14 @@ where
   b_{0} & = & 4a_{2}+3a_{0},\label{eq:7.1.24} \\
   b_{n} & = & 2(n+2)(n+1)a_{n+2}+(n+1)na_{n+1}+2(n-1)a_{n-1}+3a_{n},\,n\ge1\label{eq:7.1.25}.
 \end{eqnarray}
-The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in \eqref{eq:7.1.25}, since the summation in \eqref{eq:7.1.22} begins with $n=1$, while those in \eqref{eq:7.1.20}, \eqref{eq:7.1.21}, and \eqref{eq:7.1.23} begin with $n=0$.
+The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in \eqref{eq:7.1.25},
+since the summation in \eqref{eq:7.1.22} begins with $n=1$, while those in \eqref{eq:7.1.20},
+\eqref{eq:7.1.21}, and \eqref{eq:7.1.23} begin with $n=0$.
 
 \exercises
 \begin{exerciselist}
-  \item\label{exer:7.1.1} For each power series use Theorem~\ref{thmtype:7.1.3} to find the radius of convergence $R$. If $R>0$, find the open interval of convergence.
+  \item\label{exer:7.1.1} For each power series use Theorem~\ref{thmtype:7.1.3} to find the radius
+        of convergence $R$. If $R>0$, find the open interval of convergence.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     {\bf (a)} $\dst{\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2^{n}n}(x-1)^{n}}$ & {\bf (b)} $\dst{\sum_{n=0}^{\infty}2^{n}n(x-2)^{n}}$                         \\
@@ -459,9 +543,12 @@ The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in 
   \[
     \sum_{m=0}^{\infty}b_{m}(x-x_{0})^{2m}
   \]
-  is $R=1/\sqrt{L}$, which is interpreted to mean that $R=0$ if $L=\infty$ or $R=\infty$ if $L=0$. \hint{Apply Theorem~\ref{thmtype:7.1.3} to the series $\sum_{m=0}^{\infty}b_{m}z^{m}$ and then let $z=(x-x_{0})^{2}$.}
+  is $R=1/\sqrt{L}$, which is interpreted to mean that $R=0$ if $L=\infty$ or $R=\infty$ if $L=0$.
+  \hint{Apply Theorem~\ref{thmtype:7.1.3} to the series $\sum_{m=0}^{\infty}b_{m}z^{m}$ and then
+  let $z=(x-x_{0})^{2}$.}
 
-  \item\label{exer:7.1.3} For each power series, use the result of Exercise~\ref{exer:7.1.2} to find the radius of convergence $R$. If $R>0$, find the open interval of convergence.
+  \item\label{exer:7.1.3} For each power series, use the result of Exercise~\ref{exer:7.1.2} to find
+        the radius of convergence $R$. If $R>0$, find the open interval of convergence.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     {\bf (a)} $\dst{\sum_{m=0}^{\infty}(-1)^{m}(3m+1)(x-1)^{2m+1}}$           & {\bf (b)} $\dst{\sum_{m=0}^{\infty} (-1)^{m}\frac{m(2m+1)}{2^{m}}(x+2)^{2m}}$ \\
@@ -477,9 +564,12 @@ The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in 
   \[
     \sum_{m=0}^{\infty}b_{m}(x-x_{0})^{km}
   \]
-  is $R=1/\sqrt[k]{L}$, which is interpreted to mean that $R=0$ if $L=\infty$ or $R=\infty$ if $L=0$. \hint{Apply Theorem~\ref{thmtype:7.1.3} to the series $\sum_{m=0}^{\infty}b_{m}z^{m}$ and then let $z=(x-x_{0})^{k}$.}
+  is $R=1/\sqrt[k]{L}$, which is interpreted to mean that $R=0$ if $L=\infty$ or $R=\infty$ if
+  $L=0$. \hint{Apply Theorem~\ref{thmtype:7.1.3} to the series $\sum_{m=0}^{\infty}b_{m}z^{m}$ and
+  then let $z=(x-x_{0})^{k}$.}
 
-  \item\label{exer:7.1.5} For each power series use the result of Exercise~\ref{exer:7.1.4} to find the radius of convergence $R$. If $R>0$, find the open interval of convergence.
+  \item\label{exer:7.1.5} For each power series use the result of Exercise~\ref{exer:7.1.4} to find
+        the radius of convergence $R$. If $R>0$, find the open interval of convergence.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     {\bf (a)} $\dst{\sum_{m=0}^{\infty}\frac{(-1)^{m}}{(27)^{m}}(x-3)^{3m+2}}$ & {\bf (b)} $\dst{\sum_{m=0}^{\infty}\frac{x^{7m+6}}{m}}$                       \\
@@ -491,33 +581,42 @@ The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in 
   \[
     T_{2M+1}(x)=\sum_{n=0}^{M}\frac{(-1)^{n}x^{2n+1}}{(2n+1)!}
   \]
-  on the interval $(-2\pi,2\pi)$ for $M=1$, $2$, $3$, \dots, until you find a value of $M$ for which there's no perceptible difference between the two graphs.
+  on the interval $(-2\pi,2\pi)$ for $M=1$, $2$, $3$, \dots, until you find a value of $M$ for which
+  there's no perceptible difference between the two graphs.
 
   \item\label{exer:7.1.7} \Lex Graph $y=\cos x$ and the Taylor polynomial
   \[
     T_{2M}(x)=\sum_{n=0}^{M}\frac{(-1)^{n}x^{2n}}{(2n)!}
   \]
-  on the interval $(-2\pi,2\pi)$ for $M=1$, $2$, $3$, \dots, until you find a value of $M$ for which there's no perceptible difference between the two graphs.
+  on the interval $(-2\pi,2\pi)$ for $M=1$, $2$, $3$, \dots, until you find a value of $M$ for which
+  there's no perceptible difference between the two graphs.
 
   \item\label{exer:7.1.8} \Lex Graph $y=1/(1-x)$ and the Taylor polynomial
   \[
     T_{N}(x)=\sum_{n=0}^{N}x^{n}
   \]
-  on the interval $[0,.95]$ for $N=1$, $2$, $3$, \dots, until you find a value of $N$ for which there's no perceptible difference between the two graphs. Choose the scale on the $y$-axis so that $0\le y\le20$.
+  on the interval $[0,.95]$ for $N=1$, $2$, $3$, \dots, until you find a value of $N$ for which
+  there's no perceptible difference between the two graphs. Choose the scale on the $y$-axis so that
+  $0\le y\le20$.
 
   \item\label{exer:7.1.9} \Lex Graph $y=\cosh x$ and the Taylor polynomial
   \[
     T_{2M}(x)=\sum_{n=0}^{M}\frac{x^{2n}}{(2n)!}
   \]
-  on the interval $(-5,5)$ for $M=1$, $2$, $3$, \dots, until you find a value of $M$ for which there's no perceptible difference between the two graphs. Choose the scale on the $y$-axis so that $0\le y\le75$.
+  on the interval $(-5,5)$ for $M=1$, $2$, $3$, \dots, until you find a value of $M$ for which
+  there's no perceptible difference between the two graphs. Choose the scale on the $y$-axis so that
+  $0\le y\le75$.
 
   \item\label{exer:7.1.10} \Lex Graph $y=\sinh x$ and the Taylor polynomial
   \[
     T_{2M+1}(x)=\sum_{n=0}^{M}\frac{x^{2n+1}}{(2n+1)!}
   \]
-  on the interval $(-5,5)$ for $M=0$, $1$, $2$, \dots, until you find a value of $M$ for which there's no perceptible difference between the two graphs. Choose the scale on the $y$-axis so that~$-75~\le~y\le~75$.
+  on the interval $(-5,5)$ for $M=0$, $1$, $2$, \dots, until you find a value of $M$ for which
+  there's no perceptible difference between the two graphs. Choose the scale on the $y$-axis so
+  that~$-75~\le~y\le~75$.
 
-  \exercisetext{In Exercises~\ref{exer:7.1.11}--\ref{exer:7.1.15} find a power series solution $y(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$.}
+  \exercisetext{In Exercises~\ref{exer:7.1.11}--\ref{exer:7.1.15} find a power series solution
+  $y(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$.}
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \item\label{exer:7.1.11} $\vspace*{-5pt}(2+x)y''+xy'+3y$ &
@@ -531,45 +630,53 @@ The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in 
 
   \item\label{exer:7.1.15} $(1+3x^{2})y''-2xy'+4y$
 
-  \item\label{exer:7.1.16} Suppose $y(x)=\sum_{n=0}^{\infty}a_{n}(x+1)^{n}$ on an open interval that contains $x_{0}~=~-1$. Find a power series in $x+1$ for
+  \item\label{exer:7.1.16} Suppose $y(x)=\sum_{n=0}^{\infty}a_{n}(x+1)^{n}$ on an open interval that
+        contains $x_{0}~=~-1$. Find a power series in $x+1$ for
   \[
     xy''+(4+2x)y'+(2+x)y.
   \]
 
-  \item\label{exer:7.1.17} Suppose $y(x)=\sum_{n=0}^{\infty}a_{n}(x-2)^{n}$ on an open interval that contains $x_{0}~=~2$. Find a power series in $x-2$ for
+  \item\label{exer:7.1.17} Suppose $y(x)=\sum_{n=0}^{\infty}a_{n}(x-2)^{n}$ on an open interval that
+        contains $x_{0}~=~2$. Find a power series in $x-2$ for
   \[
     x^{2}y''+2xy'-3xy.
   \]
 
-  \item\label{exer:7.1.18} \Lex Do the following experiment for various choices of real numbers $a_{0}$ and $a_{1}$.
+  \item\label{exer:7.1.18} \Lex Do the following experiment for various choices of real numbers
+        $a_{0}$ and $a_{1}$.
   \begin{alist}
     \item % (a)
     Use differential equations software to solve the initial value problem
     \[
       (2-x)y''+2y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1},
     \]
-    numerically on $(-1.95,1.95)$. Choose the most accurate method your software package provides. (See Section~10.1 for a brief discussion of one such method.)
+    numerically on $(-1.95,1.95)$. Choose the most accurate method your software package provides.
+    (See Section~10.1 for a brief discussion of one such method.)
 
     \item % (b)
     For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ from Eqn.\eqref{eq:7.1.18} and graph
     \[
       T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
     \]
-    and the solution obtained in \part{a} on the same axes. Continue increasing $N$ until it's obvious that there's no point in continuing. (This sounds vague, but you'll know when to stop.)
+    and the solution obtained in \part{a} on the same axes. Continue increasing $N$ until it's
+    obvious that there's no point in continuing. (This sounds vague, but you'll know when to stop.)
   \end{alist}
 
-  \item\label{exer:7.1.19} \Lex Follow the directions of Exercise~\ref{exer:7.1.18} for the initial value problem
+  \item\label{exer:7.1.19} \Lex Follow the directions of Exercise~\ref{exer:7.1.18} for the initial
+        value problem
   \[
     (1+x)y''+2(x-1)^{2}y'+3y=0,\quad y(1)=a_{0},\quad y'(1)=a_{1},
   \]
   on the interval $(0,2)$. Use Eqns.~\eqref{eq:7.1.24} and \eqref{eq:7.1.25} to compute $\{a_{n}\}$.
 
-  \item\label{exer:7.1.20} Suppose the series $\sum_{n=0}^{\infty}a_{n}x^{n}$ converges on an open interval $(-R,R)$, let $r$ be an arbitrary real number, and define
+  \item\label{exer:7.1.20} Suppose the series $\sum_{n=0}^{\infty}a_{n}x^{n}$ converges on an open
+        interval $(-R,R)$, let $r$ be an arbitrary real number, and define
   \[
     y(x)=x^{r}\sum_{n=0}^{\infty}a_{n}x^{n}=\sum_{n=0}^{\infty}a_{n}x^{n+r}
   \]
   \enlargethispage{1in}
-  on $(0,R)$. Use Theorem~\ref{thmtype:7.1.4} and the rule for differentiating the product of two functions to show that
+  on $(0,R)$. Use Theorem~\ref{thmtype:7.1.4} and the rule for differentiating the product of two
+  functions to show that
   \begin{eqnarray*}
     y'(x)      & =      & \dst{\sum_{n=0}^{\infty}(n+r)a_{n}x^{n+r-1}},        \\[10pt]
     y''(x)     & =      & \dst{\sum_{n=0}^{\infty}(n+r)(n+r-1)a_{n}x^{n+r-2}}, \\
@@ -579,7 +686,9 @@ The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in 
   on $(0,R)$
   \newpage
 
-  \exercisetext{In Exercises~\ref{exer:7.1.21}--\ref{exer:7.1.26} let $y$ be as defined in Exercise~\ref{exer:7.1.20}, and write the given expression in the form $x^{r}\sum_{n=0}^{\infty}b_{n}x^{n}$.}
+  \exercisetext{In Exercises~\ref{exer:7.1.21}--\ref{exer:7.1.26} let $y$ be as defined in
+  Exercise~\ref{exer:7.1.20}, and write the given expression in the form
+  $x^{r}\sum_{n=0}^{\infty}b_{n}x^{n}$.}
 
   \item\label{exer:7.1.21} $x^{2}(1-x)y''+x(4+x)y'+(2-x)y$
 

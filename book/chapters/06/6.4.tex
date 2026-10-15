@@ -1,9 +1,22 @@
 \section{Motion Under a Central Force}
 
 \noindent
-We'll now study the motion of an object moving under the influence of a {\color{blue}\it central force\/}; that is, a force whose magnitude at any point $P$ other than the origin depends only on the distance from $P$ to the origin, and whose direction at $P$ is parallel to the line connecting $P$ and the origin, as indicated in Figure~\ref{figure:6.4.1} for the case where the direction of the force at every point is toward the origin. Gravitational forces are central forces; for example, as mentioned in Section~4.3, if we assume that Earth is a perfect sphere with constant mass density then Newton's law of gravitation asserts that the force exerted on an object by Earth's gravitational field is proportional to the mass of the object and inversely proportional to the square of its distance from the center of Earth, which we take to be the origin.
+We'll now study the motion of an object moving under the influence of a {\color{blue}\it central
+force\/}; that is, a force whose magnitude at any point $P$ other than the origin depends only on
+the distance from $P$ to the origin, and whose direction at $P$ is parallel to the line connecting
+$P$ and the origin, as indicated in Figure~\ref{figure:6.4.1} for the case where the direction of
+the force at every point is toward the origin. Gravitational forces are central forces; for example,
+as mentioned in Section~4.3, if we assume that Earth is a perfect sphere with constant mass density
+then Newton's law of gravitation asserts that the force exerted on an object by Earth's
+gravitational field is proportional to the mass of the object and inversely proportional to the
+square of its distance from the center of Earth, which we take to be the origin.
 
-If the initial position and velocity vectors of an object moving under a central force are parallel, then the subsequent motion is along the line from the origin to the initial position. Here we'll assume that the initial position and velocity vectors are not parallel; in this case the subsequent motion is in the plane determined by them. For convenience we take this to be the $xy$-plane. We'll consider the problem of determining the curve traversed by the object. We call this curve the {\color{blue}\it orbit\/}.
+If the initial position and velocity vectors of an object moving under a central force are parallel,
+then the subsequent motion is along the line from the origin to the initial position. Here we'll
+assume that the initial position and velocity vectors are not parallel; in this case the subsequent
+motion is in the plane determined by them. For convenience we take this to be the $xy$-plane. We'll
+consider the problem of determining the curve traversed by the object. We call this curve the
+{\color{blue}\it orbit\/}.
 
 \begin{figure}[tbp]
   \centering
@@ -21,7 +34,11 @@ as
 \[
   {\bf F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
 \]
-We assume that $f$ is continuous for all $r>0$. The magnitude of ${\bf F}$ at $(x,y)=(r\cos\theta,r\sin\theta)$ is $|f(r)|$, so it depends only on the distance $r$ from the point to the origin the direction of ${\bf F}$ is from the point to the origin if $f(r)<0$, or from the origin to the point if $f(r)>0$. We'll show that the orbit of an object with mass $m$ moving under this force is given by
+We assume that $f$ is continuous for all $r>0$. The magnitude of ${\bf F}$ at
+$(x,y)=(r\cos\theta,r\sin\theta)$ is $|f(r)|$, so it depends only on the distance $r$ from the point
+to the origin the direction of ${\bf F}$ is from the point to the origin if $f(r)<0$, or from the
+origin to the point if $f(r)>0$. We'll show that the orbit of an object with mass $m$ moving under
+this force is given by
 \[
   r(\theta)=\frac{1}{u(\theta)},
 \]
@@ -31,7 +48,8 @@ where $u$ is solution of the differential equation
 \end{equation}
 and $h$ is a constant defined below.
 
-Newton's second law of motion (${\bf F}=m{\bf a}$) says that the polar coordinates $r=r(t)$ and $\theta=\theta(t)$ of the particle satisfy the vector differential equation
+Newton's second law of motion (${\bf F}=m{\bf a}$) says that the polar coordinates $r=r(t)$ and
+$\theta=\theta(t)$ of the particle satisfy the vector differential equation
 \begin{equation}
   \label{eq:6.4.2}m(r\cos\theta\,{\bf i}+r\sin\theta\,{\bf j})''= f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
 \end{equation}
@@ -39,7 +57,8 @@ To deal with this equation we introduce the unit vectors
 \[
   {\bf e}_{1}=\cos\theta\,{\bf i}+\sin\theta\,{\bf j}\mbox{\quad and \quad}{\bf e}_{2}=-\sin\theta\,{\bf i}+\cos\theta\,{\bf j}.
 \]
-Note that ${\bf e}_{1}$ points in the direction of increasing $r$ and ${\bf e}_{2}$ points in the direction of increasing $\theta$ (Figure~\ref{figure:6.4.2}); moreover,
+Note that ${\bf e}_{1}$ points in the direction of increasing $r$ and ${\bf e}_{2}$ points in the
+direction of increasing $\theta$ (Figure~\ref{figure:6.4.2}); moreover,
 \begin{equation}
   \label{eq:6.4.3}\frac{d{\bf e}_{1}}{d\theta}={\bf e}_{2},\quad \frac{d{\bf e}_{2}}{d\theta}=-{\bf e}_{1},
 \end{equation}
@@ -47,7 +66,8 @@ and
 \[
   {\bf e}_{1}\cdot{\bf e}_{2}=\cos\theta(-\sin\theta)+\sin\theta\cos\theta=0,
 \]
-so ${\bf e}_{1}$ and ${\bf e}_{2}$ are perpendicular. Recalling that the single prime $(')$ stands for differentiation with respect to $t$, we see from \eqref{eq:6.4.3} and the chain rule that
+so ${\bf e}_{1}$ and ${\bf e}_{2}$ are perpendicular. Recalling that the single prime $(')$ stands
+for differentiation with respect to $t$, we see from \eqref{eq:6.4.3} and the chain rule that
 \begin{equation}
   \label{eq:6.4.4}{\bf e}_{1}'=\theta'{\bf e}_{2}\mbox{\quad and \quad}{\bf e}_{2}'=-\theta'{\bf e}_{1}.
 \end{equation}
@@ -79,7 +99,8 @@ Substituting this into \eqref{eq:6.4.5} yields
 \[
   m\left(r''-r(\theta')^{2}\right){\bf e}_{1}+m(r\theta''+2r'\theta'){\bf e}_{2}=f(r){\bf e}_{1}.
 \]
-By equating the coefficients of ${\bf e}_{1}$ and ${\bf e}_{2}$ on the two sides of this equation we see that
+By equating the coefficients of ${\bf e}_{1}$ and ${\bf e}_{2}$ on the two sides of this equation we
+see that
 \begin{equation}
   \label{eq:6.4.6}m\left(r''-r(\theta')^{2}\right)=f(r)
 \end{equation}
@@ -131,12 +152,15 @@ Substituting from these equalities into \eqref{eq:6.4.6} and recalling that $r=1
 \]
 and dividing through by $-mh^{2}u^{2}$ yields \eqref{eq:6.4.1}.
 
-Eqn.~\eqref{eq:6.4.7} has the following geometrical interpretation, which is known as \href{https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/}{\color{blue}
+Eqn.~\eqref{eq:6.4.7} has the following geometrical interpretation, which is known as
+\href{https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/}{\color{blue}
 \it Kepler's Second Law\/}.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:6.4.1} The position vector of an object moving under a central force sweeps out equal areas in equal times; more precisely, if $\theta(t_{1})\le\theta(t_{2})$ then the (signed) area of the sector
+  \label{thmtype:6.4.1} The position vector of an object moving under a central force sweeps out
+  equal areas in equal times; more precisely, if $\theta(t_{1})\le\theta(t_{2})$ then the
+  (signed) area of the sector
   \[
     \{(x,y)=(r\cos\theta,r\sin\theta)\;:\;0\le r\le r(\theta),\; \theta(t_{1})\le\theta(t_{2})\}
   \]
@@ -159,7 +183,8 @@ Eqn.~\eqref{eq:6.4.7} has the following geometrical interpretation, which is kno
 \[
   A=\frac{1}{2}\int_{\theta(t_{1})}^{\theta(t_{2})}r^{2}(\theta)\,d\theta,
 \]
-where $r=r(\theta)$ is the polar representation of the orbit. Making the change of variable $\theta=\theta(t)$ yields
+where $r=r(\theta)$ is the polar representation of the orbit. Making the change of variable
+$\theta=\theta(t)$ yields
 \begin{equation}
   \label{eq:6.4.9}A=\frac{1}{2}\int_{t_{1}}^{t_{2}}r^{2}(\theta(t))\theta'(t)\,dt.
 \end{equation}
@@ -172,7 +197,8 @@ which completes the proof.
 \boxit{Motion Under an Inverse Square Law Force}
 
 \noindent
-In the special case where $f(r)=-mk/r^{2}=-mku^{2}$, so ${\bf F}$ can be interpreted as a gravitational force, \eqref{eq:6.4.1} becomes
+In the special case where $f(r)=-mk/r^{2}=-mku^{2}$, so ${\bf F}$ can be interpreted as a
+gravitational force, \eqref{eq:6.4.1} becomes
 \begin{equation}
   \label{eq:6.4.10}\frac{d^{2}u}{d\theta^{2}}+u=\frac{k}{h^{2}}.
 \end{equation}
@@ -184,7 +210,8 @@ can be written in amplitude--phase form as
 \[
   u=A\cos(\theta-\phi),
 \]
-where $A\ge0$ and $\phi$ is a phase angle. Since $u_{p}=k/h^{2}$ is a particular solution of \eqref{eq:6.4.10}, the general solution of \eqref{eq:6.4.10} is
+where $A\ge0$ and $\phi$ is a phase angle. Since $u_{p}=k/h^{2}$ is a particular solution of
+\eqref{eq:6.4.10}, the general solution of \eqref{eq:6.4.10} is
 \[
   u=A\cos(\theta-\phi)+\frac{k}{h^{2}};
 \]
@@ -200,7 +227,10 @@ where
 \[
   \rho=\frac{h^{2}}{k}\mbox{\quad and \quad}e=A\rho.
 \]
-A curve satisfying \eqref{eq:6.4.11} is a conic section with a focus at the origin (Exercise~\ref{exer:6.4.1}). The nonnegative constant $e$ is the {\color{blue}\it eccentricity\/} of the orbit, which is an ellipse if $e<1$ ellipse (a circle if $e=0$), a parabola if $e=1$, or a hyperbola if $e>1$.
+A curve satisfying \eqref{eq:6.4.11} is a conic section with a focus at the origin
+(Exercise~\ref{exer:6.4.1}). The nonnegative constant $e$ is the {\color{blue}\it eccentricity\/} of
+the orbit, which is an ellipse if $e<1$ ellipse (a circle if $e=0$), a parabola if $e=1$, or a
+hyperbola if $e>1$.
 
 \begin{figure}[H]
   \centering
@@ -216,10 +246,16 @@ If the orbit is an ellipse, then the minimum and maximum values of $r$ are
   r_{\max} & = & \frac{\rho}{1-e}\quad\mbox{(the {\color{blue}\it aphelion distance\/}, attained when $\theta=\phi+\pi$)}.
 \end{eqnarray*}
 \enlargethispage{1in}
-Figure~\ref{figure:6.4.4} shows a typical elliptic orbit. The point $P$ on the orbit where $r=r_{\min}$ is the {\color{blue}\it perigee\/} and the point $A$ where $r=r_{\max}$ is the {\color{blue}\it apogee\/}.
+Figure~\ref{figure:6.4.4} shows a typical elliptic orbit. The point $P$ on the orbit where
+$r=r_{\min}$ is the {\color{blue}\it perigee\/} and the point $A$ where $r=r_{\max}$ is the
+{\color{blue}\it apogee\/}.
 \newpage
 
-For example, Earth's orbit around the Sun is approximately an ellipse with $e\approx.017$, $r_{\min}\approx91\times10^{6}$ miles, and $r_{\max}\approx95\times10^{6}$ miles. Halley's comet has a very elongated approximately elliptical orbit around the sun, with $e\approx.967$, $r_{\min}\approx55\times10^{6}$ miles, and $r_{\max}\approx33\times10^{8}$ miles. Some comets (the nonrecurring type) have parabolic or hyperbolic orbits.
+For example, Earth's orbit around the Sun is approximately an ellipse with $e\approx.017$,
+$r_{\min}\approx91\times10^{6}$ miles, and $r_{\max}\approx95\times10^{6}$ miles. Halley's comet has
+a very elongated approximately elliptical orbit around the sun, with $e\approx.967$,
+$r_{\min}\approx55\times10^{6}$ miles, and $r_{\max}\approx33\times10^{8}$ miles. Some comets (the
+nonrecurring type) have parabolic or hyperbolic orbits.
 
 \exercises
 \begin{exerciselist}
@@ -227,7 +263,10 @@ For example, Earth's orbit around the Sun is approximately an ellipse with $e\ap
   \[
     r=\frac{\rho}{1+e\cos(\theta-\phi)}\eqno{\rm(A)}
   \]
-  in terms of $(X,Y)=\left(r\cos(\theta-\phi),r\sin(\theta-\phi)\right)$, which are rectangular coordinates with respect to the axes shown in Figure~\ref{figure:6.4.5}. Use your results to verify that (A) is the equation of an ellipse if $0<e<1$, a parabola if $e=1$, or a hyperbola if $e>1$. If $e<1$, leave your answer in the form
+  in terms of $(X,Y)=\left(r\cos(\theta-\phi),r\sin(\theta-\phi)\right)$, which are rectangular
+  coordinates with respect to the axes shown in Figure~\ref{figure:6.4.5}. Use your results to
+  verify that (A) is the equation of an ellipse if $0<e<1$, a parabola if $e=1$, or a hyperbola if
+  $e>1$. If $e<1$, leave your answer in the form
   \[
     \frac{(X-X_{0})^{2}}{a^{2}}+\frac{(Y-Y_{0})^{2}}{b^{2}}=1,
   \]
@@ -235,7 +274,8 @@ For example, Earth's orbit around the Sun is approximately an ellipse with $e\ap
   \[
     A=\frac{\pi\rho^{2}}{(1-e^{2})^{3/2}}.
   \]
-  Then use Theorem~\ref{thmtype:6.4.1} to show that the time required for the object to traverse the entire orbit is
+  Then use Theorem~\ref{thmtype:6.4.1} to show that the time required for the object to traverse the
+  entire orbit is
   \[
     T=\frac{2\pi\rho^{2}}{h(1-e^{2})^{3/2}}.
   \]
@@ -250,7 +290,8 @@ For example, Earth's orbit around the Sun is approximately an ellipse with $e\ap
     \label{figure:6.4.5}
   \end{figure}
 
-  \item\label{exer:6.4.2} Suppose an object with mass $m$ moves in the $xy$-plane under the central force
+  \item\label{exer:6.4.2} Suppose an object with mass $m$ moves in the $xy$-plane under the central
+        force
   \[
     {\bf F}(r,\theta)=-\frac{mk}{r^{2}}(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}),
   \]
@@ -264,31 +305,37 @@ For example, Earth's orbit around the Sun is approximately an ellipse with $e\ap
   \]
   Assume that the initial position and velocity vectors are not collinear.
 
-  \item\label{exer:6.4.3} Suppose we wish to put a satellite with mass $m$ into an elliptical orbit around Earth. Assume that the only force acting on the object is Earth's gravity, given by
+  \item\label{exer:6.4.3} Suppose we wish to put a satellite with mass $m$ into an elliptical orbit
+        around Earth. Assume that the only force acting on the object is Earth's gravity, given by
   \[
     {\bf F}(r,\theta)=-mg\left(\frac{R^{2}}{r^{2}}\right)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}),
   \]
-  where $R$ is Earth's radius, $g$ is the acceleration due to gravity at Earth's surface, and $r$ and $\theta$ are polar coordinates in the plane of the orbit, with the origin at Earth's center.
+  where $R$ is Earth's radius, $g$ is the acceleration due to gravity at Earth's surface, and $r$
+  and $\theta$ are polar coordinates in the plane of the orbit, with the origin at Earth's center.
 
   \begin{alist}
     \item % (a)
-    Find the eccentricity required to make the aphelion and perihelion distances equal to $R\gamma_{1}$ and $R\gamma_{2}$, respectively, where $1<\gamma_{1}<\gamma_{2}$.
+    Find the eccentricity required to make the aphelion and perihelion distances equal to
+    $R\gamma_{1}$ and $R\gamma_{2}$, respectively, where $1<\gamma_{1}<\gamma_{2}$.
 
     \item % (b)
     Find the initial conditions
     \[
       r(0)=r_{0},\quad r'(0)=r_{0}',\text{\; and \;}\theta(0)=\theta_{0},\quad \theta'(0)=\theta_{0}'
     \]
-    required to make the initial point the perigee, and the motion along the orbit in the direction of increasing $\theta$. \hint{Use the results of Exercise~\ref{exer:6.4.2}.}
+    required to make the initial point the perigee, and the motion along the orbit in the direction
+    of increasing $\theta$. \hint{Use the results of Exercise~\ref{exer:6.4.2}.}
   \end{alist}
 
-  \item\label{exer:6.4.4} An object with mass $m$ moves in a spiral orbit $r=c\theta^{2}$ under a central force
+  \item\label{exer:6.4.4} An object with mass $m$ moves in a spiral orbit $r=c\theta^{2}$ under a
+        central force
   \[
     {\bf F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
   \]
   Find $f$.
 
-  \item\label{exer:6.4.5} An object with mass $m$ moves in the orbit $r=r_{0}e^{\gamma\theta}$ under a central force
+  \item\label{exer:6.4.5} An object with mass $m$ moves in the orbit $r=r_{0}e^{\gamma\theta}$ under
+        a central force
   \[
     {\bf F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
   \]

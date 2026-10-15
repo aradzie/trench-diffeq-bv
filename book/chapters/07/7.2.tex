@@ -1,41 +1,56 @@
 \section{Series Solutions Near an Ordinary Point I}
 
 \noindent
-Many physical applications give rise to second order homogeneous linear differential equations of the form
+Many physical applications give rise to second order homogeneous linear differential equations of
+the form
 \begin{equation}
   \label{eq:7.2.1}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0,
 \end{equation}
-where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials. Usually the solutions of these equations can't be expressed in terms of familiar elementary functions. Therefore we'll consider the problem of representing solutions of \eqref{eq:7.2.1} with series.
+where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials. Usually the solutions of these equations can't
+be expressed in terms of familiar elementary functions. Therefore we'll consider the problem of
+representing solutions of \eqref{eq:7.2.1} with series.
 
-We assume throughout that $P_{0}$, $P_{1}$ and $P_{2}$ have no common factors. Then we say that $x_{0}$ is an {\color{blue}\it ordinary point\/} of \eqref{eq:7.2.1} if $P_{0}(x_{0})\ne0$, or a {\color{blue}\it singular point\/} if $P_{0}(x_{0})=0$. For Legendre's equation,
+We assume throughout that $P_{0}$, $P_{1}$ and $P_{2}$ have no common factors. Then we say that
+$x_{0}$ is an {\color{blue}\it ordinary point\/} of \eqref{eq:7.2.1} if $P_{0}(x_{0})\ne0$, or a
+{\color{blue}\it singular point\/} if $P_{0}(x_{0})=0$. For Legendre's equation,
 \begin{equation}
   \label{eq:7.2.2}(1-x^{2})y''-2xy'+\alpha(\alpha+1)y=0,
 \end{equation}
-$x_{0}=1$ and $x_{0}=-1$ are singular points and all other points are ordinary points. For Bessel's~ equation,
+$x_{0}=1$ and $x_{0}=-1$ are singular points and all other points are ordinary points. For Bessel's~
+equation,
 \[
   x^{2}y''+xy'+(x^{2}-\nu^{2})y=0,
 \]
-$x_{0}=0$ is a singular point and all other points are ordinary points. If $P_{0}$ is a nonzero constant as in Airy's equation,
+$x_{0}=0$ is a singular point and all other points are ordinary points. If $P_{0}$ is a nonzero
+constant as in Airy's equation,
 \begin{equation}
   \label{eq:7.2.3}y''-xy=0,
 \end{equation}
 then every point is an ordinary point.
 
-Since polynomials are continuous everywhere, $P_{1}/P_{0}$ and $P_{2}/P_{0}$ are continuous at any point $x_{0}$ that isn't a zero of $P_{0}$. Therefore, if $x_{0}$ is an ordinary point of \eqref{eq:7.2.1} and $a_{0}$ and $a_{1}$ are arbitrary real numbers, then the initial value problem
+Since polynomials are continuous everywhere, $P_{1}/P_{0}$ and $P_{2}/P_{0}$ are continuous at any
+point $x_{0}$ that isn't a zero of $P_{0}$. Therefore, if $x_{0}$ is an ordinary point of
+\eqref{eq:7.2.1} and $a_{0}$ and $a_{1}$ are arbitrary real numbers, then the initial value problem
 \begin{equation}
   \label{eq:7.2.4}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0,\quad y(x_{0})=a_{0},\quad y'(x_{0})=a_{1}
 \end{equation}
-has a unique solution on the largest open interval that contains $x_{0}$ and does not contain any zeros of $P_{0}$. To see this, we rewrite the differential equation in \eqref{eq:7.2.4} as
+has a unique solution on the largest open interval that contains $x_{0}$ and does not contain any
+zeros of $P_{0}$. To see this, we rewrite the differential equation in \eqref{eq:7.2.4} as
 \[
   y''+\frac{P_{1}(x)}{P_{0}(x)}y'+\frac{P_{2}(x)}{P_{0}(x)}y=0
 \]
-and apply Theorem~\ref{thmtype:5.1.1} with $p=P_{1}/P_{0}$ and $q=P_{2}/P_{0}$. In this section and the next we consider the problem of representing solutions of \eqref{eq:7.2.1} by power series that converge for values of $x$ near an ordinary point $x_{0}$.
+and apply Theorem~\ref{thmtype:5.1.1} with $p=P_{1}/P_{0}$ and $q=P_{2}/P_{0}$. In this section and
+the next we consider the problem of representing solutions of \eqref{eq:7.2.1} by power series that
+converge for values of $x$ near an ordinary point $x_{0}$.
 
 We state the next theorem without proof.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:7.2.1} Suppose $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials with no common factor and $P_{0}$ isn't identically zero. Let $x_{0}$ be a point such that $P_{0}(x_{0})\ne0$, and let $\rho$ be the distance from $x_{0}$ to the nearest zero of $P_{0}$ in the complex plane. (If $P_{0}$ is constant, then $\rho=\infty$.) Then every solution of
+  \label{thmtype:7.2.1} Suppose $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials with no common factor
+  and $P_{0}$ isn't identically zero. Let $x_{0}$ be a point such that $P_{0}(x_{0})\ne0$, and let
+  $\rho$ be the distance from $x_{0}$ to the nearest zero of $P_{0}$ in the complex plane. (If
+  $P_{0}$ is constant, then $\rho=\infty$.) Then every solution of
   \begin{equation}
     \label{eq:7.2.5}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0
   \end{equation}
@@ -43,15 +58,21 @@ We state the next theorem without proof.
   \begin{equation}
     \label{eq:7.2.6}y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}
   \end{equation}
-  that converges at least on the open interval $(x_{0}-\rho,x_{0}+\rho)$. (If $P_{0}$ is nonconstant, so that $\rho$ is necessarily finite, then the open interval of convergence of \eqref{eq:7.2.6} may be larger than $(x_{0}-\rho,x_{0}+\rho)$. If $P_{0}$ is constant then $\rho=\infty$ and $(x_{0}-\rho,x_{0}+\rho)=(-\infty,\infty)$.)
+  that converges at least on the open interval $(x_{0}-\rho,x_{0}+\rho)$. (If $P_{0}$ is
+  nonconstant, so that $\rho$ is necessarily finite, then the open interval of convergence of
+  \eqref{eq:7.2.6} may be larger than $(x_{0}-\rho,x_{0}+\rho)$. If $P_{0}$ is constant then
+  $\rho=\infty$ and $(x_{0}-\rho,x_{0}+\rho)=(-\infty,\infty)$.)
 \end{theorem}
 
-We call \eqref{eq:7.2.6} a {\color{blue}\it power series solution in $x-x_{0}$\/} of \eqref{eq:7.2.5}. We'll now develop a method for finding power series solutions of \eqref{eq:7.2.5}. For this purpose we write \eqref{eq:7.2.5} as $Ly=0$, where
+We call \eqref{eq:7.2.6} a {\color{blue}\it power series solution in $x-x_{0}$\/} of
+\eqref{eq:7.2.5}. We'll now develop a method for finding power series solutions of \eqref{eq:7.2.5}.
+For this purpose we write \eqref{eq:7.2.5} as $Ly=0$, where
 \begin{equation}
   \label{eq:7.2.7}Ly=P_{0}y''+P_{1}y'+P_{2}y.
 \end{equation}
 
-Theorem~\ref{thmtype:7.2.1} implies that every solution of $Ly=0$ on $(x_{0}-\rho,x_{0}+\rho)$ can be written as
+Theorem~\ref{thmtype:7.2.1} implies that every solution of $Ly=0$ on $(x_{0}-\rho,x_{0}+\rho)$ can
+be written as
 \[
   y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}.
 \]
@@ -59,9 +80,12 @@ Setting $x=x_{0}$ in this series and in the series
 \[
   y'=\sum_{n=1}^{\infty}na_{n}(x-x_{0})^{n-1}
 \]
-shows that $y(x_{0})=a_{0}$ and $y'(x_{0})=a_{1}$. Since every initial value problem \eqref{eq:7.2.4} has a unique solution, this means that $a_{0}$ and $a_{1}$ can be chosen arbitrarily, and $a_{2}$, $a_{3}$, \dots are uniquely determined by them.
+shows that $y(x_{0})=a_{0}$ and $y'(x_{0})=a_{1}$. Since every initial value problem
+\eqref{eq:7.2.4} has a unique solution, this means that $a_{0}$ and $a_{1}$ can be chosen
+arbitrarily, and $a_{2}$, $a_{3}$, \dots are uniquely determined by them.
 
-To find $a_{2}$, $a_{3}$, \dots, we write $P_{0}$, $P_{1}$, and $P_{2}$ in powers of $x-x_{0}$, substitute
+To find $a_{2}$, $a_{3}$, \dots, we write $P_{0}$, $P_{1}$, and $P_{2}$ in powers of $x-x_{0}$,
+substitute
 \[
   y=\sum^{\infty}_{n=0}a_{n}(x-x_{0})^{n},
 \]
@@ -75,10 +99,18 @@ into \eqref{eq:7.2.7}, and collect the coefficients of like powers of $x-x_{0}$.
 \begin{equation}
   \label{eq:7.2.8}Ly=\sum^{\infty}_{n=0}b_{n}(x-x_{0})^{n},
 \end{equation}
-where $\{b_{0},b_{1},\dots,b_{n},\dots\}$ are expressed in terms of $\{a_{0},a_{1},\dots,a_{n},\dots\}$ and the coefficients of $P_{0}$, $P_{1}$, and $P_{2}$, written in powers of $x-x_{0}$. Since \eqref{eq:7.2.8} and \part{a} of Theorem~\ref{thmtype:7.1.6} imply that $Ly=0$ if and only if $b_{n}=0$ for $n\ge0$, all power series solutions in $x-x_{0}$ of $Ly=0$ can be obtained by choosing $a_{0}$ and $a_{1}$ arbitrarily and computing $a_{2}$, $a_{3}$, \dots, successively so that $b_{n}=0$ for $n\ge0$. For simplicity, we call the power series obtained this way {\color{blue}\it the power series in $x-x_{0}$ for the general solution\/} of $Ly=0$, without explicitly identifying the open interval of convergence of the series.
+where $\{b_{0},b_{1},\dots,b_{n},\dots\}$ are expressed in terms of
+$\{a_{0},a_{1},\dots,a_{n},\dots\}$ and the coefficients of $P_{0}$, $P_{1}$, and $P_{2}$, written
+in powers of $x-x_{0}$. Since \eqref{eq:7.2.8} and \part{a} of Theorem~\ref{thmtype:7.1.6} imply
+that $Ly=0$ if and only if $b_{n}=0$ for $n\ge0$, all power series solutions in $x-x_{0}$ of $Ly=0$
+can be obtained by choosing $a_{0}$ and $a_{1}$ arbitrarily and computing $a_{2}$, $a_{3}$, \dots,
+successively so that $b_{n}=0$ for $n\ge0$. For simplicity, we call the power series obtained this
+way {\color{blue}\it the power series in $x-x_{0}$ for the general solution\/} of $Ly=0$, without
+explicitly identifying the open interval of convergence of the series.
 
 \begin{example}
-  \label{example:7.2.1}\rm Let $x_{0}$ be an arbitrary real number. Find the power series in $x-x_{0}$ for the general solution of
+  \label{example:7.2.1}\rm Let $x_{0}$ be an arbitrary real number. Find the power series in
+  $x-x_{0}$ for the general solution of
   \begin{equation}
     \label{eq:7.2.9}y''+y=0.
   \end{equation}
@@ -100,7 +132,8 @@ so
 \[
   Ly=\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}+\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}.
 \]
-To collect coefficients of like powers of $x-x_{0}$, we shift the summation index in the first sum. This yields
+To collect coefficients of like powers of $x-x_{0}$, we shift the summation index in the first sum.
+This yields
 \[
   Ly=\sum^{\infty}_{n=0}(n+2)(n+1)a_{n+2}(x-x_{0})^{n}+ \sum^{\infty}_{n=0}a_{n}(x-x_{0})^{n}=\sum^{\infty}_{n=0}b_{n}(x-x_{0})^{n},
 \]
@@ -112,7 +145,9 @@ Therefore $Ly=0$ if and only if
 \begin{equation}
   \label{eq:7.2.10}a_{n+2}=\frac{-a_{n}}{(n+2)(n+1)},\quad n\ge0,
 \end{equation}
-where $a_{0}$ and $a_{1}$ are arbitrary. Since the indices on the left and right sides of \eqref{eq:7.2.10} differ by two, we write \eqref{eq:7.2.10} separately for $n$ even $(n=2m)$ and $n$ odd $(n=2m+1)$. This yields
+where $a_{0}$ and $a_{1}$ are arbitrary. Since the indices on the left and right sides of
+\eqref{eq:7.2.10} differ by two, we write \eqref{eq:7.2.10} separately for $n$ even $(n=2m)$ and $n$
+odd $(n=2m+1)$. This yields
 \begin{eqnarray}
   a_{2m+2}&=&\frac{-a_{2m}}{(2m+2)(2m+1)},\quad m\ge0, \label{eq:7.2.11} \\%dummy \eqref{eq:7.2.14}
   \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\ a_{2m+3}&=&\frac{-a_{2m+1}}{(2m+3)(2m+2)},\quad m\ge0. \label{eq:7.2.12}
@@ -155,13 +190,18 @@ then \eqref{eq:7.2.15} becomes
 \]
 which should look familiar. \bbox
 
-Equations like \eqref{eq:7.2.10}, \eqref{eq:7.2.11}, and \eqref{eq:7.2.12}, which define a given coefficient in the sequence $\{a_{n}\}$ in terms of one or more coefficients with lesser indices are called {\color{blue}\it recurrence relations\/}. When we use a recurrence relation to compute terms of a sequence we're computing {\color{blue}\it recursively\/}.
+Equations like \eqref{eq:7.2.10}, \eqref{eq:7.2.11}, and \eqref{eq:7.2.12}, which define a given
+coefficient in the sequence $\{a_{n}\}$ in terms of one or more coefficients with lesser indices are
+called {\color{blue}\it recurrence relations\/}. When we use a recurrence relation to compute terms
+of a sequence we're computing {\color{blue}\it recursively\/}.
 
-In the remainder of this section we consider the problem of finding power series solutions in $x-x_{0}$ for equations of the form
+In the remainder of this section we consider the problem of finding power series solutions in
+$x-x_{0}$ for equations of the form
 \begin{equation}
   \label{eq:7.2.16}\left(1+\alpha(x-x_{0})^{2}\right)y''+\beta(x-x_{0})y'+\gamma y=0.
 \end{equation}
-Many important equations that arise in applications are of this form with $x_{0}=0$, including Legendre's equation \eqref{eq:7.2.2}, Airy's equation \eqref{eq:7.2.3},
+Many important equations that arise in applications are of this form with $x_{0}=0$, including
+Legendre's equation \eqref{eq:7.2.2}, Airy's equation \eqref{eq:7.2.3},
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Chebyshev/}{\color{blue}
 \it Chebyshev's equation\/},
 \[
@@ -176,7 +216,12 @@ Since
 \[
   P_{0}(x)=1+\alpha(x-x_{0})^{2}
 \]
-in \eqref{eq:7.2.16}, the point $x_{0}$ is an ordinary point of \eqref{eq:7.2.16}, and Theorem~\ref{thmtype:7.2.1} implies that the solutions of \eqref{eq:7.2.16} can be written as power series in $x-x_{0}$ that converge on the interval $(x_{0}-1/\sqrt{|}\alpha|,x_{0}+1/\sqrt{|}\alpha|)$ if $\alpha\ne0$, or on $(-\infty,\infty)$ if $\alpha=0$. We'll see that the coefficients in these power series can be obtained by methods similar to the one used in Example~\ref{example:7.2.1}.
+in \eqref{eq:7.2.16}, the point $x_{0}$ is an ordinary point of \eqref{eq:7.2.16}, and
+Theorem~\ref{thmtype:7.2.1} implies that the solutions of \eqref{eq:7.2.16} can be written as power
+series in $x-x_{0}$ that converge on the interval
+$(x_{0}-1/\sqrt{|}\alpha|,x_{0}+1/\sqrt{|}\alpha|)$ if $\alpha\ne0$, or on $(-\infty,\infty)$ if
+$\alpha=0$. We'll see that the coefficients in these power series can be obtained by methods similar
+to the one used in Example~\ref{example:7.2.1}.
 
 To simplify finding the coefficients, we introduce some notation for products:
 \[
@@ -232,11 +277,13 @@ with
 \[
   b_{n}=(n+2)(n+1)a_{n+2}+2(n+1)^{2}a_{n},\quad n\ge0.
 \]
-To obtain solutions of \eqref{eq:7.2.17}, we set $b_{n}=0$ for $n\ge0$. This is equivalent to the recurrence relation
+To obtain solutions of \eqref{eq:7.2.17}, we set $b_{n}=0$ for $n\ge0$. This is equivalent to the
+recurrence relation
 \begin{equation}
   \label{eq:7.2.18}a_{n+2}=-2{\frac{n+1}{n+2}}a_{n},\quad n\ge0.
 \end{equation}
-Since the indices on the left and right differ by two, we write \eqref{eq:7.2.18} separately for $n=2m$ and $n=2m+1$, as in Example~\ref{example:7.2.1}. This yields
+Since the indices on the left and right differ by two, we write \eqref{eq:7.2.18} separately for
+$n=2m$ and $n=2m+1$, as in Example~\ref{example:7.2.1}. This yields
 \begin{eqnarray}
   a_{2m+2}                                     & = & -2{\frac{2m+1}{2m+2}}a_{2m}=-\frac{2m+1}{m+1}a_{2m},\quad m\ge0,\label{eq:7.2.19} \\
   \noalign{\hspace*{-15pt}\mbox{and}}\nonumber                                                                                         \\
@@ -250,7 +297,8 @@ In general,
 \begin{equation}
   \label{eq:7.2.21}a_{2m}=(-1)^{m}\frac{\prod_{j=1}^{m}(2j-1)}{m!}a_{0},\quad m\ge0.
 \end{equation}
-(Note that \eqref{eq:7.2.21} is correct for $m=0$ because we defined $\prod_{j=1}^{0}b_{j}=1$ for any~$b_{j}$.)
+(Note that \eqref{eq:7.2.21} is correct for $m=0$ because we defined $\prod_{j=1}^{0}b_{j}=1$ for
+any~$b_{j}$.)
 
 Computing the coefficients of odd powers of $x$ from \eqref{eq:7.2.20} yields
 \begin{eqnarray*}
@@ -267,13 +315,19 @@ From \eqref{eq:7.2.21} and \eqref{eq:7.2.22},
 \[
   y=a_{0}\sum^{\infty}_{m=0}(-1)^{m}\frac{\prod_{j=1}^{m}(2j-1)}{m!}x^{2m}+a_{1}\sum^{\infty}_{m=0}(-1)^{m}\frac{4^{m}m!}{\prod_{j=1}^{m}(2j+1)}x^{2m+1}.
 \]
-is the power series in $x$ for the general solution of \eqref{eq:7.2.17}. Since $P_{0}(x)=1+2x^{2}$ has no real zeros, Theorem~\ref{thmtype:5.1.1} implies that every solution of \eqref{eq:7.2.17} is defined on $(-\infty,\infty)$. However, since $P_{0}(\pm i/\sqrt{2})=0$, Theorem~\ref{thmtype:7.2.1} implies only that the power series converges in $(-1/\sqrt{2},1/\sqrt{2})$ for any choice of $a_{0}$ and $a_{1}$.
+is the power series in $x$ for the general solution of \eqref{eq:7.2.17}. Since $P_{0}(x)=1+2x^{2}$
+has no real zeros, Theorem~\ref{thmtype:5.1.1} implies that every solution of \eqref{eq:7.2.17} is
+defined on $(-\infty,\infty)$. However, since $P_{0}(\pm i/\sqrt{2})=0$, Theorem~\ref{thmtype:7.2.1}
+implies only that the power series converges in $(-1/\sqrt{2},1/\sqrt{2})$ for any choice of $a_{0}$
+and $a_{1}$.
 
-The results in Examples~\ref{example:7.2.1} and \ref{example:7.2.2} are consequences of the following general theorem.
+The results in Examples~\ref{example:7.2.1} and \ref{example:7.2.2} are consequences of the
+following general theorem.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:7.2.2} The coefficients $\{a_{n}\}$ in any solution $y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ of
+  \label{thmtype:7.2.2} The coefficients $\{a_{n}\}$ in any solution
+  $y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ of
   \begin{equation}
     \label{eq:7.2.23}\left(1+\alpha(x-x_{0})^{2}\right)y''+\beta(x-x_{0})y'+\gamma y=0
   \end{equation}
@@ -313,7 +367,8 @@ Hence,
        & = & \dst{\sum_{n=2}^{\infty}n(n-1)a_{n}(x-x_{0})^{n-2}+\sum_{n=0}^{\infty} p(n)a_{n}(x-x_{0})^{n}},
   \end{array}
 \]
-from \eqref{eq:7.2.25}. To collect coefficients of powers of $x-x_{0}$, we shift the summation index in the first sum. This yields
+from \eqref{eq:7.2.25}. To collect coefficients of powers of $x-x_{0}$, we shift the summation index
+in the first sum. This yields
 \[
   Ly=\sum_{n=0}^{\infty}\left[(n+2)(n+1)a_{n+2}+p(n)a_{n}\right](x-x_{0})^{n}.
 \]
@@ -321,7 +376,8 @@ Thus, $Ly=0$ if and only if
 \[
   (n+2)(n+1)a_{n+2}+p(n)a_{n}=0,\quad n\ge0,
 \]
-which is equivalent to \eqref{eq:7.2.24}. Writing \eqref{eq:7.2.24} separately for the cases where $n=2m$ and $n=2m+1$ yields \eqref{eq:7.2.26} and \eqref{eq:7.2.27}.
+which is equivalent to \eqref{eq:7.2.24}. Writing \eqref{eq:7.2.24} separately for the cases where
+$n=2m$ and $n=2m+1$ yields \eqref{eq:7.2.26} and \eqref{eq:7.2.27}.
 
 \begin{example}
   \label{example:7.2.3}\rm Find the power series in $x-1$ for the general solution of
@@ -330,7 +386,8 @@ which is equivalent to \eqref{eq:7.2.24}. Writing \eqref{eq:7.2.24} separately f
   \end{equation}
 \end{example}
 
-\solution We must first write the coefficient $P_{0}(x)=2+4x-x^{2}$ in powers of $x-1$. To do this, we write $x=(x-1)+1$ in $P_{0}(x)$ and then expand the terms, collecting powers of $x-1$; thus,
+\solution We must first write the coefficient $P_{0}(x)=2+4x-x^{2}$ in powers of $x-1$. To do this,
+we write $x=(x-1)+1$ in $P_{0}(x)$ and then expand the terms, collecting powers of $x-1$; thus,
 \begin{eqnarray*}
   2+4x-2x^{2} & = & 2+4[(x-1)+1]-2[(x-1)+1]^{2} \\
               & = & 4-2(x-1)^{2}.
@@ -343,7 +400,8 @@ or, equivalently,
 \[
   \left(1-\frac{1}{2}(x-1)^{2}\right)y''-3(x-1)y'-3y=0.
 \]
-This is of the form \eqref{eq:7.2.23} with $\alpha=-1/2$, $\beta=-3$, and $\gamma=-3$. Therefore, from \eqref{eq:7.2.25}
+This is of the form \eqref{eq:7.2.23} with $\alpha=-1/2$, $\beta=-3$, and $\gamma=-3$. Therefore,
+from \eqref{eq:7.2.25}
 \[
   p(n)=-\frac{n(n-1)}{2}-3n-3=-\frac{(n+2)(n+3)}{2}.
 \]
@@ -364,10 +422,13 @@ which implies that the power series in $x-1$ for the general solution of \eqref{
   y=a_{0}\sum_{m=0}^{\infty}\frac{2m+1}{2^{m}}(x-1)^{2m}+a_{1}\sum_{m=0}^{\infty}\frac{m+1}{2^{m}}(x-1)^{2m+1}.\bbox
 \]
 
-In the examples considered so far we were able to obtain closed formulas for coefficients in the power series solutions. In some cases this is impossible, and we must settle for computing a finite number of terms in the series. The next example illustrates this with an initial value problem.
+In the examples considered so far we were able to obtain closed formulas for coefficients in the
+power series solutions. In some cases this is impossible, and we must settle for computing a finite
+number of terms in the series. The next example illustrates this with an initial value problem.
 
 \begin{example}
-  \label{example:7.2.4}\rm Compute $a_{0}$, $a_{1}$, \dots, $a_{7}$ in the series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial value problem
+  \label{example:7.2.4}\rm Compute $a_{0}$, $a_{1}$, \dots, $a_{7}$ in the series solution
+  $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial value problem
   \begin{equation}
     \label{eq:7.2.29}(1+2x^{2})y''+10xy'+8y=0,\quad y(0)=2,\quad y'(0)=-3.
   \end{equation}
@@ -407,15 +468,40 @@ Therefore the solution of \eqref{eq:7.2.29} is
 \technology
 \medskip
 
-Computing coefficients recursively as in Example~\ref{example:7.2.4} is tedious. We recommend that you do this kind of computation by writing a short program to implement the appropriate recurrence relation on a calculator or computer. You may wish to do this in verifying examples and doing exercises (identified by the symbol \Cex) in this chapter that call for numerical computation of the coefficients in series solutions. We obtained the answers to these exercises by using software that can produce answers in the form of rational numbers. However, it's perfectly acceptable - and more practical - to get your answers in decimal form. You can always check them by converting our fractions to decimals.
+Computing coefficients recursively as in Example~\ref{example:7.2.4} is tedious. We recommend that
+you do this kind of computation by writing a short program to implement the appropriate recurrence
+relation on a calculator or computer. You may wish to do this in verifying examples and doing
+exercises (identified by the symbol \Cex) in this chapter that call for numerical computation of the
+coefficients in series solutions. We obtained the answers to these exercises by using software that
+can produce answers in the form of rational numbers. However, it's perfectly acceptable - and more
+practical - to get your answers in decimal form. You can always check them by converting our
+fractions to decimals.
 
-If you're interested in actually using series to compute numerical approximations to solutions of a differential equation, then whether or not there's a simple closed form for the coefficients is essentially irrelevant. For computational purposes it's usually more efficient to start with the given coefficients $a_{0}=y(x_{0})$ and $a_{1}=y'(x_{0})$, compute $a_{2}$, \dots, $a_{N}$ recursively, and then compute approximate values of the solution from the Taylor polynomial
+If you're interested in actually using series to compute numerical approximations to solutions of a
+differential equation, then whether or not there's a simple closed form for the coefficients is
+essentially irrelevant. For computational purposes it's usually more efficient to start with the
+given coefficients $a_{0}=y(x_{0})$ and $a_{1}=y'(x_{0})$, compute $a_{2}$, \dots, $a_{N}$
+recursively, and then compute approximate values of the solution from the Taylor polynomial
 \[
   T_{N}(x)=\sum_{n=0}^{N}a_{n}(x-x_{0})^{n}.
 \]
-The trick is to decide how to choose $N$ so the approximation $y(x)\approx T_{N}(x)$ is sufficiently accurate on the subinterval of the interval of convergence that you're interested in. In the computational exercises in this and the next two sections, you will often be asked to obtain the solution of a given problem by numerical integration with software of your choice (see Section~10.1 for a brief discussion of one such method), and to compare the solution obtained in this way with the approximations obtained with $T_{N}$ for various values of $N$. This is a typical textbook kind of exercise, designed to give you insight into how the accuracy of the approximation $y(x)\approx T_{N}(x)$ behaves as a function of $N$ and the interval that you're working on. In real life, you would choose one or the other of the two methods (numerical integration or series solution). If you choose the method of series solution, then a practical procedure for determining a suitable value of $N$ is to continue increasing $N$ until the maximum of $|T_{N}-T_{N-1}|$ on the interval of interest is within the margin of error that you're willing to accept.
+The trick is to decide how to choose $N$ so the approximation $y(x)\approx T_{N}(x)$ is sufficiently
+accurate on the subinterval of the interval of convergence that you're interested in. In the
+computational exercises in this and the next two sections, you will often be asked to obtain the
+solution of a given problem by numerical integration with software of your choice (see Section~10.1
+for a brief discussion of one such method), and to compare the solution obtained in this way with
+the approximations obtained with $T_{N}$ for various values of $N$. This is a typical textbook kind
+of exercise, designed to give you insight into how the accuracy of the approximation
+$y(x)\approx T_{N}(x)$ behaves as a function of $N$ and the interval that you're working on. In real
+life, you would choose one or the other of the two methods (numerical integration or series
+solution). If you choose the method of series solution, then a practical procedure for determining a
+suitable value of $N$ is to continue increasing $N$ until the maximum of $|T_{N}-T_{N-1}|$ on the
+interval of interest is within the margin of error that you're willing to accept.
 
-In doing computational problems that call for numerical solution of differential equations you should choose the most accurate numerical integration procedure your software supports, and experiment with the step size until you're confident that the numerical results are sufficiently accurate for the problem at hand.
+In doing computational problems that call for numerical solution of differential equations you
+should choose the most accurate numerical integration procedure your software supports, and
+experiment with the step size until you're confident that the numerical results are sufficiently
+accurate for the problem at hand.
 
 \exercises In Exercises~\ref{exer:7.2.1} --\ref{exer:7.2.8} find the power series in $x$ for the general solution.
 
@@ -449,7 +535,8 @@ In doing computational problems that call for numerical solution of differential
     Find the power series in $x$ for the general solution of $y''+xy'+2y=0$.
 
     \item % (b)
-    For several choices of $a_{0}$ and $a_{1}$, use differential equations software to solve the initial value problem
+    For several choices of $a_{0}$ and $a_{1}$, use differential equations software to solve the
+    initial value problem
     \[
       y''+xy'+2y=0,\quad y(0)=a_{0},\quad y'(0)=a_{1}, \eqno{\rm(A)}
     \]
@@ -460,15 +547,19 @@ In doing computational problems that call for numerical solution of differential
     \[
       T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
     \]
-    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no perceptible difference between the two graphs.
+    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no
+    perceptible difference between the two graphs.
   \end{alist}
 
-  \item\label{exer:7.2.10} \Lex Follow the directions of Exercise~\ref{exer:7.2.9} for the differential equation
+  \item\label{exer:7.2.10} \Lex Follow the directions of Exercise~\ref{exer:7.2.9} for the
+        differential equation
   \[
     y''+2xy'+3y=0.
   \]
 
-  \exercisetext{In Exercises~\ref{exer:7.2.11} --\ref{exer:7.2.13} find $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the power series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial value problem.}
+  \exercisetext{In Exercises~\ref{exer:7.2.11} --\ref{exer:7.2.13} find $a_{0}$, \dots, $a_{N}$ for
+  $N$ at least $7$ in the power series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of the initial
+  value problem.}
 
   \item\label{exer:7.2.11} \Cex $(1+x^{2})y''+xy'+y=0,\quad y(0)=2,\quad y'(0)=-1$
 
@@ -476,7 +567,8 @@ In doing computational problems that call for numerical solution of differential
 
   \item\label{exer:7.2.13} \Cex $(1+8x^{2})y''+2y=0,\quad y(0)=2,\quad y'(0)=-1$
 
-  \item\label{exer:7.2.14} \Lex Do the next experiment for various choices of real numbers $a_{0}$, $a_{1}$, and $r$, with $0<r<1/\sqrt{2}$.
+  \item\label{exer:7.2.14} \Lex Do the next experiment for various choices of real numbers $a_{0}$,
+        $a_{1}$, and $r$, with $0<r<1/\sqrt{2}$.
   \begin{alist}
     \item % (a)
     Use differential equations software to solve the initial value problem
@@ -486,11 +578,13 @@ In doing computational problems that call for numerical solution of differential
     numerically on $(-r,r)$.
 
     \item % (b)
-    For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A), and graph
+    For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series solution
+    $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A), and graph
     \[
       T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
     \]
-    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no perceptible difference between the two graphs.
+    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no
+    perceptible difference between the two graphs.
   \end{alist}
 
   \item\label{exer:7.2.15} \Lex Do \part{a} and \part{b} for several values of $r$ in $(0,1)$:
@@ -503,12 +597,14 @@ In doing computational problems that call for numerical solution of differential
     numerically on $(-r,r)$.
 
     \item % (b)
-    For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series solution $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A) , and graph
+    For $N=2$, $3$, $4$, \dots, compute $a_{2}$, \dots, $a_{N}$ in the power series solution
+    $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ of (A) , and graph
     \[
       T_{N}(x)=\sum_{n=0}^{N}a_{n}x^{n}
     \]
     \enlargethispage{1in}
-    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no perceptible difference between the two graphs. What happens to the required $N$ as $r\to1$?
+    and the solution obtained in \part{a} on $(-r,r)$. Continue increasing $N$ until there's no
+    perceptible difference between the two graphs. What happens to the required $N$ as $r\to1$?
 
     \item % (c)
     Try \part{a} and \part{b} with $r=1.2$. Explain your results.
@@ -516,7 +612,8 @@ In doing computational problems that call for numerical solution of differential
 
   \newpage
 
-  \exercisetext{In Exercises~\ref{exer:7.2.16} --\ref{exer:7.2.20} find the power series in $x-x_{0}$ for the general solution.}
+  \exercisetext{In Exercises~\ref{exer:7.2.16} --\ref{exer:7.2.20} find the power series in
+  $x-x_{0}$ for the general solution.}
 
   \begin{tabular}[t]{@{}p{120pt}@{}p{130pt}}
     \item\label{exer:7.2.16} $y''-y=0;\quad x_{0}=3$ & \vspace*{5pt} \vspace*{5pt}
@@ -529,7 +626,9 @@ In doing computational problems that call for numerical solution of differential
 
   \item\label{exer:7.2.20} $(5+6x+3x^{2})y''+9(x+1)y'+3y=0;\quad x_{0}=-1$
 
-  \exercisetext{In Exercises~\ref{exer:7.2.21} --\ref{exer:7.2.26} find $a_{0}$, \dots, $a_{N}$ for $N$ at least $7$ in the power series $y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ for the solution of the initial value problem. Take $x_{0}$ to be the point where the initial conditions are imposed.}
+  \exercisetext{In Exercises~\ref{exer:7.2.21} --\ref{exer:7.2.26} find $a_{0}$, \dots, $a_{N}$ for
+  $N$ at least $7$ in the power series $y=\sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n}$ for the solution of
+  the initial value problem. Take $x_{0}$ to be the point where the initial conditions are imposed.}
 
   \item\label{exer:7.2.21} \Cex $(x^{2}-4)y''-xy'-3y=0,\quad y(0)=-1,\quad y'(0)=2$
 
@@ -556,13 +655,16 @@ In doing computational problems that call for numerical solution of differential
     \[
       \frac{1}{1-r}=1+r+r^{2}+\cdots+r^{n}+\cdots\quad(-1<r<1)
     \]
-    for the sum of a geometric series to find a closed form expression for the general solution of (A) on $(-1,1)$.
+    for the sum of a geometric series to find a closed form expression for the general solution of
+    (A) on $(-1,1)$.
 
     \item % (c)
-    Show that the expression obtained in \part{b} is actually the general solution of (A) on $(-\infty,\infty)$.
+    Show that the expression obtained in \part{b} is actually the general solution of (A) on
+    $(-\infty,\infty)$.
   \end{alist}
 
-  \item\label{exer:7.2.28} Use Theorem~\ref{thmtype:7.2.2} to show that the power series in $x$ for the general solution of
+  \item\label{exer:7.2.28} Use Theorem~\ref{thmtype:7.2.2} to show that the power series in $x$ for
+        the general solution of
   \[
     (1+\alpha x^{2})y''+\beta xy'+\gamma y=0
   \]
@@ -597,7 +699,11 @@ In doing computational problems that call for numerical solution of differential
     \end{eqnarray*}
 
     \item % (b)
-    Suppose $2b$ isn't a negative odd integer and $k$ is a nonnegative integer. Show that $y_{1}$ is a polynomial of degree $2k$ such that $y_{1}(-x)=y_{1}(x)$ if $\alpha=2k$, while $y_{2}$ is a polynomial of degree $2k+1$ such that $y_{2}(-x)=-y_{2}(-x)$ if $\alpha=2k+1$. Conclude that if $n$ is a nonnegative integer, then there's a polynomial $P_{n}$ of degree $n$ such that $P_{n}(-x)=(-1)^{n}P_{n}(x)$ and
+    Suppose $2b$ isn't a negative odd integer and $k$ is a nonnegative integer. Show that $y_{1}$ is
+    a polynomial of degree $2k$ such that $y_{1}(-x)=y_{1}(x)$ if $\alpha=2k$, while $y_{2}$ is a
+    polynomial of degree $2k+1$ such that $y_{2}(-x)=-y_{2}(-x)$ if $\alpha=2k+1$. Conclude that if
+    $n$ is a nonnegative integer, then there's a polynomial $P_{n}$ of degree $n$ such that
+    $P_{n}(-x)=(-1)^{n}P_{n}(x)$ and
     \[
       (1-x^{2})P_{n}''-2bxP_{n}'+n(n+2b-1)P_{n}=0. \eqno{\rm(A)}
     \]
@@ -621,7 +727,8 @@ In doing computational problems that call for numerical solution of differential
     \[
       \int_{-1}^{1}(1-x^{2})^{b-1}P_{m}(x)P_{n}(x)\,dx=0.
     \]
-    (We say that $P_{m}$ and $P_{n}$ are {\color{blue}\it orthogonal on\/} $(-1,1)$ {\color{blue}\it with respect to the weighting function\/}
+    (We say that $P_{m}$ and $P_{n}$ are {\color{blue}\it orthogonal on\/} $(-1,1)$ {\color{blue}\it
+    with respect to the weighting function\/}
     \newline
     $(1-x^{2})^{b-1}$.)
   \end{alist}
@@ -629,7 +736,8 @@ In doing computational problems that call for numerical solution of differential
   \item\label{exer:7.2.31}
   \begin{alist}
     \item % (a)
-    Use Exercise~\ref{exer:7.2.28} to show that the power series in $x$ for the general solution of Hermite's equation
+    Use Exercise~\ref{exer:7.2.28} to show that the power series in $x$ for the general solution of
+    Hermite's equation
     \[
       y''-2xy'+2\alpha y=0
     \]
@@ -641,7 +749,10 @@ In doing computational problems that call for numerical solution of differential
     \end{eqnarray*}
 
     \item % (b)
-    Suppose $k$ is a nonnegative integer. Show that $y_{1}$ is a polynomial of degree $2k$ such that $y_{1}(-x)=y_{1}(x)$ if $\alpha=2k$, while $y_{2}$ is a polynomial of degree $2k+1$ such that $y_{2}(-x)=-y_{2}(-x)$ if $\alpha=2k+1$. Conclude that if $n$ is a nonnegative integer then there's a polynomial $P_{n}$ of degree $n$ such that $P_{n}(-x)=(-1)^{n}P_{n}(x)$ and
+    Suppose $k$ is a nonnegative integer. Show that $y_{1}$ is a polynomial of degree $2k$ such that
+    $y_{1}(-x)=y_{1}(x)$ if $\alpha=2k$, while $y_{2}$ is a polynomial of degree $2k+1$ such that
+    $y_{2}(-x)=-y_{2}(-x)$ if $\alpha=2k+1$. Conclude that if $n$ is a nonnegative integer then
+    there's a polynomial $P_{n}$ of degree $n$ such that $P_{n}(-x)=(-1)^{n}P_{n}(x)$ and
     \[
       P_{n}''-2xP_{n}'+2nP_{n}=0. \eqno{\rm(A)}
     \]
@@ -661,14 +772,16 @@ In doing computational problems that call for numerical solution of differential
     \[
       \int_{-\infty}^{\infty}e^{-x^{2}}P_{m}(x)P_{n}(x)\,dx=0.
     \]
-    (We say that $P_{m}$ and $P_{n}$ are {\color{blue}\it orthogonal on\/} $(-\infty,\infty)$ {\color{blue}\it with respect to the weighting function\/} $e^{-x^{2}}$.)
+    (We say that $P_{m}$ and $P_{n}$ are {\color{blue}\it orthogonal on\/} $(-\infty,\infty)$
+    {\color{blue}\it with respect to the weighting function\/} $e^{-x^{2}}$.)
   \end{alist}
 
   \item\label{exer:7.2.32} Consider the equation
   \[
     \left(1+\alpha x^{3}\right)y''+\beta x^{2}y'+\gamma xy=0, \eqno{\rm(A)}
   \]
-  and let $p(n)=\alpha n(n-1)+\beta n+\gamma$. (The special case $y''-xy=0$ of (A) is Airy's equation.)
+  and let $p(n)=\alpha n(n-1)+\beta n+\gamma$. (The special case $y''-xy=0$ of (A) is Airy's
+  equation.)
 
   \begin{alist}
     \item % (a)
@@ -682,7 +795,8 @@ In doing computational problems that call for numerical solution of differential
     \]
 
     \item % (b)
-    Show from (a) that $a_{n}=0$ unless $n=3m$ or $n=3m+1$ for some nonnegative integer $m$, and that
+    Show from (a) that $a_{n}=0$ unless $n=3m$ or $n=3m+1$ for some nonnegative integer $m$, and
+    that
     \begin{eqnarray*}
       a_{3m+3}                           & = & -\frac{p(3m)}{(3m+3)(3m+2)}a_{3m},\quad m\ge0, \\
       \noalign{\hspace*{50pt}\mbox{and}}                                                      \\
@@ -700,7 +814,8 @@ In doing computational problems that call for numerical solution of differential
     \]
   \end{alist}
 
-  \exercisetext{In Exercises~\ref{exer:7.2.33} --\ref{exer:7.2.37} use the method of Exercise~\ref{exer:7.2.32} to find the power series in $x$ for the general solution.}
+  \exercisetext{In Exercises~\ref{exer:7.2.33} --\ref{exer:7.2.37} use the method of
+  Exercise~\ref{exer:7.2.32} to find the power series in $x$ for the general solution.}
 
   \begin{tabular}[t]{@{}p{100pt}@{}p{168pt}}
     \item\label{exer:7.2.33} $y''-xy=0$ & \vspace*{10pt}
@@ -732,7 +847,8 @@ In doing computational problems that call for numerical solution of differential
     \]
 
     \item % (b)
-    Show from \part{a} that $a_{n}=0$ unless $n=(k+2)m$ or $n=(k+2)m+1$ for some nonnegative integer $m$, and that
+    Show from \part{a} that $a_{n}=0$ unless $n=(k+2)m$ or $n=(k+2)m+1$ for some nonnegative integer
+    $m$, and that
     \begin{eqnarray*}
       a_{(k+2)(m+1)}                     & = & -\frac{p\left((k+2)m\right)}{(k+2)(m+1)[(k+2)(m+1)-1]}a_{(k+2)m},\quad m\ge0, \\
       \noalign{\hspace*{50pt}\mbox{and}}                                                                                     \\
@@ -750,7 +866,8 @@ In doing computational problems that call for numerical solution of differential
     \]
   \end{alist}
 
-  \exercisetext{In Exercises~\ref{exer:7.2.39} --\ref{exer:7.2.44} use the method of Exercise~\ref{exer:7.2.38} to find the power series in $x$ for the general solution.}
+  \exercisetext{In Exercises~\ref{exer:7.2.39} --\ref{exer:7.2.44} use the method of
+  Exercise~\ref{exer:7.2.38} to find the power series in $x$ for the general solution.}
 
   \item\label{exer:7.2.39} $(1+2x^{5})y''+14x^{4}y'+10x^{3}y=0$
 

@@ -5,17 +5,22 @@ If $a_{0}$, $a_{1}$, \dots, $a_{n}$ are constants and $a_{0}\ne0$, then
 \[
   a_{0}y^{(n)}+a_{1}y^{(n-1)}+\cdots+a_{n}y=F(x)
 \]
-is said to be a {\color{blue}\it constant coefficient equation\/}. In this section we consider the homogeneous constant coefficient equation
+is said to be a {\color{blue}\it constant coefficient equation\/}. In this section we consider the
+homogeneous constant coefficient equation
 \begin{equation}
   \label{eq:9.2.1}a_{0}y^{(n)}+a_{1}y^{(n-1)}+\cdots+a_{n}y=0.
 \end{equation}
-Since \eqref{eq:9.2.1} is normal on $(-\infty,\infty)$, the theorems in Section~9.1 all apply with $(a,b)=(-\infty,\infty)$.
+Since \eqref{eq:9.2.1} is normal on $(-\infty,\infty)$, the theorems in Section~9.1 all apply with
+$(a,b)=(-\infty,\infty)$.
 
 As in Section~5.2, we call
 \begin{equation}
   \label{eq:9.2.2}p(r)=a_{0}r^{n}+a_{1}r^{n-1}+\cdots+a_{n}
 \end{equation}
-the {\color{blue}\it characteristic polynomial\/} of \eqref{eq:9.2.1}. We saw in Section~5.2 that when $n=2$ the solutions of \eqref{eq:9.2.1} are determined by the zeros of the characteristic polynomial. This is also true when $n>2$, but the situation is more complicated in this case. Consequently, we take a different approach here than in Section~5.2.
+the {\color{blue}\it characteristic polynomial\/} of \eqref{eq:9.2.1}. We saw in Section~5.2 that
+when $n=2$ the solutions of \eqref{eq:9.2.1} are determined by the zeros of the characteristic
+polynomial. This is also true when $n>2$, but the situation is more complicated in this case.
+Consequently, we take a different approach here than in Section~5.2.
 
 If $k$ is a positive integer, let $D^{k}$ stand for the $k$-th derivative operator; that is
 \[
@@ -33,7 +38,8 @@ such that
 \[
   q(D)y=(b_{0}D^{m}+b_{1}D^{m-1}+\cdots+b_{m})y=b_{0}y^{(m)}+b_{1}y^{(m-1)}+\cdots+ b_{m}y
 \]
-whenever $y$ is a function with $m$ derivatives. We call $q(D)$ a {\color{blue}\it polynomial\/} operator.
+whenever $y$ is a function with $m$ derivatives. We call $q(D)$ a {\color{blue}\it polynomial\/}
+operator.
 
 With $p$ as in \eqref{eq:9.2.2},
 \[
@@ -48,11 +54,16 @@ that is
 \[
   p(D)(e^{rx})=p(r)e^{rx}.
 \]
-This shows that $y=e^{rx}$ is a solution of \eqref{eq:9.2.1} if $p(r)=0$. In the simplest case, where $p$ has $n$ distinct real zeros $r_{1}$, $r_{2}$,\dots, $r_{n}$, this argument yields $n$ solutions
+This shows that $y=e^{rx}$ is a solution of \eqref{eq:9.2.1} if $p(r)=0$. In the simplest case,
+where $p$ has $n$ distinct real zeros $r_{1}$, $r_{2}$,\dots, $r_{n}$, this argument yields $n$
+solutions
 \[
   y_{1}=e^{r_{1}x},\quad y_{2}=e^{r_{2}x},\dots,\quad y_{n}=e^{r_{n}x}.
 \]
-It can be shown (Exercise~\ref{exer:9.2.39}) that the Wronskian of $\{e^{r_{1}x},e^{r_{2}x},\dots,e^{r_{n}x}\}$ is nonzero if $r_{1}$, $r_{2}$, \dots, $r_{n}$ are distinct; hence, $\{e^{r_{1}x},e^{r_{2}x},\dots,e^{r_{n}x}\}$ is a fundamental set of solutions of $p(D)y=0$ in this case.
+It can be shown (Exercise~\ref{exer:9.2.39}) that the Wronskian of
+$\{e^{r_{1}x},e^{r_{2}x},\dots,e^{r_{n}x}\}$ is nonzero if $r_{1}$, $r_{2}$, \dots, $r_{n}$ are
+distinct; hence, $\{e^{r_{1}x},e^{r_{2}x},\dots,e^{r_{n}x}\}$ is a fundamental set of solutions of
+$p(D)y=0$ in this case.
 
 \begin{example}
   \label{example:9.2.1} \rm \mbox{}
@@ -76,7 +87,8 @@ It can be shown (Exercise~\ref{exer:9.2.39}) that the Wronskian of $\{e^{r_{1}x}
 \[
   p(r)=r^{3}-6r^{2}+11r-6=(r-1)(r-2)(r-3).
 \]
-Therefore $\{e^{x},e^{2x},e^{3x}\}$ is a set of solutions of \eqref{eq:9.2.3}. It is a fundamental set, since its Wronskian is
+Therefore $\{e^{x},e^{2x},e^{3x}\}$ is a set of solutions of \eqref{eq:9.2.3}. It is a fundamental
+set, since its Wronskian is
 \[
   W(x)=\left|
   \begin{array}{rrr}
@@ -95,7 +107,8 @@ Therefore the general solution of \eqref{eq:9.2.3} is
   \label{eq:9.2.5}y=c_{1}e^{x}+c_{2}e^{2x}+c_{3}e^{3x}.
 \end{equation}
 
-\solutionpart{b} We must determine $c_{1}$, $c_{2}$ and $c_{3}$ in \eqref{eq:9.2.5} so that $y$ satisfies the initial conditions in \eqref{eq:9.2.4}. Differentiating \eqref{eq:9.2.5} twice yields
+\solutionpart{b} We must determine $c_{1}$, $c_{2}$ and $c_{3}$ in \eqref{eq:9.2.5} so that $y$
+satisfies the initial conditions in \eqref{eq:9.2.4}. Differentiating \eqref{eq:9.2.5} twice yields
 \begin{equation}
   \label{eq:9.2.6}
   \begin{array}{rcl}
@@ -111,7 +124,8 @@ Setting $x=0$ in \eqref{eq:9.2.5} and \eqref{eq:9.2.6} and imposing the initial 
     c_{1}+4c_{2}+9c_{3}                     & = & 9.
   \end{array}
 \]
-The solution of this system is $c_{1}=4$, $c_{2}=-1$, $c_{3}=1$. Therefore the solution of \eqref{eq:9.2.4} is
+The solution of this system is $c_{1}=4$, $c_{2}=-1$, $c_{3}=1$. Therefore the solution of
+\eqref{eq:9.2.4} is
 \[
   y=4e^{x}-e^{2x}+e^{3x}
 \]
@@ -125,7 +139,9 @@ The solution of this system is $c_{1}=4$, $c_{2}=-1$, $c_{3}=1$. Therefore the s
   \label{figure:9.2.1}
 \end{figure}
 
-Now we consider the case where the characteristic polynomial \eqref{eq:9.2.2} does not have $n$ distinct real zeros. For this purpose it is useful to define what we mean by a factorization of a polynomial operator. We begin with an example.
+Now we consider the case where the characteristic polynomial \eqref{eq:9.2.2} does not have $n$
+distinct real zeros. For this purpose it is useful to define what we mean by a factorization of a
+polynomial operator. We begin with an example.
 
 \begin{example}
   \label{example:9.2.2} \rm Consider the polynomial
@@ -144,13 +160,19 @@ Now we consider the case where the characteristic polynomial \eqref{eq:9.2.2} do
   \begin{equation}
     \label{eq:9.2.7}p(D)=(D-1)(D^{2}+1)=(D^{2}+1)(D-1).
   \end{equation}
-  However, before we can make this assertion we must {\color{blue}\it define\/} what we mean by saying that two operators are equal, and what we mean by the products of operators in \eqref{eq:9.2.7}. We say that two operators are equal if they apply to the same functions and always produce the same result. The definitions of the products in \eqref{eq:9.2.7} is this: if $y$ is any three-times differentiable function then
+  However, before we can make this assertion we must {\color{blue}\it define\/} what we mean by
+  saying that two operators are equal, and what we mean by the products of operators in
+  \eqref{eq:9.2.7}. We say that two operators are equal if they apply to the same functions and
+  always produce the same result. The definitions of the products in \eqref{eq:9.2.7} is this: if
+  $y$ is any three-times differentiable function then
   \begin{alist}
     \item % (a)
-    $(D-1)(D^{2}+1)y$ is the function obtained by first applying $D^{2}+1$ to $y$ and then applying $D-1$ to the resulting function
+    $(D-1)(D^{2}+1)y$ is the function obtained by first applying $D^{2}+1$ to $y$ and then applying
+    $D-1$ to the resulting function
 
     \item % (b)
-    $(D^{2}+1)(D-1)y$ is the function obtained by first applying $D-1$ to $y$ and then applying $D^{2}+1$ to the resulting function.
+    $(D^{2}+1)(D-1)y$ is the function obtained by first applying $D-1$ to $y$ and then applying
+    $D^{2}+1$ to the resulting function.
   \end{alist}
   From \part{a},
   \begin{equation}
@@ -183,7 +205,8 @@ Now we consider the case where the characteristic polynomial \eqref{eq:9.2.2} do
 \end{example}
 
 \begin{example}
-  \label{example:9.2.3} \rm Use the result of Example~\ref{example:9.2.2} to find the general solution of
+  \label{example:9.2.3} \rm Use the result of Example~\ref{example:9.2.2} to find the general
+  solution of
   \begin{equation}
     \label{eq:9.2.10}y'''-y''+y'-y=0.
   \end{equation}
@@ -193,13 +216,15 @@ Now we consider the case where the characteristic polynomial \eqref{eq:9.2.2} do
 \[
   (D-1)(D^{2}+1)y=0,
 \]
-which implies that any solution of $(D^{2}+1)y=0$ is a solution of \eqref{eq:9.2.10}. Therefore $y_{1}=\cos x$ and $y_{2}=\sin x$ are solutions of \eqref{eq:9.2.10}.
+which implies that any solution of $(D^{2}+1)y=0$ is a solution of \eqref{eq:9.2.10}. Therefore
+$y_{1}=\cos x$ and $y_{2}=\sin x$ are solutions of \eqref{eq:9.2.10}.
 
 From \eqref{eq:9.2.9}, we can rewrite \eqref{eq:9.2.10} as
 \[
   (D^{2}+1)(D-1)y=0,
 \]
-which implies that any solution of $(D-1)y=0$ is a solution of \eqref{eq:9.2.10}. Therefore $y_{3}=e^{x}$ is solution of \eqref{eq:9.2.10}.
+which implies that any solution of $(D-1)y=0$ is a solution of \eqref{eq:9.2.10}. Therefore
+$y_{3}=e^{x}$ is solution of \eqref{eq:9.2.10}.
 
 The Wronskian of $\{e^{x},\cos x,\sin x\}$ is
 \[
@@ -236,7 +261,8 @@ is the general solution of \eqref{eq:9.2.10}.
 \[
   p(r)=r^{4}-16=(r^{2}-4)(r^{2}+4)=(r-2)(r+2)(r^{2}+4).
 \]
-By arguments similar to those used in Examples~\ref{example:9.2.2} and \ref{example:9.2.3}, it can be shown that \eqref{eq:9.2.11} can be written as
+By arguments similar to those used in Examples~\ref{example:9.2.2} and \ref{example:9.2.3}, it can
+be shown that \eqref{eq:9.2.11} can be written as
 \[
   (D^{2}+4)(D+2)(D-2)y=0
 \]
@@ -252,7 +278,8 @@ Therefore $y$ is a solution of \eqref{eq:9.2.11} if it's a solution of any of th
 \[
   (D-2)y=0,\quad(D+2)y=0,\quad(D^{2}+4)y=0.
 \]
-Hence, $\{e^{2x},e^{-2x},\cos2x,\sin2x\}$ is a set of solutions of \eqref{eq:9.2.11}. The Wronskian of this set is
+Hence, $\{e^{2x},e^{-2x},\cos2x,\sin2x\}$ is a set of solutions of \eqref{eq:9.2.11}. The Wronskian
+of this set is
 \[
   W(x)=\left|
   \begin{array}{rrrr}
@@ -286,7 +313,8 @@ with real coefficients can be factored as
 \[
   p(r)=a_{0}p_{1}(r)p_{2}(r)\cdots p_{k}(r),
 \]
-where no pair of the polynomials $p_{1}$, $p_{2}$, \dots, $p_{k}$ has a common factor and each is either of the form
+where no pair of the polynomials $p_{1}$, $p_{2}$, \dots, $p_{k}$ has a common factor and each is
+either of the form
 \begin{equation}
   \label{eq:9.2.12}p_{j}(r)=(r-r_{j})^{m_{j}},
 \end{equation}
@@ -294,19 +322,31 @@ where $r_{j}$ is real and $m_{j}$ is a positive integer, or
 \begin{equation}
   \label{eq:9.2.13}p_{j}(r)=\left[(r-\lambda_{j})^{2}+\omega_{j}^{2}\right]^{m_{j}},
 \end{equation}
-where $\lambda_{j}$ and $\omega_{j}$ are real, $\omega_{j}\ne0$, and $m_{j}$ is a positive integer. If \eqref{eq:9.2.12} holds then $r_{j}$ is a real zero of $p$, while if \eqref{eq:9.2.13} holds then $\lambda+i\omega$ and $\lambda-i\omega$ are complex conjugate zeros of $p$. In either case, $m_{j}$ is the {\color{blue}\it multiplicity\/} of the zero(s).
+where $\lambda_{j}$ and $\omega_{j}$ are real, $\omega_{j}\ne0$, and $m_{j}$ is a positive integer.
+If \eqref{eq:9.2.12} holds then $r_{j}$ is a real zero of $p$, while if \eqref{eq:9.2.13} holds then
+$\lambda+i\omega$ and $\lambda-i\omega$ are complex conjugate zeros of $p$. In either case, $m_{j}$
+is the {\color{blue}\it multiplicity\/} of the zero(s).
 
 By arguments similar to those used in our examples, it can be shown that
 \begin{equation}
   \label{eq:9.2.14}p(D)=a_{0}p_{1}(D)p_{2}(D)\cdots p_{k}(D)
 \end{equation}
-and that the order of the factors on the right can be chosen arbitrarily. Therefore, if $p_{j}(D)y=0$ for some $j$ then $p(D)y=0$. To see this, we simply rewrite \eqref{eq:9.2.14} so that $p_{j}(D)$ is applied first. Therefore the problem of finding solutions of $p(D)y=0$ with $p$ as in \eqref{eq:9.2.14} reduces to finding solutions of each of these equations
+and that the order of the factors on the right can be chosen arbitrarily. Therefore, if
+$p_{j}(D)y=0$ for some $j$ then $p(D)y=0$. To see this, we simply rewrite \eqref{eq:9.2.14} so that
+$p_{j}(D)$ is applied first. Therefore the problem of finding solutions of $p(D)y=0$ with $p$ as in
+\eqref{eq:9.2.14} reduces to finding solutions of each of these equations
 \[
   p_{j}(D)y=0,\quad1\le j\le k,
 \]
-where $p_{j}$ is a power of a first degree term or of an irreducible quadratic. To find a fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of $p(D)y=0$, we find fundamental set of solutions of each of the equations and take $\{y_{1},y_{2},\dots,y_{n}\}$ to be the set of all functions in these separate fundamental sets. In Exercise~\ref{exer:9.2.40} we sketch the proof that $\{y_{1},y_{2},\dots,y_{n}\}$ is linearly independent, and therefore a fundamental set of solutions of $p(D)y=0$.
+where $p_{j}$ is a power of a first degree term or of an irreducible quadratic. To find a
+fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of $p(D)y=0$, we find fundamental set of
+solutions of each of the equations and take $\{y_{1},y_{2},\dots,y_{n}\}$ to be the set of all
+functions in these separate fundamental sets. In Exercise~\ref{exer:9.2.40} we sketch the proof that
+$\{y_{1},y_{2},\dots,y_{n}\}$ is linearly independent, and therefore a fundamental set of solutions
+of $p(D)y=0$.
 
-To apply this procedure to general homogeneous constant coefficient equations, we must be able to find fundamental sets of solutions of equations of the form
+To apply this procedure to general homogeneous constant coefficient equations, we must be able to
+find fundamental sets of solutions of equations of the form
 \[
   (D-a)^{m}y=0
 \]
@@ -332,7 +372,8 @@ where $m$ is an arbitrary positive integer. The next two theorems show how to do
 \[
   f(x)=c_{1}+c_{2}x+\cdots+c_{m}x^{m-1}
 \]
-is an arbitrary polynomial of degree $\le m-1$, then $y=e^{ax}f$ is a solution of \eqref{eq:9.2.16}. First note that if $g$ is any differentiable function then
+is an arbitrary polynomial of degree $\le m-1$, then $y=e^{ax}f$ is a solution of \eqref{eq:9.2.16}.
+First note that if $g$ is any differentiable function then
 \[
   (D-a)e^{ax}g=De^{ax}g-ae^{ax}g=ae^{ax}g+e^{ax}g'-ae^{ax}g,
 \]
@@ -350,7 +391,10 @@ Therefore
     (D-a)^{m}e^{ax}f & =      & (D-a)e^{ax}f^{(m-1)}=e^{ax}f^{(m)} & \mbox{(from \eqref{eq:9.2.17} with $g=f^{(m-1)}$)}.
   \end{array}
 \]
-Since $f^{(m)}=0$, the last equation implies that $y=e^{ax}f$ is a solution of \eqref{eq:9.2.16} if $f$ is any polynomial of degree $\le m-1$. In particular, each function in \eqref{eq:9.2.15} is a solution of \eqref{eq:9.2.16}. To see that \eqref{eq:9.2.15} is linearly independent (and therefore a fundamental set of solutions of \eqref{eq:9.2.16}), note that if
+Since $f^{(m)}=0$, the last equation implies that $y=e^{ax}f$ is a solution of \eqref{eq:9.2.16} if
+$f$ is any polynomial of degree $\le m-1$. In particular, each function in \eqref{eq:9.2.15} is a
+solution of \eqref{eq:9.2.16}. To see that \eqref{eq:9.2.15} is linearly independent (and therefore
+a fundamental set of solutions of \eqref{eq:9.2.16}), note that if
 \[
   c_{1}e^{ax}+c_{2}xe^{ax}+c\dots+c_{m-1}x^{m-1}e^{ax}=0
 \]
@@ -358,7 +402,8 @@ for all $x$ in some interval $(a,b)$, then
 \[
   c_{1}+c_{2}x+c\dots+c_{m-1}x^{m-1}=0
 \]
-for all $x$ in $(a,b)$. However, we know from algebra that if this polynomial has more than $m-1$ zeros then $c_{1}=c_{2}=\cdots=c_{n}=0$.
+for all $x$ in $(a,b)$. However, we know from algebra that if this polynomial has more than $m-1$
+zeros then $c_{1}=c_{2}=\cdots=c_{n}=0$.
 
 \begin{example}
   \label{example:9.2.5} \rm Find the general solution of
@@ -455,7 +500,8 @@ respectively. Therefore the general solution of \eqref{eq:9.2.20} is
   \end{equation}
 \end{example}
 
-\solution A fundamental set of solutions of \eqref{eq:9.2.21} can be obtained by combining fundamental sets of solutions of
+\solution A fundamental set of solutions of \eqref{eq:9.2.21} can be obtained by combining
+fundamental sets of solutions of
 \[
   \begin{array}{c}
     \dst\left[(D+1)^{2}+1\right]^{2}y=0,\quad(D-1)^{3}y=0, \\
@@ -508,7 +554,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
 
   \item\label{exer:9.2.14} $y^{(4)}-4y'''+7y''-6y'+2y=0$
 
-  \exercisetext{In Exercises~\ref{exer:9.2.15}--\ref{exer:9.2.27} solve the initial value problem. Where indicated by \CGex, graph the solution.}
+  \exercisetext{In Exercises~\ref{exer:9.2.15}--\ref{exer:9.2.27} solve the initial value problem.
+  Where indicated by \CGex, graph the solution.}
 
   \item\label{exer:9.2.15} $y'''-2y''+4y'-8y=0,\quad y(0)=2,\quad y'(0)=-2,\;y''(0)=0$
 
@@ -530,17 +577,23 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
 
   \item\label{exer:9.2.23} $y^{(4)}-16y=0,\quad y(0)=2,\;y'(0)=2,\;y''(0)=-2,\;y'''(0)=0$
 
-  \item\label{exer:9.2.24} $y^{(4)}-6y'''+7y''+6y'-8y=0,\quad y(0)=-2,\quad y'(0)=-8,\quad y''(0)=-14$,
+  \item\label{exer:9.2.24}
+        $y^{(4)}-6y'''+7y''+6y'-8y=0,\quad y(0)=-2,\quad y'(0)=-8,\quad y''(0)=-14$,
 
   $y'''(0)=-62$
 
-  \item\label{exer:9.2.25} $4y^{(4)}-13y''+9y=0,\quad y(0)=1,\quad y'(0)=3,\quad y''(0)=1,\quad y'''(0)=3$
+  \item\label{exer:9.2.25}
+        $4y^{(4)}-13y''+9y=0,\quad y(0)=1,\quad y'(0)=3,\quad y''(0)=1,\quad y'''(0)=3$
 
-  \item\label{exer:9.2.26} $y^{(4)}+2y'''-2y''-8y'-8y=0,\quad y(0)=5,\quad y'(0)=-2,\quad y''(0)=6,\quad y'''(0)=8$
+  \item\label{exer:9.2.26}
+        $y^{(4)}+2y'''-2y''-8y'-8y=0,\quad y(0)=5,\quad y'(0)=-2,\quad y''(0)=6,\quad y'''(0)=8$
 
-  \item\label{exer:9.2.27} \CGex $4y^{(4)}+8y'''+19y''+32y'+12y=0,\quad y(0)=3,\quad y'(0)=-3,\quad y''(0)= -\dst\frac{7}{2}$, $y'''(0)=\dst\frac{31}{4}$
+  \item\label{exer:9.2.27} \CGex
+        $4y^{(4)}+8y'''+19y''+32y'+12y=0,\quad y(0)=3,\quad y'(0)=-3,\quad y''(0)= -\dst\frac{7}{2}$,
+        $y'''(0)=\dst\frac{31}{4}$
 
-  \item\label{exer:9.2.28} Find a fundamental set of solutions of the given equation, and verify that it's a fundamental set by evaluating its Wronskian at $x=0$.
+  \item\label{exer:9.2.28} Find a fundamental set of solutions of the given equation, and verify
+        that it's a fundamental set by evaluating its Wronskian at $x=0$.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     {\bf (a)} $(D-1)^{2}(D-2)y=0$ & {\bf (b)} $(D^{2}+4)(D-3)y=0$
@@ -554,7 +607,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     {\bf (e)} $(D^{2}-1)(D^{2}+1)y=0$ & {\bf (f)} $(D^{2}-2D+2)(D^{2}+1)y=0$
   \end{tabular}
 
-  \exercisetext{In Exercises~\ref{exer:9.2.29}--\ref{exer:9.2.38} find a fundamental set of solutions.}
+  \exercisetext{In Exercises~\ref{exer:9.2.29}--\ref{exer:9.2.38} find a fundamental set of
+  solutions.}
 
   \item\label{exer:9.2.29} $(D^{2}+6D+13)(D-2)^{2}D^{3}y=0$
 
@@ -591,8 +645,10 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
       a^{n-1}_{1} & a^{n-1}_{2} & \cdots & a^{n-1}_{n}
     \end{array}\right|= \prod_{1\le i<j\le n}(a_{j}-a_{i}), \eqno{\rm(A)}
   \]
-  where the left side is the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Vandermonde/}{\color{blue}
-  \it Vandermonde determinant\/} and the right side is the product of all factors of the form $(a_{j}-a_{i})$ with $i$ and $j$ between $1$ and $n$ and $i<j$.
+  where the left side is the
+  \href{https://mathshistory.st-andrews.ac.uk/Biographies/Vandermonde/}{\color{blue}
+  \it Vandermonde determinant\/} and the right side is the product of all factors of the form
+  $(a_{j}-a_{i})$ with $i$ and $j$ between $1$ and $n$ and $i<j$.
 
   \begin{alist}
     \item % (a)
@@ -602,7 +658,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     Find the Wronskian of $\{e^{{a_{1}}x},\quad e^{{a_{2}}x},\dots,e^{{a_{n}}x}\}$.
   \end{alist}
 
-  \item\label{exer:9.2.40} A theorem from algebra says that if $P_{1}$ and $P_{2}$ are polynomials with no common factors then there are polynomials $Q_{1}$ and $Q_{2}$ such that
+  \item\label{exer:9.2.40} A theorem from algebra says that if $P_{1}$ and $P_{2}$ are polynomials
+        with no common factors then there are polynomials $Q_{1}$ and $Q_{2}$ such that
   \[
     Q_{1}P_{1}+Q_{2}P_{2}=1.
   \]
@@ -621,7 +678,10 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     then $y=0$.
 
     \item % (b)
-    Suppose $P_{1}$ and $P_{2}$ are polynomials with no common factors. Let $u_{1}$, \dots, $u_{r}$ be linearly independent solutions of $P_{1}(D)y=0$ and let $v_{1}$, \dots, $v_{s}$ be linearly independent solutions of $P_{2}(D)y=0$. Use \part{a} to show that $\{u_{1},\dots,u_{r},\allowbreak v_{1},\dots,v_{s}\}$ is a linearly independent set.
+    Suppose $P_{1}$ and $P_{2}$ are polynomials with no common factors. Let $u_{1}$, \dots, $u_{r}$
+    be linearly independent solutions of $P_{1}(D)y=0$ and let $v_{1}$, \dots, $v_{s}$ be linearly
+    independent solutions of $P_{2}(D)y=0$. Use \part{a} to show that
+    $\{u_{1},\dots,u_{r},\allowbreak v_{1},\dots,v_{s}\}$ is a linearly independent set.
 
     \item % (c)
     Suppose the characteristic polynomial of the constant coefficient equation
@@ -636,11 +696,14 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     \[
       p_{j}(r)=(r-r_{j})^{n_{j}}\mbox{ or }p_{j}(r)=[(r-\lambda_{j})^{2}+w^{2}_{j}]^{m_{j}}\quad(\omega_{j}>0)
     \]
-    and no two of the polynomials $p_{1}$, $p_{2}$, \dots, $p_{k}$ have a common factor. Show that we can find a fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of {\rm(A)} by finding a fundamental set of solutions of each of the equations
+    and no two of the polynomials $p_{1}$, $p_{2}$, \dots, $p_{k}$ have a common factor. Show that
+    we can find a fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of {\rm(A)} by finding
+    a fundamental set of solutions of each of the equations
     \[
       p_{j}(D)y=0,\quad1\le j\le k,
     \]
-    and taking $\{y_{1},y_{2},\dots,y_{n}\}$ to be the set of all functions in these separate fundamental sets.
+    and taking $\{y_{1},y_{2},\dots,y_{n}\}$ to be the set of all functions in these separate
+    fundamental sets.
   \end{alist}
 
   \item\label{exer:9.2.41}
@@ -657,7 +720,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     where $p_{1}$ and $q_{1}$ are polynomials of degree $\le k-1$.
 
     \item % (b)
-    Apply \part{a} $m$ times to show that if $z$ is of the form (A) where $p$ and $q$ are polynomial of degree $\le m-1$, then
+    Apply \part{a} $m$ times to show that if $z$ is of the form (A) where $p$ and $q$ are polynomial
+    of degree $\le m-1$, then
     \[
       (D^{2}+\omega^{2})^{m}z=0. \eqno{\rm(B)}
     \]
@@ -669,7 +733,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     \]
 
     \item % (d)
-    Conclude from \part{b} and \part{c} that if $p$ and $q$ are arbitrary polynomials of degree $\le m-1$ then
+    Conclude from \part{b} and \part{c} that if $p$ and $q$ are arbitrary polynomials of degree
+    $\le m-1$ then
     \[
       y=e^{\lambda x}(p(x)\cos\omega x+q(x)\sin\omega x)
     \]
@@ -690,7 +755,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     are all solutions of (C).
 
     \item % (f)
-    Complete the proof of Theorem~\ref{thmtype:9.2.2} by showing that the functions in (D) are linearly independent.
+    Complete the proof of Theorem~\ref{thmtype:9.2.2} by showing that the functions in (D) are
+    linearly independent.
   \end{alist}
 
   \item\label{exer:9.2.42}
@@ -719,7 +785,9 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     \]
 
     \item % (d)
-    Show that (A) also holds if $n=0$ or a negative integer. \hint{Verify by direct calculation that \[(\cos\theta+i\sin\theta)^{-1}=(\cos\theta-i\sin\theta).\] Then replace $\theta$ by $-\theta$ in (A).}
+    Show that (A) also holds if $n=0$ or a negative integer. \hint{Verify by direct calculation
+    that \[(\cos\theta+i\sin\theta)^{-1}=(\cos\theta-i\sin\theta).\] Then replace $\theta$ by
+    $-\theta$ in (A).}
 
     \item % (e)
     Now suppose $n$ is a positive integer. Infer from (A) that if
@@ -747,7 +815,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     \]
   \end{alist}
 
-  \item\label{exer:9.2.43} Use \part{e} of Exercise~\ref{exer:9.2.42} to find a fundamental set of solutions of the given equation.
+  \item\label{exer:9.2.43} Use \part{e} of Exercise~\ref{exer:9.2.42} to find a fundamental set of
+        solutions of the given equation.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     {\bf (a)} $y'''-y=0$ & {\bf (b)} $y'''+y=0$
@@ -767,7 +836,8 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
   \[
     a_{0}x^{n}y^{(n)}+a_{1}x^{n-1}y^{(n-1)}+\cdots +a_{n-1}xy'+a_{n}y=0,\quad x>0, \eqno{\rm(A)}
   \]
-  where $a_{0}$, $a_{1}$, \dots, $a_{n}$ are constants, is an {\color{blue}\it Euler} or {\color{blue}\it equidimensional} equation.
+  where $a_{0}$, $a_{1}$, \dots, $a_{n}$ are constants, is an {\color{blue}\it Euler} or
+  {\color{blue}\it equidimensional} equation.
 
   Show that if
   \[
@@ -783,9 +853,11 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
   \[
     x^{r}\frac{d^{r}y}{dx^{r}}=\frac{d^{r}Y}{dt^{r}}+ A_{1r}\frac{d^{r-1}Y}{dt^{r-1}}+\cdots+A_{r-1,r}\frac{dY}{dt}
   \]
-  where $A_{1r}$, \dots, $A_{r-1,r}$ are integers. Use these results to show that the substitution (B) transforms (A) into a constant coefficient equation for $Y$ as a function of $t$.
+  where $A_{1r}$, \dots, $A_{r-1,r}$ are integers. Use these results to show that the substitution
+  (B) transforms (A) into a constant coefficient equation for $Y$ as a function of $t$.
 
-  \item\label{exer:9.2.45} Use Exercise~\ref{exer:9.2.44} to show that a function $y=y(x)$ satisfies the equation
+  \item\label{exer:9.2.45} Use Exercise~\ref{exer:9.2.44} to show that a function $y=y(x)$ satisfies
+        the equation
   \[
     a_{0}x^{3}y'''+a_{1}x^{2}y''+a_{2}xy'+a_{3}y=0, \eqno{\rm(A)}
   \]
@@ -793,5 +865,6 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
   \[
     a_{0}\frac{d^{3}Y}{dt^{3}}+(a_{1}-3a_{0})\frac{d^{2}Y}{dt^{2}}+(a_{2}-a_{1}+2a_{0}) \frac{dY}{dt}+a_{3}Y=0.
   \]
-  Assuming that $a_{0}$, $a_{1}$, $a_{2}$, $a_{3}$ are real and $a_{0}\ne0$, find the possible forms for the general solution of (A).
+  Assuming that $a_{0}$, $a_{1}$, $a_{2}$, $a_{3}$ are real and $a_{0}\ne0$, find the possible forms
+  for the general solution of (A).
 \end{exerciselist}

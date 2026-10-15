@@ -4,15 +4,21 @@
 \boxit{Definition of the Laplace Transform}
 
 \noindent
-To define the Laplace transform, we first recall the definition of an improper integral. If $g$ is integrable over the interval $[a,T]$ for every $T>a$, then the {\color{blue}\it improper integral of $g$ over\/} $[a,\infty)$ is defined as
+To define the Laplace transform, we first recall the definition of an improper integral. If $g$ is
+integrable over the interval $[a,T]$ for every $T>a$, then the {\color{blue}\it improper integral of
+$g$ over\/} $[a,\infty)$ is defined as
 \begin{equation}
   \label{eq:8.1.1}\int^{\infty}_{a}g(t)\,dt=\lim_{T\to\infty}\int^{T}_{a}g(t)\,dt.
 \end{equation}
-We say that the improper integral {\color{blue}\it converges\/} if the limit in \eqref{eq:8.1.1} exists; otherwise, we say that the improper integral {\color{blue}\it diverges\/} or {\color{blue}\it does not exist\/}. Here's the definition of the Laplace transform of a function $f$.
+We say that the improper integral {\color{blue}\it converges\/} if the limit in \eqref{eq:8.1.1}
+exists; otherwise, we say that the improper integral {\color{blue}\it diverges\/} or
+{\color{blue}\it does not exist\/}. Here's the definition of the Laplace transform of a function
+$f$.
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:8.1.1}\rm Let $f$ be defined for $t\ge0$ and let $s$ be a real number. Then the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/}{\color{blue}
+  \label{thmtype:8.1.1}\rm Let $f$ be defined for $t\ge0$ and let $s$ be a real number. Then the
+  \href{https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/}{\color{blue}
   \it Laplace transform} of $f$ is the function $F$ defined by
   \begin{equation}
     \label{eq:8.1.2}F(s)=\int_{0}^{\infty}e^{-st}f(t)\,dt,
@@ -20,9 +26,12 @@ We say that the improper integral {\color{blue}\it converges\/} if the limit in 
   for those values of $s$ for which the improper integral converges.
 \end{definition}
 
-It is important to keep in mind that the variable of integration in \eqref{eq:8.1.2} is $t$, while $s$ is a parameter independent of $t$. We use $t$ as the independent variable for $f$ because in applications the Laplace transform is usually applied to functions of time.
+It is important to keep in mind that the variable of integration in \eqref{eq:8.1.2} is $t$, while
+$s$ is a parameter independent of $t$. We use $t$ as the independent variable for $f$ because in
+applications the Laplace transform is usually applied to functions of time.
 
-The Laplace transform can be viewed as an operator ${\cal L}$ that transforms the function $f=f(t)$ into the function $F=F(s)$. Thus, \eqref{eq:8.1.2} can be expressed as
+The Laplace transform can be viewed as an operator ${\cal L}$ that transforms the function $f=f(t)$
+into the function $F=F(s)$. Thus, \eqref{eq:8.1.2} can be expressed as
 \[
   F={\cal L}(f).
 \]
@@ -30,7 +39,8 @@ The functions $f$ and $F$ form a {\color{blue}\it transform pair\/}, which we'll
 \[
   f(t)\leftrightarrow F(s).
 \]
-It can be shown that if $F(s)$ is defined for $s=s_{0}$ then it's defined for all $s>s_{0}$ (Exercise~\ref{exer:8.1.14}\part{b}).
+It can be shown that if $F(s)$ is defined for $s=s_{0}$ then it's defined for all $s>s_{0}$
+(Exercise~\ref{exer:8.1.14}\part{b}).
 
 \boxit{Computation of Some Simple Laplace Transforms}
 
@@ -134,7 +144,8 @@ This can also be written as
 \]
 
 \begin{example}
-  \label{example:8.1.4}\rm Find the Laplace transforms of $f(t)=\sin\omega t$ and $g(t)=\cos\omega t$, where $\omega$ is a constant.
+  \label{example:8.1.4}\rm Find the Laplace transforms of $f(t)=\sin\omega t$ and
+  $g(t)=\cos\omega t$, where $\omega$ is a constant.
 \end{example}
 
 \solution Define
@@ -177,7 +188,8 @@ This and \eqref{eq:8.1.8} imply that
 \boxit{Tables of Laplace transforms}
 
 \noindent
-Extensive tables of Laplace transforms have been compiled and are commonly used in applications. The brief table of Laplace transforms in the Appendix will be adequate for our purposes.
+Extensive tables of Laplace transforms have been compiled and are commonly used in applications. The
+brief table of Laplace transforms in the Appendix will be adequate for our purposes.
 
 \begin{example}
   \label{example:8.1.5}\rm Use the table of Laplace transforms to find ${\cal L}(t^{3}e^{4t})$.
@@ -192,7 +204,8 @@ Setting $n=3$ and $a=4$ here yields
   {\cal L}(t^{3}e^{4t})=\frac{3!}{(s-4)^{4}}=\frac{6}{(s-4)^{4}}.\bbox
 \]
 
-We'll sometimes write Laplace transforms of specific functions without explicitly stating how they are obtained. In such cases you should refer to the table of Laplace transforms.
+We'll sometimes write Laplace transforms of specific functions without explicitly stating how they
+are obtained. In such cases you should refer to the table of Laplace transforms.
 
 \boxit{Linearity of the Laplace Transform}
 
@@ -201,7 +214,9 @@ The next theorem presents an important property of the Laplace transform.
 
 \begin{theorem}
   \color{blue}
-  $[$Linearity Property$]$\label{thmtype:8.1.2} Suppose ${\cal L}(f_{i})$ is defined for $s>s_{i}$, $1\le i\le n$). Let $s_{0}$ be the largest of the numbers $s_{1}$, $s_{2}$, \dots,$s_{n}$, and let $c_{1}$, $c_{2}$,\dots, $c_{n}$ be constants. Then
+  $[$Linearity Property$]$\label{thmtype:8.1.2} Suppose ${\cal L}(f_{i})$ is defined for $s>s_{i}$,
+  $1\le i\le n$). Let $s_{0}$ be the largest of the numbers $s_{1}$, $s_{2}$, \dots,$s_{n}$, and let
+  $c_{1}$, $c_{2}$,\dots, $c_{n}$ be constants. Then
   \[
     {\cal L}(c_{1}f_{1}+c_{2}f_{2}+\cdots+c_{n}f_{n})=c_{1}{\cal L}(f_{1})+c_{2}{\cal L}(f_{2}) +\cdots+c_{n}{\cal L}(f_{n})\mbox{ for }s>s_{0}.
   \]
@@ -235,7 +250,8 @@ Therefore
                        & = & \dst\frac{1}{2}\,\dst\frac{1}{s-b}+\dst\frac{1}{2}\,\dst\frac{1}{s+b},
   \end{array}
 \end{equation}
-where the first transform on the right is defined for $s>b$ and the second for $s>-b$; hence, both are defined for $s>|b|$. Simplifying the last expression in \eqref{eq:8.1.9} yields
+where the first transform on the right is defined for $s>b$ and the second for $s>-b$; hence, both
+are defined for $s>|b|$. Simplifying the last expression in \eqref{eq:8.1.9} yields
 \[
   {\cal L}(\cosh bt)=\frac{s}{s^{2}-b^{2}},\quad s>|b|.
 \]
@@ -243,7 +259,8 @@ where the first transform on the right is defined for $s>b$ and the second for $
 \boxit{The First Shifting Theorem}
 
 \noindent
-The next theorem enables us to start with known transform pairs and derive others. (For other results of this kind, see Exercises~\ref{exer:8.1.6} and \ref{exer:8.1.13}.)
+The next theorem enables us to start with known transform pairs and derive others. (For other
+results of this kind, see Exercises~\ref{exer:8.1.6} and \ref{exer:8.1.13}.)
 
 \begin{theorem}
   \color{blue}
@@ -251,7 +268,8 @@ The next theorem enables us to start with known transform pairs and derive other
   \begin{equation}
     \label{eq:8.1.10}F(s)=\int_{0}^{\infty}e^{-st}f(t)\,dt
   \end{equation}
-  is the Laplace transform of $f(t)$ for $s>s_{0}$, then $F(s-a)$ is the Laplace transform of $e^{at}f(t)$ for $s>s_{0}+a$.
+  is the Laplace transform of $f(t)$ for $s>s_{0}$, then $F(s-a)$ is the Laplace transform of
+  $e^{at}f(t)$ for $s>s_{0}+a$.
 \end{theorem}
 
 {\sc Proof.} Replacing $s$ by $s-a$ in \eqref{eq:8.1.10} yields
@@ -265,13 +283,15 @@ if $s-a>s_{0}$; that is, if $s>s_{0}+a$. However, \eqref{eq:8.1.11} can be rewri
 which implies the conclusion.
 
 \begin{example}
-  \label{example:8.1.7}\rm Use Theorem~\ref{thmtype:8.1.3} and the known Laplace transforms of $1$, $t$, $\cos\omega t$, and $\sin\omega t$ to find
+  \label{example:8.1.7}\rm Use Theorem~\ref{thmtype:8.1.3} and the known Laplace transforms of $1$,
+  $t$, $\cos\omega t$, and $\sin\omega t$ to find
   \[
     {\cal L}(e^{at}),\quad{\cal L}(te^{at}),\quad{\cal L}(e^{\lambda t}\sin \omega t),\mbox{and }{\cal L}(e^{\lambda t}\cos\omega t).
   \]
 \end{example}
 
-\solution In the following table the known transform pairs are listed on the left and the required transform pairs listed on the right are obtained by applying Theorem~\ref{thmtype:8.1.3}.
+\solution In the following table the known transform pairs are listed on the left and the required
+transform pairs listed on the right are obtained by applying Theorem~\ref{thmtype:8.1.3}.
 
 \begin{center}
   \begin{tabular}{|c|c|}
@@ -290,13 +310,15 @@ which implies the conclusion.
 \boxit{Existence of Laplace Transforms}
 
 \noindent
-Not every function has a Laplace transform. For example, it can be shown (Exercise~\ref{exer:8.1.3}) that
+Not every function has a Laplace transform. For example, it can be shown (Exercise~\ref{exer:8.1.3})
+that
 \[
   \int_{0}^{\infty}e^{-st}e^{t^{2}}dt=\infty
 \]
 for every real number $s$. Hence, the function $f(t)=e^{t^{2}}$ does not have a Laplace transform.
 
-Our next objective is to establish conditions that ensure the existence of the Laplace transform of a function. We first review some relevant definitions from calculus.
+Our next objective is to establish conditions that ensure the existence of the Laplace transform of
+a function. We first review some relevant definitions from calculus.
 
 Recall that a limit
 \[
@@ -326,7 +348,8 @@ so \eqref{eq:8.1.12} can be expressed as
 \[
   f(t_{0}+)=f(t_{0}-)=f(t_{0}).
 \]
-If $f(t_{0}+)$ and $f(t_{0}-)$ have finite but distinct values, we say that $f$ has a {\color{blue}\it jump discontinuity\/} at $t_{0}$, and
+If $f(t_{0}+)$ and $f(t_{0}-)$ have finite but distinct values, we say that $f$ has a
+{\color{blue}\it jump discontinuity\/} at $t_{0}$, and
 \[
   f(t_{0}+)-f(t_{0}-)
 \]
@@ -342,11 +365,14 @@ is called the {\color{blue}\it jump} in $f$ at $t_{0}$ (Figure~\ref{figure:8.1.1
   \label{figure:8.1.1}
 \end{figure}
 
-If $f(t_{0}+)$ and $f(t_{0}-)$ are finite and equal, but either $f$ isn't defined at $t_{0}$ or it's defined but
+If $f(t_{0}+)$ and $f(t_{0}-)$ are finite and equal, but either $f$ isn't defined at $t_{0}$ or it's
+defined but
 \[
   f(t_{0})\ne f(t_{0}+)=f(t_{0}-),
 \]
-we say that $f$ has a {\color{blue}\it removable discontinuity\/} at $t_{0}$ (Figure~\ref{figure:8.1.2}). This terminology is appropriate since a function $f$ with a removable discontinuity at $t_{0}$ can be made continuous at $t_{0}$ by defining (or redefining)
+we say that $f$ has a {\color{blue}\it removable discontinuity\/} at $t_{0}$
+(Figure~\ref{figure:8.1.2}). This terminology is appropriate since a function $f$ with a removable
+discontinuity at $t_{0}$ can be made continuous at $t_{0}$ by defining (or redefining)
 \[
   f(t_{0})=f(t_{0}+)=f(t_{0}-).
 \]
@@ -370,7 +396,9 @@ we say that $f$ has a {\color{blue}\it removable discontinuity\/} at $t_{0}$ (Fi
 \end{figure}
 
 \color{blue}
-\remark{We know from calculus that a definite integral isn't affected by changing the values of its integrand at isolated points. Therefore, redefining a function $f$ to make it continuous at removable discontinuities does not change ${\cal L}(f)$.}
+\remark{We know from calculus that a definite integral isn't affected by changing the values of its
+integrand at isolated points. Therefore, redefining a function $f$ to make it continuous at
+removable discontinuities does not change ${\cal L}(f)$.}
 \color{black}
 
 \begin{definition}
@@ -378,43 +406,61 @@ we say that $f$ has a {\color{blue}\it removable discontinuity\/} at $t_{0}$ (Fi
   \label{thmtype:8.1.4}\rm \mbox{}
   \begin{rmlist}
     \item % (i)
-    A function $f$ is said to be {\color{blue}\it piecewise continuous} on a finite closed interval $[0,T]$ if $f(0+)$ and $f(T-)$ are finite and $f$ is continuous on the open interval $(0,T)$ except possibly at finitely many points, where $f$ may have jump discontinuities or removable discontinuities.
+    A function $f$ is said to be {\color{blue}\it piecewise continuous} on a finite closed interval
+    $[0,T]$ if $f(0+)$ and $f(T-)$ are finite and $f$ is continuous on the open interval $(0,T)$
+    except possibly at finitely many points, where $f$ may have jump discontinuities or removable
+    discontinuities.
 
     \item % (ii)
-    A function $f$ is said to be {\color{blue}\it piecewise continuous} on the infinite interval $[0,\infty)$ if it's piecewise continuous on $[0,T]$ for every $T>0$.
+    A function $f$ is said to be {\color{blue}\it piecewise continuous} on the infinite interval
+    $[0,\infty)$ if it's piecewise continuous on $[0,T]$ for every $T>0$.
   \end{rmlist}
 \end{definition}
 
 Figure~\ref{figure:8.1.3} shows the graph of a typical piecewise continuous function.
 
-It is shown in calculus that if a function is piecewise continuous on a finite closed interval then it's integrable on that interval. But if $f$ is piecewise continuous on $[0,\infty)$, then so is $e^{-st}f (t)$, and therefore
+It is shown in calculus that if a function is piecewise continuous on a finite closed interval then
+it's integrable on that interval. But if $f$ is piecewise continuous on $[0,\infty)$, then so is
+$e^{-st}f (t)$, and therefore
 \[
   \int_{0}^{T}e^{-st}f(t)\,dt
 \]
-exists for every $T>0$. However, piecewise continuity alone does not guarantee that the improper integral
+exists for every $T>0$. However, piecewise continuity alone does not guarantee that the improper
+integral
 \begin{equation}
   \label{eq:8.1.13}\int_{0}^{\infty}e^{-st}f(t)\,dt=\lim_{T\to\infty}\int_{0}^{T}e^{-st}f(t)\, dt
 \end{equation}
-converges for $s$ in some interval $(s_{0},\infty)$. For example, we noted earlier that \eqref{eq:8.1.13} diverges for all $s$ if $f(t)=e^{t^{2}}$. Stated informally, this occurs because $e^{t^{2}}$ increases too rapidly as $t\to\infty$. The next definition provides a constraint on the growth of a function that guarantees convergence of its Laplace transform for $s$ in some interval $(s_{0},\infty)$ .
+converges for $s$ in some interval $(s_{0},\infty)$. For example, we noted earlier that
+\eqref{eq:8.1.13} diverges for all $s$ if $f(t)=e^{t^{2}}$. Stated informally, this occurs because
+$e^{t^{2}}$ increases too rapidly as $t\to\infty$. The next definition provides a constraint on the
+growth of a function that guarantees convergence of its Laplace transform for $s$ in some interval
+$(s_{0},\infty)$ .
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:8.1.5}\rm A function $f$ is said to be {\color{blue}\it of exponential order\/} $s_{0}$ if there are constants $M$ and $t_{0}$ such that
+  \label{thmtype:8.1.5}\rm A function $f$ is said to be {\color{blue}\it of exponential order\/}
+  $s_{0}$ if there are constants $M$ and $t_{0}$ such that
   \begin{equation}
     \label{eq:8.1.14}|f(t)|\le Me^{s_{0}t},\quad t\ge t_{0}.
   \end{equation}
-  In situations where the specific value of $s_{0}$ is irrelevant we say simply that $f$ is {\color{blue}\it of exponential order\/}.
+  In situations where the specific value of $s_{0}$ is irrelevant we say simply that $f$ is
+  {\color{blue}\it of exponential order\/}.
 \end{definition}
 
-The next theorem gives useful sufficient conditions for a function $f$ to have a Laplace transform. The proof is sketched in Exercise~\ref{exer:8.1.10}.
+The next theorem gives useful sufficient conditions for a function $f$ to have a Laplace transform.
+The proof is sketched in Exercise~\ref{exer:8.1.10}.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:8.1.6} If $f$ is piecewise continuous on $[0,\infty)$ and of exponential order $s_{0}$, then ${\cal L}(f)$ is defined for $s>s_{0}$.
+  \label{thmtype:8.1.6} If $f$ is piecewise continuous on $[0,\infty)$ and of exponential order
+  $s_{0}$, then ${\cal L}(f)$ is defined for $s>s_{0}$.
 \end{theorem}
 
 \color{blue}
-\remark{ We emphasize that the conditions of Theorem~\ref{thmtype:8.1.6} are sufficient, but {\color{blue}\it not necessary\/}, for $f$ to have a Laplace transform. For example, Exercise~\ref{exer:8.1.14}\part{c} shows that $f$ may have a Laplace transform even though $f$ isn't of exponential order.}
+\remark{ We emphasize that the conditions of Theorem~\ref{thmtype:8.1.6} are sufficient, but
+{\color{blue}\it not necessary\/}, for $f$ to have a Laplace transform. For example,
+Exercise~\ref{exer:8.1.14}\part{c} shows that $f$ may have a Laplace transform even though $f$ isn't
+of exponential order.}
 \color{black}
 
 \begin{example}
@@ -422,15 +468,24 @@ The next theorem gives useful sufficient conditions for a function $f$ to have a
   \[
     |f(t)|\le M,\quad t\ge t_{0},
   \]
-  then \eqref{eq:8.1.14} holds with $s_{0}=0$, so $f$ is of exponential order zero. Thus, for example, $\sin\omega t$ and $\cos\omega t$ are of exponential order zero, and Theorem~\ref{thmtype:8.1.6} implies that ${\cal L}(\sin\omega t)$ and ${\cal L}(\cos\omega t)$ exist for $s>0$. This is consistent with the conclusion of Example~\ref{example:8.1.4}.
+  then \eqref{eq:8.1.14} holds with $s_{0}=0$, so $f$ is of exponential order zero. Thus, for
+  example, $\sin\omega t$ and $\cos\omega t$ are of exponential order zero, and
+  Theorem~\ref{thmtype:8.1.6} implies that ${\cal L}(\sin\omega t)$ and ${\cal L}(\cos\omega t)$
+  exist for $s>0$. This is consistent with the conclusion of Example~\ref{example:8.1.4}.
 \end{example}
 
 \begin{example}
-  \label{example:8.1.9}\rm It can be shown that if $\lim_{t\to\infty}e^{-s_{0}t}f(t)$ exists and is finite then $f$ is of exponential order $s_{0}$ (Exercise~\ref{exer:8.1.9}). If $\alpha$ is any real number and $s_{0}>0$ then $f(t)=t^{\alpha}$ is of exponential order $s_{0}$, since
+  \label{example:8.1.9}\rm It can be shown that if $\lim_{t\to\infty}e^{-s_{0}t}f(t)$ exists and is
+  finite then $f$ is of exponential order $s_{0}$ (Exercise~\ref{exer:8.1.9}). If $\alpha$ is any
+  real number and $s_{0}>0$ then $f(t)=t^{\alpha}$ is of exponential order $s_{0}$, since
   \[
     \lim_{t\to\infty}e^{-s_{0}t}t^{\alpha}=0,
   \]
-  by L'H\^opital's rule. If $\alpha\ge0$, $f$ is also continuous on $[0,\infty)$. Therefore Exercise~\ref{exer:8.1.9} and Theorem~\ref{thmtype:8.1.6} imply that ${\cal L}(t^{\alpha})$ exists for $s\ge s_{0}$. However, since $s_{0}$ is an arbitrary positive number, this really implies that ${\cal L}(t^{\alpha})$ exists for all $s>0$. This is consistent with the results of Example~\ref{example:8.1.2} and Exercises~\ref{exer:8.1.6} and \ref{exer:8.1.8}.
+  by L'H\^opital's rule. If $\alpha\ge0$, $f$ is also continuous on $[0,\infty)$. Therefore
+  Exercise~\ref{exer:8.1.9} and Theorem~\ref{thmtype:8.1.6} imply that ${\cal L}(t^{\alpha})$ exists
+  for $s\ge s_{0}$. However, since $s_{0}$ is an arbitrary positive number, this really implies that
+  ${\cal L}(t^{\alpha})$ exists for all $s>0$. This is consistent with the results of
+  Example~\ref{example:8.1.2} and Exercises~\ref{exer:8.1.6} and \ref{exer:8.1.8}.
 \end{example}
 
 \begin{example}
@@ -475,7 +530,8 @@ This is consistent with Theorem~\ref{thmtype:8.1.6}, since
 and therefore $f$ is of exponential order $s_{0}=-1$.
 
 \color{blue}
-\remark{In Section~8.4 we'll develop a more efficient method for finding Laplace transforms of piecewise continuous functions.}
+\remark{In Section~8.4 we'll develop a more efficient method for finding Laplace transforms of
+piecewise continuous functions.}
 \color{black}
 
 \begin{example}
@@ -483,7 +539,8 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
   \[
     \int_{0}^{\infty}e^{-st}e^{t^{2}}dt=\infty
   \]
-  for all $s$, so Theorem~\ref{thmtype:8.1.6} implies that $f(t)=e^{t^{2}}$ is not of exponential order, since
+  for all $s$, so Theorem~\ref{thmtype:8.1.6} implies that $f(t)=e^{t^{2}}$ is not of exponential
+  order, since
   \[
     \lim_{t\to\infty}\frac{e^{t^{2}}}{Me^{s_{0}t}}=\lim_{t\to\infty}\frac{1}{M}e^{t^{2}-s_{0}t}=\infty,
   \]
@@ -491,20 +548,23 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
   \[
     e^{t^{2}}>Me^{s_{0}t}
   \]
-  for sufficiently large values of $t$, for any choice of $M$ and $s_{0}$ (Exercise~\ref{exer:8.1.3}).
+  for sufficiently large values of $t$, for any choice of $M$ and $s_{0}$
+  (Exercise~\ref{exer:8.1.3}).
 \end{example}
 
 \exercises
 
 \begin{exerciselist}
-  \item\label{exer:8.1.1} Find the Laplace transforms of the following functions by evaluating the integral $F(s)=\int_{0}^{\infty}e^{-st}f(t)\,dt$.
+  \item\label{exer:8.1.1} Find the Laplace transforms of the following functions by evaluating the
+        integral $F(s)=\int_{0}^{\infty}e^{-st}f(t)\,dt$.
 
   \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
     \part{a} $t$             & \part{b} $te^{-t}$ & \part{c} $\sinh bt$ \\
     \part{d} $e^{2t}-3e^{t}$ & \part{e} $t^{2}$
   \end{tabular}
 
-  \item\label{exer:8.1.2} Use the table of Laplace transforms to find the Laplace transforms of the following functions.
+  \item\label{exer:8.1.2} Use the table of Laplace transforms to find the Laplace transforms of the
+        following functions.
 
   \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
     \part{a} $\cosh t\sin t$                          & \part{b} $\sin^{2}t$     & \part{c} $\cos^{2}2t$     \\
@@ -518,7 +578,8 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
   \]
   for every real number $s$.
 
-  \item\label{exer:8.1.4} Graph the following piecewise continuous functions and evaluate $f(t+)$, $f(t-)$, and $f(t)$ at each point of discontinuity.
+  \item\label{exer:8.1.4} Graph the following piecewise continuous functions and evaluate $f(t+)$,
+        $f(t-)$, and $f(t)$ at each point of discontinuity.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \part{a} $f(t)=\left\{\begin{array}{cl}-t, &0\le t<2,\\t-4,&2\le t<3,\\1,&t\ge 3.\end{array}\right.$                         & \part{b} $f(t)=\left\{\begin{array}{cl}t^{2}+2,&0 \le t<1,\\4,&t=1,\\t,&t> 1.\end{array}\right.$                     \\[15pt]
@@ -532,15 +593,20 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
     \part{c} $f(t)=\left\{\begin{array}{rl}t,&0\le t<1,\\1,&t\ge1.\end{array}\right.$             & \part{d} $f(t)=\left\{\begin{array}{rl}te^{t},&0\le t<1,\\\phantom{t}e^{t},&t\ge1.\end{array}\right.$
   \end{tabular}
 
-  \item\label{exer:8.1.6} Prove that if $f(t)\leftrightarrow F(s)$ then $t^{k}f(t)\leftrightarrow (-1)^{k}F^{(k)}(s)$. \hint{Assume that it's permissible to differentiate the integral $\int_{0}^{\infty}e^{-st}f(t)\,dt$ with respect to $s$ under the integral sign.}
+  \item\label{exer:8.1.6} Prove that if $f(t)\leftrightarrow F(s)$ then
+        $t^{k}f(t)\leftrightarrow (-1)^{k}F^{(k)}(s)$. \hint{Assume that it's permissible to
+        differentiate the integral $\int_{0}^{\infty}e^{-st}f(t)\,dt$ with respect to $s$ under the
+        integral sign.}
 
   \item\label{exer:8.1.7} Use the known Laplace transforms
   \[
     {\cal L}(e^{\lambda t}\sin\omega t)=\frac{\omega}{(s-\lambda)^{2}+\omega^{2}}\quad\mbox{and }\quad{\cal L}(e^{\lambda t}\cos\omega t)=\frac{s-\lambda}{(s-\lambda)^{2}+\omega^{2}}
   \]
-  and the result of Exercise~\ref{exer:8.1.6} to find ${\cal L}(te^{\lambda t}\cos\omega t)$ and ${\cal L}(te^{\lambda t}\sin\omega t)$.
+  and the result of Exercise~\ref{exer:8.1.6} to find ${\cal L}(te^{\lambda t}\cos\omega t)$ and
+  ${\cal L}(te^{\lambda t}\sin\omega t)$.
 
-  \item\label{exer:8.1.8} Use the known Laplace transform ${\cal L}(1)=1/s$ and the result of Exercise~\ref{exer:8.1.6} to show that
+  \item\label{exer:8.1.8} Use the known Laplace transform ${\cal L}(1)=1/s$ and the result of
+        Exercise~\ref{exer:8.1.6} to show that
   \[
     {\cal L}(t^{n})=\frac{n!}{s^{n+1}},\quad n=\mbox{ integer}.
   \]
@@ -548,32 +614,42 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
   \item\label{exer:8.1.9}
   \begin{alist}
     \item % (a)
-    Show that if $\lim_{t\to\infty}e^{-s_{0}t}f(t)$ exists and is finite then $f$ is of exponential order $s_{0}$.
+    Show that if $\lim_{t\to\infty}e^{-s_{0}t}f(t)$ exists and is finite then $f$ is of exponential
+    order $s_{0}$.
 
     \item % (b)
-    Show that if $f$ is of exponential order $s_{0}$ then $\lim_{t \to\infty}e^{-st}f(t)=0$ for all $s>s_{0}$.
+    Show that if $f$ is of exponential order $s_{0}$ then $\lim_{t \to\infty}e^{-st}f(t)=0$ for all
+    $s>s_{0}$.
 
     \item % (c)
-    Show that if $f$ is of exponential order $s_{0}$ and $g(t)=f(t+\tau)$ where $\tau>0$, then $g$ is also of exponential order $s_{0}$.
+    Show that if $f$ is of exponential order $s_{0}$ and $g(t)=f(t+\tau)$ where $\tau>0$, then $g$
+    is also of exponential order $s_{0}$.
   \end{alist}
 
   \item\label{exer:8.1.10} Recall the next theorem from calculus.
 
   \color{blue}
-  {\sc Theorem A.} \it Let $g$ be integrable on $[0,T]$ for every $T>0$. Suppose there's a function $w$ defined on some interval $[\tau,\infty)$ (with $\tau\ge0$) such that $|g(t)|\le w(t)$ for $t\ge\tau$ and $\int^{\infty}_{\tau}w(t)\,dt$ converges. Then $\int_{0}^{\infty}g(t)\,dt$ converges.\rm
+  {\sc Theorem A.} \it Let $g$ be integrable on $[0,T]$ for every $T>0$. Suppose there's a function
+  $w$ defined on some interval $[\tau,\infty)$ (with $\tau\ge0$) such that $|g(t)|\le w(t)$ for
+  $t\ge\tau$ and $\int^{\infty}_{\tau}w(t)\,dt$ converges. Then $\int_{0}^{\infty}g(t)\,dt$
+  converges.\rm
   \color{black}
 
-  Use Theorem A to show that if $f$ is piecewise continuous on $[0,\infty)$ and of exponential order $s_{0}$, then $f$ has a Laplace transform $F(s)$ defined for $s>s_{0}$.
+  Use Theorem A to show that if $f$ is piecewise continuous on $[0,\infty)$ and of exponential order
+  $s_{0}$, then $f$ has a Laplace transform $F(s)$ defined for $s>s_{0}$.
 
-  \item\label{exer:8.1.11} Prove: If $f$ is piecewise continuous and of exponential order then $\lim_{s\to\infty}F(s)~=~0$.
+  \item\label{exer:8.1.11} Prove: If $f$ is piecewise continuous and of exponential order then
+        $\lim_{s\to\infty}F(s)~=~0$.
 
-  \item\label{exer:8.1.12} Prove: If $f$ is continuous on $[0,\infty)$ and of exponential order $s_{0}>0$, then
+  \item\label{exer:8.1.12} Prove: If $f$ is continuous on $[0,\infty)$ and of exponential order
+        $s_{0}>0$, then
   \[
     {\cal L}\left(\int^{t}_{0}f(\tau)\,d\tau\right)=\frac{1}{s}{\cal L}(f), \quad s>s_{0}.
   \]
   \hint{Use integration by parts to evaluate the transform on the left.}
 
-  \item\label{exer:8.1.13} Suppose $f$ is piecewise continuous and of exponential order, and that $\lim_{t\to0+}f(t)/t$ exists. Show that
+  \item\label{exer:8.1.13} Suppose $f$ is piecewise continuous and of exponential order, and that
+        $\lim_{t\to0+}f(t)/t$ exists. Show that
   \[
     {\cal L}\left(\frac{f(t)}{t}\right)=\int^{\infty}_{s}F(r)\,dr.
   \]
@@ -582,10 +658,14 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
   \item\label{exer:8.1.14} Suppose $f$ is piecewise continuous on $[0,\infty)$.
   \begin{alist}
     \item % (a)
-    Prove: If the integral $g(t)=\int^{t}_{0}e^{-s_{0}\tau}f(\tau)\,d\tau$ satisfies the inequality $|g(t)|\le M\;(t\ge0)$, then $f$ has a Laplace transform $F(s)$ defined for $s>s_{0}$. \hint{Use integration by parts to show that \[\int_{0}^{T}e^{-st}f(t)\,dt=e^{-(s-s_{0})T}g(T) +(s-s_{0})\int_{0}^{T}e^{-(s-s_{0})t}g(t)\,dt.\]}
+    Prove: If the integral $g(t)=\int^{t}_{0}e^{-s_{0}\tau}f(\tau)\,d\tau$ satisfies the inequality
+    $|g(t)|\le M\;(t\ge0)$, then $f$ has a Laplace transform $F(s)$ defined for $s>s_{0}$. \hint{Use
+    integration by parts to show that \[\int_{0}^{T}e^{-st}f(t)\,dt=e^{-(s-s_{0})T}g(T)
+    +(s-s_{0})\int_{0}^{T}e^{-(s-s_{0})t}g(t)\,dt.\]}
 
     \item % (b)
-    Show that if ${\cal L}(f)$ exists for $s=s_{0}$ then it exists for $s>s_{0}$. Show that the function
+    Show that if ${\cal L}(f)$ exists for $s=s_{0}$ then it exists for $s>s_{0}$. Show that the
+    function
     \[
       f(t)=te^{t^{2}}\cos(e^{t^{2}})
     \]
@@ -599,7 +679,8 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
     has a Laplace transform defined for $s>0$, even though $f$ isn't of exponential order.
   \end{alist}
 
-  \item\label{exer:8.1.15} Use the table of Laplace transforms and the result of Exercise~\ref{exer:8.1.13} to find the Laplace transforms of the following functions.
+  \item\label{exer:8.1.15} Use the table of Laplace transforms and the result of
+        Exercise~\ref{exer:8.1.13} to find the Laplace transforms of the following functions.
 
   \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
     \part{a} $\dst{\frac{\sin\omega t}{t}\quad(\omega>0)}$ & \part{b} $\dst{\frac{\cos\omega t-1}{t}}\quad(\omega>0)$ & \part{c} $\dst{\frac{e^{at}-e^{bt}}{t}}$ \\[2\jot]
@@ -626,23 +707,30 @@ and therefore $f$ is of exponential order $s_{0}=-1$.
     \[
       {\cal L}(t^{\alpha})=\frac{\Gamma(\alpha+1)}{s^{\alpha+1}},\quad s>0,
     \]
-    if $\alpha$ is a nonnegative integer. Show that this formula is valid for any $\alpha>-1$. \hint{Change the variable of integration in the integral for $\Gamma(\alpha+1)$.}
+    if $\alpha$ is a nonnegative integer. Show that this formula is valid for any $\alpha>-1$.
+    \hint{Change the variable of integration in the integral for $\Gamma(\alpha+1)$.}
   \end{alist}
 
-  \item\label{exer:8.1.17} Suppose $f$ is continuous on $[0,T]$ and $f(t+T)=f(t)$ for all $t\ge0$. (We say in this case that $f$ is {\color{blue}\it periodic with period\/} $T$.)
+  \item\label{exer:8.1.17} Suppose $f$ is continuous on $[0,T]$ and $f(t+T)=f(t)$ for all $t\ge0$.
+        (We say in this case that $f$ is {\color{blue}\it periodic with period\/} $T$.)
   \begin{alist}
     \item % (a)
-    Conclude from Theorem~\ref{thmtype:8.1.6} that the Laplace transform of $f$ is defined for $s>0$. \hint{Since $f$ is continuous on $[0,T]$ and periodic with period $T$, it's bounded on $[0,\infty)$.}
+    Conclude from Theorem~\ref{thmtype:8.1.6} that the Laplace transform of $f$ is defined for
+    $s>0$. \hint{Since $f$ is continuous on $[0,T]$ and periodic with period $T$, it's bounded on
+    $[0,\infty)$.}
 
     \item % (b)
 \part{b} Show that
     \[
       F(s)=\frac{1}{1-e^{-sT}}\int_{0}^{T}e^{-st}f(t)\,dt,\quad s>0.
     \]
-    \hint{Write \[F(s)=\sum^{\infty}_{n=0}\int^{(n+1)T}_{nT}e^{-st}f(t)\,dt.\] Then show that \[\int^{(n+1)T}_{nT}e^{-st}f(t)\,dt=e^{-nsT}\int_{0}^{T}e^{-st}f(t)\,dt,\] and recall the formula for the sum of a geometric series.}
+    \hint{Write \[F(s)=\sum^{\infty}_{n=0}\int^{(n+1)T}_{nT}e^{-st}f(t)\,dt.\] Then show
+    that \[\int^{(n+1)T}_{nT}e^{-st}f(t)\,dt=e^{-nsT}\int_{0}^{T}e^{-st}f(t)\,dt,\] and recall the
+    formula for the sum of a geometric series.}
   \end{alist}
 
-  \item\label{exer:8.1.18} Use the formula given in Exercise~\ref{exer:8.1.17}\part{b} to find the Laplace transforms of the given periodic functions:
+  \item\label{exer:8.1.18} Use the formula given in Exercise~\ref{exer:8.1.17}\part{b} to find the
+        Laplace transforms of the given periodic functions:
   \begin{alist}
     \item % (a)
     $\dst{f(t)=\left\{\begin{array}{cl}t,&0\le t<1,\\2-t,&1\le t<2,\end{array}\right.\hskip30ptf(t+2)=f(t), \quad t\ge0}$

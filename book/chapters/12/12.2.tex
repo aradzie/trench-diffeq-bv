@@ -12,18 +12,23 @@ In this section we consider initial-boundary value problems of the form
 \end{equation}
 where $a$ is a constant and $f$ and $g$ are given functions of $x$.
 
-The partial differential equation $u_{tt}=a^{2}u_{xx}$ is called the {\color{blue}\it wave equation\/}. It is necessary to specify both $f$ and $g$ because the wave equation is a second order equation in $t$ for each fixed $x$.
+The partial differential equation $u_{tt}=a^{2}u_{xx}$ is called the {\color{blue}\it wave
+equation\/}. It is necessary to specify both $f$ and $g$ because the wave equation is a second order
+equation in $t$ for each fixed $x$.
 
 This equation and its generalizations
 \[
   u_{tt}=a^{2}(u_{xx}+u_{yy})\mbox{\quad and \quad}u_{tt}=a^{2}(u_{xx}+u_{yy}+u_{zz})
 \]
-to two and three space dimensions have important applications to the propagation of electromagnetic, sonic, and water waves.
+to two and three space dimensions have important applications to the propagation of electromagnetic,
+sonic, and water waves.
 
 \boxit{The Vibrating String}
 
 \noindent
-We motivate the study of the wave equation by considering its application to the vibrations of a string -- such as a violin string -- tightly stretched in equilibrium along the $x$-axis in the $xu$-plane and tied to the points $(0,0)$ and $(L,0)$ (Figure~\ref{figure:12.2.1}).
+We motivate the study of the wave equation by considering its application to the vibrations of a
+string -- such as a violin string -- tightly stretched in equilibrium along the $x$-axis in the
+$xu$-plane and tied to the points $(0,0)$ and $(L,0)$ (Figure~\ref{figure:12.2.1}).
 
 \begin{figure}[tbp]
   \centering
@@ -33,28 +38,37 @@ We motivate the study of the wave equation by considering its application to the
   \label{figure:12.2.1}
 \end{figure}
 
-If the string is plucked in the vertical direction and released at time $t=0$, it will oscillate in the $xu$-plane. Let $u(x,t)$ denote the displacement of the point on the string above (or below) the abscissa $x$ at time $t$.
+If the string is plucked in the vertical direction and released at time $t=0$, it will oscillate in
+the $xu$-plane. Let $u(x,t)$ denote the displacement of the point on the string above (or below) the
+abscissa $x$ at time $t$.
 
-We'll show that it's reasonable to assume that $u$ satisfies the wave equation under the following assumptions:
+We'll show that it's reasonable to assume that $u$ satisfies the wave equation under the following
+assumptions:
 
 \begin{numberlist}
   \item % (1)
   The mass density (mass per unit length) $\rho$ of the string is constant throughout the string.
 
   \item % (2)
-  The tension $T$ induced by tightly stretching the string along the $x$-axis is so great that all other forces, such as gravity and air resistance, can be neglected.
+  The tension $T$ induced by tightly stretching the string along the $x$-axis is so great that all
+  other forces, such as gravity and air resistance, can be neglected.
 
   \item % (3)
-  The tension at any point on the string acts along the tangent to the string at that point, and the magnitude of its horizontal component is always equal to $T$, the tension in the string in equilibrium.
+  The tension at any point on the string acts along the tangent to the string at that point, and the
+  magnitude of its horizontal component is always equal to $T$, the tension in the string in
+  equilibrium.
 
   \item % (4)
-  The slope of the string at every point remains sufficiently small so that we can make the approximation
+  The slope of the string at every point remains sufficiently small so that we can make the
+  approximation
   \begin{equation}
     \label{eq:12.2.2}\sqrt{1+u_{x}^{2}}\approx1.
   \end{equation}
 \end{numberlist}
 
-Figure~\ref{figure:12.2.2} shows a segment of the displaced string at a time $t>0$. (Don't think that the figure is necessarily inconsistent with Assumption~4; we exaggerated the slope for clarity.)
+Figure~\ref{figure:12.2.2} shows a segment of the displaced string at a time $t>0$. (Don't think
+that the figure is necessarily inconsistent with Assumption~4; we exaggerated the slope for
+clarity.)
 
 \begin{figure}[tbp]
   \centering
@@ -64,7 +78,10 @@ Figure~\ref{figure:12.2.2} shows a segment of the displaced string at a time $t>
   \label{figure:12.2.2}
 \end{figure}
 
-The vectors ${\bf T}_{1}$ and ${\bf T}_{2}$ are the forces due to tension, acting along the tangents to the segment at its endpoints. From Newton's second law of motion, ${\bf T}_{1}-{\bf T}_{2}$ is equal to the mass times the acceleration of the center of mass of the segment. The horizontal and vertical components of ${\bf T}_{1}-{\bf T}_{2}$ are
+The vectors ${\bf T}_{1}$ and ${\bf T}_{2}$ are the forces due to tension, acting along the tangents
+to the segment at its endpoints. From Newton's second law of motion, ${\bf T}_{1}-{\bf T}_{2}$ is
+equal to the mass times the acceleration of the center of mass of the segment. The horizontal and
+vertical components of ${\bf T}_{1}-{\bf T}_{2}$ are
 \[
   |{\bf T}_{2}|\cos\theta_{2}-|{\bf T}_{1}|\cos\theta_{1}\mbox{\quad and \quad}|{\bf T}_{2}|\sin\theta_{2}-|{\bf T}_{1}|\sin\theta_{1},
 \]
@@ -72,13 +89,15 @@ respectively. Since
 \begin{equation}
   \label{eq:12.2.3}|{\bf T}_{2}|\cos\theta_{2}=|{\bf T}_{1}|\cos\theta_{1}=T
 \end{equation}
-by assumption, the net horizontal force is zero, so there's no horizontal acceleration. Since the initial horizontal velocity is zero, there's no horizontal motion.
+by assumption, the net horizontal force is zero, so there's no horizontal acceleration. Since the
+initial horizontal velocity is zero, there's no horizontal motion.
 
 Applying Newton's second law of motion in the vertical direction yields
 \begin{equation}
   \label{eq:12.2.4}|{\bf T}_{2}|\sin\theta_{2}-|{\bf T}_{1}|\sin\theta_{1}=\rho\Delta s\,u_{tt}(\overline{x},t),
 \end{equation}
-where $\Delta s$ is the length of the segment and $\overline{x}$ is the abscissa of the center of mass; hence,
+where $\Delta s$ is the length of the segment and $\overline{x}$ is the abscissa of the center of
+mass; hence,
 \[
   x<\overline{x}<x+\Delta x.
 \]
@@ -102,7 +121,8 @@ Recalling \eqref{eq:12.2.3}, we divide by $T$ to obtain
 \begin{equation}
   \label{eq:12.2.5}\frac{\tan\theta_{2}-\tan\theta_{1}}{\Delta x}= \frac{\rho}{T}u_{tt}(\overline{x},t).
 \end{equation}
-Since $\tan\theta_{1}=u_{x}(x,t)$ and $\tan\theta_{2}=u_{x}(x+\Delta x,t)$, \eqref{eq:12.2.5} is equivalent to
+Since $\tan\theta_{1}=u_{x}(x,t)$ and $\tan\theta_{2}=u_{x}(x+\Delta x,t)$, \eqref{eq:12.2.5} is
+equivalent to
 \[
   \frac{u_{x}(x+\Delta x)-u_{x}(x,t)}{\Delta x}= \frac{\rho}{T}u_{tt}(\overline{x},t).
 \]
@@ -115,7 +135,9 @@ which we rewrite as $u_{tt}=a^{2}u_{xx}$, with $a^{2}=T/\rho$.
 \boxit{The Formal Solution}
 
 \noindent
-As in Section~12.1, we use separation of variables to obtain a suitable definition for the formal solution of \eqref{eq:12.2.1}. We begin by looking for functions of the form $v(x,t)=X(x)T(t)$ that are not identically zero and satisfy
+As in Section~12.1, we use separation of variables to obtain a suitable definition for the formal
+solution of \eqref{eq:12.2.1}. We begin by looking for functions of the form $v(x,t)=X(x)T(t)$ that
+are not identically zero and satisfy
 \[
   v_{tt}=a^{2}v_{xx},\quad v(0,t)=0,\quad v(L,t)=0
 \]
@@ -143,11 +165,13 @@ and
 \begin{equation}
   \label{eq:12.2.6}T''+a^{2}\lambda T=0.
 \end{equation}
-Since $v(0,t)=X(0)T(t)=0$ and $v(L,t)=X(L)T(t)=0$ and we don't want $T$ to be identically zero, $X(0)=0$ and $X(L)=0$. Therefore $\lambda$ must be an eigenvalue of
+Since $v(0,t)=X(0)T(t)=0$ and $v(L,t)=X(L)T(t)=0$ and we don't want $T$ to be identically zero,
+$X(0)=0$ and $X(L)=0$. Therefore $\lambda$ must be an eigenvalue of
 \begin{equation}
   \label{eq:12.2.7}X''+\lambda X=0,\quad X(0)=0,\quad X(L)=0,
 \end{equation}
-and $X$ must be a $\lambda$-eigenfunction. From Theorem~\ref{thmtype:11.1.2}, the eigenvalues of \eqref{eq:12.2.7} are $\lambda_{n}=n^{2}\pi^{2}/L^{2}$, with associated eigenfunctions
+and $X$ must be a $\lambda$-eigenfunction. From Theorem~\ref{thmtype:11.1.2}, the eigenvalues of
+\eqref{eq:12.2.7} are $\lambda_{n}=n^{2}\pi^{2}/L^{2}$, with associated eigenfunctions
 \[
   X_{n}=\sin\frac{n\pi x}{L},\quad n=1,2,3,\dots.
 \]
@@ -171,7 +195,9 @@ so
 \[
   v_{n}(x,0)=\alpha_{n}\sin\frac{n\pi x}{L}\mbox{\quad and \quad}{\frac{\partial v_{n}}{\partial t}}(x,0)=\beta_{n}\sin\frac{n\pi x}{L}.
 \]
-Therefore $v_{n}$ satisfies \eqref{eq:12.2.1} with $f(x)=\alpha_{n}\sin n\pi x/L$ and $g(x)=\beta_{n}\cos n\pi x/L$. More generally, if $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{m}$ and $\beta_{1}$, $\beta_{2}$,\dots, $\beta_{m}$ are constants and
+Therefore $v_{n}$ satisfies \eqref{eq:12.2.1} with $f(x)=\alpha_{n}\sin n\pi x/L$ and
+$g(x)=\beta_{n}\cos n\pi x/L$. More generally, if $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{m}$
+and $\beta_{1}$, $\beta_{2}$,\dots, $\beta_{m}$ are constants and
 \[
   u_{m}(x,t)=\sum_{n=1}^{m}\left(\alpha_{n}\cos\frac{n\pi at}{L}+\frac{\beta_{n}L}{n\pi a}\sin\frac{n\pi at}{L}\right) \sin\frac{n\pi x}{L},
 \]
@@ -183,7 +209,8 @@ This motivates the next definition.
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:12.2.1}\rm If $f$ and $g$ are piecewise smooth of $[0,L]$, then the formal solution of \eqref{eq:12.2.1} is
+  \label{thmtype:12.2.1}\rm If $f$ and $g$ are piecewise smooth of $[0,L]$, then the formal solution
+  of \eqref{eq:12.2.1} is
   \begin{equation}
     \label{eq:12.2.8}u(x,t)=\sum_{n=1}^{\infty}\left(\alpha_{n}\cos\frac{n\pi at}{L}+\frac{\beta_{n}L}{n\pi a}\sin\frac{n\pi at}{L}\right) \sin\frac{n\pi x}{L},
   \end{equation}
@@ -197,11 +224,17 @@ This motivates the next definition.
   \]
 \end{definition}
 
-Since there are no convergence-producing factors in \eqref{eq:12.2.8} like the negative exponentials in $t$ that appear in formal solutions of initial-boundary value problems for the heat equation, it isn't obvious that \eqref{eq:12.2.8} even converges for any values of $x$ and $t$, let alone that it can be differentiated term by term to show that $u_{tt}=a^{2}u_{xx}$. However, the next theorem guarantees that the series converges not only for $0\le x\le L$ and $t\ge0$, but for $-\infty<x<\infty$ and $-\infty<t<\infty$.
+Since there are no convergence-producing factors in \eqref{eq:12.2.8} like the negative exponentials
+in $t$ that appear in formal solutions of initial-boundary value problems for the heat equation, it
+isn't obvious that \eqref{eq:12.2.8} even converges for any values of $x$ and $t$, let alone that it
+can be differentiated term by term to show that $u_{tt}=a^{2}u_{xx}$. However, the next theorem
+guarantees that the series converges not only for $0\le x\le L$ and $t\ge0$, but for
+$-\infty<x<\infty$ and $-\infty<t<\infty$.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:12.2.2} If $f$ and $g$ are piecewise smooth on $[0,L]$, then $u$ in \eqref{eq:12.2.1} converges for all $(x,t)$, and can be written as
+  \label{thmtype:12.2.2} If $f$ and $g$ are piecewise smooth on $[0,L]$, then $u$ in
+  \eqref{eq:12.2.1} converges for all $(x,t)$, and can be written as
   \begin{equation}
     \label{eq:12.2.9}u(x,t)=\frac{1}{2}[S_{f}(x+at)+S_{f}(x-at)]+ \frac{1}{2a}\int_{x-at}^{x+at}S_{g}(\tau)\,d\tau.
   \end{equation}
@@ -235,7 +268,8 @@ From \eqref{eq:12.2.10},
                                                                                & = & \dst\frac{1}{2}[S_{f}(x+at)+S_{f}(x-at)].
   \end{array}
 \end{equation}
-Since it can be shown that a Fourier sine series can be integrated term by term between any two limits, \eqref{eq:12.2.11} implies that
+Since it can be shown that a Fourier sine series can be integrated term by term between any two
+limits, \eqref{eq:12.2.11} implies that
 \[
   \begin{array}{rcl}
     \dst\sum_{n=1}^{\infty}\frac{\beta_{n}L}{n\pi a} \sin\frac{n\pi at}{L}\sin\frac{n\pi x}{L} & = & \dst\frac{1}{2a}\sum_{n=1}^{\infty}\beta_{n}\int_{x-at}^{x+at} \sin\frac{n\pi\tau}{L}\,d\tau              \\
@@ -245,11 +279,15 @@ Since it can be shown that a Fourier sine series can be integrated term by term 
 \]
 This and \eqref{eq:12.2.12} imply \eqref{eq:12.2.9}, which completes the proof.
 
-As we'll see below, if $S_{g}$ is differentiable and $S_{f}$ is twice differentiable on $(-\infty,\infty)$, then \eqref{eq:12.2.9} satisfies $u_{tt}=a^{2}u_{xx}$ for all $(x,t)$. We need the next theorem to formulate conditions on $f$ and $g$ such that $S_{f}$ and $S_{g}$ to have these properties.
+As we'll see below, if $S_{g}$ is differentiable and $S_{f}$ is twice differentiable on
+$(-\infty,\infty)$, then \eqref{eq:12.2.9} satisfies $u_{tt}=a^{2}u_{xx}$ for all $(x,t)$. We need
+the next theorem to formulate conditions on $f$ and $g$ such that $S_{f}$ and $S_{g}$ to have these
+properties.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:12.2.3} Suppose $h$ is differentiable on $[0,L]$; that is, $h'(x)$ exists for $0<x<L$, and the one-sided derivatives
+  \label{thmtype:12.2.3} Suppose $h$ is differentiable on $[0,L]$; that is, $h'(x)$ exists for
+  $0<x<L$, and the one-sided derivatives
   \[
     h'_{+}(0)=\lim_{x\to0+}\frac{h(x)-h(0)}{x}\mbox{\quad and \quad}h'_{-}(L)=\lim_{x\to L-}\frac{h(x)-h(L)}{x-L}
   \]
@@ -282,9 +320,13 @@ As we'll see below, if $S_{g}$ is differentiable and $S_{f}$ is twice differenti
   \end{equation}
 \end{theorem}
 
-\proof Throughout this proof, $k$ denotes an integer. Since $f$ is differentiable on the open interval $(0,L)$, both $p$ and $q$ are differentiable on every open interval $((k-1)L,kL)$. Thus, we need only to determine whether $p$ and $q$ are differentiable at $x=kL$ for every $k$.
+\proof Throughout this proof, $k$ denotes an integer. Since $f$ is differentiable on the open
+interval $(0,L)$, both $p$ and $q$ are differentiable on every open interval $((k-1)L,kL)$. Thus, we
+need only to determine whether $p$ and $q$ are differentiable at $x=kL$ for every $k$.
 
-\part{a} From Figure~\ref{figure:12.2.3}, $p$ is discontinuous at $x=2kL$ if $h(0)\ne0$ and discontinuous at $x=(2k-1)L$ if $h(L)\ne0$. Therefore $p$ is not differentiable on $(-\infty,\infty)$ unless $h(0)=h(L)=0$. From Figure~\ref{figure:12.2.4}, if $h(0)=h(L)=0$, then
+\part{a} From Figure~\ref{figure:12.2.3}, $p$ is discontinuous at $x=2kL$ if $h(0)\ne0$ and
+discontinuous at $x=(2k-1)L$ if $h(L)\ne0$. Therefore $p$ is not differentiable on
+$(-\infty,\infty)$ unless $h(0)=h(L)=0$. From Figure~\ref{figure:12.2.4}, if $h(0)=h(L)=0$, then
 \[
   p'(2kL)=h_{+}'(0)\mbox{\quad and \quad}p'((2k-1)L)=h_{-}'(L)
 \]
@@ -316,7 +358,9 @@ so $q$ is differentiable at $x=2kL$ if and only if $h'_{+}(0)=0$. Also,
 \[
   q'_{-}((2k-1)L)=h'_{-}(L)\mbox{\quad and \quad}q'_{+}((2k-1)L)=-h'_{-}(L),
 \]
-so $q$ is differentiable at $x=(2k-1)L$ if and only if $h'_{-}(L)=0$. Therefore $q$ is differentiable on $(-\infty,\infty)$ if and only if $h'_{+}(0)=h'_{-}(L)=0$, as in Figure~\ref{figure:12.2.6}. This completes the proof.
+so $q$ is differentiable at $x=(2k-1)L$ if and only if $h'_{-}(L)=0$. Therefore $q$ is
+differentiable on $(-\infty,\infty)$ if and only if $h'_{+}(0)=h'_{-}(L)=0$, as in
+Figure~\ref{figure:12.2.6}. This completes the proof.
 
 \begin{figure}[H]
   \color{blue}
@@ -338,7 +382,8 @@ so $q$ is differentiable at $x=(2k-1)L$ if and only if $h'_{-}(L)=0$. Therefore 
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:12.2.4} The formal solution of \eqref{eq:12.2.1} is an actual solution if $g$ is differentiable on $[0,L]$ and
+  \label{thmtype:12.2.4} The formal solution of \eqref{eq:12.2.1} is an actual solution if $g$ is
+  differentiable on $[0,L]$ and
   \begin{equation}
     \label{eq:12.2.15}g(0)=g(L)=0,
   \end{equation}
@@ -352,11 +397,21 @@ so $q$ is differentiable at $x=(2k-1)L$ if and only if $h'_{-}(L)=0$. Therefore 
   \end{equation}
 \end{theorem}
 
-\proof We first show that $S_{g}$ is differentiable and $S_{f}$ is twice differentiable on $(-\infty,\infty)$. We'll then differentiate \eqref{eq:12.2.9} twice with respect to $x$ and $t$ and verify that \eqref{eq:12.2.9} is an actual solution of \eqref{eq:12.2.1}.
+\proof We first show that $S_{g}$ is differentiable and $S_{f}$ is twice differentiable on
+$(-\infty,\infty)$. We'll then differentiate \eqref{eq:12.2.9} twice with respect to $x$ and $t$ and
+verify that \eqref{eq:12.2.9} is an actual solution of \eqref{eq:12.2.1}.
 
-Since $f$ and $g$ are continuous on $(0,L)$, Theorem~\ref{thmtype:11.3.2} implies that $S_{f}(x)=f(x)$ and $S_{g}(x)=g(x)$ on $[0,L]$. Therefore $S_{f}$ and $S_{g}$ are the odd periodic extensions of $f$ and $g$. Since $f$ and $g$ are differentiable on $[0,L]$, \eqref{eq:12.2.15}, \eqref{eq:12.2.16}, and Theorem~\ref{thmtype:12.2.3}\part{a} imply that $S_{f}$ and $S_{g}$ are differentiable on $(-\infty,\infty)$.
+Since $f$ and $g$ are continuous on $(0,L)$, Theorem~\ref{thmtype:11.3.2} implies that
+$S_{f}(x)=f(x)$ and $S_{g}(x)=g(x)$ on $[0,L]$. Therefore $S_{f}$ and $S_{g}$ are the odd periodic
+extensions of $f$ and $g$. Since $f$ and $g$ are differentiable on $[0,L]$, \eqref{eq:12.2.15},
+\eqref{eq:12.2.16}, and Theorem~\ref{thmtype:12.2.3}\part{a} imply that $S_{f}$ and $S_{g}$ are
+differentiable on $(-\infty,\infty)$.
 
-Since $S_{f}'(x)=f'(x)$ on $[0,L]$ (one-sided derivatives at the endpoints), and $S_{f}'$ is even (the derivative of an odd function is even), $S_{f}'$ is the even periodic extension of $f'$. By assumption, $f'$ is differentiable on $[0,L]$. Because of \eqref{eq:12.2.17}, Theorem~\ref{thmtype:12.2.3}\part{b} with $h=f'$ and $q=S_{f}'$ implies that $S_{f}''$ exists on $(-\infty,\infty)$.
+Since $S_{f}'(x)=f'(x)$ on $[0,L]$ (one-sided derivatives at the endpoints), and $S_{f}'$ is even
+(the derivative of an odd function is even), $S_{f}'$ is the even periodic extension of $f'$. By
+assumption, $f'$ is differentiable on $[0,L]$. Because of \eqref{eq:12.2.17},
+Theorem~\ref{thmtype:12.2.3}\part{b} with $h=f'$ and $q=S_{f}'$ implies that $S_{f}''$ exists on
+$(-\infty,\infty)$.
 
 Now we can differentiate \eqref{eq:12.2.9} twice with respect to $x$ and $t$:
 \[
@@ -372,9 +427,11 @@ and
 \begin{equation}
   \label{eq:12.2.20}u_{tt}(x,t)=\frac{a^{2}}{2}[S_{f}''(x+at)-S_{f}''(x-at)]+ \frac{a}{2}[S_{g}'(x+at)-S_{g}'(x-at)].
 \end{equation}
-Comparing \eqref{eq:12.2.18} and \eqref{eq:12.2.20} shows that $u_{tt}(x,t)=a^{2}u_{xx}(x,t)$ for all $(x,t)$.
+Comparing \eqref{eq:12.2.18} and \eqref{eq:12.2.20} shows that $u_{tt}(x,t)=a^{2}u_{xx}(x,t)$ for
+all $(x,t)$.
 
-From \eqref{eq:12.2.8}, $u(0,t)=u(L,t)=0$ for all $t$. From \eqref{eq:12.2.9}, $u(x,0)=S_{f}(x)$ for all $x$, and therefore, in particular,
+From \eqref{eq:12.2.8}, $u(0,t)=u(L,t)=0$ for all $t$. From \eqref{eq:12.2.9}, $u(x,0)=S_{f}(x)$ for
+all $x$, and therefore, in particular,
 \[
   u(x,0)=f(x),\quad0\le x<L.
 \]
@@ -384,8 +441,12 @@ From \eqref{eq:12.2.19}, $u_{t}(x,0)=S_{g}(x)$ for all $x$, and therefore, in pa
 \]
 Therefore $u$ is an actual solution of \eqref{eq:12.2.1}. This completes the proof.
 
-Eqn~\eqref{eq:12.2.9} is called \href{https://mathshistory.st-andrews.ac.uk/Biographies/DAlembert/}{\color{blue}
-\it d'Alembert's solution\/} of \eqref{eq:12.2.1}. Although d'Alembert's solution was useful for proving Theorem~\ref{thmtype:12.2.4} and is very useful in a slightly different context (Exercises~\ref{exer:12.2.63}-\ref{exer:12.2.68}), \eqref{eq:12.2.8} is preferable for computational purposes.
+Eqn~\eqref{eq:12.2.9} is called
+\href{https://mathshistory.st-andrews.ac.uk/Biographies/DAlembert/}{\color{blue}
+\it d'Alembert's solution\/} of \eqref{eq:12.2.1}. Although d'Alembert's solution was useful for
+proving Theorem~\ref{thmtype:12.2.4} and is very useful in a slightly different context
+(Exercises~\ref{exer:12.2.63}-\ref{exer:12.2.68}), \eqref{eq:12.2.8} is preferable for computational
+purposes.
 
 \begin{example}
   \label{example:12.2.1} \rm Solve \eqref{eq:12.2.1} with
@@ -394,7 +455,8 @@ Eqn~\eqref{eq:12.2.9} is called \href{https://mathshistory.st-andrews.ac.uk/Biog
   \]
 \end{example}
 
-\solution We leave it to you to verify that $f$ and $g$ satisfy the assumptions of Theorem~\ref{thmtype:12.2.4}.
+\solution We leave it to you to verify that $f$ and $g$ satisfy the assumptions of
+Theorem~\ref{thmtype:12.2.4}.
 
 From Exercise~11.3.~\hspace*{-3pt}\ref{exer:11.3.39},
 \[
@@ -412,18 +474,31 @@ From \eqref{eq:12.2.8},
   \end{array}
 \]
 
-Theorem~\ref{thmtype:12.1.2} implies that $u_{xx}$ and $u_{tt}$ can be obtained by term by term differentiation, for all $(x,t)$, so $u_{tt}=a^{2}u_{xx}$ for all $(x,t)$ (Exercise~\ref{exer:12.2.62}). Moreover, Theorem~\ref{thmtype:11.3.2} implies that $S_{f}(x)=f(x)$ and $S_{g}(x)=g(x)$ if $0\le x\le L$. Therefore $u(x,0)=f(x)$ and $u_{t}(x,0)=g(x)$ if $0\le x\le L$. Hence, $u$ is an actual solution of the initial-boundary value problem.
+Theorem~\ref{thmtype:12.1.2} implies that $u_{xx}$ and $u_{tt}$ can be obtained by term by term
+differentiation, for all $(x,t)$, so $u_{tt}=a^{2}u_{xx}$ for all $(x,t)$
+(Exercise~\ref{exer:12.2.62}). Moreover, Theorem~\ref{thmtype:11.3.2} implies that $S_{f}(x)=f(x)$
+and $S_{g}(x)=g(x)$ if $0\le x\le L$. Therefore $u(x,0)=f(x)$ and $u_{t}(x,0)=g(x)$ if
+$0\le x\le L$. Hence, $u$ is an actual solution of the initial-boundary value problem.
 
 \medskip
 
 \color{blue}
-\remark {In solving a specific initial-boundary value problem \eqref{eq:12.2.1}, it's convenient to solve the problem with $g\equiv0$, then with $f\equiv0$, and add the solutions to obtain the solution of the given problem. Because of this, either $f\equiv0$ or $g\equiv0$ in all the specific initial-boundary value problems in the exercises.}
+\remark {In solving a specific initial-boundary value problem \eqref{eq:12.2.1}, it's convenient to
+solve the problem with $g\equiv0$, then with $f\equiv0$, and add the solutions to obtain the
+solution of the given problem. Because of this, either $f\equiv0$ or $g\equiv0$ in all the specific
+initial-boundary value problems in the exercises.}
 \color{black}
 
 \boxit{The Plucked String}
 
 \noindent
-If $f$ and $g$ don't satisfy the assumptions of Theorem~\ref{thmtype:12.2.4}, then \eqref{eq:12.2.8} isn't an actual solution of \eqref{eq:12.2.1} in fact, it can be shown that \eqref{eq:12.2.1} doesn't have an actual solution in this case. Nevertheless, $u$ is defined for all $(x,t)$, and we can see from \eqref{eq:12.2.18} and \eqref{eq:12.2.20} that $u_{tt}(x,t)=a^{2}u_{xx}(x,t)$ for all $(x,t)$ such that $S_{f}''(x\pm at)$ and $S_{g}'(x\pm at)$ exist. Moreover, $u$ may still provide a useful approximation to the vibration of the string; a laboratory experiment can confirm or deny this.
+If $f$ and $g$ don't satisfy the assumptions of Theorem~\ref{thmtype:12.2.4}, then \eqref{eq:12.2.8}
+isn't an actual solution of \eqref{eq:12.2.1} in fact, it can be shown that \eqref{eq:12.2.1}
+doesn't have an actual solution in this case. Nevertheless, $u$ is defined for all $(x,t)$, and we
+can see from \eqref{eq:12.2.18} and \eqref{eq:12.2.20} that $u_{tt}(x,t)=a^{2}u_{xx}(x,t)$ for all
+$(x,t)$ such that $S_{f}''(x\pm at)$ and $S_{g}'(x\pm at)$ exist. Moreover, $u$ may still provide a
+useful approximation to the vibration of the string; a laboratory experiment can confirm or deny
+this.
 
 We'll now consider the initial-boundary value problem \eqref{eq:12.2.1} with
 \begin{equation}
@@ -433,9 +508,15 @@ We'll now consider the initial-boundary value problem \eqref{eq:12.2.1} with
     L-x, & \frac{L}{2}\le x\le L
   \end{array}\right.
 \end{equation}
-and $g\equiv0$. Since $f$ isn't differentiable at $x=L/2$, it doesn't satisfy the assumptions of Theorem~\ref{thmtype:12.2.4}, so the formal solution of \eqref{eq:12.2.1} can't be an actual solution. Nevertheless, it's instructive to investigate the properties of the formal solution.
+and $g\equiv0$. Since $f$ isn't differentiable at $x=L/2$, it doesn't satisfy the assumptions of
+Theorem~\ref{thmtype:12.2.4}, so the formal solution of \eqref{eq:12.2.1} can't be an actual
+solution. Nevertheless, it's instructive to investigate the properties of the formal solution.
 
-The graph of $f$ is shown in Figure~\ref{figure:12.2.7}. Intuitively, we are plucking the string by half its length at the middle. You're right if you think this is an extraordinarily large displacement; however, we could remove this objection by multiplying the function in Figure~\ref{figure:12.2.7} by a small constant. Since this would just multiply the formal solution by the same constant, we'll leave $f$ as we've defined it. Similar comments apply to the exercises.
+The graph of $f$ is shown in Figure~\ref{figure:12.2.7}. Intuitively, we are plucking the string by
+half its length at the middle. You're right if you think this is an extraordinarily large
+displacement; however, we could remove this objection by multiplying the function in
+Figure~\ref{figure:12.2.7} by a small constant. Since this would just multiply the formal solution
+by the same constant, we'll leave $f$ as we've defined it. Similar comments apply to the exercises.
 
 \begin{figure}[tbp]
   \centering
@@ -465,11 +546,15 @@ and the initial condition
 \[
   u(x,0)=f(x),\quad0\le x\le L.
 \]
-However, we can't justify differentiating \eqref{eq:12.2.22} term by term even once, and formally differentiating it twice term by term produces a series that diverges for all $(x,t)$. (Verify.). Therefore we use d'Alembert's form
+However, we can't justify differentiating \eqref{eq:12.2.22} term by term even once, and formally
+differentiating it twice term by term produces a series that diverges for all $(x,t)$. (Verify.).
+Therefore we use d'Alembert's form
 \begin{equation}
   \label{eq:12.2.23}u(x,t)=\frac{1}{2}[S_{f}(x+at)+S_{f}(x-at)]
 \end{equation}
-for $u$ to study its derivatives. Figure~\ref{figure:12.2.8} shows the graph of $S_{f}$, which is the odd periodic extension of $f$. You can see from the graph that $S_{f}$ is differentiable at $x$ (and $S_{f}'(x)=\pm1$) if and only if $x$ isn't an odd multiple of $L/2$.
+for $u$ to study its derivatives. Figure~\ref{figure:12.2.8} shows the graph of $S_{f}$, which is
+the odd periodic extension of $f$. You can see from the graph that $S_{f}$ is differentiable at $x$
+(and $S_{f}'(x)=\pm1$) if and only if $x$ isn't an odd multiple of $L/2$.
 
 \begin{figure}[H]
   \color{blue}
@@ -489,13 +574,21 @@ for $u$ to study its derivatives. Figure~\ref{figure:12.2.8} shows the graph of 
   \end{minipage}
 \end{figure}
 
-In Figure~\ref{figure:12.2.9} the dashed and solid curves are the graphs of $y=S_{f}(x-at)$ and $y=S_{f}(x+at)$ respectively, for a fixed value of $t$. As $t$ increases the dashed curve moves to the right and the solid curve moves to the left. For this reason, we say that the functions $u_{1}(x,t)=S_{f}(x+at)$ and $u_{2}(x,t)=S_{f}(x-at)$ are {\color{blue}\it traveling waves\/}. Note that $u_{1}$ satisfies the wave equation at $(x,t)$ if $x+at$ isn't an odd multiple of $L/2$ and $u_{2}$ satisfies the wave equation at $(x,t)$ if $x-at$ isn't an odd multiple of $L/2$. Therefore \eqref{eq:12.2.23} (or, equivalently, \eqref{eq:12.2.22}) satisfies $u_{tt}(x,t)=a^{2}u_{xx}(x,t)=0$ for all $(x,t)$ such that neither $x-at$ nor $x+at$ is an odd multiple of $L/2$.
+In Figure~\ref{figure:12.2.9} the dashed and solid curves are the graphs of $y=S_{f}(x-at)$ and
+$y=S_{f}(x+at)$ respectively, for a fixed value of $t$. As $t$ increases the dashed curve moves to
+the right and the solid curve moves to the left. For this reason, we say that the functions
+$u_{1}(x,t)=S_{f}(x+at)$ and $u_{2}(x,t)=S_{f}(x-at)$ are {\color{blue}\it traveling waves\/}. Note
+that $u_{1}$ satisfies the wave equation at $(x,t)$ if $x+at$ isn't an odd multiple of $L/2$ and
+$u_{2}$ satisfies the wave equation at $(x,t)$ if $x-at$ isn't an odd multiple of $L/2$. Therefore
+\eqref{eq:12.2.23} (or, equivalently, \eqref{eq:12.2.22}) satisfies $u_{tt}(x,t)=a^{2}u_{xx}(x,t)=0$
+for all $(x,t)$ such that neither $x-at$ nor $x+at$ is an odd multiple of $L/2$.
 
 We conclude by finding an explicit formula for $u(x,t)$ under the assumption that
 \begin{equation}
   \label{eq:12.2.24}0\le x\le L\mbox{\quad and \quad}0\le t\le L/2a.
 \end{equation}
-To see how this formula can be used to compute $u(x,t)$ for $0\le x\le L$ and arbitrary $t$, we refer you to Exercise~\ref{exer:12.2.16}.
+To see how this formula can be used to compute $u(x,t)$ for $0\le x\le L$ and arbitrary $t$, we
+refer you to Exercise~\ref{exer:12.2.16}.
 
 From Figure~\ref{figure:12.2.10},
 \[
@@ -524,7 +617,8 @@ Therefore, from \eqref{eq:12.2.23},
     L-x,            & \frac{L}{2}-at\le x\le L
   \end{array}\right.
 \]
-if $(x,t)$ satisfies \eqref{eq:12.2.24}. Figure~\ref{figure:12.2.11} is the graph of this function on $[0,L]$ for a fixed $t$ in $(0,L/2a)$.
+if $(x,t)$ satisfies \eqref{eq:12.2.24}. Figure~\ref{figure:12.2.11} is the graph of this function
+on $[0,L]$ for a fixed $t$ in $(0,L/2a)$.
 
 \begin{figure}[H]
   \color{blue}
@@ -551,31 +645,44 @@ Although the formal solution
 \[
   u(x,t)=\sum_{n=1}^{\infty}\left(\alpha_{n}\cos\frac{n\pi at}{L}+\frac{\beta_{n}L}{n\pi a}\sin\frac{n\pi at}{L}\right) \sin\frac{n\pi x}{L}
 \]
-of \eqref{eq:12.2.1} is defined for all $(x,t)$, we're mainly interested in its behavior for $0\le x\le L$ and $t\ge0$. In fact, it's sufficient to consider only values of $t$ in the interval $0\le t<2L/a$, since
+of \eqref{eq:12.2.1} is defined for all $(x,t)$, we're mainly interested in its behavior for
+$0\le x\le L$ and $t\ge0$. In fact, it's sufficient to consider only values of $t$ in the interval
+$0\le t<2L/a$, since
 \[
   u(x,t+2kL/a)=u(x,t)
 \]
 for all $(x,t)$ if $k$ is an integer. (Verify.)
 
-You can create an animation of the motion of the string by performing the following numerical experiment.
+You can create an animation of the motion of the string by performing the following numerical
+experiment.
 
 Let $m$ and $k$ be positive integers. Let
 \[
   t_{j}=\frac{2Lj}{ka},\quad j=0,1,\dots k;
 \]
-thus, $t_{0}$, $t_{1}$, \dots $t_{k}$ are equally spaced points in $[0,2L/a]$. For each $j=0$, $1$ ,$2$, \dots $k$, graph the partial sum
+thus, $t_{0}$, $t_{1}$, \dots $t_{k}$ are equally spaced points in $[0,2L/a]$. For each $j=0$, $1$
+,$2$, \dots $k$, graph the partial sum
 \[
   u_{m}(x,t_{j})=\sum_{n=1}^{m}\left(\alpha_{n}\cos\frac{n\pi at_{j}}{L}+\frac{\beta_{n}L}{n\pi a}\sin\frac{n\pi at_{j}}{L}\right) \sin\frac{n\pi x}{L}
 \]
-on $[0,L]$ as a function of $x$. Write your program so that each graph remains displayed on the monitor for a short time, and is then deleted and replaced by the next. Repeat this procedure for various values of $m$ and $k$.
+on $[0,L]$ as a function of $x$. Write your program so that each graph remains displayed on the
+monitor for a short time, and is then deleted and replaced by the next. Repeat this procedure for
+various values of $m$ and $k$.
 
-We suggest that you perform experiments of this kind in the exercises marked \Cex\hspace*{-3pt}, without other specific instructions. (These exercises were chosen arbitrarily; the experiment is worthwhile in all the exercises dealing with specific initial-boundary value problems.) In some of the exercises the formal solutions have other forms, defined in Exercises~\ref{exer:12.2.17}, \ref{exer:12.2.34}, and \ref{exer:12.2.49}; however, the idea of the experiment is the same.
+We suggest that you perform experiments of this kind in the exercises marked \Cex\hspace*{-3pt},
+without other specific instructions. (These exercises were chosen arbitrarily; the experiment is
+worthwhile in all the exercises dealing with specific initial-boundary value problems.) In some of
+the exercises the formal solutions have other forms, defined in Exercises~\ref{exer:12.2.17},
+\ref{exer:12.2.34}, and \ref{exer:12.2.49}; however, the idea of the experiment is the same.
 
 \exercises
 \noindent
 
 \noindent
-{\it In Exercises~\ref{exer:12.2.1}-\ref{exer:12.2.15} solve the initial-boundary value problem. In some of these exercises, Theorem~\ref{thmtype:11.3.5}\part{b} or Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.35} will simplify the computation of the coefficients in the Fourier sine series.}
+{\it In Exercises~\ref{exer:12.2.1}-\ref{exer:12.2.15} solve the initial-boundary value problem. In
+some of these exercises, Theorem~\ref{thmtype:11.3.5}\part{b} or
+Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.35} will simplify the computation of the coefficients
+in the Fourier sine series.}
 
 \begin{exerciselist}
   \item\label{exer:12.2.1} $u_{tt}=9u_{xx},\quad0<x<1,\quad t>0$,\\ $u(0,t)=0,\quad u(1,t)=0,\quad t>0$,\\ $u(x,0)=0,\quad u_{t}(x,0)= \left\{
@@ -625,7 +732,8 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
       L-x,               & \frac{L}{2}-a\tau\le x\le L.
     \end{array}\right. \eqno{\rm(B)}
   \]
-  if $0\le\tau\le L/2a$. The first objective of this exercise is to show that (B) can be used to compute $u(x,t)$ for $0\le x\le L$ and all $t>0$.
+  if $0\le\tau\le L/2a$. The first objective of this exercise is to show that (B) can be used to
+  compute $u(x,t)$ for $0\le x\le L$ and all $t>0$.
   \begin{alist}
     \item % (a)
     Show that if $t>0$, there's a nonnegative integer $m$ such that either
@@ -635,18 +743,25 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
     where $0\le\tau\le L/2a$.
 
     \item % (b)
-    Use (A) to show that $u(x,t)=(-1)^{m}u(x,\tau)$ if \part{i} holds, while $u(x,t)=(-1)^{m+1}u(x,\tau)$ if \part{ii}
+    Use (A) to show that $u(x,t)=(-1)^{m}u(x,\tau)$ if \part{i} holds, while
+    $u(x,t)=(-1)^{m+1}u(x,\tau)$ if \part{ii}
     holds.
 
     \item % (c)
-    \Lex\; Perform the following experiment for specific values of $L$ and $a$ and various values of $m$ and $k$: Let
+    \Lex\; Perform the following experiment for specific values of $L$ and $a$ and various values of
+    $m$ and $k$: Let
     \[
       t_{j}=\frac{Lj}{2ka},\quad j=0,1,\dots k;
     \]
-    thus, $t_{0}$, $t_{1}$, \dots, $t_{k}$ are equally spaced points in $[0,L/2a]$. For each $j=0$, $1$ , $2$,\dots, $k$, graph the $m$th partial sum of (A) and $u(x,t_{j})$ computed from (B) on the same axis. Create an animation, as described in the remarks on using technology at the end of the section.
+    thus, $t_{0}$, $t_{1}$, \dots, $t_{k}$ are equally spaced points in $[0,L/2a]$. For each $j=0$,
+    $1$ , $2$,\dots, $k$, graph the $m$th partial sum of (A) and $u(x,t_{j})$ computed from (B) on
+    the same axis. Create an animation, as described in the remarks on using technology at the end
+    of the section.
   \end{alist}
 
-  \item\label{exer:12.2.17} If a string vibrates with the end at $x=0$ free to move in a frictionless vertical track and the end at $x=L$ fixed, then the initial-boundary value problem for its displacement takes the form
+  \item\label{exer:12.2.17} If a string vibrates with the end at $x=0$ free to move in a
+        frictionless vertical track and the end at $x=L$ fixed, then the initial-boundary value
+        problem for its displacement takes the form
   \[
     \begin{array}{c}
       u_{tt}=a^{2}u_{xx},\quad0<x<L,\quad t>0,            \\
@@ -668,7 +783,10 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
     \alpha_{n}=\frac{2}{L}\int_{0}^{L}f(x)\cos\frac{(2n-1)\pi x}{2L}\,dx \mbox{\quad and \quad}\beta_{n}=\frac{2}{L}\int_{0}^{L}g(x)\cos\frac{(2n-1)\pi x}{2L}\,dx.
   \]
 
-  \exercisetext{In Exercises~\ref{exer:12.2.18}-\ref{exer:12.2.31}, use Exercise~\ref{exer:12.2.17} to solve the initial-boundary value problem. In some of these exercises Theorem~\ref{thmtype:11.3.5}\part{c} or Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.42}\part{b} will simplify the computation of the coefficients in the mixed Fourier cosine series.}
+  \exercisetext{In Exercises~\ref{exer:12.2.18}-\ref{exer:12.2.31}, use Exercise~\ref{exer:12.2.17}
+  to solve the initial-boundary value problem. In some of these exercises
+  Theorem~\ref{thmtype:11.3.5}\part{c} or Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.42}\part{b}
+  will simplify the computation of the coefficients in the mixed Fourier cosine series.}
 
   \item\label{exer:12.2.18} $u_{tt}=9u_{xx},\quad0<x<2,\quad t>0$,\\ $u_{x}(0,t)=0,\quad u(2,t)=0,\quad t>0$,\\ $u(x,0)=4-x^{2},\quad u_{t}(x,0)=0,\quad0\le x\le2$
 
@@ -698,15 +816,20 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
 
   \item\label{exer:12.2.31} $u_{tt}=u_{xx},\quad0<x<1,\quad t>0$,\\ $u_{x}(0,t)=0,\quad u(1,t)=0,\quad t>0$,\\ $u(x,0)=0,\quad u_{t}(x,0)=x^{4}-4x^{3}+6x^{2}-3,\quad0\le x\le1$
 
-  \item\label{exer:12.2.32} Adapt the proof of Theorem~\ref{thmtype:12.2.2} to find d'Alembert's solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.17}.
+  \item\label{exer:12.2.32} Adapt the proof of Theorem~\ref{thmtype:12.2.2} to find d'Alembert's
+        solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.17}.
 
-  \item\label{exer:12.2.33} Use the result of Exercise~\ref{exer:12.2.32} to show that the formal solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.17} is an actual solution if $g$ is differentiable and $f$ is twice differentiable on $[0,L]$ and
+  \item\label{exer:12.2.33} Use the result of Exercise~\ref{exer:12.2.32} to show that the formal
+        solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.17} is an actual
+        solution if $g$ is differentiable and $f$ is twice differentiable on $[0,L]$ and
   \[
     g'_{+}(0)=g(L)=f'_{+}(0)=f(L)=f''_{-}(L)=0.
   \]
-  \hint{See Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.57}, and apply Theorem~\ref{thmtype:12.2.3} with $L$ replaced by $2L$.}
+  \hint{See Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.57}, and apply
+  Theorem~\ref{thmtype:12.2.3} with $L$ replaced by $2L$.}
 
-  \item\label{exer:12.2.34} Justify defining the formal solution of the initial-boundary value problem
+  \item\label{exer:12.2.34} Justify defining the formal solution of the initial-boundary value
+        problem
   \[
     \begin{array}{c}
       u_{tt}=a^{2}u_{xx},\quad0<x<L,\quad t>0,           \\
@@ -727,7 +850,10 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
     \alpha_{n}=\frac{2}{L}\int_{0}^{L}f(x)\sin\frac{(2n-1)\pi x}{2L}\,dx \mbox{\quad and \quad}\beta_{n}=\frac{2}{L}\int_{0}^{L}g(x)\sin\frac{(2n-1)\pi x}{2L}\,dx.
   \]
 
-  \exercisetext{In Exercises~\ref{exer:12.2.35}-\ref{exer:12.2.46} use Exercise~\ref{exer:12.2.34} to solve the initial-boundary value problem. In some of these exercises Theorem~\ref{thmtype:11.3.5}\part{d} or Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.50}\part{b} will simplify the computation of the coefficients in the mixed Fourier sine series.}
+  \exercisetext{In Exercises~\ref{exer:12.2.35}-\ref{exer:12.2.46} use Exercise~\ref{exer:12.2.34}
+  to solve the initial-boundary value problem. In some of these exercises
+  Theorem~\ref{thmtype:11.3.5}\part{d} or Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.50}\part{b}
+  will simplify the computation of the coefficients in the mixed Fourier sine series.}
 
   \item\label{exer:12.2.35} $u_{tt}=64u_{xx},\quad0<x<\pi,\quad t>0$,\\ $u(0,t)=0,\quad u_{x}(\pi,t)=0,\quad t>0$,\\ $u(x,0)=x(2\pi-x),\quad u_{t}(x,0)=0,\quad0\le x\le\pi$
 
@@ -753,15 +879,20 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
 
   \item\label{exer:12.2.46} \Cex $u_{tt}=16u_{xx},\quad0<x<1,\quad t>0$,\\ $u(0,t)=0,\quad u_{x}(1,t)=0,\quad t>0$,\\ $u(x,0)=0,\quad u_{t}(x,0)=x(x^{3}-2x^{2}+2),\quad0\le x\le1$
 
-  \item\label{exer:12.2.47} Adapt the proof of Theorem~\ref{thmtype:12.2.2} to find d'Alembert's solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.34}.
+  \item\label{exer:12.2.47} Adapt the proof of Theorem~\ref{thmtype:12.2.2} to find d'Alembert's
+        solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.34}.
 
-  \item\label{exer:12.2.48} Use the result of Exercise~\ref{exer:12.2.47} to show that the formal solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.34} is an actual solution if $g$ is differentiable and $f$ is twice differentiable on $[0,L]$ and
+  \item\label{exer:12.2.48} Use the result of Exercise~\ref{exer:12.2.47} to show that the formal
+        solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.34} is an actual
+        solution if $g$ is differentiable and $f$ is twice differentiable on $[0,L]$ and
   \[
     f(0)=f'_{-}(L)=g(0)=g_{-}'(L)=f''_{+}(0)=0.
   \]
-  \hint{See Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.58} and apply Theorem~\ref{thmtype:12.2.3} with $L$ replaced by $2L$.}
+  \hint{See Exercise~$11.3$.~\hspace*{-3pt}\ref{exer:11.3.58} and apply Theorem~\ref{thmtype:12.2.3}
+  with $L$ replaced by $2L$.}
 
-  \item\label{exer:12.2.49} Justify defining the formal solution of the initial-boundary value problem
+  \item\label{exer:12.2.49} Justify defining the formal solution of the initial-boundary value
+        problem
   \[
     \begin{array}{c}
       u_{tt}=a^{2}u_{xx},\quad0<x<L,\quad t>0,            \\
@@ -785,7 +916,10 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
     \alpha_{n}=\frac{2}{L}\int_{0}^{L}f(x)\cos\frac{n\pi x}{L}\,dx, \mbox{\quad and \quad}\beta_{n}=\frac{2}{L}\int_{0}^{L}g(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots.
   \]
 
-  \exercisetext{In Exercises~\ref{exer:12.2.50}-\ref{exer:12.2.59} use Exercise~\ref{exer:12.2.49} to solve the initial-boundary value problem. In some of these exercises Theorem~\ref{thmtype:11.3.5}\part{a} will simplify the computation of the coefficients in the Fourier cosine series.}
+  \exercisetext{In Exercises~\ref{exer:12.2.50}-\ref{exer:12.2.59} use Exercise~\ref{exer:12.2.49}
+  to solve the initial-boundary value problem. In some of these exercises
+  Theorem~\ref{thmtype:11.3.5}\part{a} will simplify the computation of the coefficients in the
+  Fourier cosine series.}
 
   \item\label{exer:12.2.50} $u_{tt}=5u_{xx},\quad0<x<2,\quad t>0$,\\ $u_{x}(0,t)=0,\quad u_{x}(2,t)=0,\quad t>0$,\\ $u(x,0)=2x^{2}(3-x),\quad u_{t}(x,0)=0,\quad0\le x\le2$
 
@@ -807,14 +941,19 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
 
   \item\label{exer:12.2.59} \Cex $u_{tt}=u_{xx},\quad0<x<1,\quad t>0$,\\ $u_{x}(0,t)=0,\quad u_{x}(1,t)=0,\quad t>0$,\\ $u(x,0)=0,\quad u_{t}(x,0)=x^{2}(3x^{2}-8x+6),\quad0\le x\le1$
 
-  \item\label{exer:12.2.60} Adapt the proof of Theorem~\ref{thmtype:12.2.2} to find d'Alembert's solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.49}.
+  \item\label{exer:12.2.60} Adapt the proof of Theorem~\ref{thmtype:12.2.2} to find d'Alembert's
+        solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.49}.
 
-  \item\label{exer:12.2.61} Use the result of Exercise~\ref{exer:12.2.60} to show that the formal solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.49} is an actual solution if $g$ is differentiable and $f$ is twice differentiable on $[0,L]$ and
+  \item\label{exer:12.2.61} Use the result of Exercise~\ref{exer:12.2.60} to show that the formal
+        solution of the initial-boundary value problem in Exercise~\ref{exer:12.2.49} is an actual
+        solution if $g$ is differentiable and $f$ is twice differentiable on $[0,L]$ and
   \[
     f'_{+}(0)=f'_{-}(L)=g'_{+}(0)=g_{-}'(L)=0.
   \]
 
-  \item\label{exer:12.2.62} Suppose $\lambda$ and $\mu$ are constants and either $p_{n}(x)= \cos n\lambda x$ or $p_{n}(x)=\sin n\lambda x$, while either $q_{n}(t)=\cos n\mu t$ or $q_{n}(t)=\sin n\mu t$ for $n=1$, $2$, $3$, \dots. Let
+  \item\label{exer:12.2.62} Suppose $\lambda$ and $\mu$ are constants and either
+        $p_{n}(x)= \cos n\lambda x$ or $p_{n}(x)=\sin n\lambda x$, while either
+        $q_{n}(t)=\cos n\mu t$ or $q_{n}(t)=\sin n\mu t$ for $n=1$, $2$, $3$, \dots. Let
   \[
     u(x,t)=\sum_{n=1}^{\infty}k_{n}p_{n}(x)q_{n}(t), \eqno{\rm(A)}
   \]
@@ -824,7 +963,8 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
     Show that if $\sum_{n=1}^{\infty}|k_{n}|$ converges then $u(x,t)$ converges for all $(x,t)$.
 
     \item % (b)
-    Use Theorem~12.1.2 to show that if $\sum_{n=1}^{\infty}n|k_{n}|$ converges then (A) can be differentiated term by term with respect to $x$ and $t$ for all $(x,t)$; that is,
+    Use Theorem~12.1.2 to show that if $\sum_{n=1}^{\infty}n|k_{n}|$ converges then (A) can be
+    differentiated term by term with respect to $x$ and $t$ for all $(x,t)$; that is,
     \[
       u_{x}(x,t)= \sum_{n=1}^{\infty}k_{n}p_{n}'(x)q_{n}(t)
     \]
@@ -844,16 +984,19 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
     \]
 
     \item % (d)
-    Suppose $\sum_{n=1}^{\infty}n^{2}|\alpha_{n}|$ and $\sum_{n=1}^{\infty}n|\beta_{n}|$ both converge. Show that the formal solution
+    Suppose $\sum_{n=1}^{\infty}n^{2}|\alpha_{n}|$ and $\sum_{n=1}^{\infty}n|\beta_{n}|$ both
+    converge. Show that the formal solution
     \[
       u(x,t)=\sum_{n=1}^{\infty}\left(\alpha_{n}\cos\frac{n\pi at}{L}+\frac{\beta_{n}L}{n\pi a}\sin\frac{n\pi at}{L}\right) \sin\frac{n\pi x}{L}
     \]
     of Equation~\ref{eq:12.2.1} satisfies $u_{tt}=a^{2}u_{xx}$ for all $(x,t)$.
 
-    This conclusion also applies to the formal solutions defined in Exercises~\ref{exer:12.2.17}, \ref{exer:12.2.34}, and \ref{exer:12.2.49}.
+    This conclusion also applies to the formal solutions defined in Exercises~\ref{exer:12.2.17},
+    \ref{exer:12.2.34}, and \ref{exer:12.2.49}.
   \end{alist}
 
-  \item\label{exer:12.2.63} Suppose $g$ is differentiable and $f$ is twice differentiable on $(-\infty,\infty)$, and let
+  \item\label{exer:12.2.63} Suppose $g$ is differentiable and $f$ is twice differentiable on
+        $(-\infty,\infty)$, and let
   \[
     u_{0}(x,t)=\frac{f(x+at)+f(x-at)}{2}\mbox{\quad and \quad}u_{1}(x,t)=\frac{1}{2a}\int_{x-at}^{x+at}g(u)\,du.
   \]
@@ -888,7 +1031,9 @@ We suggest that you perform experiments of this kind in the exercises marked \Ce
     \]
   \end{alist}
 
-  \exercisetext{In Exercises~\ref{exer:12.2.64}-\ref{exer:12.2.68} use the result of Exercise~\ref{exer:12.2.63} to find a solution of \[u_{tt}=a^{2}u_{xx},\quad-\infty<x<\infty\] that satisfies the given initial conditions.}
+  \exercisetext{In Exercises~\ref{exer:12.2.64}-\ref{exer:12.2.68} use the result of
+  Exercise~\ref{exer:12.2.63} to find a solution of \[u_{tt}=a^{2}u_{xx},\quad-\infty<x<\infty\]
+  that satisfies the given initial conditions.}
 
   \item\label{exer:12.2.64} $u(x,0)=x$,\quad $u_{t}(x,0)=4ax$,\quad $-\infty<x<\infty$
 

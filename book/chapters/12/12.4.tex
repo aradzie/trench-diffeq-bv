@@ -1,7 +1,10 @@
 \section{Laplace's Equation in Polar Coordinates}
 
 \noindent
-In Section~12.3 we solved boundary value problems for Laplace's equation over a rectangle with sides parallel to the $x,y$-axes. Now we'll consider boundary value problems for Laplace's equation over regions with boundaries best described in terms of polar coordinates. In this case it's appropriate to regard $u$ as function of $(r,\theta)$ and write Laplace's equation in polar form as
+In Section~12.3 we solved boundary value problems for Laplace's equation over a rectangle with sides
+parallel to the $x,y$-axes. Now we'll consider boundary value problems for Laplace's equation over
+regions with boundaries best described in terms of polar coordinates. In this case it's appropriate
+to regard $u$ as function of $(r,\theta)$ and write Laplace's equation in polar form as
 \begin{equation}
   \label{eq:12.4.1}u_{rr}+\frac{1}{r}u_{r}+\frac{1}{r^{2}}u_{\theta\theta}=0,
 \end{equation}
@@ -10,7 +13,8 @@ where
   r=\sqrt{x^{2}+y^{2}}\mbox{\quad and \quad}\theta=\cos^{-1}\frac{x}{r}=\sin^{-1}\frac{x}{r}.
 \]
 
-We begin with the case where the region is a circular disk with radius $\rho$, centered at the origin; that is, we want to define a formal solution of the boundary value problem
+We begin with the case where the region is a circular disk with radius $\rho$, centered at the
+origin; that is, we want to define a formal solution of the boundary value problem
 \begin{equation}
   \label{eq:12.4.2}
   \begin{array}{c}
@@ -18,7 +22,8 @@ We begin with the case where the region is a circular disk with radius $\rho$, c
     u(\rho,\theta)=f(\theta),\quad-\pi\le\theta<\pi
   \end{array}
 \end{equation}
-(Figure~\ref{figure:12.4.1}). Note that \eqref{eq:12.4.2} imposes no restriction on $u(r,\theta)$ when $r=0$. We'll address this question at the appropriate time.
+(Figure~\ref{figure:12.4.1}). Note that \eqref{eq:12.4.2} imposes no restriction on $u(r,\theta)$
+when $r=0$. We'll address this question at the appropriate time.
 
 \begin{figure}[H]
   \centering
@@ -28,7 +33,8 @@ We begin with the case where the region is a circular disk with radius $\rho$, c
   \label{figure:12.4.1}
 \end{figure}
 
-We first look for products $v(r,\theta)=R(r)\Theta(\theta)$ that satisfy \eqref{eq:12.4.1}. For this function,
+We first look for products $v(r,\theta)=R(r)\Theta(\theta)$ that satisfy \eqref{eq:12.4.1}. For this
+function,
 \[
   v_{rr}+\frac{1}{r}v_{r}+\frac{1}{r^{2}}v_{\theta\theta}= R''\Theta+\frac{1}{r}R'\Theta +\frac{1}{r^{2}}R\Theta''=0
 \]
@@ -44,11 +50,16 @@ and
 \begin{equation}
   \label{eq:12.4.3}r^{2}R''+rR'-\lambda R=0.
 \end{equation}
-Since $(r,\pi)$ and $(r,-\pi)$ are the polar coordinates of the same point, we impose periodic boundary conditions on $\Theta$; that is,
+Since $(r,\pi)$ and $(r,-\pi)$ are the polar coordinates of the same point, we impose periodic
+boundary conditions on $\Theta$; that is,
 \begin{equation}
   \label{eq:12.4.4}\Theta''+\lambda\Theta=0,\quad\Theta(-\pi)=\Theta(\pi), \quad\Theta'(-\pi)=\Theta'(\pi).
 \end{equation}
-Since we don't want $R\Theta$ to be identically zero, $\lambda$ must be an eigenvalue of \eqref{eq:12.4.4} and $\Theta$ must be an associated eigenfunction. From Theorem~\ref{thmtype:11.1.6}, the eigenvalues of \eqref{eq:12.4.4} are $\lambda_{0}=0$ with associated eigenfunctions $\Theta_{0}=1$ and, for $n=1,2,3,\dots$, $\lambda_{n}=n^{2}$, with associated eigenfunction $\cos n\theta$ and $\sin n\theta$ therefore,
+Since we don't want $R\Theta$ to be identically zero, $\lambda$ must be an eigenvalue of
+\eqref{eq:12.4.4} and $\Theta$ must be an associated eigenfunction. From
+Theorem~\ref{thmtype:11.1.6}, the eigenvalues of \eqref{eq:12.4.4} are $\lambda_{0}=0$ with
+associated eigenfunctions $\Theta_{0}=1$ and, for $n=1,2,3,\dots$, $\lambda_{n}=n^{2}$, with
+associated eigenfunction $\cos n\theta$ and $\sin n\theta$ therefore,
 \[
   \Theta_{n}=\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta
 \]
@@ -73,7 +84,12 @@ If $c_{1}\ne0$ then
 \[
   \lim_{r\to0+}|R_{0}(r)|=\infty,
 \]
-which doesn't make sense if we interpret $u_{0}(r,\theta)=R_{0}(r)\Theta_{0}(\theta)=R_{0}(r)$ as the steady state temperature distribution in a disk whose boundary is maintained at the constant temperature $R_{0}(\rho)$. Therefore we now require $R_{0}$ to be bounded as $r\to0+$. This implies that $c_{1}=0$, and we take $c_{2}=1$. Thus, $R_{0}=1$ and $v_{0}(r,\theta)=R_{0}(r)\Theta_{0}(\theta)=1$. Note that $v_{0}$ satisfies \eqref{eq:12.4.2} with $f(\theta)=1$.
+which doesn't make sense if we interpret $u_{0}(r,\theta)=R_{0}(r)\Theta_{0}(\theta)=R_{0}(r)$ as
+the steady state temperature distribution in a disk whose boundary is maintained at the constant
+temperature $R_{0}(\rho)$. Therefore we now require $R_{0}$ to be bounded as $r\to0+$. This implies
+that $c_{1}=0$, and we take $c_{2}=1$. Thus, $R_{0}=1$ and
+$v_{0}(r,\theta)=R_{0}(r)\Theta_{0}(\theta)=1$. Note that $v_{0}$ satisfies \eqref{eq:12.4.2} with
+$f(\theta)=1$.
 
 Substituting $\lambda=n^{2}$ into \eqref{eq:12.4.3} yields the Euler equation
 \begin{equation}
@@ -87,7 +103,9 @@ so the general solution of \eqref{eq:12.4.6} is
 \begin{equation}
   \label{eq:12.4.7}R_{n}=c_{1}r^{n}+c_{2}r^{-n},
 \end{equation}
-by Theorem~\ref{thmtype:7.4.3}. Consistent with our previous assumption on $R_{0}$, we now require $R_{n}$ to be bounded as $r\to0+$. This implies that $c_{2}=0$, and we choose $c_{1}=\rho^{-n}$. Then $R_{n}(r)=r^{n}/\rho^{n}$, so
+by Theorem~\ref{thmtype:7.4.3}. Consistent with our previous assumption on $R_{0}$, we now require
+$R_{n}$ to be bounded as $r\to0+$. This implies that $c_{2}=0$, and we choose $c_{1}=\rho^{-n}$.
+Then $R_{n}(r)=r^{n}/\rho^{n}$, so
 \[
   v_{n}(r,\theta)=R_{n}(r)\Theta_{n}(\theta)=\frac{r^{n}}{\rho^{n}}(\alpha_{n}\cos n\theta+\sin n\theta).
 \]
@@ -95,7 +113,8 @@ Now $v_{n}$ satisfies \eqref{eq:12.4.2} with
 \[
   f(\theta)=\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta.
 \]
-More generally, if $\alpha_{0}$, $\alpha_{1}$,\dots, $\alpha_{m}$ and $\beta_{1}$, $\beta_{2}$, \dots, $\beta_{m}$ are arbitrary constants then
+More generally, if $\alpha_{0}$, $\alpha_{1}$,\dots, $\alpha_{m}$ and $\beta_{1}$, $\beta_{2}$,
+\dots, $\beta_{m}$ are arbitrary constants then
 \[
   u_{m}(r,\theta)=\alpha_{0}+\sum_{n=1}^{m}\frac{r^{n}}{\rho^{n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta)
 \]
@@ -107,7 +126,8 @@ This motivates the next definition.
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:12.4.1} \rm The bounded formal solution of the boundary value problem \eqref{eq:12.4.2} is
+  \label{thmtype:12.4.1} \rm The bounded formal solution of the boundary value problem
+  \eqref{eq:12.4.2} is
   \begin{equation}
     \label{eq:12.4.8}u(r,\theta)=\alpha_{0}+\sum_{n=1}^{\infty}\frac{r^{n}}{\rho^{n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta),
   \end{equation}
@@ -125,14 +145,21 @@ This motivates the next definition.
   \]
 \end{definition}
 
-Since $\sum_{n=0}^{\infty}n^{k}(r/\rho)^{n}$ converges for every $k$ if $0<r<\rho$, Theorem~\ref{thmtype:12.1.2} can be used to show that if $0<r<\rho$ then \eqref{eq:12.4.8} can be differentiated term by term any number of times with respect to both $r$ and $\theta$. Since the terms in \eqref{eq:12.4.8} satisfy Laplace's equation if $r>0$, \eqref{eq:12.4.8} satisfies Laplace's equation if $0<r<\rho$. Therefore, since $u(\rho,\theta)=F(\theta)$, $u$ is an actual solution of \eqref{eq:12.4.2} if and only if
+Since $\sum_{n=0}^{\infty}n^{k}(r/\rho)^{n}$ converges for every $k$ if $0<r<\rho$,
+Theorem~\ref{thmtype:12.1.2} can be used to show that if $0<r<\rho$ then \eqref{eq:12.4.8} can be
+differentiated term by term any number of times with respect to both $r$ and $\theta$. Since the
+terms in \eqref{eq:12.4.8} satisfy Laplace's equation if $r>0$, \eqref{eq:12.4.8} satisfies
+Laplace's equation if $0<r<\rho$. Therefore, since $u(\rho,\theta)=F(\theta)$, $u$ is an actual
+solution of \eqref{eq:12.4.2} if and only if
 \[
   F(\theta)=f(\theta),\quad-\pi\le\theta<\pi.
 \]
-From Theorem~\ref{thmtype:11.2.4}, this is true if $f$ is continuous and piecewise smooth on $[-\pi,\pi]$ and $f(-\pi)=f(\pi)$.
+From Theorem~\ref{thmtype:11.2.4}, this is true if $f$ is continuous and piecewise smooth on
+$[-\pi,\pi]$ and $f(-\pi)=f(\pi)$.
 
 \begin{example}
-  \label{example:12.4.1} \rm Find the bounded formal solution of \eqref{eq:12.4.2} with $f(\theta)=\theta(\pi^{2}-\theta^{2})$.
+  \label{example:12.4.1} \rm Find the bounded formal solution of \eqref{eq:12.4.2} with
+  $f(\theta)=\theta(\pi^{2}-\theta^{2})$.
 \end{example}
 
 \solution From Example~\ref{example:11.2.6},
@@ -164,7 +191,10 @@ so
   \label{figure:12.4.2}
 \end{figure}
 
-\solution We use separation of variables exactly as before, except that now we choose the constants in \eqref{eq:12.4.5} and \eqref{eq:12.4.7} so that $R_{n}(\rho_{0})=0$ for $n=0$, $1$, $2$,\dots. In view of the nonhomogeneous Dirichlet condition on the boundary $r=\rho$, it's also convenient to require that $R_{n}(\rho)=1$ for $n=0$, $1$, $2$,\dots. We leave it to you to verify that
+\solution We use separation of variables exactly as before, except that now we choose the constants
+in \eqref{eq:12.4.5} and \eqref{eq:12.4.7} so that $R_{n}(\rho_{0})=0$ for $n=0$, $1$, $2$,\dots. In
+view of the nonhomogeneous Dirichlet condition on the boundary $r=\rho$, it's also convenient to
+require that $R_{n}(\rho)=1$ for $n=0$, $1$, $2$,\dots. We leave it to you to verify that
 \[
   R_{0}(r)=\frac{\ln r/\rho_{0}}{\ln\rho/\rho_{0}}\mbox{\quad and \quad}R_{n}=\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}},\quad n=1,2,3,\dots\,
 \]
@@ -178,7 +208,8 @@ and
 \]
 where $\alpha_{n}$ and $\beta_{n}$ are arbitrary constants.
 
-If $\alpha_{0}$, $\alpha_{1}$,\dots, $\alpha_{m}$ and $\beta_{1}$, $\beta_{2}$, \dots, $\beta_{m}$ are arbitrary constants then
+If $\alpha_{0}$, $\alpha_{1}$,\dots, $\alpha_{m}$ and $\beta_{1}$, $\beta_{2}$, \dots, $\beta_{m}$
+are arbitrary constants then
 \[
   u_{m}(r,\theta)=\alpha_{0}\frac{\ln r/\rho_{0}}{\ln\rho/\rho_{0}}+ \sum_{n=1}^{m}\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta)
 \]
@@ -225,7 +256,10 @@ and
 \begin{equation}
   \label{eq:12.4.12}\Theta''+\lambda\Theta=0,\quad\Theta(0)=0,\quad\Theta(\gamma)=0.
 \end{equation}
-From Theorem~\ref{thmtype:11.1.2}, the eigenvalues of \eqref{eq:12.4.12} are $\lambda_{n}=n^{2}\pi^{2}/\gamma^{2}$, with associated eigenfunction $\Theta_{n}=\sin n\pi\theta/\gamma$, $n=1$, $2$, $3$,\dots. Substituting $\lambda=n^{2}\pi^{2}/\gamma^{2}$ into \eqref{eq:12.4.11} yields the Euler equation
+From Theorem~\ref{thmtype:11.1.2}, the eigenvalues of \eqref{eq:12.4.12} are
+$\lambda_{n}=n^{2}\pi^{2}/\gamma^{2}$, with associated eigenfunction
+$\Theta_{n}=\sin n\pi\theta/\gamma$, $n=1$, $2$, $3$,\dots. Substituting
+$\lambda=n^{2}\pi^{2}/\gamma^{2}$ into \eqref{eq:12.4.11} yields the Euler equation
 \[
   r^{2}R''+rR_{n}'-\frac{n^{2}\pi^{2}}{\gamma^{2}}R=0.
 \]
@@ -237,7 +271,9 @@ so
 \[
   R_{n}=c_{1}r^{n\pi/\gamma}+c_{2}r^{-n\pi/\gamma},
 \]
-by Theorem~\ref{thmtype:7.4.3}. To obtain a solution that remains bounded as $r\to0+$ we let $c_{2}=0$. Because of the Dirichlet condition at $r=\rho$, it's convenient to have $r(\rho)=1$; therefore we take $c_{1}=\rho^{-n\pi/\gamma}$, so
+by Theorem~\ref{thmtype:7.4.3}. To obtain a solution that remains bounded as $r\to0+$ we let
+$c_{2}=0$. Because of the Dirichlet condition at $r=\rho$, it's convenient to have $r(\rho)=1$;
+therefore we take $c_{1}=\rho^{-n\pi/\gamma}$, so
 \[
   R_{n}(r)=\frac{r^{n\pi/\gamma}}{\rho^{n\pi/\gamma}}.
 \]
@@ -338,5 +374,6 @@ is the Fourier sine expansion of $f$ on $[0,\gamma]$; that is,
       u_{r}(\rho,\theta)=f(\theta),\quad-\pi\le\theta<\pi
     \end{array}
   \]
-  has no bounded formal solution unless $\int_{-\pi}^{\pi}f(\theta)\,d\theta=0$. In this case it has infinitely many solutions. Find those solutions.
+  has no bounded formal solution unless $\int_{-\pi}^{\pi}f(\theta)\,d\theta=0$. In this case it has
+  infinitely many solutions. Find those solutions.
 \end{exerciselist}

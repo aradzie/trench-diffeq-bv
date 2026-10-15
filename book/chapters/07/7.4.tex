@@ -1,18 +1,30 @@
 \section{Regular Singular Points: Euler Equations}
 
 \noindent
-\bigbox{This section sets the stage for Sections~1.5, 1.6, and 1.7. If you're not interested in those sections, but wish to learn about Euler equations, omit the introductory paragraphs and start reading at Definition~\ref{thmtype:7.4.2}.}
+\bigbox{This section sets the stage for Sections~1.5, 1.6, and 1.7. If you're not interested in
+those sections, but wish to learn about Euler equations, omit the introductory paragraphs and start
+reading at Definition~\ref{thmtype:7.4.2}.}
 
 \noindent
 In the next three sections we'll continue to study equations of the form
 \begin{equation}
   \label{eq:7.4.1}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0
 \end{equation}
-where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials, but the emphasis will be different from that of Sections~7.2 and 7.3, where we obtained solutions of \eqref{eq:7.4.1} near an ordinary point $x_{0}$ in the form of power series in $x-x_{0}$. If $x_{0}$ is a singular point of \eqref{eq:7.4.1} (that is, if $P(x_{0})=0$), the solutions can't in general be represented by power series in $x-x_{0}$. Nevertheless, it's often necessary in physical applications to study the behavior of solutions of \eqref{eq:7.4.1} near a singular point. Although this can be difficult in the absence of some sort of assumption on the nature of the singular point, equations that satisfy the requirements of the next definition can be solved by series methods discussed in the next three sections. Fortunately, many equations arising in applications satisfy these requirements.
+where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials, but the emphasis will be different from that of
+Sections~7.2 and 7.3, where we obtained solutions of \eqref{eq:7.4.1} near an ordinary point $x_{0}$
+in the form of power series in $x-x_{0}$. If $x_{0}$ is a singular point of \eqref{eq:7.4.1} (that
+is, if $P(x_{0})=0$), the solutions can't in general be represented by power series in $x-x_{0}$.
+Nevertheless, it's often necessary in physical applications to study the behavior of solutions of
+\eqref{eq:7.4.1} near a singular point. Although this can be difficult in the absence of some sort
+of assumption on the nature of the singular point, equations that satisfy the requirements of the
+next definition can be solved by series methods discussed in the next three sections. Fortunately,
+many equations arising in applications satisfy these requirements.
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:7.4.1}\rm Let $P_{0}$, $P_{1}$, and $P_{2}$ be polynomials with no common factor and suppose $P_{0}(x_{0})=0$. Then $x_{0}$ is a {\color{blue}\it regular singular point\/} of the equation
+  \label{thmtype:7.4.1}\rm Let $P_{0}$, $P_{1}$, and $P_{2}$ be polynomials with no common factor
+  and suppose $P_{0}(x_{0})=0$. Then $x_{0}$ is a {\color{blue}\it regular singular point\/} of the
+  equation
   \begin{equation}
     \label{eq:7.4.2}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0
   \end{equation}
@@ -20,7 +32,8 @@ where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials, but the emphasis will be di
   \begin{equation}
     \label{eq:7.4.3}(x-x_{0})^{2}A(x)y''+(x-x_{0})B(x)y'+C(x)y=0
   \end{equation}
-  where $A$, $B$, and $C$ are polynomials and $A(x_{0})\ne0$; otherwise, $x_{0}$ is an {\color{blue}\it irregular\/} singular point of \eqref{eq:7.4.2}.
+  where $A$, $B$, and $C$ are polynomials and $A(x_{0})\ne0$; otherwise, $x_{0}$ is an
+  {\color{blue}\it irregular\/} singular point of \eqref{eq:7.4.2}.
 \end{definition}
 
 \begin{example}
@@ -28,7 +41,9 @@ where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials, but the emphasis will be di
   \begin{equation}
     \label{eq:7.4.4}x^{2}y''+xy'+(x^{2}-\nu^{2})y=0,
   \end{equation}
-  has the singular point $x_{0}=0$. Since this equation is of the form \eqref{eq:7.4.3} with $x_{0}=0$, $A(x)=1$, $B(x)=1$, and $C(x)=x^{2}-\nu^{2}$, it follows that $x_{0}=0$ is a regular singular point of \eqref{eq:7.4.4}.
+  has the singular point $x_{0}=0$. Since this equation is of the form \eqref{eq:7.4.3} with
+  $x_{0}=0$, $A(x)=1$, $B(x)=1$, and $C(x)=x^{2}-\nu^{2}$, it follows that $x_{0}=0$ is a regular
+  singular point of \eqref{eq:7.4.4}.
 \end{example}
 
 \begin{example}
@@ -40,7 +55,10 @@ where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials, but the emphasis will be di
   \[
     (x-1)^{2}(x+1)y''+2x(x-1)y'-\alpha(\alpha+1)(x-1)y=0,
   \]
-  which is of the form \eqref{eq:7.4.3} with $x_{0}=1$, $A(x)=x+1$, $B(x)=2x$, and $C(x)=-\alpha(\alpha+1)(x-1)$. Therefore $x_{0}=1$ is a regular singular point of \eqref{eq:7.4.5}. We leave it to you to show that $x_{0}=-1$ is also a regular singular point of \eqref{eq:7.4.5}.
+  which is of the form \eqref{eq:7.4.3} with $x_{0}=1$, $A(x)=x+1$, $B(x)=2x$, and
+  $C(x)=-\alpha(\alpha+1)(x-1)$. Therefore $x_{0}=1$ is a regular singular point of
+  \eqref{eq:7.4.5}. We leave it to you to show that $x_{0}=-1$ is also a regular singular point of
+  \eqref{eq:7.4.5}.
 \end{example}
 \newpage
 
@@ -52,16 +70,23 @@ where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials, but the emphasis will be di
   has an irregular singular point at $x_{0}=0$. (Verify.)
 \end{example}
 
-For convenience we restrict our attention to the case where $x_{0}=0$ is a regular singular point of \eqref{eq:7.4.2}. This isn't really a restriction, since if $x_{0}\ne0$ is a regular singular point of \eqref{eq:7.4.2} then introducing the new independent variable $t=x-x_{0}$ and the new unknown $Y(t)=y(t+x_{0})$ leads to a differential equation with polynomial coefficients that has a regular singular point at $t_{0}=0$. This is illustrated in Exercise~\ref{exer:7.4.22} for Legendre's equation, and in Exercise~\ref{exer:7.4.23} for the general case.
+For convenience we restrict our attention to the case where $x_{0}=0$ is a regular singular point of
+\eqref{eq:7.4.2}. This isn't really a restriction, since if $x_{0}\ne0$ is a regular singular point
+of \eqref{eq:7.4.2} then introducing the new independent variable $t=x-x_{0}$ and the new unknown
+$Y(t)=y(t+x_{0})$ leads to a differential equation with polynomial coefficients that has a regular
+singular point at $t_{0}=0$. This is illustrated in Exercise~\ref{exer:7.4.22} for Legendre's
+equation, and in Exercise~\ref{exer:7.4.23} for the general case.
 
 \boxit{Euler Equations}
 
 \noindent
-The simplest kind of equation with a regular singular point at $x_{0}=0$ is the Euler equation, defined as follows.
+The simplest kind of equation with a regular singular point at $x_{0}=0$ is the Euler equation,
+defined as follows.
 
 \begin{definition}
   \color{blue}
-  \label{thmtype:7.4.2} \rm An \href{https://mathshistory.st-andrews.ac.uk/Biographies/Euler/}{\color{blue}
+  \label{thmtype:7.4.2} \rm An
+  \href{https://mathshistory.st-andrews.ac.uk/Biographies/Euler/}{\color{blue}
   \it Euler equation\/} is an equation that can be written in the form
   \begin{equation}
     \label{eq:7.4.6}ax^{2}y''+bxy'+cy=0,
@@ -69,11 +94,15 @@ The simplest kind of equation with a regular singular point at $x_{0}=0$ is the 
   where $a$, $b$, and $c$ are real constants and $a\ne0$.
 \end{definition}
 
-Theorem~\ref{thmtype:5.1.1} implies that \eqref{eq:7.4.6} has solutions defined on $(0,\infty)$ and $(-\infty,0)$, since \eqref{eq:7.4.6} can be rewritten as
+Theorem~\ref{thmtype:5.1.1} implies that \eqref{eq:7.4.6} has solutions defined on $(0,\infty)$ and
+$(-\infty,0)$, since \eqref{eq:7.4.6} can be rewritten as
 \[
   ay''+\frac{b}{x}y'+\frac{c}{x^{2}}y=0.
 \]
-For convenience we'll restrict our attention to the interval $(0,\infty)$. (Exercise~\ref{exer:7.4.19} deals with solutions of \eqref{eq:7.4.6} on $(-\infty,0)$.) The key to finding solutions on $(0,\infty)$ is that if $x>0$ then $x^{r}$ is defined as a real-valued function on $(0,\infty)$ for all values of $r$, and substituting $y=x^{r}$ into \eqref{eq:7.4.6} produces
+For convenience we'll restrict our attention to the interval $(0,\infty)$.
+(Exercise~\ref{exer:7.4.19} deals with solutions of \eqref{eq:7.4.6} on $(-\infty,0)$.) The key to
+finding solutions on $(0,\infty)$ is that if $x>0$ then $x^{r}$ is defined as a real-valued function
+on $(0,\infty)$ for all values of $r$, and substituting $y=x^{r}$ into \eqref{eq:7.4.6} produces
 \begin{equation}
   \label{eq:7.4.7}
   \begin{array}{lcl}
@@ -85,7 +114,12 @@ The polynomial
 \[
   p(r)=ar(r-1)+br+c
 \]
-is called the {\color{blue}\it indicial polynomial\/} of \eqref{eq:7.4.6}, and $p(r)=0$ is its {\color{blue}\it indicial equation\/}. From \eqref{eq:7.4.7} we can see that $y=x^{r}$ is a solution of \eqref{eq:7.4.6} on $(0,\infty)$ if and only if $p(r)=0$. Therefore, if the indicial equation has distinct real roots $r_{1}$ and $r_{2}$ then $y_{1}=x^{r_{1}}$ and $y_{2}=x^{r_{2}}$ form a fundamental set of solutions of \eqref{eq:7.4.6} on $(0,\infty)$, since $y_{2}/y_{1}=x^{r_{2}-r_{1}}$ is nonconstant. In this case
+is called the {\color{blue}\it indicial polynomial\/} of \eqref{eq:7.4.6}, and $p(r)=0$ is its
+{\color{blue}\it indicial equation\/}. From \eqref{eq:7.4.7} we can see that $y=x^{r}$ is a solution
+of \eqref{eq:7.4.6} on $(0,\infty)$ if and only if $p(r)=0$. Therefore, if the indicial equation has
+distinct real roots $r_{1}$ and $r_{2}$ then $y_{1}=x^{r_{1}}$ and $y_{2}=x^{r_{2}}$ form a
+fundamental set of solutions of \eqref{eq:7.4.6} on $(0,\infty)$, since
+$y_{2}/y_{1}=x^{r_{2}-r_{1}}$ is nonconstant. In this case
 \[
   y=c_{1}x^{r_{1}}+c_{2}x^{r_{2}}
 \]
@@ -103,7 +137,8 @@ is the general solution of \eqref{eq:7.4.6} on $(0,\infty)$.
 \[
   p(r)=r(r-1)-r-8=(r-4)(r+2).
 \]
-Therefore $y_{1}=x^{4}$ and $y_{2}=x^{-2}$ are solutions of \eqref{eq:7.4.8} on $(0,\infty)$, and its general solution on $(0,\infty)$ is
+Therefore $y_{1}=x^{4}$ and $y_{2}=x^{-2}$ are solutions of \eqref{eq:7.4.8} on $(0,\infty)$, and
+its general solution on $(0,\infty)$ is
 \[
   y=c_{1}x^{4}+\frac{c_{2}}{x^{2}}.
 \]
@@ -129,7 +164,10 @@ If the indicial equation has a repeated root $r_{1}$, then $y_{1}=x^{r_{1}}$ is 
 \begin{equation}
   \label{eq:7.4.10}ax^{2}y''+bxy'+cy=0,
 \end{equation}
-on $(0,\infty)$, but \eqref{eq:7.4.10} has no other solution of the form $y=x^{r}$. If the indicial equation has complex conjugate zeros then \eqref{eq:7.4.10} has no real--valued solutions of the form $y=x^{r}$. Fortunately we can use the results of Section~5.2 for constant coefficient equations to solve \eqref{eq:7.4.10} in any case.
+on $(0,\infty)$, but \eqref{eq:7.4.10} has no other solution of the form $y=x^{r}$. If the indicial
+equation has complex conjugate zeros then \eqref{eq:7.4.10} has no real--valued solutions of the
+form $y=x^{r}$. Fortunately we can use the results of Section~5.2 for constant coefficient equations
+to solve \eqref{eq:7.4.10} in any case.
 
 \begin{theorem}
   \color{blue}
@@ -149,11 +187,13 @@ on $(0,\infty)$, but \eqref{eq:7.4.10} has no other solution of the form $y=x^{r
   \end{eqnarray*}
 \end{theorem}
 
-\proof We first show that $y=y(x)$ satisfies \eqref{eq:7.4.12} on $(0,\infty)$ if and only if $Y(t)=y(e^{t})$ satisfies the constant coefficient equation
+\proof We first show that $y=y(x)$ satisfies \eqref{eq:7.4.12} on $(0,\infty)$ if and only if
+$Y(t)=y(e^{t})$ satisfies the constant coefficient equation
 \begin{equation}
   \label{eq:7.4.13}a\frac{d^{2}Y}{dt^{2}}+(b-a)\frac{dY}{dt}+cY=0
 \end{equation}
-on $(-\infty,\infty)$. To do this, it's convenient to write $x=e^{t}$, or, equivalently, $t=\ln x$; thus, $Y(t)=y(x)$, where $x=e^{t}$. From the chain rule,
+on $(-\infty,\infty)$. To do this, it's convenient to write $x=e^{t}$, or, equivalently, $t=\ln x$;
+thus, $Y(t)=y(x)$, where $x=e^{t}$. From the chain rule,
 \[
   \frac{dY}{dt}=\frac{dy}{dx}\frac{dx}{dt}
 \]
@@ -175,13 +215,16 @@ From this and \eqref{eq:7.4.14},
 \[
   x^{2}\frac{d^{2}y}{dx^{2}}=\frac{d^{2}Y}{dt^{2}}-\frac{dY}{dt}.
 \]
-Substituting this and \eqref{eq:7.4.14} into \eqref{eq:7.4.12} yields \eqref{eq:7.4.13}. Since \eqref{eq:7.4.11} is the characteristic equation of \eqref{eq:7.4.13}, Theorem~5.2.1 implies that the general solution of \eqref{eq:7.4.13} on $(-\infty,\infty)$ is
+Substituting this and \eqref{eq:7.4.14} into \eqref{eq:7.4.12} yields \eqref{eq:7.4.13}. Since
+\eqref{eq:7.4.11} is the characteristic equation of \eqref{eq:7.4.13}, Theorem~5.2.1 implies that
+the general solution of \eqref{eq:7.4.13} on $(-\infty,\infty)$ is
 \begin{eqnarray*}
   Y(t) & = & c_{1}e^{r_{1}t}+c_{2}e^{r_{2}t}\mbox{ if $r_{1}$ and $r_{2}$ are distinct real numbers; } \\
   Y(t) & = & e^{r_{1}t}(c_{1}+c_{2}t)\mbox{ if $r_{1}=r_{2}$; }                                        \\
   Y(t) & = & e^{\lambda t}\left(c_{1}\cos\omega t+c_{2}\sin\omega t\right)\mbox{ if $r_{1},r_{2}=\lambda\pm i\omega$ with $\omega\ne0$}.
 \end{eqnarray*}
-Since $Y(t)=y(e^{t})$, substituting $t=\ln x$ in the last three equations shows that the general solution of \eqref{eq:7.4.12} on $(0,\infty)$ has the form stated in the theorem.
+Since $Y(t)=y(e^{t})$, substituting $t=\ln x$ in the last three equations shows that the general
+solution of \eqref{eq:7.4.12} on $(0,\infty)$ has the form stated in the theorem.
 
 \begin{example}
   \label{example:7.4.6} \rm Find the general solution of
@@ -212,7 +255,8 @@ Therefore the general solution of \eqref{eq:7.4.15} on $(0,\infty)$ is
 \[
   p(r)=r(r-1)+3r+2=(r+1)^{2}+1.
 \]
-The roots of the indicial equation are $r=-1\pm i$ and the general solution of \eqref{eq:7.4.16} on $(0,\infty)$ is
+The roots of the indicial equation are $r=-1\pm i$ and the general solution of \eqref{eq:7.4.16} on
+$(0,\infty)$ is
 \[
   y=\frac{1}{x}\left[c_{1}\cos(\ln x)+c_{2}\sin(\ln x)\right].
 \]
@@ -268,7 +312,8 @@ The roots of the indicial equation are $r=-1\pm i$ and the general solution of \
   \item\label{exer:7.4.19}
   \begin{alist}
     \item % (a)
-    Adapt the proof of Theorem~\ref{thmtype:7.4.3} to show that $y=y(x)$ satisfies the Euler equation
+    Adapt the proof of Theorem~\ref{thmtype:7.4.3} to show that $y=y(x)$ satisfies the Euler
+    equation
     \setcounter{equation}{0}
     \begin{equation}
       \label{eq:7.4.{exer:7.4.19}A}ax^{2}y''+bxy'+cy=0
@@ -280,7 +325,8 @@ The roots of the indicial equation are $r=-1\pm i$ and the general solution of \
     on $(-\infty,\infty)$.
 
     \item % (b)
-    Use \part{a} to show that the general solution of \eqref{eq:7.4.{exer:7.4.19}A} on $(-\infty,0)$ is
+    Use \part{a} to show that the general solution of \eqref{eq:7.4.{exer:7.4.19}A} on $(-\infty,0)$
+    is
     \begin{eqnarray*}
       y & = & c_{1}|x|^{r_{1}}+c_{2}|x|^{r_{2}}\mbox{ if $r_{1}$ and $r_{2}$ are distinct real numbers; } \\
       y & = & |x|^{r_{1}}(c_{1}+c_{2}\ln|x|)\mbox{ if $r_{1}=r_{2}$; }                                    \\
@@ -302,33 +348,39 @@ The roots of the indicial equation are $r=-1\pm i$ and the general solution of \
   \[
     P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0
   \]
-  is said to be {\color{blue}\it oscillatory} on an interval $(a,b)$ if it has infinitely many zeros on $(a,b)$. Otherwise $y$ is said to be {\color{blue}\it nonoscillatory\/} on $(a,b)$. Show that the equation
+  is said to be {\color{blue}\it oscillatory} on an interval $(a,b)$ if it has infinitely many zeros
+  on $(a,b)$. Otherwise $y$ is said to be {\color{blue}\it nonoscillatory\/} on $(a,b)$. Show that
+  the equation
   \[
     x^{2}y''+ky=0\quad(k=\;\mbox{constant})
   \]
   has oscillatory solutions on $(0,\infty)$ if and only if $k>1/4$.
 
-  \item\label{exer:7.4.22} In Example~\ref{example:7.4.2} we saw that $x_{0}=1$ and $x_{0}=-1$ are regular singular points of Legendre's equation
+  \item\label{exer:7.4.22} In Example~\ref{example:7.4.2} we saw that $x_{0}=1$ and $x_{0}=-1$ are
+        regular singular points of Legendre's equation
   \[
     (1-x^{2})y''-2xy'+\alpha(\alpha+1)y=0. \eqno{\rm(A)}
   \]
   \begin{alist}
     \item % (a)
-    Introduce the new variables $t=x-1$ and $Y(t)=y(t+1)$, and show that $y$ is a solution of (A) if and only if $Y$ is a solution of
+    Introduce the new variables $t=x-1$ and $Y(t)=y(t+1)$, and show that $y$ is a solution of (A) if
+    and only if $Y$ is a solution of
     \[
       t(2+t)\frac{d^{2}Y}{dt^{2}}+2(1+t)\frac{dY}{dt}-\alpha(\alpha+1)Y=0,
     \]
     which has a regular singular point at $t_{0}=0$.
 
     \item % (b)
-    Introduce the new variables $t=x+1$ and $Y(t)=y(t-1)$, and show that $y$ is a solution of (A) if and only if $Y$ is a solution of
+    Introduce the new variables $t=x+1$ and $Y(t)=y(t-1)$, and show that $y$ is a solution of (A) if
+    and only if $Y$ is a solution of
     \[
       t(2-t)\frac{d^{2}Y}{dt^{2}}+2(1-t)\frac{dY}{dt}+\alpha(\alpha+1)Y=0,
     \]
     which has a regular singular point at $t_{0}=0$.
   \end{alist}
 
-  \item\label{exer:7.4.23} Let $P_{0}$, $P_{1}$, and $P_{2}$ be polynomials with no common factor, and suppose $x_{0}\ne0$ is a singular point of
+  \item\label{exer:7.4.23} Let $P_{0}$, $P_{1}$, and $P_{2}$ be polynomials with no common factor,
+        and suppose $x_{0}\ne0$ is a singular point of
   \[
     P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=0. \eqno{\rm(A)}
   \]
@@ -345,6 +397,7 @@ The roots of the indicial equation are $r=-1\pm i$ and the general solution of \
     \]
 
     \item % (b)
-    Show that $R_{0}$, $R_{1}$, and $R_{2}$ are polynomials in $t$ with no common factors, and $R_{0}(0)=0$; thus, $t_{0}=0$ is a singular point of (B).
+    Show that $R_{0}$, $R_{1}$, and $R_{2}$ are polynomials in $t$ with no common factors, and
+    $R_{0}(0)=0$; thus, $t_{0}=0$ is a singular point of (B).
   \end{alist}
 \end{exerciselist}

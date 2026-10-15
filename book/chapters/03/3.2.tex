@@ -1,26 +1,49 @@
 \section{The Improved Euler Method and Related Methods}
 
 \noindent
-In Section~3.1 we saw that the global truncation error of Euler's method is $O(h)$, which would seem to imply that we can achieve arbitrarily accurate results with Euler's method by simply choosing the step size sufficiently small. However, this isn't a good idea, for two reasons. First, after a certain point decreasing the step size will increase roundoff errors to the point where the accuracy will deteriorate rather than improve. The second and more important reason is that in most applications of numerical methods to an initial value problem
+In Section~3.1 we saw that the global truncation error of Euler's method is $O(h)$, which would seem
+to imply that we can achieve arbitrarily accurate results with Euler's method by simply choosing the
+step size sufficiently small. However, this isn't a good idea, for two reasons. First, after a
+certain point decreasing the step size will increase roundoff errors to the point where the accuracy
+will deteriorate rather than improve. The second and more important reason is that in most
+applications of numerical methods to an initial value problem
 \begin{equation}
   \label{eq:3.2.1}y'=f(x,y),\quad y(x_{0})=y_{0},
 \end{equation}
-the expensive part of the computation is the evaluation of $f$. Therefore we want methods that give good results for a given number of such evaluations. This is what motivates us to look for numerical methods better than Euler's.
+the expensive part of the computation is the evaluation of $f$. Therefore we want methods that give
+good results for a given number of such evaluations. This is what motivates us to look for numerical
+methods better than Euler's.
 
-To clarify this point, suppose we want to approximate the value of $e$ by applying Euler's method to the initial value problem
+To clarify this point, suppose we want to approximate the value of $e$ by applying Euler's method to
+the initial value problem
 \[
   y'=y,\quad y(0)=1,\quad\mbox{(with solution $y=e^{x}$)}
 \]
-on $[0,1]$, with $h=1/12$, $1/24$, and $1/48$, respectively. Since each step in Euler's method requires one evaluation of $f$, the number of evaluations of $f$ in each of these attempts is $n=12$, $24$, and $48$, respectively. In each case we accept $y_{n}$ as an approximation to $e$. The second column of Table~\ref{table:3.2.1} shows the results. The first column of the table indicates the number of evaluations of $f$ required to obtain the approximation, and the last column contains the value of $e$ rounded to ten significant figures.
+on $[0,1]$, with $h=1/12$, $1/24$, and $1/48$, respectively. Since each step in Euler's method
+requires one evaluation of $f$, the number of evaluations of $f$ in each of these attempts is
+$n=12$, $24$, and $48$, respectively. In each case we accept $y_{n}$ as an approximation to $e$. The
+second column of Table~\ref{table:3.2.1} shows the results. The first column of the table indicates
+the number of evaluations of $f$ required to obtain the approximation, and the last column contains
+the value of $e$ rounded to ten significant figures.
 
 In this section we'll study the
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Euler/}{\color{blue}
-\it improved Euler method\/}, which requires two evaluations of $f$ at each step. We've used this method with $h=1/6$, $1/12$, and $1/24$. The required number of evaluations of $f$ were 12, 24, and $48$, as in the three applications of Euler's method; however, you can see from the third column of Table~\ref{table:3.2.1} that the approximation to $e$ obtained by the improved Euler method with only 12 evaluations of $f$ is better than the approximation obtained by Euler's method with 48 evaluations.
+\it improved Euler method\/}, which requires two evaluations of $f$ at each step. We've used this
+method with $h=1/6$, $1/12$, and $1/24$. The required number of evaluations of $f$ were 12, 24, and
+$48$, as in the three applications of Euler's method; however, you can see from the third column of
+Table~\ref{table:3.2.1} that the approximation to $e$ obtained by the improved Euler method with
+only 12 evaluations of $f$ is better than the approximation obtained by Euler's method with 48
+evaluations.
 
 In Section~3.1 we'll study the
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Runge/}{\color{blue}
 \it Runge}-\href{https://mathshistory.st-andrews.ac.uk/Biographies/Kutta/}{\color{blue}
-\it Kutta method\/}, which requires four evaluations of $f$ at each step. We've used this method with $h=1/3$, $1/6$, and $1/12$. The required number of evaluations of $f$ were again 12, 24, and $48$, as in the three applications of Euler's method and the improved Euler method; however, you can see from the fourth column of Table~\ref{table:3.2.1} that the approximation to $e$ obtained by the Runge-Kutta method with only 12 evaluations of $f$ is better than the approximation obtained by the improved Euler method with 48 evaluations.
+\it Kutta method\/}, which requires four evaluations of $f$ at each step. We've used this method
+with $h=1/3$, $1/6$, and $1/12$. The required number of evaluations of $f$ were again 12, 24, and
+$48$, as in the three applications of Euler's method and the improved Euler method; however, you can
+see from the fourth column of Table~\ref{table:3.2.1} that the approximation to $e$ obtained by the
+Runge-Kutta method with only 12 evaluations of $f$ is better than the approximation obtained by the
+improved Euler method with 48 evaluations.
 
 \begin{newtable}
   \label{table:3.2.1} Approximations to $e$ obtained by three numerical methods.
@@ -41,11 +64,14 @@ In Section~3.1 we'll study the
 
 \noindent
 The \href{https://mathshistory.st-andrews.ac.uk/Biographies/Euler/}{\color{blue}
-\it improved Euler method\/} for solving the initial value problem (\ref{eq:3.2.1}) is based on approximating the integral curve of (\ref{eq:3.2.1}) at $(x_{i},y(x_{i}))$ by the line through $(x_{i},y(x_{i}))$ with slope
+\it improved Euler method\/} for solving the initial value problem (\ref{eq:3.2.1}) is based on
+approximating the integral curve of (\ref{eq:3.2.1}) at $(x_{i},y(x_{i}))$ by the line through
+$(x_{i},y(x_{i}))$ with slope
 \[
   m_{i}=\frac{f(x_{i},y(x_{i}))+f(x_{i+1},y(x_{i+1}))}{2};
 \]
-that is, $m_{i}$ is the average of the slopes of the tangents to the integral curve at the endpoints of $[x_{i},x_{i+1}]$. The equation of the approximating line is therefore
+that is, $m_{i}$ is the average of the slopes of the tangents to the integral curve at the endpoints
+of $[x_{i},x_{i+1}]$. The equation of the approximating line is therefore
 \begin{equation}
   \label{eq:3.2.2}y=y(x_{i})+\frac{f(x_{i},y(x_{i}))+f(x_{i+1},y(x_{i+1}))}{2}(x-x_{i}).
 \end{equation}
@@ -53,11 +79,15 @@ Setting $x=x_{i+1}=x_{i}+h$ in (\ref{eq:3.2.2}) yields
 \begin{equation}
   \label{eq:3.2.3}y_{i+1}=y(x_{i})+\frac{h}{2}\left(f(x_{i},y(x_{i}))+f(x_{i+1},y(x_{i+1}))\right)
 \end{equation}
-as an approximation to $y(x_{i+1})$. As in our derivation of Euler's method, we replace $y(x_{i})$ (unknown if $i>0$) by its approximate value $y_{i}$; then (\ref{eq:3.2.3}) becomes
+as an approximation to $y(x_{i+1})$. As in our derivation of Euler's method, we replace $y(x_{i})$
+(unknown if $i>0$) by its approximate value $y_{i}$; then (\ref{eq:3.2.3}) becomes
 \[
   y_{i+1}=y_{i}+\frac{h}{2}\left(f(x_{i},y_{i})+f(x_{i+1},y(x_{i+1})\right).
 \]
-However, this still won't work, because we don't know $y(x_{i+1})$, which appears on the right. We overcome this by replacing $y(x_{i+1})$ by $y_{i}+hf(x_{i},y_{i})$, the value that the Euler method would assign to $y_{i+1}$. Thus, the improved Euler method starts with the known value $y(x_{0})=y_{0}$ and computes $y_{1}$, $y_{2}$, \dots, $y_{n}$ successively with the formula
+However, this still won't work, because we don't know $y(x_{i+1})$, which appears on the right. We
+overcome this by replacing $y(x_{i+1})$ by $y_{i}+hf(x_{i},y_{i})$, the value that the Euler method
+would assign to $y_{i+1}$. Thus, the improved Euler method starts with the known value
+$y(x_{0})=y_{0}$ and computes $y_{1}$, $y_{2}$, \dots, $y_{n}$ successively with the formula
 \begin{equation}
   \label{eq:3.2.4}y_{i+1}=y_{i}+\frac{h}{2}\left(f(x_{i},y_{i})+f(x_{i+1},y_{i}+hf(x_{i},y_{i}))\right).
 \end{equation}
@@ -68,14 +98,24 @@ The computation indicated here can be conveniently organized as follows: given $
   y_{i+1} & = & y_{i}+\frac{h}{2}(k_{1i}+k_{2i}).
 \end{eqnarray*}
 
-The improved Euler method requires two evaluations of $f(x,y)$ per step, while Euler's method requires only one. However, we'll see at the end of this section that if $f$ satisfies appropriate assumptions, the local truncation error with the improved Euler method is $O(h^{3})$, rather than $O(h^{2})$ as with Euler's method. Therefore the global truncation error with the improved Euler method is $O(h^{2})$; however, we won't prove this.
+The improved Euler method requires two evaluations of $f(x,y)$ per step, while Euler's method
+requires only one. However, we'll see at the end of this section that if $f$ satisfies appropriate
+assumptions, the local truncation error with the improved Euler method is $O(h^{3})$, rather than
+$O(h^{2})$ as with Euler's method. Therefore the global truncation error with the improved Euler
+method is $O(h^{2})$; however, we won't prove this.
 
-We note that the magnitude of the local truncation error in the improved Euler method and other methods discussed in this section is determined by the third derivative $y'''$ of the solution of the initial value problem. Therefore the local truncation error will be larger where $|y'''|$ is large, or smaller where $|y'''|$ is small.
+We note that the magnitude of the local truncation error in the improved Euler method and other
+methods discussed in this section is determined by the third derivative $y'''$ of the solution of
+the initial value problem. Therefore the local truncation error will be larger where $|y'''|$ is
+large, or smaller where $|y'''|$ is small.
 
-The next example, which deals with the initial value problem considered in Example~\ref{example:3.1.1}, illustrates the computational procedure indicated in the improved Euler method.
+The next example, which deals with the initial value problem considered in
+Example~\ref{example:3.1.1}, illustrates the computational procedure indicated in the improved Euler
+method.
 
 \begin{example}
-  \label{example:3.2.1} \rm Use the improved Euler method with $h=0.1$ to find approximate values of the solution of the initial value problem
+  \label{example:3.2.1} \rm Use the improved Euler method with $h=0.1$ to find approximate values of
+  the solution of the initial value problem
   \begin{equation}
     \label{eq:3.2.5}y'+2y=x^{3}e^{-2x},\quad y(0)=1
   \end{equation}
@@ -112,19 +152,25 @@ The improved Euler method yields
 \end{eqnarray*}
 
 \begin{example}
-  \label{example:3.2.2} \rm Table~\ref{table:3.2.2} shows results of using the improved Euler method with step sizes $h=0.1$ and $h=0.05$ to find approximate values of the solution of the initial value problem
+  \label{example:3.2.2} \rm Table~\ref{table:3.2.2} shows results of using the improved Euler method
+  with step sizes $h=0.1$ and $h=0.05$ to find approximate values of the solution of the initial
+  value problem
   \[
     y'+2y=x^{3}e^{-2x},\quad y(0)=1
   \]
-  at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. For comparison, it also shows the corresponding approximate values obtained with Euler's method in \ref{example:3.1.2}, and the values of the exact solution
+  at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. For comparison, it also shows the corresponding
+  approximate values obtained with Euler's method in \ref{example:3.1.2}, and the values of the
+  exact solution
   \[
     y=\frac{e^{-2x}}{4}(x^{4}+4).
   \]
-  The results obtained by the improved Euler method with $h=0.1$ are better than those obtained by Euler's method with $h=0.05$.
+  The results obtained by the improved Euler method with $h=0.1$ are better than those obtained by
+  Euler's method with $h=0.05$.
 \end{example}
 
 \begin{newtable}
-  \label{table:3.2.2} Numerical solution of $y'+2y=x^{3}e^{-2x}$, $y(0)=1$, by Euler's method and the improved Euler method.
+  \label{table:3.2.2} Numerical solution of $y'+2y=x^{3}e^{-2x}$, $y(0)=1$, by Euler's method and
+  the improved Euler method.
   \begin{center}
     \begin{tabular}{|c|r|r|r|r|r|}
       \hline
@@ -149,7 +195,8 @@ The improved Euler method yields
 \end{newtable}
 
 \begin{example}
-  \label{example:3.2.3} \rm Table~\ref{table:3.2.3} shows analogous results for the nonlinear initial value problem
+  \label{example:3.2.3} \rm Table~\ref{table:3.2.3} shows analogous results for the nonlinear
+  initial value problem
   \[
     y'=-2y^{2}+xy+x^{2},\ y(0)=1.
   \]
@@ -157,7 +204,8 @@ The improved Euler method yields
 \end{example}
 
 \begin{newtable}
-  \label{table:3.2.3} Numerical solution of $y'=-2y^{2}+xy+x^{2}$, $y(0)=1$, by Euler's method and the improved Euler method.
+  \label{table:3.2.3} Numerical solution of $y'=-2y^{2}+xy+x^{2}$, $y(0)=1$, by Euler's method and
+  the improved Euler method.
   \begin{center}
     \begin{tabular}{|c|r|r|r|r|r|}
       \hline
@@ -182,24 +230,30 @@ The improved Euler method yields
 \end{newtable}
 
 \begin{example}
-  \label{example:3.2.4} \rm Use step sizes $h=0.2$, $h=0.1$, and $h=0.05$ to find approximate values of the solution of
+  \label{example:3.2.4} \rm Use step sizes $h=0.2$, $h=0.1$, and $h=0.05$ to find approximate values
+  of the solution of
   \begin{equation}
     \label{eq:3.2.6}y'-2xy=1,\quad y(0)=3
   \end{equation}
-  at $x=0$, $0.2$, $0.4$, $0.6$, \dots, $2.0$ by {\bf (a)} the improved Euler method; {\bf (b)} the improved Euler semilinear method. (We used Euler's method and the Euler semilinear method on this problem in~\ref{example:3.1.4}.)
+  at $x=0$, $0.2$, $0.4$, $0.6$, \dots, $2.0$ by {\bf (a)} the improved Euler method; {\bf (b)} the
+  improved Euler semilinear method. (We used Euler's method and the Euler semilinear method on this
+  problem in~\ref{example:3.1.4}.)
 \end{example}
 
 \solutionpart{a} Rewriting (\ref{eq:3.2.6}) as
 \[
   y'=1+2xy,\quad y(0)=3
 \]
-and applying the improved Euler method with $f(x,y)=1+2xy$ yields the results shown in Table~\ref{table:3.2.4}.
+and applying the improved Euler method with $f(x,y)=1+2xy$ yields the results shown in
+Table~\ref{table:3.2.4}.
 
-\solutionpart{b} Since $y_{1}=e^{x^{2}}$ is a solution of the complementary equation $y'-2xy=0$, we can apply the improved Euler semilinear method to (\ref{eq:3.2.6}), with
+\solutionpart{b} Since $y_{1}=e^{x^{2}}$ is a solution of the complementary equation $y'-2xy=0$, we
+can apply the improved Euler semilinear method to (\ref{eq:3.2.6}), with
 \[
   y=ue^{x^{2}}\mbox{\quad and \quad}u'=e^{-x^{2}},\quad u(0)=3.
 \]
-The results listed in Table~\ref{table:3.2.5} are clearly better than those obtained by the improved Euler method.
+The results listed in Table~\ref{table:3.2.5} are clearly better than those obtained by the improved
+Euler method.
 
 \begin{newtable}
   \label{table:3.2.4} Numerical solution of $y'-2xy=1$, $y(0)=3$, by the improved Euler method.
@@ -225,7 +279,8 @@ The results listed in Table~\ref{table:3.2.5} are clearly better than those obta
 \end{newtable}
 
 \begin{newtable}
-  \label{table:3.2.5} Numerical solution of $y'-2xy=1$, $y(0)=3$, by the improved Euler semilinear method.
+  \label{table:3.2.5} Numerical solution of $y'-2xy=1$, $y(0)=3$, by the improved Euler semilinear
+  method.
   \begin{center}
     \begin{tabular}{|c|r|r|r|r|}
       \hline
@@ -251,13 +306,18 @@ The results listed in Table~\ref{table:3.2.5} are clearly better than those obta
 \boxit{A Family of Methods with $O(h^{3})$ Local Truncation Error}
 
 \noindent
-We'll now derive a class of methods with $O(h^{3})$ local truncation error for solving (\ref{eq:3.2.1}). For simplicity, we assume that $f$, $f_{x}$, $f_{y}$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are continuous and bounded for all $(x,y)$. This implies that if $y$ is the solution of (\ref{eq:3.2.1} then $y''$ and $y'''$ are bounded (Exercise~\ref{exer:3.2.31}).
+We'll now derive a class of methods with $O(h^{3})$ local truncation error for solving
+(\ref{eq:3.2.1}). For simplicity, we assume that $f$, $f_{x}$, $f_{y}$, $f_{xx}$, $f_{yy}$, and
+$f_{xy}$ are continuous and bounded for all $(x,y)$. This implies that if $y$ is the solution of
+(\ref{eq:3.2.1} then $y''$ and $y'''$ are bounded (Exercise~\ref{exer:3.2.31}).
 
-We begin by approximating the integral curve of (\ref{eq:3.2.1}) at $(x_{i},y(x_{i}))$ by the line through $(x_{i},y(x_{i}))$ with slope
+We begin by approximating the integral curve of (\ref{eq:3.2.1}) at $(x_{i},y(x_{i}))$ by the line
+through $(x_{i},y(x_{i}))$ with slope
 \[
   m_{i}=\sigma y'(x_{i})+\rho y'(x_{i}+\theta h),
 \]
-where $\sigma$, $\rho$, and $\theta$ are constants that we'll soon specify; however, we insist at the outset that $0<\theta\le1$, so that
+where $\sigma$, $\rho$, and $\theta$ are constants that we'll soon specify; however, we insist at
+the outset that $0<\theta\le1$, so that
 \[
   x_{i}<x_{i}+\theta h\le x_{i+1}.
 \]
@@ -303,7 +363,8 @@ where $\overline{x}_{i}$ is in $(x_{i},x_{i}+\theta h)$. Since $y'''$ is bounded
 \[
   y'(x_{i}+\theta h)=y'(x_{i})+\theta hy''(x_{i})+O(h^{2}).
 \]
-Substituting this into (\ref{eq:3.2.9}) and noting that the sum of two $O(h^{2})$ terms is again $O(h^{2})$ shows that $E_{i}=O(h^{3})$ if
+Substituting this into (\ref{eq:3.2.9}) and noting that the sum of two $O(h^{2})$ terms is again
+$O(h^{2})$ shows that $E_{i}=O(h^{3})$ if
 \[
   (\sigma+\rho)y'(x_{i})+\rho\theta hy''(x_{i})= y'(x_{i})+\frac{h}{2}y''(x_{i}),
 \]
@@ -316,11 +377,14 @@ Since $y'=f(x,y)$, we can now conclude from (\ref{eq:3.2.8}) that
 \begin{equation}
   \label{eq:3.2.11}y(x_{i+1})=y(x_{i})+h\left[\sigma f(x_{i},y_{i})+\rho f(x_{i}+\theta h,y(x_{i}+\theta h))\right]+O(h^{3})
 \end{equation}
-if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}). However, this formula would not be useful even if we knew $y(x_{i})$ exactly (as we would for $i=0$), since we still wouldn't know $y(x_{i}+\theta h)$ exactly. To overcome this difficulty, we again use Taylor's theorem to write
+if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}). However, this formula would not be
+useful even if we knew $y(x_{i})$ exactly (as we would for $i=0$), since we still wouldn't know
+$y(x_{i}+\theta h)$ exactly. To overcome this difficulty, we again use Taylor's theorem to write
 \[
   y(x_{i}+\theta h)=y(x_{i})+\theta hy'(x_{i})+\frac{h^{2}}{2}y''(\tilde{x}_{i}),
 \]
-where $\tilde{x}_{i}$ is in $(x_{i},x_{i}+\theta h)$. Since $y'(x_{i})=f(x_{i},y(x_{i}))$ and $y''$ is bounded, this implies that
+where $\tilde{x}_{i}$ is in $(x_{i},x_{i}+\theta h)$. Since $y'(x_{i})=f(x_{i},y(x_{i}))$ and $y''$
+is bounded, this implies that
 \begin{equation}
   \label{eq:3.2.12}|y(x_{i}+\theta h)-y(x_{i})-\theta hf(x_{i},y(x_{i}))|\le Kh^{2}
 \end{equation}
@@ -345,7 +409,8 @@ This implies that the formula
 \[
   y_{i+1}=y_{i}+h\left[\sigma f(x_{i},y_{i})+\rho f(x_{i}+\theta h,y_{i}+\theta hf(x_{i},y_{i}))\right]
 \]
-has $O(h^{3})$ local truncation error if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}). Substituting $\sigma=1-\rho$ and $\theta=1/2\rho$ here yields
+has $O(h^{3})$ local truncation error if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}).
+Substituting $\sigma=1-\rho$ and $\theta=1/2\rho$ here yields
 \begin{equation}
   \label{eq:3.2.13}y_{i+1}=y_{i}+h\left[(1-\rho)f(x_{i},y_{i})+\rho f\left(x_{i}+\frac{h}{2\rho}, y_{i}+\frac{h}{2\rho}f(x_{i},y_{i})\right)\right].
 \end{equation}
@@ -357,7 +422,8 @@ The computation indicated here can be conveniently organized as follows: given $
   y_{i+1} & = & y_{i}+h[(1-\rho)k_{1i}+\rho k_{2i}].
 \end{eqnarray*}
 
-Consistent with our requirement that $0<\theta<1$, we require that $\rho\ge1/2$. Letting $\rho=1/2$ in (\ref{eq:3.2.13}) yields the improved Euler method (\ref{eq:3.2.4}). Letting $\rho=3/4$ yields
+Consistent with our requirement that $0<\theta<1$, we require that $\rho\ge1/2$. Letting $\rho=1/2$
+in (\ref{eq:3.2.13}) yields the improved Euler method (\ref{eq:3.2.4}). Letting $\rho=3/4$ yields
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Heun/}{\color{blue}
 \it Heun's method},
 \[
@@ -380,11 +446,15 @@ which can be organized as
   y_{i+1} & = & y_{i}+hk_{2i}.
 \end{eqnarray*}
 
-Examples involving the midpoint method and Heun's method are given in Exercises~\ref{exer:3.2.23}-\ref{exer:3.2.30}.
+Examples involving the midpoint method and Heun's method are given in
+Exercises~\ref{exer:3.2.23}-\ref{exer:3.2.30}.
 
 \exercises Most of the following numerical exercises involve initial value problems considered in the exercises in Section~3.1. You'll find it instructive to compare the results that you obtain here with the corresponding results that you obtained in Section~3.1.
 
-\emph{In Exercises~\ref{exer:3.2.1}--\ref{exer:3.2.5} use the improved Euler method to find approximate values of the solution of the given initial value problem at the points $x_{i}=x_{0}+ih$, where $x_{0}$ is the point where the initial condition is imposed and $i=1$, $2$, $3$.}
+\emph{In Exercises~\ref{exer:3.2.1}--\ref{exer:3.2.5} use the improved Euler method to find
+approximate values of the solution of the given initial value problem at the points
+$x_{i}=x_{0}+ih$, where $x_{0}$ is the point where the initial condition is imposed and $i=1$, $2$,
+$3$.}
 
 \begin{exerciselist}
   \item\label{exer:3.2.1} \Cex $y'=2x^{2}+3y^{2}-2,\quad y(2)=1;\quad h=0.05$ \,
@@ -397,31 +467,40 @@ Examples involving the midpoint method and Heun's method are given in Exercises~
 
   \item\label{exer:3.2.5} \Cex $y'+x^{2}y=\sin xy,\quad y(1)=\pi;\quad h=0.2$
 
-  \item\label{exer:3.2.6} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the solution of the initial value problem
+  \item\label{exer:3.2.6} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
+        $h=0.025$ to find approximate values of the solution of the initial value problem
   \[
     y'+3y=7e^{4x},\quad y(0)=2
   \]
-  at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate values with the values of the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained by the method of Section~2.1. Present your results in a table like Table~\ref{table:3.2.2}.
+  at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate values with the values of
+  the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained by the method of Section~2.1. Present
+  your results in a table like Table~\ref{table:3.2.2}.
 
-  \item\label{exer:3.2.7} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the solution of the initial value problem
+  \item\label{exer:3.2.7} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
+        $h=0.025$ to find approximate values of the solution of the initial value problem
   \[
     y'+\frac{2}{x}y=\frac{3}{x^{3}}+1,\quad y(1)=1
   \]
-  at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Compare these approximate values with the values of the exact solution
+  at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Compare these approximate values with the values of
+  the exact solution
   \[
     y=\frac{1}{3x^{2}}(9\ln x+x^{3}+2)
   \]
-  which can be obtained by the method of Section~2.1. Present your results in a table like Table~\ref{table:3.2.2}.
+  which can be obtained by the method of Section~2.1. Present your results in a table like
+  Table~\ref{table:3.2.2}.
 
-  \item\label{exer:3.2.8} \Cex Use the improved Euler method with step sizes $h=0.05$, $h=0.025$, and $h=0.0125$ to find approximate values of the solution of the initial value problem
+  \item\label{exer:3.2.8} \Cex Use the improved Euler method with step sizes $h=0.05$, $h=0.025$,
+        and $h=0.0125$ to find approximate values of the solution of the initial value problem
   \[
     y'=\frac{y^{2}+xy-x^{2}}{x^{2}},\quad y(1)=2,
   \]
-  at $x=1.0$, $1.05$, $1.10$, $1.15$, \dots, $1.5$. Compare these approximate values with the values of the exact solution
+  at $x=1.0$, $1.05$, $1.10$, $1.15$, \dots, $1.5$. Compare these approximate values with the values
+  of the exact solution
   \[
     y=\frac{x(1+x^{2}/3)}{1-x^{2}/3}
   \]
-  obtained in Example~\ref{example:2.4.3}. Present your results in a table like Table~\ref{table:3.2.2}.
+  obtained in Example~\ref{example:2.4.3}. Present your results in a table like
+  Table~\ref{table:3.2.2}.
 
   \item\label{exer:3.2.9} \Cex In Example~\ref{example:3.2.2} it was shown that
   \[
@@ -431,7 +510,10 @@ Examples involving the midpoint method and Heun's method are given in Exercises~
   \[
     y'=\frac{2x+1}{5y^{4}+1},\quad y(2)=1. \eqno{\rm(A)}
   \]
-  Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the solution of (A) at $x=2.0$, $2.1$, $2.2$, $2.3$, \dots, $3.0$. Present your results in tabular form. To check the error in these approximate values, construct another table of values of the residual
+  Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate
+  values of the solution of (A) at $x=2.0$, $2.1$, $2.2$, $2.3$, \dots, $3.0$. Present your results
+  in tabular form. To check the error in these approximate values, construct another table of values
+  of the residual
   \[
     R(x,y)=y^{5}+y-x^{2}-x+4
   \]
@@ -445,76 +527,111 @@ Examples involving the midpoint method and Heun's method are given in Exercises~
   \[
     y'=-\frac{4x^{3}y^{3}+2xy^{5}+2y}{3x^{4}y^{2}+5x^{2}y^{4}+2x},\quad y(1)=1. \eqno{\rm(A)}
   \]
-  Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the solution of (A) at $x=1.0$, $1.14$, $1.2$, $1.3$, \dots, $2.0$. Present your results in tabular form. To check the error in these approximate values, construct another table of values of the residual
+  Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate
+  values of the solution of (A) at $x=1.0$, $1.14$, $1.2$, $1.3$, \dots, $2.0$. Present your results
+  in tabular form. To check the error in these approximate values, construct another table of values
+  of the residual
   \[
     R(x,y)=x^{4}y^{3}+x^{2}y^{5}+2xy-4
   \]
   for each value of $(x,y)$ appearing in the first table.
 
-  \item\label{exer:3.2.11} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the solution of the initial value problem
+  \item\label{exer:3.2.11} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
+        $h=0.025$ to find approximate values of the solution of the initial value problem
   \[
     (3y^{2}+4y)y'+2x+\cos x=0,\quad y(0)=1\mbox{\
 (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.13})}
   \]
   at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
 
-  \item\label{exer:3.2.12} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the solution of the initial value problem
+  \item\label{exer:3.2.12} \Cex Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
+        $h=0.025$ to find approximate values of the solution of the initial value problem
   \[
     y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0,\quad y(1)=0 \mbox{\  (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.14})}
   \]
   at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$.
 
-  \item\label{exer:3.2.13} \Cex Use the improved Euler method and the improved Euler semilinear method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the solution of the initial value problem
+  \item\label{exer:3.2.13} \Cex Use the improved Euler method and the improved Euler semilinear
+        method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate values of the
+        solution of the initial value problem
   \[
     y'+3y=e^{-3x}(1-2x),\quad y(0)=2,
   \]
-  at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate values with the values of the exact solution $y=e^{-3x}(2+x-x^{2})$, which can be obtained by the method of Section~2.1. Do you notice anything special about the results? Explain.
+  at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate values with the values of
+  the exact solution $y=e^{-3x}(2+x-x^{2})$, which can be obtained by the method of Section~2.1. Do
+  you notice anything special about the results? Explain.
 
-  \exercisetext{The linear initial value problems in Exercises~\ref{exer:3.2.14}--\ref{exer:3.2.19} can't be solved exactly in terms of known elementary functions. In each exercise use the improved Euler and improved Euler semilinear methods with the indicated step sizes to find approximate values of the solution of the given initial value problem at 11 equally spaced points (including the endpoints) in the interval.}
+  \exercisetext{The linear initial value problems in Exercises~\ref{exer:3.2.14}--\ref{exer:3.2.19}
+  can't be solved exactly in terms of known elementary functions. In each exercise use the improved
+  Euler and improved Euler semilinear methods with the indicated step sizes to find approximate
+  values of the solution of the given initial value problem at 11 equally spaced points (including
+  the endpoints) in the interval.}
 
-  \item\label{exer:3.2.14} \Cex $y'-2y=\dst\frac{1}{1+x^{2}},\quad y(2)=2$; \quad $h=0.1,0.05,0.025$ on $[2,3]$
+  \item\label{exer:3.2.14} \Cex $y'-2y=\dst\frac{1}{1+x^{2}},\quad y(2)=2$; \quad $h=0.1,0.05,0.025$
+        on $[2,3]$
 
-  \item\label{exer:3.2.15} \Cex $y'+2xy=x^{2},\quad y(0)=3$;\quad $h=0.2,0.1,0.05$ on $[0,2]$ \quad (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38})
+  \item\label{exer:3.2.15} \Cex $y'+2xy=x^{2},\quad y(0)=3$;\quad $h=0.2,0.1,0.05$ on $[0,2]$ \quad
+        (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38})
 
-  \item\label{exer:3.2.16} \Cex $\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^{2}},\quad y(1)=2}$, \quad $h=0.2,0.1,0.05$ on $[1,3]$ \quad (Exercise~2.1.\hspace*{-3pt}\ref{exer:2.1.39})
+  \item\label{exer:3.2.16} \Cex $\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^{2}},\quad y(1)=2}$, \quad
+        $h=0.2,0.1,0.05$ on $[1,3]$ \quad (Exercise~2.1.\hspace*{-3pt}\ref{exer:2.1.39})
 
-  \item\label{exer:3.2.17} \Cex $\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0}$;\quad $h=0.05,0.025,0.0125$ on $[1,1.5]$\; (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40}),
+  \item\label{exer:3.2.17} \Cex $\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0}$;\quad
+        $h=0.05,0.025,0.0125$ on $[1,1.5]$\; (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40}),
 
-  \item\label{exer:3.2.18} \Cex $\dst{y'+\frac{2x}{1+x^{2}}y=\frac{e^{x}}{(1+x^{2})^{2}},\quad y(0)=1}$;\; $h=0.2,0.1,0.05$ on $[0,2]$\quad (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.41})
+  \item\label{exer:3.2.18} \Cex
+        $\dst{y'+\frac{2x}{1+x^{2}}y=\frac{e^{x}}{(1+x^{2})^{2}},\quad y(0)=1}$;\; $h=0.2,0.1,0.05$
+        on $[0,2]$\quad (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.41})
 
-  \item\label{exer:3.2.19} \Cex $xy'+(x+1)y=e^{x^{2}},\quad y(1)=2$;\; $h=0.05,0.025,0.0125$ on $[1,1.5]$\; (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.42})
+  \item\label{exer:3.2.19} \Cex $xy'+(x+1)y=e^{x^{2}},\quad y(1)=2$;\; $h=0.05,0.025,0.0125$ on
+        $[1,1.5]$\; (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.42})
 
-  \exercisetext{In Exercises~\ref{exer:3.2.20}--\ref{exer:3.2.22} use the improved Euler method and the improved Euler semilinear method with the indicated step sizes to find approximate values of the solution of the given initial value problem at 11 equally spaced points (including the endpoints) in the interval.}
+  \exercisetext{In Exercises~\ref{exer:3.2.20}--\ref{exer:3.2.22} use the improved Euler method and
+  the improved Euler semilinear method with the indicated step sizes to find approximate values of
+  the solution of the given initial value problem at 11 equally spaced points (including the
+  endpoints) in the interval.}
 
   \item\label{exer:3.2.20} \Cex $y'+3y=xy^{2}(y+1),\quad y(0)=1$;\quad $h=0.1,0.05,0.025$ on $[0,1]$
 
-  \item\label{exer:3.2.21} \Cex $\dst{y'-4y=\frac{x}{y^{2}(y+1)},\quad y(0)=1}$;\quad $h=0.1,0.05,0.025$ on $[0,1]$
+  \item\label{exer:3.2.21} \Cex $\dst{y'-4y=\frac{x}{y^{2}(y+1)},\quad y(0)=1}$;\quad
+        $h=0.1,0.05,0.025$ on $[0,1]$
 
-  \item\label{exer:3.2.22} \Cex $\dst{y'+2y=\frac{x^{2}}{1+y^{2}},\quad y(2)=1}$;\quad $h=0.1,0.05,0.025$ on $[2,3]$
+  \item\label{exer:3.2.22} \Cex $\dst{y'+2y=\frac{x^{2}}{1+y^{2}},\quad y(2)=1}$;\quad
+        $h=0.1,0.05,0.025$ on $[2,3]$
 
-  \item\label{exer:3.2.23} \Cex Do Exercise~\ref{exer:3.2.7} with ``improved Euler method'' replaced by ``midpoint method.''
+  \item\label{exer:3.2.23} \Cex Do Exercise~\ref{exer:3.2.7} with ``improved Euler method'' replaced
+        by ``midpoint method.''
 
-  \item\label{exer:3.2.24} \Cex Do Exercise~\ref{exer:3.2.7} with ``improved Euler method'' replaced by ``Heun's method.''
+  \item\label{exer:3.2.24} \Cex Do Exercise~\ref{exer:3.2.7} with ``improved Euler method'' replaced
+        by ``Heun's method.''
 
-  \item\label{exer:3.2.25} \Cex Do Exercise~\ref{exer:3.2.8} with ``improved Euler method'' replaced by ``midpoint method.''
+  \item\label{exer:3.2.25} \Cex Do Exercise~\ref{exer:3.2.8} with ``improved Euler method'' replaced
+        by ``midpoint method.''
 
-  \item\label{exer:3.2.26} \Cex Do Exercise~\ref{exer:3.2.8} with ``improved Euler method'' replaced by ``Heun's method.''
+  \item\label{exer:3.2.26} \Cex Do Exercise~\ref{exer:3.2.8} with ``improved Euler method'' replaced
+        by ``Heun's method.''
 
-  \item\label{exer:3.2.27} \Cex Do Exercise~\ref{exer:3.2.11} with ``improved Euler method'' replaced by ``midpoint method.''
+  \item\label{exer:3.2.27} \Cex Do Exercise~\ref{exer:3.2.11} with ``improved Euler method''
+        replaced by ``midpoint method.''
 
-  \item\label{exer:3.2.28} \Cex Do Exercise~\ref{exer:3.2.11} with ``improved Euler method'' replaced by ``Heun's method.''
+  \item\label{exer:3.2.28} \Cex Do Exercise~\ref{exer:3.2.11} with ``improved Euler method''
+        replaced by ``Heun's method.''
 
-  \item\label{exer:3.2.29} \Cex Do Exercise~\ref{exer:3.2.12} with ``improved Euler method'' replaced by ``midpoint method.''
+  \item\label{exer:3.2.29} \Cex Do Exercise~\ref{exer:3.2.12} with ``improved Euler method''
+        replaced by ``midpoint method.''
 
-  \item\label{exer:3.2.30} \Cex Do Exercise~\ref{exer:3.2.12} with ``improved Euler method'' replaced by ``Heun's method.''
+  \item\label{exer:3.2.30} \Cex Do Exercise~\ref{exer:3.2.12} with ``improved Euler method''
+        replaced by ``Heun's method.''
 
-  \item\label{exer:3.2.31} Show that if $f$, $f_{x}$, $f_{y}$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are continuous and bounded for all $(x,y)$ and $y$ is the solution of the initial value problem
+  \item\label{exer:3.2.31} Show that if $f$, $f_{x}$, $f_{y}$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
+        continuous and bounded for all $(x,y)$ and $y$ is the solution of the initial value problem
   \[
     y'=f(x,y),\quad y(x_{0})=y_{0},
   \]
   then $y''$ and $y'''$ are bounded.
 
-  \item\label{exer:3.2.32} {\sc Numerical Quadrature} (see Exercise~3.1.~\hspace*{-3pt}\ref{exer:3.1.23}).
+  \item\label{exer:3.2.32} {\sc Numerical Quadrature} (see
+        Exercise~3.1.~\hspace*{-3pt}\ref{exer:3.1.23}).
   \begin{alist}
     \item % (a)
     Derive the quadrature formula
@@ -527,12 +644,16 @@ Examples involving the midpoint method and Heun's method are given in Exercises~
     \]
 
     \item % (b)
-    The quadrature formula (A) is called {\color{blue}\it the trapezoid rule}. Draw a figure that justifies this terminology.
+    The quadrature formula (A) is called {\color{blue}\it the trapezoid rule}. Draw a figure that
+    justifies this terminology.
 
     \item % (c)
-    \Lex For several choices of $a$, $b$, $A$, and $B$, apply (A) to $f(x)=A+Bx$, with $n=10,20,40,80,160,320$. Compare your results with the exact answers and explain what you find.
+    \Lex For several choices of $a$, $b$, $A$, and $B$, apply (A) to $f(x)=A+Bx$, with
+    $n=10,20,40,80,160,320$. Compare your results with the exact answers and explain what you find.
 
     \item % (d)
-    \Lex For several choices of $a$, $b$, $A$, $B$, and $C$, apply (A) to $f(x)=A+Bx+Cx^{2}$, with $n=10$, $20$, $40$, $80$, $160$, $320$. Compare your results with the exact answers and explain what you find.
+    \Lex For several choices of $a$, $b$, $A$, $B$, and $C$, apply (A) to $f(x)=A+Bx+Cx^{2}$, with
+    $n=10$, $20$, $40$, $80$, $160$, $320$. Compare your results with the exact answers and explain
+    what you find.
   \end{alist}
 \end{exerciselist}

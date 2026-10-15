@@ -18,7 +18,11 @@
   \large Andrew G. Cowles Distinguished Professor Emeritus\\ Department of Mathematics\\ Trinity University \\ San Antonio, Texas, USA\\ \href{mailto:{wtrench @trinity.edu}}{wtrench@trinity.edu} \large
 
   \begin{quote}
-    This book has been judged to meet the evaluation criteria set by the Editorial Board of the American Institute of Mathematics in connection with the Institute's \href{https://textbooks.aimath.org/}{Open Textbook Initiative}. It may be copied, modified, redistributed, translated, and built upon subject to the Creative Commons \href{https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en}{Attribution-NonCommercial-ShareAlike 3.0 Unported License}.
+    This book has been judged to meet the evaluation criteria set by the Editorial Board of the
+    American Institute of Mathematics in connection with the Institute's
+    \href{https://textbooks.aimath.org/}{Open Textbook Initiative}. It may be copied, modified,
+    redistributed, translated, and built upon subject to the Creative Commons
+    \href{https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en}{Attribution-NonCommercial-ShareAlike 3.0 Unported License}.
   \end{quote}
 
   \vspace{.2in}
@@ -39,7 +43,10 @@ Free Edition 1.01 (December 2013)
 \thispagestyle{empty}
 
 \noindent
-This book was published previously by Brooks/Cole Thomson Learning, 2001. This free edition is made available in the hope that it will be useful as a textbook or reference. Reproduction is permitted for any valid noncommercial educational, mathematical, or scientific purpose. However, charges for profit beyond reasonable printing costs are prohibited.
+This book was published previously by Brooks/Cole Thomson Learning, 2001. This free edition is made
+available in the hope that it will be useful as a textbook or reference. Reproduction is permitted
+for any valid noncommercial educational, mathematical, or scientific purpose. However, charges for
+profit beyond reasonable printing costs are prohibited.
 
 \vspace*{.51in}
 
@@ -61,38 +68,87 @@ This book was published previously by Brooks/Cole Thomson Learning, 2001. This f
 \chapter{Preface}
 
 \noindent
-{\color{blue}\it Elementary Differential Equations with Boundary Value Problems\/} is written for students in science, engineering, and mathematics who have completed calculus through partial differentiation. If your syllabus includes Chapter~10 (Linear Systems of Differential Equations), your students should have some preparation in linear algebra.
+{\color{blue}\it Elementary Differential Equations with Boundary Value Problems\/} is written for
+students in science, engineering, and mathematics who have completed calculus through partial
+differentiation. If your syllabus includes Chapter~10 (Linear Systems of Differential Equations),
+your students should have some preparation in linear algebra.
 
 In writing this book I have been guided by the these principles:
 
 \begin{itemize}
-  \item An elementary text should be written so the student can read it with comprehension without too much pain. I have tried to put myself in the student's place, and have chosen to err on the side of too much detail rather than not enough.
+  \item An elementary text should be written so the student can read it with comprehension without
+        too much pain. I have tried to put myself in the student's place, and have chosen to err on
+        the side of too much detail rather than not enough.
 
-  \item An elementary text can't be better than its exercises. This text includes 2041 numbered exercises, many with several parts. They range in difficulty from routine to very challenging.
+  \item An elementary text can't be better than its exercises. This text includes 2041 numbered
+        exercises, many with several parts. They range in difficulty from routine to very
+        challenging.
 
-  \item An elementary text should be written in an informal but mathematically accurate way, illustrated by appropriate graphics. I have tried to formulate mathematical concepts succinctly in language that students can understand. I have minimized the number of explicitly stated theorems and definitions, preferring to deal with concepts in a more conversational way, copiously illustrated by 299 completely worked out examples. Where appropriate, concepts and results are depicted in 188 figures.
+  \item An elementary text should be written in an informal but mathematically accurate way,
+        illustrated by appropriate graphics. I have tried to formulate mathematical concepts
+        succinctly in language that students can understand. I have minimized the number of
+        explicitly stated theorems and definitions, preferring to deal with concepts in a more
+        conversational way, copiously illustrated by 299 completely worked out examples. Where
+        appropriate, concepts and results are depicted in 188 figures.
 \end{itemize}
 
 %###
-Although I believe that the computer is an immensely valuable tool for learning, doing, and writing mathematics, the selection and treatment of topics in this text reflects my pedagogical orientation along traditional lines. However, I have incorporated what I believe to be the best use of modern technology, so you can select the level of technology that you want to include in your course. The text includes 414 exercises -- identified by the symbols \Cex and \CGex -- that call for graphics or computation and graphics. There are also 79 laboratory exercises -- identified by \Lex -- that require extensive use of technology. In addition, several sections include informal advice on the use of technology. If you prefer not to emphasize technology, simply ignore these exercises and the advice.
+Although I believe that the computer is an immensely valuable tool for learning, doing, and writing
+mathematics, the selection and treatment of topics in this text reflects my pedagogical orientation
+along traditional lines. However, I have incorporated what I believe to be the best use of modern
+technology, so you can select the level of technology that you want to include in your course. The
+text includes 414 exercises -- identified by the symbols \Cex and \CGex -- that call for graphics or
+computation and graphics. There are also 79 laboratory exercises -- identified by \Lex -- that
+require extensive use of technology. In addition, several sections include informal advice on the
+use of technology. If you prefer not to emphasize technology, simply ignore these exercises and the
+advice.
 
-There are two schools of thought on whether techniques and applications should be treated together or separately. I have chosen to separate them; thus, Chapter~2 deals with techniques for solving first order equations, and Chapter~4 deals with applications. Similarly, Chapter~5 deals with techniques for solving second order equations, and Chapter~6 deals with applications. However, the exercise sets of the sections dealing with techniques include some applied problems.
+There are two schools of thought on whether techniques and applications should be treated together
+or separately. I have chosen to separate them; thus, Chapter~2 deals with techniques for solving
+first order equations, and Chapter~4 deals with applications. Similarly, Chapter~5 deals with
+techniques for solving second order equations, and Chapter~6 deals with applications. However, the
+exercise sets of the sections dealing with techniques include some applied problems.
 
-Traditionally oriented elementary differential equations texts are occasionally criticized as being collections of unrelated methods for solving miscellaneous problems. To some extent this is true; after all, no single method applies to all situations. Nevertheless, I believe that one idea can go a long way toward unifying some of the techniques for solving diverse problems: variation of parameters. I use variation of parameters at the earliest opportunity in Section~2.1, to solve the nonhomogeneous linear equation, given a nontrivial solution of the complementary equation. You may find this annoying, since most of us learned that one should use integrating factors for this task, while perhaps mentioning the variation of parameters option in an exercise. However, there's little difference between the two approaches, since an integrating factor is nothing more than the reciprocal of a nontrivial solution of the complementary equation. The advantage of using variation of parameters here is that it introduces the concept in its simplest form and focuses the student's attention on the idea of seeking a solution $y$ of a differential equation by writing it as $y=uy_{1}$, where $y_{1}$ is a known solution of related equation and $u$ is a function to be determined. I use this idea in nonstandard ways, as follows:
+Traditionally oriented elementary differential equations texts are occasionally criticized as being
+collections of unrelated methods for solving miscellaneous problems. To some extent this is true;
+after all, no single method applies to all situations. Nevertheless, I believe that one idea can go
+a long way toward unifying some of the techniques for solving diverse problems: variation of
+parameters. I use variation of parameters at the earliest opportunity in Section~2.1, to solve the
+nonhomogeneous linear equation, given a nontrivial solution of the complementary equation. You may
+find this annoying, since most of us learned that one should use integrating factors for this task,
+while perhaps mentioning the variation of parameters option in an exercise. However, there's little
+difference between the two approaches, since an integrating factor is nothing more than the
+reciprocal of a nontrivial solution of the complementary equation. The advantage of using variation
+of parameters here is that it introduces the concept in its simplest form and focuses the student's
+attention on the idea of seeking a solution $y$ of a differential equation by writing it as
+$y=uy_{1}$, where $y_{1}$ is a known solution of related equation and $u$ is a function to be
+determined. I use this idea in nonstandard ways, as follows:
 
 \begin{itemize}
-  \item In Section~2.4 to solve nonlinear first order equations, such as Bernoulli equations and nonlinear homogeneous equations.
+  \item In Section~2.4 to solve nonlinear first order equations, such as Bernoulli equations and
+        nonlinear homogeneous equations.
 
   \item In Chapter~3 for numerical solution of semilinear first order equations.
 
-  \item In Section 5.2 to avoid the necessity of introducing complex exponentials in solving a second order constant coefficient homogeneous equation with characteristic polynomials that have complex zeros.
+  \item In Section 5.2 to avoid the necessity of introducing complex exponentials in solving a
+        second order constant coefficient homogeneous equation with characteristic polynomials that
+        have complex zeros.
 
-  \item In Sections~5.4, 5.5, and 9.3 for the method of undetermined coefficients. (If the method of annihilators is your preferred approach to this problem, compare the labor involved in solving, for example, $y''+y'+y=x^{4}e^{x}$ by the method of annihilators and the method used in Section~5.4.)
+  \item In Sections~5.4, 5.5, and 9.3 for the method of undetermined coefficients. (If the method of
+        annihilators is your preferred approach to this problem, compare the labor involved in
+        solving, for example, $y''+y'+y=x^{4}e^{x}$ by the method of annihilators and the method
+        used in Section~5.4.)
 \end{itemize}
 
-Introducing variation of parameters as early as possible (Section~2.1) prepares the student for the concept when it appears again in more complex forms in Section~5.6, where reduction of order is used not merely to find a second solution of the complementary equation, but also to find the general solution of the nonhomogeneous equation, and in Sections~5.7, 9.4, and 10.7, that treat the usual variation of parameters problem for second and higher order linear equations and for linear systems.
+Introducing variation of parameters as early as possible (Section~2.1) prepares the student for the
+concept when it appears again in more complex forms in Section~5.6, where reduction of order is used
+not merely to find a second solution of the complementary equation, but also to find the general
+solution of the nonhomogeneous equation, and in Sections~5.7, 9.4, and 10.7, that treat the usual
+variation of parameters problem for second and higher order linear equations and for linear systems.
 
-Chapter~11 develops the theory of Fourier series. Section~11.1 discusses the five main eigenvalue problems that arise in connection with the method of separation of variables for the heat and wave equations and for Laplace's equation over a rectangular domain:
+Chapter~11 develops the theory of Fourier series. Section~11.1 discusses the five main eigenvalue
+problems that arise in connection with the method of separation of variables for the heat and wave
+equations and for Laplace's equation over a rectangular domain:
 
 Problem 1: \hskip5em $y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0$
 \medskip
@@ -109,48 +165,91 @@ Problem 4: \hskip5em $y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0$
 Problem 5: \hskip5em $y''+\lambda y=0,\quad y(-L)=y(L), \quad y'(-L)=y'(L)$
 \medskip
 
-These problems are handled in a unified way for example, a single theorem shows that the eigenvalues of all five problems are nonnegative.
+These problems are handled in a unified way for example, a single theorem shows that the eigenvalues
+of all five problems are nonnegative.
 
-Section~11.2 presents the Fourier series expansion of functions defined on $[-L,L]$, interpreting it as an expansion in terms of the eigenfunctions of Problem~5.
+Section~11.2 presents the Fourier series expansion of functions defined on $[-L,L]$, interpreting it
+as an expansion in terms of the eigenfunctions of Problem~5.
 
-Section~11.3 presents the Fourier sine and cosine expansions of functions defined on $[0,L]$, interpreting them as expansions in terms of the eigenfunctions of Problems~1 and 2, respectively. In addition, Section~11.2 includes what I call the mixed Fourier sine and cosine expansions, in terms of the eigenfunctions of Problems~4 and 5, respectively. In all cases, the convergence properties of these series are deduced from the convergence properties of the Fourier series discussed in Section~11.1.
+Section~11.3 presents the Fourier sine and cosine expansions of functions defined on $[0,L]$,
+interpreting them as expansions in terms of the eigenfunctions of Problems~1 and 2, respectively. In
+addition, Section~11.2 includes what I call the mixed Fourier sine and cosine expansions, in terms
+of the eigenfunctions of Problems~4 and 5, respectively. In all cases, the convergence properties of
+these series are deduced from the convergence properties of the Fourier series discussed in
+Section~11.1.
 
-Chapter~12 consists of four sections devoted to the heat equation, the wave equation, and Laplace's equation in rectangular and polar coordinates. For all three, I consider homogeneous boundary conditions of the four types occurring in Problems~1-4. I present the method of separation of variables as a way of choosing the appropriate form for the series expansion of the solution of the given problem, stating---without belaboring the point---that the expansion may fall short of being an actual solution, and giving an indication of conditions under which the formal solution is an actual solution. In particular, I found it necessary to devote some detail to this question in connection with the wave equation in Section~12.2.
+Chapter~12 consists of four sections devoted to the heat equation, the wave equation, and Laplace's
+equation in rectangular and polar coordinates. For all three, I consider homogeneous boundary
+conditions of the four types occurring in Problems~1-4. I present the method of separation of
+variables as a way of choosing the appropriate form for the series expansion of the solution of the
+given problem, stating---without belaboring the point---that the expansion may fall short of being
+an actual solution, and giving an indication of conditions under which the formal solution is an
+actual solution. In particular, I found it necessary to devote some detail to this question in
+connection with the wave equation in Section~12.2.
 
-In Sections~12.1 (The Heat Equation) and 12.2 (The Wave Equation) I devote considerable effort to devising examples and numerous exercises where the functions defining the initial conditions satisfy the homogeneous boundary conditions. Similarly, in most of the examples and exercises Section~12.3 (Laplace's Equation), the functions defining the boundary conditions on a given side of the rectangular domain satisfy homogeneous boundary conditions at the endpoints of the same type (Dirichlet or Neumann) as the boundary conditions imposed on adjacent sides of the region. Therefore the formal solutions obtained in many of the examples and exercises are actual solutions.
+In Sections~12.1 (The Heat Equation) and 12.2 (The Wave Equation) I devote considerable effort to
+devising examples and numerous exercises where the functions defining the initial conditions satisfy
+the homogeneous boundary conditions. Similarly, in most of the examples and exercises Section~12.3
+(Laplace's Equation), the functions defining the boundary conditions on a given side of the
+rectangular domain satisfy homogeneous boundary conditions at the endpoints of the same type
+(Dirichlet or Neumann) as the boundary conditions imposed on adjacent sides of the region. Therefore
+the formal solutions obtained in many of the examples and exercises are actual solutions.
 
-Section~13.1 deals with two-point value problems for a second order ordinary differential equation. Conditions for existence and uniqueness of solutions are given, and the construction of Green's functions is included.
+Section~13.1 deals with two-point value problems for a second order ordinary differential equation.
+Conditions for existence and uniqueness of solutions are given, and the construction of Green's
+functions is included.
 
 Section~13.2 presents the elementary aspects of Sturm-Liouville theory.
 
 You may also find the following to be of interest:
 
 \begin{itemize}
-  \item Section~2.6 deals with integrating factors of the form $\mu=p(x)q(y)$, in addition to those of the form $\mu=p(x)$ and $\mu=q(y)$ discussed in most texts.
+  \item Section~2.6 deals with integrating factors of the form $\mu=p(x)q(y)$, in addition to those
+        of the form $\mu=p(x)$ and $\mu=q(y)$ discussed in most texts.
 
-  \item Section~4.4 makes phase plane analysis of nonlinear second order autonomous equations accessible to students who have not taken linear algebra, since eigenvalues and eigenvectors do not enter into the treatment. Phase plane analysis of constant coefficient linear systems is included in Sections~10.4-6.
+  \item Section~4.4 makes phase plane analysis of nonlinear second order autonomous equations
+        accessible to students who have not taken linear algebra, since eigenvalues and eigenvectors
+        do not enter into the treatment. Phase plane analysis of constant coefficient linear systems
+        is included in Sections~10.4-6.
 
-  \item Section~4.5 presents an extensive discussion of applications of differential equations to curves.
+  \item Section~4.5 presents an extensive discussion of applications of differential equations to
+        curves.
 
-  \item Section~6.4 studies motion under a central force, which may be useful to students interested in the mathematics of satellite orbits.
+  \item Section~6.4 studies motion under a central force, which may be useful to students interested
+        in the mathematics of satellite orbits.
 
-  \item Sections~7.5-7 present the method of Frobenius in more detail than in most texts. The approach is to systematize the computations in a way that avoids the necessity of substituting the unknown Frobenius series into each equation. This leads to efficiency in the computation of the coefficients of the Frobenius solution. It also clarifies the case where the roots of the indicial equation differ by an integer (Section~7.7).
+  \item Sections~7.5-7 present the method of Frobenius in more detail than in most texts. The
+        approach is to systematize the computations in a way that avoids the necessity of
+        substituting the unknown Frobenius series into each equation. This leads to efficiency in
+        the computation of the coefficients of the Frobenius solution. It also clarifies the case
+        where the roots of the indicial equation differ by an integer (Section~7.7).
 
   \item The free Student Solutions Manual contains solutions of most of the even-numbered exercises.
 
-  \item The free Instructor's Solutions Manual is available by email to \href{mailto:wtrench@trinity.edu}{wtrench@trinity.edu}, subject to verification of the requestor's faculty status.
+  \item The free Instructor's Solutions Manual is available by email to
+        \href{mailto:wtrench@trinity.edu}{wtrench@trinity.edu}, subject to verification of the
+        requestor's faculty status.
 \end{itemize}
 
 The following observations may be helpful as you choose your syllabus:
 
 \begin{itemize}
-  \item Section~2.3 is the only specific prerequisite for Chapter~3. To accommodate institutions that offer a separate course in numerical analysis, Chapter~3 is not a prerequisite for any other section in the text.
+  \item Section~2.3 is the only specific prerequisite for Chapter~3. To accommodate institutions
+        that offer a separate course in numerical analysis, Chapter~3 is not a prerequisite for any
+        other section in the text.
 
-  \item The sections in Chapter~4 are independent of each other, and are not prerequisites for any of the later chapters. This is also true of the sections in Chapter~6, except that Section~6.1 is a prerequisite for Section~6.2.
+  \item The sections in Chapter~4 are independent of each other, and are not prerequisites for any
+        of the later chapters. This is also true of the sections in Chapter~6, except that
+        Section~6.1 is a prerequisite for Section~6.2.
 
-  \item Chapters~7, 8, and 9 can be covered in any order after the topics selected from Chapter~5. For example, you can proceed directly from Chapter~5 to Chapter~9.
+  \item Chapters~7, 8, and 9 can be covered in any order after the topics selected from Chapter~5.
+        For example, you can proceed directly from Chapter~5 to Chapter~9.
 
-  \item The second order Euler equation is discussed in Section~7.4, where it sets the stage for the method of Frobenius. As noted at the beginning of Section~7.4, if you want to include Euler equations in your syllabus while omitting the method of Frobenius, you can skip the introductory paragraphs in Section~7.4 and begin with Definition~7.4.2. You can then cover Section~7.4 immediately after Section~5.2.
+  \item The second order Euler equation is discussed in Section~7.4, where it sets the stage for the
+        method of Frobenius. As noted at the beginning of Section~7.4, if you want to include Euler
+        equations in your syllabus while omitting the method of Frobenius, you can skip the
+        introductory paragraphs in Section~7.4 and begin with Definition~7.4.2. You can then cover
+        Section~7.4 immediately after Section~5.2.
 
     \enlargethispage{1in}
 

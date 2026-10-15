@@ -4,11 +4,15 @@
 \boxit{Laplace Transforms of Derivatives}
 
 \noindent
-In the rest of this chapter we'll use the Laplace transform to solve initial value problems for constant coefficient second order equations. To do this, we must know how the Laplace transform of $f'$ is related to the Laplace transform of $f$. The next theorem answers this question.
+In the rest of this chapter we'll use the Laplace transform to solve initial value problems for
+constant coefficient second order equations. To do this, we must know how the Laplace transform of
+$f'$ is related to the Laplace transform of $f$. The next theorem answers this question.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:8.3.1} Suppose $f$ is continuous on $[0,\infty)$ and of exponential order $s_{0}$, and $f'$ is piecewise continuous on $[0,\infty)$. Then $f$ and $f'$ have Laplace transforms for $s>s_{0}$, and
+  \label{thmtype:8.3.1} Suppose $f$ is continuous on $[0,\infty)$ and of exponential order $s_{0}$,
+  and $f'$ is piecewise continuous on $[0,\infty)$. Then $f$ and $f'$ have Laplace transforms for
+  $s>s_{0}$, and
   \begin{equation}
     \label{eq:8.3.1}{\cal L}(f')=s{\cal L}(f)-f(0).
   \end{equation}
@@ -16,7 +20,8 @@ In the rest of this chapter we'll use the Laplace transform to solve initial val
 
 \proof
 
-We know from Theorem~8.1.6 that ${\cal L}(f)$ is defined for $s>s_{0}$. We first consider the case where $f'$ is continuous on $[0,\infty)$. Integration by parts yields
+We know from Theorem~8.1.6 that ${\cal L}(f)$ is defined for $s>s_{0}$. We first consider the case
+where $f'$ is continuous on $[0,\infty)$. Integration by parts yields
 \begin{equation}
   \label{eq:8.3.2}
   \begin{array}{ccl}
@@ -24,12 +29,15 @@ We know from Theorem~8.1.6 that ${\cal L}(f)$ is defined for $s>s_{0}$. We first
                                      & = & \dst e^{-sT}f(T)-f(0)+s\int^{T}_{0}e^{-st}f(t)\,dt
   \end{array}
 \end{equation}
-for any $T>0$. Since $f$ is of exponential order $s_{0}$, $\lim_{T\to\infty}e^{-sT}f(T)=0$ and the last integral in \eqref{eq:8.3.2} converges as $T\to\infty$ if $s>s_{0}$. Therefore
+for any $T>0$. Since $f$ is of exponential order $s_{0}$, $\lim_{T\to\infty}e^{-sT}f(T)=0$ and the
+last integral in \eqref{eq:8.3.2} converges as $T\to\infty$ if $s>s_{0}$. Therefore
 \begin{eqnarray*}
   \int^{\infty}_{0}e^{-st}f'(t)\,dt & = & -f(0)+s\int^{\infty}_{0}e^{-st}f(t)\,dt \\
                                     & = & -f(0)+s{\cal L}(f),
 \end{eqnarray*}
-which proves \eqref{eq:8.3.1}. Now suppose $T>0$ and $f'$ is only piecewise continuous on $[0,T]$, with discontinuities at $t_{1}<t_{2}<\cdots<t_{n-1}$. For convenience, let $t_{0}=0$ and $t_{n}=T$. Integrating by parts yields
+which proves \eqref{eq:8.3.1}. Now suppose $T>0$ and $f'$ is only piecewise continuous on $[0,T]$,
+with discontinuities at $t_{1}<t_{2}<\cdots<t_{n-1}$. For convenience, let $t_{0}=0$ and $t_{n}=T$.
+Integrating by parts yields
 \begin{eqnarray*}
   \int^{t_{i}}_{t_{i-1}}e^{-st}f'(t)\,dt & = & e^{-st}f(t)\Big|^{t_{i}}_{t_{i-1}}+s\int^{t_{i}}_{t_{i-1}}e^{-st}f(t)\,dt \\
                                          & = & e^{-st_{i}}f(t_{i})-e^{-st_{i-1}}f(t_{i-1})+s\int^{t_{i}}_{t_{i-1}}e^{-st}f(t)\,dt.
@@ -65,7 +73,8 @@ In Section~2.1 we showed that the solution of the initial value problem
 \end{equation}
 is $y=y_{0}e^{at}$. We'll now obtain this result by using the Laplace transform.
 
-Let $Y(s)={\cal L}(y)$ be the Laplace transform of the unknown solution of \eqref{eq:8.3.3}. Taking Laplace transforms of both sides of \eqref{eq:8.3.3} yields
+Let $Y(s)={\cal L}(y)$ be the Laplace transform of the unknown solution of \eqref{eq:8.3.3}. Taking
+Laplace transforms of both sides of \eqref{eq:8.3.3} yields
 \[
   {\cal L}(y')={\cal L}(ay),
 \]
@@ -91,7 +100,9 @@ We need the next theorem to solve second order differential equations using the 
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:8.3.2} Suppose $f$ and $f'$ are continuous on $[0,\infty)$ and of exponential order $s_{0}$, and that $f''$ is piecewise continuous on $[0,\infty)$. Then $f$, $f'$, and $f''$ have Laplace transforms for $s >s_{0}$,
+  \label{thmtype:8.3.2} Suppose $f$ and $f'$ are continuous on $[0,\infty)$ and of exponential order
+  $s_{0}$, and that $f''$ is piecewise continuous on $[0,\infty)$. Then $f$, $f'$, and $f''$ have
+  Laplace transforms for $s >s_{0}$,
   \begin{equation}
     \label{eq:8.3.4}{\cal L}(f')=s{\cal L}(f)-f(0),
   \end{equation}
@@ -101,7 +112,10 @@ We need the next theorem to solve second order differential equations using the 
   \end{equation}
 \end{theorem}
 
-\proof Theorem~\ref{thmtype:8.3.1} implies that ${\cal L}(f')$ exists and satisfies \eqref{eq:8.3.4} for $s>s_{0}$. To prove that ${\cal L}(f'')$ exists and satisfies \eqref{eq:8.3.5} for $s>s_{0}$, we first apply Theorem~\ref{thmtype:8.3.1} to $g=f'$. Since $g$ satisfies the hypotheses of Theorem~\ref{thmtype:8.3.1}, we conclude that ${\cal L}(g')$ is defined and satisfies
+\proof Theorem~\ref{thmtype:8.3.1} implies that ${\cal L}(f')$ exists and satisfies \eqref{eq:8.3.4}
+for $s>s_{0}$. To prove that ${\cal L}(f'')$ exists and satisfies \eqref{eq:8.3.5} for $s>s_{0}$, we
+first apply Theorem~\ref{thmtype:8.3.1} to $g=f'$. Since $g$ satisfies the hypotheses of
+Theorem~\ref{thmtype:8.3.1}, we conclude that ${\cal L}(g')$ is defined and satisfies
 \[
   {\cal L}(g')=s{\cal L}(g)-g(0)
 \]
@@ -123,7 +137,8 @@ We'll now use the Laplace transform to solve initial value problems for second o
   \end{equation}
 \end{example}
 
-\solution Taking Laplace transforms of both sides of the differential equation in \eqref{eq:8.3.6} yields
+\solution Taking Laplace transforms of both sides of the differential equation in \eqref{eq:8.3.6}
+yields
 \[
   {\cal L}(y''-6y'+5y)={\cal L}\left(3e^{2t}\right)=\frac{3}{s-2},
 \]
@@ -131,7 +146,8 @@ which we rewrite as
 \begin{equation}
   \label{eq:8.3.7}{\cal L}(y'')-6{\cal L}(y')+5{\cal L}(y)=\frac{3}{s-2}.
 \end{equation}
-Now denote ${\cal L}(y)=Y(s)$. Theorem~\ref{thmtype:8.3.2} and the initial conditions in \eqref{eq:8.3.6} imply that
+Now denote ${\cal L}(y)=Y(s)$. Theorem~\ref{thmtype:8.3.2} and the initial conditions in
+\eqref{eq:8.3.6} imply that
 \[
   {\cal L}(y')=sY(s)-y(0)=sY(s)-2
 \]
@@ -165,7 +181,9 @@ and taking the inverse transform of this yields
 \]
 as the solution of \eqref{eq:8.3.6}.\bbox
 
-It isn't necessary to write all the steps that we used to obtain \eqref{eq:8.3.8}. To see how to avoid this, let's apply the method of Example~\ref{example:8.3.2} to the general initial value problem
+It isn't necessary to write all the steps that we used to obtain \eqref{eq:8.3.8}. To see how to
+avoid this, let's apply the method of Example~\ref{example:8.3.2} to the general initial value
+problem
 \begin{equation}
   \label{eq:8.3.9}ay''+by'+cy=f(t),\quad y(0)=k_{0},\quad y'(0)=k_{1}.
 \end{equation}
@@ -174,7 +192,8 @@ Taking Laplace transforms of both sides of the differential equation in \eqref{e
 \begin{equation}
   \label{eq:8.3.10}a{\cal L}(y'')+b{\cal L}(y')+c{\cal L}(y)=F(s).
 \end{equation}
-Now let $Y(s)={\cal L}(y)$. Theorem~\ref{thmtype:8.3.2} and the initial conditions in \eqref{eq:8.3.9} imply that
+Now let $Y(s)={\cal L}(y)$. Theorem~\ref{thmtype:8.3.2} and the initial conditions in
+\eqref{eq:8.3.9} imply that
 \[
   {\cal L}(y')=sY(s)-k_{0}\mbox{\quad and \quad}{\cal L}(y'')=s^{2}Y(s)-k_{1}-k_{0}s.
 \]
@@ -186,11 +205,14 @@ The coefficient of $Y(s)$ on the left is the characteristic polynomial
 \[
   p(s)=as^{2}+bs+c
 \]
-of the complementary equation for \eqref{eq:8.3.9}. Using this and moving the terms involving $k_{0}$ and $k_{1}$ to the right side of \eqref{eq:8.3.11} yields
+of the complementary equation for \eqref{eq:8.3.9}. Using this and moving the terms involving
+$k_{0}$ and $k_{1}$ to the right side of \eqref{eq:8.3.11} yields
 \begin{equation}
   \label{eq:8.3.12}p(s)Y(s)=F(s)+a(k_{1}+k_{0}s)+bk_{0}.
 \end{equation}
-This equation corresponds to \eqref{eq:8.3.8} of Example~\ref{example:8.3.2}. Having established the form of this equation in the general case, it is preferable to go directly from the initial value problem to this equation. You may find it easier to remember \eqref{eq:8.3.12} rewritten as
+This equation corresponds to \eqref{eq:8.3.8} of Example~\ref{example:8.3.2}. Having established the
+form of this equation in the general case, it is preferable to go directly from the initial value
+problem to this equation. You may find it easier to remember \eqref{eq:8.3.12} rewritten as
 \begin{equation}
   \label{eq:8.3.13}p(s)Y(s)=F(s)+a\left(y'(0)+sy(0)\right)+by(0).
 \end{equation}
@@ -277,7 +299,11 @@ In Example~\ref{example:8.2.8} we found the inverse transform of this function t
 \medskip
 
 \color{blue}
-\remark{ In our examples we applied Theorems~\ref{thmtype:8.3.1} and \ref{thmtype:8.3.2} without verifying that the unknown function $y$ satisfies their hypotheses. This is characteristic of the formal manipulative way in which the Laplace transform is used to solve differential equations. Any doubts about the validity of the method for solving a given equation can be resolved by verifying that the resulting function $y$ is the solution of the given problem.}
+\remark{ In our examples we applied Theorems~\ref{thmtype:8.3.1} and \ref{thmtype:8.3.2} without
+verifying that the unknown function $y$ satisfies their hypotheses. This is characteristic of the
+formal manipulative way in which the Laplace transform is used to solve differential equations. Any
+doubts about the validity of the method for solving a given equation can be resolved by verifying
+that the resulting function $y$ is the solution of the given problem.}
 \color{black}
 
 \exercises In Exercises~\ref{exer:8.3.1}--\ref{exer:8.3.31} use the Laplace transform to solve the initial value problem.

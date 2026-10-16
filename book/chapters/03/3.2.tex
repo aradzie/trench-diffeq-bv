@@ -35,7 +35,7 @@ Table~\ref{table:3.2.1} that the approximation to $e$ obtained by the improved E
 only 12 evaluations of $f$ is better than the approximation obtained by Euler's method with 48
 evaluations.
 
-In Section~3.1 we'll study the
+In Section~3.3 we'll study the
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Runge/}{\color{blue}
 \it Runge}-\href{https://mathshistory.st-andrews.ac.uk/Biographies/Kutta/}{\color{blue}
 \it Kutta method\/}, which requires four evaluations of $f$ at each step. We've used this method
@@ -82,7 +82,7 @@ Setting $x=x_{i+1}=x_{i}+h$ in (\ref{eq:3.2.2}) yields
 as an approximation to $y(x_{i+1})$. As in our derivation of Euler's method, we replace $y(x_{i})$
 (unknown if $i>0$) by its approximate value $y_{i}$; then (\ref{eq:3.2.3}) becomes
 \[
-  y_{i+1}=y_{i}+\frac{h}{2}\left(f(x_{i},y_{i})+f(x_{i+1},y(x_{i+1})\right).
+  y_{i+1}=y_{i}+\frac{h}{2}\left(f(x_{i},y_{i})+f(x_{i+1},y(x_{i+1}))\right).
 \]
 However, this still won't work, because we don't know $y(x_{i+1})$, which appears on the right. We
 overcome this by replacing $y(x_{i+1})$ by $y_{i}+hf(x_{i},y_{i})$, the value that the Euler method
@@ -104,10 +104,8 @@ assumptions, the local truncation error with the improved Euler method is $O(h^{
 $O(h^{2})$ as with Euler's method. Therefore the global truncation error with the improved Euler
 method is $O(h^{2})$; however, we won't prove this.
 
-We note that the magnitude of the local truncation error in the improved Euler method and other
-methods discussed in this section is determined by the third derivative $y'''$ of the solution of
-the initial value problem. Therefore the local truncation error will be larger where $|y'''|$ is
-large, or smaller where $|y'''|$ is small.
+The magnitude of the local truncation error in the methods discussed in this section depends on
+derivatives of both $f$ and the solution of the initial value problem.
 
 The next example, which deals with the initial value problem considered in
 Example~\ref{example:3.1.1}, illustrates the computational procedure indicated in the improved Euler
@@ -309,7 +307,7 @@ Euler method.
 We'll now derive a class of methods with $O(h^{3})$ local truncation error for solving
 (\ref{eq:3.2.1}). For simplicity, we assume that $f$, $f_{x}$, $f_{y}$, $f_{xx}$, $f_{yy}$, and
 $f_{xy}$ are continuous and bounded for all $(x,y)$. This implies that if $y$ is the solution of
-(\ref{eq:3.2.1} then $y''$ and $y'''$ are bounded (Exercise~\ref{exer:3.2.31}).
+(\ref{eq:3.2.1}) then $y''$ and $y'''$ are bounded (Exercise~\ref{exer:3.2.31}).
 
 We begin by approximating the integral curve of (\ref{eq:3.2.1}) at $(x_{i},y(x_{i}))$ by the line
 through $(x_{i},y(x_{i}))$ with slope
@@ -375,13 +373,13 @@ which is true if
 
 Since $y'=f(x,y)$, we can now conclude from (\ref{eq:3.2.8}) that
 \begin{equation}
-  \label{eq:3.2.11}y(x_{i+1})=y(x_{i})+h\left[\sigma f(x_{i},y_{i})+\rho f(x_{i}+\theta h,y(x_{i}+\theta h))\right]+O(h^{3})
+  \label{eq:3.2.11}y(x_{i+1})=y(x_{i})+h\left[\sigma f(x_{i},y(x_{i}))+\rho f(x_{i}+\theta h,y(x_{i}+\theta h))\right]+O(h^{3})
 \end{equation}
 if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}). However, this formula would not be
 useful even if we knew $y(x_{i})$ exactly (as we would for $i=0$), since we still wouldn't know
 $y(x_{i}+\theta h)$ exactly. To overcome this difficulty, we again use Taylor's theorem to write
 \[
-  y(x_{i}+\theta h)=y(x_{i})+\theta hy'(x_{i})+\frac{h^{2}}{2}y''(\tilde{x}_{i}),
+  y(x_{i}+\theta h)=y(x_{i})+\theta hy'(x_{i})+\frac{(\theta h)^{2}}{2}y''(\tilde{x}_{i}),
 \]
 where $\tilde{x}_{i}$ is in $(x_{i},x_{i}+\theta h)$. Since $y'(x_{i})=f(x_{i},y(x_{i}))$ and $y''$
 is bounded, this implies that
@@ -410,7 +408,7 @@ This implies that the formula
   y_{i+1}=y_{i}+h\left[\sigma f(x_{i},y_{i})+\rho f(x_{i}+\theta h,y_{i}+\theta hf(x_{i},y_{i}))\right]
 \]
 has $O(h^{3})$ local truncation error if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}).
-Substituting $\sigma=1-\rho$ and $\theta=1/2\rho$ here yields
+Substituting $\sigma=1-\rho$ and $\theta=1/(2\rho)$ here yields
 \begin{equation}
   \label{eq:3.2.13}y_{i+1}=y_{i}+h\left[(1-\rho)f(x_{i},y_{i})+\rho f\left(x_{i}+\frac{h}{2\rho}, y_{i}+\frac{h}{2\rho}f(x_{i},y_{i})\right)\right].
 \end{equation}
@@ -422,7 +420,7 @@ The computation indicated here can be conveniently organized as follows: given $
   y_{i+1} & = & y_{i}+h[(1-\rho)k_{1i}+\rho k_{2i}].
 \end{eqnarray*}
 
-Consistent with our requirement that $0<\theta<1$, we require that $\rho\ge1/2$. Letting $\rho=1/2$
+Consistent with our requirement that $0<\theta\le1$, we require that $\rho\ge1/2$. Letting $\rho=1/2$
 in (\ref{eq:3.2.13}) yields the improved Euler method (\ref{eq:3.2.4}). Letting $\rho=3/4$ yields
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Heun/}{\color{blue}
 \it Heun's method},
@@ -502,7 +500,7 @@ $3$.}
   obtained in Example~\ref{example:2.4.3}. Present your results in a table like
   Table~\ref{table:3.2.2}.
 
-  \item\label{exer:3.2.9} \Cex In Example~\ref{example:3.2.2} it was shown that
+  \item\label{exer:3.2.9} \Cex In Example~\ref{example:2.2.3} it was shown that
   \[
     y^{5}+y=x^{2}+x-4
   \]
@@ -528,7 +526,7 @@ $3$.}
     y'=-\frac{4x^{3}y^{3}+2xy^{5}+2y}{3x^{4}y^{2}+5x^{2}y^{4}+2x},\quad y(1)=1. \eqno{\rm(A)}
   \]
   Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to find approximate
-  values of the solution of (A) at $x=1.0$, $1.14$, $1.2$, $1.3$, \dots, $2.0$. Present your results
+  values of the solution of (A) at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Present your results
   in tabular form. To check the error in these approximate values, construct another table of values
   of the residual
   \[

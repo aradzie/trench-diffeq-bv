@@ -78,7 +78,7 @@ Having computed $y_{2}$, we can compute
   y_{3}=y_{2}+hf(x_{2},y_{2}).
 \]
 In general, Euler's method starts with the known value $y(x_{0})=y_{0}$ and computes $y_{1}$,
-$y_{2}$, \dots, $y_{n}$ successively by with the formula
+$y_{2}$, \dots, $y_{n}$ successively with the formula
 \begin{equation}
   \label{eq:3.1.4}y_{i+1}=y_{i}+hf(x_{i},y_{i}),\quad0\le i\le n-1.
 \end{equation}
@@ -298,7 +298,7 @@ There are two sources of error (not counting roundoff) in Euler's method:
   \eqref{eq:3.1.4} rather than \eqref{eq:3.1.2} to compute $y_{i+1}$.
 \end{numberlist}
 
-Euler's method assumes that $y_{i+1}$ defined in \eqref{eq:3.1.2} is an approximation to
+Euler's method assumes that $y_{i+1}$ defined in \eqref{eq:3.1.3} is an approximation to
 $y(x_{i+1})$. We call the error in this approximation the {\color{blue}\it local truncation error at
 the $i$th step\/}, and denote it by $T_{i}$; thus,
 \begin{equation}
@@ -345,7 +345,7 @@ Comparing this with \eqref{eq:3.1.8} shows that
 \]
 Recalling \eqref{eq:3.1.9}, we can establish the bound
 \begin{equation}
-  \label{eq:3.1.10}|T_{i}|\le\frac{Mh^{2}}{2},\quad1\le i\le n.
+  \label{eq:3.1.10}|T_{i}|\le\frac{Mh^{2}}{2},\quad 0\le i\le n-1.
 \end{equation}
 Although it may be difficult to determine the constant $M$, what is important is that there's an $M$
 such that \eqref{eq:3.1.10} holds. We say that the local truncation error of Euler's method is
@@ -572,10 +572,10 @@ method.
 
 We can't give a general procedure for determining in advance whether Euler's method or the
 semilinear Euler method will produce better results for a given semilinear initial value problem
-\eqref{eq:3.1.19}. As a rule of thumb, the Euler semilinear method will yield better results than
-Euler's method if $|u''|$ is small on $[x_{0},b]$, while Euler's method yields better results if
-$|u''|$ is large on $[x_{0},b]$. In many cases the results obtained by the two methods don't differ
-appreciably. However, we propose the an intuitive way to decide which is the better method: Try both
+\eqref{eq:3.1.19}. As a rule of thumb, the Euler semilinear method tends to yield better results
+if $|y_{1}u''|$ is small compared with $|y''|$ on $[x_{0},b]$, while Euler's method tends to do
+better if $|y''|$ is smaller. In many cases the results obtained by the two methods don't differ
+appreciably. However, we propose an intuitive way to decide which is the better method: Try both
 methods with multiple step sizes, as we did in Example~\ref{example:3.1.4}, and accept the results
 obtained by the method for which the approximations change less as the step size decreases.
 
@@ -842,7 +842,7 @@ Kutta semilinear method\/}, as the case may be.
 
   \exercisetext{The linear initial value problems in Exercises~\ref{exer:3.1.14}--\ref{exer:3.1.19}
   can't be solved exactly in terms of known elementary functions. In each exercise, use Euler's
-  method and the Euler semilinear methods with the indicated step sizes to find approximate values
+  method and the Euler semilinear method with the indicated step sizes to find approximate values
   of the solution of the given initial value problem at 11 equally spaced points (including the
   endpoints) in the interval.}
 

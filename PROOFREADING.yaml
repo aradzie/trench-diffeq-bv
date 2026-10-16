@@ -168,14 +168,57 @@ sections:
     remarks:
       - "All answers 3-27 verified (exactness of mu*M dx + mu*N dy and F_x, F_y)."
   "3.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: prose, where: "Euler recurrence", note: "by with the formula -> with the formula"}
+      - {kind: ref, where: "Local truncation error definition", note: "reference to (3.1.2) -> (3.1.3)"}
+      - {kind: math, where: "(3.1.10)", note: "1<=i<=n -> 0<=i<=n-1"}
+      - {kind: math, where: "Semilinear method rule of thumb", note: "comparison based only on u double prime -> comparison of y double prime and y_1 u double prime"}
+      - {kind: prose, where: "Method comparison", note: "the an intuitive way -> an intuitive way"}
+      - {kind: prose, where: "Ex 14-19 directions", note: "Euler semilinear methods -> method"}
+    remarks:
+      - "Euler and semilinear recurrences re-derived; example tables and answer values 1-22 independently recomputed."
+      - "Quadrature exercise checked algebraically; its requested sketch was not drawn. No figures in section."
   "3.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: ref, where: "Introduction", note: "In Section 3.1 we will study Runge-Kutta -> Section 3.3"}
+      - {kind: typeset, where: "Improved Euler derivation", note: "missing parenthesis around y(x_{i+1})"}
+      - {kind: math, where: "Local error discussion", note: "dependence only on y triple prime -> dependence on derivatives of f and y"}
+      - {kind: typeset, where: "Family derivation", note: "missing closing parenthesis in reference to (3.2.1)"}
+      - {kind: math, where: "(3.2.11)", note: "f(x_i,y_i) -> f(x_i,y(x_i)) in exact-solution identity"}
+      - {kind: math, where: "Taylor expansion before (3.2.12)", note: "h squared -> (theta h) squared"}
+      - {kind: math, where: "Parameter choice after (3.2.13)", note: "theta=1/2rho -> theta=1/(2rho); 0<theta<1 -> 0<theta<=1"}
+      - {kind: ref, where: "Ex 9", note: "Example 3.2.2 -> Example 2.2.3"}
+      - {kind: typeset, where: "Ex 10", note: "x=1.14 -> x=1.1"}
+      - {kind: ref, where: "Answers header", note: "last page reference 3.1.23 -> 3.2.32"}
+      - {kind: answer, where: "Ans 26", note: "Heun h=0.0125 value 10.470731411 -> 10.471330594"}
+      - {kind: answer, where: "Ans 29", note: "exact value -0.751331499 -> -0.750912371"}
+      - {kind: answer, where: "Ans 30", note: "exact value -0.751331499 -> -0.750912371"}
+    remarks:
+      - "Improved Euler, midpoint, Heun and semilinear answer values and example tables independently recomputed."
+      - "Quadrature exercise checked algebraically; its requested sketch was not drawn. No figures in section."
   "3.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Local error discussion", note: "dependence only on y fifth derivative -> dependence on derivatives of f and y"}
+      - {kind: typeset, where: "Example 3.3.1", note: "extra closing parenthesis in k_11 computation"}
+      - {kind: prose, where: "Example 3.3.2", note: "method in fact; -> method; in fact,"}
+      - {kind: prose, where: "Backward integration explanation", note: "make the change the given problem -> make the change from the given problem"}
+      - {kind: ref, where: "Ex 8", note: "Example 2.2.3 -> Example 2.4.3"}
+      - {kind: math, where: "Ex 28(b)", note: "f(x)=A+Bx+Cx+Dx^3 -> A+Bx+Cx^2+Dx^3"}
+      - {kind: prose, where: "Ans 13", note: "Euler semilinear method -> Runge-Kutta semilinear method"}
+      - {kind: answer, where: "Ans 24", note: "initial-value-only row -> computed values at x=1.1"}
+      - {kind: answer, where: "Ans 25", note: "initial-value-only row -> computed values at x=0"}
+    remarks:
+      - "Runge-Kutta answer values and example tables independently recomputed; exact formulas and residuals checked."
+      - "Backward integration and Simpson quadrature checked algebraically; no figures in section."
   "4.1":
     text: todo
     answers: todo
@@ -333,7 +376,7 @@ sections:
 other_files:
   chapters/01/chapter.tex: done
   chapters/02/chapter.tex: done  # "can made" -> "can be made", "known called" -> "known as an"
-  chapters/03/chapter.tex: todo
+  chapters/03/chapter.tex: done
   chapters/04/chapter.tex: todo
   chapters/05/chapter.tex: todo
   chapters/06/chapter.tex: todo

@@ -696,17 +696,84 @@ sections:
     remarks:
       - "All table identities differentiated or checked against the defining integral; no answers file."
   "9.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: math, where: "(9.1.14)", note: "y^{n-1} -> y^{(n-1)}"}
+      - {kind: math, where: "Theorem 9.1.5", note: "replaced wrong assumptions, cross-references, and missing coefficients with the normal Ly=0 hypothesis and alpha_j conditions"}
+      - {kind: typeset, where: "Proof of Theorem 9.1.5", note: "removed duplicate (c) arguments in Wronskian matrix"}
+      - {kind: ref, where: "Before Theorem 9.1.7", note: "Theorem 5.3.2 -> 5.3.3"}
+      - {kind: prose, where: "Before Theorem 9.1.4", note: "doubled period -> single period"}
+      - {kind: typeset, where: "Exercise 3", note: "y'''(0)-36 -> y'''(0)=-36"}
+      - {kind: math, where: "Exercise 6(d)", note: "-(x^2+2)y -> -(x^2+2)y'"}
+      - {kind: math, where: "Exercise 6(g)", note: "-4xy' -> -4xy''"}
+      - {kind: typeset, where: "Exercise 10(d)", note: "missing opening brace in function set"}
+      - {kind: ref, where: "Exercise 15", note: "undefined (A) -> the displayed equation"}
+      - {kind: math, where: "Hint before Exercise 17", note: "comma between determinant factors -> product"}
+      - {kind: answer, where: "Answer 2", note: "2x^2-3x^3+1/x -> (22/3)x^2+3x^3+25/(3x) to satisfy the printed IVP"}
+      - {kind: typeset, where: "Answer 10(k)", note: "part (l) -> part (k)"}
+      - {kind: answer, where: "Answer 24(h)", note: "3x^2y''' -> 3x^3y'''"}
+      - {kind: math, where: "Exercises 4 and 14", note: "specified 0<=j<=n-1 in derivative initial conditions"}
+      - {kind: prose, where: "Linear dependence definition", note: "added missing final period"}
+      - {kind: prose, where: "Introduction", note: "removed stray spacing command before and"}
+    remarks:
+      - "All six verify-style parts of Exercise 1 and all seven parts of Exercise 6 checked by substitution."
+      - "Answers 2, 3, 5, 7-10, and 24 checked against initial conditions, Wronskians, or annihilation."
+      - "EPS figures and computer plots not visually inspected."
   "9.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: prose, where: "Example 9.2.2", note: "definitions ... is -> definition ... is"}
+      - {kind: prose, where: "Example 9.2.3", note: "is solution -> is a solution"}
+      - {kind: typeset, where: "Example 9.2.3 Wronskian", note: "function order in prose -> function order in determinant"}
+      - {kind: math, where: "Example 9.2.4 general solution", note: "y_1 -> y"}
+      - {kind: math, where: "Complex roots after (9.2.13)", note: "lambda +/- i omega -> lambda_j +/- i omega_j"}
+      - {kind: prose, where: "Factorization discussion", note: "find fundamental set -> find a fundamental set"}
+      - {kind: math, where: "Proof of Theorem 9.2.1", note: "malformed polynomial terms and c_n -> c_m"}
+      - {kind: prose, where: "Example 9.2.6", note: "be be -> be"}
+      - {kind: math, where: "Exercise 40(c)", note: "w_j^2 -> omega_j^2"}
+      - {kind: prose, where: "Exercise 41(b)", note: "polynomial -> polynomials"}
+      - {kind: answer, where: "Answer 5", note: "reused c_1 and omitted c_3 -> three independent constants"}
+      - {kind: answer, where: "Answer 28(d)", note: "Wronskian 2e^x -> W(0)=2"}
+      - {kind: typeset, where: "Answer 28(e)", note: "malformed separator before -8 -> colon and -8"}
+      - {kind: typeset, where: "Answer 37", note: "cos2x/3 joined to next function -> cos(2x/3), x cos(2x/3)"}
+    remarks:
+      - "Characteristic polynomials of Exercises 1-14 factored; IVP answers 15-27 checked against equations and every initial value."
+      - "Exercise 28 Wronskians evaluated at zero; remaining listed fundamental sets checked by roots."
+      - "Computer graph requests 17-19 and 27 not checked visually; EPS figure not inspected."
   "9.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: ref, where: "Introduction", note: "Theorem 9.1.5 -> Theorem 9.1.6"}
+      - {kind: math, where: "Exercise 18", note: "forcing e^{2x} -> e^x to match the polynomial selected for its answer"}
+      - {kind: answer, where: "Answer 52", note: "x^2 e^{-2x}(1+2x) -> 2x^3 e^{-x}"}
+      - {kind: math, where: "Exercise 74", note: "5y'' -> 4y'' to match the stated IVP solution and complementary roots"}
+      - {kind: math, where: "Exercise 76(a)", note: "undefined m and missing x^m factor on sine term; the asserted form lacks its required root-multiplicity hypothesis", open: true}
+      - {kind: math, where: "Exercise 76(b)", note: "general shifted nth-order equation cannot in general become a(u''+omega^2u)", open: true}
+    remarks:
+      - "All four worked examples and Answers 1-74 checked by substitution; initial values 69-74 checked."
+      - "Computer graph requests 69-74 and EPS figures not visually inspected."
+      - "Exercise 76 needs an authorial rewrite; its two claims remain open."
   "9.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: typeset, where: "(9.4.4) and Exercise 34(a)", note: "missing plus sign before ellipsis"}
+      - {kind: math, where: "Example 9.4.2 Wronskian", note: "first-row entry -1/x^2 -> 1/x^2"}
+      - {kind: typeset, where: "Exercise 34", note: "duplicate part (c) -> parts (a)-(f) in order"}
+      - {kind: math, where: "Exercise 34(e)", note: "1<=j<=n-2 -> 0<=j<=n-2"}
+      - {kind: math, where: "Exercise 35", note: "2y'-y' -> 2y''-y'"}
+      - {kind: math, where: "Exercise 42", note: "-4xy' -> -4xy''"}
+    remarks:
+      - "Answers 1-33 checked by ODE substitution; all supplied homogeneous bases checked; IVPs 22-33 checked at the stated point."
+      - "Answers 35-42 independently checked against the determinant formula for the Green kernel."
+      - "Computer graph requests 22, 26, and 29-30 not checked visually."
   "10.1":
     text: todo
     answers: todo
@@ -765,7 +832,7 @@ other_files:
   chapters/06/chapter.tex: done  # section descriptions and agreement corrected
   chapters/07/chapter.tex: done  # qualified claim about elementary closed-form solutions
   chapters/08/chapter.tex: done  # introduction, section summaries, and input order checked
-  chapters/09/chapter.tex: todo
+  chapters/09/chapter.tex: done  # introduction, section descriptions, and input order checked
   chapters/10/chapter.tex: todo
   chapters/11/chapter.tex: todo
   chapters/12/chapter.tex: todo

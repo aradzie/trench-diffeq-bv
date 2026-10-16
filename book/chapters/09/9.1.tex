@@ -10,7 +10,7 @@ We considered equations of this form with $n=1$ in Section~2.1 and with $n=2$ in
 chapter $n$ is an arbitrary positive integer.
 
 In this section we sketch the general theory of linear $n$th order equations. Since this theory has
-already been discussed for $n=2$ in Sections~5.1\; and 5.3, we'll omit proofs.
+already been discussed for $n=2$ in Sections~5.1 and 5.3, we'll omit proofs.
 
 For convenience, we consider linear differential equations written as
 \begin{equation}
@@ -70,9 +70,7 @@ the only constants $c_{1}$, $c_{2}$, \dots, $c_{n}$ such that
 \end{equation}
 are $c_{1}=c_{2}=\cdots=c_{n}=0$. If \eqref{eq:9.1.4} holds for some set of constants $c_{1}$,
 $c_{2}$, \dots, $c_{n}$ that are not all zero, then $\{y_{1},y_{2},\dots,y_{n}\}$ is
-{\color{blue}\it linearly dependent\/} on $(a,b)$
-
-The next theorem is analogous to Theorem~\ref{thmtype:5.1.3}.
+{\color{blue}\it linearly dependent\/} on $(a,b)$. The next theorem is analogous to Theorem~\ref{thmtype:5.1.3}.
 
 \begin{theorem}
   \color{blue}
@@ -259,7 +257,7 @@ The next theorem generalizes Theorem~\ref{thmtype:5.1.4}. The proof is sketched 
   \color{blue}
   \label{thmtype:9.1.3} Suppose the homogeneous linear $n$th order equation
   \begin{equation}
-    \label{eq:9.1.14}P_{0}(x)y^{(n)}+P_{1}(x)y^{n-1}+\cdots+P_{n}(x)y=0
+    \label{eq:9.1.14}P_{0}(x)y^{(n)}+P_{1}(x)y^{(n-1)}+\cdots+P_{n}(x)y=0
   \end{equation}
   is normal on $(a,b)$, let $y_{1}$, $y_{2}$, \dots, $y_{n}$ be solutions of \eqref{eq:9.1.14} on
   $(a,b)$, and let $x_{0}$ be in $(a,b)$. Then the Wronskian of $\{y_{1},y_{2},\dots,y_{n}\}$ is
@@ -274,7 +272,7 @@ Formula \eqref{eq:9.1.15} is
 \href{https://mathshistory.st-andrews.ac.uk/Biographies/Abel/}{\color{blue}
 \it Abel's formula\/}.
 
-The next theorem is analogous to Theorem~\ref{thmtype:5.1.6}..
+The next theorem is analogous to Theorem~\ref{thmtype:5.1.6}.
 
 \begin{theorem}
   \color{blue}
@@ -380,16 +378,15 @@ Examples~\ref{example:9.1.1} and \ref{example:9.1.2}.}
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:9.1.5} Suppose $c$ is in $(a,b)$ and $\alpha_{1}$, $\alpha_{2}$, \dots, are real
-  numbers, not all zero. Under the assumptions of Theorem~\ref{thmtype:10.3.3}, suppose $y_{1}$ and
-  $y_{2}$ are solutions of \eqref{eq:5.1.35} such that
+  \label{thmtype:9.1.5} Suppose $Ly=0$ is normal on $(a,b)$, $c$ is in $(a,b)$, and $\alpha_{1},\alpha_{2},\dots,\alpha_{n}$ are real
+  numbers, not all zero. If $y_{1},y_{2},\dots,y_{n}$ are solutions of $Ly=0$ such that
   \begin{equation}
-    \label{eq:9.1.16}\alpha y_{i}(c)+y_{i}'(c)+\cdots+y_{i}^{(n-1)}(c)=0,\quad1\le i\le n.
+    \label{eq:9.1.16}\alpha_{1}y_{i}(c)+\alpha_{2}y_{i}'(c)+\cdots+\alpha_{n}y_{i}^{(n-1)}(c)=0,\quad1\le i\le n,
   \end{equation}
   Then $\{y_{1},y_{2},\dots y_{n}\}$ isn't linearly independent on $(a,b)$.
 \end{theorem}
 
-\proof Since $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{n}$ are not all zero, \eqref{eq:9.1.14}
+\proof Since $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{n}$ are not all zero, \eqref{eq:9.1.16}
 implies that
 \[
   \left|
@@ -407,7 +404,7 @@ so
     y_{1}(c)         & y_{2}(c)            & \cdots & y_{n}(c)            \\
     y_{1}'(c)        & y_{2}'(c)           & \cdots & y_{n}'(c)           \\
     \vdots           & \vdots              & \ddots & \vdots              \\
-    y_{1}^{(n-1)}(c) & y_{2}^{(n-1)}(c)(c) & \cdots & y_{n}^{(n-1)}(c)(c) \\
+    y_{1}^{(n-1)}(c) & y_{2}^{(n-1)}(c) & \cdots & y_{n}^{(n-1)}(c) \\
   \end{array}\right|=0
 \]
 \nopagebreak
@@ -433,7 +430,7 @@ the {\color{blue}\it complementary equation\/} $Ly=0$.
   where $c_{1},c_{2},\dots,c_{n}$ are constants.
 \end{theorem}
 
-The next theorem is analogous to Theorem~\ref{thmtype:5.3.2}.
+The next theorem is analogous to Theorem~\ref{thmtype:5.3.3}.
 
 \begin{theorem}
   \color{blue}
@@ -494,7 +491,7 @@ $y''(1)=1$;
 
   \item\label{exer:9.1.3} Solve the initial value problem
   \[
-    y^{(4)}+y'''-7y''-y'+6y=0, \quad y(0)=5,\quad y'(0)=-6,\quad y''(0)=10,\quad y'''(0)-36.
+    y^{(4)}+y'''-7y''-y'+6y=0, \quad y(0)=5,\quad y'(0)=-6,\quad y''(0)=10,\quad y'''(0)=-36.
   \]
   \hint{See Example~\ref{example:9.1.2}.}
 
@@ -505,7 +502,7 @@ $y''(1)=1$;
     \begin{array}{cl}
       0, & j\ne i-1, \\[1\jot]
       1, & j=i-1,
-    \end{array}\right.\;1\le i\le n.
+    \end{array}\right.\; 0\le j\le n-1,\quad 1\le i\le n.
   \]
 
   \item\label{exer:9.1.5}
@@ -548,13 +545,13 @@ $y''(1)=1$;
 
 \part{c} $xy'''-y''-xy'+y=0;\quad\{e^{x},\,e^{-x},\,x\}$
 
-\part{d} $x^{2}y'''+2xy''-(x^{2}+2)y=0;\quad\dst\{e^{x}/x,\,e^{-x}/ x,\,1\}$
+\part{d} $x^{2}y'''+2xy''-(x^{2}+2)y'=0;\quad\dst\{e^{x}/x,\,e^{-x}/ x,\,1\}$
 
 \part{e} $(x^{2}-2x+2)y'''-x^{2}y''+2xy'-2y=0;\quad\{x,\,x^{2},\,e^{x}\}$
 
 \part{f} $(2x-1)y^{(4)}-4xy'''+(5-2x)y''+4xy'-4y=0; \quad\{x,\,e^{x},\,e^{-x},e^{2x}\}$
 
-\part{g} $xy^{(4)}-y'''-4xy'+4y'=0;\quad\{1,x^{2},\,e^{2x},\,e^{-2x}\}$
+\part{g} $xy^{(4)}-y'''-4xy''+4y'=0;\quad\{1,x^{2},\,e^{2x},\,e^{-2x}\}$
 
   \item\label{exer:9.1.7} Find the Wronskian $W$ of a set of three solutions of
   \[
@@ -595,7 +592,7 @@ $y''(1)=1$;
 
   \noindent
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-    \part{c} $\{2,\,x+1,\,x^{2}+2\}$ & \part{d} $x,\,x\ln x,\,1/x\}$
+    \part{c} $\{2,\,x+1,\,x^{2}+2\}$ & \part{d} $\{x,\,x\ln x,\,1/x\}$
   \end{tabular}
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -641,7 +638,7 @@ $y''(1)=1$;
     \begin{array}{cl}
       0, & j\ne i-1, \\[1\jot]
       1, & j=i-1,
-    \end{array}\right.1\le i\le n,
+    \end{array}\right. 0\le j\le n-1,\quad 1\le i\le n,
   \]
   where $x_{0}$ is an arbitrary point in $(a,b)$. Show that any solution of $Ly=0$ on $(a,b)$, can
   be written as
@@ -665,7 +662,7 @@ $y''(1)=1$;
     \end{array}
   \]
   where the $\{a_{ij}\}$ are constants. Show that $\{z_{1},z_{2},\dots, z_{n}\}$ is a fundamental
-  set of solutions of (A) if and only if the determinant
+  set of solutions of the displayed equation if and only if the determinant
   \[
     \left|
     \begin{array}{cccc}
@@ -684,7 +681,7 @@ $y''(1)=1$;
 
   \exercisetext{Take the following as a hint in Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.19}:
 
-  \color{blue}\it By the definition of determinant, \[\left|\begin{array}{cccc}a_{11}&a_{12}&\cdots&a_{1n}\\[2\jot] a_{21}&a_{22}&\cdots&a_{2n}\\[2\jot] \vdots&\vdots&\ddots&\vdots\\[2\jot] a_{n1}&a_{n2}&\cdots&a_{nn}\end{array}\right| =\sum\pm a_{1i_{1}}a_{2i_{2}},\dots,a_{ni_{n}},\] where the sum is over all permutations $(i_{1},i_{2},\dots,i_{n})$ of $(1,2,\dots,n)$ and the choice of $+$ or $-$ in each term depends only on the permutation associated with that term.}
+  \color{blue}\it By the definition of determinant, \[\left|\begin{array}{cccc}a_{11}&a_{12}&\cdots&a_{1n}\\[2\jot] a_{21}&a_{22}&\cdots&a_{2n}\\[2\jot] \vdots&\vdots&\ddots&\vdots\\[2\jot] a_{n1}&a_{n2}&\cdots&a_{nn}\end{array}\right| =\sum\pm a_{1i_{1}}a_{2i_{2}}\cdots a_{ni_{n}},\] where the sum is over all permutations $(i_{1},i_{2},\dots,i_{n})$ of $(1,2,\dots,n)$ and the choice of $+$ or $-$ in each term depends only on the permutation associated with that term.}
   \color{black}
   \rm
 

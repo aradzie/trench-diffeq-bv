@@ -39,7 +39,7 @@ following $n-1$ conditions on $u_{1},u_{2},\dots,u_{n}$:
 \end{equation}
 These conditions lead to simple formulas for the first $n-1$ derivatives of $y_{p}$:
 \begin{equation}
-  \label{eq:9.4.4}y^{(r)}_{p}=u_{1}y^{(r)}_{1}+u_{2}y_{2}^{(r)}\cdots+u_{n}y^{(r)}_{n},\ 0 \le r\le n-1.
+  \label{eq:9.4.4}y^{(r)}_{p}=u_{1}y^{(r)}_{1}+u_{2}y_{2}^{(r)}+\cdots+u_{n}y^{(r)}_{n},\ 0 \le r\le n-1.
 \end{equation}
 These formulas are easy to remember, since they look as though we obtained them by differentiating
 \eqref{eq:9.4.2} $n-1$ times while treating $u_{1}$, $u_{2}$, \dots, $u_{n}$ as constants. To see
@@ -307,7 +307,7 @@ The Wronskian of $\{y_{1},y_{2},y_{3},y_{4}\}$ is
 \[
   W(x)=\left|
   \begin{array}{cccr}
-    x & x^{2} & 1/x      & -1/x^{2}  \\[5pt]
+    x & x^{2} & 1/x      & 1/x^{2}   \\[5pt]
     1 & 2x    & -1/x^{2} & -2/x^{3}  \\[5pt]
     0 & 2     & 2/x^{3}  & 6/x^{4}   \\[5pt]
     0 & 0     & -6/x^{4} & -24/x^{5}
@@ -523,7 +523,7 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
     \item % (a)
     Show that $y_{p}$ is a solution of (A) and that
     \[
-      y_{p}^{(r)}=u_{1}y^{(r)}_{1}+u_{2}y_{2}^{(r)}\cdots+u_{n}y^{(r)}_{n},\quad1 \le r\le n-1,
+      y_{p}^{(r)}=u_{1}y^{(r)}_{1}+u_{2}y_{2}^{(r)}+\cdots+u_{n}y^{(r)}_{n},\quad1 \le r\le n-1,
     \]
     and
     \[
@@ -560,7 +560,7 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
     which is called the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Green/}{\color{blue}
     \it Green's function\/} for (A).
 
-    \item % (c)
+    \item % (d)
     Show that
     \[
       \frac{\partial^{j}G(x,t)}{\partial x^{j}}=\frac{1}{P_{0}(t)W(t)}\left|
@@ -573,17 +573,17 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
       \end{array}\right|,\quad0\le j\le n.
     \]
 
-    \item % (d)
+    \item % (e)
     Show that if $a<t<b$ then
     \[
       \left.\frac{\partial^{j}G(x,t)}{\partial x^{j}}\right|_{x=t}= \left\{
       \begin{array}{cl}
-        0,                      & 1\le j\le n-2, \\[5pt]
+        0,                      & 0\le j\le n-2, \\[5pt]
         \dst\frac{1}{P_{0}(t)}, & j=n-1.
       \end{array}\right.
     \]
 
-    \item % (e)
+    \item % (f)
     Show that
     \[
       y_{p}^{(j)}(x)=\left\{
@@ -599,7 +599,7 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
   $y_{p}=\int_{x_{0}}^{x}G(x,t)F(t)\,dt$, given the indicated fundamental set of solutions. Assume
   that $x$ and $x_{0}$ are in an interval on which the equation is normal.}
 
-  \item\label{exer:9.4.35} $y'''+2y'-y'-2y=F(x);\quad\{e^{x},\,e^{-x},e^{-2x}\}$
+  \item\label{exer:9.4.35} $y'''+2y''-y'-2y=F(x);\quad\{e^{x},\,e^{-x},e^{-2x}\}$
 
   \item\label{exer:9.4.36} $x^{3}y'''+x^{2}y''-2xy'+2y=F(x);\quad\{x,\,x^{2},\,1/x\}$
 
@@ -614,5 +614,5 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
   \item\label{exer:9.4.41} $x^{4}y^{(4)}+6x^{3}y'''+2x^{2}y''-4xy'+4y=F(x)$;\quad
         $\{x,x^{2},1/x,1/x^{2}\}$
 
-  \item\label{exer:9.4.42} $xy^{(4)}-y'''-4xy'+4y'=F(x);\quad\{1,\,x^{2},\,e^{2x},e^{-2x}\}$
+  \item\label{exer:9.4.42} $xy^{(4)}-y'''-4xy''+4y'=F(x);\quad\{1,\,x^{2},\,e^{2x},e^{-2x}\}$
 \end{exerciselist}

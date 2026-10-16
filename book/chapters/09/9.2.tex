@@ -163,7 +163,7 @@ polynomial operator. We begin with an example.
   However, before we can make this assertion we must {\color{blue}\it define\/} what we mean by
   saying that two operators are equal, and what we mean by the products of operators in
   \eqref{eq:9.2.7}. We say that two operators are equal if they apply to the same functions and
-  always produce the same result. The definitions of the products in \eqref{eq:9.2.7} is this: if
+  always produce the same result. The definition of the products in \eqref{eq:9.2.7} is this: if
   $y$ is any three-times differentiable function then
   \begin{alist}
     \item % (a)
@@ -224,9 +224,9 @@ From \eqref{eq:9.2.9}, we can rewrite \eqref{eq:9.2.10} as
   (D^{2}+1)(D-1)y=0,
 \]
 which implies that any solution of $(D-1)y=0$ is a solution of \eqref{eq:9.2.10}. Therefore
-$y_{3}=e^{x}$ is solution of \eqref{eq:9.2.10}.
+$y_{3}=e^{x}$ is a solution of \eqref{eq:9.2.10}.
 
-The Wronskian of $\{e^{x},\cos x,\sin x\}$ is
+The Wronskian of $\{\cos x,\sin x,e^{x}\}$ is
 \[
   W(x)=\left|
   \begin{array}{rrr}
@@ -301,7 +301,7 @@ Since
 \]
 $\{e^{2x},e^{-2x},\cos2x,\sin2x\}$ is linearly independent, and
 \[
-  y_{1}=c_{1}e^{2x}+c_{2}e^{-2x}+c_{3}\cos2x+c_{4}\sin2x
+  y=c_{1}e^{2x}+c_{2}e^{-2x}+c_{3}\cos2x+c_{4}\sin2x
 \]
 is the general solution of \eqref{eq:9.2.11}.
 
@@ -324,7 +324,7 @@ where $r_{j}$ is real and $m_{j}$ is a positive integer, or
 \end{equation}
 where $\lambda_{j}$ and $\omega_{j}$ are real, $\omega_{j}\ne0$, and $m_{j}$ is a positive integer.
 If \eqref{eq:9.2.12} holds then $r_{j}$ is a real zero of $p$, while if \eqref{eq:9.2.13} holds then
-$\lambda+i\omega$ and $\lambda-i\omega$ are complex conjugate zeros of $p$. In either case, $m_{j}$
+$\lambda_{j}+i\omega_{j}$ and $\lambda_{j}-i\omega_{j}$ are complex conjugate zeros of $p$. In either case, $m_{j}$
 is the {\color{blue}\it multiplicity\/} of the zero(s).
 
 By arguments similar to those used in our examples, it can be shown that
@@ -339,7 +339,7 @@ $p_{j}(D)$ is applied first. Therefore the problem of finding solutions of $p(D)
   p_{j}(D)y=0,\quad1\le j\le k,
 \]
 where $p_{j}$ is a power of a first degree term or of an irreducible quadratic. To find a
-fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of $p(D)y=0$, we find fundamental set of
+fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of $p(D)y=0$, we find a fundamental set of
 solutions of each of the equations and take $\{y_{1},y_{2},\dots,y_{n}\}$ to be the set of all
 functions in these separate fundamental sets. In Exercise~\ref{exer:9.2.40} we sketch the proof that
 $\{y_{1},y_{2},\dots,y_{n}\}$ is linearly independent, and therefore a fundamental set of solutions
@@ -396,14 +396,14 @@ $f$ is any polynomial of degree $\le m-1$. In particular, each function in \eqre
 solution of \eqref{eq:9.2.16}. To see that \eqref{eq:9.2.15} is linearly independent (and therefore
 a fundamental set of solutions of \eqref{eq:9.2.16}), note that if
 \[
-  c_{1}e^{ax}+c_{2}xe^{ax}+c\dots+c_{m-1}x^{m-1}e^{ax}=0
+  c_{1}e^{ax}+c_{2}xe^{ax}+\cdots+c_{m}x^{m-1}e^{ax}=0
 \]
 for all $x$ in some interval $(a,b)$, then
 \[
-  c_{1}+c_{2}x+c\dots+c_{m-1}x^{m-1}=0
+  c_{1}+c_{2}x+\cdots+c_{m}x^{m-1}=0
 \]
 for all $x$ in $(a,b)$. However, we know from algebra that if this polynomial has more than $m-1$
-zeros then $c_{1}=c_{2}=\cdots=c_{n}=0$.
+zeros then $c_{1}=c_{2}=\cdots=c_{m}=0$.
 
 \begin{example}
   \label{example:9.2.5} \rm Find the general solution of
@@ -694,7 +694,7 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     \]
     where each $p_{j}$ is of the form
     \[
-      p_{j}(r)=(r-r_{j})^{n_{j}}\mbox{ or }p_{j}(r)=[(r-\lambda_{j})^{2}+w^{2}_{j}]^{m_{j}}\quad(\omega_{j}>0)
+      p_{j}(r)=(r-r_{j})^{n_{j}}\mbox{ or }p_{j}(r)=[(r-\lambda_{j})^{2}+\omega^{2}_{j}]^{m_{j}}\quad(\omega_{j}>0)
     \]
     and no two of the polynomials $p_{1}$, $p_{2}$, \dots, $p_{k}$ have a common factor. Show that
     we can find a fundamental set of solutions $\{y_{1},y_{2},\dots,y_{n}\}$ of {\rm(A)} by finding
@@ -720,7 +720,7 @@ respectively. These ten functions form a fundamental set of solutions of \eqref{
     where $p_{1}$ and $q_{1}$ are polynomials of degree $\le k-1$.
 
     \item % (b)
-    Apply \part{a} $m$ times to show that if $z$ is of the form (A) where $p$ and $q$ are polynomial
+    Apply \part{a} $m$ times to show that if $z$ is of the form (A) where $p$ and $q$ are polynomials
     of degree $\le m-1$, then
     \[
       (D^{2}+\omega^{2})^{m}z=0. \eqno{\rm(B)}

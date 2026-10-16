@@ -477,26 +477,119 @@ sections:
       - "Binet equation, Kepler area relation, conic formulas and supplied orbital answers independently derived."
       - "EPS orbit diagrams not inspected visually."
   "7.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: prose, where: "Theorem 7.1.2", note: "the these -> these"}
+      - {kind: math, where: "Example 7.1.1(b)", note: "a_n=(1)^n/n! -> (-1)^n/n!"}
+      - {kind: math, where: "Linear combinations", note: "c_1 f+c_2 f -> c_1 f+c_2 g"}
+      - {kind: math, where: "Equation (7.1.14)", note: "2y''-xy'+2y -> 2y''-xy''+2y"}
+      - {kind: math, where: "Exercise 7.1.20", note: "last derivative factor n+r-k -> n+r-k+1"}
+      - {kind: typeset, where: "Exercises 7.1.1(a), 7.1.5(b,f)", note: "summation starts at zero with a zero denominator -> starts at one"}
+      - {kind: math, where: "Exercises 7.1.11-15", note: "ask for a power series solution without an equation -> ask for the series of each expression"}
+      - {kind: ref, where: "Section 7.1 answers heading", note: "last exercise page reference 25 -> 26"}
+      - {kind: answer, where: "Answers 7.1.16, 7.1.22", note: "recurrence lower bounds n>=2 and n>=14 -> n>=1"}
+    remarks:
+      - "Radius and interval answers, power-series coefficient formulas, and index shifts checked independently."
+      - "Computer-plot exercises 6-10 and 18-19 not plotted; EPS figure not inspected."
   "7.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: ref, where: "After (7.2.8)", note: "Theorem 7.1.6(a) -> 7.1.6(b)"}
+      - {kind: math, where: "Examples of (7.2.16)", note: "remove Airy's equation, which is not of this form"}
+      - {kind: typeset, where: "Interval after (7.2.16)", note: "malformed square-root delimiters -> 1/sqrt(|alpha|)"}
+      - {kind: typeset, where: "Proof of Theorem 7.2.2", note: "malformed parentheses around (x-x_0)^2"}
+      - {kind: math, where: "Example 7.2.3", note: "P_0=2+4x-x^2 -> 2+4x-2x^2"}
+      - {kind: ref, where: "Exercise 7.2.9(c)", note: "compare with part (a) -> part (b)"}
+      - {kind: prose, where: "Exercise 7.2.27(c)", note: "of of -> of"}
+      - {kind: math, where: "Exercise 7.2.30(b)", note: "y_2(-x)=-y_2(-x) -> -y_2(x)"}
+      - {kind: math, where: "Exercise 7.2.31(a)", note: "a_0 y_1+a_1 y_1 -> a_0 y_1+a_1 y_2"}
+      - {kind: answer, where: "Answer 7.2.23", note: "printed coefficients solve the equation with 18(x-1)y', while the exercise prints (x-1)y'; intended correction is unclear", open: true}
+      - {kind: ref, where: "Section 7.2 answers heading", note: "last exercise page reference 43 -> 44"}
+    remarks:
+      - "Theorem recurrences, displayed example coefficients, and supplied IVP coefficients 11-13 and 21-26 checked."
+      - "Computer-plot exercises 9-10 and 14-15 not plotted."
   "7.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: ref, where: "Example 7.3.1 convergence", note: "Theorem 7.2.2 -> 7.2.1"}
+      - {kind: math, where: "Example 7.3.2 series", note: "constant -2 -> 2 to satisfy y(-1)=2"}
+      - {kind: math, where: "Example 7.3.2 Taylor polynomial", note: "a_n x^n -> a_n(x+1)^n"}
+      - {kind: ref, where: "Example 7.3.3 convergence", note: "equation (7.3.9) -> (7.3.7)"}
+      - {kind: math, where: "Exercise 7.3.16", note: "define 0<r<1 and use an infinite series for y"}
+      - {kind: math, where: "Exercise 7.3.40", note: "y(0)-2 -> y(0)=-2"}
+      - {kind: math, where: "Exercise 7.3.44", note: "missing y and =0 in the differential equation"}
+      - {kind: math, where: "Exercise 7.3.49", note: "missing =0 in the differential equation"}
+    remarks:
+      - "Recurrences and supplied coefficients for exercises 1-12, 19-28, 32-38, and 40-49 independently recomputed with exact fractions."
+      - "Numerical graph experiments 13-18 not plotted."
   "7.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: ref, where: "Opening box", note: "Sections 1.5-1.7 -> 7.5-7.7"}
+      - {kind: math, where: "Opening definition of singular point", note: "P(x_0)=0 -> P_0(x_0)=0"}
+      - {kind: math, where: "Exercise 7.4.8", note: "-5xy'' -> -5xy' to make an Euler equation and match the answer"}
+      - {kind: prose, where: "Exercise 7.4.19(a)", note: "missing 'satisfies' before transformed equation"}
+      - {kind: typeset, where: "Answer 7.4.9", note: "removed stray unmatched bold group"}
+      - {kind: typeset, where: "Answer 7.4.12", note: "closed sin(2 ln x) before right bracket"}
+    remarks:
+      - "Euler indicial equations and all supplied answers 1-18 checked independently."
   "7.5":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: math, where: "Opening generalization", note: "A_0(0) -> A(0)"}
+      - {kind: ref, where: "Proof of Theorem 7.5.1", note: "differentiate (3) -> (7.5.3)"}
+      - {kind: math, where: "Proof of Theorem 7.5.1", note: "coefficient of x^(r+1): p_1(r)a_2 -> p_1(r)a_0"}
+      - {kind: math, where: "Example 7.5.3", note: "a_2m(1/3) -> a_2m(2) in y_1"}
+      - {kind: math, where: "Exercise 7.5.31", note: "add =0 to the differential equation"}
+      - {kind: ref, where: "Exercise 7.5.52(b)", note: "use part (b) -> use part (a)"}
+      - {kind: math, where: "Exercise 7.5.58(a)", note: "state nonzero denominator condition p_0(n+r) != 0"}
+      - {kind: answer, where: "Answer 7.5.6", note: "second Frobenius solution shifted by a factor x -> starts with 1"}
+      - {kind: answer, where: "Answer 7.5.30", note: "coefficient -55/384 -> +55/384"}
+      - {kind: typeset, where: "Answers 7.5.21, 7.5.22, 7.5.32", note: "removed semicolons embedded in series formulas"}
+      - {kind: typeset, where: "Answers 7.5.15, 7.5.25, 7.5.53", note: "restored missing y_2 and part (b) labels"}
+    remarks:
+      - "Frobenius recurrences and printed coefficients for exercises 1-10, 28-32, and 33-46 checked with exact fractions; closed-form answers 61-68 checked by substitution."
+      - "Computer verification exercises 11-13, 26-27 not run."
   "7.6":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: math, where: "Proof of Theorem 7.6.2", note: "p_0'(r)=2 alpha(r-r_1) -> 2 alpha_0(r-r_1)"}
+      - {kind: math, where: "Example 7.6.1 recurrence", note: "incorrect minus sign in intermediate a_1(r) expression"}
+      - {kind: math, where: "Example 7.6.2 recurrence", note: "n>=0 -> n>=1 for a_n in terms of a_(n-1)"}
+      - {kind: math, where: "Exercise 7.6.2", note: "first derivative y' -> y''"}
+      - {kind: math, where: "Exercise 7.6.39", note: "add =0 to the differential equation"}
+      - {kind: math, where: "Exercise 7.6.55(b)", note: "a_qm'(r_1) J_m -> a_qm(r_1) J_m; require nonzero factors in logarithmic derivative"}
+      - {kind: ref, where: "Exercise 7.6.57", note: "Exercise 7.5.53 -> 7.5.60"}
+      - {kind: typeset, where: "Answers 7.6.14, 7.6.18, 7.6.24", note: "repaired broken math grouping and an extra parenthesis"}
+      - {kind: typeset, where: "Answer 7.6.37", note: "y_2=y_2 1 ln x -> y_2=y_1 ln x"}
+    remarks:
+      - "Repeated-root recurrences and answer pairs 1-11 and 39-43 checked with exact coefficients and r-derivatives; answers 44, 45, and 49 checked by substitution."
+      - "Computer exercises were not run; no EPS figures in this section."
   "7.7":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: math, where: "Example 7.7.1 equation (7.7.12)", note: "missing x^n in finite sum for y_2"}
+      - {kind: prose, where: "Example 7.7.1 differentiation", note: "obtain obtain -> obtain"}
+      - {kind: math, where: "Example 7.7.2 equation (7.7.19)", note: "missing x^n in finite sum for y_2"}
+      - {kind: math, where: "Example 7.7.3 logarithmic derivative", note: "three incorrect n indices -> m"}
+      - {kind: answer, where: "Answer 7.7.1", note: "missing x^3 multiplying the derivative-series correction"}
+    remarks:
+      - "Indicial roots, initial coefficients, and obstruction coefficients checked for answers 1-12 and 23-34; finite second solutions in 13-22 and 35-40 checked by substitution."
+      - "No computer plotting or EPS inspection in this section."
   "8.1":
     text: todo
     answers: todo
@@ -589,7 +682,7 @@ other_files:
   chapters/04/chapter.tex: done  # doubled 'other' and missing article corrected
   chapters/05/chapter.tex: done  # agreement and section number corrected
   chapters/06/chapter.tex: done  # section descriptions and agreement corrected
-  chapters/07/chapter.tex: todo
+  chapters/07/chapter.tex: done  # qualified claim about elementary closed-form solutions
   chapters/08/chapter.tex: todo
   chapters/09/chapter.tex: todo
   chapters/10/chapter.tex: todo

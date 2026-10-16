@@ -1,7 +1,7 @@
 \section{Regular Singular Points: Euler Equations}
 
 \noindent
-\bigbox{This section sets the stage for Sections~1.5, 1.6, and 1.7. If you're not interested in
+\bigbox{This section sets the stage for Sections~7.5, 7.6, and 7.7. If you're not interested in
 those sections, but wish to learn about Euler equations, omit the introductory paragraphs and start
 reading at Definition~\ref{thmtype:7.4.2}.}
 
@@ -13,7 +13,7 @@ In the next three sections we'll continue to study equations of the form
 where $P_{0}$, $P_{1}$, and $P_{2}$ are polynomials, but the emphasis will be different from that of
 Sections~7.2 and 7.3, where we obtained solutions of \eqref{eq:7.4.1} near an ordinary point $x_{0}$
 in the form of power series in $x-x_{0}$. If $x_{0}$ is a singular point of \eqref{eq:7.4.1} (that
-is, if $P(x_{0})=0$), the solutions can't in general be represented by power series in $x-x_{0}$.
+is, if $P_{0}(x_{0})=0$), the solutions can't in general be represented by power series in $x-x_{0}$.
 Nevertheless, it's often necessary in physical applications to study the behavior of solutions of
 \eqref{eq:7.4.1} near a singular point. Although this can be difficult in the absence of some sort
 of assumption on the nature of the singular point, equations that satisfy the requirements of the
@@ -281,7 +281,7 @@ $(0,\infty)$ is
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \item\label{exer:7.4.7} $x^{2}y''+3xy'-3y=0$ &
-    \item\label{exer:7.4.8} $12x^{2}y''-5xy''+6y=0$
+    \item\label{exer:7.4.8} $12x^{2}y''-5xy'+6y=0$
   \end{tabular}
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -318,9 +318,9 @@ $(0,\infty)$ is
     \begin{equation}
       \label{eq:7.4.{exer:7.4.19}A}ax^{2}y''+bxy'+cy=0
     \end{equation}
-    on $(-\infty,0)$ if and only if $Y(t)=y(-e^{t})$
+    on $(-\infty,0)$ if and only if $Y(t)=y(-e^{t})$ satisfies
     \[
-      a\frac{d^{2}Y}{dt^{2}}+(b-a)\frac{dY}{dt}+cY=0.
+      a\frac{d^{2}Y}{dt^{2}}+(b-a)\frac{dY}{dt}+cY=0
     \]
     on $(-\infty,\infty)$.
 

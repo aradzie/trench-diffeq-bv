@@ -119,7 +119,7 @@ so
 which is nonzero if $n>0$. Therefore the assumptions of Theorem~\ref{thmtype:7.6.1} hold with
 $r=r_{1}$, and \eqref{eq:7.6.4} implies that $Ly_{1}=p_{0}(r_{1})x^{r_{1}}=0$. Since
 \[
-  p_{0}'(r)=2\alpha(r-r_{1})
+  p_{0}'(r)=2\alpha_{0}(r-r_{1})
 \]
 it follows that $p_{0}'(r_{1})=0$, so \eqref{eq:7.6.6} implies that
 \[
@@ -156,7 +156,7 @@ series, we use the recurrence formulas from Theorem~\ref{thmtype:7.6.1}:
   \label{eq:7.6.11}
   \begin{array}{ccl}
     a_{0}(r) & = & 1,                                                                                          \\
-    a_{1}(r) & = & -\dst\frac{p_{1}(r)}{p_{0}(r+1)} =-\dst\frac{(r-1)(2r+1)}{(r-1)^{2}} =\dst\frac{2r+1}{r-1}, \\[10pt]
+    a_{1}(r) & = & -\dst\frac{p_{1}(r)}{p_{0}(r+1)} =\dst\frac{(r-1)(2r+1)}{(r-1)^{2}} =\dst\frac{2r+1}{r-1}, \\[10pt]
     a_{n}(r) & = & -\dst\frac{p_{1}(n+r-1)a_{n-1}(r)+p_{2}(n+r-2)a_{n-2}(r)}{p_{0}(n+r)}                       \\[10pt]
              & = & \dst\frac{(n+r-2)\left[(2n+2r-1)a_{n-1}(r) -(n+r-3)a_{n-2}(r)\right]}{(n+r-2)^{2}}          \\[10pt]
              & = & \dst{\frac{(2n+2r-1)}{(n+r-2)}a_{n-1}(r)- \frac{(n+r-3)}{(n+r-2)}a_{n-2}(r)},n\ge2.
@@ -245,7 +245,7 @@ recurrence formulas in Theorem~\ref{thmtype:7.6.1} reduce to
     a_{0}(r) & = & 1,                                                   \\
     a_{n}(r) & = & -\dst\frac{p_{1}(n+r-1)}{p_{0}(n+r)}a_{n-1}(r),      \\[10pt]
              & = & -\dst\frac{(n+r)(2n+2r-1)}{(2n+2r-1)^{2}}a_{n-1}(r), \\[10pt]
-             & = & -\dst\frac{n+r}{2n+2r-1}a_{n-1}(r),\quad n\ge0.
+             & = & -\dst\frac{n+r}{2n+2r-1}a_{n-1}(r),\quad n\ge1.
   \end{array}
 \]
 We leave it to you to show that
@@ -492,7 +492,7 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 \begin{exerciselist}
   \item\label{exer:7.6.1} \Cex $x^{2}y''-x(1-x)y'+(1-x^{2})y=0$
 
-  \item\label{exer:7.6.2} \Cex $x^{2}(1+x+2x^{2})y'+x(3+6x+7x^{2})y'+(1+6x-3x^{2})y=0$
+  \item\label{exer:7.6.2} \Cex $x^{2}(1+x+2x^{2})y''+x(3+6x+7x^{2})y'+(1+6x-3x^{2})y=0$
 
   \item\label{exer:7.6.3} \Cex $x^{2}(1+2x+x^{2})y''+x(1+3x+4x^{2})y'-x(1-2x)y=0$
 
@@ -582,7 +582,7 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
   $3$) and $r_{1}$ is the root of the indicial equation. Optionally, write a computer program to
   implement the applicable recurrence formulas and take $M>3$.}
 
-  \item\label{exer:7.6.39} \Cex $x^{2}(1+x^{2})y''+x(3+8x^{2})y'+(1+12x^{2})y$
+  \item\label{exer:7.6.39} \Cex $x^{2}(1+x^{2})y''+x(3+8x^{2})y'+(1+12x^{2})y=0$
 
   \item\label{exer:7.6.40} \Cex $x^{2}y''-x(1-x^{2})y'+(1+x^{2})y=0$
 
@@ -719,9 +719,10 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
     \]
 
     \item % (b)
+    Suppose $p_{q}(q(j-1)+r_{1})\ne0$ for every positive integer $j$.
     Show that $Ly=0$ has the second solution
     \[
-      y_{2}=y_{1}\ln x+x^{r_{1}}\sum_{m=1}^{\infty}a_{qm}'(r_{1})J_{m}x^{qm},
+      y_{2}=y_{1}\ln x+x^{r_{1}}\sum_{m=1}^{\infty}a_{qm}(r_{1})J_{m}x^{qm},
     \]
     where
     \[
@@ -753,7 +754,7 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
   (See Exercise~\ref{exer:7.5.53}.) Find two linearly independent Frobenius solutions of this
   equation.
 
-  \item\label{exer:7.6.57} Suppose the assumptions of Exercise~7.5.~\hspace*{-3pt}\ref{exer:7.5.53}
+  \item\label{exer:7.6.57} Suppose the assumptions of Exercise~\ref{exer:7.5.60}
         hold, except that
   \[
     p_{0}(r)=\alpha_{0}(r-r_{1})^{2}.

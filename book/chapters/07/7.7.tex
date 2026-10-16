@@ -145,7 +145,7 @@ Theorem~\ref{thmtype:7.7.1} implies that
 \end{equation}
 and
 \begin{equation}
-  \label{eq:7.7.12}y_{2}=x^{-1/2}\sum_{n=0}^{2}a_{n}(-1/2)+C\left(y_{1}\ln x+x^{5/2}\sum_{n=1}^{\infty}a_{n}'(5/2)x^{n}\right)
+  \label{eq:7.7.12}y_{2}=x^{-1/2}\sum_{n=0}^{2}a_{n}(-1/2)x^{n}+C\left(y_{1}\ln x+x^{5/2}\sum_{n=1}^{\infty}a_{n}'(5/2)x^{n}\right)
 \end{equation}
 (with $C$ as in \eqref{eq:7.7.4}) form a fundamental set of solutions of $Ly=0$. The recurrence
 formula \eqref{eq:7.7.2} is
@@ -251,7 +251,7 @@ Theorem~\ref{thmtype:7.7.1} implies that
 \end{equation}
 and
 \begin{equation}
-  \label{eq:7.7.19}y_{2}=x^{-6}\sum_{n=0}^{4}a_{n}(-6)+C\left(y_{1}\ln x+x^{-1}\sum_{n=1}^{\infty}a_{n}'(-1)x^{n}\right)
+  \label{eq:7.7.19}y_{2}=x^{-6}\sum_{n=0}^{4}a_{n}(-6)x^{n}+C\left(y_{1}\ln x+x^{-1}\sum_{n=1}^{\infty}a_{n}'(-1)x^{n}\right)
 \end{equation}
 (with $C$ as in \eqref{eq:7.7.4}) form a fundamental set of solutions of $Ly=0$. The recurrence
 formula \eqref{eq:7.7.2} is
@@ -426,7 +426,7 @@ To obtain $a_{2m}'(r)$ we use logarithmic differentiation. From \eqref{eq:7.7.27
 \]
 Therefore
 \[
-  \ln|a_{2m}(r)|=\sum^{n}_{j=1}\left(\ln|2j+r|-\ln|2j+r-3|\right).
+  \ln|a_{2m}(r)|=\sum^{m}_{j=1}\left(\ln|2j+r|-\ln|2j+r-3|\right).
 \]
 Differentiating with respect to $r$ yields
 \[
@@ -434,7 +434,7 @@ Differentiating with respect to $r$ yields
 \]
 Therefore
 \[
-  a'_{2m}(r)=a_{2m}(r)\sum^{n}_{j=1}\left(\frac{1}{2j+r}-\frac{1}{2j+r-3}\right).
+  a'_{2m}(r)=a_{2m}(r)\sum^{m}_{j=1}\left(\frac{1}{2j+r}-\frac{1}{2j+r-3}\right).
 \]
 Setting $r=3$ here and recalling \eqref{eq:7.7.28} yields
 \begin{equation}
@@ -446,7 +446,7 @@ Since
 \]
 we can rewrite \eqref{eq:7.7.30} as
 \[
-  a_{2m}'(3)=-\frac{3}{2}\frac{(-1)^{n}\prod_{j=1}^{m}(2j+3)}{2^{m}m!}\left(\sum_{j=1}^{n}\frac{1}{j(2j+3)}\right).
+  a_{2m}'(3)=-\frac{3}{2}\frac{(-1)^{m}\prod_{j=1}^{m}(2j+3)}{2^{m}m!}\left(\sum_{j=1}^{m}\frac{1}{j(2j+3)}\right).
 \]
 Substituting this into \eqref{eq:7.7.29} yields
 \begin{eqnarray*}

@@ -34,7 +34,7 @@ set of all values of $x$ for which it converges forms an interval.
   \[
     \sum_{n=0}^{\infty}a_{n}(x-x_{0})^{n},
   \]
-  exactly one of the these statements is true:
+  exactly one of these statements is true:
   \begin{rmlist}
     \item % (i)
     The power series converges only for $x=x_{0}$.
@@ -97,7 +97,7 @@ values. For related theorems see Exercises~\ref{exer:7.1.2} and \ref{exer:7.1.4}
 \]
 Hence, $R=0$.
 
-\solutionpart{b} Here $a_{n}=(1)^{n}/n!$ for $n\ge N=10$, so
+\solutionpart{b} Here $a_{n}=(-1)^{n}/n!$ for $n\ge N=10$, so
 \[
   \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_{n}}\right|=\lim_{n\to\infty}\frac{n!}{(n+1)!}=\lim_{n\to\infty}\frac{1}{n+1}=0.
 \]
@@ -381,7 +381,7 @@ converges for $|x-x_{0}|<R_{2}$, then
 for $|x-x_{0}|<R$, where $R$ is the smaller of $R_{1}$ and $R_{2}$. More generally, linear
 combinations of power series can be formed term by term; for example,
 \[
-  c_{1}f(x)+c_{2}f(x)=\sum_{n=0}^{\infty}(c_{1}a_{n}+c_{2}b_{n})(x-x_{0})^{n}.
+  c_{1}f(x)+c_{2}g(x)=\sum_{n=0}^{\infty}(c_{1}a_{n}+c_{2}b_{n})(x-x_{0})^{n}.
 \]
 
 \begin{example}
@@ -448,7 +448,7 @@ Therefore
 \begin{equation}
   \label{eq:7.1.14}
   \begin{array}{rcl}
-    (2-x)y''+2y & = & 2y''-xy'+2y                                                                                                          \\[\jot]
+    (2-x)y''+2y & = & 2y''-xy''+2y                                                                                                          \\[\jot]
                 & = & \dst{\sum_{n=2}^{\infty}2n(n-1)a_{n}x^{n-2} -\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-1} +\sum_{n=0}^{\infty}2a_{n}x^{n}}.
   \end{array}
 \end{equation}
@@ -530,7 +530,7 @@ since the summation in \eqref{eq:7.1.22} begins with $n=1$, while those in \eqre
         of convergence $R$. If $R>0$, find the open interval of convergence.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-    {\bf (a)} $\dst{\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2^{n}n}(x-1)^{n}}$ & {\bf (b)} $\dst{\sum_{n=0}^{\infty}2^{n}n(x-2)^{n}}$                         \\
+    {\bf (a)} $\dst{\sum_{n=1}^{\infty}\frac{(-1)^{n}}{2^{n}n}(x-1)^{n}}$ & {\bf (b)} $\dst{\sum_{n=0}^{\infty}2^{n}n(x-2)^{n}}$                         \\
     {\bf (c)} $\dst{\sum_{n=0}^{\infty}\frac{n!}{9^{n}}x^{n}}$            & {\bf (d)} $\dst{\sum_{n=0}^{\infty}\frac{n(n+1)}{16^{n}}(x-2)^{n}}$          \\
     {\bf (e)} $\dst{\sum_{n=0}^{\infty}(-1)^{n}\frac{7^{n}}{n!}x^{n}}$    & {\bf (f)} $\dst{\sum_{n=0}^{\infty}\frac{3^{n}}{4^{n+1}(n+1)^{2}}(x+7)^{n}}$
   \end{tabular}
@@ -572,9 +572,9 @@ since the summation in \eqref{eq:7.1.22} begins with $n=1$, while those in \eqre
         the radius of convergence $R$. If $R>0$, find the open interval of convergence.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-    {\bf (a)} $\dst{\sum_{m=0}^{\infty}\frac{(-1)^{m}}{(27)^{m}}(x-3)^{3m+2}}$ & {\bf (b)} $\dst{\sum_{m=0}^{\infty}\frac{x^{7m+6}}{m}}$                       \\
+    {\bf (a)} $\dst{\sum_{m=0}^{\infty}\frac{(-1)^{m}}{(27)^{m}}(x-3)^{3m+2}}$ & {\bf (b)} $\dst{\sum_{m=1}^{\infty}\frac{x^{7m+6}}{m}}$                       \\
     {\bf (c)} $\dst{\sum_{m=0}^{\infty}\frac{9^{m}(m+1)}{(m+2)}(x-3)^{4m+2}}$  & {\bf (d)} $\dst{\sum_{m=0}^{\infty}(-1)^{m}\frac{2^{m}}{m!}x^{4m+3}}$         \\
-    {\bf (e)} $\dst{\sum_{m=0}^{\infty}\frac{m!}{(26)^{m}}(x+1)^{4m+3}}$       & {\bf (f)} $\dst{\sum_{m=0}^{\infty}\frac{(-1)^{m}}{8^{m}m(m+1)}(x-1)^{3m+1}}$
+    {\bf (e)} $\dst{\sum_{m=0}^{\infty}\frac{m!}{(26)^{m}}(x+1)^{4m+3}}$       & {\bf (f)} $\dst{\sum_{m=1}^{\infty}\frac{(-1)^{m}}{8^{m}m(m+1)}(x-1)^{3m+1}}$
   \end{tabular}
 
   \item\label{exer:7.1.6} \Lex Graph $y=\sin x$ and the Taylor polynomial
@@ -615,8 +615,8 @@ since the summation in \eqref{eq:7.1.22} begins with $n=1$, while those in \eqre
   there's no perceptible difference between the two graphs. Choose the scale on the $y$-axis so
   that~$-75~\le~y\le~75$.
 
-  \exercisetext{In Exercises~\ref{exer:7.1.11}--\ref{exer:7.1.15} find a power series solution
-  $y(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$.}
+  \exercisetext{In Exercises~\ref{exer:7.1.11}--\ref{exer:7.1.15}, express the given function
+  as a power series $\sum_{n=0}^{\infty}b_{n}x^{n}$ if $y(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$.}
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \item\label{exer:7.1.11} $\vspace*{-5pt}(2+x)y''+xy'+3y$ &
@@ -681,7 +681,7 @@ since the summation in \eqref{eq:7.1.22} begins with $n=1$, while those in \eqre
     y'(x)      & =      & \dst{\sum_{n=0}^{\infty}(n+r)a_{n}x^{n+r-1}},        \\[10pt]
     y''(x)     & =      & \dst{\sum_{n=0}^{\infty}(n+r)(n+r-1)a_{n}x^{n+r-2}}, \\
                & \vdots &                                                      \\
-    y^{(k)}(x) & =      & \dst{\sum_{n=0}^{\infty}(n+r)(n+r-1)\cdots(n+r-k)a_{n}x^{n+r-k}}
+    y^{(k)}(x) & =      & \dst{\sum_{n=0}^{\infty}(n+r)(n+r-1)\cdots(n+r-k+1)a_{n}x^{n+r-k}}
   \end{eqnarray*}
   on $(0,R)$
   \newpage

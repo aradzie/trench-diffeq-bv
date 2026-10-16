@@ -305,26 +305,112 @@ sections:
       - "Derived family equations and orthogonal trajectories; checked all printed answers and tangency points."
       - "EPS figures not inspected visually."
   "5.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: prose, where: "Chapter introduction", note: "differential equation have -> differential equations have"}
+      - {kind: ref, where: "Chapter introduction", note: "variation of parameters SECTION 5.6 -> SECTION 5.7"}
+      - {kind: math, where: "Proof of Thm 5.1.5", note: "linearly independent -> linearly dependent when y_1 is zero"}
+      - {kind: math, where: "Ex 27", note: "alpha gamma - beta delta -> alpha delta - beta gamma"}
+      - {kind: math, where: "Ex 38", note: "IVP at 0 -> IVP at x_0, consistent with requested basis and answer"}
+      - {kind: ref, where: "Thm 5.1.7", note: "self reference to Thm 5.1.7 -> Thm 5.1.6"}
+      - {kind: ref, where: "Example 5.1.3", note: "P(0) -> P_0(0)"}
+      - {kind: prose, where: "Example 5.1.2 solution", note: "must choosing -> must choose"}
+      - {kind: prose, where: "Example 5.1.3", note: "are are -> are"}
+      - {kind: prose, where: "Ex 9", note: "solutions on (A) -> solutions of (A)"}
+    remarks:
+      - "Answers 1-8 and 37-44 checked by hand; 10-23 and 35 checked by symbolic ODE residuals and Wronskians."
   "5.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Thm 5.2.1", note: "add a nonzero hypothesis"}
+      - {kind: math, where: "Complex roots derivation", note: "omega denominator 2a -> 2|a| so omega is positive for a<0"}
+      - {kind: math, where: "Repeated root derivation", note: "r u -> r_1 u in derivative; e^{rx} -> e^{r_1 x}"}
+      - {kind: math, where: "Ex 34(a)", note: "theta^2/2 and theta^4/4 -> theta^2/2! and theta^4/4!"}
+      - {kind: typeset, where: "Ex 33(a,b)", note: "partial^2/partial^2 x -> partial^2/partial x^2"}
+      - {kind: prose, where: "Repeated root derivation", note: "stray t before y_1"}
+      - {kind: prose, where: "Complex root derivation", note: "to to expect -> to expect; nonconstant so -> nonconstant"}
+      - {kind: prose, where: "Opening", note: "a,b -> a, b"}
+    remarks:
+      - "Answers 1-21, 23-28, 30-32 checked against characteristic roots and initial conditions."
+      - "Exercises 18-21 ask for graphs; plots and EPS figures were not inspected visually."
   "5.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Ex 15", note: "specify x>0 for arbitrary real exponent alpha"}
+      - {kind: math, where: "Thm 5.3.2 application", note: "add missing P_2 continuity hypothesis"}
+      - {kind: math, where: "Ex 32", note: "clarify that cosine and sine solve the complementary equation in the excluded case"}
+      - {kind: math, where: "Ex 23", note: "state constants a, b, c and a nonzero"}
+      - {kind: typeset, where: "Thm 5.3.1", note: "malformed p, ,q -> p, q"}
+      - {kind: prose, where: "Before Example 5.3.1", note: "we to limit -> we limit"}
+      - {kind: prose, where: "Example 5.3.4 solution", note: "remove period between equation and sentence"}
+      - {kind: prose, where: "Ex 16-21 directions", note: "solution . -> solution."}
+      - {kind: prose, where: "Ex 33-38 directions", note: "principal -> principle"}
+    remarks:
+      - "All 30 listed answers checked by symbolic ODE residuals; IVP values and derivatives checked."
+      - "Exercises asking for computer graphs were checked algebraically; plots and EPS figures were not inspected visually."
   "5.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: answer, where: "Ans 24", note: "e^{-x} term sign negative -> positive"}
+      - {kind: math, where: "Equation before (5.4.9)", note: "remove extra k from forcing term"}
+      - {kind: math, where: "Example 5.4.5", note: "u''+2u' missing factor 2 on u' expression"}
+      - {kind: ref, where: "Example 5.4.3 solution", note: "(5.4.4) -> (5.4.6)"}
+      - {kind: ref, where: "Example 5.4.4 solution", note: "exercise:5.3.2 -> example:5.3.2"}
+    remarks:
+      - "Answers 1-29 checked by symbolic ODE residuals and all printed initial conditions; 31-37 checked against examples or by substitution; 39-40 checked by differentiation."
+      - "Exercise plots were not inspected."
   "5.5":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Thm 5.5.1 and Ex 38", note: "add a nonzero and P,Q not both zero hypotheses"}
+      - {kind: answer, where: "Ans 20", note: "wrong frequency and polynomial -> same particular solution as Ans 14 for identical ODE"}
+      - {kind: answer, where: "Ans 35", note: "missing answer -> add IVP solution"}
+      - {kind: math, where: "Thm 5.5.1", note: "all solutions are of trial form -> equation has a particular solution of trial form"}
+      - {kind: ref, where: "Exercises 18-21 directions", note: "Exercises 1-17 -> Exercises 18-21"}
+      - {kind: prose, where: "Opening", note: "we we -> we"}
+    remarks:
+      - "Answers 1-35 checked by symbolic ODE residuals and all printed initial conditions; 40(a-g) checked by differentiation."
+      - "Computer graph requests have not been checked visually."
   "5.6":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Example 5.6.1(b)", note: "y_p1 - y_p2 -> y_p2 - y_p1; y_1 solves (5.6.7), not (5.6.6)"}
+      - {kind: math, where: "Ex 40", note: "add r nonzero hypothesis and require z nonzero for quotient"}
+      - {kind: math, where: "Ex 37", note: "require z nonzero for quotient"}
+      - {kind: answer, where: "Ans 6", note: "second basis function x^{-1/2}e^{-x} -> x^{-1/2}e^{x}"}
+      - {kind: answer, where: "Ans 17", note: "ln x -> ln|x| on negative intervals"}
+      - {kind: answer, where: "Ans 38(a)", note: "add k=0 family omitted by formula"}
+      - {kind: ref, where: "Reduction method and Example 5.6.1", note: "variation of parameters in Section 1.2 -> 2.1"}
+      - {kind: ref, where: "Example 5.6.2(a)", note: "u solves (5.6.14) -> (5.6.13)"}
+      - {kind: typeset, where: "Ex 37 and Ex 40", note: "http://http:// -> http://"}
+      - {kind: prose, where: "Ex 38", note: "solutions. of -> solutions of"}
+    remarks:
+      - "Answers 1-30 and 32-35 checked by symbolic ODE residuals; 31 checked by hand; all IVP values checked. Answers 38-39 checked by Riccati substitution."
+      - "Exercises 34-35 require computer graphs; plots were not inspected."
   "5.7":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: ref, where: "Derivation of (5.7.7)", note: "differentiate (5.7.4) -> (5.7.6)"}
+      - {kind: ref, where: "Example 5.7.4", note: "general solution of self-referential (5.7.24) -> equation in (5.7.21)"}
+      - {kind: answer, where: "Ans 6", note: "ln arguments -> ln absolute arguments, valid also on x<0"}
+      - {kind: prose, where: "Recipe", note: "the a compromise -> a compromise"}
+    remarks:
+      - "Answers 1-35 checked by symbolic ODE residuals and all printed initial conditions."
+      - "Exercise plots and EPS figure were not inspected visually."
   "6.1":
     text: todo
     answers: todo
@@ -448,7 +534,7 @@ other_files:
   chapters/02/chapter.tex: done  # "can made" -> "can be made", "known called" -> "known as an"
   chapters/03/chapter.tex: done
   chapters/04/chapter.tex: done  # doubled 'other' and missing article corrected
-  chapters/05/chapter.tex: todo
+  chapters/05/chapter.tex: done  # agreement and section number corrected
   chapters/06/chapter.tex: todo
   chapters/07/chapter.tex: todo
   chapters/08/chapter.tex: todo

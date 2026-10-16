@@ -201,15 +201,15 @@ $a(y''-2r_{1}y'+r_{1}^{2}y)=0$. Since $a\ne0$ this equation has the same solutio
   \label{eq:5.2.12}y''-2r_{1}y'+r_{1}^{2}y=0.
 \end{equation}
 
-Since $p(r_{1})=0$, t $y_{1}=e^{r_{1}x}$ is a solution of $ay''+by'+cy=0$, and therefore of
+Since $p(r_{1})=0$, $y_{1}=e^{r_{1}x}$ is a solution of $ay''+by'+cy=0$, and therefore of
 \eqref{eq:5.2.12}. Proceeding as in Example~\ref{example:5.2.2}, we look for other solutions of
 \eqref{eq:5.2.12} of the form $y=ue^{r_{1}x}$; then
 \[
-  y'=u'e^{r_{1}x}+rue^{r_{1}x}\mbox{\quad and \quad}y''=u''e^{r_{1}x}+2r_{1}u'e^{r_{1}x}+r_{1}^{2}ue^{r_{1}x},
+  y'=u'e^{r_{1}x}+r_{1}ue^{r_{1}x}\mbox{\quad and \quad}y''=u''e^{r_{1}x}+2r_{1}u'e^{r_{1}x}+r_{1}^{2}ue^{r_{1}x},
 \]
 so
 \begin{eqnarray*}
-  y''-2r_{1}y'+r_{1}^{2}y & = & e^{rx}\left[(u''+2r_{1}u'+r_{1}^{2}u)-2r_{1}(u'+r_{1}u)+r_{1}^{2}u\right] \\
+  y''-2r_{1}y'+r_{1}^{2}y & = & e^{r_{1}x}\left[(u''+2r_{1}u'+r_{1}^{2}u)-2r_{1}(u'+r_{1}u)+r_{1}^{2}u\right] \\
                           & = & e^{r_{1}x}\left[u''+(2r_{1}-2r_{1})u'+(r_{1}^{2}-2r_{1}^{2}+r_{1}^{2})u\right]=u''e^{r_{1}x}.
 \end{eqnarray*}
 Therefore $y=ue^{r_{1}x}$ is a solution of \eqref{eq:5.2.12} if and only if $u''=0$, which is
@@ -313,13 +313,13 @@ $b^{2}-4ac<0$ and, from \eqref{eq:5.2.3}, the roots are
 \[
   r_{1}=\frac{-b+i\sqrt{4ac-b^{2}}}{2a},\quad r_{2}= \frac{-b-i\sqrt{4ac-b^{2}}}{2a},
 \]
-which we rewrite as
+which we rewrite, possibly after interchanging $r_{1}$ and $r_{2}$, as
 \begin{equation}
   \label{eq:5.2.17}r_{1}=\lambda+i\omega,\quad r_{2}=\lambda-i\omega,
 \end{equation}
 with
 \[
-  \lambda=-\frac{b}{2a},\quad\omega=\frac{\sqrt{4ac-b^{2}}}{2a}.
+  \lambda=-\frac{b}{2a},\quad\omega=\frac{\sqrt{4ac-b^{2}}}{2|a|}.
 \]
 Don't memorize these formulas. Just remember that $r_{1}$ and $r_{2}$ are of the form
 \eqref{eq:5.2.17}, where $\lambda$ is an arbitrary real number and $\omega$ is positive; $\lambda$
@@ -378,8 +378,7 @@ Therefore any function of the form
 \end{equation}
 is a solution of \eqref{eq:5.2.18}. Letting $c_{1}=1$ and $c_{2}=0$ here yields the solution
 $y_{1}=e^{\lambda x}\cos\omega x$. Letting $c_{1}=0$ and $c_{2}=1$ yields a second solution
-$y_{2}=e^{\lambda x}\sin\omega x$. Since $y_{2}/y_{1}=\tan\omega x$ is nonconstant, so
-Theorem~\ref{thmtype:5.1.6} implies that $\{y_{1},y_{2}\}$ is a fundamental set of solutions of
+$y_{2}=e^{\lambda x}\sin\omega x$. Since $y_{2}/y_{1}=\tan\omega x$ is nonconstant, Theorem~\ref{thmtype:5.1.6} implies that $\{y_{1},y_{2}\}$ is a fundamental set of solutions of
 \eqref{eq:5.2.18}, and \eqref{eq:5.2.19} is the general solution.
 
 \boxit{Summary}
@@ -389,7 +388,7 @@ The next theorem summarizes the results of this section.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:5.2.1} Let $p(r)=ar^{2}+br+c$ be the characteristic polynomial of
+  \label{thmtype:5.2.1} Let $a\ne0$ and let $p(r)=ar^{2}+br+c$ be the characteristic polynomial of
   \begin{equation}
     \label{eq:5.2.20}ay''+by'+cy=0.
   \end{equation}
@@ -562,13 +561,13 @@ The next theorem summarizes the results of this section.
     \item % (a)
     Show that
     \[
-      a\frac{\partial^{2}}{\partial^{2}x}(e^{rx})+b\frac{\partial}{\partial x}(e^{rx})+ce^{rx}=a(r-r_{1})^{2}e^{rx}. \eqno{\rm(B)}
+      a\frac{\partial^{2}}{\partial x^{2}}(e^{rx})+b\frac{\partial}{\partial x}(e^{rx})+ce^{rx}=a(r-r_{1})^{2}e^{rx}. \eqno{\rm(B)}
     \]
 
     \item % (b)
     Differentiate (B) with respect to $r$ to obtain
     \[
-      a\frac{\partial}{\partial r}\left(\frac{\partial^{2}}{\partial^{2}x}(e^{rx})\right)+b\frac{\partial}{\partial r}\left(\frac{\partial}{\partial x}(e^{rx})\right) +c(xe^{rx})=[2+(r-r_{1})x]a(r-r_{1})e^{rx}. \eqno{\rm(C)}
+      a\frac{\partial}{\partial r}\left(\frac{\partial^{2}}{\partial x^{2}}(e^{rx})\right)+b\frac{\partial}{\partial r}\left(\frac{\partial}{\partial x}(e^{rx})\right) +c(xe^{rx})=[2+(r-r_{1})x]a(r-r_{1})e^{rx}. \eqno{\rm(C)}
     \]
 
     \item % (c)
@@ -611,7 +610,7 @@ The next theorem summarizes the results of this section.
     \]
     Use this to group the terms in (D) as
     \begin{eqnarray*}
-      e^{i\theta} & = & \left(1-\frac{\theta^{2}}{2}+\frac{\theta^{4}}{4}+\cdots\right)+i\left(\theta-\frac{\theta^{3}}{3!}+\frac{\theta^{5}}{5!}+\cdots\right) \\[2\jot]
+      e^{i\theta} & = & \left(1-\frac{\theta^{2}}{2!}+\frac{\theta^{4}}{4!}+\cdots\right)+i\left(\theta-\frac{\theta^{3}}{3!}+\frac{\theta^{5}}{5!}+\cdots\right) \\[2\jot]
                   & = & \sum_{n=0}^{\infty}(-1)^{n}\frac{\theta^{2n}}{(2n)!}+i\sum_{n=0}^{\infty}(-1)^{n}\frac{\theta^{2n+1}}{(2n+1)!}.
     \end{eqnarray*}
     By comparing this result with (B) and (C), conclude that

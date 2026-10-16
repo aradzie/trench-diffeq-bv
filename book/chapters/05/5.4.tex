@@ -107,7 +107,7 @@ or
 \]
 Integrating twice and taking the constants of integration to be zero shows that $u_{p}=x^{2}$ is a
 particular solution of this equation, so $y_{p}=x^{2}e^{4x}$ is a particular solution of
-(\ref{eq:5.4.4}). Therefore
+(\ref{eq:5.4.6}). Therefore
 \[
   y=e^{4x}(x^{2}+c_{1}+c_{2}x)
 \]
@@ -148,7 +148,7 @@ directly into
 and solve for the constant $A$, as we did in Example~\ref{example:5.4.1}. (See
 Exercises~\ref{exer:5.4.31}--\ref{exer:5.4.33}.) However, if the equation is
 \[
-  ay''+by'+cy=ke^{\alpha x}G(x),
+  ay''+by'+cy=e^{\alpha x}G(x),
 \]
 where $G$ is a polynomial of degree greater than zero, we recommend that you use the substitution
 $y=ue^{\alpha x}$ as we did in Examples~\ref{example:5.4.2} and \ref{example:5.4.3}. The equation
@@ -189,7 +189,7 @@ or
 \begin{equation}
   \label{eq:5.4.11}u''+3u'+2u=-1+2x+x^{2}.
 \end{equation}
-As in Example~\ref{exer:5.3.2}, in order to guess a form for a particular solution of
+As in Example~\ref{example:5.3.2}, in order to guess a form for a particular solution of
 (\ref{eq:5.4.11}), we note that substituting a second degree polynomial $u_{p}=A+Bx+Cx^{2}$ for $u$
 in the left side of (\ref{eq:5.4.11}) produces another second degree polynomial with coefficients
 that depend upon $A$, $B$, and $C$; thus,
@@ -244,7 +244,7 @@ There's no $u$ term in this equation, since $e^{3x}$ is a solution of the comple
 particular solution of the form $u_{p}=A+Bx+Cx^{2}$ that we used successfully in
 Example~\ref{example:5.4.4}, since with this choice of $u_{p}$,
 \[
-  u_{p}''+2u_{p}'=2C+(B+2Cx)
+  u_{p}''+2u_{p}'=2C+2(B+2Cx)
 \]
 can't contain the last term ($12x^{2}$) on the right side of (\ref{eq:5.4.13}). Instead, let's try
 $u_{p}=Ax+Bx^{2}+Cx^{3}$ on the grounds that

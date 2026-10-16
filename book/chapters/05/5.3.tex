@@ -84,7 +84,7 @@ since $y$ and $y_{p}$ both satisfy \eqref{eq:5.3.3}. \bbox
 We say that \eqref{eq:5.3.5} is the {\color{blue}\it general solution of \eqref{eq:5.3.3} on
 $(a,b)$.\/}
 
-If $P_{0}$, $P_{1}$, and $F$ are continuous and $P_{0}$ has no zeros on $(a,b)$, then
+If $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are continuous and $P_{0}$ has no zeros on $(a,b)$, then
 Theorem~\ref{thmtype:5.3.2} implies that the general solution of
 \begin{equation}
   \label{eq:5.3.6}P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=F(x)
@@ -114,7 +114,7 @@ open interval $(a,b)$, but $P_{0}$ {\color{blue}\it does\/} have a zero in $(a,b
 \eqref{eq:5.3.6} may fail to have a general solution on $(a,b)$ in the sense just defined.
 Exercises~\ref{exer:5.1.42}--\ref{exer:5.1.44} illustrate this point for a homogeneous equation.
 
-In this section we to limit ourselves to applications of Theorem~\ref{thmtype:5.3.2} where we can
+In this section we limit ourselves to applications of Theorem~\ref{thmtype:5.3.2} where we can
 guess at the form of the particular solution.
 
 \begin{example}
@@ -347,7 +347,7 @@ on $(a,b)$.
 
 \solution The right side $F(x)=2x^{4}+4x^{2}$ in \eqref{eq:5.3.17} is the sum of the right sides
 \[
-  F_{1}(x)=2x^{4}\quad\mbox{ and }\quad F_{2}(x)=4x^{2}.
+  F_{1}(x)=2x^{4}\quad\mbox{ and }\quad F_{2}(x)=4x^{2}
 \]
 in \eqref{eq:5.3.15} and \eqref{eq:5.3.16}. Therefore the principle of superposition implies that
 \[
@@ -408,7 +408,7 @@ value problem and graph the solution.
   \]
   that is, (A) doesn't have a particular solution of the form $y_{p}=A/x^{3}$.
 
-  \item\label{exer:5.3.15} Prove: If $a$, $b$, $c$, $\alpha$, and $M$ are constants and $M\ne0$ then
+  \item\label{exer:5.3.15} Prove: If $a$, $b$, $c$, $\alpha$, and $M$ are constants and $M\ne0$ , then on $x>0$
   \[
     ax^{2}y''+bxy'+cy=Mx^{\alpha}
   \]
@@ -443,8 +443,8 @@ value problem and graph the solution.
   \]
   that is, (A) doesn't have a particular solution of the form $y_{p}=Ae^{4x}$.
 
-  \item\label{exer:5.3.23} Prove: If $\alpha$ and $M$ are constants and $M\ne0$ then constant
-        coefficient equation
+  \item\label{exer:5.3.23} Prove: If $a$, $b$, $c$, $\alpha$, and $M$ are constants, $a\ne0$,
+        and $M\ne0$, then the constant coefficient equation
   \[
     ay''+by'+cy=Me^{\alpha x}
   \]
@@ -488,11 +488,11 @@ value problem and graph the solution.
     ay''+by'+cy=M\cos\omega x+N\sin\omega x \eqno{\rm(A)}
   \]
   has a particular solution that's a linear combination of $\cos\omega x$ and $\sin\omega x$ if and
-  only if the left side of (A) is not of the form $a(y''+\omega^{2}y)$, so that $\cos\omega x$ and
+  only if the left side of (A) is not of the form $a(y''+\omega^{2}y)$. In the excluded case, $\cos\omega x$ and
   $\sin\omega x$ are solutions of the complementary equation.
 
   \exercisetext{In Exercises~\ref{exer:5.3.33}--\ref{exer:5.3.38} refer to the cited exercises and
-  use the principal of superposition to find a particular solution. Then find the general solution.}
+  use the principle of superposition to find a particular solution. Then find the general solution.}
 
   \item\label{exer:5.3.33} $y''+5y'-6y=22+18x-18x^{2}+6e^{3x}$ (See Exercises~\ref{exer:5.3.1} and
         \ref{exer:5.3.16}.)

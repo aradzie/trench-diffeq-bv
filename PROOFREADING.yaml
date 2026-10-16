@@ -1126,6 +1126,6 @@ other_files:
   chapters/11/chapter.tex: done  # "in term" -> "in terms"; introduction and input order checked
   chapters/12/chapter.tex: done  # Section 1.3 reference corrected to 12.3; introduction and inputs checked
   chapters/13/chapter.tex: done  # doubled point and missing final period corrected; introduction and inputs checked
-  book/frontmatter.tex: todo
+  book/frontmatter.tex: done  # preface cross-references and wording corrected; counts of exercises and examples verified
   book/integrals.tex: todo
   book/index.tex: todo

@@ -21,6 +21,10 @@ All TeX runs inside a pinned TeX Live container through `texlive.sh` (podman); t
 
 For refactors that must not change the book, build the old and new trees separately (e.g. `git archive HEAD book` into `tmp/`, which is git-ignored, and build with `-outdir`), then compare `pdftotext -layout` output and the `.toc`, `.out` and `.aux` label lines. Note that `pdftotext` renders "fi" as the ligature "ﬁ", so grep for e.g. "Deﬁnition".
 
+## Python scripts
+
+Use `uv` for any Python script, including throwaway checks (e.g. `uv run --with sympy script.py`, or `uv run script.py` with a PEP 723 inline dependency block). Never install packages globally (no system-wide `pip install`, no `--break-system-packages`) and do not create ad-hoc virtualenvs by hand.
+
 ## Source layout (`book/`)
 
 - `TRENCH_DIFFEQ_BV.tex` is the only document; it inputs `preamble`, `frontmatter`, each `chapters/NN/chapter`, then `backmatter`.

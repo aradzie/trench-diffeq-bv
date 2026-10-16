@@ -91,7 +91,7 @@ problems for \eqref{eq:10.2.2}. We omit the proof.
 \]
 An initial value problem for \eqref{eq:10.2.3} can be written as
 \[
-  {\bf y}'=\twobytwo1221{\bf y}+\twocol21e^{4t},\quad y(t_{0})=\twocol{k_{1}}{k_{2}}.
+  {\bf y}'=\twobytwo1221{\bf y}+\twocol21e^{4t},\quad {\bf y}(t_{0})=\twocol{k_{1}}{k_{2}}.
 \]
 Since the coefficient matrix and the forcing function are both continuous on $(-\infty,\infty)$,
 Theorem~\ref{thmtype:10.2.1} implies that this problem has a unique solution on $(-\infty,\infty)$.
@@ -294,7 +294,7 @@ system it can be shown that Theorem~\ref{thmtype:10.2.1} implies Theorem~\ref{th
 
     \item % (c)
     $\begin{array}{ccl}
-      y'_{1} & = & -y_{1}-4y_{2}+4e^{t}+8te^{t}               \\
+      y'_{1} & = & -y_{1}-4y_{2}+4e^{3t}+8te^{t}               \\
       y_{2}' & = & -y_{1}-\phantom{4}y_{2}+e^{3t}+(4t+2)e^{t}
     \end{array}$
 
@@ -317,7 +317,8 @@ system it can be shown that Theorem~\ref{thmtype:10.2.1} implies Theorem~\ref{th
     \end{array}\right]$
   \end{alist}
 
-  \item\label{exer:10.2.6} Convert the linear scalar equation
+  \item\label{exer:10.2.6} Suppose $P_{0},P_{1},\dots,P_{n}$ and $F$ are continuous on $(a,b)$,
+  and $P_{0}$ has no zeros there. Convert the linear scalar equation
   \[
     P_{0}(t)y^{(n)}+P_{1}(t)y^{(n-1)}+\cdots+P_{n}(t)y(t)=F(t) \eqno{\rm(A)}
   \]
@@ -325,8 +326,7 @@ system it can be shown that Theorem~\ref{thmtype:10.2.1} implies Theorem~\ref{th
   \[
     {\bf y'}=A(t){\bf y}+{\bf f}(t),
   \]
-  and show that $A$ and ${\bf f}$ are continuous on an interval $(a,b)$ if and only if (A) is normal
-  on $(a,b)$.
+  and show that $A$ and ${\bf f}$ are continuous on $(a,b)$.
 
   \item\label{exer:10.2.7} A matrix function
   \[

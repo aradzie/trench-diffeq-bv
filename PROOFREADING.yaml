@@ -775,26 +775,118 @@ sections:
       - "Answers 35-42 independently checked against the determinant formula for the Green kernel."
       - "Computer graph requests 22, 26, and 29-30 not checked visually."
   "10.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: typeset, where: "Example 10.1.5", note: "y,y'y'' -> y,y',y''"}
+      - {kind: answer, where: "Answer 3, second mass", note: "spurious -c3 y1' and -k3 y1 terms removed"}
+      - {kind: answer, where: "Answer 3, third mass", note: "spurious c3 y1' and k3 y1 terms removed"}
+    remarks:
+      - "Tank balance, spring forces, first-order rewrites, and numerical formulas reviewed."
   "10.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: typeset, where: "Example 10.2.1(a)", note: "y(t0) -> bold y(t0)"}
+      - {kind: math, where: "Exercise 5(c)", note: "4e^t -> 4e^{3t} in first forcing component"}
+      - {kind: math, where: "Exercise 6", note: "false equivalence with normality -> explicit normality assumptions and continuity conclusion"}
+      - {kind: answer, where: "Answer 3(b)", note: "initial vector (9,-5) -> (12,-6)"}
+      - {kind: answer, where: "Answer 5(a)", note: "missing bold y restored"}
+    remarks:
+      - "Matrix forms, stated verification exercises, and IVP values reviewed."
   "10.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: prose, where: "Definition of linear combination", note: "easy show -> easy to show"}
+      - {kind: prose, where: "Definition of fundamental set", note: "duplicate on removed"}
+      - {kind: prose, where: "Definition of linear dependence", note: "missing period added"}
+      - {kind: ref, where: "Definition of fundamental matrix", note: "Theorem 10.3.2 -> 10.3.3"}
+      - {kind: math, where: "Equation 10.3.9", note: "matrix in determinant arithmetic -> scalar determinant expansion"}
+      - {kind: ref, where: "Exercise 4(c)", note: "part (a) and part (a) -> parts (a) and (b)"}
+      - {kind: math, where: "Exercise 5(a)", note: "sum of matrices W_m -> sum of their determinants"}
+      - {kind: math, where: "Exercise 17", note: "Y^{-1} -> (Y^{-1})^T for adjoint system"}
+      - {kind: answer, where: "Answer 12(b)", note: "incorrect factor 1/3 removed"}
+      - {kind: answer, where: "Answer 14", note: "YZ^{-1} and ZY^{-1} -> Y^{-1}Z and Z^{-1}Y"}
+    remarks:
+      - "Wronskians, Abel formula, fundamental matrices, and supplied IVP vectors reviewed."
   "10.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: math, where: "Theorem 10.4.1 proof", note: "lambda x_n in final Wronskian entry -> lambda_n"}
+      - {kind: prose, where: "Trajectory definition", note: "I's -> It's"}
+      - {kind: math, where: "Exercise 42 model", note: "per-individual growth rate -> total population growth rate"}
+      - {kind: math, where: "Exercise 42(a)(i)", note: "false monotonicity claim removed"}
+      - {kind: math, where: "Exercise 42(a)(ii)", note: "false monotonicity claim removed"}
+      - {kind: ref, where: "Exercise 42(c)", note: "undefined gamma -> rho"}
+      - {kind: answer, where: "Answer 5", note: "second arbitrary constant c1 -> c2"}
+      - {kind: answer, where: "Answer 29", note: "wrong eigenlines -> slopes -(1+sqrt(2)) and sqrt(2)-1"}
+      - {kind: answer, where: "Answer 36", note: "constant-solution line L2 -> L1"}
+      - {kind: typeset, where: "Answer 38", note: "duplicate eigenvector text removed"}
+      - {kind: answer, where: "Answer 39", note: "missing direction -> away from L1"}
+      - {kind: answer, where: "Answer 40", note: "motion toward L1 -> toward L2"}
+    remarks:
+      - "Eigenvalue examples, all supplied IVP initial vectors, and trajectory descriptions reviewed."
+      - "Computer graph requests and EPS figures not inspected visually."
+      - "All 68 supplied eigenpair terms and 12 IVP initial vectors checked algebraically."
   "10.5":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: prose, where: "Example 10.5.1", note: "extra and removed"}
+      - {kind: prose, where: "Theorem 10.5.1 proof", note: "missing period added"}
+      - {kind: typeset, where: "Example 10.5.3", note: "(A+I)u=x subscript -> (A+I)u=x_2"}
+      - {kind: typeset, where: "Example 10.5.4", note: "malformed bold x=0 and u=x_1 corrected"}
+      - {kind: typeset, where: "Example 10.5.5", note: "malformed bold x=0 corrected"}
+      - {kind: ref, where: "Example 10.5.5", note: "generic eigenvector x_1 -> x"}
+      - {kind: math, where: "Geometric discussion", note: "undefined x_1 in y(0) -> x"}
+      - {kind: ref, where: "Geometric discussion", note: "Figure page reference -> figure number reference"}
+      - {kind: prose, where: "Geometric discussion", note: "the-half plane -> the half-plane"}
+      - {kind: typeset, where: "Geometric discussion", note: "t-\\to\\infty -> t\\to-\\infty"}
+      - {kind: answer, where: "Answer 5", note: "missing y= and e^{-2t} restored"}
+    remarks:
+      - "Jordan-chain examples and all supplied IVP initial vectors reviewed."
+      - "Computer trajectory plots and EPS figures not inspected visually."
+      - "All 21 Jordan-chain answer families and all 11 IVP answers checked algebraically."
   "10.6":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: prose, where: "Example 10.6.2", note: "augmented augmented -> augmented"}
+      - {kind: math, where: "Example 10.6.2", note: "x1=(5-i)/2 -> x1=(5-i)x2/2"}
+      - {kind: prose, where: "Example 10.6.4", note: "missing period after eigenvector added"}
+      - {kind: typeset, where: "Example 10.6.4", note: "second y2 label -> y3"}
+      - {kind: math, where: "Geometric discussion", note: "choose beta>0 to justify stated rotation direction"}
+      - {kind: typeset, where: "Figures 10.6.3-6 captions", note: "shadow trajectory spiraling -> trajectory spiraling"}
+      - {kind: math, where: "Exercises 15 and 16", note: "right side y' -> y"}
+      - {kind: answer, where: "Answer 8", note: "real eigenvector (-1,1,1) -> (-1,-1,1)"}
+      - {kind: prose, where: "Exercise 27 hint", note: "duplicate the removed"}
+      - {kind: ref, where: "Exercise 28(c)", note: "part (a) -> part (b)"}
+    remarks:
+      - "Complex-eigenvector examples and all supplied IVP initial vectors reviewed."
+      - "Computer plots and EPS figures not inspected visually."
+      - "All 16 complex-eigenvalue answer families and eight IVP answers checked by matrix identities."
   "10.7":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-13
+    findings:
+      - {kind: prose, where: "Example 10.7.1", note: "duplicate punctuation after box removed"}
+      - {kind: typeset, where: "Example 10.7.4(b)", note: "solutionpart a -> b"}
+      - {kind: math, where: "Exercise 22(c)", note: "u1 y2 -> u2 y2"}
+      - {kind: math, where: "Exercise 22(d)", note: "u1 y2 -> u2 y2"}
+      - {kind: answer, where: "Answer 18", note: "incorrect vector -> (e^{3t},-e^{2t},-e^t)/2"}
+      - {kind: answer, where: "Answer 22(a)", note: "incorrect companion-matrix row and missing P_{n-1}(t) argument corrected"}
+    remarks:
+      - "Variation-of-parameters examples and supplied particular solutions reviewed by substitution at representative points."
+      - "All 20 supplied particular solutions checked by numerical ODE residuals at two interior points."
   "11.1":
     text: todo
     answers: todo
@@ -833,7 +925,7 @@ other_files:
   chapters/07/chapter.tex: done  # qualified claim about elementary closed-form solutions
   chapters/08/chapter.tex: done  # introduction, section summaries, and input order checked
   chapters/09/chapter.tex: done  # introduction, section descriptions, and input order checked
-  chapters/10/chapter.tex: todo
+  chapters/10/chapter.tex: done  # introduction, section descriptions, and input order checked
   chapters/11/chapter.tex: todo
   chapters/12/chapter.tex: todo
   chapters/13/chapter.tex: todo

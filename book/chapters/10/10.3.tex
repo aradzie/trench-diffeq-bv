@@ -16,11 +16,11 @@ $(a,b)$ and $c_{1}$, $c_{2}$, \dots, $c_{n}$ are constants, then
   \label{eq:10.3.1}{\bf y}=c_{1}{\bf y}_{1}+c_{2}{\bf y}_{2}+\cdots+c_{n}{\bf y}_{n}
 \end{equation}
 is a {\color{blue}\it linear combination of\/} ${\bf y}_{1}$, ${\bf y}_{2}$, \ldots,${\bf y}_{n}$.
-It's easy show that if ${\bf y}_{1}$, ${\bf y}_{2}$, \dots,${\bf y}_{n}$ are solutions of
+It's easy to show that if ${\bf y}_{1}$, ${\bf y}_{2}$, \dots,${\bf y}_{n}$ are solutions of
 ${\bf y}'=A(t){\bf y}$ on $(a,b)$, then so is any linear combination of ${\bf y}_{1}$,
 ${\bf y}_{2}$, \dots, ${\bf y}_{n}$ (Exercise~\ref{exer:10.3.1}). We say that
 $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$ is a {\color{blue}\it fundamental set of solutions
-of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$ on if every solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$
+of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$ if every solution of ${\bf y}'=A(t){\bf y}$ on $(a,b)$
 can be written as a linear combination of ${\bf y}_{1}$, ${\bf y}_{2}$, \dots, ${\bf y}_{n}$, as in
 \eqref{eq:10.3.1}. In this case we say that \eqref{eq:10.3.1} is the {\color{blue}\it general
 solution of ${\bf y}'=A(t){\bf y}$ on\/} $(a,b)$.
@@ -37,8 +37,7 @@ $c_{n}$ such that
 \end{equation}
 are $c_{1}=c_{2}=\cdots=c_{n}=0$. If \eqref{eq:10.3.2} holds for some set of constants $c_{1}$,
 $c_{2}$, \dots, $c_{n}$ that are not all zero, then $\{{\bf y}_{1},{\bf y}_{2},\dots,{\bf y}_{n}\}$
-is {\color{blue}\it linearly dependent\/} on $(a,b)$
-
+is {\color{blue}\it linearly dependent\/} on $(a,b)$.
 The next theorem is analogous to Theorems~\ref{thmtype:5.1.3} and \ref{thmtype:9.1.2}.
 
 \begin{theorem}
@@ -300,7 +299,7 @@ The next theorem is analogous to Theorems~\ref{thmtype:5.1.6} and \ref{thmtype:9
 
 We say that $Y$ in \eqref{eq:10.3.4} is a {\color{blue}\it fundamental matrix\/} for
 ${\bf y}'=A(t){\bf y}$ if any (and therefore all) of the statements ({\bf a})-({\bf e}) of
-Theorem~\ref{thmtype:10.3.2} are true for the columns of $Y$. In this case, \eqref{eq:10.3.3}
+Theorem~\ref{thmtype:10.3.3} are true for the columns of $Y$. In this case, \eqref{eq:10.3.3}
 implies that the general solution of ${\bf y}'=A(t){\bf y}$ can be written as ${\bf y}=Y{\bf c}$,
 where ${\bf c}$ is an arbitrary constant $n$-vector.
 
@@ -343,7 +342,7 @@ where ${\bf c}$ is an arbitrary constant $n$-vector.
   \begin{array}{cc}
     -e^{2t} & -e^{-t}       \\
     2e^{2t} & \hfill e^{-t}
-  \end{array}\right|= e^{2t}e^{-t}\twobytwo{-1}{-1}21=e^{t}.
+  \end{array}\right|= e^{2t}e^{-t}\bigl((-1)(1)-(-1)(2)\bigr)=e^{t}.
 \end{equation}
 
 \solutionpart{b} Here
@@ -527,7 +526,7 @@ as the solution of \eqref{eq:10.3.8}.
     \]
 
     \item % (c)
-    Use properties of determinants to deduce from \part{a} and \part{a} that
+    Use properties of determinants to deduce from \part{a} and \part{b} that
     \[
       \left|
       \begin{array}{cc}
@@ -571,7 +570,7 @@ as the solution of \eqref{eq:10.3.8}.
     \item % (a)
     Deduce from the definition of determinant that
     \[
-      W'=W_{1}+W_{2}+\cdots+W_{n},
+      W'=\det(W_{1})+\det(W_{2})+\cdots+\det(W_{n}),
     \]
     where, for $1\le m\le n$, the $i$th row of $W_{m}$ is $r_{i}$ if $i\ne m$, and $r'_{m}$ if
     $i=m$.
@@ -848,7 +847,7 @@ as the solution of \eqref{eq:10.3.8}.
   \end{alist}
 
   \item\label{exer:10.3.17} Show that $Y$ is a fundamental matrix for the system
-        ${\bf y}'=A(t){\bf y}$ if and only if $Y^{-1}$ is a fundamental matrix for
+        ${\bf y}'=A(t){\bf y}$ if and only if $(Y^{-1})^{T}$ is a fundamental matrix for
         ${\bf y}'=- A^{T}(t){\bf y}$, where $A^{T}$ denotes the transpose of $A$. \hint{See Exercise
         \ref{exer:10.2.11}.}
 

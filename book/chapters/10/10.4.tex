@@ -128,7 +128,7 @@ The Wronskian of $\{{\bf y}_{1},{\bf y}_{2},\ldots,{\bf y}_{n}\}$ is
     x_{11}e^{\lambda_{1}t} & x_{12}e^{\lambda_{2} t} & \cdots & x_{1n}e^{\lambda_{n}t}   \\
     x_{21}e^{\lambda_{1}t} & x_{22}e^{\lambda_{2} t} & \cdots & x_{2n}e^{\lambda_{n}t}   \\
     \vdots                 & \vdots                  & \ddots & \vdots                   \\
-    x_{n1}e^{\lambda_{1}t} & x_{n2}e^{\lambda_{2} t} & \cdots & x_{nn}e^{\lambda x_{n}t}
+    x_{n1}e^{\lambda_{1}t} & x_{n2}e^{\lambda_{2} t} & \cdots & x_{nn}e^{\lambda _{n}t}
   \end{array}\right| =e^{\lambda_{1}t}e^{\lambda_{2}t}\cdots e^{\lambda_{n}t}\left|
   \begin{array}{cccc}
     x_{11}                & x_{12} & \cdots & x_{1n} \cr
@@ -680,7 +680,7 @@ coordinates $(y_{1},y_{2})$. If ${\bf y}=\dst{\twocol{y_{1}}{y_{2}}}$ is a non-c
 \eqref{eq:10.4.18}, then the point $(y_{1}(t),y_{2}(t))$ moves along a curve $C$ in the
 $y_{1}$-$y_{2}$ plane as $t$ varies from $-\infty$ to $\infty$. We call $C$ the {\color{blue}\it
 trajectory\/} of ${\bf y}$. (We also say that $C$ is a trajectory of the system \eqref{eq:10.4.18}.)
-I's important to note that $C$ is the trajectory of infinitely many solutions of \eqref{eq:10.4.18},
+It's important to note that $C$ is the trajectory of infinitely many solutions of \eqref{eq:10.4.18},
 since if $\tau$ is any real number, then ${\bf y}(t-\tau)$ is a solution of \eqref{eq:10.4.18}
 (Exercise~\ref{exer:10.4.28}(b)), and $(y_{1}(t-\tau),y_{2}(t-\tau))$ also moves along $C$ as $t$
 varies from $-\infty$ to $\infty$. Moreover, Exercise~\ref{exer:10.4.28}\part{c} implies that
@@ -1023,7 +1023,7 @@ other trajectory is away from $L_{1}$, toward $L_{2}$.
     P'=aP\mbox{\quad and \quad}Q'=bQ, \eqno{\rm(A)}
   \]
   where $a$ and $b$ are positive constants. One way to model the effect of competition is to assume
-  that the growth rate per individual of each population is reduced by an amount proportional to the
+  that the growth rate of each population is reduced by an amount proportional to the
   other population, so (A) is replaced by
   \begin{eqnarray*}
     P' & = & \phantom{-}aP-\alpha Q \\
@@ -1040,11 +1040,11 @@ other trajectory is away from $L_{1}$, toward $L_{2}$.
     $b$, $\alpha$, and $\beta$) with the following properties:
     \begin{rmlist}
       \item % (i)
-      If $Q_{0}>\rho P_{0}$, then $P$ decreases monotonically to zero in finite time, during which
+      If $Q_{0}>\rho P_{0}$, then $P$ reaches zero in finite time, during which
       $Q$ remains positive.
 
       \item % (ii)
-      If $Q_{0}<\rho P_{0}$, then $Q$ decreases monotonically to zero in finite time, during which
+      If $Q_{0}<\rho P_{0}$, then $Q$ reaches zero in finite time, during which
       $P$ remains positive.
     \end{rmlist}
 
@@ -1054,7 +1054,7 @@ other trajectory is away from $L_{1}$, toward $L_{2}$.
     Determine experimentally what happens if $Q_{0}=\rho P_{0}$.
 
     \item % (c)
-    Confirm your experimental results and determine $\gamma$ by expressing the eigenvalues and
+    Confirm your experimental results and determine $\rho$ by expressing the eigenvalues and
     associated eigenvectors of
     \[
       A=\twobytwo a{-\alpha}{-\beta}b

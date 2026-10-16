@@ -229,7 +229,7 @@ which is row equivalent to
     0 & 0              & \vdots & 0
   \end{array}\right].
 \]
-Therefore $x_{1}=(5-i)/2$. Taking $x_{2}=2$ yields $x_{1}=5-i$, so
+Therefore $x_{1}=(5-i)x_{2}/2$. Taking $x_{2}=2$ yields $x_{1}=5-i$, so
 \[
   {\bf x}=\left[
   \begin{array}{c}
@@ -458,8 +458,7 @@ which is row equivalent to
 \]
 Therefore $x_{1}=ix_{3}$ and $x_{2}=-ix_{3}$. Taking $x_{3}=1$ yields the eigenvector
 \[
-  {\bf x}_{2}=\threecol i{-i}1
-\]
+  {\bf x}_{2}=\threecol i{-i}1. \]
 The real and imaginary parts of
 \[
   e^{2t}(\cos2t+i\sin2t)\threecol i{-i}1
@@ -471,7 +470,7 @@ are
     -\sin2t \\
     \sin2t  \\
     \cos 2t
-  \end{array}\right]\quad\mbox{ and }\quad{\bf y}_{2}=e^{2t}\left[
+  \end{array}\right]\quad\mbox{ and }\quad{\bf y}_{3}=e^{2t}\left[
   \begin{array}{r}
     \cos2t  \\
     -\cos2t \\
@@ -525,7 +524,8 @@ under the assumptions of this section; that is, when the matrix
 \]
 has a complex eigenvalue $\lambda=\alpha+i\beta$ {\rm(}$\beta\ne0${\rm}) and
 ${\bf x}={\bf u}+i{\bf v}$ is an associated eigenvector, where ${\bf u}$ and ${\bf v}$ have real
-components. To describe the trajectories accurately it's necessary to introduce a new rectangular
+components. We choose the eigenvalue with $\beta>0$.
+To describe the trajectories accurately it's necessary to introduce a new rectangular
 coordinate system in the $y_{1}$-$y_{2}$ plane. This raises a point that hasn't come up before: It
 is always possible to choose ${\bf x}$ so that $({\bf u},{\bf v})=0$. A special effort is required
 to do this, since not every eigenvector has this property. However, if we know an eigenvector that
@@ -661,14 +661,14 @@ in Figures~\ref{figure:10.6.5} and \ref{figure:10.6.6}.
     \centering
     \scalebox{.65}{
     \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig010603}}
-    \caption{$\alpha>0$; shadow trajectory spiraling outward}
+    \caption{$\alpha>0$; trajectory spiraling outward}
     \label{figure:10.6.3}
   \end{minipage}
   \begin{minipage}[b]{0.5\linewidth}
     \centering
     \scalebox{.65}{
     \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig010604}}
-    \caption{$\alpha>0$; shadow trajectory spiraling outward}
+    \caption{$\alpha>0$; trajectory spiraling outward}
     \label{figure:10.6.4}
   \end{minipage}
 \end{figure}
@@ -679,14 +679,14 @@ in Figures~\ref{figure:10.6.5} and \ref{figure:10.6.6}.
     \centering
     \scalebox{.65}{
     \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig010605}}
-    \caption{$\alpha<0$; shadow trajectory spiraling inward}
+    \caption{$\alpha<0$; trajectory spiraling inward}
     \label{figure:10.6.5}
   \end{minipage}
   \begin{minipage}[b]{0.5\linewidth}
     \centering
     \scalebox{.65}{
     \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig100606}}
-    \caption{$\alpha<0$; shadow trajectory spiraling inward}
+    \caption{$\alpha<0$; trajectory spiraling inward}
     \label{figure:10.6.6}
   \end{minipage}
 \end{figure}
@@ -730,8 +730,8 @@ in Figures~\ref{figure:10.6.5} and \ref{figure:10.6.6}.
   \end{tabular}
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-    \item\label{exer:10.6.15} $\dst{{\bf y}'=\threebythree60{-3}{-3}331{-2}6{\bf y}'}$ &
-    \item\label{exer:10.6.16} $\dst{{\bf y}'=\threebythree12{-2}02{-1}100{\bf y}'}$
+    \item\label{exer:10.6.15} $\dst{{\bf y}'=\threebythree60{-3}{-3}331{-2}6{\bf y}}$ &
+    \item\label{exer:10.6.16} $\dst{{\bf y}'=\threebythree12{-2}02{-1}100{\bf y}}$
   \end{tabular}
 
   \exercisetext{In Exercises~\ref{exer:10.6.17}--\ref{exer:10.6.24} solve the initial value
@@ -805,7 +805,7 @@ in Figures~\ref{figure:10.6.5} and \ref{figure:10.6.6}.
     \item % (c)
     Let ${\bf U}_{1}$, ${\bf V}_{1}$, ${\bf U}_{2}$, and ${\bf V}_{2}$ be unit vectors in the
     directions of ${\bf u}_{1}^{(1)}$, ${\bf v}_{1}^{(1)}$, ${\bf u}_{1}^{(2)}$, and
-    ${\bf v}_{1}^{(2)}$, respectively. Conclude from \part{a} that ${\bf U}_{2}={\bf V}_{1}$ and
+    ${\bf v}_{1}^{(2)}$, respectively. Conclude from \part{b} that ${\bf U}_{2}={\bf V}_{1}$ and
     ${\bf V}_{2}=-{\bf U}_{1}$, and that therefore the counterclockwise angles from ${\bf U}_{1}$ to
     ${\bf V}_{1}$ and from ${\bf U}_{2}$ to ${\bf V}_{2}$ are both $\pi/2$ or both $-\pi/2$.
   \end{alist}

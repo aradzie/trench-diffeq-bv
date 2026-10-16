@@ -247,11 +247,11 @@ so
 \]
 Integrating this yields
 \[
-  \ln|v-7|-\ln|v+7|=14t/5+k.
+  \ln|v-7|-\ln|v+7|=14t/5+C.
 \]
 Therefore
 \[
-  \left|\frac{v-7}{v+7}\right|=e^{k}e^{14t/5}.
+  \left|\frac{v-7}{v+7}\right|=e^{C}e^{14t/5}.
 \]
 Since Theorem~\ref{thmtype:2.3.1} implies that $(v-7)/(v+7)$ can't change sign (why?), we can
 rewrite the last equation as
@@ -262,13 +262,13 @@ which is an implicit solution of (\ref{eq:4.3.10}). Solving this for $v$ yields
 \begin{equation}
   \label{eq:4.3.14}v=-7{\frac{c+e^{-14t/5}}{c-e^{-14t/5}}}.
 \end{equation}
-Since $v(0)=v_{0}$, it (\ref{eq:4.3.13}) implies that
+Since $v(0)=v_{0}$, (\ref{eq:4.3.13}) implies that
 \[
   c=\frac{v_{0}-7}{v_{0}+7}.
 \]
 Substituting this into (\ref{eq:4.3.14}) and simplifying yields
 \[
-  v=-7{\frac{v_{0}(1+e^{-14t/5})-7(1-e^{-14t/5})}{v_{0}(1-e^{-14t/5})-7(1+e^{-14t/5}}}.
+  v=-7{\frac{v_{0}(1+e^{-14t/5})-7(1-e^{-14t/5})}{v_{0}(1-e^{-14t/5})-7(1+e^{-14t/5})}}.
 \]
 Since $v_{0}\le0$, $v$ is defined and negative for all $t>0$. The terminal velocity is
 \[
@@ -411,7 +411,7 @@ properties:
         $t>0$; that is, it ``escapes'' Earth. (Is it really so obvious that
         $\lim_{t\to\infty}y(t)=\infty$ in this case? For a proof, see Exercise~\ref{exer:4.3.20}.)
 
-  \item If $v_{0}<v_{e}$ then $v(t)$ decreases to zero and becomes negative. Therefore the vehicle
+  \item If $0\le v_{0}<v_{e}$ then $v(t)$ decreases to zero and becomes negative. Therefore the vehicle
         attains a maximum altitude $y_{m}$ and falls back to Earth.
 \end{enumerate}
 
@@ -454,10 +454,10 @@ that there's an escape velocity $v_{e}$. We'll now prove that
 \]
 by showing that the vehicle falls back to Earth if
 \begin{equation}
-  \label{eq:4.3.24}v_{0}<\left(\frac{2gR^{2}}{h+R}\right)^{1/2}.
+  \label{eq:4.3.24}0\le v_{0}<\left(\frac{2gR^{2}}{h+R}\right)^{1/2}.
 \end{equation}
-If (\ref{eq:4.3.24}) holds then the parenthetical expression in (\ref{eq:4.3.23}) is negative and
-the vehicle will attain a maximum altitude $y_{m}>h$ that satisfies the equation
+If (\ref{eq:4.3.24}) holds, then the parenthetical expression in (\ref{eq:4.3.23}) is negative and
+the vehicle will attain a maximum altitude $y_{m}\ge h$ that satisfies the equation
 \[
   0=\frac{gR^{2}}{y_{m}+R}+\left(\frac{v_{0}^{2}}{2}- \frac{gR^{2}}{h+R}\right).
 \]
@@ -493,7 +493,7 @@ influence of gravity.
 
   \item\label{exer:4.3.6} A 3200-lb car is moving at 64 ft/s down a 30-degree grade when it runs out
         of fuel. Find its velocity after that if friction exerts a resistive force with magnitude
-        proportional to the square of the speed, with $k=1\ \mbox{lb-s}^{2}/{\mbox ft}^{2}$. Also
+        proportional to the square of the speed, with $k=1\ \mbox{lb-s}^{2}/\mbox{ft}^{2}$. Also
         find its terminal velocity.
 
   \item\label{exer:4.3.7} A 96 lb weight is dropped from rest in a medium that exerts a resistive
@@ -535,7 +535,7 @@ influence of gravity.
   \end{alist}
 
   \item\label{exer:4.3.13} \Lex An object with mass $m$ is given an initial velocity $v_{0}\le0$ in
-        a medium that exerts a resistive force of the form $a|v|/(1+|v|)$, where $a$ is positive
+        a medium that exerts a resistive force of the form $a|v|/(1+|v|)$, where $a$ is a positive
         constant.
 
   \begin{alist}
@@ -636,7 +636,7 @@ influence of gravity.
     where $y_{m}$ and $\rho$ are as defined in \part{b} and $y\ge h$.
 
     \item % (d)
-    Deduce from \part{c} that if $v<v_{e}$, the vehicle takes equal times to climb from $y=h$ to
+    Deduce from \part{c} that if $v_{0}<v_{e}$, the vehicle takes equal times to climb from $y=h$ to
     $y=y_{m}$ and to fall back from $y=y_{m}$ to $y=h$.
   \end{alist}
 

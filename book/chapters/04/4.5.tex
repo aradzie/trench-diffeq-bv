@@ -47,7 +47,7 @@ numbers.
     \centering
     \scalebox{.65}{
     \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig040503}}
-    \caption{A family of circles defined by $x^{2}+y^{2}-c^{2}=0$}
+    \caption{A family of circles defined by $x^{2}+y^{2}-c=0$}
     \label{figure:4.5.3}
   \end{minipage}
 \end{figure}
@@ -111,7 +111,7 @@ To find a differential equation for a one--parameter family we differentiate its
 \begin{equation}
   \label{eq:4.5.7}H_{x}(x,y,c)+H_{y}(x,y,c)y'=0.
 \end{equation}
-If this equation doesn't, then it's a differential equation for the family. If it does contain $c$,
+If this equation doesn't contain $c$, then it's a differential equation for the family. If it does contain $c$,
 it may be possible to obtain a differential equation for the family by eliminating $c$ between
 \eqref{eq:4.5.5} and \eqref{eq:4.5.7}.
 
@@ -164,7 +164,7 @@ or, equivalently,
 Here $x_{0}$ plays the role of the constant $c$ in Definition~\ref{thmtype:4.5.1}; that is, varying
 $x_{0}$ over $(-\infty,\infty)$ produces the family of tangent lines to the parabola $y=x^{2}$.
 
-Differentiating \eqref{eq:4.5.10} with respect to $x$ yields $y'=2x_{0}$.. We can express $x_{0}$ in
+Differentiating \eqref{eq:4.5.10} with respect to $x$ yields $y'=2x_{0}$. We can express $x_{0}$ in
 terms of $x$ and $y$ by rewriting \eqref{eq:4.5.10} as
 \[
   x_{0}^{2}-2x_{0}x+y=0
@@ -686,12 +686,12 @@ which $h<0$ are below.
     \]
 
     \item % (c)
-    Show that the segment of the tangent line (B) on which $(x-x_{0})/y_{0}>0$ is an integral curve
+    Show that each portion of the tangent line (B) on which $(x-x_{0})/y_{0}>0$ and $x\ne\pm1$ is an integral curve
     of the differential equation
     \[
       y'=\frac{xy-\sqrt{x^{2}+y^{2}-1}}{x^{2}-1}, \eqno{\rm(D)}
     \]
-    while the segment on which $(x-x_{0})/y_{0}<0$ is an integral curve of the differential equation
+    while each portion on which $(x-x_{0})/y_{0}<0$ and $x\ne\pm1$ is an integral curve of the differential equation
     \[
       y'=\frac{xy+\sqrt{x^{2}+y^{2}-1}}{x^{2}-1}. \eqno{\rm(E)}
     \]
@@ -724,16 +724,16 @@ which $h<0$ are below.
     Show that if $y'$ is the slope of a nonvertical tangent line to the parabola (A) and $(x,y)$ is
     a point on the tangent line then
     \[
-      4x^{2}(y')^{2}-4xyy'+x=0. \eqno{\rm(C)}
+      4x(y')^{2}-4yy'+1=0. \eqno{\rm(C)}
     \]
 
     \item % (c)
-    Show that the segment of the tangent line defined in \part{a} on which $x>x_{0}$ is an integral
+    Show that each portion of the tangent line defined in \part{a} on which $x>x_{0}$ and $x\ne0$ is an integral
     curve of the differential equation
     \[
       y'=\frac{y+\sqrt{y^{2}-x}}{2x}, \eqno{\rm(D)}
     \]
-    while the segment on which $x<x_{0}$ is an integral curve of the differential equation
+    while each portion on which $x<x_{0}$ and $x\ne0$ is an integral curve of the differential equation
     \[
       y'=\frac{y-\sqrt{y^{2}-x}}{2x}, \eqno{\rm(E)}
     \]

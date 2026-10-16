@@ -76,7 +76,7 @@ Substituting this into \eqref{eq:4.2.3} yields
   \centering
   \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig040201}
   \color{blue}
-  \caption{$T=25+375e^{-(t/4)\ln15/7}$}
+  \caption{$T=25+375e^{-(t/4)\ln(15/7)}$}
   \label{figure:4.2.1}
 \end{figure}
 
@@ -174,7 +174,7 @@ but the distribution of salt becomes approximately uniform as $t\to\infty$.
 \end{figure}
 
 \solutionpart{a} To find a differential equation for $Q$, we must use the given information to
-derive an expression for $Q'$. But $Q'$ is the rate of change of the quantity of salt in the tank
+derive an expression for $Q'$. But $Q'$ is the rate at which the quantity of salt in the tank
 changes with respect to time; thus, if {\color{blue}\it rate in\/} denotes the rate at which salt
 enters the tank and {\color{blue}\it rate out\/} denotes the rate by which it leaves, then
 \begin{equation}
@@ -219,7 +219,7 @@ so
   Q=300-260e^{-t/150}.
 \]
 
-\solutionpart{b} From \eqref{eq:4.2.6}, we see that that $\lim_{t\to \infty}Q(t)=300$ for any value
+\solutionpart{b} From \eqref{eq:4.2.6}, we see that $\lim_{t\to \infty}Q(t)=300$ for any value
 of $Q(0)$. This is intuitively reasonable, since the incoming solution contains 1/2 pound of salt
 per gallon and there are always 600 gallons of water in the tank. \quad
 
@@ -311,7 +311,7 @@ and therefore
 \]
 Hence,
 \[
-  Q=\frac{u}{t+200}=\frac{t+100}{2}-\frac{4000}{t+100}.
+  Q=\frac{u}{t+100}=\frac{t+100}{2}-\frac{4000}{t+100}.
 \]
 Now let $K(t)$ be the concentration of salt at time $t$. Then
 \[
@@ -414,7 +414,7 @@ Now let $K(t)$ be the concentration of salt at time $t$. Then
         tank at 4 gal/min. Find the quantity $Q(t)$ of salt in the tank at any time $t>0$ prior to
         overflow.
 
-  \item\label{exer:4.2.15} Tank $T_{1}$ initially contain 50 gallons of pure water. Starting at
+  \item\label{exer:4.2.15} Tank $T_{1}$ initially contains 50 gallons of pure water. Starting at
         $t_{0}=0$, water that contains 1 pound of salt per gallon is poured into $T_{1}$ at the rate
         of 2 gal/min. The mixture is drained from $T_{1}$ at the same rate into a second tank
         $T_{2}$, which initially contains 50 gallons of pure water. Also starting at $t_{0}=0$, a
@@ -442,17 +442,17 @@ Now let $K(t)$ be the concentration of salt at time $t$. Then
 
   \begin{alist}
     \item % (a)
-    Assuming that the container and the medium have distinct temperature decay constants $k$ and
+    Assuming that the object and the container have distinct temperature decay constants $k$ and
     $k_{m}$ respectively, use Newton's law of cooling to find the temperatures $S(t)$ and $T(t)$ of
     the container and object at time $t$.
 
     \item % (b)
-    Assuming that the container and the medium have the same temperature decay constant $k$, use
+    Assuming that the object and the container have the same temperature decay constant $k$, use
     Newton's law of cooling to find the temperatures $S(t)$ and $T(t)$ of the container and object
     at time $t$.
 
     \item % (c)
-    Find $\lim._{t\to\infty}S(t)$ and $\lim_{t\to\infty}T(t)$ .
+    Find $\lim_{t\to\infty}S(t)$ and $\lim_{t\to\infty}T(t)$ .
   \end{alist}
 
   \item\label{exer:4.2.17} %\exercisemolten
@@ -539,10 +539,10 @@ Now let $K(t)$ be the concentration of salt at time $t$. Then
   where $\lim_{t\to\infty}a(t)=1$.
   \begin{alist}
     \item % (a)
-    Assuming that $Q(0)=Q_{0}$, can you guess the value of $\lim_{t\to\infty}Q(t)$?.
+    Assuming that $Q(0)=Q_{0}$, can you guess the value of $\lim_{t\to\infty}Q(t)$?
 
     \item % (b)
-    Use numerical methods to confirm your guess in the these cases:
+    Use numerical methods to confirm your guess in these cases:
     \[
       \mbox{\part{i}\; }a(t)=t/(1+t)\mbox{\quad \part{ii}\; }a(t)=1-e^{-t^{2}}\mbox{\quad \part{iii}\; }a(t)=1-\sin(e^{-t}).
     \]
@@ -563,7 +563,7 @@ Now let $K(t)$ be the concentration of salt at time $t$. Then
     the value of $\lim_{t\to\infty}K(t)$?
 
     \item % (b)
-    Use numerical methods to confirm your guess in the these cases:
+    Use numerical methods to confirm your guess in these cases:
     \[
       \mbox{\part{i}\; }a(t)=t/(1+t)\;\mbox{\; \part{ii}\; }a(t)=1-e^{-t^{2}}\mbox{\; \part{iii}\; }a(t)=1+\sin(e^{-t}).
     \]

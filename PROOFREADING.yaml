@@ -220,20 +220,90 @@ sections:
       - "Runge-Kutta answer values and example tables independently recomputed; exact formulas and residuals checked."
       - "Backward integration and Simpson quadrature checked algebraically; no figures in section."
   "4.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: ref, where: "Growth and decay introduction", note: "Exercise 2.1.3 -> Example 2.1.3"}
+      - {kind: prose, where: "Interest compounding discussion", note: "isn't ; -> aren't;"}
+      - {kind: typeset, where: "Savings program comparison", note: "Exercise 4.1.21 .). -> Exercise 4.1.21)."}
+      - {kind: typeset, where: "Ex 22(a)", note: "space before period after Example 4.1.6 removed"}
+    remarks:
+      - "Displayed formulas, worked examples, and all 24 printed answers checked independently."
+      - "Comparison table and limiting relative error recomputed. Numerical explorations in Ex 25-27 not run."
   "4.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Example 4.2.4", note: "Q=u/(t+200) -> u/(t+100)"}
+      - {kind: math, where: "Fig 4.2.1 caption", note: "ln 15/7 -> ln(15/7)"}
+      - {kind: prose, where: "Example 4.2.3", note: "duplicated 'changes' and 'that' removed"}
+      - {kind: prose, where: "Ex 15", note: "initially contain -> initially contains"}
+      - {kind: math, where: "Ex 16(a,b)", note: "container and medium decay constants -> object and container"}
+      - {kind: typeset, where: "Ex 16(c), 22(a)", note: "stray period in limit and double punctuation removed"}
+      - {kind: prose, where: "Ex 22(b), 23(b)", note: "in the these cases -> in these cases"}
+      - {kind: prose, where: "Ans 4(b)", note: "outside -> in the room"}
+      - {kind: answer, where: "Ans 16(a,b)", note: "missing S(t) formulas supplied"}
+      - {kind: answer, where: "Ans 20", note: "spurious part (c) removed"}
+      - {kind: answer, where: "Ans 21", note: "incorrect alpha -> W1 W2 (c1-c2)/(W1+W2)"}
+    remarks:
+      - "Worked models, explicit answers and initial conditions checked; Ex 22-23 numerical experiments not run."
   "4.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: typeset, where: "Example 4.3.3 velocity", note: "missing closing parenthesis in denominator"}
+      - {kind: prose, where: "Example 4.3.3", note: "'it (4.3.13) implies' -> '(4.3.13) implies'"}
+      - {kind: math, where: "Escape velocity discussion", note: "v0<ve -> 0<=v0<ve; ym>h -> ym>=h"}
+      - {kind: math, where: "Example 4.3.3 integration", note: "integration constant k conflicted with fixed resistance constant -> C"}
+      - {kind: math, where: "Ex 19(d)", note: "v<ve -> v0<ve"}
+      - {kind: prose, where: "Ex 13", note: "'is positive constant' -> 'is a positive constant'"}
+      - {kind: typeset, where: "Ex 6", note: "unit {\\mbox ft}^2 boxed only the f -> \\mbox{ft}^2"}
+      - {kind: answer, where: "Ans 12(b)", note: "malformed fraction -> velocity after maximum altitude"}
+      - {kind: answer, where: "Ans 13", note: "s'=mg-as/(s+1) -> ms'=mg-as/(s+1); terminal speed supplied"}
+    remarks:
+      - "Derivations, terminal velocities, and printed answers checked; graphical/numerical Ex 15(c), 16(c) not run."
   "4.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Statement 1", note: "global existence for all C1 p,q -> existence on a maximal interval"}
+      - {kind: math, where: "Example 4.4.3", note: "limits at infinite time -> finite maximal endpoints on unbounded trajectories"}
+      - {kind: math, where: "Pendulum stability", note: "p(y)=sin y -> (g/L)sin y"}
+      - {kind: math, where: "Damped spring-mass", note: "all solutions oscillatory -> all nonzero solutions"}
+      - {kind: math, where: "Ex 18", note: "cy -> cy' to model damping"}
+      - {kind: math, where: "Ex 19", note: "reversed damping description -> energy injected inside and dissipated outside |y|=1"}
+      - {kind: typeset, where: "Ex 19", note: "mu=.5,1.1.5,2 -> .5,1,1.5,2"}
+      - {kind: math, where: "Ex 23", note: "y(0)=v0 -> y0; strict upper bound -> non-strict; max -> min in delta condition"}
+      - {kind: answer, where: "Ans 1", note: "y^4/4 -> y^4/2"}
+      - {kind: answer, where: "Ans 4", note: "missing factor 2 in potential term"}
+      - {kind: answer, where: "Ans 12", note: "a<=0 and +/-sqrt(a) -> a>0 and +/-1/sqrt(a)"}
+      - {kind: answer, where: "Ans 22", note: "undefined equation (A) -> explicit equation"}
+      - {kind: typeset, where: "Ans 10", note: "stray asterisk before answer label removed"}
+      - {kind: prose, where: "Statement 2 and worked prose", note: "punctuation, repeated words, and missing period corrected"}
+      - {kind: math, where: "Ex 13 and 15", note: "duplicate equations need author's intended replacement", open: true}
+    remarks:
+      - "All printed answers re-derived; phase plots and numerical experiments not run."
+      - "The finite-time claim follows from dt/dy proportional to |y|^(-3/2) as y tends to negative infinity."
   "4.5":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Fig 4.5.3 caption", note: "x^2+y^2-c^2=0 -> x^2+y^2-c=0"}
+      - {kind: prose, where: "Definition 4.5.1", note: "stray math-mode commas and duplicated 'in' removed"}
+      - {kind: prose, where: "After (4.5.7)", note: "'doesn't' -> 'doesn't contain c'"}
+      - {kind: prose, where: "Example 4.5.6", note: "double period removed"}
+      - {kind: typeset, where: "Example 4.5.2", note: "missing space before figure reference"}
+      - {kind: math, where: "Ex 16(b)", note: "equation C divided by x to retain x=0"}
+      - {kind: math, where: "Ex 15(c), 16(c)", note: "integral-curve claims restricted away from undefined ODE denominators"}
+      - {kind: answer, where: "Ans 28", note: "negative log term -> positive log term"}
+    remarks:
+      - "Derived family equations and orthogonal trajectories; checked all printed answers and tangency points."
+      - "EPS figures not inspected visually."
   "5.1":
     text: todo
     answers: todo
@@ -377,7 +447,7 @@ other_files:
   chapters/01/chapter.tex: done
   chapters/02/chapter.tex: done  # "can made" -> "can be made", "known called" -> "known as an"
   chapters/03/chapter.tex: done
-  chapters/04/chapter.tex: todo
+  chapters/04/chapter.tex: done  # doubled 'other' and missing article corrected
   chapters/05/chapter.tex: todo
   chapters/06/chapter.tex: todo
   chapters/07/chapter.tex: todo

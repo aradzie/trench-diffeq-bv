@@ -37,7 +37,7 @@ position. We could write such a force as $-mp(y)$. The second type - such as atm
 or friction - may depend on position and velocity. (Forces that depend on velocity are called
 {\color{blue}\it damping\/} forces.) We write this force as $-mq(y,y')y'$, where $q(y,y')$ is
 usually a positive function and we've put the factor $y'$ outside to make it explicit that the force
-is in the direction opposing the motion. In this case Newton's, second law of motion leads to
+is in the direction opposing the motion. In this case Newton's second law of motion leads to
 \eqref{eq:4.4.5}.
 
 The phase plane equivalent of \eqref{eq:4.4.5} is
@@ -52,9 +52,9 @@ $(y,v)$. We begin with the following statements:
 
 \begin{itemize}
   \item {\bf Statement 1.} If $y_{0}$ and $v_{0}$ are arbitrary real numbers then \eqref{eq:4.4.5}
-        has a unique solution on $(-\infty,\infty)$ such that $y(0)=y_{0}$ and $y'(0)=v_{0}$.
+        has a unique solution on a maximal interval containing $0$ such that $y(0)=y_{0}$ and $y'(0)=v_{0}$.
 
-  \item {\bf Statement 2.)} If $y=y(t)$ is a solution of \eqref{eq:4.4.5} and $\tau$ is any
+  \item {\bf Statement 2.} If $y=y(t)$ is a solution of \eqref{eq:4.4.5} and $\tau$ is any
         constant then $y_{1}=y(t-\tau)$ is also a solution of \eqref{eq:4.4.5}, and $y$ and
         $y_{1}$ have the same trajectory.
 
@@ -145,7 +145,7 @@ if a trajectory passes through a given point $(y_{0},v_{0})$ then
   \end{figure}
 
   Assume that if the length of the spring is changed by an amount $\Delta L$ (positive or negative),
-  then the spring exerts an opposing force with magnitude $k|\Delta L|$, where k is a positive
+  then the spring exerts an opposing force with magnitude $k|\Delta L|$, where $k$ is a positive
   constant. In Section~6.1 it will be shown that if the mass of the spring is negligible compared to
   $m$ and no other forces act on the object then Newton's second law of motion implies that
   \begin{equation}
@@ -200,7 +200,7 @@ if a trajectory passes through a given point $(y_{0},v_{0})$ then
   \[
     \int\frac{\sqrt{k}\,dy}{\sqrt{\rho-ky^{2}}}=\sin^{-1}\left(\sqrt{\frac{k}{\rho}}y\right)+c=\sin^{-1}\left(\frac{y}{R}\right)+c
   \]
-  (see \eqref{eq:4.4.11}), \eqref{eq:4.4.12} implies that that there's a constant $\phi$ such that
+  (see \eqref{eq:4.4.11}), \eqref{eq:4.4.12} implies that there's a constant $\phi$ such that
   \[
     \sin^{-1}\left(\frac{y}{R}\right)=\omega_{0}t+\phi
   \]
@@ -398,11 +398,11 @@ $b=\infty$. The equation \eqref{eq:4.4.13} for the undamped pendulum is of the f
 \eqref{eq:4.4.18} with $p(y)=(g/L)\sin y$. We've seen that $\overline{y}=2m\pi$ is a stable
 equilibrium if $m$ is an integer. In this case
 \[
-  p(y)=\sin y<0 \mbox{\; if \;}(2m-1)\pi<y<2m\pi
+  p(y)=(g/L)\sin y<0 \mbox{\; if \;}(2m-1)\pi<y<2m\pi
 \]
 and
 \[
-  p(y)>0\mbox{\; if \;}2m\pi<y<(2m+1)\pi.
+  p(y)=(g/L)\sin y>0\mbox{\; if \;}2m\pi<y<(2m+1)\pi.
 \]
 
 It can also be shown (Exercise~\ref{exer:4.4.24}) that $\overline{y}$ is unstable if there's a
@@ -465,11 +465,11 @@ so \eqref{eq:4.4.21} holds with $a=2m\pi$.
   that contain different kinds of trajectories; again, we call this curve a {\color{blue}\it
   separatrix\/}. Trajectories in the region bounded by the closed loop \part{b} are closed curves,
   so solutions associated with them are periodic. Solutions associated with other trajectories are
-  not periodic. If $y$ is any such solution with trajectory not on the separatrix, then
+  not periodic. If $y$ is any such solution with trajectory not on the separatrix, let $(t_{-},t_{+})$ be its maximal interval of existence. Both endpoints are finite, and then
   \[
     \begin{array}{llrllr}
-      \dst\lim_{t\to\infty}y(t) & = & -\infty, & \dst\lim_{t\to-\infty}y(t) & = & -\infty, \\
-      \dst\lim_{t\to\infty}v(t) & = & -\infty, & \dst\lim_{t\to-\infty}v(t) & = & \infty.
+      \dst\lim_{t\to t_{+}}y(t) & = & -\infty, & \dst\lim_{t\to t_{-}}y(t) & = & -\infty, \\
+      \dst\lim_{t\to t_{+}}v(t) & = & -\infty, & \dst\lim_{t\to t_{-}}v(t) & = & \infty.
     \end{array}
   \]
 
@@ -484,16 +484,16 @@ so \eqref{eq:4.4.21} holds with $a=2m\pi$.
   The separatrix contains four trajectories of \eqref{eq:4.4.22}. One is the point $(0,0)$, the
   trajectory of the equilibrium $\overline{y}=0$. Since distinct trajectories can't intersect, the
   segments of the separatrix marked \part{a}, \part{b}, and \part{c} -- which don't include $(0,0)$
-  -- are distinct trajectories, none of which can be traversed in finite time. Solutions with these
+  -- are distinct trajectories, none of which can be traversed in finite time. For each solution, let $(t_{-},t_{+})$ be its maximal interval of existence. On \part{a} and \part{c}, the endpoint at which $y$ tends to $-\infty$ is finite. Solutions with these
   trajectories have the following asymptotic behavior:
   \[
     \begin{array}{llrllrl}
-      \dst\lim_{t\to\infty}y(t) & = & 0,       & \dst\lim_{t\to-\infty}y(t) & = & -\infty,           \\
-      \dst\lim_{t\to\infty}v(t) & = & 0,       & \dst\lim_{t\to-\infty}v(t) & = & \infty\phantom{,} & \mbox{ (on \part{a})}  \\
+      \dst\lim_{t\to\infty}y(t) & = & 0,       & \dst\lim_{t\to t_{-}}y(t) & = & -\infty,           \\
+      \dst\lim_{t\to\infty}v(t) & = & 0,       & \dst\lim_{t\to t_{-}}v(t) & = & \infty\phantom{,} & \mbox{ (on \part{a})}  \\
       \dst\lim_{t\to\infty}y(t) & = & 0,       & \dst\lim_{t\to-\infty}y(t) & = & 0,                 \\
       \dst\lim_{t\to\infty}v(t) & = & 0,       & \dst\lim_{t\to-\infty}v(t) & = & 0\phantom{,}      & \mbox{ (on \part{b})}  \\
-      \dst\lim_{t\to\infty}y(t) & = & -\infty, & \dst\lim_{t\to-\infty}y(t) & = & 0,                 \\
-      \dst\lim_{t\to\infty}v(t) & = & -\infty, & \dst\lim_{t\to-\infty}v(t) & = & 0\phantom{,}      & \mbox{ (on \part{c})}.
+      \dst\lim_{t\to t_{+}}y(t) & = & -\infty, & \dst\lim_{t\to-\infty}y(t) & = & 0,                 \\
+      \dst\lim_{t\to t_{+}}v(t) & = & -\infty, & \dst\lim_{t\to-\infty}v(t) & = & 0\phantom{,}      & \mbox{ (on \part{c})}.
     \end{array}.
   \]
 \end{example}
@@ -597,8 +597,8 @@ trajectory, shown in Figure~\ref{figure:4.4.14}.
 
 Solutions corresponding to the trajectories in Figure~\ref{figure:4.4.12} cross the $y$-axis
 infinitely many times. The corresponding solutions are said to be {\color{blue}\it oscillatory\/}
-(Figure~\ref{figure:4.4.13}) It is shown in Section~6.2 that there's a number $c_{1}$ such that if
-$0\le c<c_{1}$ then all solutions of \eqref{eq:4.4.27} are oscillatory, while if $c\ge c_{1}$, no
+(Figure~\ref{figure:4.4.13}). It is shown in Section~6.2 that there's a number $c_{1}$ such that if
+$0\le c<c_{1}$ then all nonzero solutions of \eqref{eq:4.4.27} are oscillatory, while if $c\ge c_{1}$, no
 solutions of \eqref{eq:4.4.27} have this property. (In fact, no solution not identically zero can
 have more than two zeros in this case.) Figure~\ref{figure:4.4.14} shows a direction field and some
 integral curves for \eqref{eq:4.4.28} in this case.
@@ -707,7 +707,7 @@ integral curves for \eqref{eq:4.4.28} in this case.
 
   \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
     \item\label{exer:4.4.17} \Lex $y''+cy'+y|y|=0$ &
-    \item\label{exer:4.4.18} \Lex $y''+y(y-1)+cy=0$
+    \item\label{exer:4.4.18} \Lex $y''+cy'+y(y-1)=0$
   \end{tabular}
 
   \item\label{exer:4.4.19} \Lex The
@@ -716,7 +716,7 @@ integral curves for \eqref{eq:4.4.28} in this case.
   \[
     y''-\mu(1-y^{2})y'+y=0, \eqno{\rm(A)}
   \]
-  where $\mu$ is a positive constant and $y$ is electrical current (Section~6.3), arises in the study of an electrical circuit whose resistive properties depend upon the current. The damping term \\ $-\mu(1-y^{2})y'$ works to reduce $|y|$ if $|y|<1$ or to increase $|y|$ if $|y|>1$. It can be shown that van der Pol's equation has exactly one closed trajectory, which is called a {\color{blue}\it limit cycle\/}. Trajectories inside the limit cycle spiral outward to it, while trajectories outside the limit cycle spiral inward to it (Figure~\ref{figure:4.4.16}). Use your favorite differential equations software to verify this for $\mu=.5,1.1.5,2$. Use a grid with $-4<y<4$ and $-4<v<4$.
+  where $\mu$ is a positive constant and $y$ is electrical current (Section~6.3), arises in the study of an electrical circuit whose resistive properties depend upon the current. The damping term \\ $-\mu(1-y^{2})y'$ injects energy if $|y|<1$ and dissipates energy if $|y|>1$. It can be shown that van der Pol's equation has exactly one closed trajectory, which is called a {\color{blue}\it limit cycle\/}. Trajectories inside the limit cycle spiral outward to it, while trajectories outside the limit cycle spiral inward to it (Figure~\ref{figure:4.4.16}). Use your favorite differential equations software to verify this for $\mu=.5,1,1.5,2$. Use a grid with $-4<y<4$ and $-4<v<4$.
 
   \begin{figure}[H]
     \centering
@@ -772,14 +772,14 @@ integral curves for \eqref{eq:4.4.28} in this case.
   \]
   Let $y$ be the solution of the initial value problem
   \[
-    y''+p(y)=0,\quad y(0)=v_{0},\quad y'(0)=v_{0},
+    y''+p(y)=0,\quad y(0)=y_{0},\quad y'(0)=v_{0},
   \]
   and define $c(y_{0},v_{0})=v_{0}^{2}+2\int_{0}^{y_{0}}p(x)\,dx$.
   \begin{alist}
     \item % (a)
     Show that
     \[
-      0<c(y_{0},v_{0})<v_{0}^{2}+2\beta(|y_{0}|)\mbox{\quad if \quad}0<|y_{0}|\le\rho.
+      0<c(y_{0},v_{0}) \le v_{0}^{2}+2\beta(|y_{0}|)\mbox{\quad if \quad}0<|y_{0}|\le\rho.
     \]
 
     \item % (b)
@@ -792,9 +792,9 @@ integral curves for \eqref{eq:4.4.28} in this case.
     Conclude from \part{b} that if $c(y_{0},v_{0})<2\alpha(r)$ then $|y|<r$, $t>0$.
 
     \item % (d)
-    Given $\epsilon>0$, let $\delta>0$ be chosen so that
+    Given $0<\epsilon\le\sqrt{2}\rho$, let $\delta>0$ be chosen so that $\delta\le\rho$ and
     \[
-      \delta^{2}+2\beta(\delta)<\max\left\{\epsilon^{2}/2,2\alpha(\epsilon/\sqrt{2}) \right\}.
+      \delta^{2}+2\beta(\delta)<\min\left\{\epsilon^{2}/2,2\alpha(\epsilon/\sqrt{2}) \right\}.
     \]
     Show that if $\sqrt{y_{0}^{2}+v_{0}^{2}}<\delta$ then $\sqrt{y^{2}+v^{2}}<\epsilon$ for $t>0$, which implies that $\overline{y}=0$ is a stable equilibrium of $y''+p(y)=0$.
 

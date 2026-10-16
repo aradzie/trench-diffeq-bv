@@ -153,7 +153,7 @@ This motivates the next definition.
 
 We use the term ``formal solution'' in this definition because it's not in general true that the
 infinite series in \eqref{eq:12.1.5} actually satisfies all the requirements of the initial-boundary
-value problem \eqref{eq:12.1.4} when it does, we say that it's an {\color{blue}\it actual
+value problem \eqref{eq:12.1.4}; when it does, we say that it's an {\color{blue}\it actual
 solution\/} of \eqref{eq:12.1.4}.
 
 Because of the negative exponentials in \eqref{eq:12.1.5}, $u$ converges for all $(x,t)$ with $t>0$
@@ -206,7 +206,7 @@ Therefore
   u(x,t)=\dst\frac{12L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{n^{3}}e^{-n^{2}\pi^{2}a^{2}t/L^{2}}\sin\frac{n\pi x}{L}. \eqno{\bbox}
 \]
 
-If both ends of bar are insulated so that no heat can pass through them, then the boundary
+If both ends of the bar are insulated so that no heat can pass through them, then the boundary
 conditions are
 \[
   u_{x}(0,t)=0,\quad u_{x}(L,t)=0,\quad t>0.
@@ -434,7 +434,7 @@ variables, and \eqref{eq:12.1.10} is the solution of \eqref{eq:12.1.9}.
   \]
 \end{example}
 
-A similar procedure works if the boundary conditions in \eqref{eq:12.1.11} are replaced by mixed
+A similar procedure works if the boundary conditions in \eqref{eq:12.1.9} are replaced by mixed
 boundary conditions
 \[
   u_{x}(0,t)=u_{0},\quad u(L,t)=u_{L},\quad t>0
@@ -464,8 +464,8 @@ is the Fourier sine series of $f$ on $[0,L]$. Consider the $m$-th partial sum
 \begin{equation}
   \label{eq:12.1.12}u_{m}(x,t)=\sum_{n=1}^{m}\alpha_{n}e^{-n^{2}\pi^{2}a^{2}t/L^{2}}\sin\frac{n\pi x}{L}.
 \end{equation}
-For several fixed values of $t$ (including $t=0$), graph $u_{m}(x,t)$ versus $t$. In some cases it
-may be useful to graph the curves corresponding to the various values of $t$ on the same axes in
+For several fixed values of $t$ (including $t=0$), graph $u_{m}(x,t)$ versus $x$. In some cases it
+may be useful to graph the curves corresponding to the various values of $t$ on the same axes; in
 other cases you may want to graph the various curves successively (for increasing values of $t$),
 and create a primitive motion picture on your monitor. Repeat this experiment for several values of
 $m$, to compare how the results depend upon $m$ for small and large values of $t$. However, keep in
@@ -652,7 +652,7 @@ perform the computations just described with the formal solution obtained in the
 
   \item\label{exer:12.1.52} $u_{t}=u_{xx}+\pi^{2}\sin\pi x,\quad0<x<1,\quad t>0$,\\ $u(0,t)=0,\quad u_{x}(1,t)=-\pi,\quad t>0$,\\ $u(x,0)=2\sin\pi x,\quad0\le x\le1$
 
-  \item\label{exer:12.1.53} $u_{t}=u_{xx}-6x,\quad0<x<L,\quad t>0$,\\ $u(0,t)=3,\quad u_{x}(1,t)=2,\quad t>0$,\\ $u(x,0)=x^{3}-x^{2}+x+3,\quad0\le x\le1$
+  \item\label{exer:12.1.53} $u_{t}=u_{xx}-6x,\quad0<x<1,\quad t>0$,\\ $u(0,t)=3,\quad u_{x}(1,t)=2,\quad t>0$,\\ $u(x,0)=x^{3}-x^{2}+x+3,\quad0\le x\le1$
 
   \item\label{exer:12.1.54} In this exercise take it as given that the infinite series
         $\sum_{n=1}^{\infty}n^{p}e^{-qn^{2}}$ converges for all $p$ if $q>0$, and, where
@@ -679,7 +679,7 @@ perform the computations just described with the formal solution obtained in the
     \]
 
     \item % (c)
-    Starting from the result of \part{a}, use Theorem~\ref{thmtype:12.1.2} with $z=x$ to show that,
+    Starting from the result of \part{b}, use Theorem~\ref{thmtype:12.1.2} with $z=x$ to show that,
     for a fixed $t>0$,
     \[
       u_{xx}(x,t)=-\frac{\pi^{2}}{L^{2}}\sum_{n=1}^{\infty}n^{2}\alpha_{n}e^{-n^{2}\pi^{2}a^{2}t/L^{2}}\sin\frac{n\pi x}{L},\quad-\infty<x<\infty.

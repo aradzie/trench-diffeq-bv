@@ -2,7 +2,7 @@
 pp.~\pageref{exer:12.4.1}--\pageref{exer:12.4.7}}\medskip
 
 \answer{12.4.1}
-$u(r,\theta)=\dst\alpha_{0}\frac{\ln r/\rho}{\ln\rho_{0}/\rho}+
+$u(r,\theta)=\dst\alpha_{0}\frac{\ln (r/\rho)}{\ln(\rho_{0}/\rho)}+
 \sum_{n=1}^{\infty}
 \frac{r^{n}\rho^{-n}-\rho^{n}r^{-n}}{\rho_{0}^{n}\rho^{-n}-\rho^{n}\rho_{0}^{-n}}
 (\alpha_{n}\cos
@@ -24,7 +24,7 @@ r^{-n\pi/\gamma}}{\rho_{0}^{-n\pi/\gamma}\rho^{n\pi/\gamma}-\rho_{0}^{n\pi/\gamm
 \sin\frac{n\pi\theta}{\gamma}$   \quad
 
 \quad \quad
-$\alpha_{n}=\dst\frac{1}{\gamma}\int_{0}^{\gamma}
+$\alpha_{n}=\dst\frac{2}{\gamma}\int_{0}^{\gamma}
 f(\theta)\sin\frac{n\pi\theta}{\gamma}\,d\theta$, $n=1$, $2$,
 $3$,\dots
 
@@ -37,9 +37,9 @@ r^{-n\pi/\gamma}}{\rho_{0}^{-n\pi/\gamma}\rho^{n\pi/\gamma}+\rho_{0}^{n\pi/\gamm
 \dst\cos\frac{n\pi\theta}{\gamma}$
 
 \quad \quad $\alpha_{0}=\dst\frac{1}{\gamma}\int_{0}^{\gamma}
-f(\theta)\,d\theta$,\quad
+g(\theta)\,d\theta$,\quad
 $\alpha_{n}=\dst\frac{2}{\gamma}\int_{0}^{\gamma}
-f(\theta)\cos\frac{n\pi\theta}{\gamma}\,d\theta$, $n=1$, $2$,
+g(\theta)\cos\frac{n\pi\theta}{\gamma}\,d\theta$, $n=1$, $2$,
 $3$,\dots
 
 \answer{12.4.4}
@@ -79,7 +79,7 @@ f(\theta)\cos\frac{n\pi\theta}{\gamma}\,d\theta$,\;
 \answer{12.4.7}
 $\dst{
 v_{n}(r,\theta)=\frac{r^{n}}{n\rho^{n-1}}(\alpha_{n}\cos
-n\theta+\sin n\theta)}$
+n\theta+\beta_{n}\sin n\theta)}$
 
 \quad \quad $u(r,\theta)=\dst{
 c+\sum_{n=1}^{\infty}\frac{r^{n}}{n\rho^{n-1}}(\alpha_{n}\cos

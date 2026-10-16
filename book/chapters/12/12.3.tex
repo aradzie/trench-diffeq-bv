@@ -99,7 +99,7 @@ is a solution of
   \mbox{BVP}(\alpha,\beta,\gamma,\delta)(f_{0},f_{1},g_{0},g_{1}).
 \]
 Therefore we concentrate on problems where only one of the functions $f_{0}$, $f_{1}$, $g_{0}$,
-$g_{2}$ isn't identically zero. There are 64 (count them!) problems of this form. Each has
+$g_{1}$ isn't identically zero. There are 64 (count them!) problems of this form. Each has
 homogeneous boundary conditions on three sides of the rectangle, and a nonhomogeneous boundary
 condition on the fourth. We use separation of variables to find infinitely many functions that
 satisfy Laplace's equation and the three homogeneous boundary conditions in the open rectangle. We
@@ -182,7 +182,7 @@ More generally, if $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants the
 \]
 satisfies \eqref{eq:12.3.4} with
 \[
-  f(x)=\sum_{n=1}^{m}\alpha_{n}\sin\frac{n\pi x}{L}.
+  f(x)=\sum_{n=1}^{m}\alpha_{n}\sin\frac{n\pi x}{a}.
 \]
 Therefore, if $f$ is an arbitrary piecewise smooth function on $[0,a]$, we define the formal
 solution of \eqref{eq:12.3.4} to be
@@ -206,14 +206,14 @@ for large $n$, so the series in \eqref{eq:12.3.8} converges if $0<y<b$; moreover
 \[
   \frac{\cosh n\pi(b-y)/a}{\sinh n\pi b/a}\approx e^{-n\pi y/a}
 \]
-for large $n$, Theorem~\ref{thmtype:12.1.2} applied twice with $z=x$ and twice with $z=t$, shows
+for large $n$, Theorem~\ref{thmtype:12.1.2} applied twice with $z=x$ and twice with $z=y$ shows
 that $u_{xx}$ and $u_{yy}$ can be obtained by differentiating $u$ term by term if $0<y<b$.
 (Exercise~\ref{exer:12.3.37}). Therefore $u$ satisfies Laplace's equation in the interior of the
 rectangle in Figure~\ref{figure:12.3.4}. Moreover, the series in \eqref{eq:12.3.8} also converges on
 the boundary of the rectangle, and satisfies the three homogeneous boundary conditions in
-\eqref{eq:12.3.4}. Therefore, since $u(x,0)=S(x)$ for $0\le x\le L$, $u$ is an actual solution of
-\eqref{eq:12.3.5} if and only if $S(x)=f(x)$ for $0\le x\le a$. From Theorem~\ref{thmtype:11.3.2},
-this is true if $f$ is continuous and piecewise smooth on $[0,L]$, and $f(0)=f(L)=0$.
+\eqref{eq:12.3.4}. Therefore, since $u(x,0)=S(x)$ for $0\le x\le a$, $u$ is an actual solution of
+\eqref{eq:12.3.4} if and only if $S(x)=f(x)$ for $0\le x\le a$. From Theorem~\ref{thmtype:11.3.2},
+this is true if $f$ is continuous and piecewise smooth on $[0,a]$, and $f(0)=f(a)=0$.
 
 \begin{example}
   \label{example:12.3.2} \rm Solve \eqref{eq:12.3.4} with $f(x)=x(x^{2}-3ax+2a^{2})$.
@@ -330,7 +330,7 @@ $\alpha_{0}$, \dots, $\alpha_{m}$ are arbitrary constants then
 \]
 satisfies \eqref{eq:12.3.11} with
 \[
-  f(x)=\alpha_{0}+\sum_{n=1}^{m}\alpha_{n}\cos\frac{n\pi x}{L}.
+  f(x)=\alpha_{0}+\sum_{n=1}^{m}\alpha_{n}\cos\frac{n\pi x}{a}.
 \]
 Therefore, if $f$ is an arbitrary piecewise smooth function on $[0,a]$ we define the formal solution
 of \eqref{eq:12.3.11} to be
@@ -459,7 +459,7 @@ Thus, if $g$ is an arbitrary piecewise smooth function on $[0,b]$, we define the
 \]
 where
 \[
-  S_{M}(x)=\sum_{n=1}^{\infty}\alpha_{n}\sin\frac{(2n-1)\pi y}{2b}
+  S_{M}(y)=\sum_{n=1}^{\infty}\alpha_{n}\sin\frac{(2n-1)\pi y}{2b}
 \]
 is the mixed Fourier sine series of $g$ on $[0,b]$; that is,
 \[
@@ -543,7 +543,7 @@ $\alpha_{1}$, \dots, $\alpha_{m}$ are arbitrary constants then
 \]
 satisfies \eqref{eq:12.3.20} with
 \[
-  g(y)=\sum_{n=1}^{\infty}\alpha_{n}\cos\frac{(2n-1)\pi y}{2b}.
+  g(y)=\sum_{n=1}^{m}\alpha_{n}\cos\frac{(2n-1)\pi y}{2b}.
 \]
 Therefore, if $g$ is an arbitrary piecewise smooth function on $[0,b]$, we define the formal
 solution of \eqref{eq:12.3.20} to be
@@ -601,7 +601,7 @@ nonhomogeneous Dirichlet or Neumann condition at $y=0$. An example of such a pro
 The boundary conditions in this problem are not sufficient to determine $u$, for if
 $u_{0}=u_{0}(x,y)$ is a solution and $K$ is a constant then
 \[
-  u_{1}(x,y)=u_{0}(x,y)+K\sin\frac{\pi x}{a}\sinh\frac{\pi y}{a}.
+  u_{1}(x,y)=u_{0}(x,y)+K\sin\frac{\pi x}{a}\sinh\frac{\pi y}{a}
 \]
 is also a solution. (Verify.) However, if we also require --- on physical grounds --- that the
 solution remain bounded for all $(x,y)$ in $S$ then $K=0$ and this difficulty is eliminated.
@@ -655,7 +655,7 @@ semi-infinite strip.
     2-x, & 1\le x\le2,
   \end{array}\right. \quad u(x,2)=0,\quad0\le x\le2$,\\ $u(0,y)=0,\quad u(2,y)=0,\quad0\le y\le2$
 
-  \item\label{exer:12.3.4} $u_{xx}+u_{yy}=0,\quad0<x<\pi,\quad0<y<1$,\\ $u(x,0)=x\sin x,\quad u(x,\pi)=0,\quad0\le x\le\pi$,\\ $u(0,y)=0,\quad u(\pi,y)=0,\quad0\le y\le1$
+  \item\label{exer:12.3.4} $u_{xx}+u_{yy}=0,\quad0<x<\pi,\quad0<y<1$,\\ $u(x,0)=x\sin x,\quad u(x,1)=0,\quad0\le x\le\pi$,\\ $u(0,y)=0,\quad u(\pi,y)=0,\quad0\le y\le1$
 
   \item\label{exer:12.3.5} $u_{xx}+u_{yy}=0,\quad0<x<3,\quad0<y<2$,\\ $u(x,0)=0,\quad u_{y}(x,2)=x^{2},\quad0\le x\le3$,\\ $u_{x}(0,y)=0,\quad u_{x}(3,y)=0,\quad0\le y\le2$
 
@@ -754,7 +754,7 @@ semi-infinite strip.
   \]
   has no solution unless
   \[
-    \int_{0}^{a}f_{0}(x)\,dx= \int_{0}^{a}f_{1}(x)\,dx= \int_{0}^{b}g_{0}(y)\,dy= \int_{0}^{b}g_{1}(y)\,dy=0.
+    \int_{0}^{a}\bigl(f_{1}(x)-f_{0}(x)\bigr)\,dx + \int_{0}^{b}\bigl(g_{1}(y)-g_{0}(y)\bigr)\,dy=0.
   \]
   In this case it has infinitely many formal solutions. Find them.
 
@@ -794,7 +794,7 @@ semi-infinite strip.
     \]
 
     \item % (d)
-    Starting from the result of \part{b}, use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$ to
+    Starting from the result of \part{c}, use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$ to
     show that, for a fixed $y$ in $(0,b)$,
     \[
       u_{xx}(x,y)=-\frac{\pi^{2}}{a^{2}}\sum_{n=1}^{\infty}n^{2}\alpha_{n}\frac{\sinh n\pi(b-y)/a}{\sinh n\pi b/a}\sin\frac{n\pi x}{a},\quad-\infty<x<\infty.

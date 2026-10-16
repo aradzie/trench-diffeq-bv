@@ -936,17 +936,95 @@ sections:
       - "All 53 supplied coefficients in Answers 1-56 checked against their Fourier integrals; theorems and worked examples checked by integration by parts."
       - "Computer plots and EPS figures not visually inspected."
   "12.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: prose, where: "Formal versus actual solution", note: "run-on sentence -> semicolon"}
+      - {kind: prose, where: "Insulated endpoints", note: "both ends of bar -> both ends of the bar"}
+      - {kind: math, where: "Technology graph instruction", note: "graph versus t -> graph versus x at fixed t"}
+      - {kind: prose, where: "Technology graph instruction", note: "run-on sentence -> semicolon"}
+      - {kind: math, where: "Exercise 53 domain", note: "0<x<L -> 0<x<1"}
+      - {kind: ref, where: "Mixed nonhomogeneous problems", note: "(12.1.11) -> (12.1.9)"}
+      - {kind: ref, where: "Exercise 54(c)", note: "start from part (a) -> part (b)"}
+      - {kind: answer, where: "Answer 21", note: "u(x,y) -> u(x,t)"}
+      - {kind: answer, where: "Answer 46", note: "extra closing parenthesis in cosine argument -> removed"}
+    remarks:
+      - "Separation formulas, examples, exercise Fourier coefficients, and supplied answers checked against eigenfunctions and boundary data."
+      - "Computer plots and EPS figures not visually inspected."
   "12.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: math, where: "Wave equation setup", note: "unspecified a -> a>0, as required by later denominators"}
+      - {kind: prose, where: "Wave applications", note: "the the -> the"}
+      - {kind: math, where: "Separated mode initial velocity", note: "beta_n cos(n pi x/L) -> beta_n sin(n pi x/L)"}
+      - {kind: ref, where: "Theorem 12.2.2", note: "u in (12.2.1) -> series in (12.2.8)"}
+      - {kind: math, where: "Proof of Theorem 12.2.3", note: "f differentiable -> h differentiable"}
+      - {kind: math, where: "Equation (12.2.20)", note: "minus between S_f second derivatives -> plus"}
+      - {kind: math, where: "Proof of Theorem 12.2.4", note: "0<=x<L -> 0<=x<=L in both initial conditions"}
+      - {kind: math, where: "Example 12.2.1 initial displacement", note: "L^2 constant -> L^3, matching Exercise 11.3.39"}
+      - {kind: typeset, where: "Figure 12.2.9 caption", note: "second x-at -> x+at"}
+      - {kind: math, where: "Plucked string solution and Exercise 16(B)", note: "last branch starts at L/2-at -> L/2+at"}
+      - {kind: typeset, where: "Exercise 62(c)", note: "u derivatives at (x,y) -> (x,t)"}
+      - {kind: math, where: "Exercise 63(c) domain", note: "-infinity<t<infinity -> -infinity<x<infinity"}
+      - {kind: answer, where: "Answer 25", note: "mixed sine spatial factor -> mixed cosine factor"}
+      - {kind: answer, where: "Answer 44", note: "cos((2n-1)pi t) -> cos(2(2n-1)pi t)"}
+      - {kind: answer, where: "Answer 46", note: "384/pi^5 -> 192/pi^5; angular frequency doubled"}
+      - {kind: answer, where: "Answers 50 and 51", note: "Fourier coefficients halved to -384/pi^4 and -768/(sqrt(5)pi^5)"}
+    remarks:
+      - "Fourier mode frequencies and initial displacement and velocity checked against the stated wave problems."
+      - "Computer animations and EPS figures not visually inspected."
   "12.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: math, where: "Boundary data enumeration", note: "g_2 -> g_1"}
+      - {kind: math, where: "Example 12.3.1 finite sum", note: "sin(n pi x/L) -> sin(n pi x/a)"}
+      - {kind: math, where: "After (12.3.9)", note: "z=t -> z=y in differentiation claim"}
+      - {kind: prose, where: "After (12.3.9)", note: "boundary conditions conditions -> boundary conditions"}
+      - {kind: ref, where: "Actual solution condition after (12.3.9)", note: "(12.3.5) -> (12.3.4)"}
+      - {kind: math, where: "Actual solution condition after (12.3.9)", note: "L -> a in domain and endpoint conditions"}
+      - {kind: math, where: "Example 12.3.3 finite sum", note: "cos(n pi x/L) -> cos(n pi x/a)"}
+      - {kind: math, where: "Example 12.3.5 series name", note: "S_M(x) -> S_M(y)"}
+      - {kind: math, where: "Example 12.3.7 finite sum", note: "infinite summation limit -> m"}
+      - {kind: prose, where: "Semi-infinite strip nonuniqueness", note: "stray period inside displayed formula -> removed"}
+      - {kind: math, where: "Exercise 4 boundary", note: "u(x,pi)=0 -> u(x,1)=0"}
+      - {kind: math, where: "Exercise 36 compatibility", note: "four zero integrals -> zero net outward flux"}
+      - {kind: ref, where: "Exercise 37(d)", note: "start from part (b) -> part (c)"}
+      - {kind: answer, where: "Answers 19 and 20", note: "specific solutions interchanged -> assigned to matching exercises"}
+      - {kind: answer, where: "Answer 22", note: "cos(2n) denominator -> cosh(2n)"}
+      - {kind: answer, where: "Answer 27", note: "missing pi in general sine argument -> inserted"}
+      - {kind: answer, where: "Answer 28", note: "constant cosine coefficient integral contained cos(n pi y/b) -> removed"}
+      - {kind: answer, where: "Answer 32", note: "u(x) -> u(x,y)"}
+      - {kind: answer, where: "Answer 36", note: "zero-mean-only formula -> added compatible mean-flux harmonic term"}
+    remarks:
+      - "Separated radial factors, Fourier boundary data, and supplied answer series checked against their boundary conditions."
+      - "Computer plots and EPS figures not visually inspected."
   "12.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: prose, where: "Polar-coordinate introduction", note: "as function -> as a function"}
+      - {kind: math, where: "Polar-coordinate identity", note: "incorrect inverse trigonometric identity -> x=r cos theta and y=r sin theta"}
+      - {kind: prose, where: "Periodic angular eigenfunctions", note: "singular eigenfunction and missing semicolon -> plural and semicolon"}
+      - {kind: prose, where: "Radial zero-mode derivation", note: "yields the -> yields"}
+      - {kind: math, where: "Disk separated mode", note: "missing beta_n on sine term -> inserted"}
+      - {kind: math, where: "Annular zero mode", note: "logarithm arguments and v_0(r,theta) -> parenthesized ratios and correct variable"}
+      - {kind: math, where: "Sector Euler equation", note: "mixed R and R_n -> R_n throughout"}
+      - {kind: math, where: "Sector radial normalization", note: "r(rho)=1 -> R_n(rho)=1"}
+      - {kind: prose, where: "Sector finite sum", note: "extraneous and -> removed"}
+      - {kind: math, where: "Sector formal solution", note: "u_m on infinite sum -> u"}
+      - {kind: answer, where: "Answer 1", note: "ambiguous logarithm arguments -> parenthesized ratios"}
+      - {kind: answer, where: "Answer 2", note: "1/gamma -> 2/gamma in mixed sine coefficient"}
+      - {kind: answer, where: "Answer 3", note: "f(theta) -> g(theta) in Neumann coefficients"}
+      - {kind: answer, where: "Answer 7", note: "missing beta_n on sine term -> inserted"}
+    remarks:
+      - "All seven supplied polar-coordinate answer families checked against radial equations and boundary data."
+      - "EPS figures not visually inspected."
   "13.1":
     text: todo
     answers: todo
@@ -966,7 +1044,7 @@ other_files:
   chapters/09/chapter.tex: done  # introduction, section descriptions, and input order checked
   chapters/10/chapter.tex: done  # introduction, section descriptions, and input order checked
   chapters/11/chapter.tex: done  # "in term" -> "in terms"; introduction and input order checked
-  chapters/12/chapter.tex: todo
+  chapters/12/chapter.tex: done  # Section 1.3 reference corrected to 12.3; introduction and inputs checked
   chapters/13/chapter.tex: todo
   book/frontmatter.tex: todo
   book/integrals.tex: todo

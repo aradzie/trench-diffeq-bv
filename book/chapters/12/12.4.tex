@@ -4,13 +4,13 @@
 In Section~12.3 we solved boundary value problems for Laplace's equation over a rectangle with sides
 parallel to the $x,y$-axes. Now we'll consider boundary value problems for Laplace's equation over
 regions with boundaries best described in terms of polar coordinates. In this case it's appropriate
-to regard $u$ as function of $(r,\theta)$ and write Laplace's equation in polar form as
+to regard $u$ as a function of $(r,\theta)$ and write Laplace's equation in polar form as
 \begin{equation}
   \label{eq:12.4.1}u_{rr}+\frac{1}{r}u_{r}+\frac{1}{r^{2}}u_{\theta\theta}=0,
 \end{equation}
 where
 \[
-  r=\sqrt{x^{2}+y^{2}}\mbox{\quad and \quad}\theta=\cos^{-1}\frac{x}{r}=\sin^{-1}\frac{x}{r}.
+  x=r\cos\theta\mbox{\quad and \quad}y=r\sin\theta.
 \]
 
 We begin with the case where the region is a circular disk with radius $\rho$, centered at the
@@ -58,15 +58,14 @@ boundary conditions on $\Theta$; that is,
 Since we don't want $R\Theta$ to be identically zero, $\lambda$ must be an eigenvalue of
 \eqref{eq:12.4.4} and $\Theta$ must be an associated eigenfunction. From
 Theorem~\ref{thmtype:11.1.6}, the eigenvalues of \eqref{eq:12.4.4} are $\lambda_{0}=0$ with
-associated eigenfunctions $\Theta_{0}=1$ and, for $n=1,2,3,\dots$, $\lambda_{n}=n^{2}$, with
-associated eigenfunction $\cos n\theta$ and $\sin n\theta$ therefore,
+associated eigenfunction $\Theta_{0}=1$ and, for $n=1,2,3,\dots$, $\lambda_{n}=n^{2}$, with
+associated eigenfunctions $\cos n\theta$ and $\sin n\theta$; therefore,
 \[
   \Theta_{n}=\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta
 \]
 where $\alpha_{n}$ and $\beta_{n}$ are constants.
 
-Substituting $\lambda=0$ into \eqref{eq:12.4.3} yields the
-\[
+Substituting $\lambda=0$ into \eqref{eq:12.4.3} yields \[
   r^{2}R''+rR'=0,
 \]
 so
@@ -107,7 +106,7 @@ by Theorem~\ref{thmtype:7.4.3}. Consistent with our previous assumption on $R_{0
 $R_{n}$ to be bounded as $r\to0+$. This implies that $c_{2}=0$, and we choose $c_{1}=\rho^{-n}$.
 Then $R_{n}(r)=r^{n}/\rho^{n}$, so
 \[
-  v_{n}(r,\theta)=R_{n}(r)\Theta_{n}(\theta)=\frac{r^{n}}{\rho^{n}}(\alpha_{n}\cos n\theta+\sin n\theta).
+  v_{n}(r,\theta)=R_{n}(r)\Theta_{n}(\theta)=\frac{r^{n}}{\rho^{n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta).
 \]
 Now $v_{n}$ satisfies \eqref{eq:12.4.2} with
 \[
@@ -196,11 +195,11 @@ in \eqref{eq:12.4.5} and \eqref{eq:12.4.7} so that $R_{n}(\rho_{0})=0$ for $n=0$
 view of the nonhomogeneous Dirichlet condition on the boundary $r=\rho$, it's also convenient to
 require that $R_{n}(\rho)=1$ for $n=0$, $1$, $2$,\dots. We leave it to you to verify that
 \[
-  R_{0}(r)=\frac{\ln r/\rho_{0}}{\ln\rho/\rho_{0}}\mbox{\quad and \quad}R_{n}=\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}},\quad n=1,2,3,\dots
+  R_{0}(r)=\frac{\ln(r/\rho_{0})}{\ln(\rho/\rho_{0})}\mbox{\quad and \quad}R_{n}=\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}},\quad n=1,2,3,\dots
 \]
 satisfy these requirements. Therefore
 \[
-  v_{0}(\rho,\theta)=\frac{\ln r/\rho_{0}}{\ln\rho/\rho_{0}}
+  v_{0}(r,\theta)=\frac{\ln(r/\rho_{0})}{\ln(\rho/\rho_{0})}
 \]
 and
 \[
@@ -211,7 +210,7 @@ where $\alpha_{n}$ and $\beta_{n}$ are arbitrary constants.
 If $\alpha_{0}$, $\alpha_{1}$,\dots, $\alpha_{m}$ and $\beta_{1}$, $\beta_{2}$, \dots, $\beta_{m}$
 are arbitrary constants then
 \[
-  u_{m}(r,\theta)=\alpha_{0}\frac{\ln r/\rho_{0}}{\ln\rho/\rho_{0}}+ \sum_{n=1}^{m}\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta)
+  u_{m}(r,\theta)=\alpha_{0}\frac{\ln(r/\rho_{0})}{\ln(\rho/\rho_{0})}+ \sum_{n=1}^{m}\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta)
 \]
 satisfies \eqref{eq:12.4.9}, with
 \[
@@ -219,7 +218,7 @@ satisfies \eqref{eq:12.4.9}, with
 \]
 This motivates us to define the formal solution of \eqref{eq:12.4.9} for general $f$ to be
 \[
-  u(r,\theta)=\alpha_{0}\frac{\ln r/\rho_{0}}{\ln\rho/\rho_{0}}+ \sum_{n=1}^{\infty}\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta),
+  u(r,\theta)=\alpha_{0}\frac{\ln(r/\rho_{0})}{\ln(\rho/\rho_{0})}+ \sum_{n=1}^{\infty}\frac{\rho_{0}^{-n}r^{n}-\rho_{0}^{n}r^{-n}}{\rho_{0}^{-n}\rho^{n}-\rho_{0}^{n}\rho^{-n}}(\alpha_{n}\cos n\theta+\beta_{n}\sin n\theta),
 \]
 where
 \[
@@ -261,7 +260,7 @@ $\lambda_{n}=n^{2}\pi^{2}/\gamma^{2}$, with associated eigenfunction
 $\Theta_{n}=\sin n\pi\theta/\gamma$, $n=1$, $2$, $3$,\dots. Substituting
 $\lambda=n^{2}\pi^{2}/\gamma^{2}$ into \eqref{eq:12.4.11} yields the Euler equation
 \[
-  r^{2}R''+rR_{n}'-\frac{n^{2}\pi^{2}}{\gamma^{2}}R=0.
+  r^{2}R_{n}''+rR_{n}'-\frac{n^{2}\pi^{2}}{\gamma^{2}}R_{n}=0.
 \]
 The indicial polynomial of this equation is
 \[
@@ -272,7 +271,7 @@ so
   R_{n}=c_{1}r^{n\pi/\gamma}+c_{2}r^{-n\pi/\gamma},
 \]
 by Theorem~\ref{thmtype:7.4.3}. To obtain a solution that remains bounded as $r\to0+$ we let
-$c_{2}=0$. Because of the Dirichlet condition at $r=\rho$, it's convenient to have $r(\rho)=1$;
+$c_{2}=0$. Because of the Dirichlet condition at $r=\rho$, it's convenient to have $R_{n}(\rho)=1$;
 therefore we take $c_{1}=\rho^{-n\pi/\gamma}$, so
 \[
   R_{n}(r)=\frac{r^{n\pi/\gamma}}{\rho^{n\pi/\gamma}}.
@@ -285,7 +284,7 @@ satisfies \eqref{eq:12.4.10} with
 \[
   f(\theta)=\sin\frac{n\pi\theta}{\gamma}.
 \]
-More generally, if $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{m}$ and are arbitrary constants then
+More generally, if $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{m}$ are arbitrary constants then
 \[
   u_{m}(r,\theta)=\sum_{n=1}^{m}\alpha_{n}\frac{r^{n\pi/\gamma}}{\rho^{n\pi/\gamma}}\sin\frac{n\pi\theta}{\gamma}
 \]
@@ -295,7 +294,7 @@ satisfies \eqref{eq:12.4.10} with
 \]
 This motivates us to define the bounded formal solution of \eqref{eq:12.4.10} to be
 \[
-  u_{m}(r,\theta)=\sum_{n=1}^{\infty}\alpha_{n}\frac{r^{n\pi/\gamma}}{\rho^{n\pi/\gamma}}\sin\frac{n\pi\theta}{\gamma},
+  u(r,\theta)=\sum_{n=1}^{\infty}\alpha_{n}\frac{r^{n\pi/\gamma}}{\rho^{n\pi/\gamma}}\sin\frac{n\pi\theta}{\gamma},
 \]
 where
 \[

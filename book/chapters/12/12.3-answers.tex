@@ -111,7 +111,7 @@ u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}\frac{\sinh(2n-1)\pi(b-y)/2a}{\sinh(2n-1)\pi
 f(x)\cos\frac{(2n-1)\pi x}{2a}\,dx$
 
 \quad \quad$u(x,y)=\dst
-\frac{288}{\pi^{3}}\sum_{n=1}^{\infty}\frac{\sinh(2n-1)\pi(2-y)/6}{(2n-1)^{3}\sinh(2n-1)\pi/3}\sin\frac{(2n-1)\pi x}{6}$
+\frac{32}{\pi^{3}}\sum_{n=1}^{\infty}\left[(-1)^{n}5+\frac{18}{(2n-1)\pi}\right]{\frac{\sinh(2n-1)\pi(2-y)/2}{(2n-1)^{3}\sinh(2n-1)\pi}}\cos\frac{(2n-1)\pi x}{2}$
 
 \answer{12.3.20}
 $\dst
@@ -121,10 +121,7 @@ u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}\frac{\sinh(2n-1)\pi(b-y)/2a}{\sinh(2n-1)\pi
 \quad \quad$\dst\alpha_{n}=\frac{2}{a}\int_{0}^{a}
 f(x)\sin\frac{(2n-1)\pi x}{2a}\,dx$
 
-\quad \quad$u(x,y)=\dst\frac{32}{\pi^{3}}\sum_{n=1}^{\infty}\left[
-(-1)^{n}5+\frac{18}{(2n-1)\pi}\right]
-{\frac{\sinh(2n-1)\pi(2-y)/2}{(2n-1)^{3}\sinh(2n-1)\pi}}
-\cos\frac{(2n-1)\pi x}{2}$.
+\quad \quad$u(x,y)=\dst\frac{288}{\pi^{3}}\sum_{n=1}^{\infty}\frac{\sinh(2n-1)\pi(2-y)/6}{(2n-1)^{3}\sinh(2n-1)\pi/3}\sin\frac{(2n-1)\pi x}{6}$.
 
 \answer{12.3.21}
 $\dst u(x,y)=\sum_{n=1}^{\infty}\alpha_{n}\frac{\cosh n\pi(y-b)/a}{\cosh n\pi b/a}\sin
@@ -143,7 +140,7 @@ $\dst\alpha_{0}=\frac{1}{a}\int_{0}^{a}f(x)\,dx$,
 \quad \quad$\dst\alpha_{n}=\frac{2}{a}\int_{0}^{a}f(x)\cos
 \frac{n\pi x}{a}\,dx,\quad n\ge1$
 
-\quad \quad$\dst u(x,y)=\frac{\pi^{4}}{30}-3\sum_{n=1}^{\infty}\frac{1}{n^{4}}\frac{\cosh2ny}{\cos2n}\cos2nx$
+\quad \quad$\dst u(x,y)=\frac{\pi^{4}}{30}-3\sum_{n=1}^{\infty}\frac{1}{n^{4}}\frac{\cosh2ny}{\cosh2n}\cos2nx$
 
 \answer{12.3.23}
 $\dst u(x,y)=\frac{a}{\pi}\sum_{n=1}^{\infty}\alpha_{n}\frac{\sinh n\pi
@@ -188,7 +185,7 @@ $\dst\alpha_{n}=\frac{2}{b}\int_{0}^{b}g(y)\sin
 \answer{12.3.27}
 $\dst
 u(x,y)=-\frac{2b}{\pi}\sum_{n=1}^{\infty}\alpha_{n}\frac{\cosh(2n-1)\pi(x-a)/2b}{(2n-1)\sinh(2n-1)\pi a/2b}
-\sin\frac{(2n-1)y}{2b}$,\quad
+\sin\frac{(2n-1)\pi y}{2b}$,\quad
 
 \quad \quad$\dst\alpha_{n}=\frac{2}{b}\int_{0}^{b}g(y)\sin
 \frac{(2n-1)\pi y}{2b}\,dy$
@@ -203,7 +200,7 @@ $\dst
 u(x,y)=\alpha_{0}(x-a)+\frac{b}{\pi}\sum_{n=1}^{\infty}\alpha_{n}\frac{\sinh
 n\pi(x-a)/b}{n\cosh n\pi a/b}
 \cos\frac{n\pi y}{b}$,\quad
-$\dst\alpha_{0}=\frac{1}{b}\int_{0}^{b}g(y)\cos\frac{n\pi y}{b}\,dy$,
+$\dst\alpha_{0}=\frac{1}{b}\int_{0}^{b}g(y)\,dy$,
 
 \quad \quad$\dst\alpha_{n}=\frac{2}{b}\int_{0}^{b}g(y)\cos
 \frac{n\pi y}{b}\,dy$
@@ -247,7 +244,7 @@ y/a}\sin
 $\alpha_{n}=\dst\frac{2}{a}\int_{0}^{a}
 f(x)\sin\frac{n\pi x}{a}\,dx$
 
-\quad \quad$u(x)=\dst4\sum_{n=1}^{\infty}\frac{(1+(-1)^{n}2)}{n^{4}}
+\quad \quad$u(x,y)=\dst4\sum_{n=1}^{\infty}\frac{(1+(-1)^{n}2)}{n^{4}}
 e^{-ny}\sin nx$
 
 \answer{12.3.33}
@@ -280,7 +277,7 @@ n\pi b/a}\sin\frac{n\pi x}{a}\\
 \frac{C_{n}\sinh n\pi(a-x)/b+D_{n}\sinh n\pi x/b}{\sinh n\pi a/b}\sin\frac{n\pi y}{b}$
 
 \answer{12.3.36}
-$\dst u(x,y)=C+
+$\dst\bar f_{j}=\frac{1}{a}\int_{0}^{a}f_{j}(x)\,dx,\quad\bar g_{j}=\frac{1}{b}\int_{0}^{b}g_{j}(y)\,dy,\quad j=0,1$. Let $A_{n}$ and $B_{n}$ be the Fourier cosine coefficients of $f_{0}$ and $f_{1}$ on $[0,a]$, and let $C_{n}$ and $D_{n}$ be those of $g_{0}$ and $g_{1}$ on $[0,b]$. If $a(\bar f_{1}-\bar f_{0})+b(\bar g_{1}-\bar g_{0})=0$, then $\dst u(x,y)=C+\bar f_{0}y+\bar g_{0}x +\frac{\bar f_{1}-\bar f_{0}}{2b}(y^{2}-x^{2})+
 \frac{a}{\pi}\sum_{n=1}^{\infty}\frac{B_{n}\cosh n\pi y/a-A_{n}\cosh
 n\pi(y-b)/a}{n\sinh n\pi b/a}\cos\frac{n\pi x}{a}\\
 \hspace*{6.5em}+\frac{b}{\pi}\sum_{n=1}^{\infty}\frac{D_{n}\cosh n\pi

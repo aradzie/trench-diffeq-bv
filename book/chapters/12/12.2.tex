@@ -10,7 +10,7 @@ In this section we consider initial-boundary value problems of the form
     u(x,0)=f(x),\quad u_{t}(x,0)=g(x),\quad0\le x\le L,
   \end{array}
 \end{equation}
-where $a$ is a constant and $f$ and $g$ are given functions of $x$.
+where $a>0$ is a constant and $f$ and $g$ are given functions of $x$.
 
 The partial differential equation $u_{tt}=a^{2}u_{xx}$ is called the {\color{blue}\it wave
 equation\/}. It is necessary to specify both $f$ and $g$ because the wave equation is a second order
@@ -196,7 +196,7 @@ so
   v_{n}(x,0)=\alpha_{n}\sin\frac{n\pi x}{L}\mbox{\quad and \quad}{\frac{\partial v_{n}}{\partial t}}(x,0)=\beta_{n}\sin\frac{n\pi x}{L}.
 \]
 Therefore $v_{n}$ satisfies \eqref{eq:12.2.1} with $f(x)=\alpha_{n}\sin n\pi x/L$ and
-$g(x)=\beta_{n}\cos n\pi x/L$. More generally, if $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{m}$
+$g(x)=\beta_{n}\sin n\pi x/L$. More generally, if $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{m}$
 and $\beta_{1}$, $\beta_{2}$,\dots, $\beta_{m}$ are constants and
 \[
   u_{m}(x,t)=\sum_{n=1}^{m}\left(\alpha_{n}\cos\frac{n\pi at}{L}+\frac{\beta_{n}L}{n\pi a}\sin\frac{n\pi at}{L}\right) \sin\frac{n\pi x}{L},
@@ -233,8 +233,8 @@ $-\infty<x<\infty$ and $-\infty<t<\infty$.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:12.2.2} If $f$ and $g$ are piecewise smooth on $[0,L]$, then $u$ in
-  \eqref{eq:12.2.1} converges for all $(x,t)$, and can be written as
+  \label{thmtype:12.2.2} If $f$ and $g$ are piecewise smooth on $[0,L]$, then the series in
+  \eqref{eq:12.2.8} converges for all $(x,t)$ and can be written as
   \begin{equation}
     \label{eq:12.2.9}u(x,t)=\frac{1}{2}[S_{f}(x+at)+S_{f}(x-at)]+ \frac{1}{2a}\int_{x-at}^{x+at}S_{g}(\tau)\,d\tau.
   \end{equation}
@@ -320,7 +320,7 @@ properties.
   \end{equation}
 \end{theorem}
 
-\proof Throughout this proof, $k$ denotes an integer. Since $f$ is differentiable on the open
+\proof Throughout this proof, $k$ denotes an integer. Since $h$ is differentiable on the open
 interval $(0,L)$, both $p$ and $q$ are differentiable on every open interval $((k-1)L,kL)$. Thus, we
 need only to determine whether $p$ and $q$ are differentiable at $x=kL$ for every $k$.
 
@@ -425,7 +425,7 @@ Now we can differentiate \eqref{eq:12.2.9} twice with respect to $x$ and $t$:
 \end{equation}
 and
 \begin{equation}
-  \label{eq:12.2.20}u_{tt}(x,t)=\frac{a^{2}}{2}[S_{f}''(x+at)-S_{f}''(x-at)]+ \frac{a}{2}[S_{g}'(x+at)-S_{g}'(x-at)].
+  \label{eq:12.2.20}u_{tt}(x,t)=\frac{a^{2}}{2}[S_{f}''(x+at)+S_{f}''(x-at)]+ \frac{a}{2}[S_{g}'(x+at)-S_{g}'(x-at)].
 \end{equation}
 Comparing \eqref{eq:12.2.18} and \eqref{eq:12.2.20} shows that $u_{tt}(x,t)=a^{2}u_{xx}(x,t)$ for
 all $(x,t)$.
@@ -433,11 +433,11 @@ all $(x,t)$.
 From \eqref{eq:12.2.8}, $u(0,t)=u(L,t)=0$ for all $t$. From \eqref{eq:12.2.9}, $u(x,0)=S_{f}(x)$ for
 all $x$, and therefore, in particular,
 \[
-  u(x,0)=f(x),\quad0\le x<L.
+  u(x,0)=f(x),\quad0\le x\le L.
 \]
 From \eqref{eq:12.2.19}, $u_{t}(x,0)=S_{g}(x)$ for all $x$, and therefore, in particular,
 \[
-  u_{t}(x,0)=g(x),\quad0\le x<L.
+  u_{t}(x,0)=g(x),\quad0\le x\le L.
 \]
 Therefore $u$ is an actual solution of \eqref{eq:12.2.1}. This completes the proof.
 
@@ -451,7 +451,7 @@ purposes.
 \begin{example}
   \label{example:12.2.1} \rm Solve \eqref{eq:12.2.1} with
   \[
-    f(x)=x(x^{3}-2Lx^{2}+L^{2}) \mbox{\quad and \quad}g(x)=x(L-x).
+    f(x)=x(x^{3}-2Lx^{2}+L^{3}) \mbox{\quad and \quad}g(x)=x(L-x).
   \]
 \end{example}
 
@@ -569,7 +569,7 @@ the odd periodic extension of $f$. You can see from the graph that $S_{f}$ is di
     \centering
     \scalebox{.65}{
     \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig120209}}
-    \caption{Graphs of $y=S_{f}(x-at)$ (dashed) and $y=S_{f}(x-at)$ (solid), with $f$ as in \eqref{eq:12.2.21}}
+    \caption{Graphs of $y=S_{f}(x-at)$ (dashed) and $y=S_{f}(x+at)$ (solid), with $f$ as in \eqref{eq:12.2.21}}
     \label{figure:12.2.9}
   \end{minipage}
 \end{figure}
@@ -614,7 +614,7 @@ Therefore, from \eqref{eq:12.2.23},
   \begin{array}{cl}
     x,              & 0\le x\le\frac{L}{2}-at,              \\[2\jot]
     \frac{L}{2}-at, & \frac{L}{2}-at\le x\le\frac{L}{2}+at, \\[2\jot]
-    L-x,            & \frac{L}{2}-at\le x\le L
+    L-x,            & \frac{L}{2}+at\le x\le L
   \end{array}\right.
 \]
 if $(x,t)$ satisfies \eqref{eq:12.2.24}. Figure~\ref{figure:12.2.11} is the graph of this function
@@ -729,7 +729,7 @@ in the Fourier sine series.}
     \begin{array}{cl}
       x,                 & 0\le x\le\frac{L}{2}-a\tau,                 \\[2\jot]
       \frac{L}{2}-a\tau, & \frac{L}{2}-a\tau\le x\le\frac{L}{2}+a\tau, \\[2\jot]
-      L-x,               & \frac{L}{2}-a\tau\le x\le L.
+      L-x,               & \frac{L}{2}+a\tau\le x\le L.
     \end{array}\right. \eqno{\rm(B)}
   \]
   if $0\le\tau\le L/2a$. The first objective of this exercise is to show that (B) can be used to
@@ -976,11 +976,11 @@ in the Fourier sine series.}
     \item % (c)
     Suppose $\sum_{n=1}^{\infty}n^{2}|k_{n}|$ converges. Show that
     \[
-      u_{xx}(x,y)= \sum_{n=1}^{\infty}k_{n}p_{n}''(x)q_{n}(t)
+      u_{xx}(x,t)= \sum_{n=1}^{\infty}k_{n}p_{n}''(x)q_{n}(t)
     \]
     and
     \[
-      u_{tt}(x,y)= \sum_{n=1}^{\infty}k_{n}p_{n}(x)q_{n}''(t)
+      u_{tt}(x,t)= \sum_{n=1}^{\infty}k_{n}p_{n}(x)q_{n}''(t)
     \]
 
     \item % (d)
@@ -1024,7 +1024,7 @@ in the Fourier sine series.}
     \item % (c)
     Solve
     \[
-      u_{tt}=a^{2}u_{xx},\quad-\infty<t<\infty,\quad t>0,
+      u_{tt}=a^{2}u_{xx},\quad-\infty<x<\infty,\quad t>0,
     \]
     \[
       u(x,0)=f(x),\quad u_{t}(x,0)=g(x),\quad-\infty<x<\infty.

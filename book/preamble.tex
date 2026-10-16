@@ -1,9 +1,9 @@
-\documentclass[dvips]{book}
+\documentclass[12pt,dvips,openany,oneside]{book}
 
 % Fonts and encoding
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\renewcommand{\rmdefault}{ptm}
+\usepackage{newtxtext}
 \usepackage[scaled=0.92]{helvet}
 
 % Colors
@@ -12,10 +12,11 @@
 % Math
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{newtxmath}
 
 % Lists, floats, figures, captions, page geometry
 \usepackage{enumitem}
-\usepackage[a4paper]{geometry}
+\usepackage[a4paper,hmargin=25mm,vmargin=25mm]{geometry}
 \usepackage{float}
 \usepackage{graphicx}
 \graphicspath{{figures/}}
@@ -25,6 +26,7 @@
   bookmarks=true,
   bookmarksdepth=3,
   colorlinks=true,
+  linkcolor=blue,
   citecolor=blue,
   urlcolor=blue,
   filecolor=blue,

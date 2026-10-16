@@ -138,7 +138,7 @@ $p=(M_{y}-N_{x})/N$ and $q\equiv0$. Therefore
 \]
 so \eqref{eq:2.6.10} is an integrating factor for \eqref{eq:2.6.11} on $R$.
 
-(b) If $(N_{x}-M_{y})/M$ is independent of $x$ then eqref{eq:2.6.8} holds with $p\equiv0$ and
+(b) If $(N_{x}-M_{y})/M$ is independent of $x$ then \eqref{eq:2.6.8} holds with $p\equiv0$ and
 $q=(N_{x}-M_{y})/M$, and a similar argument shows that \eqref{eq:2.6.12} is an integrating factor
 for \eqref{eq:2.6.11} on $R$.\bbox
 
@@ -197,9 +197,7 @@ $\psi(x)=-e^{-x^{2}}$ in \eqref{eq:2.6.17} and conclude that
 \]
 is an implicit solution of \eqref{eq:2.6.14}. It is also an implicit solution of \eqref{eq:2.6.13}.
 
-Figure~\ref{figure:2.6.1} shows a direction field and some integral curves for \eqref{eq:2.6.13}
-
-\begin{figure}[tbp]
+Figure~\ref{figure:2.6.1} shows a direction field and some integral curves for \eqref{eq:2.6.13}. \begin{figure}[tbp]
   \centering
   \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig020601}
   \color{blue}
@@ -225,7 +223,7 @@ and
 \]
 so \eqref{eq:2.6.18} isn't exact. Moreover,
 \[
-  \frac{M_{y}-N_{x}}{N}=-\frac{2xy^{3}}{3x^{2}y^{2}+x^{2}y^{2}+1}
+  \frac{M_{y}-N_{x}}{N}=-\frac{2xy^{3}}{3x^{2}y^{2}+x^{2}y^{3}+1}
 \]
 is not independent of $y$, so Theorem~\ref{thmtype:2.6.1}(a) does not apply. However,
 Theorem~\ref{thmtype:2.6.1}(b) does apply, since
@@ -483,13 +481,11 @@ Figure~\ref{figure:2.6.4} shows a direction field and some integral curves for \
     is exact on any such rectangle.
 
     \item % (b)
-    Use Theorem~\ref{thmtype:2.2.1} to show that
+    Use Theorem~\ref{thmtype:2.5.1} to show that
     \[
       \frac{xy}{(x-y)}=c \eqno{\rm(C)}
     \]
-    is an implicit solution of (B), and explain why it's also an implicit solution of (A)
-
-    \item % (b)
+    is an implicit solution of (B), and explain why it's also an implicit solution of (A). \item % (b)
     Verify that $y=x$ is a solution of (A), even though it can't be obtained from (C).
   \end{alist}
 
@@ -565,7 +561,7 @@ Figure~\ref{figure:2.6.4} shows a direction field and some integral curves for \
   \]
   has an integrating factor $\mu(x,y)=x^{\alpha}y^{\beta}$.
 
-  \item\label{exer:2.6.29} Suppose $M$, $N$, $M_{x}$, and $N_{y}$ are continuous for all $(x,y)$,
+  \item\label{exer:2.6.29} Suppose $M$, $N$, $M_{y}$, and $N_{x}$ are continuous for all $(x,y)$,
         and $\mu=\mu(x,y)$ is an integrating factor for
   \[
     M(x,y)\,dx+N(x,y)\,dy=0. \eqno{\rm(A)}

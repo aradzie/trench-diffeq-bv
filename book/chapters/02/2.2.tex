@@ -141,12 +141,11 @@ In Examples~\ref{example:2.2.1} and \ref{example:2.2.2} we were able to solve th
 $H(y)=G(x)+c$ to obtain explicit formulas for solutions of the given separable differential
 equations. As we'll see in the next example, this isn't always possible. In this situation we must
 broaden our definition of a solution of a separable equation. The next theorem provides the basis
-for this modification. We omit the proof, which requires a result from advanced calculus called as
-the {\color{blue}\it implicit function theorem\/}.
+for this modification. We omit the proof, which requires a result from advanced calculus called the {\color{blue}\it implicit function theorem\/}.
 
 \begin{theorem}
   \color{blue}
-  ~\label{thmtype:2.2.1} Suppose $g=g(x)$ is continuous on $(a,b)$ and $h=h(y)$ are continuous on
+  ~\label{thmtype:2.2.1} Suppose $g=g(x)$ is continuous on $(a,b)$ and $h=h(y)$ is continuous on
   $(c,d)$. Let $G$ be an antiderivative of $g$ on $(a,b)$ and let $H$ be an antiderivative of $h$ on
   $(c,d)$. Let $x_{0}$ be an arbitrary point in $(a,b)$, let $y_{0}$ be a point in $(c,d)$ such that
   $h(y_{0})\ne0$, and define
@@ -160,7 +159,7 @@ the {\color{blue}\it implicit function theorem\/}.
   \end{equation}
   for $a_{1}<x<b_{1}$. Therefore $y$ is a solution of the initial value problem
   \begin{equation}
-    \label{eq:2.2.12}h(y)y'=g(x),\quad y(x_{0})=x_{0}.
+    \label{eq:2.2.12}h(y)y'=g(x),\quad y(x_{0})=y_{0}.
   \end{equation}
 \end{theorem}
 
@@ -201,7 +200,7 @@ these points in mind:
 \]
 Integrating yields the implicit solution
 \begin{equation}
-  \label{eq:2.2.15}y^{5}+y=x^{2}+x+c.
+  \label{eq:2.2.15}y^{5}+y=x^{2}+x+c
 \end{equation}
 of \eqref{eq:2.2.13}.
 
@@ -211,8 +210,8 @@ $c=-4$. Therefore
   y^{5}+y=x^{2}+x-4
 \]
 is an implicit solution of the initial value problem \eqref{eq:2.2.14}. Although more than one
-differentiable function $y=y(x)$ satisfies \ref{eq:2.2.13}) near $x=1$, it can be shown that there's
-only one such function that satisfies the initial condition $y(1)=2$.
+differentiable function $y=y(x)$ satisfies \eqref{eq:2.2.15} near $x=2$, it can be shown that there's
+only one such function that satisfies the initial condition $y(2)=1$.
 
 Figure~\ref{figure:2.2.2} shows a direction field and some integral curves for \eqref{eq:2.2.13}.
 
@@ -268,9 +267,7 @@ you can verify that \eqref{eq:2.2.17} is a solution of \eqref{eq:2.2.16}. Thus, 
 \eqref{eq:2.2.16} are $y\equiv0$ and the functions of the form \eqref{eq:2.2.17}. Note that the
 solution $y\equiv0$ isn't of the form \eqref{eq:2.2.17} for any value of $c$.
 
-Figure~\ref{figure:2.2.3} shows a direction field and some integral curves for \eqref{eq:2.2.16}
-
-\begin{figure}[tbp]
+Figure~\ref{figure:2.2.3} shows a direction field and some integral curves for \eqref{eq:2.2.16}. \begin{figure}[tbp]
   \centering
   \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig020203}
   \color{blue}
@@ -324,7 +321,7 @@ the solutions of \eqref{eq:2.2.18} are $y\equiv1$, $y\equiv-1$ and the functions
 \eqref{eq:2.2.19}. Note that the constant solution $y\equiv1$ can be obtained from this formula by
 taking $c=0$; however, the other constant solution, $y\equiv-1$, can't be obtained in this way.
 
-Figure~\ref{figure:2.2.4} shows a direction field and some integrals for \eqref{eq:2.2.18}.
+Figure~\ref{figure:2.2.4} shows a direction field and some integral curves for \eqref{eq:2.2.18}.
 
 \begin{figure}[H]
   \centering
@@ -349,7 +346,7 @@ $x_{0}$ is any point in $(a,b)$ and $y_{0}$ is arbitrary, then the initial value
 \]
 has a solution on $(a,b)$.
 
-The not true for nonlinear equations. First, we saw in Examples~\ref{example:2.2.4} and
+This is not true for nonlinear equations. First, we saw in Examples~\ref{example:2.2.4} and
 \ref{example:2.2.5} that a nonlinear equation may have solutions that can't be obtained by choosing
 a specific value of a constant appearing in a one-parameter family of solutions. Second, it is in
 general impossible to determine the interval of validity of a solution to an initial value problem
@@ -536,7 +533,7 @@ $(-1/\sqrt{y_{0}},1/\sqrt{y_{0}})$.
     $y(t)=-\infty$ for some finite value of $t$.
 
     \item % (d)
-    Verify your results experiments analytically. Start by separating variables in (A) to obtain
+    Verify your experimental results analytically. Start by separating variables in (A) to obtain
     \[
       \frac{y'}{ay-by^{2}-q}=1.
     \]

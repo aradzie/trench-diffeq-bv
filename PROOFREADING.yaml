@@ -58,23 +58,115 @@ sections:
     remarks:
       - "Exercise figures (EPS) not inspected visually."
   "2.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: ref, where: "Pointer to Thm 2.1.1", note: "Examples 2.1.3(a) and 2.1.4(b) -> 2.1.4(a)"}
+      - {kind: ref, where: "Proof of Thm 2.1.2 / variation of parameters", note: "\"proof of Theorem 2.2.1\" -> 2.1.1"}
+      - {kind: ref, where: "Ex 44(e)", note: "Theorem 2.1.1(b) -> 2.1.2(b)"}
+      - {kind: math, where: "Proof of Thm 2.1.1", note: "\"y has zeros on (a,b) (a,b)\" -> \"y has no zeros on (a,b)\""}
+      - {kind: math, where: "Fig 2.1.3 caption", note: "x^2 e^{-2x} -> x^3 e^{-2x}"}
+      - {kind: prose, where: "Before Thm 2.1.1 summary", note: "\"has the these properties\" -> \"has these properties\""}
+      - {kind: prose, where: "Example 2.1.3(b)", note: "\"show the graphs\" -> \"shows\""}
+      - {kind: prose, where: "Example 2.1.4", note: "missing period after \"various values of c\""}
+      - {kind: prose, where: "Example 2.1.6(a)", note: "\"Find the general solution\" -> \"... solution of\""}
+      - {kind: prose, where: "Example 2.1.7(b)", note: "\"graphs of of\" -> \"graphs of\""}
+      - {kind: typeset, where: "(2.1.25)", note: "stray \".\" line inside the display before \"is the general solution\""}
+      - {kind: typeset, where: "Ex 46(a)", note: "\"the\\it principle\" lost the space"}
+      - {kind: answer, where: "Ans 1", note: "y=e^{-ax} -> y=ce^{-ax}"}
+      - {kind: answer, where: "Ans 11", note: "IVP answer y=c(cos kx)^{1/k} -> y=2(cos kx)^{1/k}"}
+      - {kind: answer, where: "Ans 24", note: "c/x^2 -> c/x^3"}
+      - {kind: answer, where: "Ans 27", note: "1/x^2 ln((1+x^2)/2) -> 1/x^3 ln(...)"}
+      - {kind: answer, where: "Ans 45(a)", note: "used a instead of the exercise's alpha"}
+      - {kind: typeset, where: "Answers 25-29", note: "\\answer{2.1.25} was commented out (its text ran on under 24); 2.1.29 duplicated and 26-29 out of order; 26 lacked \"y=\""}
+    remarks:
+      - "Answers 1-37 checked with sympy (ODE residual and initial conditions); 38-45 and 48 checked by hand."
+      - "Ex 44, 45, 46, 47, 48, 49 worked by hand and found correct."
+      - "Figures not inspected."
   "2.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "(2.2.12) in Thm 2.2.1", note: "y(x_0)=x_0 -> y(x_0)=y_0"}
+      - {kind: math, where: "Example 2.2.3(b)", note: "\"satisfies (2.2.13) near x=1 ... y(1)=2\" -> \"(2.2.15) near x=2 ... y(2)=1\""}
+      - {kind: prose, where: "Thm 2.2.1", note: "\"h(y) are continuous\" -> \"is continuous\""}
+      - {kind: prose, where: "Before Thm 2.2.1", note: "\"called as the implicit function theorem\" -> \"called the\""}
+      - {kind: typeset, where: "Example 2.2.3(a)", note: "stray period in (2.2.15) before \"of (2.2.13)\""}
+      - {kind: prose, where: "Example 2.2.4", note: "missing period after \"for (2.2.16)\""}
+      - {kind: prose, where: "Example 2.2.5", note: "\"some integrals\" -> \"some integral curves\""}
+      - {kind: prose, where: "Linear vs nonlinear", note: "\"The not true\" -> \"This is not true\""}
+      - {kind: prose, where: "Example 2.2.6", note: "\"the the solution\""}
+      - {kind: prose, where: "Ex 31(d)", note: "\"Verify your results experiments analytically\" -> \"Verify your experimental results analytically\""}
+      - {kind: answer, where: "Ans 4", note: "(ln y)^2 -> (ln|y|)^2"}
+      - {kind: answer, where: "Ans 23", note: "interval of validity (-inf,2) -> (-1,2)"}
+      - {kind: answer, where: "Ans 30", note: "\"q\\ne Rs\", \"q<rs\" -> rS"}
+      - {kind: answer, where: "Ans 36", note: "missing +/- before the square root"}
+    remarks:
+      - "All answers checked (by hand and sympy residuals); exercises 24-26, 31-39 worked by hand."
+      - "Ans 24 family y=(x+c)/(1-cx) omits the solution y=-1/x (limit c->infinity); left as the author wrote it."
   "2.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Fig 2.3.2 caption", note: "y=x^{1/2} -> y=x^{10/3}"}
+      - {kind: ref, where: "Example 2.3.7", note: "\"Exercise 2.2.15\" -> Exercise 2.3.15"}
+      - {kind: typeset, where: "Thm 2.3.1 discussion", note: "(a,b) outside math mode"}
+      - {kind: typeset, where: "Example 2.3.4", note: "stray period inside the sentence after f_y(x,y)=4xy"}
+      - {kind: prose, where: "Ans 16", note: "\"is a solution,\" -> period"}
+    remarks:
+      - "All answers checked; 2.3.20(a) interval (0,inf) is correct (solution can branch off at x=0)."
+      - "Ex 14, 15, 21 reasoned through; no errors found."
   "2.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: ref, where: "After Example 2.4.1", note: "\\ref{eq:2.4.1} -> \\ref{figure:2.4.1} (\"Figure 2.4.1\")"}
+      - {kind: math, where: "Example 2.4.3(a)", note: "(2.4.13) is a solution of (2.4.10) -> of (2.4.9)"}
+      - {kind: math, where: "Before Example 2.4.2", note: "\"solutions of nonhomogeneous equations\" -> \"homogeneous nonlinear equations\""}
+      - {kind: math, where: "Ex 5 region", note: "\"-2<=y>=2\" -> \"-2<=y<=2\"; stray \"\\-\""}
+      - {kind: typeset, where: "Ex 55", note: "href had \"http://http://\" (2 links); same bug is in 5.6.tex lines 362, 430, not fixed yet"}
+      - {kind: prose, where: "Before Example 2.4.2", note: "\"you may've have already noticed\""}
+      - {kind: prose, where: "Example 2.4.3", note: "\"if x=0 is the open interval\" -> \"is in the open interval\""}
+      - {kind: prose, where: "Ex 35(e)", note: "\"where is a finite positive number\" -> \"where a is\""}
+      - {kind: answer, where: "Ans 21", note: "y=+-x ln(ln|x|+c) -> y=+-x sqrt(ln(ln|x|+c))"}
+      - {kind: answer, where: "Ans 41", note: "(y+2x+1)^4(2y-6x-3)=c etc. does not solve the ODE -> (y-3x)(y+2x+5)^4=c; y=3x; y=-2x-5"}
+    remarks:
+      - "Answers 1-13, 15-34, 41-53, 56-59 checked with sympy (residuals/ICs, implicit by -F_x/F_y)."
+      - "Example 2.4.1 omits the solution y=0 (u=0); left as the author wrote it."
   "2.5":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: ref, where: "Ex 26", note: "\"Exercise 2.5.37(b)\" -> (c)"}
+      - {kind: prose, where: "Intro", note: "\"left in implicit, form\" -> \"implicit form,\""}
+      - {kind: prose, where: "Definition of exact", note: "\"an an open rectangle\"; \"such F_x\" -> \"such that F_x\""}
+      - {kind: typeset, where: "Thm 2.5.2", note: "double period \"R.$.\""}
+      - {kind: prose, where: "After Example 2.5.3", note: "trailing comma -> period"}
+      - {kind: prose, where: "Procedure", note: "\"summarize procedure\" -> \"the procedure\""}
+      - {kind: prose, where: "Ex 37", note: "\"the these exact equations\""}
+      - {kind: answer, where: "Ans 30(b)", note: "x/y + 2y sin x -> x/y - 2cos x"}
+      - {kind: answer, where: "Ans 37(a)", note: "2x^2+x^4y^4+y^2 -> ...+2y^2"}
+    remarks:
+      - "All answers checked (by hand; 18-22, 38-40 also by sympy)."
+      - "Ex 12 as printed is not exact, matching its answer (\"Not exact\"); not an error."
   "2.6":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-10
+    findings:
+      - {kind: math, where: "Example 2.6.2", note: "denominator 3x^2y^2+x^2y^2+1 -> 3x^2y^2+x^2y^3+1"}
+      - {kind: math, where: "Ex 29", note: "hypotheses M_x, N_y -> M_y, N_x"}
+      - {kind: ref, where: "Ex 2(b)", note: "Theorem 2.2.1 -> Theorem 2.5.1"}
+      - {kind: typeset, where: "Proof of Thm 2.6.1(b)", note: "missing backslash: \"eqref{eq:2.6.8}\" printed literally"}
+      - {kind: prose, where: "Example 2.6.1", note: "missing period after \"for (2.6.13)\""}
+      - {kind: prose, where: "Ex 2(b)", note: "missing period"}
+    remarks:
+      - "All answers 3-27 verified (exactness of mu*M dx + mu*N dy and F_x, F_y)."
   "3.1":
     text: todo
     answers: todo
@@ -240,7 +332,7 @@ sections:
 
 other_files:
   chapters/01/chapter.tex: done
-  chapters/02/chapter.tex: todo
+  chapters/02/chapter.tex: done  # "can made" -> "can be made", "known called" -> "known as an"
   chapters/03/chapter.tex: todo
   chapters/04/chapter.tex: todo
   chapters/05/chapter.tex: todo

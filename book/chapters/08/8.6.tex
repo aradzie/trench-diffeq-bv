@@ -96,14 +96,13 @@ This next theorem states that this is true in general.
 
 \begin{theorem}
   \color{blue}
-  $[$The Convolution Theorem$]$\label{thmtype:8.6.2} If ${\cal L}(f)=F$ and ${\cal L}(g)=G$, then
+  $[$The Convolution Theorem$]$\label{thmtype:8.6.2} Suppose $f$ and $g$ are piecewise continuous on $[0,\infty)$ and their Laplace transforms converge absolutely at $s$. If ${\cal L}(f)=F$ and ${\cal L}(g)=G$, then
   \[
     {\cal L}(f*g)=FG.
   \]
 \end{theorem}
 
-A complete proof of the convolution theorem is beyond the scope of this book. However, we'll assume
-that $f\ast g$ has a Laplace transform and verify the conclusion of the theorem in a purely
+A complete proof of the convolution theorem is beyond the scope of this book. However, we'll verify the conclusion of the theorem in a purely
 computational way. By the definition of the Laplace transform,
 \[
   {\cal L}(f\ast g)=\int_{0}^{\infty}e^{-st}(f\ast g)(t)\,dt=\int_{0}^{\infty}e^{-st}\int_{0}^{t}f(\tau)g(t-\tau)\,d\tau\,dt.
@@ -121,7 +120,7 @@ However, the substitution $x=t-\tau$ shows that
 Substituting this into \eqref{eq:8.6.6} and noting that $G(s)$ is independent of $\tau$ yields
 \begin{eqnarray*}
   {\cal L}(f\ast g) & = & \int_{0}^{\infty}e^{-s\tau}f(\tau)G(s)\,d\tau \\
-                    & = & G(s)\int_{0}^{\infty}e^{-st}f(\tau)\,d\tau=F(s)G(s).
+                    & = & G(s)\int_{0}^{\infty}e^{-s\tau}f(\tau)\,d\tau=F(s)G(s).
 \end{eqnarray*}
 
 \
@@ -130,7 +129,7 @@ Substituting this into \eqref{eq:8.6.6} and noting that $G(s)$ is independent of
   \centering
   \color{blue}
   \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig080601}
-  \caption{}
+  \caption{The region of integration for the convolution theorem}
   \label{figure:8.6.1}
 \end{figure}
 
@@ -165,7 +164,7 @@ it follows that
 
 \noindent
 The convolution theorem provides a formula for the solution of an initial value problem for a linear
-constant coefficient second order equation with an unspecified. The next three examples illustrate
+constant coefficient second order equation with an unspecified forcing function. The next three examples illustrate
 this.
 
 \begin{example}
@@ -684,7 +683,7 @@ complex conjugates, respectively.
   is
   \begin{eqnarray*}
     y(t) & = & \;e^{\lambda t}\left[k_{0}(\cos\omega t-\frac{\lambda}{\omega}\sin\omega t)+\frac{k_{1}}{\omega}\sin\omega t\right] \\
-         &   & +\frac{1}{a\omega}\int_{0}^{t}e^{\lambda t}f(t-\tau)\sin\omega\tau\,d\tau.
+         &   & +\frac{1}{a\omega}\int_{0}^{t}e^{\lambda \tau}f(t-\tau)\sin\omega\tau\,d\tau.
   \end{eqnarray*}
 
   \item\label{exer:8.6.11} Let
@@ -800,7 +799,7 @@ complex conjugates, respectively.
   \]
   Let
   \[
-    g_{m}(t)=f_{m}(t+t_{m})-f_{m-1}(t+t_{m}),\quad m=1,\dots,k.
+    g_{m}(t)=f_{m}(t+t_{m})-f_{m-1}(t+t_{m}),\quad m=1,2,\dots.
   \]
   Extend the results of Exercise~\ref{exer:8.6.13} to show that the solution of
   \[

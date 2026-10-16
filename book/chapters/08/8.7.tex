@@ -179,7 +179,7 @@ and
 \begin{equation}
   \label{eq:8.7.14}y'_{-}(t_{0})=0,\quad y'_{+}(t_{0})=1/a
 \end{equation}
-(remember that $y'_{-}(t_{0})$ and $y'_{+}(t_{0})$ are derivatives from the right and left,
+(remember that $y'_{-}(t_{0})$ and $y'_{+}(t_{0})$ are derivatives from the left and right,
 respectively) and $y'(t_{0})$ does not exist. Thus, even though we defined $y=u(t-t_{0})w(t-t_{0})$
 to be the solution of \eqref{eq:8.7.11}, this function {\color{blue}\it doesn't satisfy\/} the
 differential equation in \eqref{eq:8.7.11} {\color{blue}\it at\/} $t_{0}$, since it isn't
@@ -218,26 +218,26 @@ toward the graph of $w$.
 
 \solution Here
 \[
-  w={\cal L}^{-1}\left(\frac{1}{s^{2}-2s+1}\right)={\cal L}^{-1}\left(\frac{1}{(s-1)^{2}}\right)=te^{-t},
+  w={\cal L}^{-1}\left(\frac{1}{s^{2}-2s+1}\right)={\cal L}^{-1}\left(\frac{1}{(s-1)^{2}}\right)=te^{t},
 \]
 so Definition~\ref{thmtype:8.7.2} yields
 \[
-  y=u(t-t_{0})(t-t_{0})e^{-(t-t_{0})}
+  y=u(t-t_{0})(t-t_{0})e^{t-t_{0}}
 \]
 as the solution of \eqref{eq:8.7.15} if $t_{0}>0$. If $t_{0}=0$, then \eqref{eq:8.7.15} doesn't have
-a solution; however, $y=u(t)te^{-t}$ (which we would usually write simply as $y=te^{-t}$) is the
+a solution; however, $y=u(t)te^{t}$ (which we would usually write simply as $y=te^{t}$) is the
 solution of the modified initial value problem
 \[
   y''-2y'+y=\delta(t),\quad y(0)=0,\quad y_{-}'(0)=0.
 \]
 
-The graph of $y=u(t-t_{0})(t-t_{0})e^{-(t-t_{0})}$ is shown in Figure~\ref{figure:8.7.3} \bbox
+The graph of $y=u(t-t_{0})(t-t_{0})e^{t-t_{0}}$ is shown in Figure~\ref{figure:8.7.3} \bbox
 
 \begin{figure}[tbp]
   \centering
   \color{blue}
-  \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig080703}
-  \caption{$y=u(t-t_{0})(t-t_{0})e^{-(t-t_{0})}$}
+  \includegraphics[ width=5.67in, height=3.66in, keepaspectratio]{fig080703}
+  \caption{$y=u(t-t_{0})(t-t_{0})e^{t-t_{0}}$}
   \label{figure:8.7.3}
 \end{figure}
 

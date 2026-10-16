@@ -591,29 +591,110 @@ sections:
       - "Indicial roots, initial coefficients, and obstruction coefficients checked for answers 1-12 and 23-34; finite second solutions in 13-22 and 35-40 checked by substitution."
       - "No computer plotting or EPS inspection in this section."
   "8.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-12
+    findings:
+      - {kind: typeset, where: "Example 8.1.1", note: "duplicate improper integral removed"}
+      - {kind: typeset, where: "Linearity theorem", note: "stray closing parenthesis after index range removed"}
+      - {kind: math, where: "Example 8.1.7 table", note: "shifted cosine transform was labeled sine -> cosine"}
+      - {kind: typeset, where: "Figure 8.1.2", note: "blank caption -> A removable discontinuity"}
+      - {kind: math, where: "Example 8.1.9", note: "s >= s_0 -> s > s_0 in existence theorem conclusion"}
+      - {kind: math, where: "Exercise 8.1.8", note: "n integer -> nonnegative integer"}
+      - {kind: typeset, where: "Exercise 8.1.14(b,c)", note: "duplicate part (c) question removed from (b)"}
+      - {kind: typeset, where: "Exercise 8.1.17(b)", note: "duplicate part marker removed"}
+      - {kind: answer, where: "Answer 8.1.7", note: "missing t factors in two transform arguments supplied"}
+    remarks:
+      - "Transform formulas, exercise statements, and printed answers checked by direct integration or transform identities; Figure 8.1.2 visually checked, other figures not inspected."
   "8.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-12
+    findings:
+      - {kind: prose, where: "Example 8.2.2", note: "double comma after Section 8.8 -> comma"}
+      - {kind: math, where: "Example 8.2.4 method 2", note: "A/(s-2) -> A/(s-1) in partial fraction identity"}
+      - {kind: typeset, where: "Answer 8.2.2(e)", note: "e{^{-t}} -> e^{-t}"}
+    remarks:
+      - "All 57 printed inverse transforms in Exercises 1-8 checked with symbolic Laplace transforms; Exercise 9 checked by scaling and shifting."
+      - "No figures in section."
   "8.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-12
+    findings:
+      - {kind: math, where: "Proof of Theorem 8.3.1", note: "terminal partition index N -> n"}
+      - {kind: answer, where: "Answer 8.3.37", note: "e^{t/3} -> e^{-t/3}"}
+      - {kind: typeset, where: "Answers 8.3.36-37", note: "unclosed bold group removed"}
+    remarks:
+      - "All 37 printed answers checked by symbolic ODE residuals and both initial conditions; Exercise 38 checked from transform identities."
+      - "Figures 8.3.1-2 visually checked against their captions."
   "8.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-12
+    findings:
+      - {kind: typeset, where: "Second shifting theorem remark", note: "missing closing parenthesis after Theorem 8.1.3"}
+      - {kind: prose, where: "Exercises 19-28 directions", note: "'formulas the for' -> 'formulas for'"}
+      - {kind: answer, where: "Answer 8.4.34", note: "stray separator between 1/s and geometric factor -> (1-e^{-s})/[s(1+e^{-s})]"}
+      - {kind: answer, where: "Answer 8.4.35", note: "e^{-s}(1+e^{-s}) -> 1+e^{-s} in transform numerator"}
+    remarks:
+      - "Step representations and transforms checked by substitution, shifting, and geometric sums; computer graph exercises were not plotted."
+      - "Exercise 14 leaves f(2) unspecified; this does not change its Laplace transform. Figure 8.4.5 visually checked."
   "8.5":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-12
+    findings:
+      - {kind: math, where: "Theorem 8.5.1", note: "piecewise continuous with listed jumps -> continuous except at the listed jumps"}
+      - {kind: prose, where: "Procedure before Example 8.5.1", note: "'by the these steps' -> 'by these steps'"}
+      - {kind: ref, where: "Example 8.5.1", note: "literal Figure:8.5.1 -> linked Figure 8.5.1"}
+      - {kind: typeset, where: "Exercise 8.5.22(e)", note: "duplicate (d) marker -> (e)"}
+      - {kind: math, where: "Exercise 8.5.26", note: "missing f_0 and m=0 first interval supplied"}
+      - {kind: typeset, where: "Answer 8.5.18", note: "y=y= -> y="}
+      - {kind: answer, where: "Answer 8.5.8", note: "negative -> positive sign on step response at 3pi/2"}
+    remarks:
+      - "Printed piecewise solutions checked against forcing on each interval and continuity of y and y' at switches; longer Answers 4 and 20 also checked symbolically."
+      - "Figure 8.5.2 visually checked; computer graph exercises were not plotted."
   "8.6":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-12
+    findings:
+      - {kind: math, where: "Convolution theorem", note: "unqualified transform existence -> absolute convergence at s"}
+      - {kind: math, where: "Convolution proof", note: "e^{-st}f(tau) -> e^{-s tau}f(tau)"}
+      - {kind: prose, where: "Before Example 8.6.2", note: "'with an unspecified' -> 'with an unspecified forcing function'"}
+      - {kind: typeset, where: "Figure 8.6.1", note: "blank caption -> region of integration description"}
+      - {kind: math, where: "Exercise 8.6.10", note: "e^{lambda t} -> e^{lambda tau} inside convolution integral"}
+      - {kind: math, where: "Exercise 8.6.14", note: "g_m defined only through k -> all positive indices"}
+      - {kind: answer, where: "Answer 8.6.3(d,h)", note: "missing zero-frequency cases supplied"}
+    remarks:
+      - "Convolution identities and printed transform answers checked by transform products; IVP formulas checked from characteristic roots."
+      - "Figure 8.6.1 visually checked."
   "8.7":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-12
+    findings:
+      - {kind: math, where: "After (8.7.14)", note: "left and right derivative descriptions were reversed"}
+      - {kind: math, where: "Example 8.7.1", note: "te^{-t} -> te^t for repeated root +1"}
+      - {kind: typeset, where: "Figure 8.7.3", note: "decaying EPS curve -> rising te^t curve matching corrected example"}
+      - {kind: answer, where: "Answer 8.7.12", note: "missing u(t-pi) factor on first impulse"}
+      - {kind: answer, where: "Answer 8.7.15", note: "missing 1/4 factor on both impulse responses"}
+      - {kind: typeset, where: "Answer 8.7.18", note: "extra closing parenthesis removed"}
+      - {kind: answer, where: "Answer 8.7.22", note: "e^{3t} -> e^{2t}"}
+    remarks:
+      - "Impulse response formulas and printed answers checked against characteristic roots, initial values, and velocity jumps."
+      - "Figure 8.7.3 replaced and visually checked in the PDF; computer graph exercises and the requested plots in Exercises 26-28 were not drawn."
   "8.8":
-    text: todo
+    text: done
     answers: n/a
+    reviewed: 2026-10-12
+    findings:
+      - {kind: math, where: "t^n e^{at} table row", note: "s>0 -> s>a"}
+      - {kind: math, where: "omega t - sin omega t table row", note: "denominator (s^2+omega^2)^2 -> (s^2+omega^2)"}
+      - {kind: typeset, where: "Convolution table row", note: "lower integration limit letter o -> zero"}
+    remarks:
+      - "All table identities differentiated or checked against the defining integral; no answers file."
   "9.1":
     text: todo
     answers: todo
@@ -683,7 +764,7 @@ other_files:
   chapters/05/chapter.tex: done  # agreement and section number corrected
   chapters/06/chapter.tex: done  # section descriptions and agreement corrected
   chapters/07/chapter.tex: done  # qualified claim about elementary closed-form solutions
-  chapters/08/chapter.tex: todo
+  chapters/08/chapter.tex: done  # introduction, section summaries, and input order checked
   chapters/09/chapter.tex: todo
   chapters/10/chapter.tex: todo
   chapters/11/chapter.tex: todo

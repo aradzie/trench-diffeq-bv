@@ -66,7 +66,7 @@ Therefore
 \end{equation}
 If $s=0$ the integrand reduces to the constant $1$, and
 \[
-  \lim_{T\to\infty}\int_{0}^{T}1\,dt=\lim_{T\to\infty}\int_{0}^{T}1\,dt= \lim_{T\to\infty}T=\infty.
+  \lim_{T\to\infty}\int_{0}^{T}1\,dt= \lim_{T\to\infty}T=\infty.
 \]
 Therefore $F(0)$ is undefined, and
 \[
@@ -215,7 +215,7 @@ The next theorem presents an important property of the Laplace transform.
 \begin{theorem}
   \color{blue}
   $[$Linearity Property$]$\label{thmtype:8.1.2} Suppose ${\cal L}(f_{i})$ is defined for $s>s_{i}$,
-  $1\le i\le n$). Let $s_{0}$ be the largest of the numbers $s_{1}$, $s_{2}$, \dots,$s_{n}$, and let
+  $1\le i\le n$. Let $s_{0}$ be the largest of the numbers $s_{1}$, $s_{2}$, \dots,$s_{n}$, and let
   $c_{1}$, $c_{2}$,\dots, $c_{n}$ be constants. Then
   \[
     {\cal L}(c_{1}f_{1}+c_{2}f_{2}+\cdots+c_{n}f_{n})=c_{1}{\cal L}(f_{1})+c_{2}{\cal L}(f_{2}) +\cdots+c_{n}{\cal L}(f_{n})\mbox{ for }s>s_{0}.
@@ -302,7 +302,7 @@ transform pairs listed on the right are obtained by applying Theorem~\ref{thmtyp
     $1\leftrightarrow\dst\frac{1}{s},\quad s>0$                                  & $e^{at}\leftrightarrow\dst\frac{1}{(s-a)},\quad s>a$                                                     \\[9pt]
     $t\leftrightarrow\dst{\frac{1}{s^{2}}},\quad s>0$                            & $te^{at}\leftrightarrow\dst{\frac{1}{(s-a)^{2}}},\quad s>a$                                              \\[9pt]
     $\sin\omega t\leftrightarrow\dst{\frac{\omega}{s^{2}+\omega^{2}}},\quad s>0$ & $e^{\lambda t}\sin\omega t\leftrightarrow\dst{\frac{\omega}{(s-\lambda)^{2}+\omega^{2}}},\,s>\lambda$    \\[9pt]
-    $\cos\omega t\leftrightarrow\dst{\frac{s}{s^{2}+\omega^{2}}},\quad s>0$      & $e^{\lambda t}\sin\omega t\leftrightarrow\dst{\frac{s-\lambda}{(s-\lambda)^{2}+\omega^{2}}},\,s>\lambda$ \\[9pt]
+    $\cos\omega t\leftrightarrow\dst{\frac{s}{s^{2}+\omega^{2}}},\quad s>0$      & $e^{\lambda t}\cos\omega t\leftrightarrow\dst{\frac{s-\lambda}{(s-\lambda)^{2}+\omega^{2}}},\,s>\lambda$ \\[9pt]
     \hline
   \end{tabular}
 \end{center}
@@ -383,7 +383,7 @@ discontinuity at $t_{0}$ can be made continuous at $t_{0}$ by defining (or redef
     \centering
     \scalebox{.65}{
     \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig080102}}
-    \caption{}
+    \caption{A removable discontinuity}
     \label{figure:8.1.2}
   \end{minipage}
   \begin{minipage}[b]{0.5\linewidth}
@@ -483,7 +483,7 @@ of exponential order.}
   \]
   by L'H\^opital's rule. If $\alpha\ge0$, $f$ is also continuous on $[0,\infty)$. Therefore
   Exercise~\ref{exer:8.1.9} and Theorem~\ref{thmtype:8.1.6} imply that ${\cal L}(t^{\alpha})$ exists
-  for $s\ge s_{0}$. However, since $s_{0}$ is an arbitrary positive number, this really implies that
+  for $s> s_{0}$. However, since $s_{0}$ is an arbitrary positive number, this really implies that
   ${\cal L}(t^{\alpha})$ exists for all $s>0$. This is consistent with the results of
   Example~\ref{example:8.1.2} and Exercises~\ref{exer:8.1.6} and \ref{exer:8.1.8}.
 \end{example}
@@ -608,7 +608,7 @@ piecewise continuous functions.}
   \item\label{exer:8.1.8} Use the known Laplace transform ${\cal L}(1)=1/s$ and the result of
         Exercise~\ref{exer:8.1.6} to show that
   \[
-    {\cal L}(t^{n})=\frac{n!}{s^{n+1}},\quad n=\mbox{ integer}.
+    {\cal L}(t^{n})=\frac{n!}{s^{n+1}},\quad n=\mbox{ nonnegative integer}.
   \]
 
   \item\label{exer:8.1.9}
@@ -664,14 +664,7 @@ piecewise continuous functions.}
     +(s-s_{0})\int_{0}^{T}e^{-(s-s_{0})t}g(t)\,dt.\]}
 
     \item % (b)
-    Show that if ${\cal L}(f)$ exists for $s=s_{0}$ then it exists for $s>s_{0}$. Show that the
-    function
-    \[
-      f(t)=te^{t^{2}}\cos(e^{t^{2}})
-    \]
-    has a Laplace transform defined for $s>0$, even though $f$ isn't of exponential order.
-
-    \item % (c)
+    Show that if ${\cal L}(f)$ exists for $s=s_{0}$ then it exists for $s>s_{0}$. \item % (c)
     Show that the function
     \[
       f(t)=te^{t^{2}}\cos(e^{t^{2}})
@@ -720,7 +713,7 @@ piecewise continuous functions.}
     $[0,\infty)$.}
 
     \item % (b)
-\part{b} Show that
+Show that
     \[
       F(s)=\frac{1}{1-e^{-sT}}\int_{0}^{T}e^{-st}f(t)\,dt,\quad s>0.
     \]

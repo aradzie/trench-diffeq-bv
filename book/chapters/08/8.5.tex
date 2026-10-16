@@ -18,7 +18,7 @@ where $f$ has jump discontinuities. The next theorem motivates our definition. W
 \begin{theorem}
   \color{blue}
   \label{thmtype:8.5.1} Suppose $a$, $b$, and $c$ are constants $(a\ne0)$, and $f$ is piecewise
-  continuous on $[0,\infty)$. with jump discontinuities at $t_{1}$, \dots, $t_{n}$, where
+  continuous on $[0,\infty)$ except for jump discontinuities at $t_{1}$, \dots, $t_{n}$, where
   \[
     0<t_{1}<\cdots<t_{n}.
   \]
@@ -57,7 +57,7 @@ We begin by considering initial value problems of the form
 \end{equation}
 where the forcing function has a single jump discontinuity at $t_{1}$.
 
-We can solve \eqref{eq:8.5.2} by the these steps:
+We can solve \eqref{eq:8.5.2} by these steps:
 \begin{description}
   \item {\bf Step 1.} Find the solution $y_{0}$ of the initial value problem
     \[
@@ -123,7 +123,7 @@ Hence, the solution of \eqref{eq:8.5.3} is
     -1+\cos t+\sin t, & t\ge\displaystyle{\frac{\pi}{2}}
   \end{array}\right.
 \end{equation}
-(Figure:8.5.1).
+(Figure~\ref{figure:8.5.1}).
 
 \begin{figure}[tbp]
   \centering
@@ -451,7 +451,7 @@ In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace transform to so
 
     \hint{You will need the formula \[1+r+\cdots+r^{m}=\frac{1-r^{m+1}}{1-r}\;(r\ne1).\]}
 
-    \item % (d)
+    \item % (e)
     $y''+2y'+2y=f(t),\quad y(0)=0,\quad y'(0)=0$;
 
     $f(t)=(m+1)(\sin t+2\cos t),\quad2m\pi\le t<2(m+1)\pi,\quad m=0,1,2,\dots$.
@@ -514,11 +514,11 @@ In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace transform to so
   Exercise~\ref{exer:8.5.23}\part{c}.}
 
   \item\label{exer:8.5.26} Let $0=t_{0}<t_{1}<\cdots<t_{n}$. Suppose $f_{m}$ is continuous on
-        $[t_{m},\infty)$ for $m=1,\dots,n$. Let
+        $[t_{m},\infty)$ for $m=0,\dots,n$. Let
   \[
     f(t)= \left\{
     \begin{array}{cl}
-      f_{m}(t), & t_{m}\le t<t_{m+1},\quad m=1,\dots,n-1, \\
+      f_{m}(t), & t_{m}\le t<t_{m+1},\quad m=0,\dots,n-1, \\
       f_{n}(t), & t\ge t_{n}.
     \end{array}\right.
   \]

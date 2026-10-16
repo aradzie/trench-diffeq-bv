@@ -13,6 +13,7 @@ All TeX runs inside a pinned TeX Live container through `texlive.sh` (podman); t
 - `make book` builds `build/TRENCH_DIFFEQ_BV.pdf`.
 - `make chapters` splits the book PDF into `build/chapters/NN.pdf` via `scripts/split-chapter-pdfs.py`, which finds chapter boundaries from the `chapter.N` PDF destinations and the `integrals` hypertarget. Keep both when changing headings.
 - `make all` does both; `make clean` removes `build/` (git-ignored).
+- `book/examples.tex` and `book/theorems.tex` are generated from the section sources, so do not edit them by hand. After changing the sections, regenerate them with `uv run scripts/extract-examples.py` and `uv run scripts/extract-theorems.py`, then run `make build/examples.pdf build/theorems.pdf`. `uv run scripts/check-extract-labels.py build/examples.aux build/TRENCH_DIFFEQ_BV.aux` (and the same for `theorems.aux`) checks that the extracts number their labels as the book does. Also check the two logs for `Reference ... undefined`, `multiply defined` and `Missing character`.
 - The pipeline is `latex` -> `dvips` -> PDF (`latexmk -pdfps`), with EPS figures in `book/figures/`. `SOURCE_DATE_EPOCH=0` keeps output reproducible.
 - If latexmk reports a stale error after a fix, delete `build/TRENCH_DIFFEQ_BV.fdb_latexmk`.
 - The Makefile does not use `-f`; any LaTeX error fails the build, but undefined references and overfull boxes only appear in `build/TRENCH_DIFFEQ_BV.log`. Check the log for `Reference ... undefined`, `multiply defined` and `Missing character` after a build.
@@ -36,7 +37,7 @@ Use `uv` for any Python script, including throwaway checks (e.g. `uv run --with 
 ## Conventions
 
 - Cross-references use typed labels that encode the number: `eq:2.1.3`, `example:`, `exer:2.1.7`, `figure:`, `table:`, `thmtype:` (theorems and definitions). Answers (`\answer{2.1.7}`) and the index depend on these labels, so do not rename them. Put `\label` after `\caption`.
-- Worked solutions of examples are wrapped in `examplesolution` (prints nothing), and an example without one is followed by a `% no solution` comment, so that scripts can collect examples with their solutions.
+- Worked solutions of examples are wrapped in `examplesolution` (prints nothing), and an example without one is followed by a `% no solution` comment; `scripts/extract-examples.py` uses these for `examples.pdf`.
 - Exercise lists use the `exerciselist`/`alist`/`rmlist` environments (enumitem); `\exercisetext{...}` interrupts a list and resumes numbering.
 - `index.tex` is a hand-written `theindex` whose page numbers are `\pageref`s to labels, not `\index{}` markers.
 - Formatting follows `.editorconfig` (2 spaces, 100 columns). Sources were formatted with Prettier and mathfmt.

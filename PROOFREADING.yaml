@@ -888,14 +888,53 @@ sections:
       - "Variation-of-parameters examples and supplied particular solutions reviewed by substitution at representative points."
       - "All 20 supplied particular solutions checked by numerical ODE residuals at two interior points."
   "11.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: answer, where: "Answer 7", note: "omitted lambda_0=0 and constant eigenfunction -> included both"}
+      - {kind: answer, where: "Answer 16", note: "omitted lambda_0=0 and constant eigenfunction -> included both"}
+    remarks:
+      - "Five boundary value problems and orthogonality integrals re-derived; Answers 2-16 and 23-26 checked against both boundary conditions and the ODE."
   "11.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: ref, where: "Opening paragraph", note: "Exercises 11.1.4-22 -> 11.1.19-22"}
+      - {kind: math, where: "(11.2.12)", note: "sum starting at n=0 with undefined 0/0 term -> n=1 to infinity"}
+      - {kind: prose, where: "After (11.2.12)", note: "we only to include -> we only need to include"}
+      - {kind: ref, where: "Exercise 1", note: "Theorem 11.1.5 -> 11.2.5"}
+      - {kind: math, where: "Exercises 10-14", note: "overlapping first and middle intervals -> first branch ends at -1/2"}
+      - {kind: math, where: "Exercise 20(b)", note: "sum from n=0 -> sum from n=1 for the stated coth identity"}
+      - {kind: prose, where: "Exercise 25(b)", note: "missing closing parenthesis after Riemann's Lemma"}
+      - {kind: typeset, where: "Exercise 27", note: "cos(2n pi/L), sin(2n pi/L) -> include x in both arguments"}
+      - {kind: math, where: "Exercise 29", note: "unspecified f -> stated f is integrable on [a,b]"}
+      - {kind: typeset, where: "Answer 6", note: "doubled semicolon -> single semicolon"}
+      - {kind: answer, where: "Answers 12-14", note: "overlapping first branch of F -> corrected interval to x<-1/2"}
+      - {kind: answer, where: "Answer 13", note: "jump values at x=-1 and x=1 -> at x=-1/2 and x=1/2"}
+    remarks:
+      - "Coefficient formulas in worked examples and Answers 2-16 checked by integration and parity; sums at jumps and endpoints checked."
+      - "Answers 17-24 checked against Fourier integrals and the endpoint identity in Exercise 20."
+      - "Computer plots and EPS figures not visually inspected."
   "11.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: prose, where: "Opening paragraph", note: "Problems 1-4 for Section 11.1 -> from Section 11.1"}
+      - {kind: ref, where: "Cosine and sine series introductions", note: "two Theorem 11.2.6 references used exercise labels -> theorem labels"}
+      - {kind: ref, where: "Before Theorem 11.3.2", note: "hardcoded Theorem 11.2.4 -> typed reference"}
+      - {kind: math, where: "Mixed cosine coefficients", note: "basis norm used cos((2n-1) pi x/L) -> cos((2n-1) pi x/(2L))"}
+      - {kind: typeset, where: "Proof of Theorem 11.3.5(a)", note: "misplaced dx in second integration by parts -> moved inside integral"}
+      - {kind: typeset, where: "Example 11.3.7", note: "misplaced dx in coefficient integral -> moved inside integral"}
+      - {kind: ref, where: "Exercises 36-41 and 43-49", note: "malformed references to Exercises 35(b) and 42(b) -> direct typed references"}
+      - {kind: prose, where: "Exercises 51-56", note: "the f -> f"}
+      - {kind: answer, where: "Answer 20", note: "missing factor 1/(2n-1) in mixed cosine coefficient -> inserted"}
+      - {kind: typeset, where: "Answer 27", note: "extra closing parenthesis in cosine argument -> removed"}
+    remarks:
+      - "All 53 supplied coefficients in Answers 1-56 checked against their Fourier integrals; theorems and worked examples checked by integration by parts."
+      - "Computer plots and EPS figures not visually inspected."
   "12.1":
     text: todo
     answers: todo
@@ -926,7 +965,7 @@ other_files:
   chapters/08/chapter.tex: done  # introduction, section summaries, and input order checked
   chapters/09/chapter.tex: done  # introduction, section descriptions, and input order checked
   chapters/10/chapter.tex: done  # introduction, section descriptions, and input order checked
-  chapters/11/chapter.tex: todo
+  chapters/11/chapter.tex: done  # "in term" -> "in terms"; introduction and input order checked
   chapters/12/chapter.tex: todo
   chapters/13/chapter.tex: todo
   book/frontmatter.tex: todo

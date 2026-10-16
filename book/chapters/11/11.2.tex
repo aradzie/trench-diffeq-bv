@@ -2,7 +2,7 @@
 
 \noindent
 In Example~\ref{example:11.1.4} and
-Exercises~11.1.~\hspace*{-3pt}\ref{exer:11.1.4}--11.1.~\hspace*{-3pt}\ref{exer:11.1.22} we saw that
+Exercises~\ref{exer:11.1.19}--\ref{exer:11.1.22} we saw that
 the eigenfunctions of Problem~5 are orthogonal on $[-L,L]$ and the eigenfunctions of Problems~1--4
 are orthogonal on $[0,L]$. In this section and the next we introduce some series expansions in terms
 of these eigenfunctions. We'll use these expansions to solve partial differential equations in
@@ -484,7 +484,7 @@ and, if $n\ge1$,
 \end{eqnarray*}
 Therefore
 \begin{equation}
-  \label{eq:11.2.12}F(x)=\frac{\pi}{2}+\frac{2}{\pi}\sum_{n=0}\frac{(-1)^{n}-1}{n^{2}}\cos nx.
+  \label{eq:11.2.12}F(x)=\frac{\pi}{2}+\frac{2}{\pi}\sum_{n=1}^{\infty}\frac{(-1)^{n}-1}{n^{2}}\cos nx.
 \end{equation}
 However, since
 \[
@@ -494,7 +494,7 @@ However, since
     -2 & \mbox{ if }n=2m+1,
   \end{array}\right.
 \]
-the terms in \eqref{eq:11.2.12} for which $n=2m$ are all zeros. Therefore we only to include the
+the terms in \eqref{eq:11.2.12} for which $n=2m$ are all zeros. Therefore we only need to include the
 terms for which $n=2m+1$; that is, we can rewrite \eqref{eq:11.2.12} as
 \[
   F(x)=\frac{\pi}{2}-\frac{4}{\pi}\sum_{m=0}^{\infty}\frac{1}{(2m+1)^{2}}\cos(2m+1)x.
@@ -603,7 +603,7 @@ use your favorite symbolic computation software in the more difficult problems.
 \exercises
 
 \begin{exerciselist}
-  \item\label{exer:11.2.1} Prove Theorem~\ref{thmtype:11.1.5}.
+  \item\label{exer:11.2.1} Prove Theorem~\ref{thmtype:11.2.5}.
 
   \exercisetext{In Exercises~\ref{exer:11.2.2}-\ref{exer:11.2.16} find the Fourier series of $f$ on
   $[-L,L]$ and determine its sum for $-L\le x\le L$. Where indicated by \Cex, graph $f$
@@ -628,35 +628,35 @@ use your favorite symbolic computation software in the more difficult problems.
 
   \item\label{exer:11.2.10} $L=1$; \quad$f(x)= \left\{
   \begin{array}{cl}
-    0,         & -1<x<\frac{1}{2},            \\[2\jot]
+    0,         & -1<x<-\frac{1}{2},           \\[2\jot]
     \cos\pi x, & -\frac{1}{2}<x<\frac{1}{2},  \\[2\jot]
     0,         & \phantom{-}{\frac{1}{2}}<x<1
   \end{array}\right.$
 
   \item\label{exer:11.2.11} $L=1$; \quad$f(x)= \left\{
   \begin{array}{cl}
-    0,          & -1<x<\frac{1}{2},            \\[2\jot]
+    0,          & -1<x<-\frac{1}{2},           \\[2\jot]
     x\cos\pi x, & -\frac{1}{2}<x<\frac{1}{2},  \\[2\jot]
     0,          & \phantom{-}{\frac{1}{2}}<x<1
   \end{array}\right.$
 
   \item\label{exer:11.2.12} $L=1$; \quad$f(x)= \left\{
   \begin{array}{cl}
-    0,         & -1<x<\frac{1}{2},            \\[2\jot]
+    0,         & -1<x<-\frac{1}{2},           \\[2\jot]
     \sin\pi x, & -\frac{1}{2}<x<\frac{1}{2},  \\[2\jot]
     0,         & \phantom{-}{\frac{1}{2}}<x<1
   \end{array}\right.$
 
   \item\label{exer:11.2.13} $L=1$; \quad$f(x)= \left\{
   \begin{array}{cl}
-    0,           & -1<x<\frac{1}{2},            \\[2\jot]
+    0,           & -1<x<-\frac{1}{2},           \\[2\jot]
     |\sin\pi x|, & -\frac{1}{2}<x<\frac{1}{2},  \\[2\jot]
     0,           & \phantom{-}{\frac{1}{2}}<x<1
   \end{array}\right.$
 
   \item\label{exer:11.2.14} $L=1$; \quad$f(x)= \left\{
   \begin{array}{cl}
-    0,          & -1<x<\frac{1}{2},            \\[2\jot]
+    0,          & -1<x<-\frac{1}{2},           \\[2\jot]
     x\sin\pi x, & -\frac{1}{2}<x<\frac{1}{2},  \\[2\jot]
     0,          & \phantom{-}{\frac{1}{2}}<x<1
   \end{array}\right.$
@@ -700,7 +700,7 @@ use your favorite symbolic computation software in the more difficult problems.
     \item % (b)
     Deduce from \part{a} that
     \[
-      \sum_{n=0}^{\infty}\frac{1}{n^{2}+1}=\frac{\pi\coth\pi-1}{2}.
+      \sum_{n=1}^{\infty}\frac{1}{n^{2}+1}=\frac{\pi\coth\pi-1}{2}.
     \]
   \end{alist}
 
@@ -727,7 +727,7 @@ use your favorite symbolic computation software in the more difficult problems.
     Show that the conclusion of \part{a} also holds if $g$ is piecewise smooth on $[a,b]$. (This is
     a special case of
     \href{https://mathshistory.st-andrews.ac.uk/Biographies/Riemann/}{\color{blue}
-    \it Riemann's Lemma}.
+    \it Riemann's Lemma}).
 
     \item % (c)
     We say that a sequence $\{\alpha_{n}\}_{n=1}^{\infty}$ is {\color{blue}\it of order $n^{-k}$\/}
@@ -769,7 +769,7 @@ use your favorite symbolic computation software in the more difficult problems.
   \]
   (Figure~\ref{figure:11.2.8}), then the Fourier series of $f$ on $[-L,L]$ has the form
   \[
-    A_{0}+\sum_{n=1}^{\infty}\left(A_{n}\cos\frac{2n\pi}{L}+B_{n}\sin\frac{2n\pi}{L}\right)
+    A_{0}+\sum_{n=1}^{\infty}\left(A_{n}\cos\frac{2n\pi x}{L}+B_{n}\sin\frac{2n\pi x}{L}\right)
   \]
   where
   \[
@@ -816,7 +816,7 @@ use your favorite symbolic computation software in the more difficult problems.
   \[
     \int_{a}^{b}\phi_{n}^{2}(x)\,dx\ne0,\quad n=1,2,\dots,m.
   \]
-  If $a_{1}$, $a_{2}$, \dots, $a_{m}$ are arbitrary real numbers, define
+  Let $f$ be integrable on $[a,b]$. If $a_{1}$, $a_{2}$, \dots, $a_{m}$ are arbitrary real numbers, define
   \[
     P_{m}=a_{1}\phi_{1}+a_{2}\phi_{2}+\cdots+a_{m}\phi_{m}.
   \]

@@ -23,7 +23,7 @@ eigenvalues and associated eigenfunctions of \eqref{eq:13.2.1}.
 \begin{example}
   \label{example:13.2.1} \rm Solve the eigenvalue problem
   \begin{equation}
-    \label{eq:13.2.2}y'+3y'+2y+\lambda y=0,\quad y(0)=0,\quad y(1)=0.
+    \label{eq:13.2.2}y''+3y'+2y+\lambda y=0,\quad y(0)=0,\quad y(1)=0.
   \end{equation}
 \end{example}
 
@@ -38,7 +38,7 @@ with zeros
 If $\lambda<1/4$ then $r_{1}$ and $r_{2}$ are real and distinct, so the general solution of the
 differential equation in \eqref{eq:13.2.2} is
 \[
-  y=c_{1}e^{r_{1}t}+c_{2}e^{r_{2}t}.
+  y=c_{1}e^{r_{1}x}+c_{2}e^{r_{2}x}.
 \]
 The boundary conditions require that
 \begin{eqnarray*}
@@ -53,7 +53,7 @@ If $\lambda=1/4$ then $r_{1}=r_{2}=-3/2$, so the general solution of \eqref{eq:1
   y=e^{-3x/2}(c_{1}+c_{2}x).
 \]
 The boundary condition $y(0)=0$ requires that $c_{1}=0$, so $y=c_{2}xe^{-3x/2}$ and the boundary
-condition $y(0)$ requires that $c_{2}=0$. Therefore $\lambda=1/4$ isn't an eigenvalue
+condition $y(1)=0$ requires that $c_{2}=0$. Therefore $\lambda=1/4$ isn't an eigenvalue
 of~\eqref{eq:13.2.2}.
 
 If $\lambda>1/4$ then
@@ -68,7 +68,7 @@ In this case the general solution of the differential equation in \eqref{eq:13.2
 \[
   y=e^{-3x/2}(c_{1}\cos\omega x+c_{2}\sin\omega x).
 \]
-The boundary condition $y(0)=0$ requires that $c_{1}=0$, so $y=c_{2}e^{-3x/2}\sin\omega x$, which
+The boundary condition $y(0)=0$ requires that $c_{1}=0$, so $y=c_{2}e^{-3x/2}\sin\omega x$. The condition $y(1)=0$
 holds with $c_{2}\ne0$ if and only if $\omega=n\pi$, where $n$ is an integer. We may assume that $n$
 is a positive integer. (Why?). From \eqref{eq:13.2.3}, the eigenvalues are
 $\lambda_{n}=(1+4n^{2}\pi^{2})/4$, with associated eigenfunctions
@@ -299,7 +299,7 @@ The graph of the right side (Figure~\ref{figure:13.2.1}) has a vertical asymptot
 Since the two sides have different signs if $k<1/\sqrt{3}$, this equation has no solution in
 $(0,1/\sqrt{3})$. Figure~\ref{figure:13.2.1} shows the graphs of the two sides of \eqref{eq:13.2.18}
 on an interval to the right of the vertical asymptote, which is indicated by the dashed line. You
-can see that the two curves intersect near $k_{0}=1.2$, Given this estimate, you can use Newton's to
+can see that the two curves intersect near $k_{0}=1.2$. Given this estimate, you can use Newton's method to
 compute $k_{0}$ more accurately. We computed $k_{0}\approx 1.1219395$. Therefore
 $-k_{0}^{2}\approx-1.2587483$ is an eigenvalue of \eqref{eq:13.2.15}. From \eqref{eq:13.2.16} and
 the first equation in \eqref{eq:13.2.17},
@@ -318,7 +318,7 @@ the first equation in \eqref{eq:13.2.17},
 If $\lambda>0$ we write $\lambda=k^{2}$ where $k>0$, and differential equation in \eqref{eq:13.2.15}
 becomes $y''+k^{2}y=0$, with general solution
 \begin{equation}
-  \label{eq:13.2.19}y=\cos kx+c_{2}\sin kx,
+  \label{eq:13.2.19}y= c_{1}\cos kx+c_{2}\sin kx,
 \end{equation}
 so
 \[
@@ -371,7 +371,7 @@ is an eigenfunction associated with $\lambda_{n}$ \bbox
   \centering
   \color{blue}
   \includegraphics[bb=-78 148 689 643, width=5.67in, height=3.66in, keepaspectratio]{fig130202}
-  \caption{$u=\tan k$ and $u=-2k/(1+k)$}
+  \caption{$u=\tan k$ and $u=-2k/(1+3k^{2})$}
   \label{figure:13.2.2}
 \end{figure}
 
@@ -389,7 +389,7 @@ better to deal with it directly, as we did in Examples~\ref{example:13.2.1} and
   \[
     Ly=(p(x)y')'+q(x)y
   \]
-  and $u$ and $v$ are twice continuously functions on $[a,b]$ that satisfy the boundary conditions
+  and $u$ and $v$ are twice continuously differentiable functions on $[a,b]$ that satisfy the boundary conditions
   $B_{1}(y)=0$ and $B_{2}(y)=0$, then
   \begin{equation}
     \label{eq:13.2.21}\int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx=0.
@@ -404,7 +404,7 @@ better to deal with it directly, as we did in Examples~\ref{example:13.2.1} and
 \end{eqnarray*}
 Since the last integral equals zero,
 \begin{equation}
-  \label{eq:13.2.22}\int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx= p(x)[u(x)v'(x)-u'(x)v'(x)]\bigg|_{a}^{b}.
+  \label{eq:13.2.22}\int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx= p(x)[u(x)v'(x)-u'(x)v(x)]\bigg|_{a}^{b}.
 \end{equation}
 By assumption, $B_{1}(u)=B_{1}(v)=0$ and $B_{2}(u)=B_{2}(v)=0$. Therefore
 \[
@@ -437,15 +437,15 @@ The next theorem shows that a Sturm--Liouville problem has no complex eigenvalue
 
 \proof For this theorem to make sense, we must consider complex-valued solutions of
 \begin{equation}
-  \label{eq:13.2.23}Ly+(p+iq)r(x,y)y=0.
+  \label{eq:13.2.23}Ly+(p+iq)r(x)y=0.
 \end{equation}
 If $y=u+iv$ where $u$ and $v$ are real-valued and twice differentiable, we define $y'=u'+iv'$ and
 $y''=u''+iv''$. We say that $y$ is a solution of \eqref{eq:13.2.23} if the real and imaginary parts
-of the left side of \eqref{eq:13.2.23} are both zero. Since $Ly=(p(x)'y)'+q(x)y$ and $p$, $q$, and
+of the left side of \eqref{eq:13.2.23} are both zero. Since $Ly=(p(x)y')'+q(x)y$ and $p$, $q$, and
 $r$ are real-valued,
 \begin{eqnarray*}
   Ly+\lambda r(x)y & = & L(u+iv)+(p+iq)r(x)(u+iv) \\
-                   & = & Lu+r(x)(pu-qv)+i[Lv+r(x)(pu+qv)],
+                   & = & Lu+r(x)(pu-qv)+i[Lv+r(x)(qu+pv)],
 \end{eqnarray*}
 so $Ly+\lambda r(x)y=0$ if and only if
 \begin{eqnarray*}
@@ -463,7 +463,7 @@ Subtracting the first equation from the second yields
 \]
 so
 \begin{equation}
-  \label{eq:13.2.24}\int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx+ \int_{a}^{b}r(x)[u^{2}(x)+v^{2}(x)]\,dx=0.
+  \label{eq:13.2.24}\int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx+ q\int_{a}^{b}r(x)[u^{2}(x)+v^{2}(x)]\,dx=0.
 \end{equation}
 Since
 \[
@@ -544,7 +544,7 @@ We've now proved parts of the next theorem. A complete proof is beyond the scope
   \]
   For each $n$, if $y_{n}$ is an arbitrary $\lambda_{n}$-eigenfunction, then every
   $\lambda_{n}$-eigenfunction is a constant multiple of $y_{n}$. If $m\ne n$, $y_{m}$ and $y_{n}$
-  are orthogonal $[a,b]$ with respect to $r=r(x)$; that is,
+  are orthogonal on $[a,b]$ with respect to $r=r(x)$; that is,
   \begin{equation}
     \label{eq:13.2.27}\int_{a}^{b}r(x)y_{m}(x)y_{n}(x)\,dx=0.
   \end{equation}
@@ -562,7 +562,7 @@ In conclusion, we mention the next theorem. The proof is beyond the scope of thi
   \[
     Ly+\lambda r(x)y=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0,
   \]
-  with associated eigenvectors $y_{1}$, $y_{2}$, \dots, $y_{n}$, \dots. Suppose $f$ is piecewise
+  with associated eigenfunctions $y_{1}$, $y_{2}$, \dots, $y_{n}$, \dots. Suppose $f$ is piecewise
   smooth (Definition~\ref{thmtype:11.2.3}) on $[a,b]$. For each $n$, let
   \[
     c_{n}=\frac{\dst{\int_{a}^{b}}r(x)f(x)y_{n}(x)\,dx}{\dst{\int_{a}^{b}}r(x)y_{n}^{2}(x)\,dx}.
@@ -625,7 +625,7 @@ form (with $\lambda=0$). Assume that $b$, $c$, $\alpha$, and $\nu$ are constants
   form of the associated eigenfunctions.
 
   \part{c} Compute the first four positive eigenvalues with errors not greater than
-  $5\times10^{-8.}$ State the form of the associated eigenfunctions.}
+  $5\times10^{-8}$. State the form of the associated eigenfunctions.}
 
   \item\label{exer:13.2.11} \Cex $y''+\lambda y=0$, \quad $y(0)+2y'(0)=0$,\quad $y(2)=0$
 
@@ -716,7 +716,7 @@ form (with $\lambda=0$). Assume that $b$, $c$, $\alpha$, and $\nu$ are constants
   eigenfunctions.
 
   \exercisetext{Exercises~\ref{exer:13.2.28}--\ref{exer:13.2.30} deal with the Sturm--Liouville
-  problem \begin{equation}\tag{SL}y''+\lambda y=0,\quad\alpha y(0)+\beta y'(0),\quad \rho
+  problem \begin{equation}\tag{SL}y''+\lambda y=0,\quad\alpha y(0)+\beta y'(0)=0,\quad \rho
   y(L)+\delta y'(L)=0,\end{equation} where $\alpha^{2}+\beta^{2}>0$ and $\rho^{2}+\delta^{2}>0$.}
 
   \item\label{exer:13.2.28} Show that $\lambda=0$ is an eigenvalue of (SL) if and only if
@@ -730,16 +730,16 @@ form (with $\lambda=0$). Assume that $b$, $c$, $\alpha$, and $\nu$ are constants
   \part{a} Show that $\lambda$ is a negative eigenvalue of (SL) if and only if $\lambda=-k^{2}$,
   where $k$ is a positive solution of
   \[
-    (\alpha\rho-\beta\delta k^{2})\sinh kL+k(\alpha\delta-\beta\rho)\cosh kL.
+    (\alpha\rho-\beta\delta k^{2})\sinh kL+k(\alpha\delta-\beta\rho)\cosh kL=0.
   \]
 
   \part{b} Suppose $\alpha\delta-\beta\rho=0$. Show that (SL) has a negative eigenvalue if and only
   if $\alpha\rho$ and $\beta\delta$ are both nonzero. Find the negative eigenvalue and an associated
-  eigenfunction. \hint{Show that in this case $\rho=p\alpha$ and $s=q\beta$, where $q\ne0$.}
+  eigenfunction. \hint{Show that in this case $\rho=c\alpha$ and $\delta=c\beta$, where $c\ne0$.}
 
   \part{c} Suppose $\beta\rho-\alpha\delta\ne0$. We know from Section~11.1 that (SL) has no negative
   eigenvalues if $\alpha\rho=0$ and $\beta\delta=0$. Assume that either $\alpha\rho\ne0$ or
-  $\beta\delta\ne0$. Then we can rewrite (A) as
+  $\beta\delta\ne0$. Then we can rewrite the equation in \part{a} as
   \[
     \tanh kL= \frac{k(\beta\rho-\alpha\delta)}{\alpha\rho-\beta\delta k^{2}}.
   \]
@@ -769,7 +769,7 @@ form (with $\lambda=0$). Assume that $b$, $c$, $\alpha$, and $\nu$ are constants
   (why?), so let's suppose in addition that at least one of the products $\alpha\rho$ and
   $\beta\delta$ is nonzero. Then we can rewrite (A) as
   \begin{equation}
-    \tag{B}\tan kL= \frac{k(\beta\rho-\alpha\delta)}{\alpha\rho-\beta\delta k^{2}}.
+    \tag{B}\tan kL= \frac{k(\beta\rho-\alpha\delta)}{\alpha\rho+\beta\delta k^{2}}.
   \end{equation}
   By graphing both sides of this equation on the same axes (there are several possibilities for the
   right side), convince yourself of the following:
@@ -777,7 +777,7 @@ form (with $\lambda=0$). Assume that $b$, $c$, $\alpha$, and $\nu$ are constants
   \part{c} If $\beta\delta=0$, there's a positive integer $N$ such that (B) has one solution $k_{n}$
   in each of the intervals
   \begin{equation}
-    \tag{C}\left((2n-1)\pi/L,(2n+1)\pi/L)\right),\quad n=N,N+1,N+2,\dots,
+    \tag{C}\left(\frac{(2n-1)\pi}{2L},\frac{(2n+1)\pi}{2L}\right),\quad n=N,N+1,N+2,\dots,
   \end{equation}
   and either
   \[
@@ -787,7 +787,7 @@ form (with $\lambda=0$). Assume that $b$, $c$, $\alpha$, and $\nu$ are constants
   \part{d} If $\beta\delta\ne0$, there's a positive integer $N$ such that (B) has one solution
   $k_{n}$ in each of the intervals (C) and
   \[
-    \lim_{n\to\infty}\left(k_{n}-\frac{n\pi}{N}\right)=0.
+    \lim_{n\to\infty}\left(k_{n}-\frac{n\pi}{L}\right)=0.
   \]
 
   \item\label{exer:13.2.31} The following Sturm--Liouville problems are generalizations of Problems
@@ -807,8 +807,7 @@ form (with $\lambda=0$). Assume that $b$, $c$, $\alpha$, and $\nu$ are constants
 
   \item\label{exer:13.2.32} Show that the eigenvalues of the Sturm--Liouville problem
   \[
-    (p(x)y')'+\lambda r(x)y=0,\quad\alpha y(a)+\beta y'(a)=0,\quad \rho y(b)+\delta y'(b)
-  \]
+    (p(x)y')'+\lambda r(x)y=0,\quad\alpha y(a)+\beta y'(a)=0,\quad \rho y(b)+\delta y'(b)=0 \]
   are all positive if $\alpha\beta\le0$, \, $\rho\delta\ge0$, and
   $(\alpha\beta)^{2}+(\rho\delta)^{2}>0$.
 \end{exerciselist}

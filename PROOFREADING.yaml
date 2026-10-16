@@ -1026,11 +1026,91 @@ sections:
       - "All seven supplied polar-coordinate answer families checked against radial equations and boundary data."
       - "EPS figures not visually inspected."
   "13.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: math, where: "Extension to (c,d)", note: "(c,d] -> (c,a]; nonvanishing interval [c,d] -> (c,d)"}
+      - {kind: math, where: "Definition of L", note: "P_0 y -> P_2 y"}
+      - {kind: math, where: "Proof of Theorem 13.1.1", note: "z_{}'(a) -> z_2'(a)"}
+      - {kind: math, where: "Proof of Theorem 13.1.2, (b) to (c)", note: "B_2(2_2) -> B_2(y_2)"}
+      - {kind: math, where: "Proof of Theorem 13.1.2, (d) to (e)", note: "c_1 z_1+c_2 z_2 -> c_1 y_1+c_2 y_2 in the homogeneous solution"}
+      - {kind: prose, where: "Proof of Theorem 13.1.2", note: "sentence began 'because' after a period -> 'If'"}
+      - {kind: typeset, where: "Proof of Theorem 13.1.2", note: "period on separate line after z_2 definition -> joined to display"}
+      - {kind: math, where: "Example 13.1.4", note: "called the particular solution complementary and wrote 2x^3=0 -> nonhomogeneous equation with right side 2x^3"}
+      - {kind: prose, where: "Example 13.1.4", note: "missing periods after the complementary-equation statement and final solution -> added"}
+      - {kind: ref, where: "Example 13.1.5", note: "equation (13.1.13) -> (13.1.14)"}
+      - {kind: math, where: "Proof of Theorem 13.1.3", note: "u_1' y_1'+u_2' y_2'=F -> F/P_0"}
+      - {kind: typeset, where: "Green's function display", note: "extra period after cases -> removed"}
+      - {kind: prose, where: "Green's function analogy", note: "if and only -> if and only if"}
+      - {kind: typeset, where: "Example 13.1.6 equation", note: "period between equation and boundary condition -> comma"}
+      - {kind: math, where: "Theorem 13.1.4", note: "called Ly=F boundary value problem homogeneous -> nonhomogeneous"}
+      - {kind: ref, where: "Proof of Theorem 13.1.4", note: "general solution of (13.1.22) -> general solution of Ly=F"}
+      - {kind: typeset, where: "Proof of Theorem 13.1.4", note: "B_1 y_2 and B_2(y_1=0 -> B_1(y_2) and B_2(y_1)=0"}
+      - {kind: math, where: "Proof of Theorem 13.1.4", note: "Ly=0 at conclusion -> B_2(y)=0"}
+      - {kind: prose, where: "Example 13.1.7", note: "linear independent -> linearly independent"}
+      - {kind: ref, where: "Example 13.1.7", note: "two references to Theorem 13.1.3 -> 13.1.4"}
+      - {kind: prose, where: "Exercise 9(b)", note: "necessary and sufficient on F -> necessary and sufficient conditions on F"}
+      - {kind: math, where: "Exercise 32", note: "B_2(y)=f_2 -> B_2(y)=k_2"}
+      - {kind: typeset, where: "Exercise 32", note: "k_2/B_2(y_1) parentheses repaired"}
+      - {kind: answer, where: "Answer 2", note: "e^(x-1) -> e^(1-x)"}
+      - {kind: answer, where: "Answer 7", note: "incorrect exponential coefficients -> coefficients satisfying both boundary conditions"}
+      - {kind: answer, where: "Answer 8", note: "integral bounds a,b -> 0,1"}
+      - {kind: answer, where: "Answer 10(a)", note: "second integral bounds x,b and relative sign -> a,x and plus inside negative bracket"}
+      - {kind: answer, where: "Answer 14", note: "second integral sign -> plus inside negative bracket"}
+      - {kind: answer, where: "Answer 16", note: "undefined omega=0 formula -> zero-frequency Dirichlet formula; negative integer resonance included"}
+      - {kind: answer, where: "Answer 17", note: "undefined omega=0 formula -> zero-frequency Dirichlet-Neumann formula"}
+      - {kind: answer, where: "Answer 18", note: "undefined omega=0 formula -> zero-frequency Neumann-Dirichlet formula"}
+      - {kind: answer, where: "Answer 19", note: "undefined omega=0 formula -> compatibility condition and zero-frequency Neumann family; negative integer resonance included"}
+      - {kind: answer, where: "Answer 17", note: "n+/2 -> n+1/2 in resonant denominator"}
+      - {kind: answer, where: "Answer 18", note: "n+/2 -> n+1/2 in resonant denominator"}
+      - {kind: answer, where: "Answer 19", note: "resonant particular solution sign -> positive"}
+      - {kind: typeset, where: "Answer 21(a)", note: "extra closing parenthesis in Green's function -> removed"}
+      - {kind: answer, where: "Answer 22(b)", note: "5x^2 -> 5x^3"}
+      - {kind: answer, where: "Answer 25", note: "first Green's function case 1<=x<=t -> 1<=t<=x"}
+      - {kind: answer, where: "Answer 28", note: "Green's function case domains swapped -> corrected on [0,pi/2]"}
+      - {kind: typeset, where: "Answer 29", note: "e^(x-t) closing delimiter repaired"}
+      - {kind: answer, where: "Answer 31", note: "Green's function case domains 0,pi -> a,b"}
+    remarks:
+      - "Re-derived the Green's function families and checked supplied solutions against their boundary conditions."
+      - "No symbolic algebra package was available offline; calculations used hand derivations and focused numerical checks."
   "13.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-14
+    findings:
+      - {kind: math, where: "Example 13.2.1 equation", note: "y'+3y' -> y''+3y'"}
+      - {kind: math, where: "Example 13.2.1 solution", note: "e^(r_j t) -> e^(r_j x)"}
+      - {kind: math, where: "Example 13.2.1 repeated root", note: "second boundary condition y(0) -> y(1)"}
+      - {kind: prose, where: "Example 13.2.1 complex roots", note: "specified y(0) twice -> y(1) gives the eigenvalue condition"}
+      - {kind: prose, where: "Sturm-Liouville comparison", note: "isn't , -> isn't,"}
+      - {kind: prose, where: "Example 13.2.5 negative eigenvalue", note: "comma splice and missing method after Newton's -> sentence and Newton's method"}
+      - {kind: math, where: "Example 13.2.5 positive case", note: "general solution missing c_1 on cosine -> added"}
+      - {kind: math, where: "Figure 13.2.2 caption", note: "-2k/(1+k) -> -2k/(1+3k^2)"}
+      - {kind: prose, where: "Theorem 13.2.2", note: "twice continuously functions -> twice continuously differentiable functions"}
+      - {kind: math, where: "Equation (13.2.22)", note: "u'v' in boundary term -> u'v"}
+      - {kind: math, where: "Equation (13.2.23)", note: "r(x,y) -> r(x)"}
+      - {kind: math, where: "Proof of Theorem 13.2.3", note: "(p(x)'y)' -> (p(x)y')'"}
+      - {kind: math, where: "Proof of Theorem 13.2.3", note: "imaginary part pu+qv -> qu+pv"}
+      - {kind: math, where: "Equation (13.2.24)", note: "missing factor q on the second integral -> added"}
+      - {kind: prose, where: "Theorem 13.2.6", note: "orthogonal [a,b] -> orthogonal on [a,b]"}
+      - {kind: math, where: "Theorem 13.2.7", note: "eigenvectors -> eigenfunctions"}
+      - {kind: typeset, where: "Exercises 11-20 instructions", note: "period inside exponent -8 -> after 10^(-8)"}
+      - {kind: math, where: "Exercises 28-30 definition", note: "missing =0 in first boundary condition -> added"}
+      - {kind: math, where: "Exercise 29(a)", note: "missing =0 in characteristic equation -> added"}
+      - {kind: math, where: "Exercise 29(b) hint", note: "invalid symbols p,s,q -> common nonzero proportionality constant c"}
+      - {kind: ref, where: "Exercise 29(c)", note: "rewrite (A) -> rewrite the equation in part (a)"}
+      - {kind: math, where: "Exercise 30 equation (B)", note: "denominator alpha rho - beta delta k^2 -> alpha rho + beta delta k^2"}
+      - {kind: math, where: "Exercise 30 interval (C)", note: "incorrect endpoints and extra parenthesis -> half-integer pi/L endpoints"}
+      - {kind: math, where: "Exercise 30(d)", note: "n pi/N -> n pi/L"}
+      - {kind: math, where: "Exercise 32", note: "missing =0 in second boundary condition -> added"}
+      - {kind: answer, where: "Answer 19(c)", note: "omitted first positive eigenvalue 3.3856431 and included fifth -> first four listed"}
+      - {kind: answer, where: "Answer 20(c)", note: "78.777456 -> 78.7774576"}
+      - {kind: answer, where: "Answer 21", note: "every other positive eigenvalue listed -> consecutive first four listed"}
+      - {kind: answer, where: "Answer 23", note: "every other positive eigenvalue listed -> consecutive first four listed"}
+    remarks:
+      - "Independently solved Robin characteristic equations numerically for Answers 11-20, 21, 23, and 24."
+      - "Rendered Figures 13.2.1 and 13.2.2 inspected; plot-based arguments in Exercises 29-30 were not independently drawn."
 
 other_files:
   chapters/01/chapter.tex: done
@@ -1045,7 +1125,7 @@ other_files:
   chapters/10/chapter.tex: done  # introduction, section descriptions, and input order checked
   chapters/11/chapter.tex: done  # "in term" -> "in terms"; introduction and input order checked
   chapters/12/chapter.tex: done  # Section 1.3 reference corrected to 12.3; introduction and inputs checked
-  chapters/13/chapter.tex: todo
+  chapters/13/chapter.tex: done  # doubled point and missing final period corrected; introduction and inputs checked
   book/frontmatter.tex: todo
   book/integrals.tex: todo
   book/index.tex: todo

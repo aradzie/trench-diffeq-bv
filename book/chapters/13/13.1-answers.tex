@@ -1,7 +1,7 @@
 \medskip{\bf Section~13.1 Answers,
 pp.~\pageref{exer:13.1.1}--\pageref{exer:13.1.32}}\medskip
 
-\answer{13.1.2} $y=-x+\dst{\frac{2}{e-1}\left(e^{x}-e^{(x-1)}\right)}$\;
+\answer{13.1.2} $y=-x+\dst{\frac{2}{e-1}\left(e^{x}-e^{1-x}\right)}$\;
 \answer{13.1.3}
  $y=x^{2}-\dst{\frac{x^{3}}{3}}+cx$ with $c$ arbitrary
 
@@ -10,10 +10,9 @@ pp.~\pageref{exer:13.1.1}--\pageref{exer:13.1.32}}\medskip
 
 \smallskip
 \answer{13.1.6}  $y=(x^{2}+13-8x)e^{x}$\;
-\answer{13.1.7}  $y=2e^{2x}+\dst{\frac{3(5e^{3x}-4e^{4x})}{e(15-16e)}
-+\frac{2e^{4}(4e^{3(x-1)}-3e^{4(x-1)})}{16e-15}}$
+\answer{13.1.7}  $y=2e^{2x}+\dst{\frac{2e^{2}+45}{e(4e-5)}e^{3x}-\frac{2(e+18)}{e(4e-5)}e^{4x}}$
 
-\answer{13.1.8} $\dst{\int_{a}^{b}tF(t)\,dt=0}$\;
+\answer{13.1.8} $\dst{\int_{0}^{1}tF(t)\,dt=0}$\;
 $y=\dst{-x\int_{x}^{1}F(t)\,dt-\int_{0}^{x}tF(t)\,dt+c_{1}x}$ with $c_{1}$
 arbitrary
 
@@ -38,8 +37,8 @@ $+c_{1}\sin(x-a)$ with  $c_{1}$ arbitrary
 \answer{13.1.10} \part{a}\;    $b-a\ne(k+1/2)\pi$\;    ($k=$ integer)
 
 \qquad\; \;  \,
-$y=-\dst{\frac{\sin(x-a)}{\cos(b-a)}\int_{x}^{b}F(t)\cos(t-b)\,dt-
- \frac{\cos(x-b)}{\cos(b-a)}\int_{x}^{b}F(t)\sin(t-a)\,dt}$
+$y=-\dst{\frac{\sin(x-a)}{\cos(b-a)}\int_{x}^{b}F(t)\cos(t-b)\,dt+
+ \frac{\cos(x-b)}{\cos(b-a)}\int_{a}^{x}F(t)\sin(t-a)\,dt}$
 
 \quad\;  \;  \part{b}\;    $\dst{\int_{a}^{b}F(t)\sin(t-a)\,dt=0}$
 
@@ -88,7 +87,7 @@ $y=\dst{-\frac{\sinh(x-a)}{\cosh(b-a)}\int_{x}^{b}F(t)\cosh(t-b)\,dt
 
 \answer{13.1.14}
 $y=-\dst{\frac{\cosh(x-a)}{\sinh(b-a)}\int_{x}^{b}F(t)\cosh(t-b)\,dt
--\frac{\cosh(x-b)}{\sinh(b-a)}\int_{a}^{x}F(t)\cosh(t-a)\,dt}$
++\frac{\cosh(x-b)}{\sinh(b-a)}\int_{a}^{x}F(t)\cosh(t-a)\,dt}$
 \smallskip
 
 \answer{13.1.15}
@@ -98,7 +97,7 @@ e^{x}\int_{x}^{b}e^{-t}F(t)\,dt+e^{-x}\int_{a}^{x}e^{t}F(t)\,dt\right)}$
 \smallskip
 
 \rm
-\answer{13.1.16} If $\omega$ isn't  a positive integer, then
+\answer{13.1.16} If $\omega=0$, then $y=\dst{\int_{0}^{x}(x-t)F(t)\,dt-\frac{x}{\pi}\int_{0}^{\pi}(\pi-t)F(t)\,dt}$. If $\omega$ is neither zero nor an integer, then
 
 \smallskip
 \quad\;  \;  \,
@@ -107,7 +106,7 @@ $y=\dst{\frac{1}{\omega\sin\omega\pi}
 +\sin\omega(x-\pi)\int_{0}^{x}F(t)\sin\omega t\,dt\right)}$.
 
 \smallskip \quad\;   \,
-If $\omega=n$ (positive integer), then $\dst{\int_{0}^{\pi}F(t)\sin
+If $|\omega|=n$ (positive integer), then $\dst{\int_{0}^{\pi}F(t)\sin
 nt\,dt=0}$ is necessary for existence
 
 \quad\;   \,
@@ -123,7 +122,7 @@ $y=-\dst{\frac{1}{n}\left(\sin nx\int_{x}^{\pi}F(t)\cos nt\,dt
  with $c_{1}$ arbitrary.
 
 \smallskip
-\answer{13.1.17} If $\omega\ne n+1/2$\;   ($n=$ integer), then
+\answer{13.1.17} If $\omega=0$, then $y=\dst{\int_{0}^{x}(x-t)F(t)\,dt-x\int_{0}^{\pi}F(t)\,dt}$. If $\omega\ne0$ and $\omega\ne n+1/2$   ($n=$ integer), then
 $$
 y=-\frac{\sin\omega x}{\omega\cos\omega
 \pi}\int_{x}^{\pi}F(t)\cos\omega(t-\pi)\,dt
@@ -143,7 +142,7 @@ is necessary
 $y=-\dst{\frac{\sin(n+1/2)x}{n+1/2}\int_{x}^{\pi}F(t)\cos(n+1/2)t\,dt}$
 
 \smallskip \quad\;   \,   \qquad \qquad
-$-\dst{\frac{\cos(n+1/2)x}{n+/2}\int_{0}^{x}F(t)\sin(n+1/2)t\,dt
+$-\dst{\frac{\cos(n+1/2)x}{n+1/2}\int_{0}^{x}F(t)\sin(n+1/2)t\,dt
 +c_{1}\sin(n+1/2)x}$
 
 \quad\;   \,
@@ -151,7 +150,7 @@ with $c_{1}$ arbitrary,
 
 \smallskip
 
-\answer{13.1.18} If $\omega\ne n+1/2$\;   ($n=$ integer), then
+\answer{13.1.18} If $\omega=0$, then $y=\dst{\int_{0}^{x}(x-t)F(t)\,dt-\int_{0}^{\pi}(\pi-t)F(t)\,dt}$. If $\omega\ne0$ and $\omega\ne n+1/2$   ($n=$ integer), then
 $$
 y=\frac{\cos\omega x}{\omega\cos\omega
 \pi}\int_{x}^{\pi}F(t)\sin\omega(t-\pi)\,dt
@@ -171,7 +170,7 @@ is necessary
 $y=\dst{\frac{\cos(n+1/2)x}{n+1/2}\int_{x}^{\pi}F(t)\sin(n+1/2)t\,dt}$
 
 \smallskip \quad\;   \,   \qquad \qquad
-$+\dst{\frac{\sin(n+1/2)x}{n+/2}\int_{0}^{x}F(t)\cos(n+1/2)t\,dt
+$+\dst{\frac{\sin(n+1/2)x}{n+1/2}\int_{0}^{x}F(t)\cos(n+1/2)t\,dt
 +c_{1}\cos(n+1/2)x}$
 
 \quad\;   \,
@@ -179,7 +178,7 @@ with $c_{1}$ arbitrary.
 
 \smallskip
 
-\answer{13.1.19} If $\omega$ isn't  a positive integer, then
+\answer{13.1.19} If $\omega=0$, a solution exists if and only if $\dst{\int_{0}^{\pi}F(t)\,dt=0}$. In this case $y=\dst{\int_{0}^{x}(x-t)F(t)\,dt+c_{1}}$, with $c_{1}$ arbitrary. If $\omega$ is neither zero nor an integer, then
 
 \smallskip
 \quad \quad
@@ -188,7 +187,7 @@ $y=\dst{\frac{1}{\omega\sin\omega\pi}
 +\cos\omega(x-\pi)\int_{0}^{x}F(t)\cos\omega t\,dt\right)}$.
 
 \smallskip \quad\;   \,
-If $\omega=n$ (positive integer), then $\dst{\int_{0}^{\pi}F(t)\cos
+If $|\omega|=n$ (positive integer), then $\dst{\int_{0}^{\pi}F(t)\cos
 nt\,dt=0}$ is necessary for existence
 
 \quad\;   \,
@@ -197,7 +196,7 @@ of a solution. In this case,
 \smallskip
 
 \quad\;   \,
-$y=-\dst{\frac{1}{n}\left(\cos nx\int_{x}^{\pi}F(t)\sin nt\,dt
+$y=\dst{\frac{1}{n}\left(\cos nx\int_{x}^{\pi}F(t)\sin nt\,dt
 +\sin nx\int_{0}^{x}F(t)\cos nt\,dt\right)+c_{1}\cos nx}$
 
 \smallskip \quad\;   \,
@@ -213,7 +212,7 @@ $y=-\dst{\frac{1}{n}\left(\cos nx\int_{x}^{\pi}F(t)\sin nt\,dt
 $G(x,t)=
 \begin{cases}
 \dst{\frac{(t-a)(x-b)}{b-a}}&a\le t\le x,\\[.11in]
-\dst{\frac{(x-a)(t-b)}{b-a)}}&x\le t\le b
+\dst{\frac{(x-a)(t-b)}{b-a}}&x\le t\le b
 \end{cases}$
 
 \quad  \quad\;
@@ -257,7 +256,7 @@ $G(x,t)=
 -\dst{\frac{(2+x)(3-t)}{5}},&x\le t\le1
 \end{cases}$
 \;  \part{a} $y=\dst{\frac{x^{2}-x-2}{2}}$
-\;  \part{b} $y=\dst{\frac{5x^{2}-7x-14}{30}}$
+\;  \part{b} $y=\dst{\frac{5x^{3}-7x-14}{30}}$
 
 \medskip
 \quad \quad
@@ -294,7 +293,7 @@ $G(x,t)=
 \answer{13.1.25}
 $G(x,t)=
 \begin{cases}
--\dst{\frac{1}{22}\left(3+\frac{1}{t^{2}}\right)\left(x+\frac{4}{x}\right)},&\;1\le x\le t,\\[.11in]
+-\dst{\frac{1}{22}\left(3+\frac{1}{t^{2}}\right)\left(x+\frac{4}{x}\right)},&\;1\le t\le x,\\[.11in]
 -\dst{\frac{1}{22}\left(3x+\frac{1}{x}\right)\left(1+\frac{4}{t^{2}}\right)},&\;x\le t\le2
 \end{cases}$
 
@@ -330,16 +329,16 @@ x)}{\alpha\delta-\beta\rho}},\;&0\le t\le x,\\[.11in]
 \answer{13.1.28} $\alpha\rho+\beta\delta\ne0$ \;
 $G(x,t)=
 \begin{cases}
-\dst{\frac{(\beta\cos t-\alpha\sin t)(\rho\cos x+\delta\sin x)}{\alpha\rho+\beta\delta}}\;&x\le t\le\pi\\[.11in]
+\dst{\frac{(\beta\cos t-\alpha\sin t)(\rho\cos x+\delta\sin x)}{\alpha\rho+\beta\delta}}\;& 0\le t\le x  \\[.11in]
 \dst{\frac{(\beta\cos x-\alpha\sin x)(\rho\cos t+\delta\sin t)}{\alpha\rho+\beta\delta}}\;
-&0\le t\le x
+&x\le t\le \pi/2
 \end{cases}$
 
 \smallskip
 \answer{13.1.29} $\alpha\delta-\beta\rho\ne0$ \;
 $G(x,t)=
 \begin{cases}
-\dst{\frac{e^{x-t)}(\beta\cos t-(\alpha+\beta)\sin t)
+\dst{\frac{e^{x-t}(\beta\cos t-(\alpha+\beta)\sin t)
 (\delta\cos x-(\rho+\delta)\sin x)}{\alpha\delta-\beta\rho}}\;
 &0\le t\le x,\\[.11in]
 \dst{\frac{e^{x-t}(\beta\cos x-(\alpha+\beta)\sin x)
@@ -367,9 +366,9 @@ $G(x,t)=
 \begin{cases}
 \dst{\frac{((\alpha-\beta)e^{(t-a)}-(\alpha+\beta)e^{-(t-a)})
 ((\rho-\delta)e^{(x-b)}-(\rho+\delta)e^{-(x-b)})}{2[(\rho+\delta)(\alpha-\beta)e^{(b-a)}-(\rho-\delta)(\alpha+\beta)e^{(a-b)}]}},\;
-&0\le t\le x,\\[.11in]
+&a\le t\le x,\\[.11in]
 \dst{\frac{((\alpha-\beta)e^{(x-a)}-(\alpha+\beta)e^{-(x-a)})
 ((\rho-\delta)e^{(t-b)}-(\rho+\delta)e^{-(t-b)})}{2[(\rho+\delta)(\alpha-\beta)e^{(b-a)}-(\rho-\delta)(\alpha+\beta)e^{(a-b)}]}}\;
-&x\le t\le\pi
+&x\le t\le b
 \end{cases}$
 

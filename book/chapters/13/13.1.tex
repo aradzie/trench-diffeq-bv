@@ -36,8 +36,8 @@ $[a,b]$, and we are interested in solutions of \eqref{eq:13.1.3} on the closed i
 different from the situation considered in Chapter~5, where we imposed conditions on $P_{0}$,
 $P_{1}$, $P_{2}$, and $F$ on the \emph{open} interval $(a,b)$ and we were interested in solutions on
 the open interval. There is really no problem here; we can always extend $P_{0}$, $P_{1}$, $P_{2}$,
-and $F$ to an open interval $(c,d)$ (for example, by defining them to be constant on $(c,d]$ and
-$[b,d)$) so that they are continuous and $P_{0}$ has no zeros on $[c,d]$. Then we can apply the
+and $F$ to an open interval $(c,d)$ (for example, by defining them to be constant on $(c,a]$ and
+$[b,d)$) so that they are continuous and $P_{0}$ has no zeros on $(c,d)$. Then we can apply the
 theorems from Chapter~5 to the equation
 \[
   y''+\frac{P_{1}(x)}{P_{0}(x)}y'+ \frac{P_{2}(x)}{P_{0}(x)}y=\frac{F(x)}{P_{0}(x)}
@@ -55,7 +55,7 @@ $k_{1}=0$.
 
 We abbreviate \eqref{eq:13.1.1} as $Ly=F$, where
 \[
-  Ly=P_{0}(x)y''+P_{1}(x)y'+P_{0}(x)y,
+  Ly=P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y,
 \]
 and we denote
 \[
@@ -138,7 +138,7 @@ value problems is more complicated than for initial value problems.
 $B_{1}(z_{1})=B_{1}(z_{2})=0$ then $(\alpha,\beta)$ is a nontrivial solution of the system
 \begin{eqnarray*}
   \alpha z_{1}(a)+\beta z_{1}'(a) & = & 0 \\
-  \alpha z_{2}(a)+\beta z_{}'(a)  & = & 0.
+  \alpha z_{2}(a)+\beta z_{2}'(a)  & = & 0.
 \end{eqnarray*}
 This implies that
 \[
@@ -217,7 +217,7 @@ Moreover,
     b_{1} & b_{2}
   \end{array}\right|\ne0.
 \end{equation}
-because if this determinant were zero, its rows would be linearly dependent and therefore
+If this determinant were zero, its rows would be linearly dependent and therefore
 $\{y_{1},y_{2}\}$ would be linearly dependent, contrary to our assumption that $\{y_{1},y_{2}\}$ is
 a fundamental set of solutions of $Ly=0$. From \eqref{eq:13.1.7} and \eqref{eq:13.1.11},
 \[
@@ -253,7 +253,7 @@ satisfy the boundary conditions, we must choose $c_{1}$ and $c_{2}$ so that
 \[
   \begin{aligned}
     c_{1}B_{1}(y_{1})+c_{2}B_{1}(y_{2}) & =k_{1}-B_{1}(y_{p})  \\
-    c_{1}B_{2}(y_{1})+c_{2}B_{2}(2_{2}) & =k_{2}-B_{2}(y_{p}).
+    c_{1}B_{2}(y_{1})+c_{2}B_{2}(y_{2}) & =k_{2}-B_{2}(y_{p}).
   \end{aligned}
 \]
 From \eqref{eq:13.1.9}, this system always has a unique solution $(c_{1},c_{2})$.
@@ -304,7 +304,7 @@ If this system has a nontrivial solution then so does the system
     0
   \end{array}\right].
 \]
-This and \eqref{eq:13.1.7} imply that $y=c_{1}z_{1}+c_{2}z_{2}$ is a nontrivial solution of
+This and \eqref{eq:13.1.7} imply that $y=c_{1}y_{1}+c_{2}y_{2}$ is a nontrivial solution of
 \eqref{eq:13.1.10}, which contradicts~\part{d}.
 
 \part{e} $\implies$ \part{a}. Theorem~\ref{thmtype:13.1.1} implies that if $B_{1}(z_{1})=0$ and
@@ -316,13 +316,12 @@ which completes the proof.
   \begin{equation}
     \label{eq:13.1.13}x^{2}y''-2xy'+2y-2x^{3}=0,\quad y(1)=4,\quad y'(2)=3,
   \end{equation}
-  given that $\{x,x^{2}\}$ is a fundamental set of solutions of the complementary equation
-\end{example}
+  given that $\{x,x^{2}\}$ is a fundamental set of solutions of the complementary equation. \end{example}
 
 \solution Using variation of parameters (Section~5.7), you can show that $y_{p}=x^{3}$ is a solution
-of the complementary equation
+of the nonhomogeneous equation
 \[
-  x^{2}y''-2xy'+2y=2x^{3}=0.
+  x^{2}y''-2xy'+2y=2x^{3}.
 \]
 Therefore the solution of \eqref{eq:13.1.13} can be written as
 \[
@@ -341,7 +340,7 @@ so $c_{1}=7$ and $c_{2}=-4$. Therefore
 \[
   y=x^{3}+7x-4x^{2}
 \]
-is the unique solution of \eqref{eq:13.1.13}
+is the unique solution of \eqref{eq:13.1.13}.
 
 \begin{example}
   \label{example:13.1.5} \rm Solve the boundary value problem
@@ -355,7 +354,7 @@ is the unique solution of \eqref{eq:13.1.13}
   \label{eq:13.1.14}y''-7y'+12y=4e^{2x}.
 \end{equation}
 Since $\{e^{3x},e^{4x}\}$ is a fundamental set for the complementary equation, we could write the
-solution of \eqref{eq:13.1.13} as
+solution of \eqref{eq:13.1.14} as
 \[
   y=2e^{2x}+c_{1}e^{3x}+c_{2}e^{4x}
 \]
@@ -416,7 +415,7 @@ theorem addresses this question.
 where
 \begin{eqnarray*}
   u_{1}'y_{1}+u_{2}'y_{2}   & = & 0 \\
-  u_{1}'y_{1}'+u_{2}'y_{2}' & = & F,
+  u_{1}'y_{1}'+u_{2}'y_{2}' & = & F/P_{0},
 \end{eqnarray*}
 then $Ly=F$. Solving for $u_{1}'$ and $u_{2}'$ yields
 \[
@@ -451,7 +450,7 @@ where
   \begin{cases}
     \dst{\frac{y_{1}(t)y_{2}(x)}{P_{0}(t)W(t)}} & ,\quad a\le t\le x, \\[.1in]
     \dst{\frac{y_{1}(x)y_{2}(t)}{P_{0}(t)W(t)}} & ,\quad x\le t\le b.
-  \end{cases}.
+  \end{cases}
 \]
 
 This is the \emph{Green's function} for the boundary value problem \eqref{eq:13.1.16}. The Green's
@@ -462,7 +461,7 @@ the formula ${\mathbf{x}}={\mathbf{A}}^{-1}{\mathbf{y}}$ to solve ${\mathbf{y}}=
 substitute the given function $F$ into the formula \eqref{eq:13.1.20} to obtain the solution of
 \eqref{eq:13.1.16}. The analogy goes further: just as ${\mathbf{A}}^{-1}$ exists if and only if
 ${\mathbf{A}}{\mathbf{x}}={\mathbf{0}}$ has only the trivial solution, the boundary value problem
-\eqref{eq:13.1.16} has a Green's function if and only the homogeneous boundary value problem
+\eqref{eq:13.1.16} has a Green's function if and only if the homogeneous boundary value problem
 \eqref{eq:13.1.15} has only the trivial solution.
 
 We leave it to you (Exercise~\ref{exer:13.1.32}) to show that the assumptions of
@@ -478,7 +477,7 @@ is
 \begin{example}
   \label{example:13.1.6}\rm Solve the boundary value problem
   \begin{equation}
-    \label{eq:13.1.21}y''+y=F(x).\quad y(0)+y'(0)=0,\quad y(\pi)-y'(\pi)=0,
+    \label{eq:13.1.21}y''+y=F(x),\quad y(0)+y'(0)=0,\quad y(\pi)-y'(\pi)=0,
   \end{equation}
   and find the Green's function for this problem.
 \end{example}
@@ -544,7 +543,7 @@ We'll now consider the situation not covered by Theorem~\ref{thmtype:13.1.3}.
   \begin{equation}
     \label{eq:13.1.23}\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt=0,
   \end{equation}
-  then the homogeneous boundary value problem
+  then the nonhomogeneous boundary value problem
   \begin{equation}
     \label{eq:13.1.24}Ly=F,\quad B_{1}(y)=0,\quad B_{2}(y)=0
   \end{equation}
@@ -564,13 +563,13 @@ and
 \[
   y_{p}'(x)=y_{1}'(x)\int_{x}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt +y_{2}'(x)\int_{a}^{x}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt.
 \]
-Therefore the general solution of \eqref{eq:13.1.22} is of the form
+Therefore the general solution of $Ly=F$ is of the form
 \[
   y=y_{p}+c_{1}y_{1}+c_{2}y_{2},
 \]
 where $c_{1}$ and $c_{2}$ are constants. Then
 \begin{eqnarray*}
-  B_{1}(y) & = & B_{1}(y_{p}+c_{1}y_{1}+c_{2}y_{2})=B_{1}(y_{p})+c_{1}B_{1}(y_{1})+c_{2}B_{1}y_{2}                 \\
+  B_{1}(y) & = & B_{1}(y_{p}+c_{1}y_{1}+c_{2}y_{2})=B_{1}(y_{p})+c_{1}B_{1}(y_{1})+c_{2}B_{1}(y_{2}) \\
            & = & B_{1}(y_{1})\int_{a}^{b}\frac{F(t)y_{2}(t)}{P_{0}(t)W(t)}\,dt+c_{1}B_{1}(y_{1})+c_{2}B_{1}(y_{2}) \\
            & = & c_{2}B_{1}(y_{2})
 \end{eqnarray*}
@@ -581,7 +580,7 @@ $B_{1}(y)=0$ if and only if $c_{2}=0$. Therefore $y=y_{p}+c_{1}y_{1}$ and
            & = & B_{2}(y_{2})\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt,
 \end{eqnarray*}
 since $B_{2}(y_{1})=0$. From Theorem~\ref{thmtype:13.1.1}, $B_{2}(y_{2})\ne0$ (since
-$B_{2}(y_{1}=0$). Therefore $Ly=0$ if and only if \eqref{eq:13.1.23} holds. This completes the
+$B_{2}(y_{1})=0$). Therefore $B_{2}(y)=0$ if and only if \eqref{eq:13.1.23} holds. This completes the
 proof.
 
 \begin{example}
@@ -590,7 +589,7 @@ proof.
     \label{eq:13.1.25}y''+y=F(x),\quad y(0)=0,\quad y(\pi)=0
   \end{equation}
   explains the Examples~\ref{example:13.1.2} and \ref{example:13.1.3}. The complementary equation
-  $y''+y=0$ has the linear independent solutions $y_{1}=\sin x$ and $y_{2}=\cos x$, and $y_{1}$
+  $y''+y=0$ has the linearly independent solutions $y_{1}=\sin x$ and $y_{2}=\cos x$, and $y_{1}$
   satisfies both boundary conditions. Since $P_{0}=1$ and
   \[
     W= \left|
@@ -607,7 +606,7 @@ proof.
   \[
     \int_{0}^{\pi}F(x)\sin x\,dx=\int_{0}^{\pi}\sin x\,dx=2,
   \]
-  so Theorem~\ref{thmtype:13.1.3} implies that \eqref{eq:13.1.25} has no solution. In
+  so Theorem~\ref{thmtype:13.1.4} implies that \eqref{eq:13.1.25} has no solution. In
   Example~\ref{example:13.1.3},
   \[
     F(x)=\sin2x=2\sin x\cos x
@@ -616,7 +615,7 @@ proof.
   \[
     \int_{0}^{\pi}F(x)\sin x\,dx=2\int_{0}^{\pi}\sin^{2}x\cos x\,dx =\frac{2}{3}\sin^{3}x\bigg|_{0}^{\pi}=0,
   \]
-  so Theorem~\ref{thmtype:13.1.3} implies that \eqref{eq:13.1.25} has infinitely many solutions,
+  so Theorem~\ref{thmtype:13.1.4} implies that \eqref{eq:13.1.25} has infinitely many solutions,
   differing by constant multiples of $y_{1}(x)=\sin x$.
 \end{example}
 
@@ -662,7 +661,7 @@ proof.
 
     \item % (b)
     In the case where $a$ and $b$ don't satisfy the condition you gave for \part{a}, state necessary
-    and sufficient on $F$ such that (A) has a solution, and find all solutions by the method used to
+    and sufficient conditions on $F$ such that (A) has a solution, and find all solutions by the method used to
     prove Theorem~\ref{thmtype:13.1.4}.
   \end{alist}
 
@@ -794,10 +793,10 @@ proof.
   \item\label{exer:13.1.32} Show that the assumptions of Theorem~\ref{thmtype:13.1.3} imply that the
         unique solution of
   \[
-    Ly=F,\quad B_{1}(y)=k_{1},\quad B_{2}(y)=f_{2}
+    Ly=F,\quad B_{1}(y)=k_{1},\quad B_{2}(y)=k_{2}
   \]
   is
   \[
-    y=\int_{a}^{b}G(x,t)F(t)\,dt+\frac{k_{2}}{B_{2}}(y_{1})y_{1}+\frac{k_{1}}{B_{1}(y_{2})}y_{2}.
+    y=\int_{a}^{b}G(x,t)F(t)\,dt+\frac{k_{2}}{B_{2}(y_{1})}y_{1}+\frac{k_{1}}{B_{1}(y_{2})}y_{2}.
   \]
 \end{exerciselist}

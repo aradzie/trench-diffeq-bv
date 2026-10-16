@@ -229,6 +229,7 @@ the end of this section.
   \label{figure:11.2.1}
 \end{figure}
 
+\begin{examplesolution}
 \solution Note that we haven't bothered to define $f(-2)$, $f(0)$, and $f(2)$. No matter how they
 may be defined, $f$ is piecewise smooth on $[-2,2]$, and the coefficients in the Fourier series
 \[
@@ -286,6 +287,7 @@ approximates $f(x)$ for $m=5$ (dotted curve), $m=10$ (dashed curve), and $m=15$ 
   \caption{}
   \label{figure:11.2.2}
 \end{figure}
+\end{examplesolution}
 
 \newpage
 \boxit{Even and Odd Functions}
@@ -312,6 +314,7 @@ function\/}. Note that:
   \label{example:11.2.2} \rm The functions $u(x)=\cos\omega x$ and $u(x)=x^{2}$ are even, while
   $v(x)=\sin\omega x$ and $v(x)=x^{3}$ are odd. The function $w(x)=e^{x}$ is neither even nor odd.
 \end{example}
+% no solution
 
 You learned parts \part{a} and \part{b} of the next theorem in calculus, and the other parts follow
 from them (Exercise~\ref{exer:11.2.1}).
@@ -338,6 +341,7 @@ from them (Exercise~\ref{exer:11.2.1}).
   its sum for $-2\le x\le2$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since $L=2$,
 \[
   F(x)=a_{0}+\sum_{n=1}^{\infty}\left(a_{n}\cos\frac{n\pi x}{2}+b_{n}\sin\frac{n\pi x}{2}\right)
@@ -395,6 +399,7 @@ approximates $f(x)$ for $m=5$ (dotted curve), $m=10$ (dashed curve), and $m=15$ 
   \caption{Approximation of $f(x)=x^{2}-x$ by partial sums of its Fourier series on $[-2,2]$}
   \label{figure:11.2.3}
 \end{figure}
+\end{examplesolution}
 
 Theorem~\ref{thmtype:11.2.5} implies the next theorem follows.
 
@@ -429,6 +434,7 @@ Theorem~\ref{thmtype:11.2.5} implies the next theorem follows.
   sum for $-\pi\le x\le\pi$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since $f$ is odd and $L=\pi$,
 \[
   F(x)=\sum_{n=1}^{\infty}b_{n}\sin nx
@@ -464,11 +470,13 @@ approximates $f(x)$ for $m=5$ (dotted curve), $m=10$ (dashed curve), and $m=15$ 
   \caption{Approximation of $f(x)=x$ by partial sums of its Fourier series on $[-\pi,\pi]$}
   \label{figure:11.2.4}
 \end{figure}
+\end{examplesolution}
 
 \begin{example}
   \label{example:11.2.5} \rm Find the Fourier series of $f(x)=|x|$ on $[-\pi,\pi]$ and determine its sum for\\ $-\pi\le x\le\pi$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since $f$ is even and $L=\pi$,
 \[
   F(x)=a_{0}+\sum_{n=1}^{\infty}a_{n}\cos nx.
@@ -506,12 +514,14 @@ and write
 \]
 Since $|x|$ is continuous for all $x$ and $|-\pi|=|\pi|$, Theorem~\ref{thmtype:11.2.4} implies that
 $F(x)=|x|$ for all $x$ in $[-\pi,\pi]$.
+\end{examplesolution}
 
 \begin{example}
   \label{example:11.2.6} \rm Find the Fourier series of $f(x)=x(x^{2}-L^{2})$ on $[-L,L]$, and
   determine its sum for $-L\le x\le L$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since $f$ is odd,
 \[
   F(x)=\sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{L},
@@ -528,6 +538,7 @@ Therefore
   F(x)=\frac{12L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{(-1)^{n}}{n^{3}}\sin\frac{n\pi x}{L}.
 \]
 Theorem~\ref{thmtype:11.2.4} implies that $F(x)=x(x^{2}-L^{2})$ for all $x$ in $[-L,L]$.
+\end{examplesolution}
 
 \begin{example}[Gibbs Phenomenon]
   \label{example:11.2.7}\rm The Fourier series of
@@ -565,6 +576,7 @@ Theorem~\ref{thmtype:11.2.4} implies that $F(x)=x(x^{2}-L^{2})$ for all $x$ in $
   increases.
 \end{example}
 
+\begin{examplesolution}
 \begin{figure}[H]
   \color{blue}
   \begin{minipage}[b]{0.5\linewidth}
@@ -591,6 +603,7 @@ Theorem~\ref{thmtype:11.2.4} implies that $F(x)=x(x^{2}-L^{2})$ for all $x$ in $
   \caption{The Gibbs Phenomenon: Example~\ref{example:11.2.7}, $N=30$}
   \label{figure:11.2.7}
 \end{figure}
+\end{examplesolution}
 
 \technology
 \medskip

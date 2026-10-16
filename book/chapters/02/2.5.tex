@@ -62,6 +62,7 @@ Before stating it we consider an example.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Regarding $y$ as a function of $x$ and differentiating \eqref{eq:2.5.4} implicitly with
 respect to $x$ yields
 \[
@@ -74,6 +75,7 @@ respect to $y$ yields
 \]
 Therefore \eqref{eq:2.5.4} is an implicit solution of \eqref{eq:2.5.5} in either of its two possible
 interpretations. \bbox
+\end{examplesolution}
 
 You may think this example is pointless, since concocting a differential equation that has a given
 implicit solution isn't particularly interesting. However, it illustrates the next important
@@ -171,6 +173,7 @@ differentiated with respect to $x$.
   is not exact on any open rectangle.
 \end{example}
 
+\begin{examplesolution}
 \solution Here
 \[
   M(x,y)=3x^{2}y\mbox{\quad and \quad}N(x,y)=4x^{3}
@@ -181,6 +184,7 @@ so
 \]
 Therefore $M_{y}=N_{x}$ on the line $x=0$, but not on any open rectangle, so there's no function $F$
 such that $F_{x}(x,y)=M(x,y)$ and $F_{y}(x,y)=N(x,y)$ for all $(x,y)$ on any open rectangle. \bbox
+\end{examplesolution}
 
 The next example illustrates two possible methods for finding a function $F$ that satisfies the
 condition $F_{x}=M$ and $F_{y}=N$ if $M\,dx+N\,dy=0$ is exact.
@@ -192,6 +196,7 @@ condition $F_{x}=M$ and $F_{y}=N$ if $M\,dx+N\,dy=0$ is exact.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution{(Method 1)} Here
 \[
   M(x,y)=4x^{3}y^{3}+3x^{2},\quad N(x,y)=3x^{4}y^{2}+6y^{2},
@@ -272,6 +277,7 @@ Figure~\ref{figure:2.5.1} shows a direction field and some integral curves of \e
   \caption{A direction field and integral curves for $(4x^{3}y^{3}+3x^{2})\,dx+(3x^{4}y^{2}+6y^{2})\,dy=0$}
   \label{figure:2.5.1}
 \end{figure}
+\end{examplesolution}
 
 Here's a summary of the procedure used in Method 1 of this example. You should summarize the procedure
 used in Method~2.
@@ -331,6 +337,7 @@ integration.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution We leave it to you to check that $M_{y}=N_{x}$ on any open rectangle where $\tan x$ and
 $\sec x$ are defined. Here we must find a function $F$ such that
 \begin{equation}
@@ -355,6 +362,7 @@ can take to be zero in \eqref{eq:2.5.24}, and
   e^{xy}\tan x=c
 \]
 is an implicit solution of \eqref{eq:2.5.21}. \bbox
+\end{examplesolution}
 
 Attempting to apply our procedure to an equation that isn't exact will lead to failure in Step 4,
 since the function
@@ -373,6 +381,7 @@ the derivative of a function of $y$ alone. Here's an example that illustrates th
   \eqref{eq:2.5.25}.
 \end{example}
 
+\begin{examplesolution}
 \solution Here
 \[
   M_{y}(x,y)=6x^{2}y\mbox{\quad and \quad }N_{x}(x,y)=18x^{2}y,
@@ -402,6 +411,7 @@ or
   \phi'(y)=4x^{3}y.
 \]
 This is a contradiction, since $\phi'$ must be independent of $x$. Therefore the procedure fails.
+\end{examplesolution}
 
 \exercises In Exercises~\ref{exer:2.5.1}--\ref{exer:2.5.17} determine which equations are exact and solve them.
 

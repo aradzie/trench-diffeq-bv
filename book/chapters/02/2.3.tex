@@ -96,6 +96,7 @@ It's important to understand exactly what Theorem~\ref{thmtype:2.3.1} says.
   arbitrary, then \eqref{eq:2.3.3} has a unique solution on some open interval that contains
   $x_{0}$.
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:2.3.2} \rm Consider the initial value problem
@@ -111,6 +112,7 @@ It's important to understand exactly what Theorem~\ref{thmtype:2.3.1} says.
   are continuous on $R$, Theorem~\ref{thmtype:2.3.1} implies that if $(x_{0},y_{0})\ne(0,0)$ then
   \eqref{eq:2.3.4} has a unique solution on some open interval that contains $x_{0}$.
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:2.3.3} \rm Consider the initial value problem
@@ -126,6 +128,7 @@ It's important to understand exactly what Theorem~\ref{thmtype:2.3.1} says.
   are continuous on $R$, Theorem~\ref{thmtype:2.3.1} implies that if $y_{0}\ne x_{0}$,
   \eqref{eq:2.3.5} has a unique solution on some open interval that contains $x_{0}$.
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:2.3.4} \rm In Example~\ref{example:2.2.4} we saw that the solutions of
@@ -141,6 +144,7 @@ It's important to understand exactly what Theorem~\ref{thmtype:2.3.1} says.
   Theorem~\ref{thmtype:2.3.1}\part{b} implies this.
 \end{example}
 
+\begin{examplesolution}
 \solution We'll obtain a contradiction by assuming that \eqref{eq:2.3.6} has a solution $y_{1}$ that
 equals zero for some value of $x$, but isn't identically zero. If $y_{1}$ has this property, there's
 a point $x_{0}$ such that $y_{1}(x_{0})=0$, but $y_{1}(x)\ne0$ for some value of $x$ in every open
@@ -156,6 +160,7 @@ the functions
 \]
 are both continuous for all $(x,y)$, which implies that \eqref{eq:2.3.7} has a unique solution on
 some open interval that contains $x_{0}$.
+\end{examplesolution}
 
 \begin{example}
   \label{example:2.3.5} \rm Consider the initial value problem
@@ -173,6 +178,7 @@ some open interval that contains $x_{0}$.
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Since
 \[
   f(x,y)=\frac{10}{3}xy^{2/5}
@@ -190,6 +196,7 @@ which both $f$ and $f_{y}$ are continuous, and Theorem~\ref{thmtype:2.3.1} impli
 
 If $y=0$ then $f_{y}(x,y)$ is undefined, and therefore discontinuous; hence,
 Theorem~\ref{thmtype:2.3.1} does not apply to \eqref{eq:2.3.8} if $y_{0}=0$.
+\end{examplesolution}
 
 \begin{example}
   \label{example:2.3.6} \rm Example~\ref{example:2.3.5} leaves open the possibility that the initial
@@ -200,6 +207,7 @@ Theorem~\ref{thmtype:2.3.1} does not apply to \eqref{eq:2.3.8} if $y_{0}=0$.
   has more than one solution on every open interval that contains $x_{0}=0$. Show that this is true.
 \end{example}
 
+\begin{examplesolution}
 \solution By inspection, $y\equiv0$ is a solution of the differential equation
 \begin{equation}
   \label{eq:2.3.10}y'=\frac{10}{3}xy^{2/5}.
@@ -245,6 +253,7 @@ you identify the other two?
   \caption{Two solutions ($y=0$ and $y=x^{10/3}$) of \eqref{eq:2.3.9} that differ on every interval containing $x_{0}=0$}
   \label{figure:2.3.2}
 \end{figure}
+\end{examplesolution}
 
 \begin{example}
   \label{example:2.3.7} \rm From Example~\ref{example:2.3.5}, the initial value problem
@@ -255,6 +264,7 @@ you identify the other two?
   the largest open interval $(a,b)$ on which it's unique.
 \end{example}
 
+\begin{examplesolution}
 \solution Let $y$ be any solution of \eqref{eq:2.3.12}. Because of the initial condition $y(0)=-1$
 and the continuity of $y$, there's an open interval $I$ that contains $x_{0}=0$ on which $y$ has no
 zeros, and is consequently of the form \eqref{eq:2.3.11}. Setting $x=0$ and $y=-1$ in
@@ -277,6 +287,7 @@ larger than $(-1,1)$. One such solution is
   \end{array}\right.
 \]
 (Figure \ref{figure:2.3.3}).
+\end{examplesolution}
 
 \begin{figure}[htbp]
   \color{blue}
@@ -307,6 +318,7 @@ larger than $(-1,1)$. One such solution is
   determine the largest open interval on which it's unique.
 \end{example}
 
+\begin{examplesolution}
 \solution Let $y$ be any solution of \eqref{eq:2.3.14}. Because of the initial condition $y(0)=1$
 and the continuity of $y$, there's an open interval $I$ that contains $x_{0}=0$ on which $y$ has no
 zeros, and is consequently of the form \eqref{eq:2.3.11}. Setting $x=0$ and $y=1$ in
@@ -317,6 +329,7 @@ zeros, and is consequently of the form \eqref{eq:2.3.11}. Setting $x=0$ and $y=1
 for $x$ in $I$. Therefore every solution of \eqref{eq:2.3.14} differs from zero and is given by
 \eqref{eq:2.3.15} on $(-\infty,\infty)$; that is, \eqref{eq:2.3.15} is the unique solution of
 \eqref{eq:2.3.14} on $(-\infty,\infty)$. Figure~\ref{figure:2.3.4} shows the graph of this solution.
+\end{examplesolution}
 
 \exercises In Exercises \ref{exer:2.3.1}-\ref{exer:2.3.13} find all $(x_{0},y_{0})$ for which Theorem~\ref{thmtype:2.3.1} implies that the initial value problem $y'=f(x,y)$, $y(x_{0})=y_{0}$ has \part{a} a solution \part{b} a unique solution on some open interval that contains $x_{0}$.
 

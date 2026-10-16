@@ -44,6 +44,7 @@ Note that $T-T_{m}$ decays exponentially, with decay constant $k$.
   $200^{\circ}$C. What is its temperature after 8 minutes?
 \end{example}
 
+\begin{examplesolution}
 \solution Here $T_{0}=400$ and $T_{m}=25$, so \eqref{eq:4.2.2} becomes
 \begin{equation}
   \label{eq:4.2.3}T=25+375e^{-kt}.
@@ -79,6 +80,7 @@ Substituting this into \eqref{eq:4.2.3} yields
   \caption{$T=25+375e^{-(t/4)\ln(15/7)}$}
   \label{figure:4.2.1}
 \end{figure}
+\end{examplesolution}
 
 \begin{example}
   \label{example:4.2.2}\rm An object with temperature $72^{\circ}$F is placed outside, where the
@@ -86,6 +88,7 @@ Substituting this into \eqref{eq:4.2.3} yields
   11:07 its temperature is $50^{\circ}$F. At what time was the object placed outside?
 \end{example}
 
+\begin{examplesolution}
 \solution Let $T(t)$ be the temperature of the object at time $t$. For convenience, we choose the
 origin $t_{0}=0$ of the time scale to be 11:05 so that $T_{0}=60$. We must determine the time $\tau$
 when $T(\tau)=72$. Substituting $T_{0}=60$ and $T_{m}=-20$ into \eqref{eq:4.2.2} yields
@@ -137,6 +140,7 @@ Therefore the object was placed outside about 2 minutes and 5 seconds before 11:
   \caption{$T=-20+80e^{-\frac{t}{2}\ln\frac{8}{7}}$}
   \label{figure:4.2.2}
 \end{figure}
+\end{examplesolution}
 
 \boxit{Mixing Problems}
 
@@ -173,6 +177,7 @@ but the distribution of salt becomes approximately uniform as $t\to\infty$.
   \label{figure:4.2.3}
 \end{figure}
 
+\begin{examplesolution}
 \solutionpart{a} To find a differential equation for $Q$, we must use the given information to
 derive an expression for $Q'$. But $Q'$ is the rate at which the quantity of salt in the tank
 changes with respect to time; thus, if {\color{blue}\it rate in\/} denotes the rate at which salt
@@ -222,6 +227,7 @@ so
 \solutionpart{b} From \eqref{eq:4.2.6}, we see that $\lim_{t\to \infty}Q(t)=300$ for any value
 of $Q(0)$. This is intuitively reasonable, since the incoming solution contains 1/2 pound of salt
 per gallon and there are always 600 gallons of water in the tank. \quad
+\end{examplesolution}
 
 \begin{example}
   \label{example:4.2.4} \rm A 500-liter tank initially contains 10 g of salt dissolved in 200 liters
@@ -248,6 +254,7 @@ per gallon and there are always 600 gallons of water in the tank. \quad
   \label{figure:4.2.5}
 \end{figure}
 
+\begin{examplesolution}
 \solution We first determine the amount $W(t)$ of solution in the tank at any time $t$ prior to
 overflow. Since $W(0)=200$ and we're adding 4 liters/min while removing only 2 liters/min, there's a
 net gain of 2 liters/min in the tank; therefore,
@@ -325,6 +332,7 @@ Now let $K(t)$ be the concentration of salt at time $t$. Then
   \caption{$K(t)=\dst{\frac{1}{4}-\frac{2000}{(t+100)^{2}}}$}
   \label{figure:4.2.6}
 \end{figure}
+\end{examplesolution}
 
 \newpage
 \exercises

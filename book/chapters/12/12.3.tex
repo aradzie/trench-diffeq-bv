@@ -143,6 +143,7 @@ From here, the strategy depends upon the boundary conditions. We illustrate this
   \label{figure:12.3.4}
 \end{figure}
 
+\begin{examplesolution}
 \solution The boundary conditions in \eqref{eq:12.3.4} require products $v(x,y)=X(x)Y(y)$ such that
 $X(0)=X(a)=Y(b)=0$; hence, we let $k=-\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation}
@@ -214,11 +215,13 @@ the boundary of the rectangle, and satisfies the three homogeneous boundary cond
 \eqref{eq:12.3.4}. Therefore, since $u(x,0)=S(x)$ for $0\le x\le a$, $u$ is an actual solution of
 \eqref{eq:12.3.4} if and only if $S(x)=f(x)$ for $0\le x\le a$. From Theorem~\ref{thmtype:11.3.2},
 this is true if $f$ is continuous and piecewise smooth on $[0,a]$, and $f(0)=f(a)=0$.
+\end{examplesolution}
 
 \begin{example}
   \label{example:12.3.2} \rm Solve \eqref{eq:12.3.4} with $f(x)=x(x^{2}-3ax+2a^{2})$.
 \end{example}
 
+\begin{examplesolution}
 \solution From Example~\ref{example:11.3.6},
 \[
   S(x)=\frac{12a^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{n^{3}}\sin\frac{n\pi x}{a}.
@@ -261,6 +264,7 @@ while Figure~\ref{figure:12.3.6} shows the curves
     \label{figure:12.3.6}
   \end{minipage}
 \end{figure}
+\end{examplesolution}
 
 \begin{example}
   \label{example:12.3.3} \rm Define the formal solution of
@@ -283,6 +287,7 @@ while Figure~\ref{figure:12.3.6} shows the curves
   \label{figure:12.3.7}
 \end{figure}
 
+\begin{examplesolution}
 \solution The boundary conditions in \eqref{eq:12.3.11} require products $v(x,y)=X(x)Y(y)$ such that
 $X'(0)=X'(a)=Y(0)=0$; hence, we let $k=-\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must
 satisfy
@@ -345,11 +350,13 @@ is the Fourier cosine series of $f$ on $[0,a]$; that is,
 \[
   \alpha_{0}=\frac{1}{a}\int_{0}^{a}f(x)\,dx \mbox{\quad and \quad}\alpha_{n}=\frac{2}{a}\int_{0}^{a}f(x)\cos\frac{n\pi x}{a}\,dx,\quad n=1,2,3,\dots.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:12.3.4}\rm Solve \eqref{eq:12.3.11} with $f(x)=x$.
 \end{example}
 
+\begin{examplesolution}
 \solution From Example~\ref{example:11.3.1},
 \[
   C(x)=\dst\frac{a}{2}-\frac{4a}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{2}}\cos\frac{(2n-1)\pi x}{a}.
@@ -385,6 +392,7 @@ while Figure~\ref{figure:12.3.9} shows the curves
     \label{figure:12.3.9}
   \end{minipage}
 \end{figure}
+\end{examplesolution}
 
 \begin{example}
   \label{example:12.3.5} \rm Define the formal solution of
@@ -407,6 +415,7 @@ while Figure~\ref{figure:12.3.9} shows the curves
   \label{figure:12.3.10}
 \end{figure}
 
+\begin{examplesolution}
 \solution The boundary conditions in \eqref{eq:12.3.16} require products $v(x,y)=X(x)Y(y)$ such that
 $Y(0)=Y'(b)=X'(a)=0$; hence, we let $k=\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation}
@@ -465,11 +474,13 @@ is the mixed Fourier sine series of $g$ on $[0,b]$; that is,
 \[
   \alpha_{n}=\frac{2}{b}\int_{0}^{b}g(y)\sin\frac{(2n-1)\pi y}{2b}\,dy.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:12.3.6} \rm Solve \eqref{eq:12.3.16} with $g(y)=y(2y^{2}-9by+12b^{2})$.
 \end{example}
 
+\begin{examplesolution}
 \solution From Example~\ref{example:11.3.8},
 \[
   S_{M}(y) =\dst\frac{96b^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{3}}\left[3+(-1)^{n}\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi y}{2b}.
@@ -478,6 +489,7 @@ Therefore
 \[
   u(x,y) =\dst\frac{96b^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{\cosh(2n-1)\pi(x-a)/2b}{(2n-1)^{3}\cosh(2n-1)\pi a/2b}\left[3+(-1)^{n}\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi y}{2b}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:12.3.7} \rm Define the formal solution of
@@ -500,6 +512,7 @@ Therefore
   \label{figure:12.3.11}
 \end{figure}
 
+\begin{examplesolution}
 \solution The boundary conditions in \eqref{eq:12.3.20} require products $v(x,y)=X(x)Y(y)$ such that
 $Y'(0)=Y(b)=X'(0)=0$; hence, we let $k=\lambda$ in \eqref{eq:12.3.3}. Thus, $X$ and $Y$ must satisfy
 \begin{equation}
@@ -558,11 +571,13 @@ is the mixed Fourier cosine series of $g$ on $[0,b]$; that is,
 \[
   \alpha_{n}=\frac{2}{b}\int_{0}^{b}g(y)\cos\frac{(2n-1)\pi y}{2b}\,dy.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:12.3.8} \rm Solve \eqref{eq:12.3.20} with $g(y)=y-b$.
 \end{example}
 
+\begin{examplesolution}
 \solution From Example~\ref{example:11.3.3},
 \[
   C_{M}(y)=-\frac{8b}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{2}}\cos\frac{(2n-1)\pi y}{2b}.
@@ -571,6 +586,7 @@ Therefore
 \[
   u(x,y)=-\frac{16b^{2}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{\cosh(2n-1)\pi x/2b}{(2n-1)^{3}\sinh(2n-1)\pi a/2b}\cos\frac{(2n-1)\pi y}{2b}. \eqno{\bbox}
 \]
+\end{examplesolution}
 
 \boxit{Laplace's Equation for a Semi-Infinite Strip}
 
@@ -610,6 +626,7 @@ solution remain bounded for all $(x,y)$ in $S$ then $K=0$ and this difficulty is
   \label{example:12.3.9} \rm Define the bounded formal solution of \eqref{eq:12.3.24}.
 \end{example}
 
+\begin{examplesolution}
 \solution Proceeding as in the solution of Example~\ref{example:12.3.1}, we find that the building
 block functions are of the form
 \[
@@ -638,6 +655,7 @@ where
   S(x)=\sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{a}
 \]
 is the Fourier sine series of $f$ on $[0,a]$. \bbox
+\end{examplesolution}
 
 See Exercises~\ref{exer:12.3.29}-\ref{exer:12.3.34} for other boundary value problems on a
 semi-infinite strip.

@@ -76,6 +76,7 @@ Applying Theorem~\ref{thmtype:11.2.4} to $f_{1}$ yields the next theorem.
   \label{example:11.3.1} \rm Find the Fourier cosine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution The coefficients are
 \[
   a_{0}=\frac{1}{L}\int_{0}^{L}x\,dx=\frac{1}{L}\frac{x^{2}}{2}\lims0L=\frac{L}{2}
@@ -96,6 +97,7 @@ Theorem~\ref{thmtype:11.3.1} implies that
 \[
   C(x)=x,\quad0\le x\le L.
 \]
+\end{examplesolution}
 
 \boxit{Fourier Sine Series}
 
@@ -165,6 +167,7 @@ Applying Theorem~\ref{thmtype:11.2.4} to $f_{2}$ yields the next theorem.
   \label{example:11.3.2} \rm Find the Fourier sine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution The coefficients are
 \begin{eqnarray*}
   b_{n} & = & \frac{2}{L}\int_{0}^{L}x\sin\frac{n\pi x}{L}\,dx=-\frac{2}{n\pi}\left[x\cos\frac{n\pi x}{L}\lims0L-\int_{0}^{L}\cos\frac{n\pi x}{L}\,dx\right] \\
@@ -182,6 +185,7 @@ Theorem~\ref{thmtype:11.3.2} implies that
     0, & x=L.
   \end{array}\right.
 \]
+\end{examplesolution}
 
 \boxit{Mixed Fourier Cosine Series}
 
@@ -258,6 +262,7 @@ the next theorem.
   \label{example:11.3.3} \rm Find the mixed Fourier cosine series of $f(x)=x-L$ on $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution The coefficients are
 \begin{eqnarray*}
   c_{n} & = & \frac{2}{L}\int_{0}^{L}(x-L)\cos\frac{(2n-1)\pi x}{2L}\,dx                                                        \\
@@ -272,6 +277,7 @@ Theorem~\ref{thmtype:11.3.3} implies that
 \[
   C_{M}(x)=x-L,\quad0\le x\le L.
 \]
+\end{examplesolution}
 
 \boxit{Mixed Fourier Sine Series}
 
@@ -343,6 +349,7 @@ the next theorem.
   \label{example:11.3.4} \rm Find the mixed Fourier sine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution The coefficients are
 \begin{eqnarray*}
   d_{n} & = & \frac{2}{L}\int_{0}^{L}x\sin\frac{(2n-1)\pi x}{2L}\,dx                                                         \\
@@ -358,6 +365,7 @@ Theorem~\ref{thmtype:11.3.4} implies that
 \[
   S_{M}(x)=x,\quad0\le x\le L.
 \]
+\end{examplesolution}
 
 \boxit{A Useful Observation}
 
@@ -433,6 +441,7 @@ piecewise continuous on $[0,L]$.) This completes the proof.
   \label{example:11.3.5} \rm Find the Fourier cosine expansion of $f(x)=x^{2}(3L-2x)$ on $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution Here
 \[
   a_{0}=\frac{1}{L}\int_{0}^{L}(3Lx^{2}-2x^{3})\,dx=\frac{1}{L}\left(Lx^{3}-\frac{x^{4}}{2}\right)\lims0L=\frac{L^{3}}{2}
@@ -454,12 +463,14 @@ Therefore
 \[
   C(x)=\frac{L^{3}}{2}-\frac{48L^{3}}{\pi^{4}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{4}}\cos\frac{(2n-1)\pi x}{L}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:11.3.6} \rm Find the Fourier sine expansion of $f(x)=x(x^{2}-3Lx+2L^{2})$ on
   $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since $f(0)=f(L)=0$ and $f''(x)=6(x-L)$, we see from (\ref{eq:11.3.5}) that
 \begin{eqnarray*}
   b_{n} & = & -\frac{12L}{n^{2}\pi^{2}}\int_{0}^{L}(x-L)\sin\frac{n\pi x}{L}\,dx                                             \\
@@ -470,12 +481,14 @@ Therefore
 \[
   S(x)=\dst\frac{12L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{n^{3}}\sin\frac{n\pi x}{L}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:11.3.7} \rm Find the mixed Fourier cosine expansion of $f(x)=3x^{3}-4Lx^{2}+L^{3}$
   on $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since $f'(0)=f(L)=0$ and $f''(x)=2(9x-4L)$, we see from (\ref{eq:11.3.6}) that
 \begin{eqnarray*}
   c_{n} & = & -\frac{16L}{(2n-1)^{2}\pi^{2}}\int_{0}^{L}(9x-4L)\cos\frac{(2n-1)\pi x}{2L}\,dx                                                     \\
@@ -487,6 +500,7 @@ Therefore
 \[
   C_{M}(x)=\dst\frac{32L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{3}}\left[ (-1)^{n}5+\frac{18}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi x}{2L}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:11.3.8} \rm Find the mixed Fourier sine expansion of
@@ -496,6 +510,7 @@ Therefore
   on $[0,L]$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since $f(0)=f'(L)=0$, and $f''(x)=6(2x-3L)$, we see from (\ref{eq:11.3.7}) that
 \begin{eqnarray*}
   d_{n} & = & -\dst\frac{48L}{(2n-1)^{2}\pi^{2}}\int_{0}^{L}(2x-3L)\sin\frac{(2n-1)\pi x}{2L}\,dx                                                    \\
@@ -507,6 +522,7 @@ Therefore
 \[
   S_{M}(x) =\dst\frac{96L^{3}}{\pi^{3}}\sum_{n=1}^{\infty}\frac{1}{(2n-1)^{3}}\left[3+(-1)^{n}\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2L}.
 \]
+\end{examplesolution}
 
 \exercises
 \noindent

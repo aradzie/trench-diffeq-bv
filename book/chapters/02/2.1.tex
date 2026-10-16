@@ -32,6 +32,7 @@ nontrivial\/}.
     y'-x^{2}y           & = & -2.
   \end{eqnarray*}
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:2.1.2}\rm Here are some nonlinear first order equations:
@@ -43,6 +44,7 @@ nontrivial\/}.
     \end{array}
   \]
 \end{example}
+% no solution
 
 \boxit{General Solution of a Linear First Order Equation}
 
@@ -124,6 +126,7 @@ equation. The next example recalls a familiar result from calculus.
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} You already know from calculus that if $c$ is any constant, then $y=ce^{ax}$
 satisfies \eqref{eq:2.1.6}. However, let's pretend you've forgotten this, and use this problem to
 illustrate a general method for solving a homogeneous linear first order equation.
@@ -172,6 +175,7 @@ values of $a$.
   \caption{Solutions of $y'-ay=0$, $y(0)=1$}
   \label{figure:2.1.1}
 \end{figure}
+\end{examplesolution}
 
 \begin{example}
   \label{example:2.1.4}\rm
@@ -191,6 +195,7 @@ values of $a$.
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} We rewrite \eqref{eq:2.1.8} as
 \begin{equation}
   \label{eq:2.1.10}y'+\frac{1}{x}y=0,
@@ -246,6 +251,7 @@ The interval of validity of this solution is $(0,\infty)$.
   \caption{Solutions of $xy'+y=0$ on $(0,\infty)$ and $(-\infty,0)$}
   \label{figure:2.1.2}
 \end{figure}
+\end{examplesolution}
 
 The results in Examples~\ref{example:2.1.3}\part{a} and \ref{example:2.1.4}\part{a} are special
 cases of the next theorem.
@@ -363,7 +369,8 @@ let's consider some examples.
   \end{equation}
 \end{example}
 
-By applying \part{a} of Example~ \ref{example:2.1.3} with $a=-2$, we see that $y_{1}=e^{-2x}$ is a
+\begin{examplesolution}
+\solution By applying \part{a} of Example~ \ref{example:2.1.3} with $a=-2$, we see that $y_{1}=e^{-2x}$ is a
 solution of the complementary equation $y'+2y=0$. Therefore we seek solutions of \eqref{eq:2.1.18}
 in the form $y=ue^{-2x}$, so that
 \begin{equation}
@@ -392,6 +399,7 @@ Figure~\ref{figure:2.1.3} shows a direction field and some integral curves for \
   \caption{A direction field and integral curves for $y'+2y=x^{3}e^{-2x}$}
   \label{figure:2.1.3}
 \end{figure}
+\end{examplesolution}
 
 \begin{example}
   \label{example:2.1.6}\rm\mbox{}%\newline
@@ -410,6 +418,7 @@ Figure~\ref{figure:2.1.3} shows a direction field and some integral curves for \
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Here $p(x)=\cot x$ and $f(x)=x\csc x$ are both continuous except at the points
 $x=r\pi$, where $r$ is an integer. Therefore we seek solutions of \eqref{eq:2.1.20} on the intervals
 $\left(r\pi,(r+1)\pi\right)$. We need a nontrivial solution $y_{1}$ of the complementary equation;
@@ -479,6 +488,7 @@ you would see this happen in this specific example. We recommend that you includ
 ``unnecessary'' computations in doing exercises, until you're confident that you really understand
 the method. After that, omit them.}
 \color{black}
+\end{examplesolution}
 
 \medskip
 
@@ -549,6 +559,7 @@ terms of elementary functions. In this case the solution must be left in terms o
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} To apply variation of parameters, we need a nontrivial solution $y_{1}$ of the
 complementary equation; thus, $y_{1}'-2xy_{1}=0$, which we rewrite as
 \[
@@ -598,6 +609,7 @@ shows graphs of \eqref{eq:2.1.30} for several values of $y_{0}$.
   \caption{Solutions of $y'-2xy=1$, $y(0)=y_{0}$}
   \label{figure:2.1.5}
 \end{figure}
+\end{examplesolution}
 
 \boxit{An Existence and Uniqueness Theorem}
 

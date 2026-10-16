@@ -141,6 +141,7 @@ Substituting this into \eqref{eq:8.6.6} and noting that $G(s)$ is independent of
   Verify that ${\cal L}(f\ast g)={\cal L}(f){\cal L}(g)$, as implied by the convolution theorem.
 \end{example}
 
+\begin{examplesolution}
 \solution We first compute
 \[
   \begin{array}{ccccc}
@@ -159,6 +160,7 @@ it follows that
                     & = & \frac{1}{(s-a)(s-b)}                                  \\[2\jot]
                     & = & {\cal L}(e^{at}){\cal L}(e^{bt})={\cal L}(f){\cal L}(g).
 \end{eqnarray*}
+\end{examplesolution}
 
 \boxit{A Formula for the Solution of an Initial Value Problem}
 
@@ -174,6 +176,7 @@ this.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Taking Laplace transforms in \eqref{eq:8.6.7} yields
 \[
   (s^{2}-2s+1)Y(s)=F(s)+(k_{1}+k_{0}s)-2k_{0}.
@@ -199,6 +202,7 @@ Therefore the solution of \eqref{eq:8.6.7} is
 \[
   y(t)=e^{t}\left(k_{0}+(k_{1}-k_{0})t\right)+\int_{0}^{t}\tau e^{\tau}f(t-\tau)\, d\tau.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.6.3}\rm Find a formula for the solution of the initial value problem
@@ -207,6 +211,7 @@ Therefore the solution of \eqref{eq:8.6.7} is
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Taking Laplace transforms in \eqref{eq:8.6.8} yields
 \[
   (s^{2}+4)Y(s)=F(s)+k_{1}+k_{0}s.
@@ -231,6 +236,7 @@ Therefore the solution of \eqref{eq:8.6.8} is
 \[
   y(t)=k_{0}\cos2t+\frac{k_{1}}{2}\sin2t+\frac{1}{2}\int_{0}^{t}f(t-\tau)\sin 2\tau\,d\tau.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.6.4}\rm Find a formula for the solution of the initial value problem
@@ -239,6 +245,7 @@ Therefore the solution of \eqref{eq:8.6.8} is
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Taking Laplace transforms in \eqref{eq:8.6.9} yields
 \[
   (s^{2}+2s+2)Y(s)=F(s)+k_{1}+k_{0}s+2k_{0}.
@@ -264,6 +271,7 @@ Therefore the solution of \eqref{eq:8.6.9} is
 \begin{equation}
   \label{eq:8.6.10}y(t)=e^{-t}\left((k_{1}+k_{0})\sin t+k_{0}\cos t\right)+\int_{0}^{t}f(t-\tau)e^{-\tau}\sin\tau\,d\tau.
 \end{equation}
+\end{examplesolution}
 
 \boxit{Evaluating Convolution Integrals}
 
@@ -279,6 +287,7 @@ integrals.
   \]
 \end{example}
 
+\begin{examplesolution}
 \solution We could evaluate this integral by expanding $(t-\tau)^{5}$ in powers of $\tau$ and then
 integrating. However, the convolution theorem provides an easier way. The integral is the
 convolution of $f(t)=t^{5}$ and $g(t)=t^{7}$. Since
@@ -297,6 +306,7 @@ Hence,
 \[
   h(t)=\frac{5!7!}{13!}\,t^{13}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.6.6}\rm Use the convolution theorem and a partial fraction expansion to evaluate
@@ -306,6 +316,7 @@ Hence,
   \]
 \end{example}
 
+\begin{examplesolution}
 \solution Since
 \[
   \sin at\leftrightarrow\frac{a}{s^{2}+a^{2}}\quad\mbox{and}\quad \cos bt\leftrightarrow\frac{s}{s^{2}+b^{2}},
@@ -322,6 +333,7 @@ Therefore
 \[
   h(t)=\frac{a}{b^{2}-a^{2}}\left(\cos at-\cos bt\right).
 \]
+\end{examplesolution}
 
 \boxit{Volterra Integral Equations}
 
@@ -351,6 +363,7 @@ We then obtain the solution of \eqref{eq:8.6.11} as $y={\cal L}^{-1}(Y)$.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Taking Laplace transforms in \eqref{eq:8.6.12} yields
 \[
   Y(s)=\frac{1}{s}+\frac{2}{s+2}Y(s),
@@ -363,6 +376,7 @@ Hence,
 \[
   y(t)=1+2t.
 \]
+\end{examplesolution}
 
 \boxit{Transfer Functions}
 

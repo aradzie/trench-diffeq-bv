@@ -137,6 +137,7 @@ $\{y_{1},y_{2}\}$ is a fundamental set as an exercise (Exercise~\ref{exer:7.6.53
   indicial equation.
 \end{example}
 
+\begin{examplesolution}
 \solution For the given equation, the polynomials defined in Theorem~\ref{thmtype:7.6.1} are
 \[
   \begin{array}{lllll}
@@ -205,6 +206,7 @@ and
 \[
   y_{2}=y_{1}\ln x -x^{3}\left(3+\frac{29}{2}x+\frac{859}{18}x^{2}+\frac{4693}{36}x^{3}+\cdots\right).\bbox
 \]
+\end{examplesolution}
 
 Since the recurrence formula \eqref{eq:7.6.11} involves three terms, it's not possible to obtain a
 simple explicit formula for the coefficients in the Frobenius solutions of \eqref{eq:7.6.9}.
@@ -221,6 +223,7 @@ coefficients. The next two examples illustrate this.
   Give explicit formulas for the coefficients in the solutions.
 \end{example}
 
+\begin{examplesolution}
 \solution For the given equation, the polynomials defined in Theorem~\ref{thmtype:7.6.1} are
 \[
   \begin{array}{ccccc}
@@ -298,6 +301,7 @@ Therefore, from \eqref{eq:7.6.17},
 \[
   y_{2}=y_{1}\ln x-x^{1/2}\sum_{n=1}^{\infty}\frac{(-1)^{n}\prod_{j=1}^{n}(2j+1)}{4^{n}n!}\left(\sum_{j=1}^{n}\frac{1}{j(2j+1)}\right)x^{n}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:7.6.3} \rm Find a fundamental set of Frobenius solutions of
@@ -307,6 +311,7 @@ Therefore, from \eqref{eq:7.6.17},
   Give explicit formulas for the coefficients in the solutions.
 \end{example}
 
+\begin{examplesolution}
 \solution For \eqref{eq:7.6.21}, the polynomials defined in Theorem~\ref{thmtype:7.6.1} are
 \[
   \begin{array}{ccccc}
@@ -380,6 +385,7 @@ Substituting this into \eqref{eq:7.6.23} yields
 \[
   y_{2}=y_{1}\ln x-\frac{x}{2}\sum_{m=1}^{\infty}\frac{\prod_{j=1}^{m}(2j+1)}{4^{m}m!}\left(\sum_{j=1}^{m}\frac{1}{j(2j+1)}\right)x^{2m}.\bbox
 \]
+\end{examplesolution}
 
 If the solution $y_{1}=y(x,r_{1})$ of $Ly=0$ reduces to a finite sum, then there's a difficulty in
 using logarithmic differentiation to obtain the coefficients $\{a_{n}'(r_{1})\}$ in the second
@@ -393,6 +399,7 @@ solution. The next example illustrates this difficulty and shows how to overcome
   Give explicit formulas for the coefficients in the solutions.
 \end{example}
 
+\begin{examplesolution}
 \solution For \eqref{eq:7.6.27} the polynomials defined in Theorem~\ref{thmtype:7.6.1} are
 \[
   \begin{array}{ccccc}
@@ -486,6 +493,7 @@ Substituting this and \eqref{eq:7.6.32} into \eqref{eq:7.6.29} yields
 \[
   y_{2}=x^{3}(1+x)\ln x-3x^{4}-x^{3}\dst{\sum_{n=2}^{\infty}\frac{(-1)^{n}}{n(n-1)n!}x^{n}}.
 \]
+\end{examplesolution}
 
 \exercises In Exercises~\ref{exer:7.6.1}--\ref{exer:7.6.11} find a fundamental set of Frobenius solutions. Compute the terms involving $x^{n+r_{1}}$, where $0\le n\le N$ ($N$ at least $7$) and $r_{1}$ is the root of the indicial equation. Optionally, write a computer program to implement the applicable recurrence formulas and take $N>7$.
 

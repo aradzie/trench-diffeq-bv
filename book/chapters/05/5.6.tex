@@ -65,6 +65,7 @@ Section~2.1, integrate the solution to obtain $u$, and then obtain $y$ from \eqr
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} If $y=ue^{x}$, then $y'=u'e^{x}+ue^{x}$ and $y''=u''e^{x}+2u'e^{x}+ue^{x}$, so
 \begin{eqnarray*}
   xy''-(2x+1)y'+(x+1)y & = & x(u''e^{x}+2u'e^{x}+ue^{x})         \\
@@ -126,6 +127,7 @@ $y_{2}=x^{2}e^{x}$ consistent with the subscripts of the functions themselves. T
 \]
 by simply renaming the arbitrary constants. We'll also do this in the next two examples, and in the
 answers to the exercises.
+\end{examplesolution}
 
 \begin{example}
   \label{example:5.6.2}\rm \mbox{}
@@ -150,6 +152,7 @@ answers to the exercises.
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} If $y=ux$, then $y'=u'x+u$ and $y''=u''x+2u'$, so
 \begin{eqnarray*}
   x^{2}y''+xy'-y & = & x^{2}(u''x+2u')+x(u'x+u)-ux \\
@@ -213,6 +216,7 @@ Solving these equations yields $c_{1}=-1/2$, $c_{2}=19/6$. Therefore the solutio
 \[
   y=\frac{x^{2}}{3}-1-\frac{x}{2}+\frac{19}{6x}.
 \]
+\end{examplesolution}
 
 Using reduction of order to find the general solution of a homogeneous linear second order equation
 leads to a homogeneous linear first order equation in $u'$ that can be solved by separation of
@@ -226,6 +230,7 @@ variables. The next example illustrates this.
   given that $y_{1}=x$ is a solution.
 \end{example}
 
+\begin{examplesolution}
 \solution If $y=ux$ then $y'=u'x+u$ and $y''=u''x+2u'$, so
 \begin{eqnarray*}
   x^{2}y''-3xy'+3y & = & x^{2}(u''x+2u')-3x(u'x+u)+3ux \\
@@ -256,6 +261,7 @@ which we rewrite as
   y=c_{1}x+c_{2}x^{3}.
 \]
 Therefore $\{x,x^{3}\}$ is a fundamental set of solutions of \eqref{eq:5.6.18}.
+\end{examplesolution}
 
 \exercises In Exercises \ref{exer:5.6.1}--\ref{exer:5.6.17} find the general solution, given that $y_{1}$ satisfies the complementary equation. As a byproduct, find a fundamental set of solutions of the complementary equation.
 

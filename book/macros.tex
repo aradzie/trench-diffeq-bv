@@ -54,6 +54,9 @@ TECHNOLOGY}\par}
 \newcommand{\answer}[1]{\;{\bf $\mathbf{#1}$ (p.~\pageref{exer:#1})}\;}
 \newcommand{\solution}{\vskip10pt\noindent\textbf{Solution}\ }
 \newcommand{\solutionpart}[1]{\vskip10pt\noindent\textbf{Solution (#1)}\ }
+% Marks the full worked solution of the preceding example so that scripts can collect it; prints
+% nothing. An example without one is followed by a "% no solution" comment instead.
+\newenvironment{examplesolution}{}{}
 
 % Markers for exercises that call for computation and graphics (C, C/G)
 % or for extensive use of technology (L).

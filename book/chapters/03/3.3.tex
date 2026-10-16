@@ -42,6 +42,7 @@ indicated in the Runge-Kutta method.
   at $x=0.1,0.2$.
 \end{example}
 
+\begin{examplesolution}
 \solution Again we rewrite \eqref{eq:3.3.2} as
 \[
   y'=-2y+x^{3}e^{-2x},\quad y(0)=1,
@@ -74,6 +75,7 @@ The Runge-Kutta method yields
          & = & .818753803+\frac{.1}{6}(-1.636688875+2(-1.471338457)+2(-1.487873498)-1.334570346) \\
          & = & .670592417.
 \end{eqnarray*}
+\end{examplesolution}
 
 The Runge-Kutta method is sufficiently accurate for most applications.
 
@@ -95,6 +97,7 @@ The Runge-Kutta method is sufficiently accurate for most applications.
   better than those obtained by the improved Euler method with $h=0.05$.
 \end{example}
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.3.1} Numerical solution of $y'+2y=x^{3}e^{-2x}$, $y(0)=1$, by the Runge-Kutta
   method and the improved Euler method.
@@ -120,6 +123,7 @@ The Runge-Kutta method is sufficiently accurate for most applications.
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \begin{example}
   \label{example:3.3.3} \rm Table~\ref{table:3.3.2} shows analogous results for the nonlinear
@@ -130,6 +134,7 @@ The Runge-Kutta method is sufficiently accurate for most applications.
   We applied the improved Euler method to this problem in Example~\ref{exer:3.2.3}.
 \end{example}
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.3.2} Numerical solution of $y'=-2y^{2}+xy+x^{2}$, $y(0)=1$, by the Runge-Kutta
   method and the improved Euler method.
@@ -155,6 +160,7 @@ The Runge-Kutta method is sufficiently accurate for most applications.
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \begin{example}
   \label{example:3.3.4} \rm Tables~\ref{table:3.3.3} and \ref{table:3.3.4} show results obtained by
@@ -165,6 +171,7 @@ The Runge-Kutta method is sufficiently accurate for most applications.
   which we considered in Examples~\ref{example:3.1.4} and \ref{example:3.2.4}.
 \end{example}
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.3.3} Numerical solution of $y'-2xy=1$, $y(0)=3$, by the Runge-Kutta method.
   \begin{center}
@@ -211,6 +218,7 @@ The Runge-Kutta method is sufficiently accurate for most applications.
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \boxit{The Case Where $x_{0}$ Isn't The Left Endpoint}
 
@@ -253,6 +261,7 @@ replace $f$ by $-f$ and then replace $x$, $x_{0}$, and $y$ by $-x$, $-x_{0}$, an
   at $x=0$, $0.1$, $0.2$, \dots, $1$.
 \end{example}
 
+\begin{examplesolution}
 \solution We first rewrite \eqref{eq:3.3.5} in the form \eqref{eq:3.3.3} as
 \begin{equation}
   \label{eq:3.3.6}y'=\frac{2x+3}{(y-1)^{2}},\quad y(1)=4.
@@ -318,6 +327,7 @@ the method of Section~2.2.)
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 We leave it to you to develop a procedure for handling the numerical solution of \eqref{eq:3.3.3} on
 an interval $[a,b]$ such that $a<x_{0}<b$ (Exercises~\ref{exer:3.3.26} and \ref{exer:3.3.27}).

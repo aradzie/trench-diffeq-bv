@@ -28,6 +28,7 @@ independent variable by $t$.
   \label{figure:10.1.1}
 \end{figure}
 
+\begin{examplesolution}
 \solution As in Section~4.2, let {\color{blue}\it rate in\/} and {\color{blue}\it rate out\/} denote
 the rates (lb/min) at which salt enters and leaves a tank; thus,
 \begin{eqnarray*}
@@ -87,6 +88,7 @@ order equations in two unknowns\/}, and write them together as
   Q_{1}' & = & \dst{5-\frac{2}{25}Q_{1}+\frac{1}{100}Q_{2}} \\
   Q_{2}' & = & \dst{8+\frac{1}{50}Q_{1}-\frac{1}{50}Q_{2}}.\quad\bbox
 \end{eqnarray*}
+\end{examplesolution}
 
 \begin{example}
   \label{example:10.1.2} \rm A mass $m_{1}$ is suspended from a rigid support on a spring $S_{1}$
@@ -100,6 +102,7 @@ order equations in two unknowns\/}, and write them together as
   and $F_{2}$ also act on the objects.
 \end{example}
 
+\begin{examplesolution}
 \solution In equilibrium, $S_{1}$ supports both $m_{1}$ and $m_{2}$ and $S_{2}$ supports only
 $m_{2}$. Therefore, if $\Delta\ell_{1}$ and $\Delta\ell_{2}$ are the elongations of the springs in
 equilibrium then
@@ -169,6 +172,7 @@ Therefore we can rewrite \eqref{eq:10.1.11} and \eqref{eq:10.1.12} as
   m_{1}y_{1}'' & = & -(c_{1}+c_{2})y_{1}'+c_{2}y_{2}'-(k_{1}+k_{2})y_{1}+k_{2}y_{2}+F_{1} \\
   m_{2}y_{2}'' & = & c_{2}y_{1}'-c_{2}y_{2}'+k_{2}y_{1}-k_{2}y_{2}+F_{2}.\quad\bbox
 \end{eqnarray*}
+\end{examplesolution}
 
 \begin{example}
   \label{example:10.1.3} \rm Let ${\bf X}={\bf X}(t)=x(t)\,{\bf i}+y(t)\,{\bf j}+z(t)\,{\bf k}$ be
@@ -208,6 +212,7 @@ Therefore we can rewrite \eqref{eq:10.1.11} and \eqref{eq:10.1.12} as
     \end{array}
   \end{equation}
 \end{example}
+% no solution
 
 \begin{figure}[tbp]
   \centering
@@ -251,6 +256,7 @@ introducing additional unknowns. The next two examples illustrate this.
   derived in Example~\ref{example:10.1.2} as a system of first order equations.
 \end{example}
 
+\begin{examplesolution}
 \solution{} If we define $v_{1}=y_{1}'$ and $v_{2}=y_{2}'$, then $v_{1}'=y_{1}''$ and
 $v_{2}'=y_{2}''$, so \eqref{eq:10.1.16} becomes
 \[
@@ -277,6 +283,7 @@ which the unknowns are {\color{blue}\it denoted} in the two systems, isn't impor
 the first derivative of one of the unknown functions in a way that does not involve derivatives of
 any of the other unknowns.}
 \color{black}
+\end{examplesolution}
 
 \begin{example}
   \label{example:10.1.5} \rm Rewrite the system
@@ -289,6 +296,7 @@ any of the other unknowns.}
   as a first order system.
 \end{example}
 
+\begin{examplesolution}
 \solution We regard $x$, $x'$, $y$, $y'$, and $y''$ as unknown functions, and rename them
 \[
   x=x_{1},\;x'=x_{2},\quad y=y_{1},\quad y'=y_{2},\quad y''=y_{3}.
@@ -303,6 +311,7 @@ These unknowns satisfy the system
     y_{3}' & = & g(t,x_{1},x_{2},y_{1},y_{2},y_{3}).
   \end{array}
 \]
+\end{examplesolution}
 
 \boxit{Rewriting Scalar Differential Equations as Systems}
 
@@ -319,6 +328,7 @@ systems of first order equations by the method illustrated in the next two examp
   as a $4\times4$ first order system.
 \end{example}
 
+\begin{examplesolution}
 \solution We regard $y$, $y'$, $y''$, and $y'''$ as unknowns and rename them
 \[
   y=y_{1},\quad y'=y_{2},\quad y''=y_{3},\mbox{\quad and \quad}y'''=y_{4}.
@@ -334,6 +344,7 @@ Therefore $\{y_{1},y_{2},y_{3},y_{4}\}$ satisfies the system
   y_{3}' & = & y_{4} \\
   y_{4}' & = & -4y_{4}-6y_{3}-4y_{2}-y_{1}.\bbox
 \end{eqnarray*}
+\end{examplesolution}
 
 \begin{example}
   \label{example:10.1.7} \rm Rewrite
@@ -343,6 +354,7 @@ Therefore $\{y_{1},y_{2},y_{3},y_{4}\}$ satisfies the system
   as a system of first order equations.
 \end{example}
 
+\begin{examplesolution}
 \solution We regard $x$, $x'$, and $x''$ as unknowns and rename them
 \[
   x=y_{1},\quad x'=y_{2},\mbox{\quad and \quad}x''=y_{3}.
@@ -359,6 +371,7 @@ Therefore $\{y_{1},y_{2},y_{3}\}$ satisfies the first order system
     y_{3}' & = & f(t,y_{1},y_{2},y_{3}).
   \end{array}
 \]
+\end{examplesolution}
 
 Since systems of differential equations involving higher derivatives can be rewritten as first order
 systems by the method used in Examples~\ref{example:10.1.5} --\ref{example:10.1.7} , we'll consider

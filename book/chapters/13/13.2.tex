@@ -27,6 +27,7 @@ eigenvalues and associated eigenfunctions of \eqref{eq:13.2.1}.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution The characteristic equation of \eqref{eq:13.2.2} is
 \[
   r^{2}+3r+2+\lambda=0,
@@ -75,6 +76,7 @@ $\lambda_{n}=(1+4n^{2}\pi^{2})/4$, with associated eigenfunctions
 \[
   y_{n}=e^{-3x/2}\sin n\pi x,\quad n=1,2,3,\dots.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:13.2.2} \rm Solve the eigenvalue problem
@@ -83,6 +85,7 @@ $\lambda_{n}=(1+4n^{2}\pi^{2})/4$, with associated eigenfunctions
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution If $\lambda=0$, the differential equation in \eqref{eq:13.2.4} reduces to $x(xy')'=0$, so
 $xy'=c_{1}$,
 \[
@@ -130,6 +133,7 @@ eigenvalues of \eqref{eq:13.2.4} are $\lambda_{n}=(n\pi/\ln2)^{2}$, with associa
 \[
   y_{n}=\sin\left(\frac{n\pi}{\ln2}\ln x\right),\quad n=1,2,3,\dots.
 \]
+\end{examplesolution}
 
 For theoretical purposes, it's useful to rewrite the differential equation in \eqref{eq:13.2.1} in a
 different form, provided by the next theorem.
@@ -196,6 +200,7 @@ which is equivalent to \eqref{eq:13.2.1}, is called a
   of Example~\ref{example:13.2.1} as a Sturm-Liouville problem.
 \end{example}
 
+\begin{examplesolution}
 \solution Comparing \eqref{eq:13.2.11} to \eqref{eq:13.2.7} shows that $u(x)=3$, so we take
 $U(x)=3x$ and $p(x)=e^{3x}$. Multiplying the differential equation in \eqref{eq:13.2.11} by $e^{3x}$
 yields
@@ -210,6 +215,7 @@ Since
 \begin{equation}
   \label{eq:13.2.12}(e^{3x}y')'+2e^{3x}y+\lambda e^{3x}y=0,\quad y(0)=0,\quad y(1)=0.
 \end{equation}
+\end{examplesolution}
 
 \begin{example}
   \label{example:13.2.4} \rm Rewrite the eigenvalue problem
@@ -219,6 +225,7 @@ Since
   of Example~\ref{example:13.2.2} as a Sturm-Liouville problem.
 \end{example}
 
+\begin{examplesolution}
 \solution Dividing the differential equation in \eqref{eq:13.2.13} by $x^{2}$ yields
 \[
   y''+\frac{1}{x}y'+\frac{\lambda}{x^{2}}y=0.
@@ -237,6 +244,7 @@ Since
   \label{eq:13.2.14}(xy')'+\frac{\lambda}{x}y=0,\quad y(1)=0,\quad y(2)=0.
 \end{equation}
 \bbox
+\end{examplesolution}
 
 Problems 1--4 of Section~11.1 are Sturm--Liouville problems. (Problem~5 isn't , although some
 authors use a definition of
@@ -258,6 +266,7 @@ by numerical methods.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution If $\lambda=0$, the differential equation in \eqref{eq:13.2.15} reduces to $y''=0$, with
 general solution $y=c_{1}+c_{2}x$. The boundary conditions require that
 \begin{eqnarray*}
@@ -374,6 +383,7 @@ is an eigenfunction associated with $\lambda_{n}$ \bbox
   \caption{$u=\tan k$ and $u=-2k/(1+3k^{2})$}
   \label{figure:13.2.2}
 \end{figure}
+\end{examplesolution}
 
 Since the differential equations in \eqref{eq:13.2.12} and \eqref{eq:13.2.14} are more complicated
 than those in \eqref{eq:13.2.11} and \eqref{eq:13.2.13} respectively, what is the point of

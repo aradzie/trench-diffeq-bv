@@ -91,6 +91,7 @@ values. For related theorems see Exercises~\ref{exer:7.1.2} and \ref{exer:7.1.4}
   \]
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Here $a_{n}=n!$, so
 \[
   \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_{n}}\right|=\lim_{n\to\infty}\frac{(n+1)!}{n!}=\lim_{n\to\infty}(n+1)=\infty.
@@ -108,6 +109,7 @@ Hence, $R=\infty$.
   \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_{n}}\right|=\lim_{n\to\infty}\frac{2^{n+1}(n+1)^{2}}{2^{n}n^{2}}=2\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{2}=2.
 \]
 Hence, $R=1/2$.
+\end{examplesolution}
 
 \boxit{Taylor Series}
 
@@ -177,6 +179,7 @@ of the derivatives.
   \]
   which is the series \eqref{eq:7.1.4} for $\cos x$.
 \end{example}
+% no solution
 
 \boxit{Uniqueness of Power Series}
 
@@ -319,6 +322,7 @@ term and subtracting $k$ from the lower limit of summation leaves the series unc
   \]
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Replacing $n$ by $n+2$ in the general term and subtracting $2$ from the lower limit
 of summation yields
 \[
@@ -330,6 +334,7 @@ of summation yields
 \[
   \sum_{n=k}^{\infty}n(n-1)\cdots(n-k+1)a_{n}(x-x_{0})^{n-k}= \sum_{n=0}^{\infty}(n+k)(n+k-1)\cdots(n+1)a_{n+k}(x-x_{0})^{n}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:7.1.4} \rm Given that
@@ -340,6 +345,7 @@ of summation yields
   of~$x^{n}$.
 \end{example}
 
+\begin{examplesolution}
 \solution From Theorem~\ref{thmtype:7.1.4} with $x_{0}=0$,
 \[
   f''(x)=\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-2}.
@@ -359,6 +365,7 @@ We can also write this as
 \]
 since the first term in this last series is zero. (We'll see later that sometimes it's useful to
 include zero terms at the beginning of a series.)
+\end{examplesolution}
 
 \boxit{Linear Combinations of Power Series}
 
@@ -389,6 +396,7 @@ combinations of power series can be formed term by term; for example,
   Maclaurin series for $e^{x}$ and $e^{-x}$.
 \end{example}
 
+\begin{examplesolution}
 \solution By definition,
 \[
   \cosh x=\frac{1}{2}e^{x}+\frac{1}{2}e^{-x}.
@@ -415,6 +423,7 @@ we can rewrite \eqref{eq:7.1.12} more simply as
 \]
 This result is valid on $(-\infty,\infty)$, since this is the open interval of convergence of the
 Maclaurin series for $e^{x}$ and $e^{-x}$.
+\end{examplesolution}
 
 \begin{example}
   \label{example:7.1.6} \rm Suppose
@@ -440,6 +449,7 @@ Maclaurin series for $e^{x}$ and $e^{-x}$.
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} From \eqref{eq:7.1.7} with $x_{0}=0$,
 \[
   y''=\sum_{n=2}^{\infty}n(n-1)a_{n}x^{n-2}.
@@ -473,6 +483,7 @@ where we added a zero term in the last series so that when we substitute from \e
 \end{equation}
 Conversely, Theorem~\ref{thmtype:7.1.6}~\part{b} implies that if $y=\sum_{n=0}^{\infty}a_{n}x^{n}$
 satisfies \eqref{eq:7.1.13} on $I$, then \eqref{eq:7.1.18} holds.
+\end{examplesolution}
 
 \begin{example}
   \label{example:7.1.7} \rm Suppose
@@ -486,6 +497,7 @@ satisfies \eqref{eq:7.1.13} on $I$, then \eqref{eq:7.1.18} holds.
   as a power series in $x-1$ on $I$.
 \end{example}
 
+\begin{examplesolution}
 \solution Since we want a power series in $x-1$, we rewrite the coefficient of $y''$ in
 \eqref{eq:7.1.19} as $1+x=2+(x-1)$, so \eqref{eq:7.1.19} becomes
 \[
@@ -523,6 +535,7 @@ where
 The formula \eqref{eq:7.1.24} for $b_{0}$ can't be obtained by setting $n=0$ in \eqref{eq:7.1.25},
 since the summation in \eqref{eq:7.1.22} begins with $n=1$, while those in \eqref{eq:7.1.20},
 \eqref{eq:7.1.21}, and \eqref{eq:7.1.23} begin with $n=0$.
+\end{examplesolution}
 
 \exercises
 \begin{exerciselist}

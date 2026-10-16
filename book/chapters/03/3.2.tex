@@ -120,6 +120,7 @@ method.
   at $x=0.1,0.2,0.3$.
 \end{example}
 
+\begin{examplesolution}
 \solution As in Example~\ref{example:3.1.1}, we rewrite (\ref{eq:3.2.5}) as
 \[
   y'=-2y+x^{3}e^{-2x},\quad y(0)=1,
@@ -148,6 +149,7 @@ The improved Euler method yields
   y_{3}  & = & y_{2}+\frac{h}{2}(k_{12}+k_{22})                                             \\
          & = & .672734445+(.05)(-1.340106330-1.062629710)=.552597643.
 \end{eqnarray*}
+\end{examplesolution}
 
 \begin{example}
   \label{example:3.2.2} \rm Table~\ref{table:3.2.2} shows results of using the improved Euler method
@@ -166,6 +168,7 @@ The improved Euler method yields
   Euler's method with $h=0.05$.
 \end{example}
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.2.2} Numerical solution of $y'+2y=x^{3}e^{-2x}$, $y(0)=1$, by Euler's method and
   the improved Euler method.
@@ -191,6 +194,7 @@ The improved Euler method yields
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \begin{example}
   \label{example:3.2.3} \rm Table~\ref{table:3.2.3} shows analogous results for the nonlinear
@@ -201,6 +205,7 @@ The improved Euler method yields
   We applied Euler's method to this problem in Example~\ref{example:3.1.3}.
 \end{example}
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.2.3} Numerical solution of $y'=-2y^{2}+xy+x^{2}$, $y(0)=1$, by Euler's method and
   the improved Euler method.
@@ -226,6 +231,7 @@ The improved Euler method yields
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \begin{example}
   \label{example:3.2.4} \rm Use step sizes $h=0.2$, $h=0.1$, and $h=0.05$ to find approximate values
@@ -238,6 +244,7 @@ The improved Euler method yields
   problem in~\ref{example:3.1.4}.)
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Rewriting (\ref{eq:3.2.6}) as
 \[
   y'=1+2xy,\quad y(0)=3
@@ -299,6 +306,7 @@ Euler method.
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \newpage
 \boxit{A Family of Methods with $O(h^{3})$ Local Truncation Error}

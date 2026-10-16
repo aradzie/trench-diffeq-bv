@@ -94,6 +94,7 @@ The next example illustrates the computational procedure indicated in Euler's me
   at $x=0.1,0.2,0.3$.
 \end{example}
 
+\begin{examplesolution}
 \solution We rewrite \eqref{eq:3.1.5} as
 \[
   y'=-2y+x^{3}e^{-2x},\quad y(0)=1,
@@ -111,6 +112,7 @@ Euler's method yields
   y_{3} & = & y_{2}+hf(x_{2},y_{2})                                                  \\
         & = & .640081873+(.1)\left(-2(.640081873)+(.2)^{3}e^{-.4}\right)=.512601754.\bbox
 \end{eqnarray*}
+\end{examplesolution}
 
 We've written the details of these computations to ensure that you understand the procedure.
 However, in the rest of the examples as well as the exercises in this chapter, we'll assume that you
@@ -133,6 +135,7 @@ can use a programmable calculator or a computer to carry out the necessary compu
   which can be obtained by the method of Section~2.1. (Verify.)
 \end{example}
 
+\begin{examplesolution}
 \solution Table~\ref{table:3.1.1} shows the values of the exact solution \eqref{eq:3.1.6} at the
 specified points, and the approximate values of the solution at these points obtained by Euler's
 method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$. In examining this table, keep in mind that
@@ -203,6 +206,7 @@ $0.2$, \dots, $1.0$.
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \begin{example}
   \label{example:3.1.3} \rm Tables~\ref{table:3.1.3} and \ref{table:3.1.4} show analogous results
@@ -226,6 +230,7 @@ Runge-Kutta method in a way that's explained in Section~3.3. If quotation marks 
 the values were obtained from a known formula for the solution. In either case, the values are exact
 to eight places to the right of the decimal point.
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.1.3} Numerical solution of $y'=-2y^{2}+xy+x^{2}$, $y(0)=1$, by Euler's method.
   \begin{center}
@@ -271,6 +276,7 @@ to eight places to the right of the decimal point.
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \boxit{Truncation Error in Euler's Method}
 
@@ -491,6 +497,7 @@ different results.
   (b)} the Euler semilinear method.
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Rewriting \eqref{eq:3.1.22} as
 \begin{equation}
   \label{eq:3.1.24}y'=1+2xy,\quad y(0)=3
@@ -569,6 +576,7 @@ method.
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 We can't give a general procedure for determining in advance whether Euler's method or the
 semilinear Euler method will produce better results for a given semilinear initial value problem
@@ -596,6 +604,7 @@ obtained by the method for which the approximations change less as the step size
   by the two methods with the ``exact'' values of the solution.
 \end{example}
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.1.7} Numerical solution of $y'-2y=x/(1+y^{2})$, $y(1)=7$, by Euler's method.
   \begin{center}
@@ -642,6 +651,7 @@ obtained by the method for which the approximations change less as the step size
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 \begin{example}
   {\color{blue}}\label{example:3.1.6} \rm Applying Euler's method with step sizes $h=0.1$, $h=0.05$,
@@ -661,6 +671,7 @@ obtained by the method for which the approximations change less as the step size
   supports this conclusion.
 \end{example}
 
+\begin{examplesolution}
 \begin{newtable}
   \label{table:3.1.9} Numerical solution of $y'+3x^{2}y=1+y^{2},\quad y(2)=2$, by Euler's method.
   \begin{center}
@@ -709,6 +720,7 @@ obtained by the method for which the approximations change less as the step size
     \end{tabular}
   \end{center}
 \end{newtable}
+\end{examplesolution}
 
 In the next two sections we'll study other numerical methods for solving initial value problems,
 called the

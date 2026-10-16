@@ -102,6 +102,7 @@ an integral curve need not be a solution curve.
   interval $(-a,a)$. However, \eqref{eq:1.2.3} is not a solution curve of \eqref{eq:1.2.4}, since
   it's not the graph of a function.
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:1.2.2} \rm Verify that
@@ -115,6 +116,7 @@ an integral curve need not be a solution curve.
   on $(0,\infty)$ and on $(-\infty,0)$.
 \end{example}
 
+\begin{examplesolution}
 \solution Substituting \eqref{eq:1.2.5} and
 \[
   y'=\frac{2x}{3}-\frac{1}{x^{2}}
@@ -130,6 +132,7 @@ since $y$ is not defined at $x=0$.
 Figure~\ref{figure:1.2.1} shows the graph of \eqref{eq:1.2.5}. The part of the graph of
 \eqref{eq:1.2.5} on $(0,\infty)$ is a solution curve of \eqref{eq:1.2.6}, as is the part of the
 graph on $(-\infty,0)$.
+\end{examplesolution}
 
 \begin{example}
   \label{example:1.2.3} \rm Show that if $c_{1}$ and $c_{2}$ are constants then
@@ -151,6 +154,7 @@ graph on $(-\infty,0)$.
   \label{figure:1.2.1}
 \end{figure}
 
+\begin{examplesolution}
 \solution Differentiating \eqref{eq:1.2.7} twice yields
 \[
   y'=-(c_{1}+c_{2}x)e^{-x}+c_{2}e^{-x}+2
@@ -168,6 +172,7 @@ so
             &   & +4+2x-4=2x
 \end{eqnarray*}
 for all values of $x$. Therefore $y$ is a solution of \eqref{eq:1.2.8} on $(-\infty,\infty)$.
+\end{examplesolution}
 
 \begin{example}
   \label{example:1.2.4} \rm Find all solutions of
@@ -176,6 +181,7 @@ for all values of $x$. Therefore $y$ is a solution of \eqref{eq:1.2.8} on $(-\in
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Integrating \eqref{eq:1.2.9} yields
 \[
   y^{(n-1)}=\frac{e^{2x}}{2}+k_{1},
@@ -207,6 +213,7 @@ written as
 where we renamed the arbitrary constants in \eqref{eq:1.2.10} to obtain a simpler formula. As a
 general rule, arbitrary constants appearing in solutions of differential equations should be
 simplified if possible. You'll see examples of this throughout the text.
+\end{examplesolution}
 
 \boxit{Initial Value Problems}
 
@@ -226,6 +233,7 @@ this.
   such that $y(1)=2$.
 \end{example}
 
+\begin{examplesolution}
 \solution At the beginning of this section we saw that the solutions of $y'=x^{3}$ are
 \[
   y=\frac{x^{4}}{4}+c.
@@ -241,6 +249,7 @@ Therefore the required solution is
 
 Figure~\ref{figure:1.2.2} shows the graph of this solution. Note that imposing the condition
 $y(1)=2$ is equivalent to requiring the graph of $y$ to pass through the point $(1,2)$.
+\end{examplesolution}
 
 We can rewrite the problem considered in Example~\ref{example:1.2.5} more briefly as
 \[
@@ -294,6 +303,7 @@ $y$.
   Since the function in \eqref{eq:1.2.13} is defined for all $x$, the interval of validity of this
   solution is $(-\infty,\infty)$.
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:1.2.7} \rm In Example~\ref{example:1.2.2} we verified that
@@ -319,6 +329,7 @@ $y$.
   $(-\infty,0)$, since this is the largest interval that contains $x_{0}=-1$ on which
   \eqref{eq:1.2.14} is defined.
 \end{example}
+% no solution
 
 \boxit{Free Fall Under Constant Gravity}
 
@@ -342,6 +353,7 @@ and velocity of an object at the initial (starting) time of an experiment.
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Let $y(t)$ be the altitude of the object at time $t$. Since the acceleration of the
 object has constant magnitude $g$ and is in the downward (negative) direction, $y$ satisfies the
 second order equation
@@ -365,6 +377,7 @@ $c_{1}=v_{0}$ and $c_{2}=y_{0}$. Therefore the solution of the initial value pro
 \[
   y=-\frac{gt^{2}}{2}+v_{0}t+y_{0}.
 \]
+\end{examplesolution}
 
 \exercises
 \begin{exerciselist}

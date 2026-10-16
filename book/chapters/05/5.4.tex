@@ -27,6 +27,7 @@ Our first example is similar to Exercises~\ref{exer:5.3.16}--\ref{exer:5.3.21}.
   Then find the general solution.
 \end{example}
 
+\begin{examplesolution}
 \solution Substituting $y_{p}=Ae^{2x}$ for $y$ in (\ref{eq:5.4.2}) will produce a constant multiple
 of $Ae^{2x}$ on the left side of (\ref{eq:5.4.2}), so it may be possible to choose $A$ so that
 $y_{p}$ is a solution of (\ref{eq:5.4.2}). Let's try it; if $y_{p}=Ae^{2x}$ then
@@ -43,6 +44,7 @@ is $p(r)=r^{2}-7r+12=(r-3)(r-4)$, so $\{e^{3x},e^{4x}\}$ is a fundamental set of
 \[
   y=2e^{2x}+c_{1}e^{3x}+c_{2}e^{4x}.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:5.4.2} \rm Find a particular solution of
@@ -52,6 +54,7 @@ is $p(r)=r^{2}-7r+12=(r-3)(r-4)$, so $\{e^{3x},e^{4x}\}$ is a fundamental set of
   Then find the general solution.
 \end{example}
 
+\begin{examplesolution}
 \solution Fresh from our success in finding a particular solution of (\ref{eq:5.4.2}) --- where we
 chose $y_{p}=Ae^{2x}$ because the right side of (\ref{eq:5.4.2}) is a constant multiple of $e^{2x}$
 --- it may seem reasonable to try $y_{p}=Ae^{4x}$ as a particular solution of (\ref{eq:5.4.4}).
@@ -81,6 +84,7 @@ is a particular solution of (\ref{eq:5.4.4}). Therefore
   y=5xe^{4x}+c_{1}e^{3x}+c_{2}e^{4x}
 \]
 is the general solution.
+\end{examplesolution}
 
 \begin{example}
   \label{example:5.4.3} \rm Find a particular solution of
@@ -89,6 +93,7 @@ is the general solution.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Since the characteristic polynomial of the complementary equation
 \begin{equation}
   \label{eq:5.4.7}y''-8y'+16y=0
@@ -112,6 +117,7 @@ particular solution of this equation, so $y_{p}=x^{2}e^{4x}$ is a particular sol
   y=e^{4x}(x^{2}+c_{1}+c_{2}x)
 \]
 is the general solution. \bbox
+\end{examplesolution}
 
 The preceding examples illustrate the following facts concerning the form of a particular solution
 $y_{p}$ of a constant coefficient equation
@@ -177,6 +183,7 @@ reduces to
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Substituting
 \[
   y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
@@ -219,6 +226,7 @@ is a particular solution of (\ref{eq:5.4.11}), and
   y_{p}=u_{p}e^{3x}=-\frac{e^{3x}}{4}(1+2x-2x^{2})
 \]
 is a particular solution of (\ref{eq:5.4.10}).
+\end{examplesolution}
 
 \begin{example}
   \label{example:5.4.5} \rm Find a particular solution of
@@ -227,6 +235,7 @@ is a particular solution of (\ref{eq:5.4.10}).
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Substituting
 \[
   y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
@@ -275,6 +284,7 @@ is a particular solution of (\ref{eq:5.4.13}), and
   y_{p}=u_{p}e^{3x}=xe^{3x}(4-x+2x^{2})
 \]
 is a particular solution of (\ref{eq:5.4.12}).
+\end{examplesolution}
 
 \begin{example}
   \label{example:5.4.6} \rm Find a particular solution of
@@ -283,6 +293,7 @@ is a particular solution of (\ref{eq:5.4.12}).
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution Substituting
 \[
   y=ue^{-x/2},\quad y'=u'e^{-x/2}-\frac{1}{2}ue^{-x/2},\mbox{\quad and \quad}y''=u''e^{-x/2}-u'e^{-x/2}+\frac{1}{4}ue^{-x/2}
@@ -306,6 +317,7 @@ Therefore
   y_{p}=u_{p}e^{-x/2}=x^{2}e^{-x/2}(-1+2x+3x^{2})
 \]
 is a particular solution of (\ref{eq:5.4.14}).
+\end{examplesolution}
 
 \boxit{Summary}
 
@@ -378,6 +390,7 @@ Theorem~\ref{thmtype:5.3.3}, the principle of superposition.
   \end{equation}
 \end{example}
 
+\begin{examplesolution}
 \solution In Example~\ref{example:5.4.1} we found that $y_{p_{1}}=2e^{2x}$ is a particular solution
 of
 \[
@@ -389,6 +402,7 @@ and in Example~\ref{example:5.4.2} we found that $y_{p_{2}}=5xe^{4x}$ is a parti
 \]
 Therefore the principle of superposition implies that $y_{p}=2e^{2x}+5xe^{4x}$ is a particular
 solution of (\ref{eq:5.4.17}).
+\end{examplesolution}
 
 \exercises In Exercises \ref{exer:5.4.1}--\ref{exer:5.4.14} find a particular solution.
 

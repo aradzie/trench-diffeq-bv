@@ -36,6 +36,7 @@ Use `uv` for any Python script, including throwaway checks (e.g. `uv run --with 
 ## Conventions
 
 - Cross-references use typed labels that encode the number: `eq:2.1.3`, `example:`, `exer:2.1.7`, `figure:`, `table:`, `thmtype:` (theorems and definitions). Answers (`\answer{2.1.7}`) and the index depend on these labels, so do not rename them. Put `\label` after `\caption`.
+- Worked solutions of examples are wrapped in `examplesolution` (prints nothing), and an example without one is followed by a `% no solution` comment, so that scripts can collect examples with their solutions.
 - Exercise lists use the `exerciselist`/`alist`/`rmlist` environments (enumitem); `\exercisetext{...}` interrupts a list and resumes numbering.
 - `index.tex` is a hand-written `theindex` whose page numbers are `\pageref`s to labels, not `\index{}` markers.
 - Formatting follows `.editorconfig` (2 spaces, 100 columns). Sources were formatted with Prettier and mathfmt.

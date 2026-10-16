@@ -48,6 +48,7 @@ It can be shown that if $F(s)$ is defined for $s=s_{0}$ then it's defined for al
   \label{example:8.1.1}\rm Find the Laplace transform of $f(t)=1$.
 \end{example}
 
+\begin{examplesolution}
 \solution From \eqref{eq:8.1.2} with $f(t)=1$,
 \[
   F(s)=\int_{0}^{\infty}e^{-st}\,dt=\lim_{T\to\infty}\int_{0}^{T}e^{-st}\, dt.
@@ -84,11 +85,13 @@ or as the transform pair
 \color{blue}
 \remark{ It is convenient to combine the steps of integrating from $0$ to $T$ and letting $T\to\infty$. Therefore, instead of writing \eqref{eq:8.1.3} and \eqref{eq:8.1.4} as separate steps we write \[\int_{0}^{\infty}e^{-st}dt=-\frac{1}{s}e^{-st}\Big|_{0}^{\infty}= \left\{\begin{array}{rr}\dst\frac{1}{s},&s>0,\\\infty,&s< 0.\end{array}\right.\] We'll follow this practice throughout this chapter.}
 \color{black}
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.1.2}\rm Find the Laplace transform of $f(t)=t$.
 \end{example}
 
+\begin{examplesolution}
 \solution From \eqref{eq:8.1.2} with $f(t)=t$,
 \begin{equation}
   \label{eq:8.1.5}F(s)=\int_{0}^{\infty}e^{-st}t\,dt.
@@ -117,11 +120,13 @@ or as the transform pair
 \[
   t\leftrightarrow\frac{1}{s^{2}},\quad s>0.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.1.3}\rm Find the Laplace transform of $f(t)=e^{at}$, where $a$ is a constant.
 \end{example}
 
+\begin{examplesolution}
 \solution From \eqref{eq:8.1.2} with $f(t)=e^{at}$,
 \[
   F(s)=\int_{0}^{\infty}e^{-st}e^{at}\,dt.
@@ -142,12 +147,14 @@ This can also be written as
 \[
   {\cal L}(e^{at})=\frac{1}{s-a},\quad s>a,\text{\; or \; }e^{at}\leftrightarrow\frac{1}{s-a},\quad s>a.
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.1.4}\rm Find the Laplace transforms of $f(t)=\sin\omega t$ and
   $g(t)=\cos\omega t$, where $\omega$ is a constant.
 \end{example}
 
+\begin{examplesolution}
 \solution Define
 \begin{equation}
   \label{eq:8.1.6}F(s)=\int_{0}^{\infty}e^{-st}\sin\omega t\,dt
@@ -184,6 +191,7 @@ This and \eqref{eq:8.1.8} imply that
 \[
   F(s)=\frac{\omega}{s^{2}+\omega^{2}},\quad s>0.
 \]
+\end{examplesolution}
 
 \boxit{Tables of Laplace transforms}
 
@@ -195,6 +203,7 @@ brief table of Laplace transforms in the Appendix will be adequate for our purpo
   \label{example:8.1.5}\rm Use the table of Laplace transforms to find ${\cal L}(t^{3}e^{4t})$.
 \end{example}
 
+\begin{examplesolution}
 \solution The table includes the transform pair
 \[
   t^{n}e^{at}\leftrightarrow\frac{n!}{(s-a)^{n+1}}.
@@ -203,6 +212,7 @@ Setting $n=3$ and $a=4$ here yields
 \[
   {\cal L}(t^{3}e^{4t})=\frac{3!}{(s-4)^{4}}=\frac{6}{(s-4)^{4}}.\bbox
 \]
+\end{examplesolution}
 
 We'll sometimes write Laplace transforms of specific functions without explicitly stating how they
 are obtained. In such cases you should refer to the table of Laplace transforms.
@@ -237,6 +247,7 @@ The next theorem presents an important property of the Laplace transform.
   to find ${\cal L}(\cosh bt)\,(b\ne0)$.
 \end{example}
 
+\begin{examplesolution}
 \solution By definition,
 \[
   \cosh bt=\frac{e^{bt}+e^{-bt}}{2}.
@@ -255,6 +266,7 @@ are defined for $s>|b|$. Simplifying the last expression in \eqref{eq:8.1.9} yie
 \[
   {\cal L}(\cosh bt)=\frac{s}{s^{2}-b^{2}},\quad s>|b|.
 \]
+\end{examplesolution}
 
 \boxit{The First Shifting Theorem}
 
@@ -290,6 +302,7 @@ which implies the conclusion.
   \]
 \end{example}
 
+\begin{examplesolution}
 \solution In the following table the known transform pairs are listed on the left and the required
 transform pairs listed on the right are obtained by applying Theorem~\ref{thmtype:8.1.3}.
 
@@ -306,6 +319,7 @@ transform pairs listed on the right are obtained by applying Theorem~\ref{thmtyp
     \hline
   \end{tabular}
 \end{center}
+\end{examplesolution}
 
 \boxit{Existence of Laplace Transforms}
 
@@ -473,6 +487,7 @@ of exponential order.}
   Theorem~\ref{thmtype:8.1.6} implies that ${\cal L}(\sin\omega t)$ and ${\cal L}(\cos\omega t)$
   exist for $s>0$. This is consistent with the conclusion of Example~\ref{example:8.1.4}.
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:8.1.9}\rm It can be shown that if $\lim_{t\to\infty}e^{-s_{0}t}f(t)$ exists and is
@@ -487,6 +502,7 @@ of exponential order.}
   ${\cal L}(t^{\alpha})$ exists for all $s>0$. This is consistent with the results of
   Example~\ref{example:8.1.2} and Exercises~\ref{exer:8.1.6} and \ref{exer:8.1.8}.
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:8.1.10}\rm Find the Laplace transform of the piecewise continuous function
@@ -499,6 +515,7 @@ of exponential order.}
   \]
 \end{example}
 
+\begin{examplesolution}
 \solution Since $f$ is defined by different formulas on $[0,1)$ and $[1,\infty)$, we write
 \[
   F(s)=\int_{0}^{\infty}e^{-st}f(t)\,dt =\int_{0}^{1}e^{-st}(1)\,dt+\int_{1}^{\infty}e^{-st}(-3e^{-t})\,dt.
@@ -528,6 +545,7 @@ This is consistent with Theorem~\ref{thmtype:8.1.6}, since
   |f(t)|\le3e^{-t},\quad t\ge1,
 \]
 and therefore $f$ is of exponential order $s_{0}=-1$.
+\end{examplesolution}
 
 \color{blue}
 \remark{In Section~8.4 we'll develop a more efficient method for finding Laplace transforms of
@@ -551,6 +569,7 @@ piecewise continuous functions.}
   for sufficiently large values of $t$, for any choice of $M$ and $s_{0}$
   (Exercise~\ref{exer:8.1.3}).
 \end{example}
+% no solution
 
 \exercises
 

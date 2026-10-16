@@ -21,6 +21,7 @@ continuous functions, and to find the piecewise continuous inverses of Laplace t
   (Figure~\ref{figure:8.4.1}).
 \end{example}
 
+\begin{examplesolution}
 \solution Since the formula for $f$ changes at $t=2$, we write
 \begin{equation}
   \label{eq:8.4.2}
@@ -61,6 +62,7 @@ Now we can use the table of Laplace transforms to find that
 \[
   {\cal L}(f)=\frac{2}{s^{2}}+\frac{1}{s}+e^{-2s}\left(\frac{1}{s^{2}}+\frac{1}{s}\right).\bbox
 \]
+\end{examplesolution}
 
 \begin{figure}[H]
   \color{blue}
@@ -164,6 +166,7 @@ Changing the name of the variable of integration in the last integral from $x$ t
   \]
 \end{example}
 
+\begin{examplesolution}
 \solution Here $\tau=1$ and $g(t)=t^{2}+1$, so
 \[
   g(t+1)=(t+1)^{2}+1=t^{2}+2t+2.
@@ -176,6 +179,7 @@ Theorem~\ref{thmtype:8.4.1} implies that
 \[
   {\cal L}\left(u(t-1)(t^{2}+1)\right) =e^{-s}\left(\frac{2}{s^{3}}+\frac{2}{s^{2}}+\frac{2}{s}\right).
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.4.3}\rm Use Theorem~\ref{thmtype:8.4.1} to find the Laplace transform of the
@@ -190,6 +194,7 @@ Theorem~\ref{thmtype:8.4.1} implies that
   from Example~\ref{example:8.4.1}.
 \end{example}
 
+\begin{examplesolution}
 \solution We first write $f$ in the form \eqref{eq:8.4.6} as
 \[
   f(t)=2t+1+u(t-2)(t-1).
@@ -201,6 +206,7 @@ Therefore
               & = & \frac{2}{s^{2}}+\frac{1}{s}+e^{-2s}\left(\frac{1}{s^{2}}+\frac{1}{s}\right),
 \end{eqnarray*}
 which is the result obtained in Example~\ref{example:8.4.1}.\bbox
+\end{examplesolution}
 
 Formula \eqref{eq:8.4.6} can be extended to more general piecewise continuous functions. For
 example, we can write
@@ -240,6 +246,7 @@ if $f_{0}$, $f_{1}$, and $f_{2}$ are all defined on $[0,\infty)$.
   \label{figure:8.4.3}
 \end{figure}
 
+\begin{examplesolution}
 \solution In terms of step functions,
 \begin{eqnarray*}
   f(t) & = & 1+u(t-2)(-2t+1-1)+u(t-3)(3t+2t-1) \\
@@ -255,6 +262,7 @@ Now Theorem~\ref{thmtype:8.4.1} implies that
               & = & {\cal L}(1)-2e^{-2s}{\cal L}(t+2)+e^{-3s}{\cal L}(5t+14)-e^{-5s}{\cal L}(2t+11)                             \\[1\jot]
               & = & \frac{1}{s}-2e^{-2s}\left(\frac{1}{s^{2}}+\frac{2}{s}\right)+e^{-3s}\left(\frac{5}{s^{2}}+\frac{14}{s}\right)-e^{-5s}\left(\frac{2}{s^{2}}+\frac{11}{s}\right).\bbox
 \end{eqnarray*}
+\end{examplesolution}
 
 The trigonometric identities
 \begin{eqnarray}
@@ -286,6 +294,7 @@ these identities in the next example.
   \label{figure:8.4.4}
 \end{figure}
 
+\begin{examplesolution}
 \solution In terms of step functions,
 \[
   f(t)=\sin t+u(t-\pi/2)(\cos t-4\sin t)+u(t-\pi)(2 \cos t+3\sin t).
@@ -311,6 +320,7 @@ we see from \eqref{eq:8.4.11} that
   {\cal L}(f) & = & {\cal L}(\sin t)-e^{-\pi s/2}{\cal L}(\sin t+4\cos t)-e^{-\pi s}{\cal L}(2\cos t+3\sin t) \\[1\jot]
               & = & \frac{1}{s^{2}+1}-e^{-\frac{\pi}{2}s}\left(\frac{1+4s}{s^{2}+1}\right)-e^{-\pi s}\left(\frac{3+2s}{s^{2}+1}\right).\bbox
 \end{eqnarray*}
+\end{examplesolution}
 
 \boxit{The Second Shifting Theorem}
 
@@ -344,11 +354,13 @@ $e^{-\tau s}$ corresponds to shifting the argument of the inverse transform by $
   \]
 \end{example}
 
+\begin{examplesolution}
 \solution To apply \eqref{eq:8.4.12} we let $\tau=2$ and $G(s)=1/s^{2}$. Then $g(t)=t$ and
 \eqref{eq:8.4.12} implies that
 \[
   {\cal L}^{-1}\left(\frac{e^{-2s}}{s^{2}}\right)=u(t-2)(t-2).\bbox
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.4.7}\rm Find the inverse Laplace transform $h$ of
@@ -358,6 +370,7 @@ $e^{-\tau s}$ corresponds to shifting the argument of the inverse transform by $
   and find distinct formulas for $h$ on appropriate intervals.
 \end{example}
 
+\begin{examplesolution}
 \solution Let
 \[
   G_{0}(s)=\frac{1}{s^{2}},\quad G_{1}(s)=\frac{1}{s^{2}}+\frac{2}{s},\quad G_{2}(s)=\frac{4}{s^{3}}+\frac{1}{s}.
@@ -381,6 +394,7 @@ which can also be written as
     2t^{2}-16t+32, & t\ge4.
   \end{array}\right.\bbox
 \]
+\end{examplesolution}
 
 \begin{example}
   \label{example:8.4.8}\rm Find the inverse transform of
@@ -389,6 +403,7 @@ which can also be written as
   \]
 \end{example}
 
+\begin{examplesolution}
 \solution Let
 \[
   G_{0}(s)=\frac{2s}{s^{2}+4},\quad G_{1}(s)=-\frac{(3s+1)}{s^{2}+9},
@@ -427,6 +442,7 @@ Using the trigonometric identities \eqref{eq:8.4.8} and \eqref{eq:8.4.9}, we can
   \caption{The piecewise continuous function \eqref{eq:8.4.13}}
   \label{figure:8.4.5}
 \end{figure}
+\end{examplesolution}
 
 \exercises In Exercises~\ref{exer:8.4.1}--\ref{exer:8.4.6} find the Laplace transform by the method of Example~\ref{example:8.4.1}. Then express the given function $f$ in terms of unit step functions as in Eqn.~\eqref{eq:8.4.6}, and use Theorem~\ref{thmtype:8.4.1} to find ${\cal L}(f)$. Where indicated by \CGex, graph $f$.
 \begin{exerciselist}

@@ -109,6 +109,7 @@ particular time.
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} From \eqref{eq:4.1.3} with $t_{0}=0$ and $Q_{0}=4$,
 \begin{equation}
   \label{eq:4.1.6}Q=4e^{-kt},
@@ -141,6 +142,7 @@ Since $\ln3/8=-\ln8/3$,
 \[
   t_{1}=1620{\frac{\ln8/3}{\ln2}}\approx2292.4\;\mbox{ years}.
 \]
+\end{examplesolution}
 
 \boxit{Interest Compounded Continuously}
 
@@ -227,6 +229,7 @@ that is, with continuous compounding the value of the account grows exponentiall
     Q(10)=150e^{.55}\approx\$259.99.
   \]
 \end{example}
+% no solution
 
 \begin{example}
   \label{example:4.1.3} \rm We wish to accumulate \$10,000 in 10 years by making a single deposit in
@@ -234,6 +237,7 @@ that is, with continuous compounding the value of the account grows exponentiall
   must we deposit in the account?
 \end{example}
 
+\begin{examplesolution}
 \solution The value of the account at time $t$ is
 \begin{equation}
   \label{eq:4.1.9}Q(t)=Q_{0}e^{.055t}.
@@ -247,6 +251,7 @@ $Q_{0}$ yields
 \[
   Q_{0}=10000e^{-.55}\approx\$5769.50.
 \]
+\end{examplesolution}
 
 \boxit{Mixed Growth and Decay}
 
@@ -262,6 +267,7 @@ $Q_{0}$ yields
   \end{alist}
 \end{example}
 
+\begin{examplesolution}
 \solutionpart{a} Here
 \[
   Q'=\mbox{ rate of increase of }Q-\mbox{ rate of decrease of }Q.
@@ -310,6 +316,7 @@ $Q$ remains constant (Figure \ref{figure:4.1.3}).
   \caption{$Q(t)$ approaches the steady state value $\dst\frac{a}{k}$ as $t\to\infty$}
   \label{figure:4.1.3}
 \end{figure}
+\end{examplesolution}
 
 \boxit{Carbon Dating}
 
@@ -341,6 +348,7 @@ dating, as illustrated in the next example.
   for which it survived.
 \end{example}
 
+\begin{examplesolution}
 \solution Let $Q=Q(t)$ be the quantity of carbon-14 in an individual set of remains $t$ years after
 death, and let $Q_{0}$ be the quantity that would be present in live individuals. Since carbon-14
 decays exponentially with half-life 5570 years, its decay constant is
@@ -367,6 +375,7 @@ years ago. For the most recent deaths, $Q=.44 Q_{0}$; hence, these deaths occurr
 \]
 years ago. Therefore it's reasonable to conclude that the village was founded about 7000 years ago,
 and lasted for about 400 years.
+\end{examplesolution}
 
 \boxit{A Savings Program}
 
@@ -378,6 +387,7 @@ and lasted for about 400 years.
   that the bank pays 6\% interest compounded continuously.
 \end{example}
 
+\begin{examplesolution}
 \solution Observe that $Q$ isn't continuous, since there are 52 discrete deposits per year of \$50
 each. To construct a mathematical model for this problem in the form of a differential equation, we
 make the simplifying assumption that the deposits are made continuously at a rate of \$2600 per
@@ -411,6 +421,7 @@ and substituting this into \eqref{eq:4.1.14} yields
 \end{equation}
 where the first term is the value due to the initial deposit and the second is due to the subsequent
 weekly deposits. \bbox
+\end{examplesolution}
 
 Mathematical models must be tested for validity by comparing predictions based on them with the
 actual outcome of experiments. Example 6 is unusual in that we can compute the exact value of the

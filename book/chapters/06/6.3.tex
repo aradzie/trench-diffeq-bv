@@ -26,7 +26,7 @@ the {\color{blue}\it impressed voltage\/}.
 At any time $t$, the same current flows in all points of the circuit. We denote current by $I=I(t)$.
 We say that $I(t)>0$ if the direction of flow is around the circuit from the positive terminal of
 the battery or generator back to the negative terminal, as indicated by the arrows in
-Figure~\ref{figure:6.3.1} $I(t)<0$ if the flow is in the opposite direction, and $I(t)=0$ if no
+Figure~\ref{figure:6.3.1}; $I(t)<0$ if the flow is in the opposite direction, and $I(t)=0$ if no
 current flows at time $t$.
 
 Differences in potential occur at the resistor, induction coil, and capacitor in
@@ -123,7 +123,7 @@ The equivalence between (\ref{eq:6.3.6}) and (\ref{eq:6.3.7}) is an example of h
 unifies fundamental similarities in diverse physical phenomena. Since we've already studied the
 properties of solutions of (\ref{eq:6.3.7}) in Sections~6.1 and 6.2, we can obtain results
 concerning solutions of (\ref{eq:6.3.6}) by simply changing notation, according to
-Table~\ref{table:6.3.1}.
+Table~\ref{table:6.3.2}.
 
 \boxit{Free Oscillations}
 
@@ -188,7 +188,7 @@ case, $r_{1}=r_{2}=-R/2L$ and the general solution of (\ref{eq:6.3.8}) is
   \label{eq:6.3.12}Q=e^{-Rt/2L}(c_{1}+c_{2}t).
 \end{equation}
 
-If $R\ne0$, the exponentials in (\ref{eq:6.3.10}), (\ref{eq:6.3.11}), and (\ref{eq:6.3.12}) are
+If $R>0$, the exponents in (\ref{eq:6.3.10}), (\ref{eq:6.3.11}), and (\ref{eq:6.3.12}) are
 negative, so the solution of any homogeneous initial value problem
 \[
   LQ''+RQ'+\frac{1}{C}Q=0,\quad Q(0)=Q_{0},\quad Q'(0)=I_{0},
@@ -273,7 +273,7 @@ interested only in the steady state charge and current.
 \[
   LQ''+RQ'+\frac{1}{C}Q=E_{0}\cos\omega t.
 \]
-To do, this we'll simply reinterpret a result obtained in Section~6.2, where we found that the
+To do this, we'll simply reinterpret a result obtained in Section~6.2, where we found that the
 steady state solution of
 \[
   my''+cy'+ky=F_{0}\cos\omega t
@@ -287,7 +287,7 @@ where
   \cos\phi=\frac{k-m\omega^{2}}{\sqrt{(k-m\omega^{2})^{2}+c^{2}\omega^{2}}}\mbox{\quad and \quad}\sin\phi=\frac{c\omega}{\sqrt{(k-m\omega^{2})^{2}+c^{2}\omega^{2}}}.
 \]
 (See Equations~\eqref{eq:6.2.14} and \eqref{eq:6.2.15}.) By making the appropriate changes in the
-symbols (according to Table~2) yields the steady state charge
+symbols (according to Table~\ref{table:6.3.2}) we obtain the steady state charge
 \[
   Q_{p}=\frac{E_{0}}{\sqrt{(1/C-L\omega^{2})^{2}+R^{2}\omega^{2}}}\cos(\omega t-\phi),
 \]
@@ -306,13 +306,13 @@ Therefore the steady state current in the circuit is
   \item\label{exer:6.3.1} $R=3$ ohms; \, $L=.1$ henrys; \, $C=.01$ farads; $Q_{0}=0$ coulombs;
         \,$I_{0}=2$ amperes.
 
-  \item\label{exer:6.3.2} $R=2$ ohms; \, $L=.05$ henrys; \, $C=.01$ farads'; $Q_{0}=2$ coulombs;
+  \item\label{exer:6.3.2} $R=2$ ohms; \, $L=.05$ henrys; \, $C=.01$ farads; $Q_{0}=2$ coulombs;
         \,$I_{0}=-2$ amperes.
 
   \item\label{exer:6.3.3} $R=2$ ohms; \, $L=.1$ henrys; \, $C=.01$ farads; $Q_{0}=2$ coulombs;
         \,$I_{0}=0$ amperes.
 
-  \item\label{exer:6.3.4} $R=6$ ohms; \, $L=.1$ henrys; \, $C=.004$ farads'; $Q_{0}=3$ coulombs;
+  \item\label{exer:6.3.4} $R=6$ ohms; \, $L=.1$ henrys; \, $C=.004$ farads; $Q_{0}=3$ coulombs;
         \,$I_{0}=-10$ amperes.
 
   \item\label{exer:6.3.5} $R=4$ ohms; \, $L=.05$ henrys; \, $C=.008$ farads; $Q_{0}=-1$ coulombs;
@@ -344,7 +344,7 @@ Therefore the steady state current in the circuit is
 
   \item\label{exer:6.3.12} Find the amplitude of the steady state current $I_{p}$ in the $RLC$
         circuit shown in Figure~\ref{figure:6.3.1} if $E(t)=U\cos\omega t+V\sin\omega t$, where $U$
-        and $V$ are constants. Then find the value $\omega_{0}$ of $\omega$ maximizes the amplitude,
+        and $V$ are constants. Then find the value $\omega_{0}$ of $\omega$ that maximizes the amplitude,
         and find the maximum amplitude.
 
   \exercisetext{In Exercises~\ref{exer:6.3.13}-\ref{exer:6.3.17} plot the amplitude of the steady

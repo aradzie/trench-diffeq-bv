@@ -50,7 +50,7 @@ where
 \]
 The factor $Re^{-ct/2m}$ in \eqref{eq:6.2.3} is called the {\color{blue}\it time--varying
 amplitude\/} of the motion, the quantity $\omega_{1}$ is called the {\color{blue}\it frequency\/},
-and $T=2\pi/\omega_{1}$ (which is the period of the cosine function in \eqref{eq:6.2.3} is called
+and $T=2\pi/\omega_{1}$ (which is the period of the cosine function in \eqref{eq:6.2.3}) is called
 the {\color{blue}\it quasi--period\/}. A typical graph of \eqref{eq:6.2.3} is shown in
 Figure~\ref{figure:6.2.1}. As illustrated in that figure, the graph of $y$ oscillates between the
 dashed exponential curves $y=\pm Re^{-ct/2m}$.
@@ -127,11 +127,11 @@ Therefore the damping is critical if
 
 \solutionpart{b} Setting $c=32$ in \eqref{eq:6.2.4} and cancelling the common factor $2$ yields
 \[
-  y''+16y+64y=0.
+  y''+16y'+64y=0.
 \]
 The characteristic equation is
 \[
-  r^{2}+16r+64y=(r+8)^{2}=0.
+  r^{2}+16r+64=(r+8)^{2}=0.
 \]
 Hence, the general solution is
 \begin{equation}
@@ -229,7 +229,7 @@ has the roots $r_{1}=-4$ and $r_{2}=-16$. Therefore the general solution of \eqr
 \end{equation}
 Differentiating this yields
 \[
-  y'=-4e^{-4t}-16c_{2}e^{-16t}.
+  y'=-4c_{1}e^{-4t}-16c_{2}e^{-16t}.
 \]
 The last two equations and the initial conditions $y(0)=1$ and $y'(0)=1$ imply that
 \[
@@ -256,8 +256,8 @@ as the solution of the given initial value problem (Figure~\ref{figure:6.2.3}).
 \boxit{Forced Vibrations With Damping}
 
 \noindent
-Now we consider the motion of an object in a spring-mass system with damping, under the influence of
-a periodic forcing function $F(t)=F_{0}\cos\omega t$, so that the equation of motion is
+Now we consider the motion of an object in a spring-mass system with damping $c>0$, under the influence of
+a periodic forcing function $F(t)=F_{0}\cos\omega t$, with $F_{0}>0$ and $\omega\ge0$, so that the equation of motion is
 \begin{equation}
   \label{eq:6.2.11}my''+cy'+ky=F_{0}\cos\omega t.
 \end{equation}
@@ -395,7 +395,7 @@ We summarize our results as follows.
 
 \begin{theorem}
   \color{blue}
-  \label{thmtype:6.2.1} Suppose we consider the amplitude $R$ of the steady state component of the
+  \label{thmtype:6.2.1} Suppose $m,k,c,F_{0}>0$ and $\omega\ge0$. Consider the amplitude $R$ of the steady state component of the
   solution of
   \[
     my''+cy'+ky=F_{0}\cos\omega t
@@ -416,7 +416,7 @@ We summarize our results as follows.
     \label{eq:6.2.21}\omega=\omega_{\max}=\sqrt{\frac{k}{m}\left(1-\frac{c^{2}}{2km}\right)}.
   \end{equation}
 \end{theorem}
-Note that $R_{\max}$ and $\omega_{\max}$ are continuous functions of $c$, for $c\ge0$, since
+Note that $R_{\max}$ and $\omega_{\max}$ are continuous functions of $c$, for $c>0$, since
 \eqref{eq:6.2.20} and \eqref{eq:6.2.21} reduce to $R_{\max}=F_{0}/k$ and $\omega_{\max}=0$ if
 $c=\sqrt{2km}$.
 

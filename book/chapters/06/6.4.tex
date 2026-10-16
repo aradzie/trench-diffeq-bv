@@ -36,13 +36,13 @@ as
 \]
 We assume that $f$ is continuous for all $r>0$. The magnitude of ${\bf F}$ at
 $(x,y)=(r\cos\theta,r\sin\theta)$ is $|f(r)|$, so it depends only on the distance $r$ from the point
-to the origin the direction of ${\bf F}$ is from the point to the origin if $f(r)<0$, or from the
+to the origin; the direction of ${\bf F}$ is from the point to the origin if $f(r)<0$, or from the
 origin to the point if $f(r)>0$. We'll show that the orbit of an object with mass $m$ moving under
 this force is given by
 \[
   r(\theta)=\frac{1}{u(\theta)},
 \]
-where $u$ is solution of the differential equation
+where $u$ is a solution of the differential equation
 \begin{equation}
   \label{eq:6.4.1}\frac{d^{2}u}{d\theta^{2}}+u=-\frac{1}{mh^{2}u^{2}}f(1/u),
 \end{equation}
@@ -159,12 +159,8 @@ Eqn.~\eqref{eq:6.4.7} has the following geometrical interpretation, which is kno
 \begin{theorem}
   \color{blue}
   \label{thmtype:6.4.1} The position vector of an object moving under a central force sweeps out
-  equal areas in equal times; more precisely, if $\theta(t_{1})\le\theta(t_{2})$ then the
-  (signed) area of the sector
-  \[
-    \{(x,y)=(r\cos\theta,r\sin\theta)\;:\;0\le r\le r(\theta),\; \theta(t_{1})\le\theta(t_{2})\}
-  \]
-  {\rm (Figure~\ref{figure:6.4.3})} is given by
+  equal areas in equal times. More precisely, if $t_{1}<t_{2}$, the signed area swept from
+  $\theta(t_{1})$ to $\theta(t_{2})$ {\rm (Figure~\ref{figure:6.4.3})} is given by
   \[
     A=\frac{h(t_{2}-t_{1})}{2},
   \]
@@ -229,7 +225,7 @@ where
 \]
 A curve satisfying \eqref{eq:6.4.11} is a conic section with a focus at the origin
 (Exercise~\ref{exer:6.4.1}). The nonnegative constant $e$ is the {\color{blue}\it eccentricity\/} of
-the orbit, which is an ellipse if $e<1$ ellipse (a circle if $e=0$), a parabola if $e=1$, or a
+the orbit, which is an ellipse if $e<1$ (a circle if $e=0$), a parabola if $e=1$, or a
 hyperbola if $e>1$.
 
 \begin{figure}[H]
@@ -242,13 +238,13 @@ hyperbola if $e>1$.
 
 If the orbit is an ellipse, then the minimum and maximum values of $r$ are
 \begin{eqnarray*}
-  r_{\min} & = & \frac{\rho}{1+e}\quad\mbox{(the {\color{blue}\it perihelion distance\/}, attained when $\theta=\phi$)} \\
-  r_{\max} & = & \frac{\rho}{1-e}\quad\mbox{(the {\color{blue}\it aphelion distance\/}, attained when $\theta=\phi+\pi$)}.
+  r_{\min} & = & \frac{\rho}{1+e}\quad\mbox{(the {\color{blue}\it periapsis distance\/}, attained when $\theta=\phi$)} \\
+  r_{\max} & = & \frac{\rho}{1-e}\quad\mbox{(the {\color{blue}\it apoapsis distance\/}, attained when $\theta=\phi+\pi$)}.
 \end{eqnarray*}
 \enlargethispage{1in}
 Figure~\ref{figure:6.4.4} shows a typical elliptic orbit. The point $P$ on the orbit where
-$r=r_{\min}$ is the {\color{blue}\it perigee\/} and the point $A$ where $r=r_{\max}$ is the
-{\color{blue}\it apogee\/}.
+$r=r_{\min}$ is the {\color{blue}\it periapsis\/} and the point $A$ where $r=r_{\max}$ is the
+{\color{blue}\it apoapsis\/}.
 \newpage
 
 For example, Earth's orbit around the Sun is approximately an ellipse with $e\approx.017$,
@@ -277,7 +273,7 @@ nonrecurring type) have parabolic or hyperbolic orbits.
   Then use Theorem~\ref{thmtype:6.4.1} to show that the time required for the object to traverse the
   entire orbit is
   \[
-    T=\frac{2\pi\rho^{2}}{h(1-e^{2})^{3/2}}.
+    T=\frac{2\pi\rho^{2}}{|h|(1-e^{2})^{3/2}}.
   \]
   (This is \href{https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/}{\color{blue}
   \it Kepler's third law\/}; $T$ is called the {\color{blue}\it period\/} of the orbit.)
@@ -295,7 +291,7 @@ nonrecurring type) have parabolic or hyperbolic orbits.
   \[
     {\bf F}(r,\theta)=-\frac{mk}{r^{2}}(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}),
   \]
-  where $k$ is a positive constant. As we shown, the orbit of the object is given by
+  where $k$ is a positive constant. As we've shown, the orbit of the object is given by
   \[
     r=\frac{\rho}{1+e\cos(\theta-\phi)}.
   \]
@@ -315,7 +311,7 @@ nonrecurring type) have parabolic or hyperbolic orbits.
 
   \begin{alist}
     \item % (a)
-    Find the eccentricity required to make the aphelion and perihelion distances equal to
+    Find the eccentricity required to make the perigee and apogee distances equal to
     $R\gamma_{1}$ and $R\gamma_{2}$, respectively, where $1<\gamma_{1}<\gamma_{2}$.
 
     \item % (b)

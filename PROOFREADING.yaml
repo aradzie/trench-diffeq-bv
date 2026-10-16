@@ -412,17 +412,70 @@ sections:
       - "Answers 1-35 checked by symbolic ODE residuals and all printed initial conditions."
       - "Exercise plots and EPS figure were not inspected visually."
   "6.1":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: math, where: "Derivation of (6.1.2)", note: "k Delta L - ky -> k Delta l - ky"}
+      - {kind: answer, where: "Ans 3", note: "initial downward displacement: +1.5 cos -> -1.5 cos"}
+      - {kind: answer, where: "Ans 5", note: "phase angle +0.177 -> -0.177 rad"}
+      - {kind: answer, where: "Ans 15", note: "overall minus sign removed to satisfy forcing and initial velocity"}
+      - {kind: prose, where: "Amplitude-phase discussion", note: "the R and phi -> R and phi"}
+      - {kind: prose, where: "Forced oscillation introduction", note: "To illustrate, this -> To illustrate this"}
+      - {kind: prose, where: "Ex 2", note: "string -> spring"}
+      - {kind: typeset, where: "Ex 17", note: "force unit n -> N"}
+    remarks:
+      - "Examples and exercise answers checked against the spring equation and initial conditions."
+      - "Exercise plots and EPS figures not inspected visually."
   "6.2":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: typeset, where: "Quasi-period definition", note: "missing closing parenthesis"}
+      - {kind: math, where: "Example 6.2.1(b) equation", note: "16y -> 16y'"}
+      - {kind: math, where: "Example 6.2.1(b) characteristic equation", note: "64y -> 64"}
+      - {kind: math, where: "Example 6.2.3 derivative", note: "-4e^-4t -> -4c_1e^-4t"}
+      - {kind: math, where: "Steady state amplitude theorem", note: "specified c>0, F_0>0, omega>=0 for bounded steady state and positive amplitude"}
+    remarks:
+      - "All supplied answers checked by substitution and initial conditions; Exercises 22-26 checked by direct algebra."
+      - "Exercise plots and EPS figures not inspected visually."
   "6.3":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: ref, where: "Circuit-mechanical analogy", note: "Table 6.3.1 -> Table 6.3.2"}
+      - {kind: ref, where: "Example 6.3.2", note: "Table 2 -> Table 6.3.2"}
+      - {kind: math, where: "Transient charge paragraph", note: "negative exponentials -> negative exponents"}
+      - {kind: answer, where: "Ans 1", note: "cos(5 sqrt(15)t) -> cos(5 sqrt(31)t)"}
+      - {kind: answer, where: "Ans 2", note: "2 cos - 101 sin -> -2 cos - 99 sin"}
+      - {kind: answer, where: "Ans 5", note: "-2 cos + 86 sin -> 2 cos + (242/3) sin"}
+      - {kind: prose, where: "Current sign definition", note: "missing separator after Figure 6.3.1"}
+      - {kind: prose, where: "Forced oscillation paragraph", note: "space before comma removed"}
+      - {kind: prose, where: "Example 6.3.2", note: "To do, this -> To do this; dangling By making -> we obtain"}
+      - {kind: prose, where: "Ex 12", note: "omega maximizes -> omega that maximizes"}
+      - {kind: typeset, where: "Ex 2 and 4", note: "farads' -> farads"}
+    remarks:
+      - "All current answers checked using circuit equations and initial conditions; steady currents 6-10 checked by coefficient matching."
+      - "Exercises 13-17 require plots; plots and circuit EPS figure not inspected visually."
   "6.4":
-    text: todo
-    answers: todo
+    text: done
+    answers: done
+    reviewed: 2026-10-11
+    findings:
+      - {kind: math, where: "Kepler's second law statement", note: "malformed sector set -> signed swept area between the two times"}
+      - {kind: math, where: "Ex 3(a)", note: "reversed aphelion/perihelion distances -> perigee R gamma_1 and apogee R gamma_2"}
+      - {kind: math, where: "Ex 1 period", note: "h in period denominator -> |h| so the period is positive for either orientation"}
+      - {kind: answer, where: "Ans 1", note: "malformed and incomplete conic answer -> completed ellipse parameters, area and period"}
+      - {kind: answer, where: "Ans 2", note: "theta_0 undefined if e=0 -> phi undefined; repaired broken sentence and quote layout"}
+      - {kind: prose, where: "Opening and orbit derivation", note: "a object -> an object; missing separator and article"}
+      - {kind: prose, where: "Conic classification", note: "ellipse if e<1 ellipse -> ellipse if e<1"}
+      - {kind: prose, where: "Orbit terminology", note: "generic perihelion/aphelion and perigee/apogee -> periapsis/apoapsis"}
+      - {kind: prose, where: "Ex 2", note: "As we shown -> As we've shown"}
+    remarks:
+      - "Binet equation, Kepler area relation, conic formulas and supplied orbital answers independently derived."
+      - "EPS orbit diagrams not inspected visually."
   "7.1":
     text: todo
     answers: todo
@@ -535,7 +588,7 @@ other_files:
   chapters/03/chapter.tex: done
   chapters/04/chapter.tex: done  # doubled 'other' and missing article corrected
   chapters/05/chapter.tex: done  # agreement and section number corrected
-  chapters/06/chapter.tex: todo
+  chapters/06/chapter.tex: done  # section descriptions and agreement corrected
   chapters/07/chapter.tex: todo
   chapters/08/chapter.tex: todo
   chapters/09/chapter.tex: todo
